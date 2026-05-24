@@ -13,8 +13,8 @@
     "feel": "Warm, human, approachable — like a Tito giving advice, not a tech brand selling something"
   },
   "canva_workspace": {
-    "folder_id": null,
-    "_folder_note": "Set this once a Tito AI Canva folder is created",
+    "folder_id": "FAHKj5NZ1-U",
+    "folder_url": "https://www.canva.com/folder/FAHKj5NZ1-U",
     "brand_kit_id": null,
     "_brand_kit_note": "Set this once the Tito AI brand kit is created in Canva. Source assets: files2/logo-horizontal.png, files2/logo-icon.png"
   },

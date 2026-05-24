@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tito AI PH — All Deliverables</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff;--coral:#F97316;--green:#10B981;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.hdr{background:linear-gradient(135deg,#0D1520,#0A0F1E 55%,#0D1A2E);border-bottom:3px solid var(--gold);padding:36px 36px 28px;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;right:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:var(--gold);opacity:.065;pointer-events:none}
+.hdr::after{content:'';position:absolute;right:60px;top:20px;width:100px;height:100px;border-radius:50%;background:var(--teal);opacity:.1;pointer-events:none}
+.hdr-inner{position:relative;z-index:1}
+.hdr-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(32px,5vw,54px);letter-spacing:1px;line-height:1;margin-bottom:8px}
+.hdr h1 span{color:var(--gold)}
+.hdr p{font-size:13px;color:var(--gray);font-style:italic}
+.identity{display:flex;border-bottom:3px solid var(--navy3)}
+.id-pill{flex:1;padding:14px 10px;text-align:center;border-right:1px solid var(--navy3)}
+.id-pill:last-child{border-right:none}
+.id-e{font-size:24px;display:block;margin-bottom:4px}
+.id-l{font-weight:700;font-size:12px}
+.main{padding:28px 32px 60px;display:flex;flex-direction:column;gap:32px}
+.section-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;letter-spacing:1px;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.acard{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden;transition:transform .15s,border-color .15s}
+.acard:hover{transform:translateY(-2px);border-color:var(--gold)}
+.acard-top{padding:14px 16px;border-bottom:1px solid var(--navy3);display:flex;align-items:center;gap:10px}
+.acard-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.acard-name{font-weight:700;font-size:13px;color:var(--white);margin-bottom:2px}
+.acard-type{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.acard-body{padding:12px 16px;font-size:12px;color:var(--gray);line-height:1.6;border-bottom:1px solid var(--navy3);min-height:52px}
+.acard-foot{padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+.acard-size{font-size:10px;color:var(--muted)}
+.dl-btn{text-decoration:none;background:var(--gold);color:var(--navy);border:none;border-radius:6px;padding:7px 14px;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:.5px;transition:opacity .15s}
+.dl-btn:hover{opacity:.85}
+.dl-btn.blue{background:#1877F2;color:var(--white)}
+.dl-btn.teal{background:var(--teal);color:var(--white)}
+.dl-btn.coral{background:var(--coral);color:var(--white)}
+.dl-btn.ig{background:#E1306C;color:var(--white)}
+.status-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.status{font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:3px;text-transform:uppercase}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ftr span{font-size:11px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-badges">
+      <span class="badge" style="background:var(--gold);color:var(--navy)">All Deliverables</span>
+      <span class="badge" style="background:#69C9D0;color:var(--navy)">@tito.aiph</span>
+      <span class="badge" style="background:#E1306C;color:#fff">@tito.aiph</span>
+      <span class="badge" style="background:#1877F2;color:#fff">Tito AI</span>
+      <span class="badge" style="background:var(--green);color:var(--navy)">Final</span>
+    </div>
+    <h1>TITO AI <span>PH</span></h1>
+    <p>Household Dad · Digital Marketing · AI Automation · Kumusta mga Pamangkin! 🤖🇵🇭</p>
+  </div>
+</header>
+
+<div class="identity">
+  <div class="id-pill" style="background:#0D1A2E"><span class="id-e">🏠</span><span class="id-l" style="color:var(--gold)">Household Dad</span></div>
+  <div class="id-pill" style="background:#091820"><span class="id-e">📱</span><span class="id-l" style="color:var(--teal)">Digital Marketing</span></div>
+  <div class="id-pill" style="background:#100A1E"><span class="id-e">🤖</span><span class="id-l" style="color:#8B5CF6">AI Automation</span></div>
+  <div class="id-pill" style="background:#0D1520"><span class="id-e">👨‍👧</span><span class="id-l" style="color:var(--coral)">Mga Pamangkin</span></div>
+</div>
+
+<div class="main">
+
+  <!-- PRESENTATIONS -->
+  <div>
+    <div class="section-title">📊 Presentation Deck</div>
+    <div class="grid">
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#1E293B">📊</div>
+          <div><div class="acard-name">Tito AI PH — Channel Pitch</div><div class="acard-type">PowerPoint · 13 Slides</div></div>
+        </div>
+        <div class="acard-body">Full brand deck — Tool Stack, Brand Identity, Logo, Mascot, Pamangkin, Platform Strategy, Content Pillars, Closing.</div>
+        <div class="acard-foot">
+          <span class="acard-size">FINAL · 1.3MB</span>
+          <a class="dl-btn" href="tito-ai-FINAL.pptx" download>Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRAND ASSETS -->
+  <div>
+    <div class="section-title">🎨 Brand Assets</div>
+    <div class="grid">
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#0D1A2E">🤖</div>
+          <div><div class="acard-name">Logo — Horizontal</div><div class="acard-type">PNG · 1800×520px</div></div>
+        </div>
+        <div class="acard-body">Full logo with mascot mark + TITO AI PH wordmark + tagline. For banners, decks, email signatures.</div>
+        <div class="acard-foot"><span class="acard-size">76KB</span><a class="dl-btn" href="logo-horizontal.png" download>Download</a></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#0D1A2E">🤖</div>
+          <div><div class="acard-name">Logo — Icon Only</div><div class="acard-type">PNG · 800×800px</div></div>
+        </div>
+        <div class="acard-body">Circular mascot mark only. For favicons, small placements, watermarks.</div>
+        <div class="acard-foot"><span class="acard-size">68KB</span><a class="dl-btn" href="logo-icon.png" download>Download</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE IMAGES -->
+  <div>
+    <div class="section-title">📸 Profile Images</div>
+    <div class="grid">
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#000;border:2px solid #69C9D0">🎵</div>
+          <div><div class="acard-name" style="color:#69C9D0">TikTok Profile</div><div class="acard-type">PNG · 1000×1000px</div></div>
+        </div>
+        <div class="acard-body">Teal ring. TITO AI PH wordmark. Handle: tito.aiph</div>
+        <div class="acard-foot"><span class="acard-size">110KB</span><a class="dl-btn" href="profile-tiktok.png" download>Download</a></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:radial-gradient(circle at 30% 110%,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888)">📸</div>
+          <div><div class="acard-name" style="color:#E1306C">Instagram Profile</div><div class="acard-type">PNG · 1000×1000px</div></div>
+        </div>
+        <div class="acard-body">Pink/magenta ring. TITO AI PH wordmark. Handle: tito.aiph</div>
+        <div class="acard-foot"><span class="acard-size">108KB</span><a class="dl-btn ig" href="profile-instagram.png" download>Download</a></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#1877F2">📘</div>
+          <div><div class="acard-name" style="color:#1877F2">Facebook Profile</div><div class="acard-type">PNG · 1000×1000px</div></div>
+        </div>
+        <div class="acard-body">Blue ring. Full-body Tito character with barong. Page: Tito AI</div>
+        <div class="acard-foot"><span class="acard-size">107KB</span><a class="dl-btn blue" href="profile-facebook.png" download>Download</a></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#1877F2">🖼️</div>
+          <div><div class="acard-name" style="color:#1877F2">Facebook Cover</div><div class="acard-type">PNG · 1702×630px</div></div>
+        </div>
+        <div class="acard-body">Retina-ready cover. TITO AI PH + Tito character + 3 identity tags.</div>
+        <div class="acard-foot"><span class="acard-size">122KB</span><a class="dl-btn blue" href="fb-cover.png" download>Download</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOCUMENTS -->
+  <div>
+    <div class="section-title">📄 Documents & Copy</div>
+    <div class="grid">
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#0D1A2E">📝</div>
+          <div><div class="acard-name">Profile Bios</div><div class="acard-type">HTML · All Platforms</div></div>
+        </div>
+        <div class="acard-body">TikTok (3 options) · Instagram (3 options) · FB Short · FB About · FB Group. Live copy buttons.</div>
+        <div class="acard-foot"><span class="acard-size">Final handles</span><a class="dl-btn teal" href="tito-ai-profile-bios.html" target="_blank">Open</a></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#0D1A2E">🎬</div>
+          <div><div class="acard-name">Channel Manifesto</div><div class="acard-type">HTML · 3 Tabs</div></div>
+        </div>
+        <div class="acard-body">Intro video script (5 sections) · Pinned Facebook post · Story map (5 beats + bios).</div>
+        <div class="acard-foot"><span class="acard-size">Full Taglish</span><a class="dl-btn teal" href="tito-ai-manifesto.html" target="_blank">Open</a></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top">
+          <div class="acard-icon" style="background:#0D1A2E">📜</div>
+          <div><div class="acard-name">Video Scripts</div><div class="acard-type">Markdown · 3 Scripts</div></div>
+        </div>
+        <div class="acard-body">Script 1: Origin story. Script 2: Claude demo (sari-sari). Script 3: Gemini beginners. + Hook templates.</div>
+        <div class="acard-foot"><span class="acard-size">Taglish</span><a class="dl-btn" href="tito-ai-scripts.md" download>Download</a></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BRAND KIT -->
+  <div>
+    <div class="section-title">🎨 Canva Brand Kit</div>
+    <div style="background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden">
+
+      <!-- Setup instructions -->
+      <div style="background:#0D1A2E;border-bottom:1px solid var(--navy3);padding:14px 18px;display:flex;align-items:center;gap:10px">
+        <span style="font-size:20px">🖥️</span>
+        <div>
+          <div style="font-weight:700;font-size:13px;color:var(--white)">Setup: Canva → Brand Hub → Create brand kit</div>
+          <div style="font-size:11px;color:var(--muted)">Name it: <strong style="color:var(--gold)">Tito AI PH</strong> · Then upload logos and paste colors below</div>
+        </div>
+      </div>
+
+      <!-- Colors -->
+      <div style="padding:18px 20px;border-bottom:1px solid var(--navy3)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Brand Colors</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px">
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#0A0F1E;border:1px solid #334155"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Deep Navy</div><div style="font-size:11px;color:var(--muted)">#0A0F1E</div></div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#F59E0B"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Claude Gold</div><div style="font-size:11px;color:var(--muted)">#F59E0B</div></div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#0D9488"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Teal</div><div style="font-size:11px;color:var(--muted)">#0D9488</div></div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#4285F4"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Google Blue</div><div style="font-size:11px;color:var(--muted)">#4285F4</div></div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#8B5CF6"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Gemini Violet</div><div style="font-size:11px;color:var(--muted)">#8B5CF6</div></div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#F97316"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Coral</div><div style="font-size:11px;color:var(--muted)">#F97316</div></div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;overflow:hidden">
+            <div style="height:40px;background:#94A3B8"></div>
+            <div style="padding:7px 10px"><div style="font-size:12px;font-weight:700;color:var(--white)">Slate Gray</div><div style="font-size:11px;color:var(--muted)">#94A3B8</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fonts -->
+      <div style="padding:16px 20px;border-bottom:1px solid var(--navy3)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Fonts</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div style="background:var(--navy3);border-radius:8px;padding:12px 16px;flex:1;min-width:160px">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">HEADING</div>
+            <div style="font-size:15px;font-weight:700;color:var(--gold)">Arial Black</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px">Fallback: Impact</div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;padding:12px 16px;flex:1;min-width:160px">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">BODY</div>
+            <div style="font-size:15px;font-weight:700;color:var(--teal)">DM Sans</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px">Fallback: Calibri</div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;padding:12px 16px;flex:1;min-width:160px">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:4px">ACCENT / QUOTES</div>
+            <div style="font-size:15px;font-weight:700;color:var(--white);font-style:italic">Lora Italic</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px">Fallback: Georgia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logos to upload -->
+      <div style="padding:16px 20px;border-bottom:1px solid var(--navy3)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Logos to Upload in Canva</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div style="background:var(--navy3);border-radius:8px;padding:12px 16px;flex:1;min-width:180px;display:flex;align-items:center;gap:10px">
+            <span style="font-size:22px">🤖</span>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--white)">logo-horizontal.png</div>
+              <div style="font-size:11px;color:var(--muted)">Banners · Decks · Email sig</div>
+            </div>
+          </div>
+          <div style="background:var(--navy3);border-radius:8px;padding:12px 16px;flex:1;min-width:180px;display:flex;align-items:center;gap:10px">
+            <span style="font-size:22px">🤖</span>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--white)">logo-icon.png</div>
+              <div style="font-size:11px;color:var(--muted)">Favicons · Watermarks · Small</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand voice -->
+      <div style="padding:16px 20px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Brand Voice (Canva Description Field)</div>
+        <div style="background:var(--navy3);border-radius:8px;padding:12px 16px;font-size:13px;color:var(--gray);line-height:1.65;font-style:italic">
+          "Household Dad · Digital Marketing · AI Automation · AI Para Sa Ating Lahat<br>
+          TikTok @tito.aiph · IG @tito.aiph · FB Tito AI · Mga Pamangkin 🤖🇵🇭"
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HANDLES QUICK REF -->
+  <div>
+    <div class="section-title">🔗 Handles Quick Reference</div>
+    <div style="background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden">
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr style="background:var(--navy3)">
+            <th style="padding:10px 16px;text-align:left;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Platform</th>
+            <th style="padding:10px 16px;text-align:left;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Handle / Name</th>
+            <th style="padding:10px 16px;text-align:left;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Bio Lead</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--navy3)">
+            <td style="padding:12px 16px;font-weight:700;font-size:13px;color:#69C9D0">🎵 TikTok</td>
+            <td style="padding:12px 16px;font-size:13px;color:var(--white)">@tito.aiph</td>
+            <td style="padding:12px 16px;font-size:12px;color:var(--gray)">🏠 Household Dad · 📱 Digital Marketing · 🤖 AI Automation</td>
+          </tr>
+          <tr style="border-top:1px solid var(--navy3)">
+            <td style="padding:12px 16px;font-weight:700;font-size:13px;color:#E1306C">📸 Instagram</td>
+            <td style="padding:12px 16px;font-size:13px;color:var(--white)">@tito.aiph</td>
+            <td style="padding:12px 16px;font-size:12px;color:var(--gray)">🏠 Household Dad · 📱 Digital Marketing · 🤖 AI Automation</td>
+          </tr>
+          <tr style="border-top:1px solid var(--navy3)">
+            <td style="padding:12px 16px;font-weight:700;font-size:13px;color:#1877F2">📘 Facebook Page</td>
+            <td style="padding:12px 16px;font-size:13px;color:var(--white)">Tito AI</td>
+            <td style="padding:12px 16px;font-size:12px;color:var(--gray)">🏠 Household Dad | 📱 Digital Marketing | 🤖 AI Automation</td>
+          </tr>
+          <tr style="border-top:1px solid var(--navy3)">
+            <td style="padding:12px 16px;font-weight:700;font-size:13px;color:var(--gold)">👥 Facebook Group</td>
+            <td style="padding:12px 16px;font-size:13px;color:var(--white)">Mga Pamangkin ng Tito AI</td>
+            <td style="padding:12px 16px;font-size:12px;color:var(--gray)">Maligayang pagdating, mga Pamangkin!</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<footer class="ftr">
+  <span>Tito AI PH · Joseph de las Armas · Kumusta mga Pamangkin! 🤖🇵🇭</span>
+  <b>ALL DELIVERABLES — FINAL</b>
+</footer>
+
+</body>
+</html>
