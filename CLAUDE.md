@@ -24,10 +24,12 @@ All times are **PHT (UTC+8)**. Joseph is in **San Jose, CA (PST, UTC-7)**, so:
 
 | Day | Stage | Owner | Action |
 |-----|-------|-------|--------|
-| D-3 | Raw assets | Joseph | Drop videos/photos into `content/<week>/<slot>/raw/` |
-| D-2 | Design | Jeff | Run `produce-week` or per-slot skill → Canva cover graphic + caption + approval page updated |
-| D-1 | Approval | Joseph | Review at `https://jeffd1130.github.io/TitoAi/` — approve or request changes |
-| D-0 | Posting | Joseph | Publish at the PHT drop time |
+| D-3 | Raw assets | Tito AI | Drop videos/photos into `content/<week>/<slot>/raw/` |
+| D-2 | Design | Jeff | Run `produce-week` or per-slot skill → Canva video design + caption generated |
+| D-1 | Approval | Tito AI | Review via **Canva edit link sent by Telegram** — approve or request changes |
+| D-0 | Posting | Tito AI | Publish at the PHT drop time |
+
+**No GitHub Pages.** Approval is done directly in Canva. After each production run, send the Canva edit URL to chat ID `8325608814` via `@titoaiph_bot`.
 
 ---
 
@@ -132,10 +134,11 @@ Week folders: ISO week (`YYYY-W##`). Post slot folders numbered in posting order
 
 Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 
-- `Videos/Intro/` — origin story and intro video assets (MP4 + JPG stills)
+- `Videos/Intro/Intro_raw/` — 25 MP4 clips for the origin story (all uploaded to Canva library)
 - Organized by content type going forward: `Videos/<content-type>/`
 - Prefer MP4 over MOV. Target files under 100 MB for Canva compatibility.
 - For cover graphics: use `.jpg` still frames extracted from the video
+- Local files have no public URL — use catbox.moe to get a public URL before uploading to Canva: `curl -F "reqtype=fileupload" -F "fileToUpload=@file.mp4" https://catbox.moe/user/api.php`
 
 ---
 
@@ -144,6 +147,45 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 - **Canva MCP** — required. Generate cover graphics, upload media assets, export previews. If not connected, stop and tell Jeff.
 - **GitHub** — repo `jeffd1130/TitoAi` (main branch). Auto-push hook in `.claude/settings.json` fires on Write/Edit when Claude Code is opened from this project directory.
 - **GitHub Pages** — approval site at `https://jeffd1130.github.io/TitoAi/`. Source: main branch `/docs` folder.
+- **Telegram bot** — `@titoaiph_bot` (bot ID: 8960239761). Token: `8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg`. Jeff's chat ID: `8325608814` (@JeffD331). Use `parse_mode=HTML` always (never Markdown — URL underscores break). Send approval notifications to chat ID `8325608814`.
+
+## Video production
+
+**Multi-scene video assembly process (Canva MCP):**
+1. Create or identify a base 1-page design with logo placed
+2. `copy-design` once per scene — copies share the same element IDs as the source
+3. `start-editing-transaction` → `perform-editing-operations` (`update_fill`) → `commit-editing-transaction` on each copy to swap the video clip
+4. `merge-designs` to combine into one multi-page design — **one operation per call only** (API limitation); append scenes sequentially using `modify_existing_design`
+5. Send final edit URL via Telegram
+
+**Canva limitations:**
+- `merge-designs` supports only 1 operation per API call — loop it for multiple scenes
+- No `add_page` operation in `perform-editing-operations` — must use `merge-designs` to add pages
+- Video clip timing/duration must be set manually in Canva UI after assembly
+
+## Intro video assets (Origin Story — Video 1)
+
+**Merged 6-scene video:** `DAHKkLR22UY` — edit: `https://www.canva.com/d/RE4msPrzxaRZycB`
+**Base design (Cisco/SV shot):** `DAHKkEMsz4Q`
+
+**Canva clip asset IDs (all 1080×1920 portrait clips — best for TikTok):**
+| Asset ID | File | Duration |
+|----------|------|----------|
+| VAHKkEhGlWg | 20260523_154923 | 22s |
+| VAHKkJsIpeQ | 20260523_155118 | 27s |
+| VAHKkDoPRn8 | 20260523_160038 | 6s (Cisco building) |
+| VAHKkEQX24I | 20260523_160003 | 27s |
+| VAHKkDL0DPM | 20260523_160309 | 44s |
+| VAHKkL8wtNw | 20260523_160430 | 42s |
+| VAHKkCoOz4U | 20260523_160843 | 34s |
+| VAHKkIdIItE | 20260523_160953 | 13s |
+| VAHKkCuHXAM | 20260523_161216 | 62s |
+| VAHKkCKBcb0 | 20260523_161444 | 18s |
+| VAHKkDKjLBM | 20260523_183134 | 20s |
+| VAHKkPX4kwE | 20260523_183236 | 32s |
+| VAHKkLX9OtI | 20260523_183311 | 27s |
+
+Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/03-fri-inspiration/drafts/draft.md`.
 
 ---
 
@@ -168,7 +210,8 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 5. **One question max.** If clarification is needed, ask the single most important question.
 6. **PHT first.** Every draft output should show the PHT drop time. Add PST as secondary reference for Joseph.
 7. **Parallel agents always.** For multi-slot tasks, spin concurrent agents. `produce-week` runs all 3 slots in parallel.
-8. **Don't post.** You produce drafts. Posting is always Joseph's call.
+8. **No text overlays.** Videos are clean — footage + Tito AI logo only. No text, captions, or graphic overlays on the video itself.
+9. **Don't post.** You produce drafts. Posting is always Tito AI's call.
 
 ---
 
