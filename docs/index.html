@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Tito AI — Weekly Content Approval</title>
+<style>
+  :root {
+    --navy: #0A0F1E;
+    --navy2: #111827;
+    --navy3: #1E293B;
+    --gold: #F59E0B;
+    --teal: #0D9488;
+    --coral: #F97316;
+    --green: #10B981;
+    --white: #FFFFFF;
+    --gray: #94A3B8;
+    --muted: #475569;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--navy); color: var(--white); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+  .header { background: linear-gradient(135deg, #0D1520 0%, #0A0F1E 60%, #0D1A2E 100%); border-bottom: 3px solid var(--gold); padding: 20px 20px 16px; }
+  .header h1 { font-size: 22px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .header h1 span { color: var(--gold); }
+  .header .meta { font-size: 12px; color: var(--gray); }
+  .week-badge { display: inline-block; background: var(--gold); color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; margin-right: 8px; }
+  .posts { padding: 16px; display: flex; flex-direction: column; gap: 18px; }
+  .post-card { background: var(--navy2); border: 1px solid var(--navy3); border-radius: 14px; overflow: hidden; }
+  .post-header { background: #0D1520; border-bottom: 1px solid var(--navy3); padding: 12px 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .slot-badge { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; }
+  .slot-mon { background: var(--gold); color: var(--navy); }
+  .slot-wed { background: var(--teal); color: var(--white); }
+  .slot-fri { background: var(--coral); color: var(--white); }
+  .post-time { font-size: 11px; color: var(--gray); margin-left: auto; }
+  .post-preview { width: 100%; aspect-ratio: 9/16; background: var(--navy3); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); max-height: 320px; object-fit: cover; }
+  .post-preview img { width: 100%; height: 100%; object-fit: cover; }
+  .post-body { padding: 16px; }
+  .post-caption { font-size: 14px; line-height: 1.65; color: var(--white); white-space: pre-wrap; margin-bottom: 12px; }
+  .post-hashtags { font-size: 12px; color: var(--teal); line-height: 1.6; margin-bottom: 14px; }
+  .edit-link { display: block; background: var(--gold); color: var(--navy); text-align: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 12px; border-radius: 8px; text-decoration: none; margin-top: 4px; }
+  .status-row { display: flex; gap: 8px; margin-top: 12px; }
+  .status-badge { font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px; }
+  .status-draft { background: rgba(245,158,11,.15); color: var(--gold); border: 1px solid rgba(245,158,11,.3); }
+  .status-approved { background: rgba(16,185,129,.15); color: var(--green); border: 1px solid rgba(16,185,129,.3); }
+  .footer { text-align: center; padding: 20px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--navy3); margin-top: 8px; }
+</style>
+</head>
+<body>
+<header class="header">
+  <h1>TITO AI — <span>WEEKLY APPROVAL</span></h1>
+  <div class="meta">
+    <span class="week-badge" id="week-label">WEEK —</span>
+    <span id="generated-date">Generated: —</span>
+  </div>
+</header>
+
+<div class="posts" id="posts-container">
+  <div style="padding:40px;text-align:center;color:var(--muted);font-size:14px;">
+    No drafts yet for this week.<br>Run <code>produce-week</code> to generate all posts.
+  </div>
+</div>
+
+<footer class="footer">
+  Tito AI · @TitoAIPH · AI Para Sa Ating Lahat · Kumusta mga Pamangkin! 🤖🇵🇭
+</footer>
+
+<script>
+  const posts = [];
+
+  function render() {
+    const container = document.getElementById('posts-container');
+    if (!posts.length) return;
+    container.innerHTML = '';
+    posts.forEach(p => {
+      const slotClass = p.slot.includes('mon') ? 'slot-mon' : p.slot.includes('wed') ? 'slot-wed' : 'slot-fri';
+      const previewHtml = p.preview_image
+        ? `<img src="${p.preview_image}" alt="preview">`
+        : '<div class="post-preview">Cover graphic pending</div>';
+      container.innerHTML += `
+        <div class="post-card">
+          <div class="post-header">
+            <span class="slot-badge ${slotClass}">${p.slot_label}</span>
+            <span class="post-time">${p.drop_pht} PHT · ${p.drop_pst} PST</span>
+          </div>
+          <div class="post-preview">${previewHtml}</div>
+          <div class="post-body">
+            <div class="post-caption">${p.caption}</div>
+            <div class="post-hashtags">${p.hashtags}</div>
+            ${p.canva_edit_url ? `<a class="edit-link" href="${p.canva_edit_url}" target="_blank">EDIT IN CANVA</a>` : ''}
+            <div class="status-row">
+              <span class="status-badge ${p.approved ? 'status-approved' : 'status-draft'}">${p.approved ? 'APPROVED' : 'DRAFT'}</span>
+            </div>
+          </div>
+        </div>`;
+    });
+  }
+
+  render();
+</script>
+</body>
+</html>

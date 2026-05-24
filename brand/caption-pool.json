@@ -1,0 +1,43 @@
+{
+  "openers": [
+    "Kumusta, mga Pamangkin! 🤖",
+    "Mga Pamangkin, pakinggan ninyo 'to.",
+    "Quick tip para sa inyong lahat, mga Pamangkin.",
+    "Mga Pamangkin — ito ang tanong na palagi ninyong tinatanong sa akin."
+  ],
+  "closers": [
+    "Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭",
+    "Follow for more. Tito AI — AI Para Sa Ating Lahat. 🤖✊🇵🇭",
+    "I-try ninyo. At sabihin ninyo sa akin kung nagtrabaho. Tito AI 🤖",
+    "Kasama kayo, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat."
+  ],
+  "ctas": [
+    "I-follow ang channel para sa susunod na tip.",
+    "Subukan ninyo ngayon — libre.",
+    "I-comment ang inyong AI win — gusto kong marinig.",
+    "Share ninyo sa kaibigan na kailangang malaman ito.",
+    "DM mo ako kung may tanong kayo."
+  ],
+  "tool_intros": {
+    "claude": "Claude 'to. Libre ang basic version. claude.ai",
+    "gemini": "Gemini 'to. Google 'to. Libre. gemini.google.com",
+    "notion": "Notion 'to. Para sa notes, tasks, at projects. notion.so",
+    "chatgpt": "ChatGPT 'to. Libre ang basic. chatgpt.com"
+  },
+  "hook_templates": [
+    "Alam mo ba na pwede mong [result] in less than [time]?",
+    "[Number] years old ako at [surprising thing I can now do].",
+    "Sinabi nila imposible 'to para sa mga [relatable group]. Peke.",
+    "Huwag kang mag-bayad ng [amount] para dito — libre ang paraan.",
+    "Pakinggan mo 'to kung [pain point na relatable].",
+    "Household dad ako. At 'to ang ginagamit ko para [result].",
+    "Walang coding. Walang seminar. Ito lang ang kailangan mo."
+  ],
+  "hashtag_sets": {
+    "base": ["#TitoAIPH", "#MgaPamangkin", "#AIParaSaAtin", "#TitoAI", "#AIPhilippines"],
+    "tips": ["#AITip", "#LibreAngAI", "#LearnAI", "#TechTips", "#AIForEveryone"],
+    "demos": ["#AIDemo", "#ClaudeAI", "#GeminiAI", "#LibrengTools", "#AITutorial"],
+    "story": ["#AIStory", "#HouseholdDad", "#PilipinoNaGumamitNgAI", "#SiliconValley", "#AISuccess"],
+    "seasonal": []
+  }
+}

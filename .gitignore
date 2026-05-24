@@ -1,0 +1,26 @@
+# Large video files — do not commit
+Videos/**/*.mp4
+Videos/**/*.mov
+Videos/**/*.MP4
+Videos/**/*.MOV
+Videos/**/*.avi
+content/**/raw/*.mp4
+content/**/raw/*.mov
+content/**/raw/*.MP4
+content/**/raw/*.MOV
+
+# Raw large images
+content/**/raw/*.HEIC
+content/**/raw/*.heic
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Local env
+.env
+*.local
