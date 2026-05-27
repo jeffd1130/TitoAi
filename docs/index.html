@@ -3,141 +3,611 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Tito AI — Weekly Content Approval</title>
+<title>Tito AI — Hub &amp; June 2026 Calendar</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy: #0A0F1E;
-    --navy2: #111827;
-    --navy3: #1E293B;
-    --navy4: #0D1520;
-    --gold: #F59E0B;
-    --amber: #FCD34D;
-    --teal: #0D9488;
-    --coral: #F97316;
-    --green: #10B981;
-    --white: #FFFFFF;
-    --gray: #94A3B8;
-    --muted: #475569;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--navy); color: var(--white); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+:root {
+  --navy:   #0A0F1E;
+  --navy2:  #111827;
+  --navy3:  #1E293B;
+  --navy4:  #0D1520;
+  --gold:   #F59E0B;
+  --amber:  #FCD34D;
+  --teal:   #0D9488;
+  --coral:  #F97316;
+  --green:  #10B981;
+  --sv:     #3B82F6;
+  --violet: #8B5CF6;
+  --gray:   #94A3B8;
+  --muted:  #475569;
+  --dim:    #334155;
+  --white:  #FFFFFF;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
 
-  .header {
-    background: linear-gradient(135deg, #0D1520 0%, #0A0F1E 60%, #0D1A2E 100%);
-    border-bottom: 3px solid var(--gold);
-    padding: 20px 20px 16px;
-  }
-  .header-top { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
-  .header h1 { font-size: 20px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
-  .header h1 span { color: var(--gold); }
-  .header .meta { font-size: 12px; color: var(--gray); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-  .week-badge { background: var(--gold); color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; }
-  .generated { font-size: 11px; color: var(--muted); }
+/* ── NAV ── */
+.nav{background:var(--navy4);border-bottom:1px solid var(--dim);display:flex;overflow-x:auto;padding:0 16px;gap:4px;position:sticky;top:0;z-index:100}
+.nav a{display:block;padding:12px 16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav a:hover,.nav a.active{color:var(--gold);border-color:var(--gold)}
 
-  .posts { padding: 16px; display: flex; flex-direction: column; gap: 20px; max-width: 480px; margin: 0 auto; }
+/* ── HERO ── */
+.hero{background:linear-gradient(145deg,#0D1520 0%,#0A0F1E 50%,#0D1A2E 100%);border-bottom:3px solid var(--gold);padding:32px 20px 28px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--gold);opacity:.05;pointer-events:none}
+.hero::after{content:'';position:absolute;right:40px;top:20px;width:120px;height:120px;border-radius:50%;background:var(--teal);opacity:.08;pointer-events:none}
+.hero-eyebrow{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:48px;line-height:1;color:var(--white);margin-bottom:6px;position:relative;z-index:1}
+.hero-title span{color:var(--gold)}
+.hero-tagline{font-family:'Lora',serif;font-style:italic;font-size:15px;color:var(--gray);margin-bottom:20px}
+.handles{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.handle-chip{display:flex;align-items:center;gap:6px;background:var(--navy3);border:1px solid var(--dim);border-radius:20px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--white);text-decoration:none}
+.handle-chip .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.dot-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.dot-tt{background:var(--white)}
+.dot-fb{background:#1877F2}
+.hero-meta{display:flex;gap:8px;flex-wrap:wrap}
+.meta-badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-teal{background:var(--teal);color:var(--white)}
+.badge-sv{background:var(--sv);color:var(--white)}
 
-  .post-card { background: var(--navy2); border: 1px solid var(--navy3); border-radius: 14px; overflow: hidden; }
+/* ── SECTIONS ── */
+.section{padding:24px 20px;max-width:640px;margin:0 auto}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;color:var(--gold);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--dim)}
 
-  .post-header { background: var(--navy4); border-bottom: 1px solid var(--navy3); padding: 11px 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .slot-badge { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; }
-  .slot-mon { background: var(--gold); color: var(--navy); }
-  .slot-wed { background: var(--teal); color: var(--white); }
-  .slot-fri { background: var(--coral); color: var(--white); }
-  .post-time { font-size: 11px; color: var(--gray); margin-left: auto; }
+/* ── ABOUT ── */
+.about-grid{display:flex;flex-direction:column;gap:12px}
+.about-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;padding:16px}
+.about-card h3{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.about-card p{font-size:14px;line-height:1.7;color:var(--gray)}
+.about-card p strong{color:var(--white)}
+.pillars{display:flex;flex-direction:column;gap:8px}
+.pillar{background:var(--navy3);border-radius:8px;padding:12px;display:flex;gap:10px;align-items:flex-start}
+.pillar-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.pillar-body{flex:1}
+.pillar-day{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+.pillar-day.mon{color:var(--gold)}
+.pillar-day.wed{color:var(--teal)}
+.pillar-day.fri{color:var(--coral)}
+.pillar-name{font-size:13px;font-weight:700;color:var(--white);margin-bottom:2px}
+.pillar-desc{font-size:12px;color:var(--gray)}
+.voice-rules{list-style:none;display:flex;flex-direction:column;gap:6px}
+.voice-rules li{font-size:13px;color:var(--gray);padding-left:16px;position:relative}
+.voice-rules li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+.voice-rules li strong{color:var(--white)}
 
-  .post-preview-wrap { width: 100%; background: var(--navy3); display: flex; align-items: center; justify-content: center; overflow: hidden; max-height: 340px; }
-  .post-preview-wrap img { width: 100%; display: block; object-fit: cover; }
-  .post-preview-empty { padding: 40px; text-align: center; font-size: 12px; color: var(--muted); }
+/* ── CALENDAR ── */
+.week-block{margin-bottom:24px}
+.week-label{background:var(--navy3);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:8px 14px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;color:var(--white);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
+.week-label .week-range{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:var(--gray)}
+.post-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.post-card-header{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--navy4);border-bottom:1px solid var(--navy3);flex-wrap:wrap}
+.day-badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px;flex-shrink:0}
+.day-mon{background:var(--gold);color:var(--navy)}
+.day-wed{background:var(--teal);color:var(--white)}
+.day-fri{background:var(--coral);color:var(--white)}
+.post-date{font-size:11px;color:var(--gray)}
+.post-time{font-size:11px;color:var(--muted);margin-left:auto}
+.post-body{padding:12px 14px}
+.post-topic{font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px}
+.post-theme{font-size:12px;color:var(--gray);margin-bottom:10px;font-style:italic}
+.task-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.task-chip{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--navy3);color:var(--gray)}
+.task-chip.done{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.25)}
+.task-chip.active{background:rgba(245,158,11,.12);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
+.status-row{display:flex;align-items:center;gap:8px}
+.status-badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
+.s-planned{background:rgba(148,163,184,.08);color:var(--muted);border:1px solid rgba(148,163,184,.2)}
+.s-script{background:rgba(139,92,246,.12);color:var(--violet);border:1px solid rgba(139,92,246,.3)}
+.s-draft{background:rgba(245,158,11,.12);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
+.s-approved{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.3)}
+.s-posted{background:rgba(16,185,129,.25);color:var(--green);border:1px solid var(--green)}
+.canva-btn{display:inline-block;background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 12px;border-radius:6px;text-decoration:none;flex-shrink:0}
+.canva-btn:hover{opacity:.9}
 
-  .post-body { padding: 16px; }
-  .post-caption { font-size: 14px; line-height: 1.7; color: var(--white); white-space: pre-wrap; margin-bottom: 12px; }
-  .post-hashtags { font-size: 12px; color: var(--teal); line-height: 1.6; margin-bottom: 14px; word-break: break-word; }
+/* ── CURRENT WEEK SPOTLIGHT ── */
+.spotlight{background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(13,148,136,.06));border:1px solid rgba(245,158,11,.2);border-radius:14px;padding:20px;margin-bottom:24px}
+.spotlight-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.spotlight-posts{display:flex;flex-direction:column;gap:10px}
+.spotlight-item{display:flex;align-items:flex-start;gap:10px}
+.spotlight-bullet{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.spotlight-bullet.mon{background:var(--gold)}
+.spotlight-bullet.wed{background:var(--teal)}
+.spotlight-bullet.fri{background:var(--coral)}
+.spotlight-info{}
+.spotlight-info .s-title{font-size:13px;font-weight:700;color:var(--white)}
+.spotlight-info .s-sub{font-size:11px;color:var(--gray)}
 
-  .btn-edit { display: block; background: var(--gold); color: var(--navy); text-align: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 12px; border-radius: 8px; text-decoration: none; margin-bottom: 10px; }
-  .btn-edit:hover { opacity: .9; }
+/* ── CHARACTER CARD ── */
+.char-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:14px;padding:20px;margin-bottom:16px;position:relative;overflow:hidden}
+.char-card::before{content:'';position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;background:var(--gold);opacity:.04}
+.char-name{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold);margin-bottom:2px}
+.char-subtitle{font-size:12px;color:var(--gray);margin-bottom:14px}
+.char-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.char-stat{background:var(--navy3);border-radius:8px;padding:8px 12px;flex:1;min-width:90px}
+.char-stat .s-val{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white)}
+.char-stat .s-key{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.char-quote{font-family:'Lora',serif;font-style:italic;font-size:14px;color:var(--gray);line-height:1.7;border-left:3px solid var(--gold);padding-left:14px}
 
-  .status-row { display: flex; gap: 8px; flex-wrap: wrap; }
-  .status-badge { font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; }
-  .status-draft { background: rgba(245,158,11,.12); color: var(--gold); border: 1px solid rgba(245,158,11,.3); }
-  .status-approved { background: rgba(16,185,129,.12); color: var(--green); border: 1px solid rgba(16,185,129,.3); }
-  .status-pending { background: rgba(148,163,184,.08); color: var(--muted); border: 1px solid rgba(148,163,184,.2); }
-
-  .pending-card { background: var(--navy2); border: 1px solid var(--navy3); border-radius: 14px; padding: 20px 16px; text-align: center; }
-  .pending-card .pending-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-  .pending-card .pending-slot { font-size: 14px; color: var(--white); font-weight: 600; margin-bottom: 4px; }
-  .pending-card .pending-day { font-size: 12px; color: var(--gray); }
-
-  .footer { text-align: center; padding: 20px 16px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--navy3); margin-top: 8px; }
+/* ── FOOTER ── */
+.footer{text-align:center;padding:24px 20px;font-size:11px;color:var(--muted);border-top:1px solid var(--navy3);margin-top:8px}
+.footer strong{color:var(--gray)}
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="header-top">
-    <h1>TITO AI — <span>WEEK 21 APPROVAL</span></h1>
-  </div>
-  <div class="meta">
-    <span class="week-badge">2026-W21</span>
-    <span class="generated">Generated: May 24, 2026 · PHT</span>
-  </div>
-</header>
+<nav class="nav">
+  <a href="#about" class="active">About</a>
+  <a href="#current">This Week</a>
+  <a href="#june">June Calendar</a>
+  <a href="#approval">Approval</a>
+</nav>
 
-<div class="posts">
-
-  <!-- PENDING: Monday -->
-  <div class="pending-card">
-    <div class="pending-label">Monday · 8:00 PM PHT</div>
-    <div class="pending-slot">01 — AI Tip Reel</div>
-    <div class="pending-day">May 25, 2026 · Draft pending</div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Content Operations Hub</div>
+  <div class="hero-title">TITO <span>AI</span></div>
+  <div class="hero-tagline">AI Para Sa Ating Lahat · Kumusta, Mga Pamangkin!</div>
+  <div class="handles">
+    <a class="handle-chip" href="https://www.instagram.com/titoaiph" target="_blank">
+      <span class="dot dot-ig"></span>@TitoAIPH
+    </a>
+    <a class="handle-chip" href="https://www.tiktok.com/@titoaiph" target="_blank">
+      <span class="dot dot-tt"></span>@TitoAIPH
+    </a>
+    <a class="handle-chip" href="https://www.facebook.com/titoaiph" target="_blank">
+      <span class="dot dot-fb"></span>Tito AI PH
+    </a>
   </div>
-
-  <!-- PENDING: Wednesday -->
-  <div class="pending-card">
-    <div class="pending-label">Wednesday · 7:00 PM PHT</div>
-    <div class="pending-slot">02 — Demo / Tutorial</div>
-    <div class="pending-day">May 27, 2026 · Draft pending</div>
+  <div class="hero-meta">
+    <span class="meta-badge badge-gold">Filipino AI Education</span>
+    <span class="meta-badge badge-teal">Free · Walang Bayad</span>
+    <span class="meta-badge badge-sv">San Jose, CA</span>
   </div>
+</div>
 
-  <!-- DRAFT: Friday — Origin Story -->
-  <div class="post-card">
-    <div class="post-header">
-      <span class="slot-badge slot-fri">Friday · Story</span>
-      <span class="post-time">May 29 · 7:00 PM PHT · 4:00 AM PST</span>
+<!-- ABOUT -->
+<div id="about" class="section">
+  <div class="section-title">ABOUT TITO AI</div>
+
+  <div class="char-card">
+    <div class="char-name">JOSEPH DE LAS ARMAS</div>
+    <div class="char-subtitle">Creator · @TitoAIPH · San Jose, California</div>
+    <div class="char-stats">
+      <div class="char-stat"><div class="s-val">48</div><div class="s-key">Years Old</div></div>
+      <div class="char-stat"><div class="s-val">Dad</div><div class="s-key">Household</div></div>
+      <div class="char-stat"><div class="s-val">PH</div><div class="s-key">Roots</div></div>
     </div>
-    <div class="post-preview-wrap">
-      <img src="assets/03-fri-inspiration-preview.png" alt="Origin Story cover">
+    <div class="char-quote">"Hindi ako developer. Hindi ako engineer. Nag-try lang ako — paulit-ulit, gabi-gabi, habang tulog ang pamilya ko. Kung kaya ko — kaya mo rin."</div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>The Mission</h3>
+      <p>Turuan ang bawat Pilipino na gamitin ang AI — <strong>libre, walang jargon, para sa totoong buhay.</strong> OFW man, nanay, freelancer, o tindero — lahat may pwesto sa AI revolution.</p>
+    </div>
+
+    <div class="about-card">
+      <h3>Content Pillars</h3>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-icon">💡</div>
+          <div class="pillar-body">
+            <div class="pillar-day mon">Monday · 8:00 PM PHT</div>
+            <div class="pillar-name">AI Tip Reel (30–60s)</div>
+            <div class="pillar-desc">Quick, actionable tip. One tool, one use case, one win.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🖥️</div>
+          <div class="pillar-body">
+            <div class="pillar-day wed">Wednesday · 7:00 PM PHT</div>
+            <div class="pillar-name">Demo / Tutorial (60–90s)</div>
+            <div class="pillar-desc">Real tool, real output on screen. Free tools only.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🇵🇭</div>
+          <div class="pillar-body">
+            <div class="pillar-day fri">Friday · 7:00 PM PHT</div>
+            <div class="pillar-name">Story / Inspiration (60–90s)</div>
+            <div class="pillar-desc">Real Filipino life connected to AI. Warm tito energy.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <h3>Voice &amp; Style</h3>
+      <ul class="voice-rules">
+        <li><strong>Taglish</strong> — natural mix, never forced</li>
+        <li><strong>Warm tito energy</strong> — hindi nagbebenta, hindi naglelecture</li>
+        <li><strong>Always real output</strong> — no stock clips, no fake demos</li>
+        <li><strong>Free tools only</strong> — walang babayaran ang audience</li>
+        <li><strong>Opener:</strong> "Kumusta, mga Pamangkin!"</li>
+        <li><strong>Closer:</strong> "Ingat lagi — Tito AI, AI Para Sa Ating Lahat."</li>
+      </ul>
+    </div>
+
+    <div class="about-card">
+      <h3>Brand Colors</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+        <div style="background:#0A0F1E;border:1px solid #1E293B;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:600">#0A0F1E<br><span style="color:var(--gray);font-size:10px">Navy BG</span></div>
+        <div style="background:#F59E0B;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:700;color:#0A0F1E">#F59E0B<br><span style="font-size:10px">Gold</span></div>
+        <div style="background:#0D9488;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:600">#0D9488<br><span style="color:rgba(255,255,255,.7);font-size:10px">Teal</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CURRENT WEEK -->
+<div id="current" class="section">
+  <div class="section-title">THIS WEEK — W22 (MAY 26–31)</div>
+
+  <div class="spotlight">
+    <div class="spotlight-label">&#9889; Upcoming Posts</div>
+    <div class="spotlight-posts">
+      <div class="spotlight-item">
+        <div class="spotlight-bullet mon"></div>
+        <div class="spotlight-info">
+          <div class="s-title">Mon May 26 · 8:00 PM PHT (5:00 AM PST)</div>
+          <div class="s-sub">AI Tip Reel — ⚠️ No draft yet</div>
+        </div>
+      </div>
+      <div class="spotlight-item">
+        <div class="spotlight-bullet wed"></div>
+        <div class="spotlight-info">
+          <div class="s-title">Wed May 28 · 7:00 PM PHT (4:00 AM PST)</div>
+          <div class="s-sub">Demo / Tutorial — ⚠️ No draft yet</div>
+        </div>
+      </div>
+      <div class="spotlight-item">
+        <div class="spotlight-bullet fri"></div>
+        <div class="spotlight-info">
+          <div class="s-title">Fri May 29 · 7:00 PM PHT (4:00 AM PST)</div>
+          <div class="s-sub">Origin Story — ✅ Draft in Canva · <a href="https://www.canva.com/d/ldOIk0NrlQiKFWq" target="_blank" style="color:var(--gold)">Review Design</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Friday Origin Story Card -->
+  <div class="post-card">
+    <div class="post-card-header">
+      <span class="day-badge day-fri">Friday · Origin Story</span>
+      <span class="post-date">May 29, 2026</span>
+      <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
     </div>
     <div class="post-body">
-      <div class="post-caption">Kumusta, mga Pamangkin! 🤖
-
-Household dad ako.
-
-Luto. Laba. School pick-up. Bahay.
-
-Yun ang trabaho ko araw-araw — may side hustle sa graphic design.
-
-At sa gitna ng lahat ng 'yun — dinala ako ng AI sa Silicon Valley.
-
-Hindi ako developer. Hindi ako engineer. Trial and error lang — gabi-gabi, habang tulog ang pamilya ko.
-
-Kung nangyari sa akin — kaya rin ng lahat ng tao.
-
-I-follow ang channel na 'to. Araw-araw may bagong matututunan tayo — libre, walang jargon.
-
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
-      <div class="post-hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AIPhilippines #AIStory #HouseholdDad #PilipinoNaGumamitNgAI #SiliconValley #AISuccess #LibreAngAI #LearnAI #AIForEveryone #TechTips</div>
-      <a class="btn-edit" href="https://www.canva.com/d/ldOIk0NrlQiKFWq" target="_blank">EDIT IN CANVA</a>
+      <div class="post-topic">Video 1 — "Sino ako at bakit ka dapat makinig sa akin"</div>
+      <div class="post-theme">Intro video · 6-scene merged · 1080×1920 portrait</div>
+      <div class="task-row">
+        <span class="task-chip done">Raw ✓</span>
+        <span class="task-chip done">Produced ✓</span>
+        <span class="task-chip active">Pending Approval</span>
+        <span class="task-chip">Post May 29</span>
+      </div>
       <div class="status-row">
-        <span class="status-badge status-draft">Draft</span>
+        <span class="status-badge s-draft">Draft Ready</span>
+        <a class="canva-btn" href="https://www.canva.com/d/ldOIk0NrlQiKFWq" target="_blank">EDIT IN CANVA</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JUNE CALENDAR -->
+<div id="june" class="section">
+  <div class="section-title">JUNE 2026 — CHARACTER BUILDING</div>
+
+  <div style="background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;padding:14px;margin-bottom:20px;font-size:13px;color:var(--gray);line-height:1.7">
+    <strong style="color:var(--gold)">The June Arc:</strong> Launch with the Origin Story, then establish Tito AI as the go-to Filipino AI teacher — real tools, real results, libre palagi. By end of June, the audience knows who Tito AI is and what to expect every week.
+  </div>
+
+  <!-- WEEK 23 -->
+  <div class="week-block">
+    <div class="week-label">WEEK 1 — JUN 1–7 <span class="week-range">W23 · Launch Week Follow-Through</span></div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-mon">Monday · AI Tip</span>
+        <span class="post-date">Jun 2, 2026</span>
+        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Tip #1 — "Paano magsimula sa AI — ngayon, libre"</div>
+        <div class="post-theme">Intro to Claude / Gemini concept. After the origin story, this is the first "action" tip.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: May 30</span>
+          <span class="task-chip">D-2: Jun 1</span>
+          <span class="task-chip">D-1: Jun 1</span>
+          <span class="task-chip">D-0: Jun 2</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-wed">Wednesday · Demo</span>
+        <span class="post-date">Jun 4, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Demo #1 — "Gemini Beginner's Guide" (Video 2)</div>
+        <div class="post-theme">OFW leave letter demo · gemini.google.com · script ready</div>
+        <div class="task-row">
+          <span class="task-chip done">Script ✓</span>
+          <span class="task-chip">D-3: Jun 1</span>
+          <span class="task-chip">D-2: Jun 3</span>
+          <span class="task-chip">D-0: Jun 4</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-script">Script Ready</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-fri">Friday · Inspiration</span>
+        <span class="post-date">Jun 6, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Story #1 — "Hindi degree ang kailangan mo"</div>
+        <div class="post-theme">Anyone can learn AI. No background needed. Real stories.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 3</span>
+          <span class="task-chip">D-2: Jun 5</span>
+          <span class="task-chip">D-1: Jun 5</span>
+          <span class="task-chip">D-0: Jun 6</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 24 -->
+  <div class="week-block">
+    <div class="week-label">WEEK 2 — JUN 8–14 <span class="week-range">W24 · Tools Deep-Dive</span></div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-mon">Monday · AI Tip</span>
+        <span class="post-date">Jun 9, 2026</span>
+        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Tip #2 — "Claude vs Gemini: alin ang gagamitin mo?"</div>
+        <div class="post-theme">Simple comparison — when to use which. No jargon. Real use cases.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 6</span>
+          <span class="task-chip">D-2: Jun 8</span>
+          <span class="task-chip">D-1: Jun 8</span>
+          <span class="task-chip">D-0: Jun 9</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-wed">Wednesday · Demo</span>
+        <span class="post-date">Jun 11, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Demo #2 — "Claude Live Demo — Sari-Sari Store" (Video 3)</div>
+        <div class="post-theme">Product description para sa Facebook Shop · claude.ai · script ready</div>
+        <div class="task-row">
+          <span class="task-chip done">Script ✓</span>
+          <span class="task-chip">D-3: Jun 8</span>
+          <span class="task-chip">D-2: Jun 10</span>
+          <span class="task-chip">D-0: Jun 11</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-script">Script Ready</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-fri">Friday · Inspiration</span>
+        <span class="post-date">Jun 13, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Story #2 — "AI para sa mga OFW"</div>
+        <div class="post-theme">Real OFW use case: translate, write letters, talk to boss — lahat libre.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 10</span>
+          <span class="task-chip">D-2: Jun 12</span>
+          <span class="task-chip">D-1: Jun 12</span>
+          <span class="task-chip">D-0: Jun 13</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 25 -->
+  <div class="week-block">
+    <div class="week-label">WEEK 3 — JUN 15–21 <span class="week-range">W25 · Everyday Filipino Life</span></div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-mon">Monday · AI Tip</span>
+        <span class="post-date">Jun 16, 2026</span>
+        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Tip #3 — "3 libreng AI tools na dapat malaman ng bawat Pilipino"</div>
+        <div class="post-theme">Claude, Gemini, Notion AI — quick rundown. No paid tools.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 13</span>
+          <span class="task-chip">D-2: Jun 15</span>
+          <span class="task-chip">D-1: Jun 15</span>
+          <span class="task-chip">D-0: Jun 16</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-wed">Wednesday · Demo</span>
+        <span class="post-date">Jun 18, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Demo #3 — "Gawa ang resume mo gamit AI — in 5 minutes"</div>
+        <div class="post-theme">Real demo: Claude writes a resume. Practical, relatable, shareable.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 15</span>
+          <span class="task-chip">D-2: Jun 17</span>
+          <span class="task-chip">D-1: Jun 17</span>
+          <span class="task-chip">D-0: Jun 18</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-fri">Friday · Inspiration</span>
+        <span class="post-date">Jun 20, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Story #3 — "Ang nanay na nag-AI habang tulog ang mga bata"</div>
+        <div class="post-theme">Luto-laba-trabaho + AI. Dedicated to the Pilipinang nanay.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 17</span>
+          <span class="task-chip">D-2: Jun 19</span>
+          <span class="task-chip">D-1: Jun 19</span>
+          <span class="task-chip">D-0: Jun 20</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 26 -->
+  <div class="week-block">
+    <div class="week-label">WEEK 4 — JUN 22–28 <span class="week-range">W26 · Month Wrap-Up</span></div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-mon">Monday · AI Tip</span>
+        <span class="post-date">Jun 23, 2026</span>
+        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Tip #4 — "Ang tanong na palaging tinatanong ng mga Pilipino tungkol sa AI"</div>
+        <div class="post-theme">FAQ-style tip — address the #1 hesitation: "mahirap ba 'to?"</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 20</span>
+          <span class="task-chip">D-2: Jun 22</span>
+          <span class="task-chip">D-1: Jun 22</span>
+          <span class="task-chip">D-0: Jun 23</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-wed">Wednesday · Demo</span>
+        <span class="post-date">Jun 25, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Demo #4 — "Gemini para sa OFW — sulat, translate, at report"</div>
+        <div class="post-theme">Three practical OFW tasks done with Gemini in one video.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 22</span>
+          <span class="task-chip">D-2: Jun 24</span>
+          <span class="task-chip">D-1: Jun 24</span>
+          <span class="task-chip">D-0: Jun 25</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-fri">Friday · Inspiration</span>
+        <span class="post-date">Jun 27, 2026</span>
+        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Story #4 — "1 buwan kasama si Tito AI — ito ang nangyari"</div>
+        <div class="post-theme">Month 1 milestone. Reflect, celebrate community, tease July.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 24</span>
+          <span class="task-chip">D-2: Jun 26</span>
+          <span class="task-chip">D-1: Jun 26</span>
+          <span class="task-chip">D-0: Jun 27</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 27 -->
+  <div class="week-block">
+    <div class="week-label">WEEK 5 — JUN 30 <span class="week-range">W27 · July Bridge</span></div>
+
+    <div class="post-card">
+      <div class="post-card-header">
+        <span class="day-badge day-mon">Monday · AI Tip</span>
+        <span class="post-date">Jun 30, 2026</span>
+        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
+      </div>
+      <div class="post-body">
+        <div class="post-topic">Tip #5 — "July: mas maraming tools, mas libre pa rin"</div>
+        <div class="post-theme">Teaser for July content. Build anticipation. End of Month 1.</div>
+        <div class="task-row">
+          <span class="task-chip">D-3: Jun 27</span>
+          <span class="task-chip">D-2: Jun 29</span>
+          <span class="task-chip">D-1: Jun 29</span>
+          <span class="task-chip">D-0: Jun 30</span>
+        </div>
+        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
       </div>
     </div>
   </div>
 
 </div>
 
+<!-- APPROVAL SECTION -->
+<div id="approval" class="section">
+  <div class="section-title">WEEKLY APPROVAL</div>
+  <div style="background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;padding:16px">
+    <div style="font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:12px">
+      Drafts are produced in <strong style="color:var(--white)">Canva</strong> and sent to Joseph via Telegram for approval before posting. Each post shows: cover graphic, caption, hashtags, and Canva edit link.
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Current draft ready for review:</div>
+    <a href="https://www.canva.com/d/ldOIk0NrlQiKFWq" target="_blank" style="display:block;background:var(--gold);color:var(--navy);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:13px;border-radius:8px;text-decoration:none;margin-bottom:8px">
+      ORIGIN STORY — REVIEW IN CANVA ↗
+    </a>
+    <div style="font-size:11px;color:var(--muted);text-align:center">Canva design ID: DAHKj9hQPYw</div>
+  </div>
+</div>
+
 <footer class="footer">
-  Tito AI · @TitoAIPH · AI Para Sa Ating Lahat · Kumusta mga Pamangkin! 🤖🇵🇭
+  <strong>Tito AI</strong> · @TitoAIPH · AI Para Sa Ating Lahat 🇵🇭<br>
+  <span style="margin-top:4px;display:block">Production ops by Jeff · Updated May 26, 2026 · PHT</span>
 </footer>
 
+<script>
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
 </body>
 </html>
