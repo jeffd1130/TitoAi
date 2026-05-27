@@ -29,17 +29,18 @@ All times are **PHT (UTC+8)**. Joseph is in **San Jose, CA (PST, UTC-7)**, so:
 | D-1 | Approval | Tito AI | Review via **Canva edit link sent by Telegram** — approve or request changes |
 | D-0 | Posting | Tito AI | Publish at the PHT drop time |
 
-**No GitHub Pages.** Approval is done directly in Canva. After each production run, send the Canva edit URL to chat ID `8325608814` via `@titoaiph_bot`.
+Approval is done directly in Canva. After each production run, send the Canva edit URL to chat ID `8325608814` via `@titoaiph_bot`.
 
 ---
 
-## GitHub Pages approval site
+## GitHub Pages hub
 
-The approval site lives at **`https://jeffd1130.github.io/TitoAi/`**
+The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 
 - Source: `docs/index.html` + `docs/assets/*.png` in the `main` branch `/docs` folder
-- Shows all posts for the current week: preview image, caption, hashtags, drop times (PHT), direct Canva edit link
-- Rebuilt by the `update-approval-page` skill after each production run
+- **Not just approval** — full hub with: About / This Week spotlight / June 2026 content calendar / Approval links
+- Sections: About (Joseph + pillars + voice + brand), Current Week, June Calendar (W23–W27), Approval
+- Rebuilt manually or via `update-approval-page` skill after each production run
 
 ---
 
@@ -165,7 +166,12 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 
 ## Intro video assets (Origin Story — Video 1)
 
-**Merged 6-scene video:** `DAHKkLR22UY` — edit: `https://www.canva.com/d/RE4msPrzxaRZycB`
+**Finished export:** `Finished/Tito Ai Intro.mp4` (255MB · 6-scene · 1080×1920 · ready to post)
+**Post design (approval draft):** `DAHKj9hQPYw` — edit: `https://www.canva.com/d/ldOIk0NrlQiKFWq`
+**Drop:** Friday May 29, 2026 · 7:00 PM PHT · **Status: Draft — pending Joseph approval**
+**Captions:** Platform-specific captions written (TikTok/IG/FB) — see session history or regenerate via `caption-library`
+
+**Merged 6-scene assembly:** `DAHKkLR22UY` — edit: `https://www.canva.com/d/RE4msPrzxaRZycB`
 **Base design (Cisco/SV shot):** `DAHKkEMsz4Q`
 
 **Canva clip asset IDs (all 1080×1920 portrait clips — best for TikTok):**
@@ -186,6 +192,22 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 | VAHKkLX9OtI | 20260523_183311 | 27s |
 
 Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/03-fri-inspiration/drafts/draft.md`.
+
+---
+
+## June 2026 Content Calendar
+
+**Arc theme:** Launch → Tools Deep-Dive → Everyday Filipino Life → Month Wrap-Up → July Bridge
+
+| Week | Dates | Mon Tip | Wed Demo | Fri Story |
+|------|-------|---------|----------|-----------|
+| W23 | Jun 1–7 | Paano magsimula sa AI | Gemini Beginner's Guide (Script ✓) | Hindi degree ang kailangan |
+| W24 | Jun 8–14 | Claude vs Gemini | Claude Sari-Sari Demo (Script ✓) | AI para sa OFW |
+| W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | Nanay + AI |
+| W26 | Jun 22–28 | FAQ: mahirap ba? | Gemini para sa OFW | 1 buwan kasama Tito AI |
+| W27 | Jun 30 | July teaser | — | — |
+
+Full calendar with D-3→D-0 task dates per post: **`https://jeffd1130.github.io/TitoAi/#june`**
 
 ---
 
@@ -212,6 +234,8 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 7. **Parallel agents always.** For multi-slot tasks, spin concurrent agents. `produce-week` runs all 3 slots in parallel.
 8. **No text overlays.** Videos are clean — footage + Tito AI logo only. No text, captions, or graphic overlays on the video itself.
 9. **Don't post.** You produce drafts. Posting is always Tito AI's call.
+10. **Platform-specific captions.** TikTok (short, 8 hashtags), Instagram (medium, 15 hashtags), Facebook (story-length, 6 hashtags). Never use one caption for all three.
+11. **Virality checklist (post day):** First 3 seconds = silent hook + direct eye contact. Native upload to each platform (no cross-posting). Joseph seeds first comment within 5 min of posting.
 
 ---
 
