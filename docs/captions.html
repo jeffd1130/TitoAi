@@ -128,9 +128,10 @@ body{background:var(--navy);color:var(--white);font-family:'DM Sans',system-ui,s
   </div>
 
   <!-- VERSION TOGGLE -->
-  <div style="display:flex;gap:6px;padding:12px 16px 0">
-    <button class="ver-btn active" onclick="switchVer(this,'w22fri','v1')" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--gold);background:rgba(245,158,11,.15);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer">✏️ V1 — Creative</button>
-    <button class="ver-btn" onclick="switchVer(this,'w22fri','v2')" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--dim);background:transparent;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer">📋 V2 — From Script</button>
+  <div style="display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap">
+    <button class="ver-btn active" onclick="switchVer(this,'w22fri','v1')" style="flex:1;min-width:0;padding:8px 6px;border-radius:8px;border:1px solid var(--gold);background:rgba(245,158,11,.15);color:var(--gold);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer">✏️ V1 Creative</button>
+    <button class="ver-btn" onclick="switchVer(this,'w22fri','v2')" style="flex:1;min-width:0;padding:8px 6px;border-radius:8px;border:1px solid var(--dim);background:transparent;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer">📋 V2 Script</button>
+    <button class="ver-btn" onclick="switchVer(this,'w22fri','v3')" style="flex:1;min-width:0;padding:8px 6px;border-radius:8px;border:1px solid var(--dim);background:transparent;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer">🎬 V3 Video</button>
   </div>
 
   <!-- V1 TABS -->
@@ -384,6 +385,142 @@ Alin sa mga ito ang pinaka-totoo sa inyo ngayon?
 I-comment ang number — sasagutin ko lahat. 😄</div>
       <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI</div>
       <button class="copy-btn" onclick="copyCaption(this,'w22fri-v2-fb')">Copy Caption + Hashtags</button>
+    </div>
+  </div>
+
+  <!-- V3 FROM VIDEO -->
+  <div id="w22fri-v3" class="ver-panel" style="display:none">
+    <div style="padding:8px 16px 0;font-size:10px;color:var(--coral);font-weight:700;letter-spacing:1px;text-transform:uppercase">🎬 Transcribed from actual video</div>
+    <div class="tab-bar">
+      <button class="tab active" onclick="switchTab(this,'w22fri-v3','tiktok')">TikTok</button>
+      <button class="tab" onclick="switchTab(this,'w22fri-v3','ig')">Instagram</button>
+      <button class="tab" onclick="switchTab(this,'w22fri-v3','fb')">Facebook</button>
+    </div>
+    <div id="w22fri-v3-tiktok" class="tab-content active">
+      <div class="caption-text" id="w22fri-v3-tiktok-text">Household dad ako. Luto. Hatid-sundo ng bata.
+
+Gusto nyo malaman kung paano ako nakarating
+sa Silicon Valley — just because I'm a household dad?
+
+Kailangan ko ng website para sa side hustle ko.
+
+Every night, before I go to bed — habang tulog sila —
+I asked Claude: "How do I make a website?"
+
+Sure enough — nagawa.
+With no engineering background. Walang web dev background.
+
+And it opened a lot of doors.
+
+Trial and error. Parang kami nag-aral ni Claude at Gemini.
+
+With the right questions, with the right understanding ng AI —
+malayo mararating natin.
+
+At dito ako ngayon. Silicon Valley. Where AI started.
+
+I-follow. Araw-araw, matututo tayo. Sama-sama.
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #SiliconValley #HouseholdDad #ClaudeAI #LearnAI #LibreAngAI</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v3-tiktok')">Copy Caption + Hashtags</button>
+    </div>
+    <div id="w22fri-v3-ig" class="tab-content">
+      <div class="caption-text" id="w22fri-v3-ig-text">"Gusto nyo ba malaman kung paano ako nakarating sa Silicon Valley —
+just because I'm a household dad?"
+
+Iyon ang tanong ko sa simula ng video na ito.
+
+Household dad ako. Luto. Hatid-sundo ng bata.
+May side hustle — graphic designer.
+
+Pero kailangan ko ng website para mapalago ang negosyo ko.
+Wala akong engineering background. Wala akong web dev background.
+
+Kaya every night, before I go to bed — habang tulog ang pamilya ko —
+I asked Claude: "How do I make a website?"
+
+Sure enough — nagawa.
+
+Hindi lang 'yon. Nagbukas ng maraming pinto.
+
+Si Claude, si Gemini — parang kami nag-aral nang magkasama.
+Trial and error. With the right questions, with the right understanding ng AI.
+
+At ngayon? Nandito na ako. Silicon Valley.
+Where Facebook is. Google. Instagram. LinkedIn. Where AI started.
+
+And now, I'm creating social media plans
+with the help of Claude and Gemini.
+
+With the right questions — malayo mararating natin.
+
+I-follow ang channel na 'to.
+Sama-sama nating tuklasin kung ano ang mayroon sa AI.
+Araw-araw may bagong matututunan — libre palagi. 👇
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+OFW ka? Freelancer? Household dad or nanay?
+Comment below — gusto kong malaman kung sino ang kasama ko. 👇</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #SiliconValley #HouseholdDad #ClaudeAI #GeminiAI #LearnAI #LibreAngAI #AIPhilippines #PilipinoNaGumamitNgAI #AIForEveryone #FreeTech #AISuccess</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v3-ig')">Copy Caption + Hashtags</button>
+    </div>
+    <div id="w22fri-v3-fb" class="tab-content">
+      <div class="caption-text" id="w22fri-v3-fb-text">Kamusta, mga pamangkin.
+
+Tanong ko sa inyo: gusto nyo ba malaman
+kung paano nakarating ang isang household dad sa Silicon Valley
+— where AI started — dahil lang sa tamang tanong?
+
+Iyan ang kuwento ko.
+
+Household dad ako. Luto, hatid-sundo ng bata, graphic designer sa side.
+Pero kailangan kong palakihin ang side hustle —
+kailangan ko ng website. At wala akong alam sa engineering o web development.
+
+Kaya every night, bago matulog — habang tulog ang pamilya ko —
+I asked Claude one simple question: "How do I make a website?"
+
+Sure enough — nagawa ang website.
+Sa tulong ni AI, ni Claude at Gemini.
+With no engineering background. Walang binayad na course.
+
+At nagbukas ng mga pinto.
+
+Si Claude at si Gemini — parang kami nag-aral nang magkasama.
+Trial and error. Nag-eksperimento. Nagtanong. Natuto.
+
+Ang natutunan ko: with the right questions,
+with the right understanding lang ng AI —
+malayo mararating natin.
+
+At heto ako ngayon. Silicon Valley.
+Where Facebook is. Google. Instagram. LinkedIn.
+Where AI started.
+
+At ngayon, gumagawa na ako ng social media plans —
+para sa mga totoong kliyente — with the help of Claude and Gemini.
+
+Everyday Filipino tayo. Kaya natin ito.
+
+I-follow ang page na 'to at sama-sama nating tuklasin
+kung ano pa ang mayroon sa AI.
+Araw-araw may bagong matututunan — libre palagi.
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+---
+May side hustle ka na gusto mong palakihin pero hindi mo alam kung saan magsisimula?
+
+👉 "Oo — graphic design / content creation"
+👉 "Oo — online selling / negosyo"
+👉 "Oo — freelancing / remote work"
+👉 "Wala pa pero gusto ko magsimula"
+
+I-comment — tutulungan kita. 😊</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #SiliconValley #HouseholdDad #LearnAI #LibreAngAI</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v3-fb')">Copy Caption + Hashtags</button>
     </div>
   </div>
 
