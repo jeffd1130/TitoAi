@@ -127,14 +127,21 @@ body{background:var(--navy);color:var(--white);font-family:'DM Sans',system-ui,s
     <a class="edit-bar" href="https://www.canva.com/d/ldOIk0NrlQiKFWq" target="_blank">OPEN IN CANVA — APPROVE OR EDIT ↗</a>
   </div>
 
-  <div class="tab-bar">
-    <button class="tab active" onclick="switchTab(this,'w22fri','tiktok')">TikTok</button>
-    <button class="tab" onclick="switchTab(this,'w22fri','ig')">Instagram</button>
-    <button class="tab" onclick="switchTab(this,'w22fri','fb')">Facebook</button>
+  <!-- VERSION TOGGLE -->
+  <div style="display:flex;gap:6px;padding:12px 16px 0">
+    <button class="ver-btn active" onclick="switchVer(this,'w22fri','v1')" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--gold);background:rgba(245,158,11,.15);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer">✏️ V1 — Creative</button>
+    <button class="ver-btn" onclick="switchVer(this,'w22fri','v2')" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--dim);background:transparent;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer">📋 V2 — From Script</button>
   </div>
 
-  <div id="w22fri-tiktok" class="tab-content active">
-    <div class="caption-text">48 years old ako. Dati, housedad.
+  <!-- V1 TABS -->
+  <div id="w22fri-v1" class="ver-panel">
+    <div class="tab-bar">
+      <button class="tab active" onclick="switchTab(this,'w22fri-v1','tiktok')">TikTok</button>
+      <button class="tab" onclick="switchTab(this,'w22fri-v1','ig')">Instagram</button>
+      <button class="tab" onclick="switchTab(this,'w22fri-v1','fb')">Facebook</button>
+    </div>
+    <div id="w22fri-v1-tiktok" class="tab-content active">
+      <div class="caption-text">48 years old ako. Dati, housedad.
 
 Luto. Laba. Hatid-sundo.
 
@@ -151,12 +158,11 @@ Kung kaya namin — kaya mo rin.
 I-follow. Libre lahat ng ituturo ko dito. Walang jargon.
 
 Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
-    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #TitoAI</div>
-    <button class="copy-btn" onclick="copyCaption(this,'w22fri-tiktok')">Copy Caption + Hashtags</button>
-  </div>
-
-  <div id="w22fri-ig" class="tab-content">
-    <div class="caption-text">Sinabi nila: "Para sa mga engineers lang 'yan."
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #TitoAI</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v1-tiktok')">Copy Caption + Hashtags</button>
+    </div>
+    <div id="w22fri-v1-ig" class="tab-content">
+      <div class="caption-text">Sinabi nila: "Para sa mga engineers lang 'yan."
 
 48 years old ako. Housedad. Graphic designer sa side.
 Walang tech degree. Walang coding background.
@@ -182,12 +188,11 @@ Tito AI — AI Para Sa Ating Lahat. 🇵🇭
 
 OFW ka? Nanay? Freelancer? Sabi mo sa comments —
 gusto kong malaman kung sino ang kasama ko dito. 👇</div>
-    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #PilipinoNaGumamitNgAI #AIForEveryone #FreeTech #TechTips #AIDemo #SiliconValley #AISuccess</div>
-    <button class="copy-btn" onclick="copyCaption(this,'w22fri-ig')">Copy Caption + Hashtags</button>
-  </div>
-
-  <div id="w22fri-fb" class="tab-content">
-    <div class="caption-text">48 years old ako.
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #PilipinoNaGumamitNgAI #AIForEveryone #FreeTech #TechTips #AIDemo #SiliconValley #AISuccess</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v1-ig')">Copy Caption + Hashtags</button>
+    </div>
+    <div id="w22fri-v1-fb" class="tab-content">
+      <div class="caption-text">48 years old ako.
 
 Dati, ang araw-araw ko: luto, laba, school pick-up,
 side hustle sa graphic design. Walang iba.
@@ -232,8 +237,154 @@ Alin sa mga ito ang pinaka-totoo sa inyo ngayon?
 👉 "Handa na ako — anong susunod?"
 
 I-comment ang number — sasagutin ko lahat. 😄</div>
-    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI</div>
-    <button class="copy-btn" onclick="copyCaption(this,'w22fri-fb')">Copy Caption + Hashtags</button>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v1-fb')">Copy Caption + Hashtags</button>
+    </div>
+  </div>
+
+  <!-- V2 TABS — From Joseph's actual script -->
+  <div id="w22fri-v2" class="ver-panel" style="display:none">
+    <div style="padding:8px 16px 0;font-size:10px;color:var(--teal);font-weight:700;letter-spacing:1px;text-transform:uppercase">📋 Exact lines from Joseph's script</div>
+    <div class="tab-bar">
+      <button class="tab active" onclick="switchTab(this,'w22fri-v2','tiktok')">TikTok</button>
+      <button class="tab" onclick="switchTab(this,'w22fri-v2','ig')">Instagram</button>
+      <button class="tab" onclick="switchTab(this,'w22fri-v2','fb')">Facebook</button>
+    </div>
+    <div id="w22fri-v2-tiktok" class="tab-content active">
+      <div class="caption-text">"48 years old ako. Dati, housedad.
+Ngayon? Nagtatrabaho na ako gamit lang ang AI —
+at hindi ko naubos kahit isang piso para matuto."
+
+Naisip ko dati: "Para sa mga engineers 'yan.
+Para sa mga bata. Hindi para sa akin."
+
+Pero nag-type lang ako ng tanong sa Claude.
+Sumagot siya. In Filipino. May sense. Mabilis.
+
+Sabi ko: hintay. Pwede pala 'to.
+
+Ang asawa ko, HR executive. Ang anak ko, 10 years old —
+tinatanong na niya si AI pag may homework.
+
+Kung kaya namin ng pamilya — kaya mo rin.
+
+Walang laptop na 80k. Walang bayad.
+Everyday Filipino tayo — kaya rin tayong gumamit ng AI.
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #TitoAI</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v2-tiktok')">Copy Caption + Hashtags</button>
+    </div>
+    <div id="w22fri-v2-ig" class="tab-content">
+      <div class="caption-text">"48 years old ako. Dati, housedad. Ngayon?
+Nagtatrabaho na ako gamit lang ang AI —
+at hindi ko naubos kahit isang piso para matuto."
+
+Ganyan ang sabi ko sa simula ng video na ito.
+
+Alam mo yung feeling na may bagong technology,
+lahat parang naiintindihan na — maliban sa 'yo?
+
+Ganyan ako dati. Naisip ko:
+"Para sa mga engineers 'yan. Hindi para sa akin."
+
+Pero isang araw, nag-type lang ako ng tanong sa Claude.
+Sumagot siya. In Filipino. May sense. Mabilis.
+
+Sabi ko: hintay. Pwede pala 'to.
+
+Hindi ako nagpunta sa seminar.
+Hindi ako kumuha ng course.
+Nag-try lang — paulit-ulit —
+hanggang sa naging parte na ng trabaho ko ang AI.
+
+Marketing. Content. Reporting.
+Ang asawa ko, HR executive, ginagamit na rin.
+Ang anak ko, 10 years old — tinatanong na niya si AI pag may homework.
+
+Kung kaya namin ng pamilya —
+kaya mo rin.
+
+Dito sa channel na 'to:
+walang jargon. Walang "you need a laptop worth 80k."
+Lahat ng tools na ituturo ko — libre. Free.
+Everyday Filipino tayo.
+
+Sama-sama tayong magsimula. 👇
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+OFW ka? Nanay? Freelancer? Comment below —
+gusto kong malaman kung sino ang kasama ko dito. 👇</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #PilipinoNaGumamitNgAI #AIForEveryone #FreeTech #TechTips #AIDemo #SiliconValley #AISuccess</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v2-ig')">Copy Caption + Hashtags</button>
+    </div>
+    <div id="w22fri-v2-fb" class="tab-content">
+      <div class="caption-text">Ito ang sinabi ko sa simula ng video na ito:
+
+"48 years old ako. Dati, housedad. Ngayon?
+Nagtatrabaho na ako gamit lang ang AI —
+at hindi ko naubos kahit isang piso para matuto."
+
+Totoo 'yan. At gusto kong ikuwento kung paano.
+
+Alam ninyo yung feeling na may bagong technology —
+lahat parang naiintindihan na, maliban sa inyo?
+
+Ganyan ako dati pagdating sa AI.
+
+Naisip ko: "Para sa mga engineers 'yan.
+Para sa mga bata. Hindi para sa akin."
+
+Pero isang araw, nag-type lang ako ng tanong sa Claude —
+isa sa mga AI tools — at sumagot siya.
+
+In Filipino. May sense. Mabilis.
+
+Sabi ko sa sarili ko: hintay. Pwede pala 'to.
+
+Hindi ako nagpunta sa seminar.
+Hindi ako kumuha ng course.
+Nag-try lang ako. Paulit-ulit.
+Hanggang sa naging parte na ng trabaho ko ang AI.
+
+Ngayon, ginagamit ko si Claude, Gemini, at Notion
+para sa real na projects —
+marketing, content, at reporting.
+
+Ang asawa ko, HR executive siya.
+Ang anak ko, 10 years old —
+kahit siya, tinatanong na niya si AI pag may homework.
+
+Kung kaya namin ng pamilya namin — kaya mo rin.
+
+Dito sa Tito AI:
+walang jargon.
+Walang "you need a laptop worth 80k."
+Lahat ng tools na ituturo ko — libre. Free. Wala kang babayaran.
+
+Everyday Filipino tayo.
+Kaya rin tayong gumamit ng AI.
+
+Sige — sama-sama tayong magsimula.
+
+I-follow ang page na 'to at mag-abang.
+Araw-araw may bago. Libre palagi.
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+---
+Alin sa mga ito ang pinaka-totoo sa inyo ngayon?
+
+👉 "Gusto ko pero di ko alam saan magsisimula."
+👉 "Natakot ako — baka mahirap."
+👉 "Nag-try na ako pero di ko pa rin maintindihan."
+👉 "Handa na ako — anong susunod?"
+
+I-comment ang number — sasagutin ko lahat. 😄</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI</div>
+      <button class="copy-btn" onclick="copyCaption(this,'w22fri-v2-fb')">Copy Caption + Hashtags</button>
+    </div>
   </div>
 
   <div class="first-comment">
@@ -647,10 +798,25 @@ FB: Ano ang pumipigil sa inyo na subukan ang AI? I-comment ang sagot. 😊</div>
 </footer>
 
 <script>
-function switchTab(btn, prefix, platform) {
+function switchVer(btn, postId, ver) {
   const card = btn.closest('.post');
-  card.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  card.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  card.querySelectorAll('.ver-btn').forEach(b => {
+    b.style.background = 'transparent';
+    b.style.color = 'var(--muted)';
+    b.style.borderColor = 'var(--dim)';
+  });
+  btn.style.background = 'rgba(245,158,11,.15)';
+  btn.style.color = 'var(--gold)';
+  btn.style.borderColor = 'var(--gold)';
+  card.querySelectorAll('.ver-panel').forEach(p => p.style.display = 'none');
+  const panel = document.getElementById(postId + '-' + ver);
+  if (panel) panel.style.display = 'block';
+}
+
+function switchTab(btn, prefix, platform) {
+  const panel = btn.closest('.ver-panel') || btn.closest('.post');
+  panel.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  panel.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   const el = document.getElementById(prefix + '-' + platform);
   if (el) el.classList.add('active');
