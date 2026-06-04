@@ -27,3 +27,9 @@ content/**/raw/*.heic
 # Local env
 .env
 *.local
+
+# Finished exports (large video files)
+Finished/*.mp4
+Finished/*.MP4
+Finished/*.mov
+Finished/*.MOV
