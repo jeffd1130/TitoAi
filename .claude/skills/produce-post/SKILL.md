@@ -35,8 +35,18 @@ Produce one complete draft for a specific content slot (cover graphic + caption 
 
 9. **Push to GitHub** — the auto-push hook handles this on Write/Edit.
 
-10. **Report to Jeff:**
+10. **Write Buffer scheduling block** — append to `content/<week>/<slot>/drafts/draft.md`:
+    ```
+    ## Buffer
+    Schedule: <PHT drop time> PHT / <PST equivalent> PST
+    Channel: Instagram → use IG caption
+    Channel: Facebook → use FB caption
+    Upload: export cover-preview.png as the media file
+    ```
+
+11. **Report to Jeff:**
     - Slot name + drop time (PHT + PST)
     - Caption preview (first 2 lines)
     - Canva edit link
+    - Buffer: remind Jeff to schedule in Buffer at buffer.com (workspace: jeffd321@live.com)
     - Approval page URL: `https://jeffd1130.github.io/TitoAi/`
