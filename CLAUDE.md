@@ -25,11 +25,11 @@ All times are **PHT (UTC+8)**. Joseph is in **San Jose, CA (PST, UTC-7)**, so:
 | Day | Stage | Owner | Action |
 |-----|-------|-------|--------|
 | D-3 | Raw assets | Tito AI | Drop videos/photos into `content/<week>/<slot>/raw/` |
-| D-2 | Design | Jeff | Run `produce-week` or per-slot skill → Canva video design + caption generated |
-| D-1 | Approval | Tito AI | Review via **Canva edit link sent by Telegram** — approve or request changes |
-| D-0 | Posting | Tito AI | Publish at the PHT drop time |
+| D-2 | Script + Design | Jeff | Write script → save as `.md` + `.html` in `drafts/` → copy HTML to `docs/scripts/` → run `produce-week` or per-slot skill → Canva cover + caption generated |
+| D-1 | Approval | Tito AI | Review via **Canva edit link + script link sent by Telegram** — approve or request changes |
+| D-0 | Posting | Tito AI | Schedule in **Buffer** at the PHT drop time → publish |
 
-Approval is done directly in Canva. After each production run, send the Canva edit URL to chat ID `8325608814` via `@titoaiph_bot`.
+After each production run, send the Canva edit URL + script link to chat ID `8325608814` via `@titoaiph_bot`. Use `parse_mode=HTML` always.
 
 ---
 
