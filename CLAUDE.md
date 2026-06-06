@@ -37,10 +37,11 @@ Approval is done directly in Canva. After each production run, send the Canva ed
 
 The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 
-- Source: `docs/index.html` + `docs/assets/*.png` in the `main` branch `/docs` folder
+- Source: `docs/index.html` + `docs/assets/*.png` + `docs/scripts/*.html` in the `main` branch `/docs` folder
 - **Not just approval** — full hub with: About / This Week spotlight / June 2026 content calendar / Approval links
 - Sections: About (Joseph + pillars + voice + brand), Current Week, June Calendar (W23–W27), Approval
 - Rebuilt manually or via `update-approval-page` skill after each production run
+- **Scripts** — production scripts saved as HTML to `docs/scripts/<week>-<slot>-script.html` and linked from the calendar card. Copy the branded script template from any existing script in that folder.
 
 ---
 
