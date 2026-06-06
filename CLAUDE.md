@@ -202,7 +202,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 
 | Week | Dates | Mon Tip | Wed Demo | Fri Story |
 |------|-------|---------|----------|-----------|
-| W23 | Jun 1–7 | Paano magsimula sa AI | Gemini Beginner's Guide (Script ✓) | Hindi degree ang kailangan |
+| W23 | Jun 1–7 | Sino si Claude at Gemini (Script ✓) | Gemini Beginner's Guide (Script ✓) | Hindi degree ang kailangan |
 | W24 | Jun 8–14 | Claude vs Gemini | Claude Sari-Sari Demo (Script ✓) | AI para sa OFW |
 | W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | Nanay + AI |
 | W26 | Jun 22–28 | FAQ: mahirap ba? | Gemini para sa OFW | 1 buwan kasama Tito AI |
