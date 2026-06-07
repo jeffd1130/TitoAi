@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W24 Monday · June 9, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0A0F1E;
+    color: #E5E7EB;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 0 60px;
+  }
+  header {
+    background: #0A0F1E;
+    border-bottom: 3px solid #F59E0B;
+    padding: 20px 16px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #F59E0B;
+    text-transform: uppercase;
+  }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown {
+    background: #111827;
+    border-bottom: 1px solid #1E2A3A;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #F59E0B;
+    font-weight: 600;
+  }
+  .countdown .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #F59E0B;
+    animation: pulse 1.5s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .post-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .post-header {
+    background: #111827;
+    padding: 14px 16px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .post-day {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: #F59E0B;
+  }
+  .post-title {
+    font-size: 16px; font-weight: 700;
+    color: #F9FAFB; margin-top: 3px;
+  }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .post-meta span { color: #0D9488; font-weight: 600; }
+  .tabs {
+    display: flex;
+    background: #0D1626;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .tab-btn {
+    flex: 1; background: none; border: none;
+    padding: 10px 4px; font-size: 12px; font-weight: 600;
+    color: #6B7280; cursor: pointer; letter-spacing: 0.5px;
+    transition: color 0.15s; border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box {
+    background: #111827; border-radius: 8px; padding: 14px;
+    white-space: pre-wrap; font-size: 14px; line-height: 1.7;
+    color: #D1D5DB; word-break: break-word;
+  }
+  .hashtags {
+    font-size: 12px; color: #0D9488;
+    margin-top: 10px; line-height: 1.8; word-break: break-all;
+  }
+  .first-comment {
+    background: #0A1628; border: 1px solid #1E2A3A;
+    border-radius: 8px; padding: 12px 14px; margin-top: 12px;
+    font-size: 13px; color: #9CA3AF;
+  }
+  .first-comment strong {
+    display: block; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: #F59E0B; margin-bottom: 4px;
+  }
+  .copy-btn {
+    display: block; width: 100%; margin-top: 10px; padding: 10px;
+    background: #1E2A3A; border: 1px solid #374151; border-radius: 8px;
+    color: #9CA3AF; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px; cursor: pointer; text-align: center;
+    transition: background 0.15s, color 0.15s;
+  }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px;
+    margin-left: 6px; vertical-align: middle;
+  }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .script-header {
+    background: #111827; padding: 13px 16px;
+    border-bottom: 1px solid #1E2A3A;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .script-header h2 {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280;
+  }
+  .script-body { padding: 16px; }
+  .script-scene {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: #F59E0B; margin-bottom: 6px;
+  }
+  .scene-direction {
+    font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px;
+  }
+  .scene-lines {
+    font-size: 14px; color: #F9FAFB; line-height: 1.65;
+    background: #0D1626; border-radius: 6px; padding: 12px;
+  }
+  footer {
+    text-align: center; padding: 30px 16px 0;
+    font-size: 11px; color: #374151;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W24 Monday</h1>
+  <p>June 9, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping tonight · 8:00 PM PHT · 5:00 AM PST
+</div>
+
+<!-- SCRIPT REFERENCE -->
+<div class="script-block">
+  <div class="script-header">
+    <h2>Script — 55 sec · Talking Head</h2>
+  </div>
+  <div class="script-body">
+    <div class="script-scene">
+      <div class="scene-label">Hook · 0:00–0:08</div>
+      <div class="scene-direction">Camera tight. Relaxed, direct.</div>
+      <div class="scene-lines">"Isa sa mga tanong na madalas ko marinig:<br>'Tito, Claude ba o Gemini? Alin ang gagamitin ko?'<br>Heto ang totoong sagot."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Core · 0:08–0:45</div>
+      <div class="scene-direction">Hold up fingers — 1, then 2. Works for muted viewers.</div>
+      <div class="scene-lines">"Gemini — kung OFW ka, may Gmail ka na. gemini.google.com, log in, tapos tanungin mo na. Mabilis na sagot, research, translation. Libre. Walang download.<br><br>Claude — claude.ai. Para sa mas mahabang trabaho. Sulat, proposal, pag-analyze ng dokumento. Mas malalim ang sagot niya. Mas maingat.<br><br>Ang totoo — hindi ka magkamali sa isa man sa dalawa. Libre ang pareho. Subukan mo ang isa, tapos 'yung isa. Ikaw ang makakaalam kung alin ang mas komportable para sa iyo."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">CTA · 0:45–0:55</div>
+      <div class="scene-direction">Lean forward. Warm smile.</div>
+      <div class="scene-lines">"I-comment kung alin ang susubukan mo muna — 'C' para kay Claude, 'G' para sa Gemini.<br><br>Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat."</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Monday · June 9 · W24</div>
+    <div class="post-title">Claude o Gemini — alin ang para sa iyo?</div>
+    <div class="post-meta">Drop: <span>8:00 PM PHT</span> · 5:00 AM PST · Talking head · 55 sec</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'mon','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','fb')">Facebook</button>
+  </div>
+
+  <div id="mon-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="mon-tiktok-text">Kumusta, mga Pamangkin! 🤖
+
+Claude o Gemini — tanong ng tanong kayo. Heto na ang sagot.
+
+Gemini → OFW ka? May Gmail ka na. Libre. Walang download.
+Claude → Mahabang sulat, proposal, dokumento. Mas malalim ang sagot.
+
+Libre ang pareho. Hindi ka magkamali sa isa man.
+
+I-comment: C (Claude) o G (Gemini) — sasabihin ko kung tama ka. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AITip #LibreAngAI #AIPhilippines #OFWPilipinas #FreelancerPH</div>
+    <button class="copy-btn" onclick="copyText('mon-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Claude: claude.ai · Gemini: gemini.google.com — libre ang dalawa. Subukan mo ngayon, i-comment ang resulta mo. Nandito lang ako. 😊</div>
+  </div>
+
+  <div id="mon-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="mon-ig-text">Kumusta, mga Pamangkin! 🤖
+
+"Claude ba o Gemini?" — pinaka-maraming tanong na natatanggap ko.
+
+Heto ang simple na sagot:
+
+🟡 Gemini (gemini.google.com)
+→ OFW ka? May Gmail ka? May access ka na.
+→ Pinaka-madaling simulan. Mabilis na sagot, translation, research.
+→ Para sa araw-araw na mabilis na tanong.
+
+🔵 Claude (claude.ai)
+→ Para sa mas mahabang trabaho — sulat, proposal, pag-analyze ng dokumento.
+→ Mas malalim ang sagot niya. Mas maingat.
+→ Para sa mga kailangan ng mas maingat na output.
+
+Libre ang dalawa. Hindi ka magkamali sa isa man.
+
+I-comment: C (Claude) o G (Gemini) — alin ang susubukan mo muna? 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AITip #LibreAngAI #AIPhilippines #OFWPilipinas #FreelancerPH #LearnAI #TitoAI #AIForEveryone</div>
+    <button class="copy-btn" onclick="copyText('mon-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Claude: claude.ai · Gemini: gemini.google.com — libre ang dalawa. Subukan mo ngayon, i-comment ang resulta mo. Nandito lang ako. 😊</div>
+  </div>
+
+  <div id="mon-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="mon-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Isa sa mga pinaka-madalas na tanong na natatanggap ko:
+
+"Tito — Claude ba o Gemini? Alin ang gagamitin ko?"
+
+Sagutin ko ito nang direkta.
+
+🟡 Gemini — gemini.google.com
+Kung OFW ka, freelancer ka, o gusto mo lang ng mabilis na sagot —
+simula ka sa Gemini.
+Bakit? May Gmail ka na. Log in lang, tapos tanungin mo na.
+Walang download. Walang bagong account. Simula na agad.
+Para sa translation, research, at mabilis na araw-araw na gawain — magaling si Gemini.
+
+🔵 Claude — claude.ai
+Kung kailangan mo ng mas mahabang trabaho —
+sulat, proposal, pagsusuri ng dokumento —
+dito ang Claude.
+Mas malalim ang mga sagot niya. Mas maingat.
+Para sa mga kailangan ng klaro at detalyadong output.
+
+Pero ito ang totoo:
+Hindi ka magkamali sa isa man sa dalawa.
+Libre ang pareho. Walang babayaran para magsimula.
+
+Ang solusyon? Subukan mo ang isa ngayon.
+Pagkatapos, subukan mo ang isa pa.
+Ikaw ang makakaalam kung alin ang mas komportable para sa 'yo.
+
+I-comment: C (Claude) o G (Gemini) — alin ang susubukan mo muna?
+Nandito lang ako kung may tanong. 😊
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AIPhilippines #LibreAngAI #OFWPilipinas</div>
+    <button class="copy-btn" onclick="copyText('mon-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Claude: claude.ai · Gemini: gemini.google.com — libre ang dalawa. Subukan mo ngayon, i-comment ang resulta mo. Nandito lang ako. 😊</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W24 Monday · June 9, 2026</footer>
+
+<script>
+function switchTab(btn, post, platform) {
+  document.querySelectorAll('#' + post + '-tiktok, #' + post + '-ig, #' + post + '-fb').forEach(p => p.classList.remove('active'));
+  btn.closest('.post-block').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(post + '-' + platform).classList.add('active');
+  btn.classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.nextElementSibling.nextElementSibling;
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    btn.style.background = '#F59E0B';
+    btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; }, 1500);
+  });
+}
+</script>
+</body>
+</html>
