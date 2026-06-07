@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W22 Captions · May 26–29, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0A0F1E;
+    color: #E5E7EB;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 0 60px;
+  }
+  header {
+    background: #0A0F1E;
+    border-bottom: 3px solid #F59E0B;
+    padding: 20px 16px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #F59E0B;
+    text-transform: uppercase;
+  }
+  header p {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-top: 2px;
+  }
+  .post-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .post-header {
+    background: #111827;
+    padding: 14px 16px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .post-day {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #F59E0B;
+  }
+  .post-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #F9FAFB;
+    margin-top: 3px;
+  }
+  .post-meta {
+    font-size: 11px;
+    color: #6B7280;
+    margin-top: 4px;
+  }
+  .post-meta span {
+    color: #0D9488;
+    font-weight: 600;
+  }
+  .tabs {
+    display: flex;
+    background: #0D1626;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6B7280;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: color 0.15s, border-bottom 0.15s;
+    border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active {
+    color: #F59E0B;
+    border-bottom: 2px solid #F59E0B;
+  }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box {
+    background: #111827;
+    border-radius: 8px;
+    padding: 14px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #D1D5DB;
+    word-break: break-word;
+  }
+  .hashtags {
+    font-size: 12px;
+    color: #0D9488;
+    margin-top: 10px;
+    line-height: 1.8;
+    word-break: break-all;
+  }
+  .first-comment {
+    background: #0A1628;
+    border: 1px solid #1E2A3A;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #9CA3AF;
+  }
+  .first-comment strong {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #F59E0B;
+    margin-bottom: 4px;
+  }
+  .copy-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #1E2A3A;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    color: #9CA3AF;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s, color 0.15s;
+  }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  footer {
+    text-align: center;
+    padding: 30px 16px 0;
+    font-size: 11px;
+    color: #374151;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W22 Captions</h1>
+  <p>May 26–29, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<!-- ===== MONDAY ===== -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Monday · May 26</div>
+    <div class="post-title">Tatlo lang ang kailangan mo — libre lahat</div>
+    <div class="post-meta">Drop: <span>8:00 PM PHT</span> · 5:00 AM PST · Talking head · 45 sec</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'mon','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','fb')">Facebook</button>
+  </div>
+
+  <div id="mon-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="mon-tiktok-text">Kumusta, mga Pamangkin! 🤖
+
+Tatlong AI apps lang. Libre lahat. Heto na.
+
+1️⃣ Claude — claude.ai
+Para sa sulat, tanong, at documents.
+
+2️⃣ Gemini — gemini.google.com
+Log in sa Gmail mo. Para sa mabilis na sagot. OFW-friendly ang translation.
+
+3️⃣ Notion AI — notion.so
+Para sa pag-organize ng trabaho at buhay.
+
+Libre ang basic ng tatlo. Walang seminar. Walang bagong laptop.
+
+I-try mo ngayon — at i-comment kung alin ang gagamitin mo. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AITip #LibreAngAI #ClaudeAI #GeminiAI #NotionAI #AIPhilippines #TechTips #OFWPilipinas #FreelancerPH</div>
+    <button class="copy-btn" onclick="copyText('mon-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Libre ang simula sa tatlo: claude.ai · gemini.google.com · notion.so — subukan mo ngayon. Kung may tanong ka, nandito lang ako. 😊</div>
+  </div>
+
+  <div id="mon-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="mon-ig-text">Kumusta, mga Pamangkin! 🤖
+
+Tatlo lang ang AI apps na kailangan mo. Libre lahat.
+
+1️⃣ Claude (claude.ai) — para sa mahabang sulat, tanong, at pag-analyze ng documents
+2️⃣ Gemini (gemini.google.com) — mabilis na sagot, OFW-friendly, log in sa Gmail mo
+3️⃣ Notion AI (notion.so) — para sa organizing ng trabaho at buhay
+
+Libre ang basic ng tatlo.
+Walang seminar. Walang laptop na 80k. Walang babayaran para magsimula.
+
+Alin sa tatlo ang gusto mong subukan muna? I-comment mo. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AITip #LibreAngAI #ClaudeAI #GeminiAI #NotionAI #AIPhilippines #TechTips #OFWPilipinas #FreelancerPH #LearnAI</div>
+    <button class="copy-btn" onclick="copyText('mon-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Libre ang simula sa tatlo: claude.ai · gemini.google.com · notion.so — subukan mo ngayon. Kung may tanong ka, nandito lang ako. 😊</div>
+  </div>
+
+  <div id="mon-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="mon-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Sa nakaraang video ko, ipinakita ko kung paano ako nagsimula sa AI.
+
+Ngayon — ito na ang exact na tatlong apps na ginagamit ko araw-araw. Libre lahat.
+
+1️⃣ Claude — claude.ai
+Para sa mahabang sulat, tanong, at pag-analyze ng documents.
+Ito ang pangunahing ginagamit ko sa trabaho.
+
+2️⃣ Gemini — gemini.google.com
+Google 'to — log in lang sa Gmail mo.
+Para sa mabilis na sagot at research.
+Kung OFW ka, magaling pa siya mag-translate ng documents.
+
+3️⃣ Notion AI — notion.so
+Para sa pag-organize ng trabaho at buhay.
+Ginagamit ito ng asawa ko — HR executive siya.
+
+Libre ang basic ng tatlo.
+Wala kang kailangang mag-seminar.
+Wala kang kailangang bumili ng bagong laptop.
+Simula ka na ngayon — libre ang lahat.
+
+Sa susunod na videos ko, ipapakita ko kung paano talaga ginagamit ang bawat isa — live, walang edit, para makita mo mismo.
+
+I-follow ang page para hindi ka mapalampas. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+---
+Alin sa tatlo ang gusto mong matutunan muna?
+👉 Claude
+👉 Gemini
+👉 Notion AI
+
+I-comment — 'yun ang susunod kong ituturo. 😊</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AITip #LibreAngAI #ClaudeAI #GeminiAI #NotionAI #AIPhilippines</div>
+    <button class="copy-btn" onclick="copyText('mon-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Libre ang simula sa tatlo: claude.ai · gemini.google.com · notion.so — subukan mo ngayon. Kung may tanong ka, nandito lang ako. 😊</div>
+  </div>
+</div>
+
+<!-- ===== WEDNESDAY ===== -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Wednesday · May 28</div>
+    <div class="post-title">Gemini — Pinaka-simpleng paraan para magsimula sa AI</div>
+    <div class="post-meta">Drop: <span>7:00 PM PHT</span> · 4:00 AM PST · Tito AI 2.mp4 · 1:35</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'wed','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'wed','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'wed','fb')">Facebook</button>
+  </div>
+
+  <div id="wed-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="wed-tiktok-text">Kumusta, mga Pamangkin! 🤖
+
+Kukuha ka ng bagong skill ngayon — libre, 2 minuto lang.
+
+Ito si Gemini. Google 'to. Libre 'to.
+Kung may Gmail ka — access ka na.
+
+Punta lang sa gemini.google.com, log in, tapos i-type ang tanong mo.
+Ganun lang kadali.
+
+Wala kang binayad.
+Wala kang indownload.
+Gmail mo lang ang kailangan.
+
+Subukan mo ngayon at i-comment ang resulta mo. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #LearnAI #AIPhilippines #LibrengTools #TechTips #OFWTips #FreelancerPH</div>
+    <button class="copy-btn" onclick="copyText('wed-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Subukan mo ngayon: gemini.google.com — libre ang simula. Log in sa Gmail mo, tapos i-type ang tanong mo. Kung may hindi malinaw, nandito lang ako. 😊</div>
+  </div>
+
+  <div id="wed-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="wed-ig-text">Kumusta, mga Pamangkin! 🤖
+
+May Gmail ka? May access ka na sa AI.
+
+Ito si Gemini — libre, gawa ng Google, at hindi mo kailangan ng background sa tech para magamit.
+
+Sa video na ito, ipinakita ko kung paano gamitin ito para sa isang bagay na pang-araw-araw — mabilis, praktikal, at totoong libre.
+
+✅ Walang binayad
+✅ Walang indownload
+✅ Gmail mo lang ang kailangan
+
+Ito ang pinaka-simple na paraan para magsimula sa AI.
+At kapag handa ka na sa susunod na level — nandito lang ako. 😊
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+OFW ka? Nanay? Freelancer? I-comment — gusto kong malaman kung sino ang kasama ko dito. 👇</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #LearnAI #AIPhilippines #LibrengTools #TechTips #OFWPilipinas #FreelancerPH #NanayPH #AIForEveryone</div>
+    <button class="copy-btn" onclick="copyText('wed-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Subukan mo ngayon: gemini.google.com — libre ang simula. Log in sa Gmail mo, tapos i-type ang tanong mo. Kung may hindi malinaw, nandito lang ako. 😊</div>
+  </div>
+
+  <div id="wed-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="wed-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Ito ang pinaka-simpleng paraan para magsimula sa AI — libre, ngayon na.
+
+Sa nakaraang video ko, sinabi ko na libre ang AI na ginagamit ko.
+Ngayon, ipapakita ko kung paano.
+
+Ito si Gemini. Google 'to. Libre 'to.
+
+Punta ka lang sa gemini.google.com.
+Log in gamit ang Gmail mo.
+Tapos i-type ang tanong mo — kahit anong gusto mo.
+
+Seconds lang — may maayos na sagot ka na agad.
+
+Hindi ka kailangan pang:
+❌ Mag-seminar
+❌ Bumili ng bagong laptop
+❌ Mag-enroll sa online course
+
+Gmail mo lang. Tapos na.
+
+Sa video na ito, ginamit ko siya para sa isang sitwasyon na relatable — at kitang-kita kung gaano kabilis at ka-natural ang sagot niya.
+
+Subukan mo ngayon — at kung may natutunan ka, i-share mo sa isang kaibigan o kamag-anak na kailangan ito. 🙏
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+---
+Anong unang bagay ang gustong gawin mo sa Gemini?
+I-comment — baka 'yun ang susunod na video. 😄</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #AIPhilippines #LibrengTools #OFWPilipinas</div>
+    <button class="copy-btn" onclick="copyText('wed-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Subukan mo ngayon: gemini.google.com — libre ang simula. Log in sa Gmail mo, tapos i-type ang tanong mo. Kung may hindi malinaw, nandito lang ako. 😊</div>
+  </div>
+</div>
+
+<!-- ===== FRIDAY ===== -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Friday · May 29 · Launch Video</div>
+    <div class="post-title">Origin Story — Sino ako at bakit ka dapat makinig sa akin</div>
+    <div class="post-meta">Drop: <span>7:00 PM PHT</span> · 4:00 AM PST · Tito Ai Intro.mp4 · 2:47</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'fri','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'fri','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'fri','fb')">Facebook</button>
+  </div>
+
+  <div id="fri-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="fri-tiktok-text">"48 years old ako. Dati, housedad.
+Ngayon? Nagtatrabaho na ako gamit lang ang AI —
+at hindi ko naubos kahit isang piso para matuto."
+
+Naisip ko dati: "Para sa mga engineers 'yan.
+Para sa mga bata. Hindi para sa akin."
+
+Pero nag-type lang ako ng tanong sa Claude.
+Sumagot siya. In Filipino. May sense. Mabilis.
+
+Sabi ko: hintay. Pwede pala 'to.
+
+Ang asawa ko, HR executive. Ang anak ko, 10 years old —
+tinatanong na niya si AI pag may homework.
+
+Kung kaya namin ng pamilya — kaya mo rin.
+
+Walang laptop na 80k. Walang bayad.
+Everyday Filipino tayo — kaya rin tayong gumamit ng AI.
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #TitoAI</div>
+    <button class="copy-btn" onclick="copyText('fri-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Ikukwento ko dito ang bawat hakbang. Libre lahat. Walang hihingiin.</div>
+  </div>
+
+  <div id="fri-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="fri-ig-text">"48 years old ako. Dati, housedad. Ngayon?
+Nagtatrabaho na ako gamit lang ang AI —
+at hindi ko naubos kahit isang piso para matuto."
+
+Ganyan ang sabi ko sa simula ng video na ito.
+
+Alam mo yung feeling na may bagong technology,
+lahat parang naiintindihan na — maliban sa 'yo?
+
+Ganyan ako dati. Naisip ko:
+"Para sa mga engineers 'yan. Hindi para sa akin."
+
+Pero isang araw, nag-type lang ako ng tanong sa Claude.
+Sumagot siya. In Filipino. May sense. Mabilis.
+
+Sabi ko: hintay. Pwede pala 'to.
+
+Hindi ako nagpunta sa seminar.
+Hindi ako kumuha ng course.
+Nag-try lang — paulit-ulit —
+hanggang sa naging parte na ng trabaho ko ang AI.
+
+Marketing. Content. Reporting.
+Ang asawa ko, HR executive, ginagamit na rin.
+Ang anak ko, 10 years old — tinatanong na niya si AI pag may homework.
+
+Kung kaya namin ng pamilya — kaya mo rin.
+
+Dito sa channel na 'to:
+walang jargon. Walang "you need a laptop worth 80k."
+Lahat ng tools na ituturo ko — libre. Free.
+Everyday Filipino tayo.
+
+Sama-sama tayong magsimula. 👇
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+OFW ka? Nanay? Freelancer? Comment below —
+gusto kong malaman kung sino ang kasama ko dito. 👇</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AIPhilippines #LearnAI #LibreAngAI #HouseholdDad #PilipinoNaGumamitNgAI #AIForEveryone #FreeTech #TechTips #AIDemo #SiliconValley #AISuccess</div>
+    <button class="copy-btn" onclick="copyText('fri-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Ikukwento ko dito ang bawat hakbang. Libre lahat. Walang hihingiin.</div>
+  </div>
+
+  <div id="fri-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="fri-fb-text">Ito ang sinabi ko sa simula ng video na ito:
+
+"48 years old ako. Dati, housedad. Ngayon?
+Nagtatrabaho na ako gamit lang ang AI —
+at hindi ko naubos kahit isang piso para matuto."
+
+Totoo 'yan. At gusto kong ikuwento kung paano.
+
+Alam ninyo yung feeling na may bagong technology —
+lahat parang naiintindihan na, maliban sa inyo?
+
+Ganyan ako dati pagdating sa AI.
+
+Naisip ko: "Para sa mga engineers 'yan.
+Para sa mga bata. Hindi para sa akin."
+
+Pero isang araw, nag-type lang ako ng tanong sa Claude —
+isa sa mga AI tools — at sumagot siya.
+
+In Filipino. May sense. Mabilis.
+
+Sabi ko sa sarili ko: hintay. Pwede pala 'to.
+
+Hindi ako nagpunta sa seminar.
+Hindi ako kumuha ng course.
+Nag-try lang ako. Paulit-ulit.
+Hanggang sa naging parte na ng trabaho ko ang AI.
+
+Ngayon, ginagamit ko si Claude, Gemini, at Notion
+para sa real na projects —
+marketing, content, at reporting.
+
+Ang asawa ko, HR executive siya.
+Ang anak ko, 10 years old —
+kahit siya, tinatanong na niya si AI pag may homework.
+
+Kung kaya namin ng pamilya namin — kaya mo rin.
+
+Dito sa Tito AI:
+walang jargon.
+Walang "you need a laptop worth 80k."
+Lahat ng tools na ituturo ko — libre. Free. Wala kang babayaran.
+
+Everyday Filipino tayo.
+Kaya rin tayong gumamit ng AI.
+
+Sige — sama-sama tayong magsimula.
+
+I-follow ang page na 'to at mag-abang.
+Araw-araw may bago. Libre palagi.
+
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+---
+Alin sa mga ito ang pinaka-totoo sa inyo ngayon?
+
+👉 "Gusto ko pero di ko alam saan magsisimula."
+👉 "Natakot ako — baka mahirap."
+👉 "Nag-try na ako pero di ko pa rin maintindihan."
+👉 "Handa na ako — anong susunod?"
+
+I-comment ang number — sasagutin ko lahat. 😄</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIPhilippines #LearnAI #LibreAngAI</div>
+    <button class="copy-btn" onclick="copyText('fri-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment</strong>Ikukwento ko dito ang bawat hakbang. Libre lahat. Walang hihingiin.</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W22 · Generated by Jeff</footer>
+
+<script>
+function switchTab(btn, post, platform) {
+  document.querySelectorAll('#' + post + '-tiktok, #' + post + '-ig, #' + post + '-fb').forEach(p => p.classList.remove('active'));
+  btn.closest('.post-block').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(post + '-' + platform).classList.add('active');
+  btn.classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.nextElementSibling.nextElementSibling;
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    btn.style.background = '#F59E0B';
+    btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; }, 1500);
+  });
+}
+</script>
+</body>
+</html>
