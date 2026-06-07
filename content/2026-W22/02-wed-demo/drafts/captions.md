@@ -1,83 +1,101 @@
 # Captions — 02-wed-demo — 2026-W22
 **Video:** `Finished/Tito AI 2.mp4`
 **Specs:** 1:35 · 1440×2560 · HEVC/H.265 · AAC
-**Topic:** Gemini Beginner's Demo — libre, ngayon
+**Topic:** Gemini — Pinaka-simpleng paraan para magsimula sa AI
 **Drop:** Wednesday, May 28, 2026 · 7:00 PM PHT (4:00 AM PST)
 **Platform:** TikTok first → Facebook (native upload) → IG Reels
+**Video notes:** Opens with animated Tito AI logo intro · Talking head at home · Green polo, black cap · Wooden shelf background (authentic bahay feel)
 
 ---
 
 ## TikTok
 
-Kukuha ka ng bagong skill ngayon — in less than 2 minutes. Free. Walang sign-up na gagastos.
+Kumusta, mga Pamangkin! 🤖
+
+Kukuha ka ng bagong skill ngayon — libre, 2 minuto lang.
 
 Ito si Gemini. Google 'to. Libre 'to.
+Kung may Gmail ka — access ka na.
 
-Punta ka lang sa gemini.google.com — log in sa Gmail mo. Tapos ganito ang gagawin mo. 👇
+Punta lang sa gemini.google.com, log in, tapos i-type ang tanong mo.
+Ganun lang kadali.
 
-Wala kang binayad. Wala kang indownload.
-Ito lang ang kailangan mo para magsimula.
-
-At 'pag handa ka na para sa susunod na level — nandito lang ako.
-
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
-
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #AIDemo #LearnAI #TechTips #OFWTips #AIPhilippines #LibrengTools
-
----
-
-## Instagram
-
-Libre ang AI na ito. Nasa Gmail ka na — nandoon na ang access mo.
-
-Ito si Gemini. Google 'to. At sa video na ito, ipapakita ko kung paano gamitin — kahit wala kang background sa tech.
-
-OFW ka? Freelancer? Nanay na maraming gagawin?
-Ito ang pinaka-simple na paraan para magsimula.
-
-✅ Walang binayad
-✅ Walang indownload
-✅ Gmail mo lang ang kailangan
+Wala kang binayad.
+Wala kang indownload.
+Gmail mo lang ang kailangan.
 
 Subukan mo ngayon at i-comment ang resulta mo. 👇
 
 Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #AIDemo #LibrengTools #OFWPilipinas #FreelancerPH #AIPhilippines #LearnAI #TechTips #NanayPH
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #LearnAI #AIPhilippines #LibrengTools #TechTips #OFWTips #FreelancerPH
+
+---
+
+## Instagram
+
+Kumusta, mga Pamangkin! 🤖
+
+May Gmail ka? May access ka na sa AI.
+
+Ito si Gemini — libre, gawa ng Google, at hindi mo kailangan ng background sa tech para magamit.
+
+Sa video na ito, ipinakita ko kung paano gamitin ito para sa isang bagay na pang-araw-araw — mabilis, praktikal, at totoong libre.
+
+✅ Walang binayad
+✅ Walang indownload
+✅ Gmail mo lang ang kailangan
+
+Ito ang pinaka-simple na paraan para magsimula sa AI.
+At kapag handa ka na sa susunod na level — nandito lang ako. 😊
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+OFW ka? Nanay? Freelancer? I-comment — gusto kong malaman kung sino ang kasama ko dito. 👇
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #LearnAI #AIPhilippines #LibrengTools #TechTips #OFWPilipinas #FreelancerPH #NanayPH #AIForEveryone
 
 ---
 
 ## Facebook
 
-Sinabi ko sa nakaraang video — libre ang AI na ginagamit ko.
+Kumusta, mga Pamangkin! 🤖
 
-Ngayon, ipapakita ko kung paano talaga.
+Ito ang pinaka-simpleng paraan para magsimula sa AI — libre, ngayon na.
+
+Sa nakaraang video ko, sinabi ko na libre ang AI na ginagamit ko.
+Ngayon, ipapakita ko kung paano.
 
 Ito si Gemini. Google 'to. Libre 'to.
 
-Punta ka lang sa gemini.google.com — log in sa Gmail mo. Tapos i-type ang tanong mo. Ganun lang kadali.
+Punta ka lang sa gemini.google.com.
+Log in gamit ang Gmail mo.
+Tapos i-type ang tanong mo — kahit anong gusto mo.
 
-Sa video na ito, ginamit ko siya para sa isang bagay na relatable:
-sulat ng leave letter — pormal, Tagalog, para sa mga OFW na kailangan mag-request ng pahinga.
+Seconds lang — may maayos na sagot ka na agad.
 
-30 seconds lang. May salutation, body, at closing — lahat.
+Hindi ka kailangan pang:
+❌ Mag-seminar
+❌ Bumili ng bagong laptop
+❌ Mag-enroll sa online course
 
-Wala kang kailangan na laptop na mahal.
-Wala kang kailangan na training.
-Gmail mo lang.
+Gmail mo lang. Tapos na.
 
-I-try mo ngayon — at kung may natutunan ka, i-share mo sa mga kakilala mo na pwedeng makinabang. 🙏
+Sa video na ito, ginamit ko siya para sa isang sitwasyon na relatable —
+at kitang-kita kung gaano kabilis at ka-natural ang sagot niya.
+
+Subukan mo ngayon — at kung may natutunan ka, i-share mo sa isang kaibigan o kamag-anak na kailangan ito. 🙏
 
 Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
 
 ---
+Anong unang bagay ang gustong gawin mo sa Gemini?
+I-comment — baka 'yun ang susunod na video. 😄
 
-Ano ang unang bagay na gustong gawin mo sa AI? I-comment mo — baka 'yun ang susunod na video. 😄
-
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #AIDemo #LibrengTools #OFWPilipinas #AIPhilippines
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAngAI #AIPhilippines #LibrengTools #OFWPilipinas
 
 ---
 
 ## First Comment (post immediately after publishing — all platforms)
 
-Subukan mo ngayon: gemini.google.com — libre ang simula. Kung may tanong ka, nandito lang ako. 😊
+Subukan mo ngayon: gemini.google.com — libre ang simula. Log in sa Gmail mo, tapos i-type ang tanong mo. Kung may hindi malinaw, nandito lang ako. 😊
