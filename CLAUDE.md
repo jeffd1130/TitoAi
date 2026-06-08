@@ -43,6 +43,13 @@ The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 - Rebuilt manually or via `update-approval-page` skill after each production run
 - **Scripts** — production scripts saved as HTML to `docs/scripts/<week>-<slot>-script.html` and linked from the calendar card. Copy the branded script template from any existing script in that folder.
 
+**Live pages:**
+| Page | URL |
+|------|-----|
+| W22 captions approval | `https://jeffd1130.github.io/TitoAi/W22-captions.html` |
+| W24 Mon captions approval | `https://jeffd1130.github.io/TitoAi/W24-mon-captions.html` |
+| Niche & Growth Plan | `https://jeffd1130.github.io/TitoAi/niche-plan.html` |
+
 ---
 
 ## Content pillars
@@ -171,7 +178,7 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 **Finished export:** `Finished/Tito Ai Intro.mp4` (255MB · 6-scene · 1080×1920 · ready to post)
 **Post design (approval draft):** `DAHKj9hQPYw` — edit: `https://www.canva.com/d/ldOIk0NrlQiKFWq`
 **Drop:** Friday May 29, 2026 · 7:00 PM PHT · **Status: Draft — pending Joseph approval**
-**Captions:** Platform-specific captions written (TikTok/IG/FB) — see session history or regenerate via `caption-library`
+**Captions:** `content/2026-W22/03-fri-inspiration/drafts/captions.md` · W22 approval page: `https://jeffd1130.github.io/TitoAi/W22-captions.html`
 
 **Merged 6-scene assembly:** `DAHKkLR22UY` — edit: `https://www.canva.com/d/RE4msPrzxaRZycB`
 **Base design (Cisco/SV shot):** `DAHKkEMsz4Q`
@@ -204,12 +211,36 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | Week | Dates | Mon Tip | Wed Demo | Fri Story |
 |------|-------|---------|----------|-----------|
 | W23 | Jun 1–7 | Sino si Claude at Gemini (Script ✓) | Gemini Beginner's Guide (Script ✓) | Hindi degree ang kailangan |
-| W24 | Jun 8–14 | Claude vs Gemini | Claude Sari-Sari Demo (Script ✓) | AI para sa OFW |
+| W24 | Jun 8–14 | **Claude o Gemini — alin ang para sa iyo? (Script ✓ · Captions ✓)** | Claude Sari-Sari Demo (Script ✓) | AI para sa OFW |
 | W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | Nanay + AI |
 | W26 | Jun 22–28 | FAQ: mahirap ba? | Gemini para sa OFW | 1 buwan kasama Tito AI |
 | W27 | Jun 30 | July teaser | — | — |
 
 Full calendar with D-3→D-0 task dates per post: **`https://jeffd1130.github.io/TitoAi/#june`**
+
+**W24 Monday approval page:** `https://jeffd1130.github.io/TitoAi/W24-mon-captions.html`
+
+---
+
+## Niche & Growth Strategy
+
+Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https://jeffd1130.github.io/TitoAi/niche-plan.html`
+
+**Niche:** "The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."
+
+**Target audience:** OFWs · Freelancers (1.5M+) · BPO workers · Nanays/tatays · Small business owners
+
+**Primary tools featured in all content:** Claude (claude.ai) + Gemini (gemini.google.com) — both free. Never reference paid tools.
+
+**Content pillars:**
+- Mon Tips → OFW Toolkit (highest share potential)
+- Wed Demos → Freelancer Upgrade
+- Fri Stories → Family & Everyday Life
+- Evergreen → BPO / Workforce Survival
+
+**Hook rule:** Hook must land in second 1 — never open with "Kumusta" first.
+
+**Algorithm:** End every video with a YES/NO or choice question. Reply to comments in first hour. Pin first comment within 5 min.
 
 ---
 
