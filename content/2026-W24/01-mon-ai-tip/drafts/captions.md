@@ -13,7 +13,7 @@ Kumusta, mga Pamangkin! 🤖
 
 Claude o Gemini — tanong ng tanong kayo. Heto na ang sagot.
 
-Gemini → OFW ka? May Gmail ka na. Libre. Walang download.
+Gemini → May Gmail ka? May access ka na agad. Libre. Walang download.
 Claude → Mahabang sulat, proposal, dokumento. Mas malalim ang sagot.
 
 Libre ang pareho. Hindi ka magkamali sa isa man.
@@ -35,9 +35,9 @@ Kumusta, mga Pamangkin! 🤖
 Heto ang simple na sagot:
 
 🟡 Gemini (gemini.google.com)
-→ OFW ka? May Gmail ka? May access ka na.
+→ May Gmail ka? May access ka na agad.
 → Pinaka-madaling simulan. Mabilis na sagot, translation, research.
-→ Para sa araw-araw na mabilis na tanong.
+→ Para sa lahat ng araw-araw na tanong.
 
 🔵 Claude (claude.ai)
 → Para sa mas mahabang trabaho — sulat, proposal, pag-analyze ng dokumento.
@@ -67,7 +67,7 @@ Isa sa mga pinaka-madalas na tanong na natatanggap ko:
 Sagutin ko ito nang direkta.
 
 🟡 Gemini — gemini.google.com
-Kung OFW ka, freelancer ka, o gusto mo lang ng mabilis na sagot —
+Kung gusto mo ng mabilis na sagot —
 simula ka sa Gemini.
 Bakit? May Gmail ka na. Log in lang, tapos tanungin mo na.
 Walang download. Walang bagong account. Simula na agad.
