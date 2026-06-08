@@ -2,7 +2,7 @@
 **Topic:** Claude o Gemini — alin ang para sa iyo?
 **Drop:** Monday, June 9, 2026 · 8:00 PM PHT (5:00 AM PST)
 **Platform:** TikTok first → IG Reels → Facebook Reels
-**Format:** Talking head · 55 sec · No B-roll
+**Format:** Carousel · 5 slides · 1080×1920
 **Tools featured:** Claude (claude.ai) · Gemini (gemini.google.com)
 
 ---
@@ -20,7 +20,7 @@ Libre ang pareho. Hindi ka magkamali sa isa man.
 
 I-comment: C (Claude) o G (Gemini) — sasabihin ko kung tama ka. 👇
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AITip #LibreAngAI #AIPhilippines #OFWPilipinas #FreelancerPH
 
@@ -50,7 +50,7 @@ Ang pinakamabilis na paraan: subukan mo ang isa ngayon, pagkatapos 'yung isa. Ik
 
 I-comment: C (Claude) o G (Gemini) — alin ang susubukan mo muna? 👇
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AITip #LibreAngAI #AIPhilippines #OFWPilipinas #FreelancerPH #LearnAI #TitoAI #AIForEveryone
 
@@ -91,7 +91,7 @@ Ikaw ang makakaalam kung alin ang mas komportable para sa 'yo.
 I-comment: C (Claude) o G (Gemini) — alin ang susubukan mo muna?
 Nandito lang ako kung may tanong. 😊
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AIPhilippines #LibreAngAI #OFWPilipinas
 
