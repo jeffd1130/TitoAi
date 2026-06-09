@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W24 Wednesday Demo · June 11, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0A0F1E;
+    color: #E5E7EB;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 0 60px;
+  }
+  header {
+    background: #0A0F1E;
+    border-bottom: 3px solid #F59E0B;
+    padding: 20px 16px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #F59E0B;
+    text-transform: uppercase;
+  }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown {
+    background: #111827;
+    border-bottom: 1px solid #1E2A3A;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #0D9488;
+    font-weight: 600;
+  }
+  .countdown .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #0D9488;
+    animation: pulse 1.5s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .post-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .post-header {
+    background: #111827;
+    padding: 14px 16px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .post-day {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: #0D9488;
+  }
+  .post-title {
+    font-size: 16px; font-weight: 700;
+    color: #F9FAFB; margin-top: 3px;
+  }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .post-meta span { color: #0D9488; font-weight: 600; }
+  .tabs {
+    display: flex;
+    background: #0D1626;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .tab-btn {
+    flex: 1; background: none; border: none;
+    padding: 10px 4px; font-size: 12px; font-weight: 600;
+    color: #6B7280; cursor: pointer; letter-spacing: 0.5px;
+    transition: color 0.15s; border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box {
+    background: #111827; border-radius: 8px; padding: 14px;
+    white-space: pre-wrap; font-size: 14px; line-height: 1.7;
+    color: #D1D5DB; word-break: break-word;
+  }
+  .hashtags {
+    font-size: 12px; color: #0D9488;
+    margin-top: 10px; line-height: 1.8; word-break: break-all;
+  }
+  .first-comment {
+    background: #0A1628; border: 1px solid #1E2A3A;
+    border-radius: 8px; padding: 12px 14px; margin-top: 12px;
+    font-size: 13px; color: #9CA3AF;
+  }
+  .first-comment strong {
+    display: block; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: #F59E0B; margin-bottom: 4px;
+  }
+  .copy-btn {
+    display: block; width: 100%; margin-top: 10px; padding: 10px;
+    background: #1E2A3A; border: 1px solid #374151; border-radius: 8px;
+    color: #9CA3AF; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px; cursor: pointer; text-align: center;
+    transition: background 0.15s, color 0.15s;
+  }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px;
+    margin-left: 6px; vertical-align: middle;
+  }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .script-header {
+    background: #111827; padding: 13px 16px;
+    border-bottom: 1px solid #1E2A3A;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .script-header h2 {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280;
+  }
+  .script-body { padding: 16px; }
+  .script-scene {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: #0D9488; margin-bottom: 6px;
+  }
+  .scene-direction {
+    font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px;
+  }
+  .scene-lines {
+    font-size: 14px; color: #F9FAFB; line-height: 1.65;
+    background: #0D1626; border-radius: 6px; padding: 12px;
+  }
+  .prompt-block {
+    background: #0D1F1E; border: 1px solid #0D9488;
+    border-radius: 8px; padding: 12px 14px; margin-top: 10px;
+    font-size: 13px; color: #6EE7B7; font-family: monospace;
+    white-space: pre-wrap; line-height: 1.6;
+  }
+  .prompt-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: #0D9488; margin-bottom: 6px;
+  }
+  footer {
+    text-align: center; padding: 30px 16px 0;
+    font-size: 11px; color: #374151;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W24 Wednesday Demo</h1>
+  <p>June 11, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping Wednesday · 7:00 PM PHT · 4:00 AM PST
+</div>
+
+<!-- COMPANION SLIDES PREVIEW -->
+<div style="margin:16px 0 0;">
+  <div style="padding:0 12px 10px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#0D9488;">Companion Slides · 5 Slides · Swipe to preview</div>
+    <div style="font-size:10px;color:#4B5563;">1 / 5</div>
+  </div>
+  <div style="overflow-x:scroll;display:flex;gap:10px;padding:0 12px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 1 — HOOK</div>
+      <img src="slides/W24-wed/slide-01-hook.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 2 — PROBLEMA</div>
+      <img src="slides/W24-wed/slide-02-problema.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 3 — SOLUSYON</div>
+      <img src="slides/W24-wed/slide-03-solusyon.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 4 — HIGIT PA</div>
+      <img src="slides/W24-wed/slide-04-higit-pa.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;padding-right:12px;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 5 — CTA</div>
+      <img src="slides/W24-wed/slide-05-cta.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<div class="script-block">
+  <div class="script-header">
+    <h2>Script — 1:30 · Split Screen Demo</h2>
+  </div>
+  <div class="script-body">
+    <div class="script-scene">
+      <div class="scene-label">Hook · 0:00–0:05</div>
+      <div class="scene-direction">Face cam. Direct eye contact. No intro yet.</div>
+      <div class="scene-lines">"Kung may negosyo ka at wala kang pera para sa marketing agency — pakinggan mo ito."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Setup · 0:05–0:18</div>
+      <div class="scene-direction">Warm, conversational. List the audience types.</div>
+      <div class="scene-lines">"Kumusta, mga Pamangkin! Para sa lahat ng mga negosyante natin — sari-sari, carinderia, online shop, ukay-ukay — kahit anong klase ng maliit na negosyo.<br><br>Dalawang problema ang lagi kong naririnig: hindi alam kung kumikita ba, at hindi alam kung paano mag-market online. Solusyon? Si Claude. Libre."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Demo · 0:18–0:52</div>
+      <div class="scene-direction">Switch to screen share. Open claude.ai incognito. Type live — don't paste.</div>
+      <div class="scene-lines">"Pumunta tayo sa claude.ai — libre, walang bayad. I-type natin ito:"</div>
+      <div class="prompt-label">Prompt — type live on screen</div>
+      <div class="prompt-block">May online shop ako na nagbebenta ng homemade cookies.
+Mga produkto: Classic Choco Chip (₱150/box), Red Velvet (₱180/box).
+Target customers: mga nanay at estudyante sa Maynila.
+Budget para sa marketing: ₱500 lang.
+
+Tulungan mo akong:
+1. Gumawa ng 3-araw na Facebook promo campaign ngayong linggo
+2. Isulat ang caption para sa bawat post
+3. Sabihin kung anong oras pinaka-magandang mag-post</div>
+      <div class="scene-lines" style="margin-top:10px;">"Tingnan ninyo — tatlong posts, caption na handa na, at schedule pa. 'Yan ang dating ₱5,000 na trabaho ng social media manager. Libre na ngayon."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Expand · 0:52–1:13</div>
+      <div class="scene-direction">Back to face cam or split screen. Energetic but calm.</div>
+      <div class="scene-lines">"At hindi lang 'yan. Pwede mo rin itanong:<br><br>'Anong produkto ang dapat kong i-promo ngayong weekend?'<br>'Gumawa ng mensahe sa mga customers para sa repeat order.'<br>'Paano ko papalakihin ang negosyo ko sa ₱5,000?'<br><br>Hindi ka na mahihiya sa walang marketing budget. Si Claude ang libreng marketing team mo."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">CTA + Closer · 1:13–1:30</div>
+      <div class="scene-direction">Face cam. Lean in. Warm smile.</div>
+      <div class="scene-lines">"Kung negosyante ka, o may kakilala kang may negosyo — i-share mo ito sa kanila ngayon.<br><br>I-comment: NEGOSYO — at padalhan kita ng 5 ready-to-use prompts para sa iyong negosyo.<br><br>Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭"</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Wednesday · June 11 · W24</div>
+    <div class="post-title">Claude para sa Negosyante — Libre ang Marketing Mo</div>
+    <div class="post-meta">Drop: <span>7:00 PM PHT</span> · 4:00 AM PST · Demo Reel · 1:30 · Split screen</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'wed','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'wed','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'wed','fb')">Facebook</button>
+  </div>
+
+  <div id="wed-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="wed-tiktok-text">Walang budget para sa marketing agency? Wala problema.
+
+Ipinakita ko kung paano gumawa ng 3-araw na Facebook campaign gamit ang Claude — libre, 2 minuto lang.
+
+I-comment: NEGOSYO — padalhan kita ng 5 prompts para sa iyong negosyo. 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #SmallBusinessPH #AITip #LibreAngAI #DigitalMarketingPH</div>
+    <button class="copy-btn" onclick="copyText('wed-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa ₱500 lang." Subukan mo ngayon. 😊</div>
+  </div>
+
+  <div id="wed-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="wed-ig-text">Kumusta, mga Pamangkin! 🤖
+
+Kung negosyante ka at wala kang budget para sa social media manager — pakinggan mo ito.
+
+Ginawa ko ngayong live ang isang buong 3-araw na Facebook campaign gamit ang Claude:
+✅ 3 posts — handa na ang caption
+✅ Schedule — pinaka-magandang oras ng pag-post
+✅ Target ang tamang customers
+
+Libre. Walang bayad. 2 minuto lang.
+
+Pwede mo ring itanong:
+— "Anong produkto ang i-promo ko ngayong weekend?"
+— "Sumulat ng mensahe sa supplier ko."
+— "Paano palaguin ang negosyo ko sa ₱5,000?"
+
+Sumasagot si Claude sa lahat ng 'yan. Sa Tagalog pa kung gusto mo.
+
+Hindi ka na mahihiya sa walang marketing budget. Si Claude ang libreng marketing team mo.
+
+I-comment: NEGOSYO — padalhan kita ng 5 ready-to-use prompts para sa iyong negosyo. 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #SmallBusinessPH #AITip #LibreAngAI #DigitalMarketingPH #ClaudeAI #AIPhilippines #OnlineNegosyo #FreelancerPH #MarketingTips #LearnAI #TitoAI</div>
+    <button class="copy-btn" onclick="copyText('wed-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa ₱500 lang." Subukan mo ngayon. 😊</div>
+  </div>
+
+  <div id="wed-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="wed-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Para sa lahat ng mga negosyante natin — sari-sari store, carinderia, online shop, ukay-ukay — may mensahe ako para sa inyo ngayon.
+
+Isa sa mga pinaka-malaking problema ng maliit na negosyo: walang pera para sa marketing. Walang social media manager. Hindi alam kung paano maaabot ang mas maraming customers online.
+
+Ngayon, ipinakita ko kung paano ginagawa ito ng AI para sa inyo — libre.
+
+Ginamit ko si Claude (claude.ai) para gumawa ng isang buong 3-araw na Facebook campaign para sa isang homemade cookies shop:
+
+📌 Tatlong posts — kumpleto na ang caption ng bawat isa
+📌 Pinaka-magandang oras ng pag-post bawat araw
+📌 Paano i-target ang tamang customers
+
+Resulta? Social-media-manager-level na trabaho — libre, sa loob ng 2 minuto.
+
+Hindi lang 'yan. Pwede ring itanong kay Claude:
+— "Anong produkto ang dapat kong i-promo ngayong weekend?"
+— "Sumulat ng mensahe sa aking supplier para sa order."
+— "Gumawa ng listahan ng products para sa aking online shop."
+— "Paano ko papalakihin ang negosyo ko sa ₱5,000?"
+
+Libre ang lahat. Ngayon na pwede.
+
+Kung negosyante ka, o may kakilala kang may negosyo — i-share mo ito sa kanila.
+
+I-comment: NEGOSYO — at padalhan kita ng 5 ready-to-use AI prompts na pwede mong gamitin para sa iyong negosyo ngayon mismo. 😊
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #SmallBusinessPH #DigitalMarketingPH #LibreAngAI</div>
+    <button class="copy-btn" onclick="copyText('wed-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa ₱500 lang." Subukan mo ngayon. 😊</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W24 Wednesday · June 11, 2026</footer>
+
+<script>
+function switchTab(btn, post, platform) {
+  document.querySelectorAll('#' + post + '-tiktok, #' + post + '-ig, #' + post + '-fb').forEach(p => p.classList.remove('active'));
+  btn.closest('.post-block').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(post + '-' + platform).classList.add('active');
+  btn.classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.nextElementSibling.nextElementSibling;
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    btn.style.background = '#F59E0B';
+    btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; }, 1500);
+  });
+}
+</script>
+</body>
+</html>
