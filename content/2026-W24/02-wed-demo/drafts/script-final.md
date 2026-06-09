@@ -29,9 +29,9 @@
 **[SHOW PROMPT ON SCREEN:]**
 ```
 May online shop ako na nagbebenta ng homemade cookies.
-Mga produkto: Classic Choco Chip (₱150/box), Red Velvet (₱180/box).
+Mga produkto: Classic Choco Chip (Php150/box), Red Velvet (Php180/box).
 Target customers: mga nanay at estudyante sa Maynila.
-Budget para sa marketing: ₱500 lang.
+Budget para sa marketing: Php500 lang.
 
 Tulungan mo akong:
 1. Gumawa ng 3-araw na Facebook promo campaign ngayong linggo
@@ -41,7 +41,7 @@ Tulungan mo akong:
 
 > *(Wait for Claude response — show full response scrolling)*
 >
-> "Tingnan ninyo — tatlong posts, caption na handa na, at schedule pa. 'Yan ang dating ₱5,000 na trabaho ng social media manager. Libre na ngayon."
+> "Tingnan ninyo — tatlong posts, caption na handa na, at schedule pa. 'Yan ang dating Php5,000 na trabaho ng social media manager. Libre na ngayon."
 
 ---
 
@@ -50,7 +50,7 @@ Tulungan mo akong:
 >
 > 'Anong produkto ang dapat kong i-promo ngayong weekend?'
 > 'Gumawa ng mensahe sa mga customers para sa repeat order.'
-> 'Paano ko papalakihin ang negosyo ko sa ₱5,000?'
+> 'Paano ko papalakihin ang negosyo ko sa Php5,000?'
 >
 > Hindi ka na mahihiya sa walang marketing budget. Si Claude ang libreng marketing team mo."
 

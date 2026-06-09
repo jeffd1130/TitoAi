@@ -136,7 +136,7 @@ def slide_03():
 
     prompt_lines = [
         "May online shop ako. Budget",
-        "sa marketing: ₱500 lang.",
+        "sa marketing: Php500 lang.",
         "",
         "Gumawa ng 3-araw na Facebook",
         "campaign — kasama ang captions",
@@ -168,7 +168,7 @@ def slide_04():
         ("Anong produkto ang i-promo?", TEAL),
         ("Sumulat ng mensahe sa supplier.", WHITE),
         ("Mag-draft ng repeat order message.", WHITE),
-        ("Paano palaguin sa ₱5,000?", GOLD),
+        ("Paano palaguin sa Php5,000?", GOLD),
         ("Sa Tagalog pa kung gusto mo.", WHITE),
     ]
     for text, col in items:
