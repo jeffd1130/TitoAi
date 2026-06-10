@@ -16,7 +16,7 @@ Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭
 **Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #SmallBusinessPH #AITip #LibreAngAI #DigitalMarketingPH
 
 **First comment (pin agad):**
-claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa ₱500 lang." Subukan mo ngayon. 😊
+claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa Php500 lang." Subukan mo ngayon. 😊
 
 ---
 
@@ -35,7 +35,7 @@ Libre. Walang bayad. 2 minuto lang.
 Pwede mo ring itanong:
 — "Anong produkto ang i-promo ko ngayong weekend?"
 — "Sumulat ng mensahe sa supplier ko."
-— "Paano palaguin ang negosyo ko sa ₱5,000?"
+— "Paano palaguin ang negosyo ko sa Php5,000?"
 
 Sumasagot si Claude sa lahat ng 'yan. Sa Tagalog pa kung gusto mo.
 
@@ -48,7 +48,7 @@ Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭
 **Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #SmallBusinessPH #AITip #LibreAngAI #DigitalMarketingPH #ClaudeAI #AIPhilippines #OnlineNegosyo #FreelancerPH #MarketingTips #LearnAI #TitoAI
 
 **First comment (pin agad):**
-claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa ₱500 lang." Subukan mo ngayon. 😊
+claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa Php500 lang." Subukan mo ngayon. 😊
 
 ---
 
@@ -73,7 +73,7 @@ Hindi lang 'yan. Pwede ring itanong kay Claude:
 — "Anong produkto ang dapat kong i-promo ngayong weekend?"
 — "Sumulat ng mensahe sa aking supplier para sa order."
 — "Gumawa ng listahan ng products para sa aking online shop."
-— "Paano ko papalakihin ang negosyo ko sa ₱5,000?"
+— "Paano ko papalakihin ang negosyo ko sa Php5,000?"
 
 Libre ang lahat. Ngayon na pwede.
 
@@ -86,4 +86,4 @@ Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭
 **Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #SmallBusinessPH #DigitalMarketingPH #LibreAngAI
 
 **First comment (pin agad):**
-claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa ₱500 lang." Subukan mo ngayon. 😊
+claude.ai — libre. I-type ang: "May negosyo ako, tulungan mo akong mag-marketing sa Php500 lang." Subukan mo ngayon. 😊
