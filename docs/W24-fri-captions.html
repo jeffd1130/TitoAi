@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W24 Friday Story · June 13, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0A0F1E;
+    color: #E5E7EB;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 0 60px;
+  }
+  header {
+    background: #0A0F1E;
+    border-bottom: 3px solid #F59E0B;
+    padding: 20px 16px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #F59E0B;
+    text-transform: uppercase;
+  }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown {
+    background: #111827;
+    border-bottom: 1px solid #1E2A3A;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #F59E0B;
+    font-weight: 600;
+  }
+  .countdown .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #F59E0B;
+    animation: pulse 1.5s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .post-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .post-header {
+    background: #111827;
+    padding: 14px 16px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .post-day {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: #F59E0B;
+  }
+  .post-title {
+    font-size: 16px; font-weight: 700;
+    color: #F9FAFB; margin-top: 3px;
+  }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .tabs {
+    display: flex;
+    background: #0D1626;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .tab-btn {
+    flex: 1; background: none; border: none;
+    padding: 10px 4px; font-size: 12px; font-weight: 600;
+    color: #6B7280; cursor: pointer; letter-spacing: 0.5px;
+    transition: color 0.15s; border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box {
+    background: #111827; border-radius: 8px; padding: 14px;
+    white-space: pre-wrap; font-size: 14px; line-height: 1.7;
+    color: #D1D5DB; word-break: break-word;
+  }
+  .hashtags {
+    font-size: 12px; color: #0D9488;
+    margin-top: 10px; line-height: 1.8; word-break: break-all;
+  }
+  .first-comment {
+    background: #0A1628; border: 1px solid #1E2A3A;
+    border-radius: 8px; padding: 12px 14px; margin-top: 12px;
+    font-size: 13px; color: #9CA3AF;
+  }
+  .first-comment strong {
+    display: block; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: #F59E0B; margin-bottom: 4px;
+  }
+  .copy-btn {
+    display: block; width: 100%; margin-top: 10px; padding: 10px;
+    background: #1E2A3A; border: 1px solid #374151; border-radius: 8px;
+    color: #9CA3AF; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px; cursor: pointer; text-align: center;
+    transition: background 0.15s, color 0.15s;
+  }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px;
+    margin-left: 6px; vertical-align: middle;
+  }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .script-header {
+    background: #111827; padding: 13px 16px;
+    border-bottom: 1px solid #1E2A3A;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .script-header h2 {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280;
+  }
+  .script-body { padding: 16px; }
+  .script-scene {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #1E2A3A;
+  }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: #F59E0B; margin-bottom: 6px;
+  }
+  .scene-direction {
+    font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px;
+  }
+  .scene-lines {
+    font-size: 14px; color: #F9FAFB; line-height: 1.65;
+    background: #0D1626; border-radius: 6px; padding: 12px;
+  }
+  footer {
+    text-align: center; padding: 30px 16px 0;
+    font-size: 11px; color: #374151;
+  }
+</style>
+<script>
+function switchTab(btn, group, platform) {
+  const block = btn.closest('.post-block');
+  block.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  block.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  block.querySelector('#' + group + '-' + platform).classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!';
+    btn.style.background = '#F59E0B';
+    btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = 'Copy Caption'; btn.style.background=''; btn.style.color=''; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W24 Friday Story</h1>
+  <p>June 13, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping Friday · 7:00 PM PHT · 4:00 AM PST (Jun 13)
+</div>
+
+<!-- COMPANION SLIDES PREVIEW -->
+<div style="margin:16px 0 0;">
+  <div style="padding:0 12px 10px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F59E0B;">Companion Slides · 5 Slides · Swipe to preview</div>
+    <div style="font-size:10px;color:#4B5563;">1 / 5</div>
+  </div>
+  <div style="overflow-x:scroll;display:flex;gap:10px;padding:0 12px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 1 — HOOK</div>
+      <img src="slides/W24-fri/slide-01-hook.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 2 — TAKOT</div>
+      <img src="slides/W24-fri/slide-02-takot.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 3 — TOTOO</div>
+      <img src="slides/W24-fri/slide-03-totoo.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 4 — SOLUSYON</div>
+      <img src="slides/W24-fri/slide-04-solusyon.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;padding-right:12px;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;letter-spacing:0.5px;">SLIDE 5 — CTA</div>
+      <img src="slides/W24-fri/slide-05-cta.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<div class="script-block">
+  <div class="script-header">
+    <h2>Script — 60–90 sec · Talking Head · Story Format</h2>
+  </div>
+  <div class="script-body">
+    <div class="script-scene">
+      <div class="scene-label">Hook · 0:00–0:04</div>
+      <div class="scene-direction">Cold open. Direct eye contact. No smile. Hold 1 second before speaking.</div>
+      <div class="scene-lines">"Ang trabaho mo — safe pa ba?"</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Tension · 0:04–0:18</div>
+      <div class="scene-direction">Slight lean forward. Empathetic. Slow delivery — pause after "Tito..."</div>
+      <div class="scene-lines">"Alam ko ang takot na 'yan. Narinig ko na 'yan mula sa mga kaibigan ko, sa pamilya ko, sa inyo.<br><br>'Tito, palalabasin na ba ako ng trabaho ko dahil sa AI?'"</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Reframe · 0:18–0:45</div>
+      <div class="scene-direction">Calm. Confident. This is the money line — pause after it. Let it land.</div>
+      <div class="scene-lines">"Ang totoo? Hindi ka pinalalayas ng AI.<br><br>Pinalalayas ka ng taong <em>gumagamit</em> ng AI — at hindi ka pa gumagamit.<br><br>Kaya ito ang pinaka-importanteng bagay na magagawa mo ngayon: matuto. Hindi para sa AI. Para sa sarili mo.<br><br>Ang mga taong natututo ngayon — sila ang magiging mas mahirap palitan."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Proof · 0:45–1:08</div>
+      <div class="scene-direction">Light energy lift. Matter-of-fact delivery. Optional 2-sec screen cut to claude.ai.</div>
+      <div class="scene-lines">"Isang simpleng halimbawa:<br><br>Kung ikaw ay nagsusulat ng emails, gumagawa ng reports, o nagtuturo — pwede kang gumamit ng Claude o Gemini para gawin 'yan ng mas mabilis.<br><br>Hindi ka nila pinalitan. Ginagawa ka nilang mas magaling.<br><br>'Yan ang pagkakaiba ng taong natakot — at ng taong kumilos."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Closer · 1:08–1:25</div>
+      <div class="scene-direction">Full warm energy. Direct to camera for CTA. Natural pace on sign-off.</div>
+      <div class="scene-lines">"Kaya sa lahat ng Pamangkin ko doon — hindi kayo mag-iisa.<br><br>Dito tayo matututo nang sama-sama. Libre. Walang bayad. Hakbang-hakbang.<br><br>I-follow mo ang @tito.aiph — at simulan natin ngayon.<br><br>Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭"</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Friday · June 13 · W24</div>
+    <div class="post-title">Ang Trabaho Ko, Napalitan Na Ba?</div>
+    <div class="post-meta">Story / Inspiration · 60–90 sec · Talking head</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'fri','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'fri','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'fri','fb')">Facebook</button>
+  </div>
+  <div id="fri-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="fri-tiktok-text">"Ang trabaho mo — safe pa ba?" 👀
+
+Hindi ka pinalalayas ng AI. Pinalalayas ka ng taong gumagamit ng AI — at hindi ka pa gumagamit.
+
+Dito tayo matututo nang sama-sama. Libre. Hakbang-hakbang.
+
+I-follow ang @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TrabahoNgMga #AIPhilippines #FutureOfWork #LibreAngAI #LearnAI</div>
+    <button class="copy-btn" onclick="copyText('fri-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Simulan dito: claude.ai o gemini.google.com — libre. Subukan mo ngayong gabi. 😊</div>
+  </div>
+  <div id="fri-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="fri-ig-text">Kumusta, mga Pamangkin! 🤖
+
+Isang tanong na lagi kong naririnig:
+
+"Tito, palalabasin na ba ako ng trabaho ko dahil sa AI?"
+
+Ang totoo — hindi ka pinalalayas ng AI.
+
+Pinalalayas ka ng taong gumagamit ng AI, habang hindi ka pa gumagamit.
+
+Kaya ito ang pinaka-importanteng bagay na magagawa mo ngayon: matuto. Hindi para sa AI. Para sa sarili mo.
+
+Ang mga taong natututo ngayon — sila ang magiging mas mahirap palitan.
+
+I-follow ang @tito.aiph — dito tayo matututo nang sama-sama. Libre. Hakbang-hakbang. 💛
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TrabahoNgMga #AIPhilippines #FutureOfWork #LibreAngAI #LearnAI #CareerTips #UpskillPH #ClaudeAI #GeminiAI #DigitalSkills #PinoyWorker #TitoAI</div>
+    <button class="copy-btn" onclick="copyText('fri-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Simulan dito: claude.ai o gemini.google.com — libre. I-try mo ngayong gabi. 😊</div>
+  </div>
+  <div id="fri-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="fri-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Sa lahat ng nag-aalala ngayon — BPO workers, teachers, nurses, freelancers, office workers — ito ay para sa inyo.
+
+Narinig ko na ang tanong na ito ng maraming beses:
+
+"Tito, may trabaho pa ba ako bukas dahil sa AI?"
+
+Gusto kong maging tapat sa inyo.
+
+Hindi kayo pinalalayas ng AI. Pinalalayas kayo ng taong gumagamit ng AI — habang hindi pa kayo gumagamit.
+
+'Yan ang totoong panganib. Hindi ang teknolohiya. Ang pagkakataon na hindi ginagamit.
+
+Ang magandang balita? Libre ang pag-aaral. Ngayon na pwede.
+
+Kung nagsusulat kayo ng emails, gumagawa ng reports, o nagtuturo — pwede kayong gumamit ng Claude o Gemini para gawin 'yan ng mas mabilis. Hindi kayo nila pinalitan. Ginagawa nila kayong mas mahusay.
+
+'Yan ang pagkakaiba ng taong natakot — at ng taong kumilos.
+
+Dito tayo matututo nang sama-sama. Libre. Hakbang-hakbang.
+
+I-share mo ito sa mga kaibigan at kasamahan mo na nag-aalala rin. Baka makatulong. 💛
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TrabahoNgMga #LibreAngAI #AIPhilippines</div>
+    <button class="copy-btn" onclick="copyText('fri-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Simulan dito: claude.ai o gemini.google.com — libre. I-try mo ngayong gabi. 😊</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W24 Friday · June 13, 2026</footer>
+
+</body>
+</html>
