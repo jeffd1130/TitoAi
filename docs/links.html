@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — GitHub Pages Links</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0A0F1E;
+    color: #E5E7EB;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 0 60px;
+  }
+  header {
+    background: #0A0F1E;
+    border-bottom: 3px solid #F59E0B;
+    padding: 20px 16px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 2px; color: #F59E0B;
+    text-transform: uppercase;
+  }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .section {
+    margin: 20px 12px 0;
+    border: 1px solid #1E2A3A;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .section-header {
+    background: #111827;
+    padding: 12px 16px;
+    border-bottom: 1px solid #1E2A3A;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: #F59E0B;
+  }
+  .link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid #111827;
+    gap: 12px;
+  }
+  .link-row:last-child { border-bottom: none; }
+  .link-info { flex: 1; min-width: 0; }
+  .link-label {
+    font-size: 13px; font-weight: 700; color: #F9FAFB;
+  }
+  .link-desc {
+    font-size: 11px; color: #6B7280; margin-top: 2px;
+  }
+  .link-tag {
+    display: inline-block; font-size: 9px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 2px 7px; border-radius: 20px; margin-right: 5px;
+  }
+  .tag-live    { background: #064E3B; color: #6EE7B7; }
+  .tag-approval { background: #1E1A00; color: #F59E0B; }
+  .tag-strategy { background: #1E1A38; color: #A78BFA; }
+  .open-btn {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    background: #1E2A3A; border: 1px solid #374151;
+    border-radius: 8px; color: #9CA3AF;
+    font-size: 11px; font-weight: 700;
+    text-decoration: none; letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .open-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .copy-row {
+    padding: 8px 16px 14px;
+    border-bottom: 1px solid #111827;
+  }
+  .copy-row:last-child { border-bottom: none; }
+  .url-box {
+    background: #0D1626; border-radius: 6px; padding: 9px 12px;
+    font-size: 11px; color: #0D9488; font-family: monospace;
+    word-break: break-all; cursor: pointer;
+  }
+  .url-box:active { background: #0D9488; color: #0A0F1E; }
+  footer {
+    text-align: center; padding: 30px 16px 0;
+    font-size: 11px; color: #374151;
+  }
+</style>
+<script>
+function copyUrl(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const boxes = document.querySelectorAll('.url-box');
+    boxes.forEach(b => { if (b.innerText === text || b.dataset.url === text) {
+      const orig = b.innerText;
+      b.innerText = 'Copied!';
+      b.style.background = '#F59E0B';
+      b.style.color = '#0A0F1E';
+      setTimeout(() => { b.innerText = orig; b.style.background=''; b.style.color=''; }, 1500);
+    }});
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — All GitHub Pages Links</h1>
+  <p>jeffd1130.github.io/TitoAi · Tap URL to copy</p>
+</header>
+
+<!-- HUB -->
+<div class="section">
+  <div class="section-header">Hub & Strategy</div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">Channel Hub</div>
+      <div class="link-desc"><span class="link-tag tag-live">Live</span>Home · About · Calendar · Approvals</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/')">https://jeffd1130.github.io/TitoAi/</div>
+  </div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">Niche & Growth Plan</div>
+      <div class="link-desc"><span class="link-tag tag-strategy">Strategy</span>Target audience, content pillars, growth roadmap</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/niche-plan.html" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/niche-plan.html')">https://jeffd1130.github.io/TitoAi/niche-plan.html</div>
+  </div>
+</div>
+
+<!-- W22 -->
+<div class="section">
+  <div class="section-header">Week 22 — May 26–Jun 1</div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">W22 — Captions Approval</div>
+      <div class="link-desc"><span class="link-tag tag-approval">Approval</span>Friday · Intro Story · Your Story</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/W22-captions.html" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/W22-captions.html')">https://jeffd1130.github.io/TitoAi/W22-captions.html</div>
+  </div>
+</div>
+
+<!-- W24 -->
+<div class="section">
+  <div class="section-header">Week 24 — Jun 8–14</div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">W24 Mon — Claude o Gemini?</div>
+      <div class="link-desc"><span class="link-tag tag-approval">Approval</span>Monday · AI Tip · Carousel + Captions</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/W24-mon-captions.html" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/W24-mon-captions.html')">https://jeffd1130.github.io/TitoAi/W24-mon-captions.html</div>
+  </div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">W24 Wed — Claude para sa Negosyante (Video)</div>
+      <div class="link-desc"><span class="link-tag tag-approval">Approval</span>Wednesday · Demo Video · Part 1 + Part 2 captions</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/W24-wed-captions.html" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/W24-wed-captions.html')">https://jeffd1130.github.io/TitoAi/W24-wed-captions.html</div>
+  </div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">W24 Wed — Claude para sa Negosyante (Carousel)</div>
+      <div class="link-desc"><span class="link-tag tag-approval">Approval</span>Wednesday · Swipe Post · 5 slides</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/W24-wed-carousel.html" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/W24-wed-carousel.html')">https://jeffd1130.github.io/TitoAi/W24-wed-carousel.html</div>
+  </div>
+
+  <div class="link-row">
+    <div class="link-info">
+      <div class="link-label">W24 Fri — Ang Trabaho Ko, Napalitan Na Ba?</div>
+      <div class="link-desc"><span class="link-tag tag-approval">Approval</span>Friday · Story · Script + Slides + Captions</div>
+    </div>
+    <a href="https://jeffd1130.github.io/TitoAi/W24-fri-captions.html" target="_blank" class="open-btn">Open →</a>
+  </div>
+  <div class="copy-row">
+    <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/W24-fri-captions.html')">https://jeffd1130.github.io/TitoAi/W24-fri-captions.html</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · Updated June 2026</footer>
+
+</body>
+</html>
