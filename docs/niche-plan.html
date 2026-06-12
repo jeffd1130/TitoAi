@@ -3,714 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tito AI — Niche & Growth Plan · 2026</title>
+<title>Tito AI — Niche & Growth Strategy</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: #0A0F1E;
-    color: #E5E7EB;
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 15px;
-    line-height: 1.65;
-    padding: 0 0 80px;
-  }
-  header {
-    background: #0A0F1E;
-    border-bottom: 3px solid #F59E0B;
-    padding: 20px 16px 16px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  header h1 {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #F59E0B;
-    text-transform: uppercase;
-  }
-  header p {
-    font-size: 11px;
-    color: #9CA3AF;
-    margin-top: 2px;
-  }
-  .section {
-    margin: 20px 12px 0;
-    border: 1px solid #1E2A3A;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .section-header {
-    background: #111827;
-    padding: 13px 16px;
-    border-bottom: 1px solid #1E2A3A;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-header .icon {
-    font-size: 16px;
-    width: 24px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  .section-header h2 {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #F59E0B;
-  }
-  .section-body {
-    padding: 16px;
-  }
-  .niche-statement {
-    background: #0D1626;
-    border: 1px solid #F59E0B44;
-    border-left: 3px solid #F59E0B;
-    border-radius: 8px;
-    padding: 16px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #F9FAFB;
-    line-height: 1.5;
-  }
-  .stat-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 14px;
-  }
-  .stat-card {
-    background: #111827;
-    border: 1px solid #1E2A3A;
-    border-radius: 8px;
-    padding: 12px;
-  }
-  .stat-number {
-    font-size: 22px;
-    font-weight: 800;
-    color: #F59E0B;
-    line-height: 1.1;
-  }
-  .stat-label {
-    font-size: 11px;
-    color: #9CA3AF;
-    margin-top: 3px;
-    line-height: 1.4;
-  }
-  .stat-source {
-    font-size: 10px;
-    color: #4B5563;
-    margin-top: 4px;
-  }
-  .gap-statement {
-    background: #0D1A10;
-    border: 1px solid #16532D44;
-    border-left: 3px solid #0D9488;
-    border-radius: 8px;
-    padding: 14px;
-    margin-top: 12px;
-    font-size: 13px;
-    color: #D1FAE5;
-    line-height: 1.5;
-  }
-  .audience-list {
-    list-style: none;
-    margin-top: 14px;
-  }
-  .audience-list li {
-    padding: 10px 14px;
-    border-bottom: 1px solid #1E2A3A;
-    font-size: 14px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .audience-list li:last-child { border-bottom: none; }
-  .audience-list li .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #F59E0B;
-    flex-shrink: 0;
-    margin-top: 6px;
-  }
-  .pillar-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .pillar {
-    background: #111827;
-    border: 1px solid #1E2A3A;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .pillar-head {
-    padding: 10px 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid #1E2A3A;
-  }
-  .pillar-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  .pillar-day {
-    font-size: 10px;
-    color: #6B7280;
-    margin-left: auto;
-  }
-  .pillar-note {
-    font-size: 11px;
-    color: #0D9488;
-    padding: 4px 14px 0;
-  }
-  .pillar-ideas {
-    list-style: none;
-    padding: 8px 14px 12px;
-  }
-  .pillar-ideas li {
-    font-size: 13px;
-    color: #9CA3AF;
-    padding: 3px 0;
-    padding-left: 14px;
-    position: relative;
-  }
-  .pillar-ideas li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: #374151;
-  }
-  .p1 .pillar-label { color: #FBBF24; }
-  .p2 .pillar-label { color: #34D399; }
-  .p3 .pillar-label { color: #F472B6; }
-  .p4 .pillar-label { color: #60A5FA; }
-  .calendar-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12px;
-  }
-  .calendar-table th {
-    background: #0D1626;
-    color: #6B7280;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 8px 6px;
-    text-align: left;
-    border-bottom: 1px solid #1E2A3A;
-  }
-  .calendar-table td {
-    padding: 9px 6px;
-    border-bottom: 1px solid #1E2A3A;
-    color: #D1D5DB;
-    vertical-align: top;
-  }
-  .calendar-table tr:last-child td { border-bottom: none; }
-  .calendar-table .week-label {
-    color: #F59E0B;
-    font-weight: 700;
-    font-size: 11px;
-    white-space: nowrap;
-  }
-  .done { color: #0D9488 !important; }
-  .done::after { content: ' ✓'; }
-  .hook-list {
-    list-style: none;
-    margin-top: 4px;
-  }
-  .hook-list li {
-    padding: 10px 12px;
-    border-bottom: 1px solid #1E2A3A;
-    font-size: 13px;
-  }
-  .hook-list li:last-child { border-bottom: none; }
-  .hook-list .hook-type {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #F59E0B;
-    display: block;
-    margin-bottom: 3px;
-  }
-  .hook-list .hook-example {
-    font-style: italic;
-    color: #9CA3AF;
-  }
-  .platform-row {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 4px;
-  }
-  .platform-card {
-    background: #111827;
-    border: 1px solid #1E2A3A;
-    border-radius: 8px;
-    padding: 12px 14px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .platform-rank {
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-  .platform-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: #F9FAFB;
-  }
-  .platform-role {
-    font-size: 12px;
-    color: #9CA3AF;
-    margin-top: 2px;
-  }
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 4px;
-  }
-  .kpi-card {
-    background: #111827;
-    border: 1px solid #1E2A3A;
-    border-radius: 8px;
-    padding: 10px 12px;
-  }
-  .kpi-metric {
-    font-size: 11px;
-    color: #6B7280;
-    letter-spacing: 0.5px;
-  }
-  .kpi-now {
-    font-size: 16px;
-    font-weight: 700;
-    color: #F59E0B;
-    margin-top: 2px;
-  }
-  .kpi-later {
-    font-size: 12px;
-    color: #0D9488;
-  }
-  .action-list {
-    list-style: none;
-  }
-  .action-list li {
-    padding: 11px 14px;
-    border-bottom: 1px solid #1E2A3A;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    font-size: 13px;
-  }
-  .action-list li:last-child { border-bottom: none; }
-  .action-owner {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 2px 7px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .owner-jeff { background: #1E1A0A; color: #F59E0B; border: 1px solid #78350F; }
-  .owner-joseph { background: #0A1628; color: #93C5FD; border: 1px solid #1D4ED8; }
-  .action-text { color: #D1D5DB; }
-  .action-when {
-    margin-left: auto;
-    font-size: 11px;
-    color: #4B5563;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .analytics-box {
-    background: #0D1626;
-    border: 1px solid #1E2A3A;
-    border-radius: 8px;
-    padding: 14px;
-  }
-  .analytics-platform {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #F59E0B;
-    margin-top: 12px;
-    margin-bottom: 6px;
-  }
-  .analytics-platform:first-child { margin-top: 0; }
-  .analytics-items {
-    list-style: none;
-  }
-  .analytics-items li {
-    font-size: 13px;
-    color: #9CA3AF;
-    padding: 2px 0 2px 14px;
-    position: relative;
-  }
-  .analytics-items li::before { content: '·'; position: absolute; left: 4px; color: #374151; }
-  .notice {
-    background: #1A0F0A;
-    border: 1px solid #92400E44;
-    border-left: 3px solid #F59E0B;
-    border-radius: 8px;
-    padding: 12px 14px;
-    margin-top: 14px;
-    font-size: 13px;
-    color: #FDE68A;
-    line-height: 1.5;
-  }
-  footer {
-    text-align: center;
-    padding: 30px 16px 0;
-    font-size: 11px;
-    color: #374151;
-  }
+  body { background: #0A0F1E; color: #E5E7EB; font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; line-height: 1.6; padding: 0 0 60px; }
+  header { background: #0A0F1E; border-bottom: 3px solid #F59E0B; padding: 20px 16px 16px; position: sticky; top: 0; z-index: 10; }
+  header h1 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #F59E0B; text-transform: uppercase; }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .section { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .section-header { background: #111827; padding: 12px 16px; border-bottom: 1px solid #1E2A3A; }
+  .section-header h2 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #F59E0B; }
+  .section-body { padding: 16px; }
+  .niche-statement { background: #0D1F1E; border: 1px solid #0D9488; border-radius: 8px; padding: 14px 16px; font-size: 15px; color: #6EE7B7; font-style: italic; line-height: 1.6; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  th { background: #111827; color: #F59E0B; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 10px; text-align: left; }
+  td { padding: 9px 10px; border-bottom: 1px solid #1E2A3A; color: #D1D5DB; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; border-radius: 20px; }
+  .tag-gold  { background: #1E1A00; color: #F59E0B; }
+  .tag-teal  { background: #0D1F1E; color: #6EE7B7; }
+  .tag-gray  { background: #1A1A2E; color: #9CA3AF; }
+  .pillar { background: #111827; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .pillar:last-child { margin-bottom: 0; }
+  .pillar-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 6px; }
+  .pillar-items { font-size: 13px; color: #9CA3AF; }
+  .pillar-items li { list-style: none; padding: 3px 0; }
+  .pillar-items li::before { content: "→ "; color: #0D9488; }
+  .checklist li { list-style: none; padding: 6px 0; font-size: 13px; color: #D1D5DB; border-bottom: 1px solid #1E2A3A; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: "☐  "; color: #F59E0B; font-size: 14px; }
+  .hook-block { background: #0D1626; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; font-size: 13px; color: #D1D5DB; }
+  .hook-block span { color: #F59E0B; font-weight: 700; }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-card { background: #111827; border-radius: 8px; padding: 12px; text-align: center; }
+  .stat-num { font-size: 20px; font-weight: 700; color: #F59E0B; }
+  .stat-label { font-size: 10px; color: #6B7280; margin-top: 2px; letter-spacing: 0.5px; text-transform: uppercase; }
+  footer { text-align: center; padding: 30px 16px 0; font-size: 11px; color: #374151; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Tito AI — Niche & Growth Plan</h1>
-  <p>Built from market research + Philippine AI data · @TitoAIPH · Updated June 2026</p>
+  <h1>Tito AI — Niche & Growth Strategy</h1>
+  <p>Updated June 2026 · Combined audit + brief · @TitoAIPH</p>
 </header>
-
-<!-- ANALYTICS CHECK -->
-<div class="section">
-  <div class="section-header">
-    <div class="icon">📊</div>
-    <h2>Analytics — What to Pull</h2>
-  </div>
-  <div class="section-body">
-    <div class="analytics-box">
-      <div class="analytics-platform">TikTok — Creator Center → Analytics</div>
-      <ul class="analytics-items">
-        <li>Profile views (last 7 days)</li>
-        <li>Video views per post</li>
-        <li>Follower count + growth</li>
-        <li>Average watch time / completion rate</li>
-        <li>Traffic source — For You vs. Following vs. Search</li>
-      </ul>
-      <div class="analytics-platform">Instagram — Professional Dashboard → Insights</div>
-      <ul class="analytics-items">
-        <li>Reach per post</li>
-        <li>Accounts reached — followers vs. non-followers</li>
-        <li>Profile visits</li>
-        <li>Follower count</li>
-      </ul>
-    </div>
-    <div class="notice">Pages are too new to be publicly indexed. Joseph must pull these screenshots from inside the apps. Share them here — will update the plan with real numbers once available.</div>
-  </div>
-</div>
 
 <!-- NICHE -->
 <div class="section">
-  <div class="section-header">
-    <div class="icon">🎯</div>
-    <h2>The Niche</h2>
-  </div>
+  <div class="section-header"><h2>The Niche — One Sentence</h2></div>
   <div class="section-body">
     <div class="niche-statement">"The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."</div>
-    <div style="margin-top:14px; font-size:13px; color:#9CA3AF;">Not a tech channel. Not for developers. For:</div>
-    <ul class="audience-list" style="margin-top:8px;">
-      <li><div class="dot"></div><div>OFWs — translate docs, write formal letters, communicate faster</div></li>
-      <li><div class="dot"></div><div>Freelancers (1.5M+) — do more work in less time, stay competitive</div></li>
-      <li><div class="dot"></div><div>BPO workers — become the person who <em>uses</em> AI before it replaces them</div></li>
-      <li><div class="dot"></div><div>Nanays + tatays — managing households and side hustles</div></li>
-      <li><div class="dot"></div><div>Small business owners — sari-sari, online selling, food stalls</div></li>
-    </ul>
-    <div class="gap-statement">Fear + aspiration = share-worthy. Every video removes a fear ("hindi mahirap ito") or delivers a visible win ("ganito ang resulta").</div>
+    <p style="margin-top:12px;font-size:13px;color:#9CA3AF;">Not for developers. For OFWs, freelancers, BPO workers, nanays/tatays, small business owners.<br><br><strong style="color:#F59E0B;">Fear + aspiration = share-worthy content.</strong> Every video removes a fear ("hindi mahirap 'to") or delivers a visible win ("ganito ang resulta").</p>
   </div>
 </div>
 
-<!-- MARKET DATA -->
+<!-- MARKET -->
 <div class="section">
-  <div class="section-header">
-    <div class="icon">🇵🇭</div>
-    <h2>Market Opportunity</h2>
-  </div>
+  <div class="section-header"><h2>Market Opportunity</h2></div>
   <div class="section-body">
     <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-number">12.7M</div>
-        <div class="stat-label">Filipino workers exposed to GenAI — highest in ASEAN</div>
-        <div class="stat-source">ILO 2026</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">14.9%</div>
-        <div class="stat-label">Small firms currently using AI — 85% haven't started</div>
-        <div class="stat-source">Philippine AI Report 2025</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">1.5M+</div>
-        <div class="stat-label">Filipino freelancers who need AI to stay competitive</div>
-        <div class="stat-source">PIDS</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">83%</div>
-        <div class="stat-label">Filipino students already using AI — parents haven't caught up</div>
-        <div class="stat-source">BusinessWorld 2026</div>
-      </div>
+      <div class="stat-card"><div class="stat-num">12.7M</div><div class="stat-label">Filipinos exposed to GenAI — #1 in ASEAN</div></div>
+      <div class="stat-card"><div class="stat-num">42.4%</div><div class="stat-label">Filipino internet users use ChatGPT monthly — 6th globally</div></div>
+      <div class="stat-card"><div class="stat-num">1.5M+</div><div class="stat-label">Filipino freelancers who need to upskill</div></div>
+      <div class="stat-card"><div class="stat-num">14.9%</div><div class="stat-label">Only this many small firms use AI — massive gap</div></div>
     </div>
-    <div class="gap-statement">No strong Taglish AI educator exists on TikTok/Reels as of May 2026. Tito AI is the first mover in this lane.</div>
+    <p style="margin-top:12px;font-size:13px;color:#0D9488;font-weight:700;">The gap: 12.7 million people exposed to AI disruption. Almost none have a relatable, Taglish-speaking guide. Tito AI is the first mover.</p>
   </div>
 </div>
 
-<!-- CONTENT PILLARS -->
+<!-- PROFILE HEALTH -->
 <div class="section">
-  <div class="section-header">
-    <div class="icon">🧱</div>
-    <h2>Content Pillars</h2>
-  </div>
+  <div class="section-header"><h2>Profile Health Scores (June 2026)</h2></div>
   <div class="section-body">
-    <div class="pillar-grid">
-      <div class="pillar p1">
-        <div class="pillar-head">
-          <div class="pillar-label">Pillar 1 — OFW Toolkit</div>
-          <div class="pillar-day">Mon Tips</div>
-        </div>
-        <div class="pillar-note">Highest share potential — OFWs send these to family</div>
-        <ul class="pillar-ideas">
-          <li>Translate docs gamit ang Gemini — libre</li>
-          <li>Formal letter para sa abroad employer — Claude in 30s</li>
-          <li>Mag-explain ng Tagalog sa English gamit AI</li>
-        </ul>
-      </div>
-      <div class="pillar p2">
-        <div class="pillar-head">
-          <div class="pillar-label">Pillar 2 — Freelancer Upgrade</div>
-          <div class="pillar-day">Wed Demos</div>
-        </div>
-        <div class="pillar-note">1.5M freelancers need to stay competitive</div>
-        <ul class="pillar-ideas">
-          <li>Gumawa ng proposal para sa client gamit Claude</li>
-          <li>AI para sa graphic designers — libre prompts</li>
-          <li>Mag-research ng rates gamit Gemini</li>
-        </ul>
-      </div>
-      <div class="pillar p3">
-        <div class="pillar-head">
-          <div class="pillar-label">Pillar 3 — Family & Everyday Life</div>
-          <div class="pillar-day">Fri Stories</div>
-        </div>
-        <div class="pillar-note">Emotional, shareable, high retention</div>
-        <ul class="pillar-ideas">
-          <li>Anak ko, 10 years old — ganito niya ginagamit</li>
-          <li>Tinulungan ng AI ang asawa ko sa HR work</li>
-          <li>Gamit ng AI sa pamilya bilang budget</li>
-        </ul>
-      </div>
-      <div class="pillar p4">
-        <div class="pillar-head">
-          <div class="pillar-label">Pillar 4 — BPO / Workforce Survival</div>
-          <div class="pillar-day">Evergreen</div>
-        </div>
-        <div class="pillar-note">High anxiety audience — high engagement</div>
-        <ul class="pillar-ideas">
-          <li>"Hindi ka papalitan ng AI. Papalitan ka ng taong gumagamit."</li>
-          <li>Kung BPO worker ka — ito ang kailangan mo ngayon</li>
-          <li>Paano mag-upskill sa AI nang libre — step by step</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CALENDAR -->
-<div class="section">
-  <div class="section-header">
-    <div class="icon">📅</div>
-    <h2>4-Week Content Calendar</h2>
-  </div>
-  <div class="section-body" style="padding:0; overflow-x:auto;">
-    <table class="calendar-table">
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Mon 8PM — AI Tip</th>
-          <th>Wed 7PM — Demo</th>
-          <th>Fri 7PM — Story</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><div class="week-label">W22</div><div style="font-size:10px;color:#4B5563;">May 26–29</div></td>
-          <td class="done">2 libreng tools: Claude + Gemini</td>
-          <td class="done">Gemini demo — Gmail access</td>
-          <td class="done">Origin Story — Housedad to AI</td>
-        </tr>
-        <tr>
-          <td><div class="week-label">W23</div><div style="font-size:10px;color:#4B5563;">Jun 2–6</div></td>
-          <td>Sino si Claude at Gemini</td>
-          <td>Gemini Beginner's Guide</td>
-          <td>Hindi degree ang kailangan</td>
-        </tr>
-        <tr>
-          <td><div class="week-label" style="color:#0D9488;">W24 ← now</div><div style="font-size:10px;color:#4B5563;">Jun 9–13</div></td>
-          <td style="color:#F9FAFB;font-weight:600;">Claude vs Gemini — alin ang para sa iyo?</td>
-          <td>Claude demo — sari-sari store product desc</td>
-          <td>AI para sa OFW</td>
-        </tr>
-        <tr>
-          <td><div class="week-label">W25</div><div style="font-size:10px;color:#4B5563;">Jun 16–20</div></td>
-          <td>3 libreng AI tools</td>
-          <td>Resume gamit AI</td>
-          <td>Nanay + AI</td>
-        </tr>
-      </tbody>
+    <table>
+      <tr><th>Metric</th><th>FB #1</th><th>FB #2</th><th>TikTok</th><th>IG</th></tr>
+      <tr><td>Bio clarity</td><td>4/10</td><td>4/10</td><td>5/10</td><td>5/10</td></tr>
+      <tr><td>Visual consistency</td><td>3/10</td><td>3/10</td><td>5/10</td><td>5/10</td></tr>
+      <tr><td>Content frequency</td><td>2/10</td><td>2/10</td><td>4/10</td><td>4/10</td></tr>
+      <tr><td>Niche focus</td><td>4/10</td><td>4/10</td><td>6/10</td><td>6/10</td></tr>
+      <tr><td>CTA presence</td><td>2/10</td><td>2/10</td><td>3/10</td><td>3/10</td></tr>
     </table>
-  </div>
-</div>
-
-<!-- HOOK FORMULA -->
-<div class="section">
-  <div class="section-header">
-    <div class="icon">🎣</div>
-    <h2>Hook Formula</h2>
-  </div>
-  <div class="section-body" style="padding:0;">
-    <ul class="hook-list">
-      <li>
-        <span class="hook-type">Identity hook</span>
-        <span class="hook-example">"48 years old ako. Dati housedad."</span><br>
-        <span style="font-size:12px;color:#6B7280;">People stay to see themselves in the story.</span>
-      </li>
-      <li>
-        <span class="hook-type">Fear hook</span>
-        <span class="hook-example">"Kung BPO worker ka, pakinggan mo 'to."</span><br>
-        <span style="font-size:12px;color:#6B7280;">High anxiety audience — high engagement.</span>
-      </li>
-      <li>
-        <span class="hook-type">Curiosity hook</span>
-        <span class="hook-example">"Ito ang tanong na hindi mo pa naitatanong sa AI."</span><br>
-        <span style="font-size:12px;color:#6B7280;">Creates a gap they need to fill.</span>
-      </li>
-      <li>
-        <span class="hook-type">Result hook</span>
-        <span class="hook-example">"30 seconds lang. Tingnan mo 'to."</span><br>
-        <span style="font-size:12px;color:#6B7280;">Then show immediately — no delay.</span>
-      </li>
-    </ul>
-    <div style="padding:12px 14px 14px;font-size:12px;color:#F59E0B;font-weight:600;">Never open with "Kumusta" first — hook must land in second 1.</div>
+    <div style="margin-top:12px;background:#1F0A0A;border:1px solid #7F1D1D;border-radius:8px;padding:12px 14px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#FCA5A5;margin-bottom:4px;">⚠ Critical Fix</div>
+      <div style="font-size:13px;color:#FCA5A5;">Both Facebook profiles must be converted to a single Facebook Page. Personal profiles cannot run paid ads or access analytics.</div>
+    </div>
+    <div style="margin-top:10px;background:#0D1626;border-radius:8px;padding:12px 14px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0D9488;margin-bottom:4px;">Bio Template — All Platforms</div>
+      <div style="font-size:13px;color:#6EE7B7;font-family:monospace;">Libreng AI tutorials para sa mga Pilipino 🇵🇭 | Claude, Gemini — sa Taglish | Para sa negosyo, freelancers, at lahat | [Link]</div>
+    </div>
   </div>
 </div>
 
 <!-- PLATFORM STRATEGY -->
 <div class="section">
-  <div class="section-header">
-    <div class="icon">📱</div>
-    <h2>Platform Strategy</h2>
-  </div>
+  <div class="section-header"><h2>Platform Priority</h2></div>
   <div class="section-body">
-    <div class="platform-row">
-      <div class="platform-card">
-        <div class="platform-rank">🥇</div>
-        <div>
-          <div class="platform-name">TikTok — Primary Discovery</div>
-          <div class="platform-role">30–90s reels, talking head + demo · PH peak: 8–10 PM PHT · Algorithm favors education + watch time</div>
-        </div>
-      </div>
-      <div class="platform-card">
-        <div class="platform-rank">🥈</div>
-        <div>
-          <div class="platform-name">Facebook Reels — Mass Market</div>
-          <div class="platform-role">Same video, native upload · Older audience, OFW families · High share rate for practical tips</div>
-        </div>
-      </div>
-      <div class="platform-card">
-        <div class="platform-rank">🥉</div>
-        <div>
-          <div class="platform-name">Instagram Reels — Younger Freelancers</div>
-          <div class="platform-role">Same video + carousel tips · Visual-first audience · 7–9 PM PHT peak</div>
-        </div>
-      </div>
+    <table>
+      <tr><th>Platform</th><th>Role</th><th>Priority</th></tr>
+      <tr><td><strong style="color:#F9FAFB;">TikTok</strong></td><td>Discovery engine — viral reach. 4x/week minimum.</td><td><span class="tag tag-gold">🥇 Primary</span></td></tr>
+      <tr><td><strong style="color:#F9FAFB;">Instagram</strong></td><td>Authority + depth. Reels + Carousels. Convert lurkers.</td><td><span class="tag tag-teal">🥈 Secondary</span></td></tr>
+      <tr><td><strong style="color:#F9FAFB;">Facebook</strong></td><td>Paid boost + community. Cheapest PH CPM. Page required.</td><td><span class="tag tag-gray">🥉 Support</span></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- POSTING SCHEDULE -->
+<div class="section">
+  <div class="section-header"><h2>Weekly Posting Schedule</h2></div>
+  <div class="section-body">
+    <table>
+      <tr><th>Day</th><th>Platform</th><th>Format</th><th>Type</th></tr>
+      <tr><td><strong style="color:#F59E0B;">Monday</strong></td><td>TikTok</td><td>Tool demo Reel 30–60s</td><td>Screen record + Taglish voiceover</td></tr>
+      <tr><td><strong style="color:#0D9488;">Wednesday</strong></td><td>Instagram</td><td>Carousel 5 slides</td><td>AI tools for a specific job/task</td></tr>
+      <tr><td><strong style="color:#F9FAFB;">Thursday</strong></td><td>TikTok</td><td>Trend reaction</td><td>AI news commentary</td></tr>
+      <tr><td><strong style="color:#F9A8D4;">Saturday</strong></td><td>Instagram</td><td>Reel</td><td>Before/after productivity story</td></tr>
+      <tr><td style="color:#6B7280;">Anytime</td><td>Facebook</td><td>Cross-post</td><td>Wednesday carousel → FB Page</td></tr>
+    </table>
+    <p style="margin-top:10px;font-size:12px;color:#6B7280;">Cross-post all TikToks to Instagram Reels natively — never use TikTok's built-in cross-post link.</p>
+  </div>
+</div>
+
+<!-- CONTENT FORMATS -->
+<div class="section">
+  <div class="section-header"><h2>Content Formats — Ranked by Growth Potential</h2></div>
+  <div class="section-body">
+    <table>
+      <tr><th>#</th><th>Format</th><th>Platform</th><th>Hook</th></tr>
+      <tr><td style="color:#F59E0B;font-weight:700;">1</td><td>Tool demo — screen record</td><td>TikTok, IG Reels</td><td>"I used AI to do this in 5 mins"</td></tr>
+      <tr><td style="color:#F59E0B;font-weight:700;">2</td><td>Comparison — tested X tools</td><td>TikTok, IG Reels</td><td>"I tested 5 AI tools so you don't have to"</td></tr>
+      <tr><td>3</td><td>Before / after productivity</td><td>IG Reels, TikTok</td><td>"3 hours of work → 5 minutes with AI"</td></tr>
+      <tr><td>4</td><td>Carousel — tools for [job]</td><td>IG, Facebook</td><td>"5 AI tools para sa Filipino freelancers"</td></tr>
+      <tr><td>5</td><td>AI news reaction</td><td>TikTok, IG Stories</td><td>"ChatGPT just changed everything"</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- CONTENT PILLARS -->
+<div class="section">
+  <div class="section-header"><h2>Content Pillars</h2></div>
+  <div class="section-body">
+    <div class="pillar">
+      <div class="pillar-label">Pillar 1 — Tool Demo (Mon / Wed)</div>
+      <ul class="pillar-items">
+        <li>Paano gamitin ang Claude para sa negosyo mo — libre</li>
+        <li>5 libreng AI tools para sa Filipino freelancers</li>
+        <li>Gemini para sa Gmail — ganito gamitin</li>
+      </ul>
     </div>
-    <div style="margin-top:12px;font-size:12px;color:#6B7280;line-height:1.6;">
-      <strong style="color:#0D9488;">Engagement rules:</strong> End every video with a YES/NO or choice question. Reply to all comments in the first hour. Pin first comment immediately with a resource or tip. Share to Facebook Stories right after posting Reels.
+    <div class="pillar">
+      <div class="pillar-label">Pillar 2 — Before / After (Sat)</div>
+      <ul class="pillar-items">
+        <li>3 oras ng trabaho → 5 minuto gamit ang AI</li>
+        <li>Ginawa ko ang buong proposal sa 2 minuto — ganito</li>
+      </ul>
     </div>
+    <div class="pillar">
+      <div class="pillar-label">Pillar 3 — Fear → Reassurance (evergreen)</div>
+      <ul class="pillar-items">
+        <li>Hindi ka papalitan ng AI. Papalitan ka ng taong gumagamit ng AI.</li>
+        <li>Kung BPO worker ka — ito ang kailangan mong malaman ngayon</li>
+      </ul>
+    </div>
+    <div class="pillar">
+      <div class="pillar-label">Pillar 4 — Everyday Filipino Life (Fri story)</div>
+      <ul class="pillar-items">
+        <li>Ang trabaho ko, napalitan na ba? ← W24 Friday</li>
+        <li>Nanay + AI — ganito namin ginagamit sa bahay</li>
+        <li>Sari-sari store + Claude — totoo ba?</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- HOOK FORMULA -->
+<div class="section">
+  <div class="section-header"><h2>Hook Formula — Open in Second 1</h2></div>
+  <div class="section-body">
+    <div class="hook-block"><span>Fear:</span> "Kung BPO worker ka, pakinggan mo 'to."</div>
+    <div class="hook-block"><span>Result:</span> "30 seconds lang. Tingnan mo 'to." (then show immediately)</div>
+    <div class="hook-block"><span>Identity:</span> "May negosyo ka at wala kang marketing budget?"</div>
+    <div class="hook-block"><span>Curiosity:</span> "Ito ang tanong na hindi mo pa naitatanong sa AI."</div>
+    <p style="margin-top:10px;font-size:12px;color:#DC2626;font-weight:600;">Never open with "Kumusta" first — hook must land in second 1.</p>
+  </div>
+</div>
+
+<!-- BOOST STRATEGY -->
+<div class="section">
+  <div class="section-header"><h2>Boost Strategy</h2></div>
+  <div class="section-body">
+    <p style="font-size:13px;color:#D1D5DB;margin-bottom:12px;"><strong style="color:#F59E0B;">Rule:</strong> Only boost posts with strong organic saves or shares. Post organically → wait 24–48 hours → if 50+ saves or 200+ shares, boost it.</p>
+    <table>
+      <tr><th>Stage</th><th>Budget</th><th>When</th></tr>
+      <tr><td>Test</td><td>Php 500–1,000/day</td><td>First boost — prove the format</td></tr>
+      <tr><td>Scale</td><td>Php 2,000–3,000/day</td><td>Format proven, positive results</td></tr>
+    </table>
+    <div style="margin-top:10px;background:#111827;border-radius:8px;padding:12px 14px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0D9488;margin-bottom:6px;">Best Boost Candidate — June 2026</div>
+      <div style="font-size:13px;color:#D1D5DB;"><strong style="color:#F9FAFB;">"5 Libreng AI Tools Para Sa Inyong Negosyo"</strong> — 60–90s screen record + Taglish voiceover.<br><br>Target: Philippines · Ages 25–40 · Interests: small business, freelancing, technology, productivity</div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTION CHECKLIST -->
+<div class="section">
+  <div class="section-header"><h2>Immediate Action Checklist</h2></div>
+  <div class="section-body">
+    <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#F59E0B;margin-bottom:8px;">Profile Fixes — This Week</p>
+    <ul class="checklist">
+      <li>Convert both FB profiles into one Facebook Page</li>
+      <li>Rewrite bio on all 4 platforms</li>
+      <li>Same profile photo across all platforms</li>
+      <li>Add Linktree or Beacons link-in-bio (IG + TikTok)</li>
+      <li>Pin best-performing post to top of each profile</li>
+    </ul>
+    <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0D9488;margin-top:14px;margin-bottom:8px;">Content Setup — This Month</p>
+    <ul class="checklist">
+      <li>Film "5 Libreng AI Tools" Reel — priority boost candidate</li>
+      <li>Create carousel: "5 AI tools every Filipino freelancer should know"</li>
+      <li>Film 2 more tool demo Reels — 1 per week minimum</li>
+      <li>Cross-post all TikToks to Instagram Reels natively</li>
+    </ul>
   </div>
 </div>
 
 <!-- KPIs -->
 <div class="section">
-  <div class="section-header">
-    <div class="icon">📈</div>
-    <h2>KPI Targets</h2>
-  </div>
+  <div class="section-header"><h2>KPIs to Track Weekly</h2></div>
   <div class="section-body">
-    <div style="font-size:10px;color:#6B7280;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Now (W22) → Month 2</div>
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-metric">TikTok Followers</div>
-        <div class="kpi-now">50–100</div>
-        <div class="kpi-later">→ 500+ Month 2</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-metric">Avg Video Views</div>
-        <div class="kpi-now">200–500</div>
-        <div class="kpi-later">→ 1,000+ Month 2</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-metric">Watch Completion</div>
-        <div class="kpi-now">&gt;40%</div>
-        <div class="kpi-later">→ &gt;50% Month 2</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-metric">Comments / Post</div>
-        <div class="kpi-now">5+</div>
-        <div class="kpi-later">→ 20+ Month 2</div>
-      </div>
-    </div>
+    <table>
+      <tr><th>Metric</th><th>Month 1 Target</th><th>Month 3 Target</th></tr>
+      <tr><td>Followers TikTok</td><td>100–500</td><td>2,000+</td></tr>
+      <tr><td>Avg video views</td><td>500–1,000</td><td>5,000+</td></tr>
+      <tr><td>Watch completion rate</td><td>&gt;40%</td><td>&gt;55%</td></tr>
+      <tr><td>Saves per post</td><td>20+</td><td>100+</td></tr>
+      <tr><td>Comments per video</td><td>10+</td><td>30+</td></tr>
+    </table>
   </div>
 </div>
 
-<!-- ACTION ITEMS -->
-<div class="section">
-  <div class="section-header">
-    <div class="icon">✅</div>
-    <h2>Action Items</h2>
-  </div>
-  <div class="section-body" style="padding:0;">
-    <ul class="action-list">
-      <li>
-        <span class="action-owner owner-joseph">Joseph</span>
-        <span class="action-text">Post W22 Origin Story + captions</span>
-        <span class="action-when">Fri May 29 · 7PM PHT</span>
-      </li>
-      <li>
-        <span class="action-owner owner-joseph">Joseph</span>
-        <span class="action-text">Pull TikTok + IG analytics screenshots (after 24h per post)</span>
-        <span class="action-when">Ongoing</span>
-      </li>
-      <li>
-        <span class="action-owner owner-joseph">Joseph</span>
-        <span class="action-text">Film W24 Mon — "Claude vs Gemini" (script ready)</span>
-        <span class="action-when">This week</span>
-      </li>
-      <li>
-        <span class="action-owner owner-jeff">Jeff</span>
-        <span class="action-text">W24 Mon script + captions — done</span>
-        <span class="action-when">Jun 8</span>
-      </li>
-      <li>
-        <span class="action-owner owner-joseph">Joseph</span>
-        <span class="action-text">Share analytics with Jeff weekly</span>
-        <span class="action-when">Every Sunday</span>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<footer>Tito AI — AI Para Sa Ating Lahat · Niche & Growth Plan · June 2026 · Built by Jeff</footer>
-
+<footer>Tito AI — AI Para Sa Ating Lahat · Strategy updated June 2026</footer>
 </body>
 </html>
