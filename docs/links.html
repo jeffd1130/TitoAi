@@ -105,6 +105,16 @@ function copyUrl(text) {
     }});
   });
 }
+function copyBlock(id, btn) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.style.background = '#F59E0B';
+    btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; }, 2000);
+  });
+}
 </script>
 </head>
 <body>
@@ -138,6 +148,75 @@ function copyUrl(text) {
   </div>
   <div class="copy-row">
     <div class="url-box" onclick="copyUrl('https://jeffd1130.github.io/TitoAi/niche-plan.html')">https://jeffd1130.github.io/TitoAi/niche-plan.html</div>
+  </div>
+</div>
+
+<!-- PROFILE COPY -->
+<div class="section">
+  <div class="section-header">Profile Copy — Ready to Paste</div>
+
+  <!-- TikTok -->
+  <div style="padding:14px 16px 4px; border-bottom:1px solid #111827;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#E879F9;margin-bottom:8px;">TikTok · @tito.aiph · Bio (max 80 chars)</div>
+    <div style="background:#0D1626;border-radius:8px;padding:13px 14px;font-size:14px;line-height:1.75;color:#D1D5DB;white-space:pre-wrap;word-break:break-word;" id="bio-tiktok">Libreng AI lessons para sa Pilipinas 🇵🇭
+Claude · Gemini · Walang bayad
+Mga Pamangkin — sama-sama tayong matuto 🤝</div>
+    <button class="copy-btn" onclick="copyBlock('bio-tiktok', this)">Copy Bio</button>
+  </div>
+
+  <!-- Instagram -->
+  <div style="padding:14px 16px 4px; border-bottom:1px solid #111827;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#F9A8D4;margin-bottom:8px;">Instagram · @tito.aiph · Bio (max 150 chars)</div>
+    <div style="background:#0D1626;border-radius:8px;padding:13px 14px;font-size:14px;line-height:1.75;color:#D1D5DB;white-space:pre-wrap;word-break:break-word;" id="bio-ig">AI lessons nang libre para sa lahat 🇵🇭
+Claude · Gemini — walang bayad
+Para sa OFW · freelancer · nanay · negosyante
+Mga Pamangkin, sama-sama tayong matuto 🤝</div>
+    <button class="copy-btn" onclick="copyBlock('bio-ig', this)">Copy Bio</button>
+    <div style="font-size:11px;color:#6B7280;padding:8px 0 6px;">Link in bio → https://jeffd1130.github.io/TitoAi/</div>
+  </div>
+
+  <!-- Facebook Short Description -->
+  <div style="padding:14px 16px 4px; border-bottom:1px solid #111827;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#93C5FD;margin-bottom:8px;">Facebook Page · Short Description (255 chars)</div>
+    <div style="background:#0D1626;border-radius:8px;padding:13px 14px;font-size:14px;line-height:1.75;color:#D1D5DB;white-space:pre-wrap;word-break:break-word;" id="bio-fb-short">Nagtuturo ng AI nang libre para sa lahat ng Pilipino. Claude, Gemini, at iba pa — hakbang-hakbang, Taglish, walang bayad. Para sa OFW, freelancer, nanay, at lahat na nag-aalala sa AI. 🇵🇭</div>
+    <button class="copy-btn" onclick="copyBlock('bio-fb-short', this)">Copy Short Description</button>
+  </div>
+
+  <!-- Facebook About (long) -->
+  <div style="padding:14px 16px 4px; border-bottom:1px solid #111827;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#93C5FD;margin-bottom:8px;">Facebook Page · About Section (full)</div>
+    <div style="background:#0D1626;border-radius:8px;padding:13px 14px;font-size:14px;line-height:1.75;color:#D1D5DB;white-space:pre-wrap;word-break:break-word;" id="bio-fb-about">Kumusta, mga Pamangkin!
+
+Ako si Tito AI — narito para turuan kayong gamitin ang AI nang libre.
+
+Hindi kailangan ng degree. Hindi kailangan ng gadget na mahal. Libre ang lahat ng tools na itinuturo namin dito — Claude at Gemini — available na ngayon sa inyong phone.
+
+Dito matututo kayo ng:
+✅ Paano gumamit ng Claude at Gemini — libre
+✅ AI tips para sa trabaho, negosyo, at pamilya
+✅ Hakbang-hakbang, Taglish, walang jargon
+
+Para sa OFW, freelancer, nanay, BPO worker, negosyante — para sa lahat ng Pilipino.
+
+Kung nag-aalala kayo na maaaring palitan ng AI ang inyong trabaho — nasa tamang lugar kayo. Dito tayo matututo nang sama-sama. Libre. Hakbang-hakbang.
+
+I-follow para hindi kayo mapalampas ng bago naming lessons.
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <button class="copy-btn" onclick="copyBlock('bio-fb-about', this)">Copy About</button>
+  </div>
+
+  <!-- Facebook Personal Profile (convert to Page note) -->
+  <div style="padding:14px 16px 14px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#93C5FD;margin-bottom:8px;">Facebook Personal Profile · Bio / Intro</div>
+    <div style="background:#0D1626;border-radius:8px;padding:13px 14px;font-size:14px;line-height:1.75;color:#D1D5DB;white-space:pre-wrap;word-break:break-word;" id="bio-fb-personal">Nagtuturo ng AI nang libre para sa lahat ng Pilipino 🇵🇭
+Claude · Gemini · Walang bayad · Taglish
+
+Tito AI — AI Para Sa Ating Lahat</div>
+    <button class="copy-btn" onclick="copyBlock('bio-fb-personal', this)">Copy Bio</button>
+    <div style="background:#1A0A00;border:1px solid #92400E;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:12px;color:#FCD34D;line-height:1.6;">
+      ⚠️ <strong>Action needed:</strong> Convert personal FB profiles to a Facebook Page. Go to facebook.com/pages/create → "Business or brand" → Migrate followers. Personal profiles can't run ads or access Page Insights.
+    </div>
   </div>
 </div>
 
