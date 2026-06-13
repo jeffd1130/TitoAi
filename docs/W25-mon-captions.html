@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W25 Monday Tip · June 16, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0F1E; color: #E5E7EB; font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; line-height: 1.6; padding: 0 0 60px; }
+  header { background: #0A0F1E; border-bottom: 3px solid #F59E0B; padding: 20px 16px 16px; position: sticky; top: 0; z-index: 10; }
+  header h1 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #F59E0B; text-transform: uppercase; }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown { background: #111827; border-bottom: 1px solid #1E2A3A; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #0D9488; font-weight: 600; }
+  .countdown .dot { width: 8px; height: 8px; border-radius: 50%; background: #0D9488; animation: pulse 1.5s infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .credit-block { margin: 16px 12px 0; background: #111827; border: 1px solid #1E2A3A; border-radius: 12px; padding: 14px 16px; }
+  .credit-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 6px; }
+  .credit-quote { font-size: 14px; color: #D1D5DB; font-style: italic; line-height: 1.6; }
+  .credit-name { font-size: 12px; color: #F59E0B; margin-top: 6px; }
+  .post-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .post-header { background: #111827; padding: 14px 16px; border-bottom: 1px solid #1E2A3A; }
+  .post-day { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0D9488; }
+  .post-title { font-size: 16px; font-weight: 700; color: #F9FAFB; margin-top: 3px; }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .tabs { display: flex; background: #0D1626; border-bottom: 1px solid #1E2A3A; }
+  .tab-btn { flex: 1; background: none; border: none; padding: 10px 4px; font-size: 12px; font-weight: 600; color: #6B7280; cursor: pointer; letter-spacing: 0.5px; border-bottom: 2px solid transparent; }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box { background: #111827; border-radius: 8px; padding: 14px; white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #D1D5DB; word-break: break-word; }
+  .hashtags { font-size: 12px; color: #0D9488; margin-top: 10px; line-height: 1.8; word-break: break-all; }
+  .first-comment { background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; margin-top: 12px; font-size: 13px; color: #9CA3AF; }
+  .first-comment strong { display: block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 4px; }
+  .copy-btn { display: block; width: 100%; margin-top: 10px; padding: 10px; background: #1E2A3A; border: 1px solid #374151; border-radius: 8px; color: #9CA3AF; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; text-align: center; }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .script-header { background: #111827; padding: 13px 16px; border-bottom: 1px solid #1E2A3A; }
+  .script-header h2 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280; }
+  .script-body { padding: 16px; }
+  .script-scene { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #1E2A3A; }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0D9488; margin-bottom: 6px; }
+  .scene-direction { font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px; }
+  .scene-lines { font-size: 14px; color: #F9FAFB; line-height: 1.65; background: #0D1626; border-radius: 6px; padding: 12px; }
+  footer { text-align: center; padding: 30px 16px 0; font-size: 11px; color: #374151; }
+</style>
+<script>
+function switchTab(btn, group, platform) {
+  const block = btn.closest('.post-block');
+  block.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  block.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  block.querySelector('#' + group + '-' + platform).classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!'; btn.style.background = '#F59E0B'; btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = 'Copy Caption'; btn.style.background=''; btn.style.color=''; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W25 Monday AI Tip</h1>
+  <p>June 16, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping Monday · 8:00 PM PHT · 5:00 AM PST
+</div>
+
+<!-- COMMUNITY CREDIT -->
+<div class="credit-block">
+  <div class="credit-label">Inspired by a Pamangkin</div>
+  <div class="credit-quote">"I find Claude more accurate on most things. Every now and then, I execute the same prompt for both and 80% of the time, Gemini gives out some inaccuracies. Is it because the prompt has to be more nuanced compared to Claude?"</div>
+  <div class="credit-name">— AV Leeneaux · @avdejesus · Instagram</div>
+</div>
+
+<!-- SLIDES PREVIEW -->
+<div style="margin:16px 0 0;">
+  <div style="padding:0 12px 10px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#0D9488;">Companion Slides · 5 Slides · Swipe to preview</div>
+  </div>
+  <div style="overflow-x:scroll;display:flex;gap:10px;padding:0 12px 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;">SLIDE 1 — HOOK</div>
+      <img src="slides/W25-mon/slide-01-hook.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;">SLIDE 2 — CLAUDE</div>
+      <img src="slides/W25-mon/slide-02-claude.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;">SLIDE 3 — GEMINI</div>
+      <img src="slides/W25-mon/slide-03-gemini.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;">SLIDE 4 — POWER COMBO</div>
+      <img src="slides/W25-mon/slide-04-combo.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+    <div style="flex:0 0 72vw;max-width:280px;scroll-snap-align:start;padding-right:12px;">
+      <div style="font-size:10px;color:#6B7280;margin-bottom:5px;">SLIDE 5 — CTA</div>
+      <img src="slides/W25-mon/slide-05-cta.png" style="width:100%;border-radius:8px;display:block;" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<div class="script-block">
+  <div class="script-header"><h2>Script — 60 sec · Talking Head · AI Tip</h2></div>
+  <div class="script-body">
+    <div class="script-scene">
+      <div class="scene-label">Hook · 0:00–0:04</div>
+      <div class="scene-direction">Direct eye contact. No smile yet. Let the question land.</div>
+      <div class="scene-lines">"Claude o Gemini — alin ang mas tama?"</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Credit + Setup · 0:04–0:15</div>
+      <div class="scene-direction">Warm, genuine. Credit AV. Show the question on screen or text overlay: "Tanong ni AV"</div>
+      <div class="scene-lines">"Isang Pamangkin natin — si AV — ang nagtanong nito sa akin.<br><br>Ginagamit niya ang dalawa, pero napansin niya: mas accurate si Claude. Bakit?"</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Answer · 0:15–0:38</div>
+      <div class="scene-direction">Calm, clear. Use fingers to count. Emphasize "gamitin mo ang dalawa."</div>
+      <div class="scene-lines">"Ganito ko sinesagot 'yan:<br><br>Si <strong>Claude</strong> — mas malalim ang reasoning. Mas magaling sa pag-analyze, pagsulat, at pag-explain ng komplikadong bagay.<br><br>Si <strong>Gemini</strong> — mas updated. Mas magaling sa trends, news, current events.<br><br>Kaya ang sagot? <strong>Gamitin mo ang dalawa.</strong> I-research sa Gemini — kunin ang latest info. Tapos i-paste sa Claude para sa mas malalim na analysis."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Example · 0:38–0:52</div>
+      <div class="scene-direction">Fast, concrete. Optional 2-sec screen flash of Gemini → Claude.</div>
+      <div class="scene-lines">"Halimbawa: Naghahanap ka ng trending na produkto ngayong buwan.<br><br>Gemini muna — para sa trend data.<br>Tapos Claude — para gumawa ng marketing plan mula doon.<br><br>Libre ang dalawa. Magkasama, mas makapangyarihan."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">CTA + Closer · 0:52–1:00</div>
+      <div class="scene-direction">Warm smile. Direct to camera.</div>
+      <div class="scene-lines">"May tanong ka rin ba tungkol sa AI? I-comment mo — baka maging next post mo 'yan.<br><br>Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭"</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Monday · June 16 · W25</div>
+    <div class="post-title">Claude o Gemini — Kailan Mo Gagamitin ang Isa't Isa?</div>
+    <div class="post-meta">AI Tip · 60 sec · Inspired by AV Leeneaux (@avdejesus)</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'mon','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','fb')">Facebook</button>
+  </div>
+  <div id="mon-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="mon-tiktok-text">Claude o Gemini — alin ang mas tama? 🤔
+
+Sagot: gamitin mo ang dalawa.
+
+Gemini = pinakabagong impormasyon + trends
+Claude = mas malalim na analysis + reasoning
+
+I-research sa Gemini → i-paste sa Claude. Libreng power combo. 💪
+
+May tanong ka rin? I-comment — baka maging next post mo 'yan. 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AITip #LibreAngAI #AIPhilippines</div>
+    <button class="copy-btn" onclick="copyText('mon-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Subukan mo: claude.ai + gemini.google.com — libre ang dalawa. I-try mo ngayon. 😊</div>
+  </div>
+  <div id="mon-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="mon-ig-text">Kumusta, mga Pamangkin! 🤖
+
+Isang magandang tanong mula sa isa sa ating mga Pamangkin — si AV:
+
+"Claude gives more accurate answers. Gemini gives some inaccuracies. Bakit ganun?"
+
+Ang sagot:
+
+Si Claude ay mas malalim ang reasoning. Mas magaling sa analysis, pagsulat, at pag-explain ng komplikadong bagay.
+
+Si Gemini ay mas updated. Mas magaling sa trends, news, at current events.
+
+Ang pinaka-epektibong paraan? Gamitin mo ang dalawa nang magkasama.
+
+📌 Gemini muna para sa current info
+📌 Paste sa Claude para sa mas malalim na analysis
+
+Halimbawa: Naghahanap ka ng trending na produkto? Gemini ang mag-reresearch ng trends. Claude ang gagawa ng marketing strategy.
+
+Libre ang dalawa. Magkasama, mas makapangyarihan.
+
+May tanong ka rin tungkol sa AI? I-comment mo — baka maging next post natin 'yan. 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AITip #LibreAngAI #AIPhilippines #ChatGPT #AITools #ProductivityPH #FreelancerPH #LearnAI #TechTutorialPH #TitoAI</div>
+    <button class="copy-btn" onclick="copyText('mon-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Subukan mo: claude.ai + gemini.google.com — libre ang dalawa. I-try mo ngayon. 😊</div>
+  </div>
+  <div id="mon-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="mon-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Isang napaka-galing na tanong ang natanggap ko mula sa isa sa ating komunidad — si AV Leeneaux:
+
+"Tito, I find Claude more accurate than Gemini. Bakit ganon? Is it because the prompt needs to be more nuanced for Gemini?"
+
+Ganito ko sinagot:
+
+Si Claude — mas malalim ang reasoning at analysis. Kung kailangan mo ng comprehensive na sagot, maingat na paliwanag, o mahabang dokumento — Claude ang mas mahusay.
+
+Si Gemini — mas updated sa current events at trends. Kung kailangan mo ng pinakabagong balita, trending topics, o real-time na impormasyon — Gemini ang mas mabilis.
+
+Kaya ang tunay na sagot ay hindi "alin ang mas magaling" — kundi gamitin mo ang dalawa nang magkasama.
+
+Ganito ang workflow:
+1. I-research sa Gemini para sa latest info
+2. I-copy ang results
+3. I-paste sa Claude para sa mas malalim na analysis at action plan
+
+Libre ang dalawa. Ngayon na pwede.
+
+May tanong ka rin tungkol sa AI? I-comment mo dito — baka maging susunod nating post 'yan. 😊
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #LibreAngAI #AIPhilippines</div>
+    <button class="copy-btn" onclick="copyText('mon-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Subukan mo: claude.ai + gemini.google.com — libre ang dalawa. I-try mo ngayon. 😊</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W25 Monday · June 16, 2026</footer>
+</body>
+</html>
