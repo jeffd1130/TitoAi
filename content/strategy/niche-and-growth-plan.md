@@ -59,7 +59,7 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 | CTA presence | 2/10 | 2/10 | 3/10 | 3/10 | Add link-in-bio + follow CTA |
 
 **Bio template for all platforms:**
-`Libreng AI tutorials para sa mga Pilipino 🇵🇭 | Claude, Gemini — sa Taglish | Para sa guro, freelancer, nanay, negosyante | [Link]`
+`Libre AI lessons para sa Pilipinas 🇵🇭 | Claude · Gemini · Walang bayad` *(TikTok — 71 chars)*
 
 ---
 
