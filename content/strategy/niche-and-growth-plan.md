@@ -7,7 +7,7 @@
 
 > **"The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."**
 
-This is not a tech channel. It is for: OFWs, freelancers (1.5M+), BPO workers afraid of being replaced, nanays/tatays, small business owners.
+This is not a tech channel. It is for: freelancers (1.5M+), guro, BPO workers afraid of being replaced, nanays/tatays, small business owners.
 
 **Fear + aspiration = share-worthy content.**
 Every video either removes a fear ("hindi mahirap 'to") or delivers a visible win ("ganito ang resulta").
@@ -59,7 +59,7 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 | CTA presence | 2/10 | 2/10 | 3/10 | 3/10 | Add link-in-bio + follow CTA |
 
 **Bio template for all platforms:**
-`Libreng AI tutorials para sa mga Pilipino 🇵🇭 | Claude, Gemini — sa Taglish | Para sa negosyo, freelancers, at lahat | [Link]`
+`Libreng AI tutorials para sa mga Pilipino 🇵🇭 | Claude, Gemini — sa Taglish | Para sa guro, freelancer, nanay, negosyante | [Link]`
 
 ---
 

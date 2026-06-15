@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tito AI — Niche & Growth Plan · June 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Lora:wght@700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; color: #111827; font-family: 'DM Sans', Arial, sans-serif; font-size: 13px; line-height: 1.65; }
+
+  /* COVER PAGE */
+  .cover { background: #0A0F1E; color: #fff; padding: 72px 60px 60px; min-height: 260px; page-break-after: always; }
+  .cover-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #F59E0B; margin-bottom: 20px; }
+  .cover-title { font-size: 36px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 10px; }
+  .cover-title span { color: #F59E0B; }
+  .cover-sub { font-size: 14px; color: #9CA3AF; margin-top: 10px; }
+  .cover-line { width: 60px; height: 4px; background: #F59E0B; margin: 24px 0; }
+  .cover-meta { display: flex; gap: 40px; margin-top: 30px; }
+  .cover-meta-item { }
+  .cover-meta-label { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280; }
+  .cover-meta-value { font-size: 13px; color: #E5E7EB; margin-top: 3px; }
+  .cover-tagline { margin-top: 36px; background: rgba(245,158,11,0.12); border-left: 4px solid #F59E0B; padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: 15px; font-style: italic; color: #FCD34D; line-height: 1.5; }
+
+  /* PAGE LAYOUT */
+  .page { padding: 48px 60px; }
+  h2 { font-size: 18px; font-weight: 700; color: #0A0F1E; margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #F59E0B; }
+  h2:first-child { margin-top: 0; }
+  h3 { font-size: 13px; font-weight: 700; color: #0D9488; margin: 20px 0 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  p { margin-bottom: 10px; color: #374151; }
+  strong { color: #111827; }
+  ul, ol { margin: 8px 0 12px 20px; color: #374151; }
+  li { margin-bottom: 4px; }
+  blockquote { background: #F0FDF4; border-left: 4px solid #0D9488; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 12px 0; font-style: italic; color: #065F46; }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 12px; }
+  th { background: #0A0F1E; color: #F59E0B; font-weight: 700; text-align: left; padding: 9px 12px; font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
+  td { padding: 8px 12px; border-bottom: 1px solid #E5E7EB; color: #374151; vertical-align: top; }
+  tr:nth-child(even) td { background: #F9FAFB; }
+  tr:last-child td { border-bottom: none; }
+
+  /* STAT CARDS */
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 20px; }
+  .stat-card { background: #0A0F1E; border-radius: 10px; padding: 16px; }
+  .stat-num { font-size: 20px; font-weight: 700; color: #F59E0B; }
+  .stat-label { font-size: 10px; color: #9CA3AF; margin-top: 4px; line-height: 1.4; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; margin: 8px 0 16px 0; }
+  .checklist li { padding: 6px 0; border-bottom: 1px solid #F3F4F6; color: #374151; display: flex; align-items: flex-start; gap: 8px; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: "☐"; color: #D1D5DB; flex-shrink: 0; margin-top: 1px; }
+
+  /* PLATFORM PRIORITY */
+  .platform-row { display: flex; gap: 12px; margin: 14px 0; }
+  .platform-card { flex: 1; border-radius: 10px; padding: 14px; border: 1px solid #E5E7EB; }
+  .platform-card.primary { border-color: #F59E0B; background: #FFFBEB; }
+  .platform-card.secondary { border-color: #E879F9; background: #FDF4FF; }
+  .platform-card.support { border-color: #93C5FD; background: #EFF6FF; }
+  .platform-badge { font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-bottom: 6px; }
+  .primary .platform-badge { background: #FEF3C7; color: #92400E; }
+  .secondary .platform-badge { background: #F3E8FF; color: #6B21A8; }
+  .support .platform-badge { background: #DBEAFE; color: #1E40AF; }
+  .platform-name { font-size: 14px; font-weight: 700; color: #111827; }
+  .platform-role { font-size: 11px; color: #6B7280; margin-top: 3px; }
+
+  /* KPI TABLE */
+  .kpi-table th { background: #065F46; }
+
+  /* BOOST BOX */
+  .boost-box { background: #FFFBEB; border: 1px solid #F59E0B; border-radius: 10px; padding: 16px 18px; margin: 12px 0; }
+  .boost-box-title { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #92400E; margin-bottom: 8px; }
+
+  /* FOOTER */
+  .doc-footer { background: #0A0F1E; color: #6B7280; padding: 20px 60px; font-size: 10px; display: flex; justify-content: space-between; margin-top: 40px; }
+
+  /* PRINT */
+  @media print {
+    body { font-size: 12px; }
+    .cover { min-height: auto; }
+    h2 { page-break-before: auto; }
+    table { page-break-inside: avoid; }
+    .stat-grid { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-tag">Confidential · Internal Strategy Document</div>
+  <div class="cover-title">Tito AI <span>@TitoAIPH</span><br>Niche & Growth Plan</div>
+  <div class="cover-line"></div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Version</div>
+      <div class="cover-meta-value">June 2026 — Post-Audit</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Prepared by</div>
+      <div class="cover-meta-value">Jeff de las Armas</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Channel</div>
+      <div class="cover-meta-value">@tito.aiph · TikTok · IG · Facebook</div>
+    </div>
+  </div>
+  <div class="cover-tagline">
+    "The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."
+  </div>
+</div>
+
+<div class="page">
+
+<!-- MARKET OPPORTUNITY -->
+<h2>Market Opportunity</h2>
+<div class="stat-grid">
+  <div class="stat-card"><div class="stat-num">12.7M</div><div class="stat-label">Filipino workers exposed to GenAI — highest in ASEAN (ILO 2026)</div></div>
+  <div class="stat-card"><div class="stat-num">42.4%</div><div class="stat-label">Filipino internet users use ChatGPT monthly — 6th globally (Radar PH 2026)</div></div>
+  <div class="stat-card"><div class="stat-num">1.9M</div><div class="stat-label">BPO employees who need to upskill now (BSP 2025)</div></div>
+  <div class="stat-card"><div class="stat-num">1.5M+</div><div class="stat-label">Filipino freelancers — underserved by AI education (PIDS)</div></div>
+  <div class="stat-card"><div class="stat-num">14.9%</div><div class="stat-label">Only — of small firms currently use AI tools (PH AI Report 2025)</div></div>
+  <div class="stat-card"><div class="stat-num">83%</div><div class="stat-label">Filipino students use AI — parents haven't caught up (BusinessWorld 2026)</div></div>
+</div>
+<p><strong>The gap:</strong> 12.7 million people are exposed to AI disruption. Almost none of them have a relatable, Taglish-speaking guide. <strong>Tito AI is the first mover in this lane.</strong></p>
+
+<!-- NICHE -->
+<h2>Niche & Target Audience</h2>
+<p>This is not a tech channel. It is for: <strong>freelancers, guro, BPO workers afraid of being replaced, nanays/tatays, small business owners</strong> — everyday Filipinos who need AI but don't know where to start.</p>
+<blockquote>Fear + aspiration = share-worthy content. Every video either removes a fear ("hindi mahirap 'to") or delivers a visible win ("ganito ang resulta").</blockquote>
+
+<h3>Tito AI's Moat</h3>
+<ul>
+  <li><strong>Taglish</strong> — barrier to entry for foreign creators</li>
+  <li><strong>"Libre lahat"</strong> — removes the #1 objection (cost)</li>
+  <li><strong>Warm tito brand energy</strong> — no one else owns this positioning in PH</li>
+  <li><strong>First mover</strong> — algorithm surfaces Tito AI when Filipinos search "AI tutorial Tagalog"</li>
+</ul>
+
+<!-- COMPETITORS -->
+<h2>Competitive Landscape</h2>
+<table>
+  <tr><th>Account</th><th>What they do</th><th>Gap vs. Tito AI</th></tr>
+  <tr><td>@jaygregorio_official</td><td>Business coach who also covers AI</td><td>Not a pure AI educator — broader lifestyle focus</td></tr>
+  <tr><td>@pinoytechai</td><td>Philippines-based AI content</td><td>More techie/formal tone — no community warmth</td></tr>
+  <tr><td>@pinoy.ai76</td><td>Filipino AI content</td><td>Small, unclear niche focus</td></tr>
+  <tr><td>@ai.explained, @futurepedia</td><td>Western faceless AI roundups</td><td>English only — not relatable to Filipino everyday life</td></tr>
+</table>
+<p><strong>Formats to avoid:</strong> Generic "Top 5 AI tools" lists, ChatGPT tips with no Filipino angle, "AI will take your job" hot takes with no solution.</p>
+
+<!-- PLATFORM STRATEGY -->
+<h2>Platform Strategy</h2>
+<div class="platform-row">
+  <div class="platform-card primary">
+    <div class="platform-badge">🥇 Primary</div>
+    <div class="platform-name">TikTok</div>
+    <div class="platform-role">Discovery engine — viral reach</div>
+    <p style="font-size:11px;margin-top:8px;color:#374151;">Algorithm-favored education niche. Zero ad spend needed to go viral. 4×/week minimum. Best platform for first-touch growth.</p>
+  </div>
+  <div class="platform-card secondary">
+    <div class="platform-badge">🥈 Secondary</div>
+    <div class="platform-name">Instagram</div>
+    <div class="platform-role">Authority + depth — convert lurkers</div>
+    <p style="font-size:11px;margin-top:8px;color:#374151;">Reels + Carousels drive saves. 25–34 urban professionals. Best for follower conversion and authority building.</p>
+  </div>
+  <div class="platform-card support">
+    <div class="platform-badge">🥉 Support</div>
+    <div class="platform-name">Facebook</div>
+    <div class="platform-role">Paid boost + community</div>
+    <p style="font-size:11px;margin-top:8px;color:#374151;">Lower organic reach but cheapest PH CPM (65–75% cheaper than US). Best for boosting proven content to wider Filipino audience.</p>
+  </div>
+</div>
+<p style="font-size:11px;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:10px 14px;color:#991B1B;">⚠️ <strong>Critical fix:</strong> Both Facebook personal profiles must be converted to a single Facebook Page — personal profiles cannot run paid ads or access analytics.</p>
+
+<!-- PROFILE BIOS -->
+<h2>Profile Bios — Ready to Paste</h2>
+<table>
+  <tr><th>Platform</th><th>Bio Copy</th><th>Notes</th></tr>
+  <tr>
+    <td><strong>TikTok</strong><br><small>@tito.aiph</small></td>
+    <td>Libreng AI lessons para sa Pilipinas 🇵🇭<br>Claude · Gemini · Walang bayad<br>Mga Pamangkin — sama-sama tayong matuto 🤝</td>
+    <td>Max 80 chars visible</td>
+  </tr>
+  <tr>
+    <td><strong>Instagram</strong><br><small>@tito.aiph</small></td>
+    <td>AI lessons nang libre para sa lahat 🇵🇭<br>Claude · Gemini — walang bayad<br>Para sa guro · freelancer · nanay · negosyante<br>Mga Pamangkin, sama-sama tayong matuto 🤝</td>
+    <td>Max 150 chars. Add link-in-bio → GitHub hub.</td>
+  </tr>
+  <tr>
+    <td><strong>Facebook Page</strong><br><small>Short description</small></td>
+    <td>Nagtuturo ng AI nang libre para sa lahat ng Pilipino. Claude, Gemini — hakbang-hakbang, Taglish, walang bayad. Para sa guro, freelancer, nanay, at lahat na nag-aalala sa AI. 🇵🇭</td>
+    <td>Max 255 chars</td>
+  </tr>
+  <tr>
+    <td><strong>Facebook Page</strong><br><small>About section</small></td>
+    <td>Kumusta, mga Pamangkin! Nagtuturo ng AI nang libre para sa lahat ng Pilipino — walang bayad, walang jargon, Taglish lang. Para sa guro, freelancer, nanay, BPO worker, negosyante. Sama-sama tayong matuto. Hakbang-hakbang. AI Para Sa Ating Lahat. 🇵🇭</td>
+    <td>Warm, no-sell tone</td>
+  </tr>
+</table>
+
+<!-- POSTING SCHEDULE -->
+<h2>Weekly Posting Schedule</h2>
+<table>
+  <tr><th>Day</th><th>Platform</th><th>Format</th><th>Content Type</th></tr>
+  <tr><td><strong>Monday</strong></td><td>TikTok + IG</td><td>AI Tip Reel (30–60s)</td><td>Quick tool tip — talking head</td></tr>
+  <tr><td><strong>Wednesday</strong></td><td>TikTok + IG</td><td>Demo Reel + Carousel (60–90s)</td><td>Screen record + Taglish voiceover</td></tr>
+  <tr><td><strong>Thursday</strong></td><td>TikTok</td><td>Trend reaction or AI news</td><td>Commentary + screen record</td></tr>
+  <tr><td><strong>Saturday</strong></td><td>Instagram</td><td>Reel</td><td>Before/after productivity story</td></tr>
+  <tr><td><strong>Anytime</strong></td><td>Facebook</td><td>Cross-post</td><td>Wednesday carousel to FB Page</td></tr>
+</table>
+<p><strong>Cross-posting rule:</strong> All TikToks → upload natively to Instagram Reels (same video, adjusted caption). Never use TikTok cross-post link — native uploads get more reach.</p>
+
+<!-- CONTENT PILLARS -->
+<h2>Content Pillars</h2>
+<table>
+  <tr><th>#</th><th>Format</th><th>Platform</th><th>Why it converts</th><th>Hook template</th></tr>
+  <tr><td>1</td><td>Tool demo — screen record</td><td>TikTok, IG Reels</td><td>High watch-through; saves drive algorithm</td><td>"I used AI to do this in 5 mins"</td></tr>
+  <tr><td>2</td><td>Comparison — tested X tools</td><td>TikTok, IG Reels</td><td>Trust-building; high share rate</td><td>"I tested 5 AI tools so you don't have to"</td></tr>
+  <tr><td>3</td><td>Before / after productivity</td><td>IG Reels, TikTok</td><td>Emotional hook; relatable</td><td>"3 hours of work → 5 minutes with AI"</td></tr>
+  <tr><td>4</td><td>Carousel — tools for [job]</td><td>IG, Facebook</td><td>High saves; shareable to groups</td><td>"5 AI tools para sa Filipino freelancers"</td></tr>
+  <tr><td>5</td><td>AI news reaction</td><td>TikTok, IG Stories</td><td>Trend-riding = organic reach spike</td><td>"ChatGPT just changed everything — here's why"</td></tr>
+</table>
+
+<h3>Pillar breakdown</h3>
+<ul>
+  <li><strong>Pillar 1 — Tool Demo (Mon / Wed):</strong> Highest save rate. Core educational content. "Paano gamitin ang Claude para sa negosyo mo — libre"</li>
+  <li><strong>Pillar 2 — Before / After (Sat):</strong> Emotional, shareable, high retention. "3 oras ng trabaho → 5 minuto gamit ang AI"</li>
+  <li><strong>Pillar 3 — Fear → Reassurance (evergreen):</strong> High anxiety = high engagement. "Hindi ka papalitan ng AI. Papalitan ka ng taong gumagamit ng AI."</li>
+  <li><strong>Pillar 4 — Everyday Filipino Life (Fri):</strong> Warmth + identity. Builds community. Guro, nanay, negosyante stories.</li>
+</ul>
+
+<!-- HOOK FORMULA -->
+<h2>Hook Formula</h2>
+<p>Every video must open in <strong>second 1</strong> with one of:</p>
+<ol>
+  <li><strong>Fear hook</strong> — "Kung BPO worker ka, pakinggan mo 'to."</li>
+  <li><strong>Result hook</strong> — "30 seconds lang. Tingnan mo 'to." (show immediately)</li>
+  <li><strong>Identity hook</strong> — "May negosyo ka at wala kang marketing budget?"</li>
+  <li><strong>Curiosity hook</strong> — "Ito ang tanong na hindi mo pa naitatanong sa AI."</li>
+</ol>
+<p style="color:#991B1B;font-weight:600;">Never open with "Kumusta" first — hook lands in second 1, opener comes after.</p>
+
+<!-- BOOST STRATEGY -->
+<h2>Boost Strategy</h2>
+<p><strong>Rule:</strong> Only boost posts that already have strong organic saves or shares — proven signal = lower CPM.</p>
+<p><strong>Process:</strong> Post organically → wait 24–48 hours → if 50+ saves OR 200+ shares → boost it.</p>
+<table>
+  <tr><th>Stage</th><th>Budget</th><th>When</th></tr>
+  <tr><td>Test</td><td>Php 500–1,000 / day</td><td>First boost — prove the format</td></tr>
+  <tr><td>Scale</td><td>Php 2,000–3,000 / day</td><td>Format proven, engagement positive</td></tr>
+</table>
+<div class="boost-box">
+  <div class="boost-box-title">Targeting</div>
+  Location: Philippines · Age: 25–40 · Interests: technology, online business, productivity, freelancing, entrepreneurship<br><br>
+  <strong>First boost candidate:</strong> "5 Libreng AI Tools Para Sa Inyong Negosyo" — 60–90s screen record + Taglish voiceover. Highest shareability + lowest CPM format.<br><br>
+  <strong>Platform for first boost:</strong> Facebook Page (convert profiles first). TikTok Promote as secondary once organic is performing.
+</div>
+
+<!-- ENGAGEMENT TACTICS -->
+<h2>Engagement Tactics</h2>
+<ol>
+  <li><strong>End every video with a YES/NO or CHOICE question</strong> — "Claude o Gemini — alin ang subukan mo muna?"</li>
+  <li><strong>Reply to every comment in the first hour</strong> — TikTok/IG reward fast early engagement</li>
+  <li><strong>Pin first comment within 5 min</strong> — bonus tip or tool link</li>
+  <li><strong>Post times (PHT):</strong> TikTok = 8–10 PM · IG = 7–9 PM</li>
+  <li><strong>Share to Facebook Stories immediately</strong> after posting Reels</li>
+</ol>
+
+<!-- KPIs -->
+<h2>KPIs to Track Weekly</h2>
+<table class="kpi-table">
+  <tr><th>Metric</th><th>Target Month 1</th><th>Target Month 3</th></tr>
+  <tr><td>Followers — TikTok</td><td>100–500</td><td>2,000+</td></tr>
+  <tr><td>Avg video views</td><td>500–1,000</td><td>5,000+</td></tr>
+  <tr><td>Watch completion rate</td><td>&gt;40%</td><td>&gt;55%</td></tr>
+  <tr><td>Saves per post</td><td>20+</td><td>100+</td></tr>
+  <tr><td>Comments per video</td><td>10+</td><td>30+</td></tr>
+  <tr><td>Profile visits</td><td>100+</td><td>500+</td></tr>
+</table>
+<p style="font-size:11px;color:#6B7280;">Pull weekly: TikTok Creator Center → Analytics · Instagram Professional Dashboard → Insights. Share screenshots with Jeff.</p>
+
+<!-- ACTION CHECKLIST -->
+<h2>Immediate Action Checklist</h2>
+<h3>Profile Fixes — Do This Week</h3>
+<ul class="checklist">
+  <li>Convert both FB personal profiles into one Facebook Page</li>
+  <li>Paste new bios on all 4 platforms (see table above)</li>
+  <li>Same profile photo across all platforms</li>
+  <li>Add Linktree or Beacons link-in-bio (IG + TikTok) → link to https://jeffd1130.github.io/TitoAi/</li>
+  <li>Pin best-performing post to top of each profile</li>
+</ul>
+<h3>Content Setup — This Month</h3>
+<ul class="checklist">
+  <li>Film "5 Libreng AI Tools" Reel — priority boost candidate</li>
+  <li>Create carousel: "5 AI tools every Filipino freelancer should know"</li>
+  <li>Film 2 more tool demo Reels (one per week minimum)</li>
+  <li>Start cross-posting all TikToks to Instagram Reels natively</li>
+</ul>
+<h3>Automation — Weekly Cadence</h3>
+<ul class="checklist">
+  <li>Monday: run weekly content brief in Claude Code</li>
+  <li>Friday: run trend scan for following week planning</li>
+  <li>Monthly: competitor scan to update benchmarks</li>
+</ul>
+
+</div><!-- end .page -->
+
+<div class="doc-footer">
+  <span>Tito AI @TitoAIPH · Niche & Growth Plan · June 2026</span>
+  <span>Confidential — Internal use only</span>
+</div>
+
+</body>
+</html>
