@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W25 Wednesday Demo · June 18, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0F1E; color: #E5E7EB; font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; line-height: 1.6; padding: 0 0 60px; }
+  header { background: #0A0F1E; border-bottom: 3px solid #F59E0B; padding: 20px 16px 16px; position: sticky; top: 0; z-index: 10; }
+  header h1 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #F59E0B; text-transform: uppercase; }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown { background: #111827; border-bottom: 1px solid #1E2A3A; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #0D9488; font-weight: 600; }
+  .countdown .dot { width: 8px; height: 8px; border-radius: 50%; background: #0D9488; animation: pulse 1.5s infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .canva-block { margin: 16px 12px 0; background: #111827; border: 1px solid #1E2A3A; border-radius: 12px; padding: 14px 16px; }
+  .canva-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0D9488; margin-bottom: 8px; }
+  .canva-link { display: block; background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; text-decoration: none; color: #F59E0B; font-size: 13px; font-weight: 600; word-break: break-all; }
+  .canva-link:hover { background: #1E2A3A; }
+  .canva-note { font-size: 11px; color: #6B7280; margin-top: 8px; }
+  .post-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .post-header { background: #111827; padding: 14px 16px; border-bottom: 1px solid #1E2A3A; }
+  .post-day { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0D9488; }
+  .post-title { font-size: 16px; font-weight: 700; color: #F9FAFB; margin-top: 3px; }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .tabs { display: flex; background: #0D1626; border-bottom: 1px solid #1E2A3A; }
+  .tab-btn { flex: 1; background: none; border: none; padding: 10px 4px; font-size: 12px; font-weight: 600; color: #6B7280; cursor: pointer; letter-spacing: 0.5px; border-bottom: 2px solid transparent; }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box { background: #111827; border-radius: 8px; padding: 14px; white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #D1D5DB; word-break: break-word; }
+  .hashtags { font-size: 12px; color: #0D9488; margin-top: 10px; line-height: 1.8; word-break: break-all; }
+  .first-comment { background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; margin-top: 12px; font-size: 13px; color: #9CA3AF; }
+  .first-comment strong { display: block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 4px; }
+  .copy-btn { display: block; width: 100%; margin-top: 10px; padding: 10px; background: #1E2A3A; border: 1px solid #374151; border-radius: 8px; color: #9CA3AF; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; text-align: center; }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .script-header { background: #111827; padding: 13px 16px; border-bottom: 1px solid #1E2A3A; }
+  .script-header h2 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280; }
+  .script-body { padding: 16px; }
+  .script-scene { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #1E2A3A; }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0D9488; margin-bottom: 6px; }
+  .scene-direction { font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px; }
+  .scene-lines { font-size: 14px; color: #F9FAFB; line-height: 1.65; background: #0D1626; border-radius: 6px; padding: 12px; }
+  .prompt-box { background: #0A1628; border: 1px solid #0D9488; border-radius: 8px; padding: 14px 16px; margin: 12px 12px 0; font-size: 13px; line-height: 1.7; color: #D1D5DB; white-space: pre-wrap; }
+  .prompt-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0D9488; margin-bottom: 8px; }
+  .buffer-block { margin: 20px 12px 0; background: #111827; border: 1px solid #1E2A3A; border-radius: 12px; padding: 14px 16px; }
+  .buffer-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 10px; }
+  .buffer-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #1E2A3A; font-size: 12px; }
+  .buffer-row:last-child { border-bottom: none; }
+  .buffer-key { color: #6B7280; }
+  .buffer-val { color: #F9FAFB; font-weight: 600; text-align: right; }
+  footer { text-align: center; padding: 30px 16px 0; font-size: 11px; color: #374151; }
+</style>
+<script>
+function switchTab(btn, group, platform) {
+  const block = btn.closest('.post-block');
+  block.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  block.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  block.querySelector('#' + group + '-' + platform).classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!'; btn.style.background = '#F59E0B'; btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = 'Copy Caption'; btn.style.background=''; btn.style.color=''; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W25 Wednesday Demo</h1>
+  <p>June 18, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping Wednesday · 7:00 PM PHT · 4:00 AM PST
+</div>
+
+<!-- CANVA COVER -->
+<div class="canva-block">
+  <div class="canva-label">Cover Graphic — Edit in Canva</div>
+  <a href="https://www.canva.com/d/PkpC12tIwC9ozYh" target="_blank" class="canva-link">
+    🎨 Open Cover in Canva → canva.com/d/PkpC12tIwC9ozYh
+  </a>
+  <div class="canva-note">Design ID: DAHMsc8o6hg · Dark Navy TikTok Cover with Claude Chat · 1080×1920 (9:16)</div>
+</div>
+
+<!-- PROMPT TO SHOW ON SCREEN -->
+<div style="margin:16px 12px 0;">
+  <div class="prompt-label" style="padding:0 0 0 4px;">Prompt to Show On Screen During Demo</div>
+  <div class="prompt-box">Tulungan mo akong gumawa ng resume.
+Naghahanap ako ng [trabaho].
+Dati akong [trabaho] sa loob ng [X taon].
+Ang mga ginagawa ko: [task 1], [task 2], [task 3].
+Wala akong degree pero marami akong experience.
+Gawing professional at maayos.</div>
+</div>
+
+<!-- SCRIPT -->
+<div class="script-block">
+  <div class="script-header"><h2>Script — 75 sec · Split Screen Demo · Claude Resume</h2></div>
+  <div class="script-body">
+    <div class="script-scene">
+      <div class="scene-label">Hook · 0:00–0:06</div>
+      <div class="scene-direction">Direct to camera. Confident. No intro yet.</div>
+      <div class="scene-lines">"10 seconds lang ang binibigay ng recruiter sa resume mo.<br><br>10 seconds — tapos next na."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Setup · 0:06–0:18</div>
+      <div class="scene-direction">Cut to screen — show a plain, wall-of-text resume. Back to face.</div>
+      <div class="scene-lines">"Ganyan ang karamihan sa atin — magaling sa trabaho, pero hindi magaling magsulat ng resume.<br><br>Ngayong ipapakita ko sa inyo kung paano ayusin 'yan gamit ang Claude — libre, 2 minuto lang."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Demo · 0:18–0:52</div>
+      <div class="scene-direction">Screen share: claude.ai open. Type live or show typing animation. Show prompt in large text overlay.</div>
+      <div class="scene-lines">"Pumunta sa claude.ai — libre ito. Tapos i-type mo ito:"<br><br><em>[Show prompt on screen]</em><br><br>"Tingnan ninyo — nagbibigay si Claude ng:<br>— Professional summary<br>— Skills section<br>— Experience bullets na maganda ang pagkakasulat<br><br>At ito ay sa Tagalog pa kung gusto mo."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">Result · 0:52–1:05</div>
+      <div class="scene-direction">Show the Claude output on screen. Back to face — genuine smile.</div>
+      <div class="scene-lines">"Hindi na kailangan ng resume writer. Hindi na kailangan ng bayad.<br><br>Basta malaman mo lang ang tamang tanong — si Claude ang bahala sa susunod."</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">CTA + Closer · 1:05–1:15</div>
+      <div class="scene-direction">Direct eye contact. Warm.</div>
+      <div class="scene-lines">"I-comment ang trabahong hinahanap mo — padalhan kita ng exact na prompt para sa resume mo. Libre rin 'yan.<br><br>Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭"</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Wednesday · June 18 · W25</div>
+    <div class="post-title">Gumawa ng Resume Gamit ang Claude (In 2 Minutes)</div>
+    <div class="post-meta">Demo Reel · 75 sec · Split screen: face cam + Claude screen share · Tool: claude.ai — libre</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'wed','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'wed','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'wed','fb')">Facebook</button>
+  </div>
+
+  <div id="wed-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="wed-tiktok-text">10 seconds lang ang ibibigay ng recruiter sa resume mo.
+
+Ginamit ko si Claude — libre — para ayusin ito sa 2 minuto.
+Professional summary. Skills. Bullets. Sa Tagalog pa kung gusto mo.
+
+I-comment ang trabahong hinahanap mo — padalhan kita ng exact na prompt. Libre rin. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #AIDemo #LibrengTools #AIPhilippines #LibreAngAI</div>
+    <button class="copy-btn" onclick="copyText('wed-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Subukan mo ngayon: claude.ai — libre. I-comment ang target job mo at padalhan kita ng eksaktong prompt para sa resume mo. 😊</div>
+  </div>
+
+  <div id="wed-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="wed-ig-text">10 seconds lang ang ibibigay ng recruiter sa resume mo. 10 seconds — tapos next na.
+
+Maraming Pilipino — magaling sa trabaho, pero hindi magsulat ng resume. Ngayon ipapakita ko kung paano ayusin ito gamit ang Claude — libre, 2 minuto lang.
+
+Professional summary. Skills section. Experience bullets na maganda ang pagkakasulat. Sa Tagalog pa kung gusto mo.
+
+Hindi na kailangan ng resume writer. Basta malaman mo ang tamang tanong — si Claude ang bahala sa susunod. I-save mo ito para di malimutan! 💾
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAI #AIPhilippines #ClaudeAI #AIDemo #LibrengTools #LibreAngAI #ResumeBuilding #JobSearch #FreelancerPH #AIForEveryone #CareerTips #WorkFromHome</div>
+    <button class="copy-btn" onclick="copyText('wed-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Subukan mo ngayon: claude.ai — libre. I-comment ang target job mo at padalhan kita ng eksaktong prompt para sa resume mo. 😊</div>
+  </div>
+
+  <div id="wed-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="wed-fb-text">Kumusta, mga Pamangkin! 🤖
+
+Alam ba ninyo na 10 seconds lang ang binibigay ng recruiter sa resume ninyo? 10 seconds — tapos next na.
+
+Ganyan ang karamihan sa atin — magaling sa trabaho, pero hindi magaling magsulat ng resume. Ngayon, ipapakita ko kung paano ayusin ito gamit ang Claude — libre, hindi lalampas ng 2 minuto.
+
+Pumunta sa claude.ai, i-type ang inyong trabaho, karanasan, at mga task. Si Claude ang bahala sa professional summary, skills section, at experience bullets. Sa Tagalog pa kung gusto ninyo.
+
+Hindi na kailangan ng resume writer. Hindi na kailangan ng bayad. Basta malaman ang tamang tanong — si Claude ang susunod na gagawa para sa inyo.
+
+I-comment ang trabahong hinahanap ninyo — padalhan ko kayo ng exact na prompt. Libre rin 'yan. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #ClaudeAI #AIParaSaAtin #LibreAngAI #AIPhilippines</div>
+    <button class="copy-btn" onclick="copyText('wed-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin immediately after posting</strong>Subukan mo ngayon: claude.ai — libre. I-comment ang target job mo at padalhan kita ng eksaktong prompt para sa resume mo. 😊</div>
+  </div>
+</div>
+
+<!-- BUFFER -->
+<div class="buffer-block">
+  <div class="buffer-label">Buffer — Schedule After Approval</div>
+  <div class="buffer-row"><span class="buffer-key">Drop time</span><span class="buffer-val">Wednesday June 18 · 7:00 PM PHT / 4:00 AM PST</span></div>
+  <div class="buffer-row"><span class="buffer-key">TikTok</span><span class="buffer-val">Use TikTok caption · Native upload</span></div>
+  <div class="buffer-row"><span class="buffer-key">Instagram</span><span class="buffer-val">Use Instagram caption · Native upload</span></div>
+  <div class="buffer-row"><span class="buffer-key">Facebook</span><span class="buffer-val">Use Facebook caption · Native upload</span></div>
+  <div class="buffer-row"><span class="buffer-key">Workspace</span><span class="buffer-val">jeffd321@live.com · buffer.com</span></div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W25 Wednesday · June 18, 2026</footer>
+</body>
+</html>
