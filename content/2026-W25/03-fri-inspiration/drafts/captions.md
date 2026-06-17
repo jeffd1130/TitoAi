@@ -1,8 +1,8 @@
 # W25 Friday — Captions
 **Topic:** Nanay + AI — Ganito Namin Ginagamit sa Bahay
 **Drop:** Friday June 20, 2026 · 7:00 PM PHT / 4:00 AM PST
-**Canva cover edit:** https://www.canva.com/d/isyJ94BurZEKLRj
-**Design ID:** DAHMzoYs7rI
+**Canva cover edit:** https://www.canva.com/d/AAAGzdsQej54vJR
+**Design ID:** DAHM0a1ENbo
 
 ---
 
