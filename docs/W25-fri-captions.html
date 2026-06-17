@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W25 Friday Inspiration · June 20, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0F1E; color: #E5E7EB; font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; line-height: 1.6; padding: 0 0 60px; }
+  header { background: #0A0F1E; border-bottom: 3px solid #F59E0B; padding: 20px 16px 16px; position: sticky; top: 0; z-index: 10; }
+  header h1 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #F59E0B; text-transform: uppercase; }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown { background: #111827; border-bottom: 1px solid #1E2A3A; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #E879F9; font-weight: 600; }
+  .countdown .dot { width: 8px; height: 8px; border-radius: 50%; background: #E879F9; animation: pulse 1.5s infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .canva-block { margin: 16px 12px 0; background: #111827; border: 1px solid #1E2A3A; border-radius: 12px; padding: 14px 16px; }
+  .canva-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #E879F9; margin-bottom: 8px; }
+  .canva-link { display: block; background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; text-decoration: none; color: #F59E0B; font-size: 13px; font-weight: 600; word-break: break-all; }
+  .canva-link:hover { background: #1E2A3A; }
+  .canva-note { font-size: 11px; color: #6B7280; margin-top: 8px; }
+  .post-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .post-header { background: #111827; padding: 14px 16px; border-bottom: 1px solid #1E2A3A; }
+  .post-day { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #E879F9; }
+  .post-title { font-size: 16px; font-weight: 700; color: #F9FAFB; margin-top: 3px; }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .tabs { display: flex; background: #0D1626; border-bottom: 1px solid #1E2A3A; }
+  .tab-btn { flex: 1; background: none; border: none; padding: 10px 4px; font-size: 12px; font-weight: 600; color: #6B7280; cursor: pointer; letter-spacing: 0.5px; border-bottom: 2px solid transparent; }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box { background: #111827; border-radius: 8px; padding: 14px; white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #D1D5DB; word-break: break-word; }
+  .hashtags { font-size: 12px; color: #E879F9; margin-top: 10px; line-height: 1.8; word-break: break-all; }
+  .first-comment { background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; margin-top: 12px; font-size: 13px; color: #9CA3AF; }
+  .first-comment strong { display: block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 4px; }
+  .copy-btn { display: block; width: 100%; margin-top: 10px; padding: 10px; background: #1E2A3A; border: 1px solid #374151; border-radius: 8px; color: #9CA3AF; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; text-align: center; }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .script-header { background: #111827; padding: 13px 16px; border-bottom: 1px solid #1E2A3A; }
+  .script-header h2 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280; }
+  .script-body { padding: 16px; }
+  .script-scene { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #1E2A3A; }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #E879F9; margin-bottom: 6px; }
+  .scene-direction { font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px; }
+  .scene-lines { font-size: 14px; color: #F9FAFB; line-height: 1.65; background: #0D1626; border-radius: 6px; padding: 12px; }
+  .buffer-block { margin: 20px 12px 0; background: #111827; border: 1px solid #1E2A3A; border-radius: 12px; padding: 14px 16px; }
+  .buffer-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 10px; }
+  .buffer-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #1E2A3A; font-size: 12px; }
+  .buffer-row:last-child { border-bottom: none; }
+  .buffer-key { color: #6B7280; }
+  .buffer-val { color: #F9FAFB; font-weight: 600; text-align: right; }
+  footer { text-align: center; padding: 30px 16px 0; font-size: 11px; color: #374151; }
+</style>
+<script>
+function switchTab(btn, group, platform) {
+  const block = btn.closest('.post-block');
+  block.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  block.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  block.querySelector('#' + group + '-' + platform).classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!'; btn.style.background = '#F59E0B'; btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = 'Copy Caption'; btn.style.background=''; btn.style.color=''; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W25 Friday Inspiration</h1>
+  <p>June 20, 2026 · For approval by Joseph · @TitoAIPH</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping Friday · 7:00 PM PHT · 4:00 AM PST
+</div>
+
+<!-- CANVA COVER -->
+<div class="canva-block">
+  <div class="canva-label">Cover Graphic — Edit in Canva</div>
+  <a href="https://www.canva.com/d/isyJ94BurZEKLRj" target="_blank" class="canva-link">
+    🎨 Open Cover in Canva → canva.com/d/isyJ94BurZEKLRj
+  </a>
+  <div class="canva-note">Design ID: DAHMzoYs7rI · Cozy Filipino Nanay + AI · 1080×1920 (9:16) · Warm kitchen scene</div>
+</div>
+
+<!-- SCRIPT -->
+<div class="script-block">
+  <div class="script-header"><h2>Script — 6 Scenes · ~75–85 seconds · Face cam / Talking head</h2></div>
+  <div class="script-body">
+
+    <div class="script-scene">
+      <div class="scene-label">Scene 1 — Hook (0–5s)</div>
+      <div class="scene-direction">Direct eye contact. No intro. Straight to story.</div>
+      <div class="scene-lines">"May kakilala akong nanay — takot sa AI.
+Sabi niya: 'Baka palitan na ako ng teknolohiya.'"</div>
+    </div>
+
+    <div class="script-scene">
+      <div class="scene-label">Scene 2 — Her World (5–20s)</div>
+      <div class="scene-direction">Calm, warm tone. Paint the picture.</div>
+      <div class="scene-lines">"Nanay siya. Luto. Laba. Budget ng pamilya.
+Trabaho. Homework ng mga bata.
+24 oras hindi sapat — ganyan ang buhay niya."</div>
+    </div>
+
+    <div class="script-scene">
+      <div class="scene-label">Scene 3 — The Moment (20–45s)</div>
+      <div class="scene-direction">Lean in slightly. This is the turn.</div>
+      <div class="scene-lines">"Isang gabi, nagtype siya sa Claude —
+libre, nasa phone niya na.
+
+Tinanong niya: 'Ano ang pwedeng ulam namin
+para sa isang linggo — Php 1,500 budget, 4 na tao?'
+
+Sa loob ng 30 segundo —
+7-day meal plan. May grocery list pa."</div>
+    </div>
+
+    <div class="script-scene">
+      <div class="scene-label">Scene 4 — The Win (45–65s)</div>
+      <div class="scene-direction">Smile. Genuine.</div>
+      <div class="scene-lines">"Hindi lang oras ang natipid niya.
+Natipid pa siya ng Php 300 sa grocery.
+At ang mga bata? Masaya sa pagkain.
+
+Sabi niya sa akin:
+'Bakit hindi ko 'to sinubukan noon?'"</div>
+    </div>
+
+    <div class="script-scene">
+      <div class="scene-label">Scene 5 — Apply It (65–80s)</div>
+      <div class="scene-direction">Look directly at camera. Warm, direct.</div>
+      <div class="scene-lines">"Kung nanay ka — o tatay, o lolo, o lola —
+hindi kailangan ng degree para sa AI.
+
+Pumunta ka sa claude.ai.
+Libre. Walang download.
+I-type lang ang tanong mo —
+kahit sa Tagalog."</div>
+    </div>
+
+    <div class="script-scene">
+      <div class="scene-label">Scene 6 — CTA + Closer (80–90s)</div>
+      <div class="scene-direction">Standard closer.</div>
+      <div class="scene-lines">"I-follow ang @tito.aiph —
+para hindi ka mapalampas ng mga ganitong tips.
+
+Ingat lagi, mga Pamangkin.
+Tito AI — AI Para Sa Ating Lahat. 🇵🇭"</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Friday · June 20 · 7:00 PM PHT · Inspiration / Story</div>
+    <div class="post-title">Nanay + AI — Ganito Namin Ginagamit sa Bahay</div>
+    <div class="post-meta">Face cam talking head · 75–85s · claude.ai demo in story form</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active pill-tiktok" onclick="switchTab(this,'fri','tiktok')">TikTok <span class="pill pill-tiktok">8 tags</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'fri','ig')">Instagram <span class="pill pill-ig">15 tags</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'fri','fb')">Facebook <span class="pill pill-fb">6 tags</span></button>
+  </div>
+
+  <!-- TikTok -->
+  <div class="tab-panel active" id="fri-tiktok">
+    <div class="caption-box" id="fri-tiktok-cap">May kakilala akong nanay — takot sa AI. Ngayon, siya na ang pinakamabilis sa grupo nila.
+
+Ginamit niya si Claude para sa meal plan ng pamilya niya — Php 1,500 budget, 4 na tao, isang linggo. Sa 30 segundo, may menu na. May grocery list pa. Natipid pa ng Php 300.
+
+Sabi niya: "Bakit hindi ko 'to sinubukan noon?"
+
+I-try mo rin — claude.ai, libre. 👇
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #NanayPH #ClaudeAI #LibreAngAI #AIPhilippines #FamilyPH</div>
+    <div class="first-comment">
+      <strong>First comment — pin within 5 min of posting</strong>
+      Subukan mo ngayon: claude.ai — libre. I-type: "Meal plan para sa aming pamilya, [budget], [ilang tao]." 😊
+    </div>
+    <button class="copy-btn" onclick="copyText('fri-tiktok-cap')">Copy Caption</button>
+  </div>
+
+  <!-- Instagram -->
+  <div class="tab-panel" id="fri-ig">
+    <div class="caption-box" id="fri-ig-cap">May kakilala akong nanay — takot sa AI, takot mapalitan.
+
+Pero isang gabi, sinubukan niya. I-type niya sa Claude: "Ano ang pwedeng ulam namin para sa isang linggo — Php 1,500 budget, 4 na tao?"
+
+Sa loob ng 30 segundo — 7-day meal plan. May grocery list pa. Natipid pa siya ng Php 300. At ang mga bata? Masaya sa pagkain.
+
+Hindi lang nanay ang may takot. Marami sa atin ang ganyan. Pero ang AI hindi tayo palalayas — tutulungan tayo para may oras pa para sa mas mahahalagang bagay. 💛
+
+I-save mo ito para di malimutan. Subukan mo mamaya — libre ang Claude sa claude.ai.
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #NanayPH #ClaudeAI #LibreAngAI #AIPhilippines #FamilyPH #FilipinoMom #HomeManagement #FreelancerPH #AIForEveryone #TechTipsPH #MomLife #TitoAI</div>
+    <button class="copy-btn" onclick="copyText('fri-ig-cap')">Copy Caption</button>
+  </div>
+
+  <!-- Facebook -->
+  <div class="tab-panel" id="fri-fb">
+    <div class="caption-box" id="fri-fb-cap">Kumusta, mga Pamangkin! 🤖
+
+Gusto ko ibahagi ang kwento ng isang nanay na nakilala ko.
+
+Takot siya sa AI. Lagi siyang nagtatanong: "Baka palitan na ako ng teknolohiya?" Nanay siya — luto, laba, budget ng pamilya, trabaho, homework ng mga bata. 24 oras hindi sapat.
+
+Isang gabi, nagtype siya sa Claude — libre, nasa phone niya na.
+
+Sabi niya: "Ano ang pwedeng ulam namin para sa isang linggo — Php 1,500 budget, 4 na tao?"
+
+Sa loob ng 30 segundo — kumpleto na ang 7-day meal plan. May grocery list pa na ayon sa budget. Hindi lang oras ang natipid niya. Natipid pa siya ng Php 300 sa grocery. At ang mga bata? Masaya sa pagkain.
+
+Nang makita ko ang kanyang mukha pagkatapos noon — hindi na siya takot. Excited na.
+
+Sabi niya sa akin: "Bakit hindi ko 'to sinubukan noon?"
+
+Kung nanay ka — o tatay, o lolo, o lola — hindi kailangan ng degree para sa AI. Pumunta sa claude.ai. Libre. Walang download. I-type ang tanong mo, kahit sa Tagalog.
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #ClaudeAI #AIParaSaAtin #LibreAngAI #NanayPH</div>
+    <button class="copy-btn" onclick="copyText('fri-fb-cap')">Copy Caption</button>
+  </div>
+</div>
+
+<!-- BUFFER -->
+<div class="buffer-block">
+  <div class="buffer-label">Buffer — Scheduling</div>
+  <div class="buffer-row"><span class="buffer-key">Date</span><span class="buffer-val">Friday, June 20, 2026</span></div>
+  <div class="buffer-row"><span class="buffer-key">Time</span><span class="buffer-val">7:00 PM PHT · 4:00 AM PST</span></div>
+  <div class="buffer-row"><span class="buffer-key">TikTok</span><span class="buffer-val">Use TikTok caption</span></div>
+  <div class="buffer-row"><span class="buffer-key">Instagram</span><span class="buffer-val">Use Instagram caption</span></div>
+  <div class="buffer-row"><span class="buffer-key">Facebook</span><span class="buffer-val">Use Facebook caption</span></div>
+  <div class="buffer-row"><span class="buffer-key">Media</span><span class="buffer-val">Upload cover from Canva link above</span></div>
+  <div class="buffer-row"><span class="buffer-key">Workspace</span><span class="buffer-val">jeffd321@live.com at buffer.com</span></div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W25 Friday · June 20, 2026</footer>
+
+</body>
+</html>
