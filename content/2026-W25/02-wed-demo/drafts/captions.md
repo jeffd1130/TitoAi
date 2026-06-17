@@ -1,8 +1,8 @@
 # W25 Wednesday — Captions
 **Topic:** Gumawa ng Resume Gamit ang Claude (In 2 Minutes)
 **Drop:** Wednesday June 18, 2026 · 7:00 PM PHT · 4:00 AM PST
-**Canva cover edit:** https://www.canva.com/d/ViQ7NeHysKjTan0
-**Design ID:** DAHMzk8urFs
+**Canva cover edit:** https://www.canva.com/d/bX7Ved-swnc8PMh
+**Design ID:** DAHMzjC9OHU
 
 ---
 
