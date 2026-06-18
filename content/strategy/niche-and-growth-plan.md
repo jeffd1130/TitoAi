@@ -153,7 +153,7 @@ Every video must open in second 1 with one of:
 
 **Goal:** Grow followers and video views — 3 posts boosted per week across TikTok, Facebook, and Instagram.
 
-**Weekly budget: Php 2,000** · 3-week commitment (W25–W27) · Total: Php 6,000
+**Weekly budget: Php 2,000** · 3-week commitment (W26–W28) · Total: Php 6,000
 
 **Rule:** Post organically → wait 12–24 hours → boost regardless of organic performance (new channel needs paid seeding to build baseline audience).
 
@@ -178,40 +178,40 @@ Start with one platform to build confidence and data, then layer in more each we
 
 | Week | Active Boost Platforms | Why |
 |------|----------------------|-----|
-| **W25** | TikTok only | Learn TikTok Promote mechanics · establish baseline CPV + CPF data · lowest risk |
-| **W26** | TikTok + Instagram | Add IG Boost now that TikTok is dialed in · test two platforms simultaneously |
-| **W27** | TikTok + Instagram + Facebook | Full 3-platform push · FB Page required — must convert profiles before this week |
+| **W26** | TikTok only | Learn TikTok Promote mechanics · establish baseline CPV + CPF data · lowest risk |
+| **W27** | TikTok + Instagram | Add IG Boost now that TikTok is dialed in · test two platforms simultaneously |
+| **W28** | TikTok + Instagram + Facebook | Full 3-platform push · FB Page required — must convert profiles before this week |
 
 ---
 
 ### 3-Week boost calendar
 
-**WEEK 1 — W25 (Jun 15–21) · TikTok only · Php 2,000**
+**WEEK 1 — W26 (Jun 22–28) · TikTok only · Php 2,000**
 
 | Post | Drop | Platform | Objective | Daily | Days | Budget |
 |------|------|----------|-----------|-------|------|--------|
-| Mon — Claude o Gemini: Kailan Gagamitin | Jun 16 | TikTok Promote | Video views | Php 350/day | Jun 17–18 | Php 700 |
-| Wed — Gumawa ng Resume Gamit Claude | Jun 18 | TikTok Promote | Video views | Php 350/day | Jun 19–20 | Php 700 |
-| Fri — Father's Day Tito AI Tries | Jun 20 | TikTok Promote | Video views | Php 300/day | Jun 21–22 | Php 600 |
-| | | | | | **W25 Total** | **Php 2,000** |
-
-**WEEK 2 — W26 (Jun 22–28) · TikTok + Instagram · Php 2,000**
-
-| Post | Drop | Platform | Objective | Daily | Days | Budget |
-|------|------|----------|-----------|-------|------|--------|
-| Mon — Ang Sabi Nila: Pang-Matalino Lang | Jun 22 | TikTok Promote | Video views | Php 350/day | Jun 23–24 | Php 700 |
-| Wed — Gemini para sa Guro | Jun 25 | Instagram Boost | Profile visits | Php 350/day | Jun 26–27 | Php 700 |
-| Fri — 1 Buwan Kasama Tito AI | Jun 27 | TikTok Promote | Video views | Php 300/day | Jun 28–29 | Php 600 |
+| Mon — Ang Sabi Nila: Pang-Matalino Lang Iyan | Jun 22 | TikTok Promote | Video views | Php 350/day | Jun 23–24 | Php 700 |
+| Wed — Gemini para sa Guro | Jun 25 | TikTok Promote | Video views | Php 350/day | Jun 26–27 | Php 700 |
+| Fri — 1 Buwan Kasama Tito AI — Ang Resulta | Jun 27 | TikTok Promote | Video views | Php 300/day | Jun 28–29 | Php 600 |
 | | | | | | **W26 Total** | **Php 2,000** |
 
-**WEEK 3 — W27 (Jun 29–Jul 5) · TikTok + Instagram + Facebook · Php 2,000**
+**WEEK 2 — W27 (Jun 29–Jul 5) · TikTok + Instagram · Php 2,000**
 
 | Post | Drop | Platform | Objective | Daily | Days | Budget |
 |------|------|----------|-----------|-------|------|--------|
-| Mon — July Teaser | Jun 30 | TikTok Promote | Video views | Php 300/day | Jul 1–2 | Php 600 |
-| Wed — TBD | Jul 2 | Facebook Boost | Reach + Page likes | Php 400/day | Jul 3–4 | Php 800 |
-| Fri — TBD | Jul 4 | Instagram Boost | Profile visits | Php 300/day | Jul 5–6 | Php 600 |
+| Mon — July Teaser — Ano ang Susunod? | Jun 30 | TikTok Promote | Video views | Php 350/day | Jul 1–2 | Php 700 |
+| Wed — TBD — Wednesday Demo | Jul 2 | Instagram Boost | Profile visits | Php 350/day | Jul 3–4 | Php 700 |
+| Fri — TBD — Friday Story | Jul 4 | TikTok Promote | Video views | Php 300/day | Jul 5–6 | Php 600 |
 | | | | | | **W27 Total** | **Php 2,000** |
+
+**WEEK 3 — W28 (Jul 6–12) · TikTok + Instagram + Facebook · Php 2,000**
+
+| Post | Drop | Platform | Objective | Daily | Days | Budget |
+|------|------|----------|-----------|-------|------|--------|
+| Mon — TBD — Monday AI Tip | Jul 7 | TikTok Promote | Video views | Php 300/day | Jul 8–9 | Php 600 |
+| Wed — TBD — Wednesday Demo | Jul 9 | Facebook Boost | Reach + Page likes | Php 400/day | Jul 10–11 | Php 800 |
+| Fri — TBD — Friday Story | Jul 11 | Instagram Boost | Profile visits | Php 300/day | Jul 12–13 | Php 600 |
+| | | | | | **W28 Total** | **Php 2,000** |
 
 **3-Week Grand Total: Php 6,000**
 
@@ -286,7 +286,7 @@ Start with one platform to build confidence and data, then layer in more each we
 
 ## KPIs to track weekly
 
-| Metric | Target W25–W27 (paid) | Target Month 3 |
+| Metric | Target W26–W28 (paid) | Target Month 3 |
 |--------|----------------------|---------------|
 | New followers/week (TikTok) | 90–180 | 500+ |
 | New followers/week (IG + FB) | 60–120 | 300+ |
