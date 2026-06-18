@@ -2,7 +2,7 @@
 
 You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI**, a Filipino AI education channel created by Joseph de las Armas (@TitoAIPH). The channel teaches everyday Filipinos how to use AI tools — free, no jargon, in Taglish.
 
-Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — non-tech Filipinos, OFWs, freelancers, stay-at-home parents.
+Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
 
 ---
 
@@ -39,7 +39,7 @@ The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 
 - Source: `docs/index.html` + `docs/assets/*.png` + `docs/scripts/*.html` in the `main` branch `/docs` folder
 - **Not just approval** — full hub with: About / This Week spotlight / June 2026 content calendar / Approval links
-- Sections: About (Joseph + pillars + voice + brand), Current Week, June Calendar (W23–W27), Approval
+- Sections: About (Joseph + pillars + voice + brand), Current Week, June–July Calendar (W26–W28), Approval
 - Rebuilt manually or via `update-approval-page` skill after each production run
 - **Scripts** — production scripts saved as HTML to `docs/scripts/<week>-<slot>-script.html` and linked from the calendar card. Copy the branded script template from any existing script in that folder.
 
@@ -69,7 +69,7 @@ The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 **Story / Inspiration (Fridays)**
 - Story-format: origin, struggle, win, apply-it-yourself
 - Emotional, warm — Tito talking to Pamangkin
-- Connects AI to real Filipino life (OFW, sari-sari, luto-laba-trabaho)
+- Connects AI to real Filipino life (sari-sari, luto-laba-trabaho, paaralan, negosyo)
 
 ---
 
@@ -204,21 +204,22 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 
 ---
 
-## June 2026 Content Calendar
+## June–July 2026 Content Calendar
 
-**Arc theme:** Launch → Tools Deep-Dive → Everyday Filipino Life → Month Wrap-Up → July Bridge
+**Arc theme:** Launch with boost → Tools for work/school → Everyday Filipino Life → July scale-up
 
-| Week | Dates | Mon Tip | Wed Demo | Fri Story |
-|------|-------|---------|----------|-----------|
-| W23 | Jun 1–7 | Sino si Claude at Gemini (Script ✓) | Gemini Beginner's Guide (Script ✓) | Hindi degree ang kailangan |
-| W24 | Jun 8–14 | **Claude o Gemini — alin ang para sa iyo? (Script ✓ · Captions ✓)** | Claude Sari-Sari Demo (Script ✓) | AI para sa OFW |
-| W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** |
-| W26 | Jun 22–28 | **Ang Sabi Nila: Pang-Matalino Lang** | Gemini para sa Guro | 1 buwan kasama Tito AI |
-| W27 | Jun 30 | July teaser | — | — |
+| Week | Dates | Mon Tip (8 PM PHT) | Wed Demo (7 PM PHT) | Fri Story (7 PM PHT) |
+|------|-------|--------------------|---------------------|----------------------|
+| W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** (Captions ✓) |
+| W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
+| W27 | Jun 29–Jul 5 | July Teaser — Ano ang Susunod? | TBD — Wednesday Demo | TBD — Friday Story |
+| W28 | Jul 6–12 | TBD — Monday AI Tip | TBD — Wednesday Demo | TBD — Friday Story |
 
-Full calendar with D-3→D-0 task dates per post: **`https://jeffd1130.github.io/TitoAi/#june`**
+⭐ W26 = **boost launch week** · Php 2,000/week · TikTok only → TikTok+IG (W27) → All 3 (W28)
 
-**W24 Monday approval page:** `https://jeffd1130.github.io/TitoAi/W24-mon-captions.html`
+**Boost plan deck:** `content/strategy/TitoAI-ContentBoostPlan-W26-W28.pptx` / `.pdf`
+
+**W25 Fri approval page:** `https://jeffd1130.github.io/TitoAi/W25-fri-captions.html`
 
 ---
 
@@ -233,10 +234,10 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 **Primary tools featured in all content:** Claude (claude.ai) + Gemini (gemini.google.com) — both free. Never reference paid tools.
 
 **Content pillars:**
-- Mon Tips → OFW Toolkit (highest share potential)
-- Wed Demos → Freelancer Upgrade
-- Fri Stories → Family & Everyday Life
-- Evergreen → BPO / Workforce Survival
+- Mon Tips → Quick AI win (tool demo, 30–60s)
+- Wed Demos → Freelancer / Guro Upgrade (60–90s tutorial)
+- Fri Stories → Family & Everyday Filipino Life
+- Evergreen → BPO / Workforce Survival + Negosyante series
 
 **Hook rule:** Hook must land in second 1 — never open with "Kumusta" first.
 
