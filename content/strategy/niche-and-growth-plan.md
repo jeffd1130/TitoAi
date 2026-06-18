@@ -151,27 +151,101 @@ Every video must open in second 1 with one of:
 
 ## Boost strategy
 
-**Rule:** Only boost posts that already have strong organic saves or shares — proven signal = lower CPM.
+**Goal:** Grow followers and video views — 3 posts boosted per week across TikTok, Facebook, and Instagram.
 
-**Process:**
-1. Post organically
-2. Wait 24–48 hours
-3. If 50+ saves OR 200+ shares → boost it
+**Weekly budget: Php 2,000** · 3-week commitment (W25–W27) · Total: Php 6,000
 
-**Budget tiers:**
-| Stage | Budget | When |
-|-------|--------|------|
-| Test | Php 500–1,000/day | First boost — prove the format |
-| Scale | Php 2,000–3,000/day | Format proven, ROAS positive |
+**Rule:** Post organically → wait 12–24 hours → boost regardless of organic performance (new channel needs paid seeding to build baseline audience).
 
-**Targeting:**
-- Location: Philippines
-- Age: 25–40
-- Interests: technology, online business, productivity, freelancing, entrepreneurship
+---
 
-**Best boost candidate (June 2026):** "5 Libreng AI Tools Para Sa Inyong Negosyo" — 60–90s screen record + Taglish voiceover. Highest shareability + lowest CPM format.
+### Per-post budget allocation
 
-**Platform for first boost:** Facebook (Page required — convert profiles first). TikTok Promote as secondary once organic is performing.
+| Platform | Objective | Budget/post | Duration | Daily spend |
+|----------|-----------|-------------|----------|-------------|
+| TikTok Promote | Video views | Php 600 | 2 days | Php 300/day |
+| Facebook Boost | Reach + Page likes | Php 800 | 2 days | Php 400/day |
+| Instagram Boost | Profile visits + Follow | Php 600 | 2 days | Php 300/day |
+| **Weekly total** | | **Php 2,000** | | |
+
+Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instagram.
+
+---
+
+### 3-Week boost calendar
+
+| Week | Post | Drop | Boost Platform | Objective | Budget | Boost Dates |
+|------|------|------|----------------|-----------|--------|-------------|
+| W25 Jun 15–21 | Mon — Claude o Gemini: Kailan Gagamitin | Jun 16 | TikTok Promote | Video views | Php 600 | Jun 17–18 |
+| W25 Jun 15–21 | Wed — Gumawa ng Resume Gamit Claude | Jun 18 | Facebook Boost | Reach | Php 800 | Jun 19–20 |
+| W25 Jun 15–21 | Fri — Father's Day Tito AI Tries | Jun 20 | Instagram Boost | Profile visits | Php 600 | Jun 21–22 |
+| | | | | **W25 Total** | **Php 2,000** | |
+| W26 Jun 22–28 | Mon — Ang Sabi Nila: Pang-Matalino Lang | Jun 22 | TikTok Promote | Video views | Php 600 | Jun 23–24 |
+| W26 Jun 22–28 | Wed — Gemini para sa Guro | Jun 25 | Facebook Boost | Reach | Php 800 | Jun 26–27 |
+| W26 Jun 22–28 | Fri — 1 Buwan Kasama Tito AI | Jun 27 | Instagram Boost | Profile visits | Php 600 | Jun 28–29 |
+| | | | | **W26 Total** | **Php 2,000** | |
+| W27 Jun 29–Jul 5 | Mon — July Teaser | Jun 30 | TikTok Promote | Video views | Php 600 | Jul 1–2 |
+| W27 Jun 29–Jul 5 | Wed — TBD | Jul 2 | Facebook Boost | Reach | Php 800 | Jul 3–4 |
+| W27 Jun 29–Jul 5 | Fri — TBD | Jul 4 | Instagram Boost | Profile visits | Php 600 | Jul 5–6 |
+| | | | | **W27 Total** | **Php 2,000** | |
+| | | | | **3-Week Total** | **Php 6,000** | |
+
+---
+
+### Targeting (all boosts)
+
+- **Location:** Philippines
+- **Age:** 22–45
+- **Language:** Filipino / Tagalog
+- **Interests:** Technology, Online Business, Productivity, Freelancing, Education
+- **TikTok:** Use "Automatic" audience — Smart targeting outperforms manual on new accounts
+- **Facebook/IG:** Create saved audience using the interests above
+
+---
+
+### Boost setup — step by step
+
+**TikTok Promote:**
+1. Open TikTok app → posted video → tap "…" → "Promote"
+2. Goal: **More video views** (views drive algorithm + organic follower growth; don't pick "More followers" — too expensive per result)
+3. Audience: **Automatic**
+4. Duration: 2 days · Budget: Php 300/day
+5. Start: morning after posting
+
+**Facebook Boost:**
+1. Facebook Page → find the post → "Boost Post"
+2. Goal: **Get more page likes** (or "Reach" if Page likes not available)
+3. Audience: Philippines · 22–45 · Technology + Freelancing interests
+4. Duration: 2 days · Budget: Php 400/day (Php 800 total)
+5. Requires Facebook **Page** — not personal profile. Convert first.
+
+**Instagram Boost:**
+1. Instagram post → "Boost Post"
+2. Goal: **More profile visits** — drives follow intent better than "reach"
+3. Audience: **Automatic** (IG's smart targeting works well for PH creators)
+4. Duration: 2 days · Budget: Php 300/day
+5. Start: morning after posting
+
+---
+
+### KPIs per boosted post
+
+| Metric | TikTok target | Facebook target | Instagram target |
+|--------|--------------|-----------------|-----------------|
+| Reach | 3,000+ | 2,500+ | 2,000+ |
+| Video views | 5,000+ | 1,500+ | 2,000+ |
+| New followers | 30–60 | 20–40 | 20–40 |
+| Cost per follow | < Php 20 | < Php 25 | < Php 20 |
+
+**Pull these from:** TikTok Creator Center → Promote tab. Facebook Business Suite → Insights. Instagram → Boosted post results.
+
+---
+
+### Scale rule (Week 4+)
+
+- If any post earns **50+ new followers** from a single boost → extend that post 2 more days at the same daily rate
+- If cost-per-follow drops **below Php 12** on any platform → increase that platform's weekly allocation by Php 400
+- If a format consistently underperforms (< 20 followers per boost) → swap platform or try a different content slot
 
 ---
 
@@ -187,16 +261,17 @@ Every video must open in second 1 with one of:
 
 ## KPIs to track weekly
 
-| Metric | Target Month 1 | Target Month 3 |
-|--------|---------------|---------------|
-| Followers TikTok | 100–500 | 2,000+ |
-| Avg video views | 500–1,000 | 5,000+ |
-| Watch completion rate | >40% | >55% |
+| Metric | Target W25–W27 (paid) | Target Month 3 |
+|--------|----------------------|---------------|
+| New followers/week (TikTok) | 90–180 | 500+ |
+| New followers/week (IG + FB) | 60–120 | 300+ |
+| Total video views/week | 15,000+ | 50,000+ |
+| Watch completion rate | >35% | >50% |
 | Saves per post | 20+ | 100+ |
-| Comments per video | 10+ | 30+ |
-| Profile visits | 100+ | 500+ |
+| Cost per new follower | < Php 22 avg | < Php 15 |
+| Boost spend/week | Php 2,000 | Php 3,000–5,000 |
 
-**How to pull:** TikTok Creator Center → Analytics. Instagram Professional Dashboard → Insights. Pull weekly and share with Jeff.
+**How to pull:** TikTok Creator Center → Analytics + Promote tab. Instagram Professional Dashboard → Boosted results. Facebook Business Suite → Insights. Pull every Sunday and share with Jeff.
 
 ---
 
