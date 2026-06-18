@@ -641,8 +641,8 @@ rect(s, CL, SY8, Pt(5), Inches(0.28), GOLD)
 tx(s, "SCALE RULES — WEEK 4+ (July)", CL + PAD, SY8 + Inches(0.06),
    Inches(5.0), Inches(0.20), sz=8.5, bold=True, color=GOLD)
 srules = [
-    "Single post earns 50+ followers  →  extend that post 2 more days at the same daily rate",
-    "Cost-per-follow drops below Php 12  →  increase that platform's weekly budget by Php 400",
+    "Single post earns 25+ followers  →  extend that post 2 more days at the same daily rate",
+    "Cost-per-follow drops below Php 30  →  increase that platform's weekly budget by Php 400",
     "Platform with lowest CPF across W26–W28  →  gets the biggest share of July budget",
 ]
 for i, rule in enumerate(srules):
@@ -659,31 +659,41 @@ footer(s)
 # ═══════════════════════════════════════════════════════════════════════════════
 s = slide(); bg(s); gold_bar(s)
 hdr(s, "KPIs to Track Weekly",
-    "Pull every Sunday · share screenshots · review before next week's boost")
+    "Baseline: IG 1,031 views · 389 reached (organic) · targets based on PH market rates for new accounts")
+
+# Baseline context bar
+rect(s, CL, CTOP, CW, Inches(0.32), RGBColor(0x1C, 0x1F, 0x2E))
+rect(s, CL, CTOP, Pt(5), Inches(0.32), AMBER)
+tx(s, "ORGANIC BASELINE (before boost)  ·  Instagram: 1,031 total views · 389 accounts reached · ~200–350 views/Reel  "
+      "·  TikTok: pending  ·  New account — boost targets set conservatively",
+   CL + PAD, CTOP + Inches(0.07), CW - PAD * 2, Inches(0.22), sz=8.5, color=AMBER)
 
 # 4-column KPI table: Metric | TikTok | Instagram | Facebook
 KW = [Inches(3.86), Inches(2.9), Inches(2.9), Inches(2.97)]
 KX = [CL]
 for cw in KW[:-1]: KX.append(KX[-1] + cw)
 KHH = Inches(0.34)
-KRH = Inches(0.42)
+KRH = Inches(0.38)
+KTY = CTOP + Inches(0.32) + Inches(0.08)   # table starts after baseline bar
 
 for lbl, x, w, c in zip(["Metric", "TikTok", "Instagram", "Facebook"],
                           KX, KW, [GOLD, TIKRED, IGPUR, FBBLUE]):
-    rect(s, x, CTOP, w, KHH, DARK)
-    tx(s, lbl, x + PAD, CTOP + Inches(0.08), w - PAD * 2, KHH - Inches(0.1),
+    rect(s, x, KTY, w, KHH, DARK)
+    tx(s, lbl, x + PAD, KTY + Inches(0.08), w - PAD * 2, KHH - Inches(0.1),
        sz=10, bold=True, color=c)
 
+# Realistic KPIs for a new PH account with Php 300-400/day boost budget
+# IG organic: ~200-350 views/post · Php 300/day TikTok → ~800-2,000 views/day · PH CPM Php 30-80
 kpi_rows = [
-    ("Reach per boosted post",        "3,000–7,000+",  "2,000–5,000+",  "2,500–6,000+"),
-    ("Views / clicks per post",        "5,000–15,000+", "1,500–4,000+",  "1,000–3,000+"),
-    ("New followers per post",         "20–80+",        "15–50+",        "20–50+ page likes"),
-    ("Cost per follow",                "< Php 25",      "< Php 25",      "< Php 25"),
-    ("Watch completion rate",          "> 35%",         "> 30%",         "N/A"),
-    ("W3 scale target (CPF)",          "< Php 15",      "< Php 15",      "< Php 15"),
+    ("Reach per boosted post",     "600–1,500",       "400–900",          "500–1,200"),
+    ("Views per boosted post",     "800–2,000",       "300–700",          "N/A"),
+    ("New followers per boost",    "5–20",            "3–12",             "10–25 page likes"),
+    ("Cost per follow",            "Php 35–90",       "Php 60–110",       "Php 35–80"),
+    ("Watch completion (W1)",      "15–30%",          "20–35%",           "N/A"),
+    ("W3 CPF target (goal)",       "< Php 45",        "< Php 65",         "< Php 55"),
 ]
 for i, (metric, tk, ig, fb) in enumerate(kpi_rows):
-    y = CTOP + KHH + i * KRH
+    y = KTY + KHH + i * KRH
     rb = DKDARK if i % 2 == 0 else DARK
     for x, w in zip(KX, KW): rect(s, x, y, w, KRH, rb)
     rect(s, KX[0], y, Pt(4), KRH, TEAL)
@@ -696,17 +706,17 @@ for i, (metric, tk, ig, fb) in enumerate(kpi_rows):
            sz=10, bold=True, color=c, align=PP_ALIGN.CENTER)
 
 # Where to pull
-WP_Y = CTOP + KHH + 6 * KRH + Inches(0.14)
-rect(s, CL, WP_Y, CW, Inches(0.36), DKDARK)
-rect(s, CL, WP_Y, Pt(5), Inches(0.36), TEAL)
+WP_Y = KTY + KHH + 6 * KRH + Inches(0.12)
+rect(s, CL, WP_Y, CW, Inches(0.34), DKDARK)
+rect(s, CL, WP_Y, Pt(5), Inches(0.34), TEAL)
 tx(s, "WHERE TO PULL  ·  "
       "TikTok: Creator Center → Analytics + Promote tab   "
       "Instagram: Professional Dashboard → Boosted post   "
       "Facebook: Business Suite → Page Insights",
-   CL + PAD, WP_Y + Inches(0.08), CW - PAD * 2, Inches(0.24), sz=9, color=LGRAY)
+   CL + PAD, WP_Y + Inches(0.07), CW - PAD * 2, Inches(0.24), sz=9, color=LGRAY)
 
 # Engagement checklist
-CH_Y = WP_Y + Inches(0.36) + Inches(0.10)
+CH_Y = WP_Y + Inches(0.34) + Inches(0.10)
 checks = [
     "Reply to ALL comments within first 1 hour of posting",
     "Pin first comment within 5 min — tip or claude.ai link",
@@ -965,11 +975,11 @@ kpi_d = [
          Paragraph(ig,S("Normal",fontSize=9.5,fontName="Helvetica-Bold",textColor=C_IGP,leading=12)),
          Paragraph(fb,S("Normal",fontSize=9.5,fontName="Helvetica-Bold",textColor=C_FBB,leading=12))]
         for m,tk,ig,fb in [
-            ("Reach per boosted post","3,000–7,000+","2,000–5,000+","2,500–6,000+"),
-            ("Views / clicks per post","5,000–15,000+","1,500–4,000+","1,000–3,000+"),
-            ("New followers per post","20–80+","15–50+","20–50+ page likes"),
-            ("Cost per follow","< Php 25","< Php 25","< Php 25"),
-            ("W3 CPF target","< Php 15","< Php 15","< Php 15"),
+            ("Reach per boosted post","600–1,500","400–900","500–1,200"),
+            ("Views per boosted post","800–2,000","300–700","N/A"),
+            ("New followers per boost","5–20","3–12","10–25 page likes"),
+            ("Cost per follow (W1)","Php 35–90","Php 60–110","Php 35–80"),
+            ("W3 CPF target (goal)","< Php 45","< Php 65","< Php 55"),
         ]
     ],
 ]
@@ -978,8 +988,8 @@ story.append(Spacer(1,0.2*cm))
 
 story.append(Paragraph("Scale Rules — Week 4+ (July)", H3))
 for rule in [
-    "50+ followers from a single boost → extend that post 2 more days at same daily rate",
-    "Cost-per-follow drops below Php 12 → increase that platform's weekly budget by Php 400",
+    "25+ followers from a single boost → extend that post 2 more days at same daily rate",
+    "Cost-per-follow drops below Php 30 → increase that platform's weekly budget by Php 400",
     "Platform with lowest CPF → gets biggest July budget allocation",
 ]:
     story.append(bul(rule, C_GOLD))
