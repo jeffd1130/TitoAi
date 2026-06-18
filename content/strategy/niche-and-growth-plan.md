@@ -172,7 +172,7 @@ Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instag
 
 ### Platform ramp-up strategy
 
-Start with one platform to build confidence and data, then layer in more each week.
+**Posting continues on all platforms (TikTok, Instagram, Facebook) every week.** Only the paid boost budget ramps up — start with one platform to learn the mechanics, then layer in more each week.
 
 | Week | Active Boost Platforms | Why |
 |------|----------------------|-----|

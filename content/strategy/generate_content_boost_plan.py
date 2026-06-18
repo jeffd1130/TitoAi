@@ -139,9 +139,9 @@ tx(s, "3 weeks  ·  9 posts  ·  Php 6,000 total  ·  Launch Jun 22, 2026",
 rect(s, Inches(0.6), Inches(3.06), Inches(0.7), Pt(4), GOLD)
 
 for i, (wk, dates, plats, col) in enumerate([
-    ("Week 1  W26", "Jun 22–28",    "TikTok only",         TIKRED),
-    ("Week 2  W27", "Jun 29–Jul 5", "TikTok + Instagram",  IGPUR),
-    ("Week 3  W28", "Jul 6–12",     "All 3 platforms",     FBBLUE),
+    ("Week 1  W26", "Jun 22–28",    "Boost: TikTok only",    TIKRED),
+    ("Week 2  W27", "Jun 29–Jul 5", "Boost: TikTok + IG",    IGPUR),
+    ("Week 3  W28", "Jul 6–12",     "Boost: All 3 platforms", FBBLUE),
 ]):
     bx = Inches(0.6 + i * 4.24)
     rect(s, bx, Inches(3.22), Inches(4.04), Inches(0.82), DARK)
@@ -213,7 +213,7 @@ footer(s)
 # ═══════════════════════════════════════════════════════════════════════════════
 s = slide(); bg(s); gold_bar(s)
 hdr(s, "3-Week Boost Strategy",
-    "Php 2,000/week  ·  3 posts/week  ·  progressive platform ramp  ·  launch Jun 22")
+    "Post all platforms every week  ·  boost budget ramps progressively  ·  Php 2,000/week  ·  launch Jun 22")
 
 PHASE_W = Inches(4.07)
 PHASE_GAP = Inches(0.18)
@@ -222,27 +222,27 @@ PHASE_H = Inches(4.42)
 for i, (col, wk, dates, plat, posts, desc, bgt) in enumerate([
     (TIKRED,
      "WEEK 1 — W26", "Jun 22–28",
-     "TikTok Only",
+     "Boost: TikTok",
      ["MON Jun 22  · Ang Sabi Nila: Pang-Matalino",
       "WED Jun 25  · Gemini para sa Guro",
       "FRI Jun 27  · 1 Buwan Kasama Tito AI"],
-     "Learn TikTok Promote mechanics. Establish baseline cost-per-view and cost-per-follow before adding more platforms.",
+     "Post organically to all platforms. Boost TikTok only — learn Promote mechanics and establish baseline CPV + CPF.",
      "Php 2,000"),
     (IGPUR,
      "WEEK 2 — W27", "Jun 29–Jul 5",
-     "TikTok + Instagram",
+     "Boost: TikTok + IG",
      ["MON Jun 30  · July Teaser",
       "WED Jul 2   · TBD — Wednesday Demo",
       "FRI Jul 4   · TBD — Friday Story"],
-     "Add Instagram Boost. Compare cost-per-follow across two platforms using real W26 data to decide budget split.",
+     "Post organically to all platforms. Add Instagram Boost using W26 data to decide budget split.",
      "Php 2,000"),
     (FBBLUE,
      "WEEK 3 — W28", "Jul 6–12",
-     "All 3 Platforms",
+     "Boost: All 3",
      ["MON Jul 7   · TBD — Monday AI Tip",
       "WED Jul 9   · TBD — Wednesday Demo",
       "FRI Jul 11  · TBD — Friday Story"],
-     "Full push across TikTok, Instagram, and Facebook. ⚠️ Facebook Page required before this week.",
+     "Post organically to all platforms. Full boost across TikTok, IG, and Facebook. ⚠️ FB Page required.",
      "Php 2,000"),
 ]):
     bx = CL + i * (PHASE_W + PHASE_GAP)
@@ -341,8 +341,8 @@ footer(s)
 # SLIDE 5 — WEEK 1: W26 TIKTOK ONLY
 # ═══════════════════════════════════════════════════════════════════════════════
 s = slide(); bg(s); gold_bar(s)
-hdr(s, "Week 1 — W26  ·  Jun 22–28  ·  TikTok Only",
-    "Learn TikTok Promote mechanics · establish baseline CPV + CPF · Php 2,000", accent=TIKRED)
+hdr(s, "Week 1 — W26  ·  Jun 22–28  ·  Boost: TikTok",
+    "Post all platforms · boost TikTok only · learn Promote mechanics · establish baseline CPV + CPF · Php 2,000", accent=TIKRED)
 
 # Post table
 POST_HDR_H = Inches(0.34)
@@ -419,8 +419,8 @@ footer(s)
 # SLIDE 6 — WEEK 2: W27 TIKTOK + INSTAGRAM
 # ═══════════════════════════════════════════════════════════════════════════════
 s = slide(); bg(s); gold_bar(s)
-hdr(s, "Week 2 — W27  ·  Jun 29–Jul 5  ·  TikTok + Instagram",
-    "Apply W26 learnings · add Instagram Boost · compare cost-per-follow · Php 2,000", accent=IGPUR)
+hdr(s, "Week 2 — W27  ·  Jun 29–Jul 5  ·  Boost: TikTok + IG",
+    "Post all platforms · add Instagram Boost · compare cost-per-follow using W26 data · Php 2,000", accent=IGPUR)
 
 # Post table (same structure)
 rect(s, CL, CTOP, CW, POST_HDR_H, IGPUR)
@@ -499,8 +499,8 @@ footer(s)
 # SLIDE 7 — WEEK 3: W28 ALL 3 PLATFORMS
 # ═══════════════════════════════════════════════════════════════════════════════
 s = slide(); bg(s); gold_bar(s)
-hdr(s, "Week 3 — W28  ·  Jul 6–12  ·  All 3 Platforms",
-    "Full push · compare CPF across platforms · decide July budget · FB Page required", accent=FBBLUE)
+hdr(s, "Week 3 — W28  ·  Jul 6–12  ·  Boost: All 3 Platforms",
+    "Post all platforms · full boost push · compare CPF · decide July budget · FB Page required", accent=FBBLUE)
 
 # 3 platform cards side by side
 CARD3_W = Inches(4.07)
