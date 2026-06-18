@@ -1,45 +1,50 @@
 # W25 Friday — Captions
-**Topic:** Nanay + AI — Ganito Namin Ginagamit sa Bahay
+**Topic:** Tito AI Tries: Father's Day Para Sa Php 2,000
 **Drop:** Friday June 20, 2026 · 7:00 PM PHT / 4:00 AM PST
-**Canva cover edit:** https://www.canva.com/d/FJrF5fjg7PLciew
+**Canva cover edit:** https://www.canva.com/d/TQlMa76MSmoTSK2
 **Design ID:** DAHM0a1ENbo
 
 ---
 
 ## TikTok
 
-May kakilala akong nanay — takot sa AI. Ngayon, siya na ang pinakamabilis sa grupo nila.
+Php 2,000. Father's Day ngayong weekend. Tinanong ko si Claude.
 
-Ginamit niya si Claude para sa meal plan ng pamilya niya — Php 1,500 budget, 4 na tao, isang linggo. Sa 30 segundo, may menu na. May grocery list pa. Natipid pa ng Php 300.
+Sa 30 segundo — kumpleto na ang plano.
+Menu para sa 6 na tao. Grocery list. Budget breakdown.
+Php 1,847 pala ang total. May Php 153 pa na natira.
 
-Sabi niya: "Bakit hindi ko 'to sinubukan noon?"
+At ang sorpresa idea niya? Video message mula sa mga anak.
+Libre. Walang gastos. Ang tatay mo? Iyak siya niyan.
 
-I-try mo rin — claude.ai, libre. 👇
+I-comment ang budget mo — padalhan kita ng plano para sa tatay mo. 👇
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+Maligayang Father's Day! Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
 
-**Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #NanayPH #ClaudeAI #LibreAngAI #AIPhilippines #FamilyPH
+**Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #FathersDay #FathersDayPH #ClaudeAI #LibreAngAI #AIPhilippines
 
 **First comment (pin agad):**
-Subukan mo ngayon: claude.ai — libre. I-type: "Meal plan para sa aming pamilya, [budget], [ilang tao]." 😊
+I-try mo ngayon: claude.ai — libre. I-type: "Mag-plan ng Father's Day para sa [budget mo], [ilang tao]." May plano ka sa 30 segundo. 😊
 
 ---
 
 ## Instagram
 
-May kakilala akong nanay — takot sa AI, takot mapalitan.
+Php 2,000. Father's Day ngayong weekend. Hamon ko ito sa sarili ko — at sa Claude.
 
-Pero isang gabi, sinubukan niya. I-type niya sa Claude: "Ano ang pwedeng ulam namin para sa isang linggo — Php 1,500 budget, 4 na tao?"
+Tinanong ko siya: "Mag-plan ng Father's Day celebration — Php 2,000 budget, 6 na tao, hapunan sa bahay. May sorpresa para sa tatay. I-breakdown ang gastos."
 
-Sa loob ng 30 segundo — 7-day meal plan. May grocery list pa. Natipid pa siya ng Php 300. At ang mga bata? Masaya sa pagkain.
+Sa loob ng 30 segundo — kumpleto na.
 
-Hindi lang nanay ang may takot. Marami sa atin ang ganyan. Pero ang AI hindi tayo palalayas — tutulungan tayo para may oras pa para sa mas mahahalagang bagay. 💛
+Menu para sa 6: liempo, pancit, leche flan. May grocery list. May budget breakdown. Php 1,847 lang pala ang total — may Php 153 pa na natira.
 
-I-save mo ito para di malimutan. Subukan mo mamaya — libre ang Claude sa claude.ai.
+At ang sorpresa idea niya? Video message mula sa mga anak. Libre. Walang gastos. Ang tatay mo? Iyak siya niyan.
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+Mayroon ka pa ring oras ngayong gabi. Pumunta sa claude.ai. I-save mo ito para di malimutan. 💛
 
-**Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #NanayPH #ClaudeAI #LibreAngAI #AIPhilippines #FamilyPH #FilipinoMom #HomeManagement #FreelancerPH #AIForEveryone #TechTipsPH #MomLife #TitoAI
+Maligayang Father's Day sa lahat ng mga tatay! Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+**Hashtags:** #TitoAIPH #MgaPamangkin #AIParaSaAtin #FathersDay #FathersDayPH #TatayPH #ClaudeAI #LibreAngAI #AIPhilippines #FilipinoFamily #AIDemo #LibrengTools #BudgetPH #FamilyPH #TitoAI
 
 ---
 
@@ -47,25 +52,27 @@ Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
 
 Kumusta, mga Pamangkin! 🤖
 
-Gusto ko ibahagi ang kwento ng isang nanay na nakilala ko.
+Father's Day ngayong weekend — at gusto kong subukan kung kayang tulungan ni Claude ang ating mga tatay.
 
-Takot siya sa AI. Lagi siyang nagtatanong: "Baka palitan na ako ng teknolohiya?" Nanay siya — luto, laba, budget ng pamilya, trabaho, homework ng mga bata. 24 oras hindi sapat.
+Hamon ko sa sarili ko: Php 2,000 lang ang budget. Hapunan para sa 6 na tao. May sorpresa. Kaya ba?
 
-Isang gabi, nagtype siya sa Claude — libre, nasa phone niya na.
+I-type ko sa claude.ai — libre, nasa phone niya na:
 
-Sabi niya: "Ano ang pwedeng ulam namin para sa isang linggo — Php 1,500 budget, 4 na tao?"
+"Mag-plan ng Father's Day celebration — Php 2,000 budget, 6 na tao, hapunan sa bahay. May sorpresa para sa tatay. I-breakdown ang gastos."
 
-Sa loob ng 30 segundo — kumpleto na ang 7-day meal plan. May grocery list pa na ayon sa budget. Hindi lang oras ang natipid niya. Natipid pa siya ng Php 300 sa grocery. At ang mga bata? Masaya sa pagkain.
+Sa loob ng 30 segundo —
 
-Nang makita ko ang kanyang mukha pagkatapos noon — hindi na siya takot. Excited na.
+Menu para sa 6: liempo, pancit, leche flan. May grocery list na ayon sa budget. May breakdown ng gastos. Php 1,847 pala ang total — may Php 153 pa na natira.
 
-Sabi niya sa akin: "Bakit hindi ko 'to sinubukan noon?"
+At ang pinaka-gusto ko? Ang sorpresa idea niya: Video message mula sa mga anak. Libre. Walang gastos. Pero ang tatay mo? Iyak siya niyan.
 
-Kung nanay ka — o tatay, o lolo, o lola — hindi kailangan ng degree para sa AI. Pumunta sa claude.ai. Libre. Walang download. I-type ang tanong mo, kahit sa Tagalog.
+Mayroon ka pa ring oras ngayong gabi. Pumunta sa claude.ai. I-type ang budget mo at kung ilang kayo. Sa 30 segundo — may plano ka na para sa tatay mo.
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+I-comment ang budget ninyo — padalhan ko kayo ng personalized na plano. Libre rin 'yan. 👇
 
-**Hashtags:** #TitoAIPH #MgaPamangkin #ClaudeAI #AIParaSaAtin #LibreAngAI #NanayPH
+Maligayang Father's Day sa lahat ng mga tatay! Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
+
+**Hashtags:** #TitoAIPH #MgaPamangkin #ClaudeAI #AIParaSaAtin #LibreAngAI #FathersDayPH
 
 ---
 

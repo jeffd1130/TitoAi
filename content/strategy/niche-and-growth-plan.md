@@ -7,7 +7,7 @@
 
 > **"The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."**
 
-This is not a tech channel. It is for: freelancers (1.5M+), guro, BPO workers afraid of being replaced, nanays/tatays, small business owners.
+This is not a tech channel. It is for: freelancers (1.5M+), guro/teachers (900K+ in public school alone), BPO workers afraid of being replaced, nanays/tatays, small business owners.
 
 **Fear + aspiration = share-worthy content.**
 Every video either removes a fear ("hindi mahirap 'to") or delivers a visible win ("ganito ang resulta").
@@ -24,6 +24,7 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 | 1.9M BPO employees (need to upskill) | BSP 2025 |
 | 42.4% of Filipino internet users use ChatGPT monthly — **6th globally** | Radar PH 2026 |
 | 83% of Filipino students already use AI — parents haven't caught up | BusinessWorld 2026 |
+| 900K+ DepEd public school teachers — highest-trust community influencers in PH | DepEd 2025 |
 
 **The gap:** 12.7 million people are exposed to AI disruption. Almost none of them have a relatable, Taglish-speaking guide. **Tito AI is the first mover in this lane.**
 
@@ -124,6 +125,15 @@ Warmth + identity. Builds community.
 - "Ang trabaho ko, napalitan na ba?" ← **W24 Friday post**
 - "Nanay + AI — ganito namin ginagamit sa bahay"
 - "Sari-sari store + Claude — totoo ba?"
+- "Tito AI Tries" challenge format — Jeff on cam, real task, real budget, real timer
+
+### Pillar 5 — Para Sa Guro (Teacher series)
+**New — added June 2026.** 900K+ teachers = highest-trust audience in PH. Students share to parents, parents share to community. One guro → 40 families.
+- "Paano gumawa ng lesson plan sa 2 minuto gamit ang Claude — libre"
+- "I-grade na ng AI ang quiz mo — ganito"
+- "Sulat ng parent communication gamit ang Claude — sa Tagalog pa"
+- "Ang sabi ng aking estudyante: sinulat ng AI 'yan. Ganito ko sila tinuruang gamitin ito nang tama."
+- Hook: "Guro ka? 30 minuto ng lesson plan → 2 minuto gamit ito."
 
 ---
 

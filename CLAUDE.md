@@ -212,8 +212,8 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 |------|-------|---------|----------|-----------|
 | W23 | Jun 1–7 | Sino si Claude at Gemini (Script ✓) | Gemini Beginner's Guide (Script ✓) | Hindi degree ang kailangan |
 | W24 | Jun 8–14 | **Claude o Gemini — alin ang para sa iyo? (Script ✓ · Captions ✓)** | Claude Sari-Sari Demo (Script ✓) | AI para sa OFW |
-| W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | Nanay + AI |
-| W26 | Jun 22–28 | FAQ: mahirap ba? | Gemini para sa OFW | 1 buwan kasama Tito AI |
+| W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** |
+| W26 | Jun 22–28 | **Ang Sabi Nila: Pang-Matalino Lang** | Gemini para sa Guro | 1 buwan kasama Tito AI |
 | W27 | Jun 30 | July teaser | — | — |
 
 Full calendar with D-3→D-0 task dates per post: **`https://jeffd1130.github.io/TitoAi/#june`**
@@ -228,7 +228,7 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 
 **Niche:** "The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."
 
-**Target audience:** OFWs · Freelancers (1.5M+) · BPO workers · Nanays/tatays · Small business owners
+**Target audience:** Freelancers (1.5M+) · Guro/Teachers (900K+) · BPO workers · Nanays/tatays · Small business owners
 
 **Primary tools featured in all content:** Claude (claude.ai) + Gemini (gemini.google.com) — both free. Never reference paid tools.
 
