@@ -8,7 +8,7 @@ Progressive ramp: Week 1 TikTok → Week 2 TikTok+IG → Week 3 All 3
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
-from pptx.enum.text import PP_ALIGN
+from pptx.enum.text import PP_ALIGN, MSO_AUTO_SIZE
 
 OUT_PPTX = "/Users/jeff/Documents/Claude/TItoAi/content/strategy/TitoAI-ContentBoostPlan-W26-W28.pptx"
 OUT_PDF  = "/Users/jeff/Documents/Claude/TItoAi/content/strategy/TitoAI-ContentBoostPlan-W26-W28.pdf"
@@ -67,7 +67,9 @@ def box(s, l, t, w, h, fill, border=None):
 def tx(s, text, l, t, w, h, sz=14, bold=False, color=WHITE,
         align=PP_ALIGN.LEFT, italic=False):
     tb = s.shapes.add_textbox(l, t, w, h)
-    tf = tb.text_frame; tf.word_wrap = True
+    tf = tb.text_frame
+    tf.word_wrap = True
+    tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
     p = tf.paragraphs[0]; p.alignment = align
     r = p.add_run(); r.text = text
     r.font.size = Pt(sz); r.font.bold = bold
