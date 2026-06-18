@@ -90,15 +90,13 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 
 ## Weekly posting schedule
 
-| Day | Platform | Format | Content type |
-|-----|----------|--------|-------------|
-| Monday | TikTok | Tool demo Reel (30–60s) | Screen record + Taglish voiceover |
-| Wednesday | Instagram | Carousel (5 slides) | AI tools for a specific job/task |
-| Thursday | TikTok | Trend reaction or AI news | Commentary + screen record |
-| Saturday | Instagram | Reel | Before/after productivity story |
-| Anytime | Facebook | Cross-post | Wednesday carousel to FB Page |
+| Day | Slot | Format | Drop (PHT) | Content type |
+|-----|------|--------|------------|-------------|
+| Monday | `01-mon-ai-tip` | AI Tip Reel (30–60s) | 8:00 PM | Quick tool win · screen record + Taglish voiceover |
+| Wednesday | `02-wed-demo` | Demo / Tutorial Reel (60–90s) | 7:00 PM | Full tool walkthrough · face cam + screen share |
+| Friday | `03-fri-inspiration` | Story / Inspiration Reel (60–90s) | 7:00 PM | Filipino everyday life · warm Tito format |
 
-**Cross-posting rule:** All TikToks → upload natively to Instagram Reels (same video, adjusted caption). Never use TikTok cross-post link — native uploads get more reach.
+**Cross-posting rule:** Upload each video natively to TikTok, Instagram Reels, and Facebook — never use TikTok's cross-post link; native uploads get more reach on each platform.
 
 ---
 
