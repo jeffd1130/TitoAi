@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Tito AI — Social Media Automation
 
 You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI**, a Filipino AI education channel created by Joseph de las Armas (@TitoAIPH). The channel teaches everyday Filipinos how to use AI tools — free, no jargon, in Taglish.
@@ -137,6 +141,8 @@ content/
 
 Week folders: ISO week (`YYYY-W##`). Post slot folders numbered in posting order. Use `content/_template/` as the structure to copy when starting a new week.
 
+`Finished/` — exported final videos (e.g., carousels, intros). Tracked in git but `.mp4` files are gitignored; only HTML/PPTX deliverables are committed.
+
 ---
 
 ## Media source
@@ -154,10 +160,28 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 ## Tools
 
 - **Canva MCP** — required. Generate cover graphics, upload media assets, export previews. If not connected, stop and tell Jeff.
-- **GitHub** — repo `jeffd1130/TitoAi` (main branch). Auto-push hook in `.claude/settings.json` fires on Write/Edit when Claude Code is opened from this project directory.
+- **GitHub** — repo `jeffd1130/TitoAi` (main branch). Auto-push hook in `.claude/settings.json` fires on Write/Edit. **Note:** the hook path is hardcoded to `/Users/jeff/Documents/Claude/TItoAi` (Jeff's Mac). In remote/cloud sessions this hook will silently fail — push manually with `git add -A && git commit -m "..." && git push origin main`.
 - **GitHub Pages** — approval site at `https://jeffd1130.github.io/TitoAi/`. Source: main branch `/docs` folder.
 - **Buffer** — Social scheduling for IG + FB + TikTok. Workspace: `jeffd321@live.com` at buffer.com. @TitoAIPH connected on Instagram, Facebook Page, and TikTok. Use for scheduling posts after approval.
 - **Telegram bot** — `@titoaiph_bot` (bot ID: 8960239761). Token: `8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg`. Jeff's chat ID: `8325608814` (@JeffD331). Use `parse_mode=HTML` always (never Markdown — URL underscores break). Send approval notifications to chat ID `8325608814`.
+
+## Key configuration files
+
+**`templates.json`** — Single source of truth for Canva generation. Contains:
+- `theme_signature` — visual parameters passed to every Canva prompt
+- `canva_workspace.folder_id` — `FAHKj5NZ1-U` (Tito AI Canva folder). `brand_kit_id` is `null` until a brand kit is created.
+- `templates` — per-slot config: `generation_prompt` (ready to pass to `Canva:generate-design`), `schedule`, `hook_template`, and `placeholders` for each of the 3 slots
+- `caption_defaults` — base opener/closer and per-slot hashtag arrays (use these when `brand/caption-pool.json` isn't loaded)
+
+**`brand/caption-pool.json`** — Expanded caption building blocks:
+- `openers` / `closers` / `ctas` — pick one of each per caption
+- `tool_intros` — pre-written one-liners for Claude, Gemini, Notion, ChatGPT
+- `hook_templates` — 7 Taglish hook formulas with `[placeholders]`
+- `hashtag_sets` — `base`, `tips`, `demos`, `story`, `seasonal` arrays
+
+**`brand/README.md`** — Brand identity reference: colors, fonts, logo file paths, tone guidelines.
+
+---
 
 ## Video production
 
