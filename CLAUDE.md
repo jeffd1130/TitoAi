@@ -245,6 +245,14 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 
 ---
 
+## Content timeline
+
+`docs/schedule.json` is the single source of truth for the published timeline (`docs/timeline.html` renders from it). Whenever a post's status, title, date, link, or boost changes — or a new week/post is added — update `docs/schedule.json` to match, keeping the schema in `docs/timeline-README.md`. Set `"updated"` to today's date. Do NOT edit `timeline.html`. Commit and push so GitHub Pages republishes.
+
+**Live URL:** `https://jeffd1130.github.io/TitoAi/timeline.html`
+
+---
+
 ## Skills
 
 | Skill | Trigger phrases | Purpose |

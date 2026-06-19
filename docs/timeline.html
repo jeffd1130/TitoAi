@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — Content Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Lora:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A0F1E; --card:#111827; --line:#1E2A3A; --gold:#F59E0B;
+    --teal:#0D9488; --coral:#F97316; --green:#10B981; --gray:#94A3B8; --mute:#6B7280;
+    --tiktok:#FF3D71; --ig:#E879F9; --fb:#60A5FA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy);color:#E5E7EB;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold);color:var(--navy)}
+  .wrap{max-width:880px;margin:0 auto;padding:44px 28px 72px}
+
+  .head{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+  .logo{display:flex;align-items:center;gap:14px}
+  .logo .ring{width:60px;height:60px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;flex:none}
+  .logo .ring b{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);line-height:1}
+  .logo .wm{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:1px;line-height:.9}
+  .logo .wm span{color:var(--gold)}
+  .logo .tg{font-family:'Lora',serif;font-style:italic;font-size:12px;color:var(--gray);margin-top:1px}
+  .htxt{flex:1;min-width:240px;border-left:2px solid var(--line);padding-left:20px}
+  .htxt h1{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:1.5px;color:#fff;line-height:.95}
+  .htxt .sub{font-size:12px;font-weight:600;letter-spacing:2px;color:var(--gold);margin-top:5px}
+  .htxt .meta{font-size:12px;color:var(--gray);margin-top:8px}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .stat b{font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:1;display:block}
+  .stat span{font-size:10.5px;color:var(--gray);letter-spacing:.5px}
+
+  .filters{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+  .fbtn{font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--line);border-radius:30px;padding:9px 20px;cursor:pointer;background:transparent;color:var(--gray);font-family:'DM Sans',sans-serif;transition:.15s}
+  .fbtn.on{background:var(--gold);color:var(--navy)}
+  .refresh{margin-left:auto;font-size:11px;color:var(--mute);display:flex;align-items:center;gap:6px;align-self:center}
+  .refresh .dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+  .week{margin-bottom:22px}
+  .wlabel{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .wlabel .id{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;color:#fff}
+  .wlabel .rg{font-size:11px;color:var(--gray)}
+  .wlabel .hr{height:1px;flex:1;background:var(--line)}
+  .week.hot .wlabel .id,.week.hot .wlabel .rg{color:var(--gold)}
+  .week.hot .wlabel .rg{font-weight:600}
+  .week.hot .wlabel .hr{background:rgba(245,158,11,.3)}
+  .rows{display:flex;flex-direction:column;gap:8px}
+
+  .row{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;text-decoration:none;transition:border-color .15s}
+  a.row:hover{border-color:var(--gold)}
+  .row.draft{border-color:rgba(245,158,11,.35)}
+  .day{font-weight:700;font-size:10px;letter-spacing:1.5px;padding:4px 10px;border-radius:5px;flex:none}
+  .day.MON{background:var(--gold);color:var(--navy)}
+  .day.WED{background:var(--teal);color:#fff}
+  .day.FRI{background:var(--coral);color:var(--navy)}
+  .info{flex:1;min-width:0}
+  .info .ttl{font-size:14px;font-weight:700;color:#F9FAFB}
+  .info .ttl .tag{color:var(--teal);font-weight:600}
+  .info .ttl.tbd{color:var(--gray)}
+  .info .nt{font-size:11.5px;color:var(--mute);margin-top:2px;font-style:italic}
+  .badge{font-size:10px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:20px;flex:none;white-space:nowrap}
+  .b-posted{background:rgba(16,185,129,.14);color:var(--green);border:1px solid rgba(16,185,129,.3)}
+  .b-draft{background:rgba(245,158,11,.14);color:var(--gold);border:1px solid rgba(245,158,11,.35)}
+  .b-planned,.b-tbd{background:rgba(148,163,184,.1);color:var(--gray);border:1px solid rgba(148,163,184,.22)}
+  .boost{font-size:9.5px;font-weight:700;letter-spacing:.5px;padding:4px 9px;border-radius:20px;flex:none;white-space:nowrap}
+  .boost.TikTok{background:rgba(255,61,113,.12);color:var(--tiktok);border:1px solid rgba(255,61,113,.35)}
+  .boost.Instagram{background:rgba(232,121,249,.1);color:var(--ig);border:1px solid rgba(232,121,249,.3)}
+  .boost.Facebook{background:rgba(96,165,250,.1);color:var(--fb);border:1px solid rgba(96,165,250,.3)}
+  .arr{color:var(--gold);font-size:17px;flex:none}
+
+  .today{display:flex;align-items:center;gap:12px;padding:6px 2px;margin:2px 0}
+  .today .hr{height:2px;flex:1}
+  .today .hr.l{background:linear-gradient(90deg,transparent,var(--gold))}
+  .today .hr.r{background:linear-gradient(90deg,var(--gold),transparent)}
+  .today .lbl{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--gold);white-space:nowrap}
+
+  .foot{border-top:1px solid var(--line);padding-top:18px;margin-top:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .foot .nm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--mute)}
+  .foot a{font-size:11px;color:var(--gold);text-decoration:none;font-weight:600}
+  .loaderr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:13px;color:var(--gray)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div class="logo">
+      <div class="ring"><b>AI</b></div>
+      <div>
+        <div class="wm">TITO <span>AI</span></div>
+        <div class="tg">AI Para Sa Ating Lahat</div>
+      </div>
+    </div>
+    <div class="htxt">
+      <h1>CONTENT TIMELINE</h1>
+      <div class="sub">W21 → W28 · MON · WED · FRI</div>
+      <div class="meta">Every post, past and upcoming · <span id="handle">@TitoAIPH</span> · links open the live approval pages ↗</div>
+    </div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="filters">
+    <button class="fbtn on" data-f="all">All</button>
+    <button class="fbtn" data-f="shipped">Shipped</button>
+    <button class="fbtn" data-f="upcoming">Upcoming</button>
+    <div class="refresh"><span class="dot"></span><span id="upd">live</span></div>
+  </div>
+
+  <div id="timeline"></div>
+
+  <div class="foot">
+    <div class="nm">TITO AI · AI PARA SA ATING LAHAT</div>
+    <a id="hublink" href="#" target="_blank" rel="noopener">Open the Channel Hub ↗</a>
+  </div>
+
+</div>
+
+<script>
+/* ---------------------------------------------------------------
+   Fallback data — used when schedule.json can't be fetched
+   (e.g. opening the file directly). On the live site, schedule.json
+   is the source of truth and overrides this. Claude Code edits
+   schedule.json — it does NOT need to touch this file.
+---------------------------------------------------------------- */
+const FALLBACK = {"updated":"2026-06-19","handle":"@TitoAIPH","base":"https://jeffd1130.github.io/TitoAi/","weeks":[
+  {"id":"W21","range":"May 19–25","theme":"Launch · Origin Story","boost":null,"posts":[
+    {"day":"FRI","title":"Tito AI Intro — Origin Story","note":"\"Your Story\" launch · Household dad sa Silicon Valley","date":"May 23","status":"posted","url":null,"boost":null}]},
+  {"id":"W22","range":"May 26–Jun 1","theme":"Intro Story","boost":null,"posts":[
+    {"day":"FRI","title":"Intro Story · \"Your Story\"","note":"Warm tito intro · captions approved","date":"May 30","status":"posted","url":"W22-captions.html","boost":null}]},
+  {"id":"W23","range":"Jun 1–7","theme":"Launch Week Follow-Through","boost":null,"posts":[
+    {"day":"MON","title":"Tip #1 — Sino si Claude at Gemini","note":"Intro to both · libre pareho","date":"Jun 2","status":"posted","url":"scripts/w23-mon-script.html","boost":null},
+    {"day":"WED","title":"Demo #1 — Gemini Beginner's Guide","note":"OFW leave letter demo · gemini.google.com","date":"Jun 4","status":"posted","url":null,"boost":null},
+    {"day":"FRI","title":"Story #1 — Hindi degree ang kailangan mo","note":"Anyone can learn AI · no background needed","date":"Jun 6","status":"posted","url":null,"boost":null}]},
+  {"id":"W24","range":"Jun 8–14","theme":"Tools Deep-Dive","boost":null,"posts":[
+    {"day":"MON","title":"Tip #2 — Claude o Gemini?","tag":"Carousel","note":"When to use which · 5-slide swipe","date":"Jun 9","status":"posted","url":"W24-mon-captions.html","boost":null},
+    {"day":"WED","title":"Demo #2 — Claude para sa Negosyante","tag":"Carousel","note":"Walang marketing budget? · Php500 campaign","date":"Jun 11","status":"posted","url":"W24-wed-carousel.html","boost":null},
+    {"day":"FRI","title":"Story #2 — Ang Trabaho Ko, Napalitan Na Ba?","note":"AI para sa OFW · translate, letters, libre","date":"Jun 13","status":"posted","url":"W24-fri-captions.html","boost":null}]},
+  {"id":"W25","range":"Jun 15–21","theme":"Everyday Filipino Life","boost":null,"posts":[
+    {"day":"MON","title":"Tip #3 — 3 Libreng AI Tools","note":"Dapat malaman ng bawat Pilipino","date":"Jun 16","status":"posted","url":"W25-mon-captions.html","boost":null},
+    {"day":"WED","title":"Demo #3 — Resume Gamit Claude","tag":"Carousel","note":"Resume in 2 minutes · 5-slide swipe","date":"Jun 18","status":"posted","url":"W25-wed-captions.html","boost":null},
+    {"day":"FRI","title":"Father's Day — Tito AI Tries: Php 2,000","note":"Real budget challenge · pending approval","date":"Jun 20","status":"draft","url":"W25-fri-captions.html","boost":null}]},
+  {"id":"W26","range":"Jun 22–28","theme":"⭐ BOOST LAUNCH · Php 2,000 · TikTok","highlight":true,"boost":"TikTok","posts":[
+    {"day":"MON","title":"Ang Sabi Nila: Pang-Matalino Lang Iyan","note":"AI myth-busting","date":"Jun 22","status":"planned","url":null,"boost":"TikTok"},
+    {"day":"WED","title":"Gemini para sa Guro","note":"Lesson plan in 2 mins · 900K+ teachers","date":"Jun 25","status":"planned","url":null,"boost":"TikTok"},
+    {"day":"FRI","title":"1 Buwan Kasama Tito AI — Ang Resulta","note":"Month 1 milestone · tease July","date":"Jun 27","status":"planned","url":null,"boost":"TikTok"}]},
+  {"id":"W27","range":"Jun 29–Jul 5","theme":"Boost: TikTok + Instagram","boost":"TikTok + Instagram","posts":[
+    {"day":"MON","title":"July Teaser — Ano ang Susunod?","note":"Build anticipation","date":"Jun 30","status":"planned","url":null,"boost":"TikTok"},
+    {"day":"WED","title":"Wednesday Demo — TBD","note":"Topic in production","date":"Jul 2","status":"tbd","url":null,"boost":"Instagram"},
+    {"day":"FRI","title":"Friday Story — TBD","note":"Topic in production","date":"Jul 4","status":"tbd","url":null,"boost":"TikTok"}]},
+  {"id":"W28","range":"Jul 6–12","theme":"Full push: TikTok + Instagram + Facebook","boost":"All three","posts":[
+    {"day":"MON","title":"Monday AI Tip — TBD","note":"Topic in production","date":"Jul 7","status":"tbd","url":null,"boost":"TikTok"},
+    {"day":"WED","title":"Wednesday Demo — TBD","note":"Topic in production","date":"Jul 9","status":"tbd","url":null,"boost":"Facebook"},
+    {"day":"FRI","title":"Friday Story — TBD","note":"Topic in production","date":"Jul 11","status":"tbd","url":null,"boost":"Instagram"}]}
+]};
+
+const STATUS_GROUP = { posted:'shipped', draft:'upcoming', planned:'upcoming', tbd:'upcoming' };
+const STATUS_LABEL = { posted:'POSTED', draft:'DRAFT', planned:'PLANNED', tbd:'TBD' };
+let DATA = null, FILTER = 'all';
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function render(){
+  const tl = document.getElementById('timeline');
+  if(!DATA || !DATA.weeks || !DATA.weeks.length){ tl.innerHTML = '<div class="loaderr">No schedule data found. Add <b>schedule.json</b> next to this file.</div>'; return; }
+
+  document.getElementById('handle').textContent = DATA.handle || '@TitoAIPH';
+  document.getElementById('hublink').href = DATA.base || '#';
+  document.getElementById('upd').textContent = DATA.updated ? ('updated ' + DATA.updated) : 'live';
+
+  // flatten for counts + today split
+  const all = [];
+  DATA.weeks.forEach(w => (w.posts||[]).forEach(p => all.push(p)));
+  const total = all.length;
+  const shipped = all.filter(p => STATUS_GROUP[p.status]==='shipped').length;
+  const upcoming = total - shipped;
+  const boostWeeks = DATA.weeks.filter(w => w.boost).length;
+  document.getElementById('stats').innerHTML =
+    stat(total,'#fff','TOTAL POSTS') + stat(shipped,'var(--green)','SHIPPED') +
+    stat(upcoming,'var(--gold)','UPCOMING') + stat(boostWeeks,'var(--tiktok)','BOOST WEEKS');
+
+  // index of the first upcoming post globally (where TODAY divider goes)
+  let firstUpcoming = all.findIndex(p => STATUS_GROUP[p.status]==='upcoming');
+  let seen = 0, dividerPlaced = false;
+
+  let html = '';
+  DATA.weeks.forEach(w => {
+    const rows = (w.posts||[]).map(p => {
+      const grp = STATUS_GROUP[p.status] || 'upcoming';
+      const visible = (FILTER==='all' || FILTER===grp);
+      // place TODAY divider right before the first upcoming post, only in 'all' view
+      let divider = '';
+      if(FILTER==='all' && !dividerPlaced && seen === firstUpcoming){
+        divider = '<div class="today"><div class="hr l"></div><div class="lbl">● TODAY · '+esc(fmtToday(DATA.updated))+' — BOOST ERA STARTS NEXT</div><div class="hr r"></div></div>';
+        dividerPlaced = true;
+      }
+      seen++;
+      if(!visible) return divider;
+      return divider + rowHtml(p, w);
+    }).join('');
+    if(rows.trim()===''){ return; } // week hidden entirely under filter
+    html += '<div class="week'+(w.highlight?' hot':'')+'">'
+      + '<div class="wlabel"><div class="id">'+esc(w.id)+'</div><div class="rg">'+esc(w.range)+(w.theme?' · '+esc(w.theme):'')+'</div><div class="hr"></div></div>'
+      + '<div class="rows">'+rows+'</div></div>';
+  });
+  tl.innerHTML = html;
+}
+
+function stat(n,color,label){ return '<div class="stat"><b style="color:'+color+'">'+n+'</b><span>'+label+'</span></div>'; }
+
+function rowHtml(p, w){
+  const cls = 'row' + (p.status==='draft'?' draft':'');
+  const day = '<span class="day '+esc(p.day)+'">'+esc(p.day)+'</span>';
+  const ttlTbd = (p.status==='tbd') ? ' tbd' : '';
+  const tag = p.tag ? ' <span class="tag">· '+esc(p.tag)+'</span>' : '';
+  const note = p.note ? '<div class="nt">'+esc(p.note)+(p.date?' · '+esc(p.date):'')+'</div>' : (p.date?'<div class="nt">'+esc(p.date)+'</div>':'');
+  const info = '<div class="info"><div class="ttl'+ttlTbd+'">'+esc(p.title)+tag+'</div>'+note+'</div>';
+  const boost = p.boost ? '<span class="boost '+esc(p.boost)+'">BOOST · '+esc(p.boost.toUpperCase())+'</span>' : '';
+  const badge = '<span class="badge b-'+esc(p.status)+'">'+esc(STATUS_LABEL[p.status]||p.status)+'</span>';
+  const inner = day+info+boost+badge;
+  if(p.url){
+    const href = (DATA.base||'') + p.url;
+    return '<a class="'+cls+'" href="'+esc(href)+'" target="_blank" rel="noopener">'+inner+'<span class="arr">↗</span></a>';
+  }
+  return '<div class="'+cls+'">'+inner+'</div>';
+}
+
+function fmtToday(iso){
+  if(!iso) return 'TODAY';
+  const m = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  const d = new Date(iso+'T00:00:00');
+  if(isNaN(d)) return iso;
+  return m[d.getMonth()]+' '+d.getDate();
+}
+
+document.querySelectorAll('.fbtn').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.fbtn').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  FILTER = b.dataset.f;
+  render();
+}));
+
+async function load(){
+  try{
+    const res = await fetch('schedule.json?t=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error(res.status);
+    DATA = await res.json();
+  }catch(e){
+    if(!DATA) DATA = FALLBACK;   // keep last good data on a failed refresh
+  }
+  render();
+}
+
+load();
+setInterval(load, 60000);  // re-check every 60s so an open tab stays live
+</script>
+</body>
+</html>

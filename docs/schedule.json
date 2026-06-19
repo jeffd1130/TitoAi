@@ -1,0 +1,67 @@
+{
+  "updated": "2026-06-19",
+  "handle": "@TitoAIPH",
+  "base": "https://jeffd1130.github.io/TitoAi/",
+  "weeks": [
+    {
+      "id": "W21", "range": "May 19–25", "theme": "Launch · Origin Story", "boost": null,
+      "posts": [
+        { "day": "FRI", "title": "Tito AI Intro — Origin Story", "note": "\"Your Story\" launch · Household dad sa Silicon Valley", "date": "May 23", "status": "posted", "url": null, "boost": null }
+      ]
+    },
+    {
+      "id": "W22", "range": "May 26–Jun 1", "theme": "Intro Story", "boost": null,
+      "posts": [
+        { "day": "FRI", "title": "Intro Story · \"Your Story\"", "note": "Warm tito intro · captions approved", "date": "May 30", "status": "posted", "url": "W22-captions.html", "boost": null }
+      ]
+    },
+    {
+      "id": "W23", "range": "Jun 1–7", "theme": "Launch Week Follow-Through", "boost": null,
+      "posts": [
+        { "day": "MON", "title": "Tip #1 — Sino si Claude at Gemini", "note": "Intro to both · libre pareho", "date": "Jun 2", "status": "posted", "url": "scripts/w23-mon-script.html", "boost": null },
+        { "day": "WED", "title": "Demo #1 — Gemini Beginner's Guide", "note": "OFW leave letter demo · gemini.google.com", "date": "Jun 4", "status": "posted", "url": null, "boost": null },
+        { "day": "FRI", "title": "Story #1 — Hindi degree ang kailangan mo", "note": "Anyone can learn AI · no background needed", "date": "Jun 6", "status": "posted", "url": null, "boost": null }
+      ]
+    },
+    {
+      "id": "W24", "range": "Jun 8–14", "theme": "Tools Deep-Dive", "boost": null,
+      "posts": [
+        { "day": "MON", "title": "Tip #2 — Claude o Gemini?", "tag": "Carousel", "note": "When to use which · 5-slide swipe", "date": "Jun 9", "status": "posted", "url": "W24-mon-captions.html", "boost": null },
+        { "day": "WED", "title": "Demo #2 — Claude para sa Negosyante", "tag": "Carousel", "note": "Walang marketing budget? · Php500 campaign", "date": "Jun 11", "status": "posted", "url": "W24-wed-carousel.html", "boost": null },
+        { "day": "FRI", "title": "Story #2 — Ang Trabaho Ko, Napalitan Na Ba?", "note": "AI para sa OFW · translate, letters, libre", "date": "Jun 13", "status": "posted", "url": "W24-fri-captions.html", "boost": null }
+      ]
+    },
+    {
+      "id": "W25", "range": "Jun 15–21", "theme": "Everyday Filipino Life", "boost": null,
+      "posts": [
+        { "day": "MON", "title": "Tip #3 — 3 Libreng AI Tools", "note": "Dapat malaman ng bawat Pilipino", "date": "Jun 16", "status": "posted", "url": "W25-mon-captions.html", "boost": null },
+        { "day": "WED", "title": "Demo #3 — Resume Gamit Claude", "tag": "Carousel", "note": "Resume in 2 minutes · 5-slide swipe", "date": "Jun 18", "status": "posted", "url": "W25-wed-captions.html", "boost": null },
+        { "day": "FRI", "title": "Father's Day — Tito AI Tries: Php 2,000", "note": "Real budget challenge · pending approval", "date": "Jun 20", "status": "draft", "url": "W25-fri-captions.html", "boost": null }
+      ]
+    },
+    {
+      "id": "W26", "range": "Jun 22–28", "theme": "⭐ BOOST LAUNCH · Php 2,000 · TikTok", "highlight": true, "boost": "TikTok",
+      "posts": [
+        { "day": "MON", "title": "Ang Sabi Nila: Pang-Matalino Lang Iyan", "note": "AI myth-busting", "date": "Jun 22", "status": "planned", "url": null, "boost": "TikTok" },
+        { "day": "WED", "title": "Gemini para sa Guro", "note": "Lesson plan in 2 mins · 900K+ teachers", "date": "Jun 25", "status": "planned", "url": null, "boost": "TikTok" },
+        { "day": "FRI", "title": "1 Buwan Kasama Tito AI — Ang Resulta", "note": "Month 1 milestone · tease July", "date": "Jun 27", "status": "planned", "url": null, "boost": "TikTok" }
+      ]
+    },
+    {
+      "id": "W27", "range": "Jun 29–Jul 5", "theme": "Boost: TikTok + Instagram", "boost": "TikTok + Instagram",
+      "posts": [
+        { "day": "MON", "title": "July Teaser — Ano ang Susunod?", "note": "Build anticipation", "date": "Jun 30", "status": "planned", "url": null, "boost": "TikTok" },
+        { "day": "WED", "title": "Wednesday Demo — TBD", "note": "Topic in production", "date": "Jul 2", "status": "tbd", "url": null, "boost": "Instagram" },
+        { "day": "FRI", "title": "Friday Story — TBD", "note": "Topic in production", "date": "Jul 4", "status": "tbd", "url": null, "boost": "TikTok" }
+      ]
+    },
+    {
+      "id": "W28", "range": "Jul 6–12", "theme": "Full push: TikTok + Instagram + Facebook", "boost": "All three",
+      "posts": [
+        { "day": "MON", "title": "Monday AI Tip — TBD", "note": "Topic in production", "date": "Jul 7", "status": "tbd", "url": null, "boost": "TikTok" },
+        { "day": "WED", "title": "Wednesday Demo — TBD", "note": "Topic in production", "date": "Jul 9", "status": "tbd", "url": null, "boost": "Facebook" },
+        { "day": "FRI", "title": "Friday Story — TBD", "note": "Topic in production", "date": "Jul 11", "status": "tbd", "url": null, "boost": "Instagram" }
+      ]
+    }
+  ]
+}
