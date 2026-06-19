@@ -84,6 +84,40 @@
   .foot .nm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--mute)}
   .foot a{font-size:11px;color:var(--gold);text-decoration:none;font-weight:600}
   .loaderr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:13px;color:var(--gray)}
+
+  /* ── extra day colors ── */
+  .day.SUN{background:var(--coral);color:#fff}
+  .day.SAT{background:var(--ig);color:#fff}
+  .day.TUE,.day.THU{background:var(--fb);color:#fff}
+
+  /* ── MOBILE ── */
+  @media(max-width:600px){
+    .wrap{padding:20px 14px 56px}
+    .head{gap:12px;margin-bottom:16px}
+    .logo .ring{width:46px;height:46px}
+    .logo .ring b{font-size:20px}
+    .logo .wm{font-size:30px}
+    .logo .tg{font-size:11px}
+    .htxt{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:10px;width:100%}
+    .htxt h1{font-size:32px}
+    .htxt .meta{font-size:11px}
+    .stats{grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:16px}
+    .stat{padding:10px 12px}
+    .stat b{font-size:26px}
+    .filters{gap:6px;margin-bottom:20px}
+    .fbtn{font-size:11px;padding:7px 14px}
+    .wlabel .rg{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+    .row{flex-wrap:wrap;gap:8px;padding:11px 12px}
+    .info{width:100%;order:2;min-width:unset}
+    .info .ttl{font-size:13px}
+    .day{order:1}
+    .badge{order:3;font-size:9px}
+    .boost{order:4;font-size:9px}
+    .arr{order:5}
+    .today .lbl{font-size:14px;letter-spacing:1px}
+    .foot{flex-direction:column;align-items:flex-start;gap:6px}
+    .foot .nm{font-size:16px}
+  }
 </style>
 </head>
 <body>
