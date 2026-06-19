@@ -33,8 +33,12 @@ BOOST_EMOJI = {
 
 DAY_LABEL = {
     "MON": "Mon",
+    "TUE": "Tue",
     "WED": "Wed",
+    "THU": "Thu",
     "FRI": "Fri",
+    "SAT": "Sat",
+    "SUN": "Sun",
 }
 
 def send_telegram(text):
@@ -67,8 +71,9 @@ def format_post(p):
     day = DAY_LABEL.get(p["day"], p["day"])
     boost = f" · {BOOST_EMOJI.get(p.get('boost',''), '')} Boost" if p.get("boost") else ""
     tag = f" [{p['tag']}]" if p.get("tag") else ""
+    needs_approval = " ⚠️ <b>NEEDS APPROVAL</b>" if p["status"] == "draft" else ""
     note = f"\n    <i>{p['note']}</i>" if p.get("note") else ""
-    return f"{em} {day} {p['date']} — {p['title']}{tag}{boost}{note}"
+    return f"{em} {day} {p['date']} — {p['title']}{tag}{boost}{needs_approval}{note}"
 
 def build_message(data, today_pht):
     now_str = today_pht.strftime("%A, %b %d, %Y")
@@ -76,8 +81,8 @@ def build_message(data, today_pht):
     current, next_wk = current_and_next_week(weeks, today_pht.strftime("%Y-%m-%d"))
 
     lines = [
-        f"📅 <b>TITO AI — Daily Status</b>",
-        f"<b>{now_str} · 8:00 AM PHT</b>",
+        f"📅 <b>TITO AI — Daily Status · @TitoAIPH</b>",
+        f"<b>{now_str}</b>  ·  8:00 AM PHT (Manila)",
         "",
     ]
 
