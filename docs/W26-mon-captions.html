@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W26 Monday Tip · June 22, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0A0F1E; color: #E5E7EB; font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; line-height: 1.6; padding: 0 0 60px; }
+  header { background: #0A0F1E; border-bottom: 3px solid #F59E0B; padding: 20px 16px 16px; position: sticky; top: 0; z-index: 10; }
+  header h1 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #F59E0B; text-transform: uppercase; }
+  header p { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+  .countdown { background: #111827; border-bottom: 1px solid #1E2A3A; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #0D9488; font-weight: 600; }
+  .countdown .dot { width: 8px; height: 8px; border-radius: 50%; background: #0D9488; animation: pulse 1.5s infinite; flex-shrink: 0; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .boost-badge { margin: 14px 12px 0; background: rgba(245,158,11,.08); border: 1px solid rgba(245,158,11,.3); border-radius: 10px; padding: 10px 14px; font-size: 12px; color: #F59E0B; font-weight: 600; }
+  .boost-badge span { font-weight: 400; color: #9CA3AF; }
+  .post-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .post-header { background: #111827; padding: 14px 16px; border-bottom: 1px solid #1E2A3A; }
+  .post-day { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0D9488; }
+  .post-title { font-size: 16px; font-weight: 700; color: #F9FAFB; margin-top: 3px; }
+  .post-meta { font-size: 11px; color: #6B7280; margin-top: 4px; }
+  .tabs { display: flex; background: #0D1626; border-bottom: 1px solid #1E2A3A; }
+  .tab-btn { flex: 1; background: none; border: none; padding: 10px 4px; font-size: 12px; font-weight: 600; color: #6B7280; cursor: pointer; letter-spacing: 0.5px; border-bottom: 2px solid transparent; }
+  .tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+  .tab-panel { display: none; padding: 16px; }
+  .tab-panel.active { display: block; }
+  .caption-box { background: #111827; border-radius: 8px; padding: 14px; white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #D1D5DB; word-break: break-word; }
+  .hashtags { font-size: 12px; color: #0D9488; margin-top: 10px; line-height: 1.8; word-break: break-all; }
+  .first-comment { background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; margin-top: 12px; font-size: 13px; color: #9CA3AF; }
+  .first-comment strong { display: block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 4px; }
+  .copy-btn { display: block; width: 100%; margin-top: 10px; padding: 10px; background: #1E2A3A; border: 1px solid #374151; border-radius: 8px; color: #9CA3AF; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; text-align: center; }
+  .copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+  .pill { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+  .pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+  .pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+  .pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+  .script-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+  .script-header { background: #111827; padding: 13px 16px; border-bottom: 1px solid #1E2A3A; }
+  .script-header h2 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6B7280; }
+  .script-body { padding: 16px; }
+  .script-scene { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #1E2A3A; }
+  .script-scene:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .scene-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0D9488; margin-bottom: 6px; }
+  .scene-direction { font-size: 12px; color: #6B7280; font-style: italic; margin-bottom: 6px; }
+  .scene-lines { font-size: 14px; color: #F9FAFB; line-height: 1.65; background: #0D1626; border-radius: 6px; padding: 12px; }
+  footer { text-align: center; padding: 30px 16px 0; font-size: 11px; color: #374151; }
+</style>
+<script>
+function switchTab(btn, group, platform) {
+  const block = btn.closest('.post-block');
+  block.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  block.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  block.querySelector('#' + group + '-' + platform).classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!'; btn.style.background = '#F59E0B'; btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = 'Copy Caption'; btn.style.background=''; btn.style.color=''; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W26 Monday AI Tip</h1>
+  <p>June 22, 2026 · For approval by Joseph · @tito.aiph</p>
+</header>
+
+<div class="countdown">
+  <div class="dot"></div>
+  Dropping Monday · 8:00 PM PHT · 5:00 AM PST
+</div>
+
+<div class="boost-badge">⭐ W26 Boost Week · <span>TikTok · Php 2,000/week — boost this post</span></div>
+
+<!-- SCRIPT -->
+<div class="script-block">
+  <div class="script-header"><h2>Script — 45–60 sec · Talking Head · Myth-Busting</h2></div>
+  <div class="script-body">
+    <div class="script-scene">
+      <div class="scene-label">Hook · 0:00–0:05</div>
+      <div class="scene-direction">Deadpan. No smile. Let it land. Pause after the quote.</div>
+      <div class="scene-lines">"Pang-matalino lang iyan."
+
+[pause — look at camera]
+
+Sabi nila.</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">The Flip · 0:05–0:30</div>
+      <div class="scene-direction">Warm, conversational. Use a real, specific character — NOT a tech person.</div>
+      <div class="scene-lines">May kilala akong sari-sari owner — sa probinsya. Hindi siya nag-college. Pero isang araw, ginamit niya ang Gemini sa kanyang phone — libre, walang bayad.
+
+Nagsulat siya ng proposal para sa supplier niya. Sa Ingles. Na-negotiate niya ang mas mababang presyo.
+
+Kita niya? Tumaas.</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">The Point · 0:30–0:45</div>
+      <div class="scene-direction">Slow, deliberate. Look straight at camera. Let each line breathe.</div>
+      <div class="scene-lines">Hindi pang-matalino ang AI, mga Pamangkin.
+
+Pang-sari-sari owner.
+Pang-guro.
+Pang-driver.
+Pang-nanay. Pang-tatay.
+
+Pang-ikaw.</div>
+    </div>
+    <div class="script-scene">
+      <div class="scene-label">CTA + Closer · 0:45–0:58</div>
+      <div class="scene-direction">Warm smile. Invite comment — YES/NO gets highest engagement.</div>
+      <div class="scene-lines">Narinig mo na ito? "Pang-matalino lang iyan" — sinabi ba ito sa iyo? YES o NO — i-comment mo sa baba.
+
+Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Monday · June 22 · W26</div>
+    <div class="post-title">Ang Sabi Nila: "Pang-Matalino Lang Iyan"</div>
+    <div class="post-meta">AI Tip · 45–60 sec · Talking head · Myth-busting format</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'mon','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'mon','fb')">Facebook</button>
+  </div>
+  <div id="mon-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="mon-tiktok-text">"Pang-matalino lang iyan." 🤫
+
+Mali.
+
+May sari-sari owner akong kilala — walang degree. Gamit ang Gemini (libre, sa phone), nakapag-negotiate siya ng mas mababang presyo sa supplier niya. Tumaas ang kita.
+
+Hindi pang-matalino ang AI. Pang-lahat.
+
+Sinabi ba ito sa iyo? YES o NO — i-comment! 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAI #AngSabiNila #AIPhilippines #TechParaSaLahat</div>
+    <button class="copy-btn" onclick="copyText('mon-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin within 5 min of posting</strong>Subukan mo ngayon: gemini.google.com — libre, walang sign-up. I-type: "Tulungan mo akong magsulat ng [kahit ano]." 😊</div>
+  </div>
+  <div id="mon-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="mon-ig-text">"Pang-matalino lang iyan. Hindi para sa akin." 🤫
+
+Gaano karami sa inyo ang nakarinig nito?
+
+May kilala akong sari-sari owner sa probinsya. Walang college degree. Pero gamit ang Gemini sa kanyang phone — libre, walang bayad — nakapagsulat siya ng proposal para sa supplier niya. Na-negotiate niya ang mas mababang presyo. Tumaas ang kita ng tindahan.
+
+Hindi pang-matalino ang AI, mga Pamangkin.
+Pang-sari-sari owner. Pang-guro. Pang-driver.
+Pang-nanay. Pang-tatay. Pang-ikaw.
+
+Sinabi ba ito sa iyo? YES o NO — i-comment sa baba. 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAI #AngSabiNila #AIPhilippines #TechParaSaLahat #AITips #LibreAngAI #PagkakataonPH #FreelancerPH #NanayTatay #NegosyoPH #BPO</div>
+    <button class="copy-btn" onclick="copyText('mon-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin within 5 min of posting</strong>Subukan mo ngayon: gemini.google.com — libre, walang bayad. I-type ang kahit anong tanong mo. 😊</div>
+  </div>
+  <div id="mon-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="mon-fb-text">Mga Pamangkin, ilang beses na ninyong narinig ito? 🤔
+
+"Pang-matalino lang iyan. Hindi para sa akin."
+
+Gusto kong i-share ang isang kwento.
+
+May kilala akong sari-sari owner sa probinsya — walang college degree, pero matalino sa sarili niyang paraan. Isang araw, sinubukan niya ang Gemini para tulungan siyang magsulat ng proposal para sa supplier niya. Hindi siya tech expert.
+
+Pero dahil sa AI — libre, sa phone lang — na-negotiate niya ang mas mababang presyo ng mga bilihin. Tumaas ang kita ng kanyang tindahan. Nagbago ang takbo ng negosyo niya.
+
+Hindi pang-matalino ang AI, mga Pamangkin.
+Pang-sari-sari owner. Pang-guro. Pang-construction worker.
+Pang-nanay at tatay. Pang-ikaw.
+
+Sinabi ba ito sa inyo ng mga tao sa paligid ninyo? I-comment ng YES o NO — at kung mayroon kayong kilalang nagsabi nito, pwede ring i-tag. Gusto kong marinig ang inyong kwento. 😊
+
+I-follow ang Tito AI para sa susunod pang "Ang Sabi Nila" episodes.
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AngSabiNila #LibreAI #GeminiAI</div>
+    <button class="copy-btn" onclick="copyText('mon-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin within 5 min of posting</strong>Subukan mo ngayon: gemini.google.com — libre, walang bayad. I-type ang kahit anong tanong mo. 😊</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W26 Monday · June 22, 2026</footer>
+</body>
+</html>

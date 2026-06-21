@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21",
+  "updated": "2026-06-22",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -165,10 +165,10 @@
         {
           "day": "MON",
           "title": "Ang Sabi Nila: Pang-Matalino Lang Iyan",
-          "note": "AI myth-busting",
+          "note": "AI myth-busting · captions ready",
           "date": "Jun 22",
-          "status": "planned",
-          "url": null,
+          "status": "draft",
+          "url": "W26-mon-captions.html",
           "boost": "TikTok"
         },
         {
