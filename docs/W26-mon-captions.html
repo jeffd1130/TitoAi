@@ -13,6 +13,11 @@
   .countdown { background: #111827; border-bottom: 1px solid #1E2A3A; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #0D9488; font-weight: 600; }
   .countdown .dot { width: 8px; height: 8px; border-radius: 50%; background: #0D9488; animation: pulse 1.5s infinite; flex-shrink: 0; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .canva-block { margin: 16px 12px 0; background: #111827; border: 1px solid #1E2A3A; border-radius: 12px; padding: 14px 16px; }
+  .canva-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0D9488; margin-bottom: 8px; }
+  .canva-link { display: block; background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; text-decoration: none; color: #F59E0B; font-size: 13px; font-weight: 600; word-break: break-all; }
+  .canva-link:hover { background: #1E2A3A; }
+  .canva-note { font-size: 11px; color: #6B7280; margin-top: 8px; }
   .boost-badge { margin: 14px 12px 0; background: rgba(245,158,11,.08); border: 1px solid rgba(245,158,11,.3); border-radius: 10px; padding: 10px 14px; font-size: 12px; color: #F59E0B; font-weight: 600; }
   .boost-badge span { font-weight: 400; color: #9CA3AF; }
   .post-block { margin: 20px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
@@ -74,6 +79,15 @@ function copyText(id) {
 <div class="countdown">
   <div class="dot"></div>
   Dropping Monday · 8:00 PM PHT · 5:00 AM PST
+</div>
+
+<!-- CANVA CAROUSEL -->
+<div class="canva-block">
+  <div class="canva-label">Carousel Slides — Edit in Canva</div>
+  <a href="https://www.canva.com/d/gTtzTc2oEmBUefq" target="_blank" class="canva-link">
+    🎨 Open Carousel in Canva → canva.com/d/gTtzTc2oEmBUefq
+  </a>
+  <div class="canva-note">Design ID: DAHNQUaAqEQ · Ang Sabi Nila Carousel 4×5 · 5 slides · Updated Jun 22</div>
 </div>
 
 <div class="boost-badge">⭐ W26 Boost Week · <span>TikTok · Php 2,000/week — boost this post</span></div>
