@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tito AI — W26 Mon Carousel · June 22, 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0A0F1E;
+  color: #E5E7EB;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  padding: 0 0 60px;
+}
+header {
+  background: #0A0F1E;
+  border-bottom: 3px solid #F59E0B;
+  padding: 20px 16px 16px;
+  position: sticky; top: 0; z-index: 10;
+}
+header h1 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #F59E0B; text-transform: uppercase; }
+header p  { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+.countdown {
+  background: #111827; border-bottom: 1px solid #1E2A3A;
+  padding: 10px 16px; display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: #0D9488; font-weight: 600;
+}
+.countdown .dot { width: 8px; height: 8px; border-radius: 50%; background: #0D9488; animation: pulse 1.5s infinite; flex-shrink: 0; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+.boost-badge {
+  margin: 14px 12px 0;
+  background: rgba(245,158,11,.08); border: 1px solid rgba(245,158,11,.3);
+  border-radius: 10px; padding: 10px 14px;
+  font-size: 12px; color: #F59E0B; font-weight: 600;
+}
+.boost-badge span { font-weight: 400; color: #9CA3AF; }
+
+/* ── SLIDES STRIP ── */
+.slides-label {
+  padding: 18px 12px 10px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.slides-label-text { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0D9488; }
+.slides-label-count { font-size: 10px; color: #4B5563; }
+.slides-strip {
+  overflow-x: scroll;
+  display: flex;
+  gap: 10px;
+  padding: 0 12px 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.slides-strip::-webkit-scrollbar { display: none; }
+.slide-wrap {
+  flex: 0 0 75vw;
+  max-width: 300px;
+  scroll-snap-align: start;
+}
+.slide-num {
+  font-size: 10px; color: #6B7280; letter-spacing: 0.5px;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+
+/* ── SLIDE CARD ── */
+.slide {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 18px;
+  background: #0A0F1E;
+  border: 1px solid #1E2A3A;
+}
+/* gold corner accent */
+.slide::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #F59E0B 0%, transparent 100%);
+}
+
+.slide-eyebrow {
+  font-size: 8px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #F59E0B; opacity: .8;
+}
+.slide-body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.slide-quote {
+  font-size: clamp(18px, 5vw, 26px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.slide-quote .accent { color: #F59E0B; }
+.slide-sub {
+  font-size: clamp(11px, 3vw, 14px);
+  color: #9CA3AF;
+  line-height: 1.55;
+}
+.slide-sub .hi { color: #E5E7EB; font-weight: 600; }
+
+.checklist { list-style: none; margin-top: 6px; }
+.checklist li {
+  font-size: clamp(11px, 3vw, 13px);
+  color: #E5E7EB;
+  padding: 5px 0;
+  display: flex; align-items: flex-start; gap: 8px;
+  border-bottom: 1px solid rgba(30,42,58,.7);
+  line-height: 1.4;
+}
+.checklist li:last-child { border-bottom: none; }
+.check { color: #F59E0B; font-size: 12px; flex-shrink: 0; margin-top: 2px; }
+
+.tools-list { margin-top: 6px; }
+.tool-row {
+  background: #111827;
+  border: 1px solid #1E2A3A;
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin-bottom: 7px;
+  display: flex; align-items: center; gap: 10px;
+}
+.tool-icon { font-size: 16px; flex-shrink: 0; }
+.tool-name { font-size: clamp(11px, 3vw, 13px); font-weight: 700; color: #F9FAFB; }
+.tool-url  { font-size: 9px; color: #4B5563; }
+
+.cta-big {
+  font-size: clamp(20px, 6vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+.yes-no {
+  display: flex; gap: 8px; margin-top: 8px;
+}
+.yn-btn {
+  flex: 1; padding: 9px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: clamp(13px, 3.5vw, 16px);
+  font-weight: 800;
+}
+.yn-yes { background: rgba(245,158,11,.15); color: #F59E0B; border: 1.5px solid #F59E0B; }
+.yn-no  { background: rgba(30,42,58,.6);    color: #6B7280; border: 1.5px solid #374151; }
+
+.slide-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #1E2A3A;
+}
+.slide-brand {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #F59E0B; opacity: .7;
+}
+.slide-handle { font-size: 9px; color: #4B5563; }
+.slide-dots { display: flex; gap: 4px; }
+.dot-pip { width: 5px; height: 5px; border-radius: 50%; background: #1E2A3A; }
+.dot-pip.active { background: #F59E0B; }
+
+/* ── CAPTIONS ── */
+.post-block { margin: 4px 12px 0; border: 1px solid #1E2A3A; border-radius: 12px; overflow: hidden; }
+.post-header { background: #111827; padding: 14px 16px; border-bottom: 1px solid #1E2A3A; }
+.post-day  { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0D9488; }
+.post-title { font-size: 16px; font-weight: 700; color: #F9FAFB; margin-top: 3px; }
+.post-meta  { font-size: 11px; color: #6B7280; margin-top: 4px; }
+.tabs { display: flex; background: #0D1626; border-bottom: 1px solid #1E2A3A; }
+.tab-btn { flex: 1; background: none; border: none; padding: 10px 4px; font-size: 12px; font-weight: 600; color: #6B7280; cursor: pointer; letter-spacing: 0.5px; border-bottom: 2px solid transparent; }
+.tab-btn.active { color: #F59E0B; border-bottom: 2px solid #F59E0B; }
+.tab-panel { display: none; padding: 16px; }
+.tab-panel.active { display: block; }
+.caption-box { background: #111827; border-radius: 8px; padding: 14px; white-space: pre-wrap; font-size: 14px; line-height: 1.7; color: #D1D5DB; word-break: break-word; }
+.hashtags { font-size: 12px; color: #0D9488; margin-top: 10px; line-height: 1.8; word-break: break-all; }
+.first-comment { background: #0A1628; border: 1px solid #1E2A3A; border-radius: 8px; padding: 12px 14px; margin-top: 12px; font-size: 13px; color: #9CA3AF; }
+.first-comment strong { display: block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #F59E0B; margin-bottom: 4px; }
+.copy-btn { display: block; width: 100%; margin-top: 10px; padding: 10px; background: #1E2A3A; border: 1px solid #374151; border-radius: 8px; color: #9CA3AF; font-size: 12px; font-weight: 600; cursor: pointer; text-align: center; }
+.copy-btn:active { background: #F59E0B; color: #0A0F1E; }
+.pill { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+.pill-tiktok { background: #1a1a2e; color: #E879F9; border: 1px solid #6D28D9; }
+.pill-ig     { background: #1a0a1e; color: #F9A8D4; border: 1px solid #9D174D; }
+.pill-fb     { background: #0a1228; color: #93C5FD; border: 1px solid #1D4ED8; }
+footer { text-align: center; padding: 30px 16px 0; font-size: 11px; color: #374151; }
+</style>
+<script>
+function switchTab(btn, group, platform) {
+  const block = btn.closest('.post-block');
+  block.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  block.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  block.querySelector('#' + group + '-' + platform).classList.add('active');
+}
+function copyText(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    btn.textContent = 'Copied!'; btn.style.background = '#F59E0B'; btn.style.color = '#0A0F1E';
+    setTimeout(() => { btn.textContent = 'Copy Caption'; btn.style.background=''; btn.style.color=''; }, 2000);
+  });
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Tito AI — W26 Monday Carousel</h1>
+  <p>June 22, 2026 · For approval by Joseph · @tito.aiph</p>
+</header>
+<div class="countdown">
+  <div class="dot"></div>
+  Carousel Post · Monday · 8:00 PM PHT · 5:00 AM PST
+</div>
+<div class="boost-badge">⭐ W26 Boost Week · <span>TikTok · Php 2,000/week — boost this post</span></div>
+
+<!-- SLIDES -->
+<div class="slides-label">
+  <div class="slides-label-text">5 Slides · Swipe to preview</div>
+  <div class="slides-label-count">1 / 5</div>
+</div>
+<div class="slides-strip">
+
+  <!-- SLIDE 1 — HOOK -->
+  <div class="slide-wrap">
+    <div class="slide-num">Slide 1 — Hook</div>
+    <div class="slide">
+      <div class="slide-eyebrow">Ang Sabi Nila · W26</div>
+      <div class="slide-body">
+        <div class="slide-quote">"Pang-matalino<br>lang <span class="accent">iyan.</span>"</div>
+        <div class="slide-sub">— Narinig mo na ba ito?</div>
+      </div>
+      <div class="slide-footer">
+        <div class="slide-brand">Tito AI</div>
+        <div class="slide-dots">
+          <div class="dot-pip active"></div><div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip"></div>
+        </div>
+        <div class="slide-handle">@tito.aiph</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — THE MYTH -->
+  <div class="slide-wrap">
+    <div class="slide-num">Slide 2 — Ang Iniisip Nila</div>
+    <div class="slide">
+      <div class="slide-eyebrow">Ang Sabi Nila · W26</div>
+      <div class="slide-body">
+        <div class="slide-quote" style="font-size:clamp(14px,4vw,20px)">Ang AI ay para lang sa mga <span class="accent">may degree,</span> may <span class="accent">tech background,</span> o "matalino."</div>
+        <div class="slide-sub" style="margin-top:12px">Ito ang pinakacommon na naririnig ko.</div>
+      </div>
+      <div class="slide-footer">
+        <div class="slide-brand">Tito AI</div>
+        <div class="slide-dots">
+          <div class="dot-pip"></div><div class="dot-pip active"></div><div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip"></div>
+        </div>
+        <div class="slide-handle">@tito.aiph</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — THE TRUTH -->
+  <div class="slide-wrap">
+    <div class="slide-num">Slide 3 — Ang Katotohanan</div>
+    <div class="slide">
+      <div class="slide-eyebrow">Ang Sabi Nila · W26</div>
+      <div class="slide-body">
+        <div class="slide-quote" style="font-size:clamp(15px,4.5vw,22px)">Ang AI ay hindi nagtatanong ng iyong <span class="accent">credentials.</span></div>
+        <div class="slide-sub" style="margin-top:10px">Ang tanging requirement?<br><span class="hi">Gustong matuto.</span></div>
+      </div>
+      <div class="slide-footer">
+        <div class="slide-brand">Tito AI</div>
+        <div class="slide-dots">
+          <div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip active"></div><div class="dot-pip"></div><div class="dot-pip"></div>
+        </div>
+        <div class="slide-handle">@tito.aiph</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — WHAT YOU CAN DO -->
+  <div class="slide-wrap">
+    <div class="slide-num">Slide 4 — Pwede Mong Gawin</div>
+    <div class="slide">
+      <div class="slide-eyebrow">Libre · Ngayon Na · Sa Iyong Phone</div>
+      <div class="slide-body">
+        <ul class="checklist">
+          <li><span class="check">✦</span> Mag-draft ng email o liham</li>
+          <li><span class="check">✦</span> Mag-translate ng kahit anong dokumento</li>
+          <li><span class="check">✦</span> Humingi ng simpleng paliwanag</li>
+          <li><span class="check">✦</span> Magplano ng linggo o negosyo</li>
+          <li><span class="check">✦</span> Sumagot sa mga tanong mo</li>
+        </ul>
+      </div>
+      <div class="slide-footer">
+        <div class="slide-brand">Tito AI</div>
+        <div class="slide-dots">
+          <div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip active"></div><div class="dot-pip"></div>
+        </div>
+        <div class="slide-handle">@tito.aiph</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — CTA -->
+  <div class="slide-wrap">
+    <div class="slide-num">Slide 5 — CTA</div>
+    <div class="slide">
+      <div class="slide-eyebrow">I-comment · Makipag-usap</div>
+      <div class="slide-body">
+        <div class="cta-big">Narinig mo na ba ito?</div>
+        <div class="yes-no">
+          <div class="yn-btn yn-yes">YES 👋</div>
+          <div class="yn-btn yn-no">NO 🤔</div>
+        </div>
+        <div class="slide-sub" style="margin-top:14px;font-size:clamp(10px,2.5vw,12px)">I-follow ang <span class="hi">@tito.aiph</span> para sa susunod na "Ang Sabi Nila" episode.</div>
+      </div>
+      <div class="slide-footer">
+        <div class="slide-brand">Tito AI</div>
+        <div class="slide-dots">
+          <div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip"></div><div class="dot-pip active"></div>
+        </div>
+        <div class="slide-handle">@tito.aiph</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end slides-strip -->
+
+<!-- CAPTIONS -->
+<div class="post-block">
+  <div class="post-header">
+    <div class="post-day">Monday · June 22 · W26 · Carousel</div>
+    <div class="post-title">Ang Sabi Nila: "Pang-Matalino Lang Iyan"</div>
+    <div class="post-meta">Swipe post · 5 slides · Myth-busting</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'car','tiktok')">TikTok</button>
+    <button class="tab-btn" onclick="switchTab(this,'car','ig')">Instagram</button>
+    <button class="tab-btn" onclick="switchTab(this,'car','fb')">Facebook</button>
+  </div>
+  <div id="car-tiktok" class="tab-panel active">
+    <span class="pill pill-tiktok">TikTok</span>
+    <div class="caption-box" id="car-tiktok-text">"Pang-matalino lang iyan." 👆 I-swipe.
+
+Ang AI ay hindi nagtatanong ng iyong credentials. Ang kailangan lang — gustong matuto.
+
+Sinabi ba ito sa iyo? YES o NO — i-comment! 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAI #AngSabiNila #AIPhilippines #TechParaSaLahat</div>
+    <button class="copy-btn" onclick="copyText('car-tiktok-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin within 5 min of posting</strong>Subukan mo ngayon: gemini.google.com — libre, walang sign-up. I-type ang kahit anong tanong mo. 😊</div>
+  </div>
+  <div id="car-ig" class="tab-panel">
+    <span class="pill pill-ig">Instagram</span>
+    <div class="caption-box" id="car-ig-text">"Pang-matalino lang iyan. Hindi para sa akin." 🤔
+
+I-swipe → 👆
+
+Noong nagtuturo na ako tungkol sa AI, ito ang pinaka-common na naririnig ko. Pero ito ang katotohanan:
+
+Ang AI ay hindi nagtatanong ng iyong background. Hindi nito hahanapin ang iyong credentials.
+
+Ang tanging requirement? Gustong matuto.
+
+✦ Mag-draft ng email o liham
+✦ Mag-translate ng kahit anong dokumento
+✦ Humingi ng simpleng paliwanag
+✦ Magplano ng linggo o negosyo mo
+
+Lahat — libre. Sa iyong phone. Ngayon na.
+
+Narinig mo na ba ang "pang-matalino lang iyan"? YES o NO — i-comment! 👇
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #GeminiAI #LibreAI #AngSabiNila #AIPhilippines #TechParaSaLahat #AITips #LibreAngAI #PagkakataonPH #FreelancerPH #NanayTatay #NegosyoPH #BPO</div>
+    <button class="copy-btn" onclick="copyText('car-ig-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin within 5 min of posting</strong>Subukan mo ngayon: gemini.google.com — libre, walang bayad. I-type ang kahit anong tanong mo. 😊</div>
+  </div>
+  <div id="car-fb" class="tab-panel">
+    <span class="pill pill-fb">Facebook</span>
+    <div class="caption-box" id="car-fb-text">Mga Pamangkin, ilang beses na ninyong narinig ito? 🤔
+
+"Pang-matalino lang iyan. Hindi para sa akin."
+
+Noong nagtuturo na ako tungkol sa AI, ito ang pinaka-common na naririnig ko — at naiintindihan ko kung bakit. Bago mo subukan ang isang bagong tool, normal lang ang mag-alinlangan.
+
+Pero ito ang katotohanan:
+
+Ang AI ay hindi nagtatanong ng iyong background. Hindi nito hahanapin ang iyong credentials, work history, o kung gaano ka "matalino." Ang kailangan lang — gustong subukan.
+
+Sa mga libre at libreng tools ngayon tulad ng Gemini at Claude:
+✦ Pwede kang mag-draft ng email o liham
+✦ Mag-translate ng kahit anong dokumento
+✦ Humingi ng malinaw na paliwanag sa anumang paksa
+✦ Magplano ng linggo, negosyo, o proyekto
+
+Lahat — libre. Sa iyong phone. Ngayon na.
+
+Narinig mo na ba ang "pang-matalino lang iyan"? I-comment ng YES o NO. 😊
+
+Ingat lagi, mga Pamangkin. @tito.aiph — AI Para Sa Ating Lahat. 🇵🇭</div>
+    <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AngSabiNila #LibreAI #GeminiAI</div>
+    <button class="copy-btn" onclick="copyText('car-fb-text')">Copy Caption</button>
+    <div class="first-comment"><strong>First Comment — pin within 5 min of posting</strong>Subukan mo ngayon: gemini.google.com — libre, walang bayad. I-type ang kahit anong tanong mo. 😊</div>
+  </div>
+</div>
+
+<footer>Tito AI — AI Para Sa Ating Lahat · W26 Monday Carousel · June 22, 2026</footer>
+</body>
+</html>
