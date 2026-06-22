@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Script — W26 Wed · Gemini para sa Guro · Tito AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff;--coral:#F97316;--green:#10B981;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.hdr{background:linear-gradient(135deg,#0D1520,#0A0F1E 55%,#0D1A2E);border-bottom:3px solid var(--gold);padding:32px 36px 24px;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:var(--gold);opacity:.06;pointer-events:none}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-teal{background:var(--teal);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(28px,5vw,48px);letter-spacing:1px;line-height:1.05;margin-bottom:6px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:13px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;gap:0;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:12px 16px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.drop-value{font-size:13px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:28px 32px 60px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.section-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:13px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.scene{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden}
+.scene-header{padding:12px 18px;background:var(--navy3);display:flex;align-items:center;gap:12px}
+.scene-time{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);min-width:90px}
+.scene-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white)}
+.scene-tag{margin-left:auto;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.tag-hook{background:var(--coral);color:var(--white)}
+.tag-setup{background:var(--teal);color:var(--white)}
+.tag-demo{background:#6366F1;color:var(--white)}
+.tag-point{background:var(--gold);color:var(--navy)}
+.tag-cta{background:var(--green);color:var(--navy)}
+.scene-body{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.direction{font-size:12px;color:var(--muted);font-style:italic;background:rgba(255,255,255,.03);border-left:2px solid var(--navy3);padding:8px 12px;border-radius:0 6px 6px 0}
+.dialogue{font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.75;color:var(--white);padding:4px 0}
+.dialogue strong{color:var(--gold);font-style:normal}
+.prompt-box{background:#0D1520;border:1px solid rgba(99,102,241,.4);border-left:3px solid #6366F1;border-radius:0 8px 8px 0;padding:14px 16px;font-family:monospace;font-size:13px;color:#C7D2FE;line-height:1.6;margin-top:4px}
+.onscreen{display:inline-flex;align-items:center;gap:7px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);border-radius:6px;padding:6px 12px;font-size:11px;font-weight:700;color:var(--gold);margin-top:4px}
+.onscreen::before{content:'🖥';font-style:normal}
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.note-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:10px;padding:14px 16px}
+.note-icon{font-size:18px;margin-bottom:6px;display:block}
+.note-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.note-text{font-size:12px;color:var(--gray);line-height:1.5}
+.note-text strong{color:var(--white)}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ftr span{font-size:11px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+@media(max-width:600px){
+  .hdr{padding:24px 20px 18px}
+  .main{padding:20px 16px 40px}
+  .drop-bar{flex-wrap:wrap}
+  .drop-cell{min-width:50%}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">W26 · Wednesday</span>
+    <span class="badge badge-teal">Demo Reel</span>
+    <span class="badge badge-navy">Split Screen · 75–85s</span>
+  </div>
+  <h1>Gemini para sa <span>Guro</span></h1>
+  <p class="hdr-sub">Lesson plan sa loob ng 3 minuto — libre, gamit ang iyong Gmail</p>
+</div>
+
+<div class="drop-bar">
+  <div class="drop-cell">
+    <div class="drop-label">Drop (PHT)</div>
+    <div class="drop-value gold">Wed Jun 25 · 7:00 PM</div>
+  </div>
+  <div class="drop-cell">
+    <div class="drop-label">Drop (PST)</div>
+    <div class="drop-value">Wed Jun 25 · 4:00 AM</div>
+  </div>
+  <div class="drop-cell">
+    <div class="drop-label">Platform</div>
+    <div class="drop-value">TikTok → IG → FB</div>
+  </div>
+  <div class="drop-cell">
+    <div class="drop-label">Target Length</div>
+    <div class="drop-value gold">75–85 seconds</div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div>
+    <div class="section-label">Script</div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+
+      <div class="scene">
+        <div class="scene-header">
+          <div class="scene-time">0:00–0:05</div>
+          <div class="scene-title">Hook</div>
+          <span class="scene-tag tag-hook">Hook</span>
+        </div>
+        <div class="scene-body">
+          <div class="direction">Face cam. Direct eye contact. No greeting — hook first. Calm, confident tone.</div>
+          <div class="dialogue">
+            "Mga Guro — ilang oras ang ginagastos mo sa lesson plan?<br>
+            Ipapakita ko sa inyo kung paano mo mababawasan iyon ngayon. Libre."
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header">
+          <div class="scene-time">0:05–0:15</div>
+          <div class="scene-title">Setup — Open Gemini</div>
+          <span class="scene-tag tag-setup">Setup</span>
+        </div>
+        <div class="scene-body">
+          <div class="direction">Cut to screen share. Show browser opening gemini.google.com. Log in via Gmail visible on screen.</div>
+          <div class="dialogue">
+            "Pumunta sa <strong>gemini.google.com</strong>.<br>
+            Log in gamit ang iyong Gmail — yung Gmail mo na rin.<br>
+            Walang bagong account. Libre."
+          </div>
+          <span class="onscreen">gemini.google.com — Log in sa Gmail ✓ LIBRE</span>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header">
+          <div class="scene-time">0:15–0:55</div>
+          <div class="scene-title">Live Demo</div>
+          <span class="scene-tag tag-demo">Demo</span>
+        </div>
+        <div class="scene-body">
+          <div class="direction">Split screen: face cam left, Gemini screen right. Type prompt slowly — readable on screen. Show output loading, then scroll through sections.</div>
+          <div class="dialogue">
+            "I-type natin ito:"
+          </div>
+          <div class="prompt-box">Gumawa ng lesson plan para sa Grade 4 Filipino — paksa: Paggamit ng Pang-uri.<br>45 minuto. Isama ang: layunin, panimula, gawain, pagtataya. Tagalog lang.</div>
+          <div class="dialogue" style="margin-top:12px">
+            "Tingnan ninyo — <strong>layunin</strong>, <strong>gawain</strong>, <strong>pagtataya</strong> — kumpleto.<br>
+            Hindi ito hula. Real output ito.<br>
+            I-copy mo, i-adjust mo sa iyong klase — <strong>tapos na</strong>."
+          </div>
+          <span class="onscreen">Show output sections with cursor — no text overlay needed</span>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header">
+          <div class="scene-time">0:55–1:15</div>
+          <div class="scene-title">The Point</div>
+          <span class="scene-tag tag-point">Point</span>
+        </div>
+        <div class="scene-body">
+          <div class="direction">Back to face cam. Lean slightly forward. Slower pace — let each line land.</div>
+          <div class="dialogue">
+            "Dati — isang oras ang lesson plan.<br>
+            Ngayon — tatlong minuto.<br><br>
+            Yung nakatipid na oras?<br>
+            <strong>Gamitin mo sa mga estudyante mo.</strong>"
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header">
+          <div class="scene-time">1:15–1:25</div>
+          <div class="scene-title">CTA + Closer</div>
+          <span class="scene-tag tag-cta">CTA</span>
+        </div>
+        <div class="scene-body">
+          <div class="direction">Warm smile. Natural energy — not selling. Slight nod at the end.</div>
+          <div class="dialogue">
+            "I-comment ang iyong subject — Math, Science, MAPEH, kahit ano —<br>
+            ipapakita ko ang exact prompt para sa 'yo.<br><br>
+            Ingat lagi, mga Pamangkin.<br>
+            <strong>Tito AI — AI Para Sa Ating Lahat.</strong>"
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <div class="section-label">Production Notes</div>
+    <div class="notes-grid">
+      <div class="note-card">
+        <span class="note-icon">🎥</span>
+        <div class="note-label">Format</div>
+        <div class="note-text"><strong>Split screen</strong> during demo — face cam left, Gemini screen right. Face cam only for hook, point, CTA.</div>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">🖥️</span>
+        <div class="note-label">Screen Recording</div>
+        <div class="note-text"><strong>Real Gemini session</strong> — actual prompt, actual output. Not a mockup. Show typing slowly.</div>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">🖱️</span>
+        <div class="note-label">Highlighting Output</div>
+        <div class="note-text">Use <strong>cursor hover</strong> to point at sections (layunin, gawain, etc.) — no text overlay on video.</div>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">⏱️</span>
+        <div class="note-label">Timing</div>
+        <div class="note-text"><strong>Target: 75–85 seconds.</strong> Don't rush the demo — let the output load visibly. Pause after "tapos na."</div>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">🎵</span>
+        <div class="note-label">Audio</div>
+        <div class="note-text"><strong>No music under voice.</strong> Add soft ambient in post if needed. Captions: Taglish, white text, black outline.</div>
+      </div>
+      <div class="note-card">
+        <span class="note-icon">📱</span>
+        <div class="note-label">Raw Assets Needed</div>
+        <div class="note-text">Face cam recording + screen recording of Gemini session. Drop in <strong>raw/</strong> folder.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="ftr">
+  <span>Tito AI · @TitoAIPH · W26 Wednesday Demo</span>
+  <b>AI PARA SA ATING LAHAT 🇵🇭</b>
+</div>
+
+</body>
+</html>

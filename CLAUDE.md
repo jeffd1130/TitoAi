@@ -159,6 +159,59 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 - **Buffer** — Social scheduling for IG + FB + TikTok. Workspace: `jeffd321@live.com` at buffer.com. @TitoAIPH connected on Instagram, Facebook Page, and TikTok. Use for scheduling posts after approval.
 - **Telegram bot** — `@titoaiph_bot` (bot ID: 8960239761). Token: `8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg`. Jeff's chat ID: `8325608814` (@JeffD331). Use `parse_mode=HTML` always (never Markdown — URL underscores break). Send approval notifications to chat ID `8325608814`.
 
+## Carousel slide production (PNG → Canva)
+
+Use this process for any carousel post (Mon AI tip, etc.) that needs custom-designed slides.
+
+**Step 1 — Build render HTML**
+- File: `/private/tmp/claude-501/…/scratchpad/w##-slides-render.html` (scratchpad, not committed)
+- Load Bebas Neue + DM Sans via Google Fonts link
+- Each `.slide` = 1080×1350px, `#0A0F1E` background
+- Title block: `.t-line` at 118px Bebas Neue — `.t-gold` (#F59E0B), `.t-white`, `.t-teal` (#0D9488)
+- Gold divider: `width:100%; height:3px; background: linear-gradient(90deg, #F59E0B 0%, rgba(245,158,11,.15) 100%)`
+- Footer: `docs/assets/logo-horizontal.png` at left (height:68px), 5 `.pip` dots at right (active pip = gold)
+- Logo src during render: `http://localhost:8765/assets/logo-horizontal.png` (served by HTTP server)
+
+**Step 2 — Serve + screenshot with Playwright**
+```bash
+# Kill any existing server on 8765, then start fresh
+lsof -ti:8765 | xargs kill -9 2>/dev/null; python3 -m http.server 8765 &
+```
+- Navigate browser to `http://localhost:8765/../scratchpad/w##-slides-render.html`
+- For each slide: `browser_evaluate` to scroll slide into viewport → `browser_resize` to 1080×1350 → `browser_take_screenshot`
+- Screenshots save to home dir by default — `cp ~/w##-s*.png docs/assets/` then move to `docs/slides/W##-mon/`
+
+**Step 3 — Name and store PNGs**
+```
+docs/slides/W##-mon/
+  slide-01-hook.png
+  slide-02-[name].png
+  slide-03-[name].png
+  slide-04-[name].png
+  slide-05-cta.png
+```
+
+**Step 4 — Upload to Canva + update design**
+1. Get public URL for each PNG: `curl -F "reqtype=fileupload" -F "fileToUpload=@file.png" https://catbox.moe/user/api.php`
+2. `upload-asset-from-url` for each PNG → get asset IDs
+3. `start-editing-transaction` on the carousel design ID
+4. `perform-editing-operations` — bulk `update_fill` all 5 pages in one call (pass array of operations)
+5. `commit-editing-transaction`
+6. **MUST call `get-design` after commit** → use the returned `edit_url` shortlink (never use design_id directly)
+
+**Step 5 — Update docs**
+- `docs/slides/W##-mon/*.png` → referenced in carousel HTML and captions HTML as `slides/W##-mon/slide-0n-name.png`
+- Update `docs/W##-mon-carousel.html`: replace CSS slide blocks with `<img>` tags referencing the PNGs
+- Add Canva block in captions HTML with fresh edit URL from `get-design`
+- Update `docs/links.html` W## section with new Canva URL
+
+**Canva carousel design IDs:**
+| Week | Design ID | Notes |
+|------|-----------|-------|
+| W26 Mon | `DAHNQUaAqEQ` | "Ang Sabi Nila" · 5 slides · Updated Jun 22 |
+
+---
+
 ## Video production
 
 **Multi-scene video assembly process (Canva MCP):**
@@ -172,6 +225,7 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 - `merge-designs` supports only 1 operation per API call — loop it for multiple scenes
 - No `add_page` operation in `perform-editing-operations` — must use `merge-designs` to add pages
 - Video clip timing/duration must be set manually in Canva UI after assembly
+- No rename/title operation available via MCP — rename manually in Canva UI if needed
 
 ## Intro video assets (Origin Story — Video 1)
 
