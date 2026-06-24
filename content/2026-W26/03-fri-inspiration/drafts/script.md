@@ -15,11 +15,10 @@ Hindi ko inakala itong mangyayari.
 Noong una — walang subscribers. Walang views.
 Nag-post ako ng unang video nang hindi alam kung may manonood.
 
-Tapos may nag-comment.
-Hindi puro "nice" o "salamat" —
-kundi: *"Tito, nakatulong ito sa akin. Ginamit ko na sa trabaho ko."*
+Tapos may nagsimulang sumagot.
+Hindi lang puri — kundi may nagpahayag na talagang nakatulong.
 
-Iyon.
+Iyon ang hinihintay ko.
 Iyon ang rason kung bakit ako nagpatuloy.
 
 **[THE POINT — 40–65s · Lean in · Slower pace]**
