@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #000; display: flex; flex-direction: column; gap: 20px; padding: 20px; }
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: #0A0F1E;
+  padding: 70px 72px 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  flex-shrink: 0;
+}
+
+.title { margin-bottom: 22px; }
+.t-line {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 118px;
+  line-height: 1.0;
+  letter-spacing: 3px;
+  display: block;
+}
+.t-white { color: #FFFFFF; }
+.t-gold  { color: #F59E0B; }
+.t-teal  { color: #0D9488; }
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #F59E0B 0%, rgba(245,158,11,.15) 100%);
+  margin-bottom: 40px;
+  flex-shrink: 0;
+}
+
+.body { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; }
+
+.body-lg {
+  font-size: 52px;
+  color: #E5E7EB;
+  line-height: 1.4;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+.body-md {
+  font-size: 44px;
+  color: #9CA3AF;
+  line-height: 1.45;
+}
+.accent { color: #F59E0B; }
+.teal   { color: #0D9488; }
+
+.quote-box {
+  background: #111827;
+  border-left: 5px solid #F59E0B;
+  border-radius: 0 14px 14px 0;
+  padding: 30px 36px;
+  margin-bottom: 28px;
+}
+.quote-box.teal-border { border-left-color: #0D9488; }
+.quote-text { font-size: 42px; color: #D1D5DB; line-height: 1.5; font-style: italic; }
+.quote-attr { font-size: 36px; color: #F59E0B; margin-top: 18px; font-weight: 600; }
+
+.step-list { list-style: none; }
+.step-list li {
+  font-size: 44px;
+  color: #E5E7EB;
+  padding: 22px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 1px solid rgba(30,42,58,.9);
+  line-height: 1.35;
+  font-weight: 400;
+}
+.step-list li:last-child { border-bottom: none; }
+.step-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  color: #F59E0B;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.prompt-box {
+  background: #0D1520;
+  border: 1px solid rgba(99,102,241,.4);
+  border-left: 5px solid #6366F1;
+  border-radius: 0 14px 14px 0;
+  padding: 28px 32px;
+  font-size: 38px;
+  color: #C7D2FE;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+.prompt-label {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6366F1;
+  margin-bottom: 14px;
+}
+
+.yes-no { display: flex; gap: 28px; margin-bottom: 48px; }
+.yn-btn {
+  flex: 1; padding: 36px 0;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+}
+.yn-yes { background: rgba(245,158,11,.15); color: #F59E0B; border: 4px solid #F59E0B; }
+.yn-no  { background: rgba(30,42,58,.6);    color: #6B7280; border: 4px solid #374151; }
+.handle { font-size: 42px; color: #9CA3AF; line-height: 1.5; }
+.handle span { color: #0D9488; font-weight: 600; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 2px solid #1E2A3A;
+  margin-top: 28px;
+  flex-shrink: 0;
+}
+.logo { height: 68px; object-fit: contain; opacity: .9; }
+.dots { display: flex; gap: 14px; align-items: center; }
+.pip { width: 18px; height: 18px; border-radius: 50%; background: #1E2A3A; }
+.pip.active { background: #F59E0B; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — HOOK -->
+<div class="slide" id="s1">
+  <div class="title">
+    <span class="t-line t-gold">ILANG</span>
+    <span class="t-line t-white">ORAS ANG</span>
+    <span class="t-line t-teal">LESSON PLAN?</span>
+  </div>
+  <div class="divider"></div>
+  <div class="body">
+    <div class="body-lg">Narinig ko ito sa maraming guro.</div>
+    <div class="quote-box">
+      <div class="quote-text">"Hapon na. Pagod na. Tapos magsisimula pa lang ako sa lesson plan."</div>
+      <div class="quote-attr">— Bawat Guro, Bawat Linggo.</div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" class="logo">
+    <div class="dots">
+      <div class="pip active"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2 — ANG SOLUSYON -->
+<div class="slide" id="s2">
+  <div class="title">
+    <span class="t-line t-white">ANG</span>
+    <span class="t-line t-gold">SOLUSYON</span>
+  </div>
+  <div class="divider"></div>
+  <div class="body">
+    <div class="body-lg"><span class="accent">Gemini</span> — ang AI ng Google.</div>
+    <div class="body-md">Libre. Gamit ang iyong Gmail na rin. Walang bagong account. Walang bayad.</div>
+    <div class="quote-box teal-border" style="margin-top:32px">
+      <div class="quote-text" style="font-style:normal;font-weight:700;color:#F9FAFB">Pumunta sa:</div>
+      <div class="quote-attr" style="font-size:52px;color:#0D9488">gemini.google.com</div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" class="logo">
+    <div class="dots">
+      <div class="pip"></div><div class="pip active"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3 — ANG PROMPT -->
+<div class="slide" id="s3">
+  <div class="title">
+    <span class="t-line t-teal">I-TYPE</span>
+    <span class="t-line t-white">ITO</span>
+  </div>
+  <div class="divider"></div>
+  <div class="body">
+    <div class="prompt-box">
+      <div class="prompt-label">Ang Prompt</div>
+      Gumawa ng lesson plan para sa Grade 4 Filipino — paksa: Paggamit ng Pang-uri. 45 minuto. Isama ang: layunin, panimula, gawain, pagtataya. Tagalog lang.
+    </div>
+    <div class="body-md" style="margin-top:8px">I-adjust lang ang <span class="accent">grade</span> at <span class="accent">paksa</span> — tapos ka na.</div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" class="logo">
+    <div class="dots">
+      <div class="pip"></div><div class="pip"></div><div class="pip active"></div><div class="pip"></div><div class="pip"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 — ANG RESULTA -->
+<div class="slide" id="s4">
+  <div class="title">
+    <span class="t-line t-white">ANG</span>
+    <span class="t-line t-gold">RESULTA</span>
+  </div>
+  <div class="divider"></div>
+  <div class="body">
+    <ul class="step-list">
+      <li><span class="step-num">✦</span>Layunin — kumpleto</li>
+      <li><span class="step-num">✦</span>Gawain sa loob ng klase</li>
+      <li><span class="step-num">✦</span>Paraan ng pagtataya</li>
+      <li><span class="step-num">✦</span>Sa Tagalog. Sa 3 minuto.</li>
+    </ul>
+    <div class="body-md" style="margin-top:28px"><span class="accent" style="font-weight:700">Dati: 1 oras. Ngayon: 3 minuto.</span></div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" class="logo">
+    <div class="dots">
+      <div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip active"></div><div class="pip"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5 — CTA -->
+<div class="slide" id="s5">
+  <div class="title">
+    <span class="t-line t-white">SUBUKAN</span>
+    <span class="t-line t-gold">MO</span>
+    <span class="t-line t-white">NGAYON?</span>
+  </div>
+  <div class="divider"></div>
+  <div class="body">
+    <div class="yes-no">
+      <div class="yn-btn yn-yes">OO 👋</div>
+      <div class="yn-btn yn-no">HINDI 🤔</div>
+    </div>
+    <div class="handle">I-comment sa baba.<br>@tito.aiph — <span>AI Para Sa Ating Lahat</span> 🇵🇭</div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" class="logo">
+    <div class="dots">
+      <div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip active"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
