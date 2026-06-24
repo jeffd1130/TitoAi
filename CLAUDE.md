@@ -177,9 +177,9 @@ Use this process for any carousel post (Mon AI tip, etc.) that needs custom-desi
 # Kill any existing server on 8765, then start fresh
 lsof -ti:8765 | xargs kill -9 2>/dev/null; python3 -m http.server 8765 &
 ```
-- Navigate browser to `http://localhost:8765/../scratchpad/w##-slides-render.html`
+- **Copy render HTML into `docs/` first** — Playwright can't path-traverse above the server root, so `http://localhost:8765/../scratchpad/...` fails. Use `http://localhost:8765/w##-slides-render.html` from the docs/ root.
 - For each slide: `browser_evaluate` to scroll slide into viewport → `browser_resize` to 1080×1350 → `browser_take_screenshot`
-- Screenshots save to home dir by default — `cp ~/w##-s*.png docs/assets/` then move to `docs/slides/W##-mon/`
+- Screenshots save to home dir by default — move to `docs/slides/W##-mon/`
 
 **Step 3 — Name and store PNGs**
 ```
@@ -193,9 +193,10 @@ docs/slides/W##-mon/
 
 **Step 4 — Upload to Canva + update design**
 1. Get public URL for each PNG: `curl -F "reqtype=fileupload" -F "fileToUpload=@file.png" https://catbox.moe/user/api.php`
+   - **If catbox.moe times out:** commit PNGs to GitHub and use `https://raw.githubusercontent.com/jeffd1130/TitoAi/main/docs/slides/W##-xxx/slide-0n-name.png`
 2. `upload-asset-from-url` for each PNG → get asset IDs
 3. `start-editing-transaction` on the carousel design ID
-4. `perform-editing-operations` — bulk `update_fill` all 5 pages in one call (pass array of operations)
+4. `perform-editing-operations` — **one call per page** (5 separate calls for 5 slides). `page_index` is a **TOP-LEVEL parameter** of the API call — NOT inside the operations array. Operation format: `{"type":"update_fill","element_id":"...","asset_type":"image","asset_id":"...","alt_text":"..."}`
 5. `commit-editing-transaction`
 6. **MUST call `get-design` after commit** → use the returned `edit_url` shortlink (never use design_id directly)
 

@@ -12,14 +12,16 @@ Isang buwan na.
 Hindi ko inakala itong mangyayari.
 
 **[THE STORY — 5–40s · Warm, personal, slow]**
-Noong una — walang subscribers. Walang views.
-Nag-post ako ng unang video nang hindi alam kung may manonood.
+Noong una — hindi alam kung may makikinig.
+Bago mag-post ng unang video, maraming tanong sa sarili.
 
-Tapos may nagsimulang sumagot.
-Hindi lang puri — kundi may nagpahayag na talagang nakatulong.
+Pero nagsimula pa rin.
+Nag-post. Bumalik. Nag-post ulit.
 
-Iyon ang hinihintay ko.
-Iyon ang rason kung bakit ako nagpatuloy.
+At ngayon — isang buwan na pala.
+
+Iyon ang hindi ko inakala mangyayari.
+Iyon ang pinaka-importanteng resulta.
 
 **[THE POINT — 40–65s · Lean in · Slower pace]**
 Hindi kailangan ng malaking audience para makatulong.
