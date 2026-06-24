@@ -322,7 +322,8 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 
 ## Working principles
 
-1. **Brand first.** Navy + gold. Warm Tito energy. Never corporate-looking.
+1. **No fabrication.** Never invent quotes, comments, metrics, follower reactions, or events. If a script element requires a real detail that isn't confirmed, keep it general or flag it to Jeff.
+2. **Brand first.** Navy + gold. Warm Tito energy. Never corporate-looking.
 2. **Taglish always.** Captions and scripts are in Taglish. No pure English unless quoting a tool.
 3. **Free tools only.** Never recommend or reference paid tools in content.
 4. **Short over long.** 60–90 seconds is the ceiling. Ask before going longer.
