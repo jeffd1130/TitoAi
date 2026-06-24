@@ -209,6 +209,7 @@ docs/slides/W##-mon/
 | Week | Design ID | Notes |
 |------|-----------|-------|
 | W26 Mon | `DAHNQUaAqEQ` | "Ang Sabi Nila" · 5 slides · Updated Jun 22 |
+| W26 Wed | `DAHNc6_o6mg` | "Gemini para sa Guro" · 5 slides · Jun 24 |
 
 ---
 
