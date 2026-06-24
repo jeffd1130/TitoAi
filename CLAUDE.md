@@ -1,6 +1,6 @@
 # Tito AI — Social Media Automation
 
-You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI**, a Filipino AI education channel created by Joseph de las Armas (@TitoAIPH). The channel teaches everyday Filipinos how to use AI tools — free, no jargon, in Taglish.
+You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI**, a Filipino AI education channel created by Jeff de las Armas (@TitoAIPH). The channel teaches everyday Filipinos how to use AI tools — free, no jargon, in Taglish.
 
 Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
 
@@ -14,7 +14,7 @@ Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent.
 | Wednesday | `02-wed-demo` | Tutorial / Demo Reel (60–90s) | 7:00 PM | `produce-post` |
 | Friday | `03-fri-inspiration` | Story / Inspiration Reel (60–90s) | 7:00 PM | `produce-post` |
 
-All times are **PHT (UTC+8)**. Joseph is in **San Jose, CA (PST, UTC-7)**, so:
+All times are **PHT (UTC+8)**. Jeff is in **San Jose, CA (PST, UTC-7)**, so:
 - 8:00 PM PHT = 5:00 AM PST (same day)
 - 7:00 PM PHT = 4:00 AM PST
 
@@ -39,7 +39,7 @@ The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 
 - Source: `docs/index.html` + `docs/assets/*.png` + `docs/scripts/*.html` in the `main` branch `/docs` folder
 - **Not just approval** — full hub with: About / This Week spotlight / June 2026 content calendar / Approval links
-- Sections: About (Joseph + pillars + voice + brand), Current Week, June–July Calendar (W26–W28), Approval
+- Sections: About (Jeff + pillars + voice + brand), Current Week, June–July Calendar (W26–W28), Approval
 - Rebuilt manually or via `update-approval-page` skill after each production run
 - **Scripts** — production scripts saved as HTML to `docs/scripts/<week>-<slot>-script.html` and linked from the calendar card. Copy the branded script template from any existing script in that folder.
 
@@ -127,7 +127,7 @@ Visual identity lives in Canva — see `brand/README.md`.
 content/
   2026-W22/
     01-mon-ai-tip/
-      raw/          ← Joseph drops video/photos here (D-3)
+      raw/          ← Jeff drops video/photos here (D-3)
       drafts/       ← D-2 exports here (cover graphic + draft URL)
       approved/     ← D-1 moves approved here
       brief.md      ← optional context note
@@ -233,7 +233,7 @@ docs/slides/W##-mon/
 
 **Finished export:** `Finished/Tito Ai Intro.mp4` (255MB · 6-scene · 1080×1920 · ready to post)
 **Post design (approval draft):** `DAHKj9hQPYw` — edit: `https://www.canva.com/d/ldOIk0NrlQiKFWq`
-**Drop:** Friday May 29, 2026 · 7:00 PM PHT · **Status: Draft — pending Joseph approval**
+**Drop:** Friday May 29, 2026 · 7:00 PM PHT · **Status: Draft — pending Jeff approval**
 **Captions:** `content/2026-W22/03-fri-inspiration/drafts/captions.md` · W22 approval page: `https://jeffd1130.github.io/TitoAi/W22-captions.html`
 
 **Merged 6-scene assembly:** `DAHKkLR22UY` — edit: `https://www.canva.com/d/RE4msPrzxaRZycB`
@@ -329,17 +329,17 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 3. **Free tools only.** Never recommend or reference paid tools in content.
 4. **Short over long.** 60–90 seconds is the ceiling. Ask before going longer.
 5. **One question max.** If clarification is needed, ask the single most important question.
-6. **PHT first.** Every draft output should show the PHT drop time. Add PST as secondary reference for Joseph.
+6. **PHT first.** Every draft output should show the PHT drop time. Add PST as secondary reference for Jeff.
 7. **Parallel agents always.** For multi-slot tasks, spin concurrent agents. `produce-week` runs all 3 slots in parallel.
 8. **No text overlays.** Videos are clean — footage + Tito AI logo only. No text, captions, or graphic overlays on the video itself.
 9. **Don't post.** You produce drafts. Posting is always Tito AI's call.
 10. **Platform-specific captions.** TikTok (short, 8 hashtags), Instagram (medium, 15 hashtags), Facebook (story-length, 6 hashtags). Never use one caption for all three.
-11. **Virality checklist (post day):** First 3 seconds = silent hook + direct eye contact. Native upload to each platform (no cross-posting). Joseph seeds first comment within 5 min of posting.
+11. **Virality checklist (post day):** First 3 seconds = silent hook + direct eye contact. Native upload to each platform (no cross-posting). Jeff seeds first comment within 5 min of posting.
 
 ---
 
 ## When something is missing
 
-- **Raw assets missing** → tell Jeff which slot is empty, suggest Joseph drop video in `Videos/<content-type>/`
+- **Raw assets missing** → tell Jeff which slot is empty, suggest Jeff drop video in `Videos/<content-type>/`
 - **Canva not connected** → stop, surface the connection step
 - **Brand kit not found** → check `brand/README.md`

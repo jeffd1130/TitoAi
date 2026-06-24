@@ -3,7 +3,7 @@
 **Transcribed:** Whisper (small model) · May 28, 2026
 **Drop:** Friday, May 29, 2026 · 7:00 PM PHT · 4:00 AM PST
 
-## What Joseph Actually Says in the Video
+## What Jeff Actually Says in the Video
 
 - Hook: "Gusto nyo ba malaman kung paano kumabot sa Silicon Valley — just because I'm a household dad?"
 - Needed a website for graphic design side hustle

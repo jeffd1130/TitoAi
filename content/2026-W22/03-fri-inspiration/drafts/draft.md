@@ -6,9 +6,9 @@
 **Video:** `Finished/Tito Ai Intro.mp4` (244MB · 2:47 · 1440×2560)
 **Canva cover design:** DAHKj9hQPYw
 **Canva edit URL:** https://www.canva.com/d/ldOIk0NrlQiKFWq
-**Status:** Draft — pending Joseph approval
+**Status:** Draft — pending Jeff approval
 
-**Note on duration:** Video is 2:47 — fine for TikTok and Facebook. Instagram Reels may truncate at 90s unless extended length is enabled on Joseph's account.
+**Note on duration:** Video is 2:47 — fine for TikTok and Facebook. Instagram Reels may truncate at 90s unless extended length is enabled on Jeff's account.
 
 ---
 

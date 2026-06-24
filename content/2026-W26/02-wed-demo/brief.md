@@ -28,6 +28,6 @@ Tagalog lang.
 - Shows free tool + Gmail login = removes biggest barrier ("may bayad ba?")
 
 ## Raw assets needed
-- Joseph records face cam (reaction / voice-over)
+- Jeff records face cam (reaction / voice-over)
 - Screen recording of Gemini session (actual prompt + output)
 - Drop in: `content/2026-W26/02-wed-demo/raw/`

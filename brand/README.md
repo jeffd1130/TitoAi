@@ -5,7 +5,7 @@
 - **Channel name:** Tito AI
 - **Handle:** @TitoAIPH (TikTok, Instagram, Facebook)
 - **Tagline:** "AI Para Sa Ating Lahat"
-- **Creator:** Joseph de las Armas — Household Dad · Graphic Designer · AI Practitioner
+- **Creator:** Jeff de las Armas — Household Dad · Graphic Designer · AI Practitioner
 - **Location:** San Jose, CA (Silicon Valley)
 - **Audience name:** Mga Pamangkin
 - **Fanbase greeting:** "Kumusta, mga Pamangkin!" / "Ingat lagi, mga Pamangkin."
@@ -55,8 +55,8 @@
 - **Gold accent** — headlines, lines, logo elements
 - **Hero media in framed window** — not full-bleed; breathing room above and below
 - **Bebas Neue bold headline** — large, white, takes upper portion of frame
-- **Warm, human** — Joseph at home, natural light, real setting
-- **No stock photos.** Always real: real screen, real Joseph, real output.
+- **Warm, human** — Jeff at home, natural light, real setting
+- **No stock photos.** Always real: real screen, real Jeff, real output.
 
 ## Voice
 

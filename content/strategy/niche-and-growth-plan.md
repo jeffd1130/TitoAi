@@ -320,7 +320,7 @@ Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instag
 
 ---
 
-## Analytics pull (Joseph)
+## Analytics pull (Jeff)
 
 Pull these from inside the apps — pages are too new to be externally indexed:
 

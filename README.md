@@ -1,16 +1,16 @@
 # Tito AI — Social Media Content System
 
-Weekly content production for **@TitoAIPH** — a Filipino AI education channel by Joseph de las Armas.
+Weekly content production for **@TitoAIPH** — a Filipino AI education channel by Jeff de las Armas.
 
 > *"AI Para Sa Ating Lahat" — Kumusta mga Pamangkin!*
 
 ## What this repo does
 
 Automates the D-3 → D-0 content production workflow:
-1. Joseph drops video/photo assets into `content/<week>/<slot>/raw/`
+1. Jeff drops video/photo assets into `content/<week>/<slot>/raw/`
 2. Jeff runs the production skills → Canva cover graphics + Taglish captions + approval page
-3. Joseph reviews at the GitHub Pages approval site
-4. Joseph publishes to TikTok, Facebook, and Instagram Reels
+3. Jeff reviews at the GitHub Pages approval site
+4. Jeff publishes to TikTok, Facebook, and Instagram Reels
 
 ## Approval site
 

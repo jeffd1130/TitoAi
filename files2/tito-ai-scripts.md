@@ -1,5 +1,5 @@
 # TITO AI — Video Scripts
-### 3 Launch Videos · Taglish · Written by Joseph de las Armas
+### 3 Launch Videos · Taglish · Written by Jeff de las Armas
 
 ---
 

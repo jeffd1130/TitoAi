@@ -75,4 +75,4 @@ Ang mga ginagawa ko: [task 1], [task 2], [task 3].
 Wala akong degree pero marami akong experience.
 Gawing professional at maayos.
 ```
-*(Suggest Joseph fills in his own example — e.g. "admin assistant" → makes it feel real)*
+*(Suggest Jeff fills in his own example — e.g. "admin assistant" → makes it feel real)*
