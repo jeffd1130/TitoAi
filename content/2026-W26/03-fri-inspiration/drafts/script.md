@@ -1,5 +1,5 @@
 # W26 Fri — Script Draft
-**Topic:** 1 Buwan Kasama Tito AI — Ang Resulta
+**Topic:** Claude at Gemini — Nagbabago. Kaya Mo Pa Ba?
 **Format:** Story / Inspiration Reel · Talking head · 75–90s
 **Drop:** Fri Jun 27, 2026 · 7:00 PM PHT / 4:00 AM PST
 
@@ -8,39 +8,56 @@
 ## SCRIPT
 
 **[HOOK — 0–5s · Face cam · No greeting · Direct]**
-Isang buwan na.
-Hindi ko inakala itong mangyayari.
+Claude. Gemini.
+Naglabas na naman ng bagong updates — ngayong buwan pa lang.
 
-**[THE STORY — 5–40s · Warm, personal, slow]**
-Noong una — hindi alam kung may makikinig.
-Bago mag-post ng unang video, maraming tanong sa sarili.
+**[THE STORY — 5–40s · Warm, unhurried. Validate first, then reframe.]**
+Alam ko ang nararamdaman.
 
-Pero nagsimula pa rin.
-Nag-post. Bumalik. Nag-post ulit.
+Bawat linggo — may bago.
+Bawat buwan — may upgrade.
 
-At ngayon — isang buwan na pala.
+Parang nagsimula ka pa lang matuto —
+tapos bago matapos ang lesson —
+nag-iba na ang tool.
 
-Iyon ang hindi ko inakala mangyayari.
-Iyon ang pinaka-importanteng resulta.
+Nakakapagod.
+Nakakalito.
 
-**[THE POINT — 40–65s · Lean in · Slower pace]**
-Hindi kailangan ng malaking audience para makatulong.
-Kailangan lang ng isang tao na marinig ang tamang mensahe
-sa tamang oras.
+Pero — dito ka makinig.
 
-Kung nanonood ka ngayon —
-ikaw ang rason.
+Hindi iyon problema.
+Iyon ay balita.
 
-**[THE PROMISE — 65–80s · Energy lifts slightly]**
-Sa July — mas marami pang lessons.
-Mas maraming tools. Libre pa rin lahat.
-Mas maraming Pamangkin.
+**[THE POINT — 40–65s · Lean in. Slower. Eye contact.]**
+Kapag nag-upgrade ang Claude o Gemini —
+sino ang nakikinabang?
 
-Sama-sama tayong patuloy na matututo.
+Ang taong gumagamit na.
 
-**[CTA — 80–90s · Warm smile · Nod]**
+Hindi ang naghihintay.
+
+Libre pa rin iyan — pareho.
+At mas malakas ngayon kaysa noong nakaraang buwan.
+
+Ibig sabihin — kung nagsimula ka ngayon,
+ang tool na gagamitin mo bukas —
+mas makapangyarihan pa.
+
+**[THE PROMISE — 65–80s · Energy lifts. Forward-looking.]**
+Sa July — sasagutin natin:
+Ano sa Claude, ano sa Gemini — ang mahalaga para sa atin.
+
+Para sa guro.
+Para sa freelancer.
+Para sa nanay na may negosyo.
+
+Hindi lahat ng update — ang mahalaga sa iyo.
+
+**[CTA — 80–90s · Warm smile. Direct question.]**
 I-comment sa baba —
-Ano ang pinaka-natutuhan mo sa Tito AI ngayong unang buwan?
+Claude o Gemini — alin ang ginagamit mo ngayon?
+O wala pa? Okay lang — iyon ang simula natin.
 
 Ingat lagi, mga Pamangkin.
 Tito AI — AI Para Sa Ating Lahat.
@@ -48,10 +65,12 @@ Tito AI — AI Para Sa Ating Lahat.
 ---
 
 ## PRODUCTION NOTES
-- Pure face cam — no B-roll, no screen share
+- Pure face cam — no B-roll, no screen share (Friday = story, not demo)
 - Lighting: warm, natural — home setting
-- Tone: vulnerable at the start, warm throughout, hopeful at the end
-- Pause after "iyon" — let it breathe
-- Do NOT rush the story section — 5–40s should feel unhurried
+- Hook delivery: matter-of-fact, not alarming — just the news, straight
+- Story section: slow down on "Nakakapagod. Nakakalito." — let it sit
+- Hard pause before "Pero — dito ka makinig." — pivot moment
+- Point section: lean slightly forward, deliberate pace, genuine eye contact
+- CTA: smile on "Okay lang iyon" — warmth is the whole point
 - Target: 80–90 seconds
-- No music under voice — add soft ambient in post if needed
+- Soft ambient music optional in post — keep voice clean
