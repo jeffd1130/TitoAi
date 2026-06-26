@@ -349,7 +349,7 @@ All scripts live in `automation/`. They run via Mac crontab (Mac is PST/UTC-8; P
 
 | Script | Purpose | Cron (PST) | Fires (PHT) |
 |--------|---------|-----------|-------------|
-| `tito-summary.py` | Daily status: current/next/upcoming weeks + today's drops | `0 16 * * *` | 8:00 AM PHT daily |
+| `tito-summary.py` | Daily status: current/next/upcoming weeks + today's drops | `0 18 * * *` | 10:00 AM PHT daily |
 | `tito-remind.py` | Drop-day reminder: fires 1hr before each post | Mon `0 3 * * 1`, Wed `0 2 * * 3`, Fri `0 2 * * 5` | 7PM Mon / 6PM Wed+Fri PHT |
 | `tito-weekly.py` | Saturday production checklist: shows what still needs scripting/captions for next 2 weeks | `0 17 * * 5` | 9:00 AM PHT Saturday |
 

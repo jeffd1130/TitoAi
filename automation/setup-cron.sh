@@ -3,7 +3,7 @@
 # Mac is PST (UTC-8). PHT (UTC+8) = PST + 16 hours.
 #
 # Schedule:
-#   Daily summary:        8:00 AM PHT = 4:00 PM PST (day before)  → 0 16 * * *
+#   Daily summary:       10:00 AM PHT = 6:00 PM PST (day before)  → 0 18 * * *
 #   Mon drop reminder:    7:00 PM PHT = 3:00 AM PST Monday        → 0 3 * * 1
 #   Wed drop reminder:    6:00 PM PHT = 2:00 AM PST Wednesday     → 0 2 * * 3
 #   Fri drop reminder:    6:00 PM PHT = 2:00 AM PST Friday        → 0 2 * * 5
@@ -27,8 +27,8 @@ MARKER_START="# --- Tito AI Automation ---"
 MARKER_END="# --- End Tito AI Automation ---"
 
 NEW_BLOCK="$MARKER_START
-# Daily summary at 8:00 AM PHT (4:00 PM PST — Mac awake)
-0 16 * * * $PYTHON $SCRIPT_DIR/tito-summary.py >> $LOG 2>&1
+# Daily summary at 10:00 AM PHT (6:00 PM PST — Mac awake)
+0 18 * * * $PYTHON $SCRIPT_DIR/tito-summary.py >> $LOG 2>&1
 # Monday drop reminder at 7:00 PM PHT (3:00 AM PST)
 0 3 * * 1 $PYTHON $SCRIPT_DIR/tito-remind.py >> $LOG 2>&1
 # Wednesday drop reminder at 6:00 PM PHT (2:00 AM PST)
