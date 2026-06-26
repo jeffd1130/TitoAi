@@ -74,11 +74,18 @@
   .boost.Facebook{background:rgba(96,165,250,.1);color:var(--fb);border:1px solid rgba(96,165,250,.3)}
   .arr{color:var(--gold);font-size:17px;flex:none}
 
-  .today{display:flex;align-items:center;gap:12px;padding:6px 2px;margin:2px 0}
-  .today .hr{height:2px;flex:1}
-  .today .hr.l{background:linear-gradient(90deg,transparent,var(--gold))}
-  .today .hr.r{background:linear-gradient(90deg,var(--gold),transparent)}
-  .today .lbl{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--gold);white-space:nowrap}
+  /* TODAY box */
+  .today-box{background:rgba(245,158,11,.07);border:2px solid rgba(245,158,11,.45);border-radius:14px;padding:18px 22px;margin-bottom:28px;display:flex;align-items:center;gap:18px}
+  .today-box .pulse{width:11px;height:11px;border-radius:50%;background:var(--gold);flex:none;animation:pulse 1.8s infinite}
+  .today-box .td{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--gold);line-height:1}
+  .today-box .ts{font-size:12px;color:var(--gray);margin-top:4px;line-height:1.5}
+  .today-box .ts b{color:#E5E7EB}
+  /* Section headers */
+  .sec-hdr{display:flex;align-items:center;gap:12px;margin:24px 0 12px}
+  .sec-hdr .lbl{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+  .sec-hdr.upcoming .lbl{color:var(--gold)}
+  .sec-hdr.completed .lbl{color:var(--mute)}
+  .sec-hdr .hr{flex:1;height:1px;background:var(--line)}
 
   .foot{border-top:1px solid var(--line);padding-top:18px;margin-top:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
   .foot .nm{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--mute)}
@@ -208,46 +215,74 @@ function render(){
   document.getElementById('hublink').href = DATA.base || '#';
   document.getElementById('upd').textContent = DATA.updated ? ('updated ' + DATA.updated) : 'live';
 
-  // flatten for stats (ascending order)
+  // flatten for stats
   const all = [];
   DATA.weeks.forEach(w => (w.posts||[]).forEach(p => all.push(p)));
   const total = all.length;
-  const shipped = all.filter(p => STATUS_GROUP[p.status]==='shipped').length;
-  const upcoming = total - shipped;
+  const shippedCount = all.filter(p => STATUS_GROUP[p.status]==='shipped').length;
+  const upcomingCount = total - shippedCount;
   const boostWeeks = DATA.weeks.filter(w => w.boost).length;
   document.getElementById('stats').innerHTML =
-    stat(total,'#fff','TOTAL POSTS') + stat(shipped,'var(--green)','SHIPPED') +
-    stat(upcoming,'var(--gold)','UPCOMING') + stat(boostWeeks,'var(--tiktok)','BOOST WEEKS');
+    stat(total,'#fff','TOTAL POSTS') + stat(shippedCount,'var(--green)','SHIPPED') +
+    stat(upcomingCount,'var(--gold)','UPCOMING') + stat(boostWeeks,'var(--tiktok)','BOOST WEEKS');
 
-  // render newest-first: reverse weeks for display
+  // newest-first
   const weeksDesc = [...DATA.weeks].reverse();
-  // flatten reversed to find where TODAY divider goes (first shipped post = upcoming→past boundary)
-  const allDesc = [];
-  weeksDesc.forEach(w => (w.posts||[]).forEach(p => allDesc.push(p)));
-  const firstShipped = allDesc.findIndex(p => STATUS_GROUP[p.status]==='shipped');
-  let seen = 0, dividerPlaced = false;
+  // partition: a week is "upcoming" if any post is upcoming; "completed" only if all posts shipped
+  const upWeeks  = weeksDesc.filter(w => (w.posts||[]).some(p => STATUS_GROUP[p.status]==='upcoming'));
+  const doneWeeks = weeksDesc.filter(w => (w.posts||[]).every(p => STATUS_GROUP[p.status]==='shipped'));
 
-  let html = '';
-  weeksDesc.forEach(w => {
-    const rows = (w.posts||[]).map(p => {
-      const grp = STATUS_GROUP[p.status] || 'upcoming';
-      const visible = (FILTER==='all' || FILTER===grp);
-      // place TODAY divider before the first shipped post (upcoming → past transition)
-      let divider = '';
-      if(FILTER==='all' && !dividerPlaced && seen === firstShipped){
-        divider = '<div class="today"><div class="hr l"></div><div class="lbl">● TODAY · '+esc(fmtToday(DATA.updated))+' — BELOW IS HISTORY</div><div class="hr r"></div></div>';
-        dividerPlaced = true;
-      }
-      seen++;
-      if(!visible) return divider;
-      return divider + rowHtml(p, w);
-    }).join('');
-    if(rows.trim()===''){ return; }
-    html += '<div class="week'+(w.highlight?' hot':'')+'">'
-      + '<div class="wlabel"><div class="id">'+esc(w.id)+'</div><div class="rg">'+esc(w.range)+(w.theme?' · '+esc(w.theme):'')+'</div><div class="hr"></div></div>'
-      + '<div class="rows">'+rows+'</div></div>';
-  });
+  // TODAY box always at top
+  let html = buildTodayBox(DATA.updated, upWeeks.length, doneWeeks.length);
+
+  // UPCOMING section
+  if(FILTER==='all' || FILTER==='upcoming'){
+    const upRows = upWeeks.map(w => weekHtml(w, FILTER==='all'?'all':'upcoming')).filter(Boolean).join('');
+    if(upRows){
+      html += '<div class="sec-hdr upcoming"><div class="lbl">Upcoming &nbsp;·&nbsp; '+upWeeks.length+' week'+(upWeeks.length!==1?'s':'')+'</div><div class="hr"></div></div>';
+      html += upRows;
+    }
+  }
+
+  // COMPLETED section
+  if(FILTER==='all' || FILTER==='shipped'){
+    const doneRows = doneWeeks.map(w => weekHtml(w, FILTER==='all'?'all':'shipped')).filter(Boolean).join('');
+    if(doneRows){
+      html += '<div class="sec-hdr completed"><div class="lbl">Completed &nbsp;·&nbsp; '+doneWeeks.length+' week'+(doneWeeks.length!==1?'s':'')+'</div><div class="hr"></div></div>';
+      html += doneRows;
+    }
+  }
+
   tl.innerHTML = html;
+}
+
+function buildTodayBox(updated, upCt, doneCt){
+  const dateStr = fmtTodayFull(updated);
+  return '<div class="today-box"><div class="pulse"></div><div>'
+    +'<div class="td">TODAY &nbsp;·&nbsp; '+esc(dateStr)+'</div>'
+    +'<div class="ts"><b>'+upCt+' week'+(upCt!==1?'s':'')+' upcoming</b> &nbsp;·&nbsp; '+doneCt+' week'+(doneCt!==1?'s':'')+' completed</div>'
+    +'</div></div>';
+}
+
+function weekHtml(w, filter){
+  const rows = (w.posts||[]).map(p => {
+    const grp = STATUS_GROUP[p.status] || 'upcoming';
+    if(filter!=='all' && FILTER!=='all' && filter!==grp) return '';
+    return rowHtml(p, w);
+  }).filter(Boolean).join('');
+  if(!rows) return '';
+  return '<div class="week'+(w.highlight?' hot':'')+'">'
+    +'<div class="wlabel"><div class="id">'+esc(w.id)+'</div><div class="rg">'+esc(w.range)+(w.theme?' · '+esc(w.theme):'')+'</div><div class="hr"></div></div>'
+    +'<div class="rows">'+rows+'</div></div>';
+}
+
+function fmtTodayFull(iso){
+  if(!iso) return 'TODAY';
+  const months=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  const days=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const d = new Date(iso+'T00:00:00');
+  if(isNaN(d)) return iso;
+  return days[d.getDay()]+' · '+months[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
 }
 
 function stat(n,color,label){ return '<div class="stat"><b style="color:'+color+'">'+n+'</b><span>'+label+'</span></div>'; }
@@ -269,13 +304,6 @@ function rowHtml(p, w){
   return '<div class="'+cls+'">'+inner+'</div>';
 }
 
-function fmtToday(iso){
-  if(!iso) return 'TODAY';
-  const m = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  const d = new Date(iso+'T00:00:00');
-  if(isNaN(d)) return iso;
-  return m[d.getMonth()]+' '+d.getDate();
-}
 
 document.querySelectorAll('.fbtn').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('.fbtn').forEach(x => x.classList.remove('on'));
