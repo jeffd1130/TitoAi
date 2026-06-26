@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22",
+  "updated": "2026-06-26",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -194,70 +194,70 @@
     {
       "id": "W27",
       "range": "Jun 29–Jul 5",
-      "theme": "Boost: TikTok + Instagram",
+      "theme": "Compounding Advantage · Practical Tools",
       "boost": "TikTok + Instagram",
       "posts": [
         {
           "day": "MON",
-          "title": "July Teaser — Ano ang Susunod?",
-          "note": "Build anticipation",
+          "title": "July na! Claude Projects + Gemini Deep Research",
+          "note": "Dalawang bagay na kailangan mo ngayong July",
           "date": "Jun 30",
-          "status": "planned",
-          "url": null,
-          "boost": "TikTok"
+          "status": "draft",
+          "url": "W27-mon-captions.html",
+          "boost": null
         },
         {
           "day": "WED",
-          "title": "Wednesday Demo — TBD",
-          "note": "Topic in production",
+          "title": "Claude Projects — I-Setup Natin ang Iyong Trabaho Space",
+          "note": "Step-by-step Claude Projects demo",
           "date": "Jul 2",
-          "status": "tbd",
-          "url": null,
-          "boost": "Instagram"
+          "status": "draft",
+          "url": "W27-wed-captions.html",
+          "boost": null
         },
         {
           "day": "FRI",
-          "title": "Friday Story — TBD",
-          "note": "Topic in production",
+          "title": "Ang Taong Nagsimula Kahapon — May Kalamangan Na",
+          "note": "Compounding advantage · Story/Inspiration · Carousel ready",
           "date": "Jul 4",
-          "status": "tbd",
-          "url": null,
-          "boost": "TikTok"
+          "status": "draft",
+          "url": "W27-fri-captions.html",
+          "boost": null
         }
       ]
     },
     {
       "id": "W28",
       "range": "Jul 6–12",
-      "theme": "Full push: TikTok + Instagram + Facebook",
+      "theme": "Everyday Tools · Family Angle",
       "boost": "All three",
       "posts": [
         {
           "day": "MON",
-          "title": "Monday AI Tip — TBD",
-          "note": "Topic in production",
+          "title": "Gemini sa Google Docs — Libre At Laging Nandoon",
+          "note": "Practical AI tip · hidden Gemini in Docs sidebar",
           "date": "Jul 7",
-          "status": "tbd",
-          "url": null,
-          "boost": "TikTok"
+          "status": "draft",
+          "url": "W28-mon-captions.html",
+          "boost": null
         },
         {
           "day": "WED",
-          "title": "Wednesday Demo — TBD",
-          "note": "Topic in production",
+          "title": "Resume at Cover Letter — Claude ang Gagawa",
+          "note": "Split screen demo · claude.ai libre",
           "date": "Jul 9",
-          "status": "tbd",
-          "url": null,
-          "boost": "Facebook"
+          "status": "draft",
+          "url": "W28-wed-captions.html",
+          "boost": null
         },
         {
           "day": "FRI",
-          "title": "Friday Story — TBD",
-          "note": "Topic in production",
+          "title": "Ang Tatay na Nagtanong sa AI",
+          "note": "Family story · hindi degree ang kailangan · isang tanong lang",
           "date": "Jul 11",
-          "status": "tbd",
-          "url": null,
-          "boost": "Instagram"
+          "status": "draft",
+          "url": "W28-fri-captions.html",
+          "boost": null
         }
       ]
     }
