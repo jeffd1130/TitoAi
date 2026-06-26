@@ -37,18 +37,45 @@ After each production run, send the Canva edit URL + script link to chat ID `832
 
 The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
 
-- Source: `docs/index.html` + `docs/assets/*.png` + `docs/scripts/*.html` in the `main` branch `/docs` folder
-- **Not just approval** — full hub with: About / This Week spotlight / June 2026 content calendar / Approval links
-- Sections: About (Jeff + pillars + voice + brand), Current Week, June–July Calendar (W26–W28), Approval
-- Rebuilt manually or via `update-approval-page` skill after each production run
-- **Scripts** — production scripts saved as HTML to `docs/scripts/<week>-<slot>-script.html` and linked from the calendar card. Copy the branded script template from any existing script in that folder.
+- Source: `docs/` folder in `main` branch — GitHub Pages serves everything under `docs/`
+- **`docs/index.html`** — Content Hub: Current week highlighted (gold), Next week (teal), Upcoming, Completed archive section. Data-driven from `docs/schedule.json`.
+- **Scripts** — `docs/scripts/<week>-<slot>-script.html`. Copy template from any existing script file.
 
-**Live pages:**
+**`docs/` directory structure:**
+```
+docs/
+  index.html          ← Content Hub (current/next/upcoming + archive links)
+  links.html          ← All Canva + GitHub Pages links
+  timeline.html       ← Full content timeline (rendered from schedule.json)
+  schedule.json       ← Single source of truth for timeline + hub
+  assets/             ← Logo files
+  scripts/            ← All production scripts (W##-slot-script.html)
+  slides/             ← Carousel PNGs (W##-mon/, W##-fri/ etc.)
+  archive/            ← Completed weeks W21–W25 (moved here when shipped)
+    index.html        ← Archive index page
+    W22-captions.html
+    W24-*.html
+    W25-*.html
+    niche-plan.html
+    fathers-day-greeting.html
+  renders/            ← Solo render HTML files (production artifacts, not published)
+```
+
+**Current/Next/Upcoming weeks (as of Jun 26, 2026):**
+| Role | Week | Dates |
+|------|------|-------|
+| Current (highlighted in hub) | W26 | Jun 22–28 |
+| Next | W27 | Jun 29–Jul 5 |
+| Upcoming | W28 | Jul 6–12 |
+
+**Key live URLs:**
 | Page | URL |
 |------|-----|
-| W22 captions approval | `https://jeffd1130.github.io/TitoAi/W22-captions.html` |
-| W24 Mon captions approval | `https://jeffd1130.github.io/TitoAi/W24-mon-captions.html` |
-| Niche & Growth Plan | `https://jeffd1130.github.io/TitoAi/niche-plan.html` |
+| Content Hub | `https://jeffd1130.github.io/TitoAi/` |
+| All Links | `https://jeffd1130.github.io/TitoAi/links.html` |
+| Timeline | `https://jeffd1130.github.io/TitoAi/timeline.html` |
+| Archive | `https://jeffd1130.github.io/TitoAi/archive/` |
+| Niche Plan | `https://jeffd1130.github.io/TitoAi/archive/niche-plan.html` |
 
 ---
 

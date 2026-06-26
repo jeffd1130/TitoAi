@@ -1,651 +1,262 @@
 <!DOCTYPE html>
-<html lang="tl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Tito AI — Hub &amp; June 2026 Calendar</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tito AI — Content Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy:   #0A0F1E;
-  --navy2:  #111827;
-  --navy3:  #1E293B;
-  --navy4:  #0D1520;
-  --gold:   #F59E0B;
-  --amber:  #FCD34D;
-  --teal:   #0D9488;
-  --coral:  #F97316;
-  --green:  #10B981;
-  --sv:     #3B82F6;
-  --violet: #8B5CF6;
-  --gray:   #94A3B8;
-  --muted:  #475569;
-  --dim:    #334155;
-  --white:  #FFFFFF;
-}
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff;--coral:#F97316;--green:#10B981}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--white);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh;padding-bottom:60px}
 
-/* ── NAV ── */
-.nav{background:var(--navy4);border-bottom:1px solid var(--dim);display:flex;overflow-x:auto;padding:0 16px;gap:4px;position:sticky;top:0;z-index:100}
-.nav a{display:block;padding:12px 16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-.nav a:hover,.nav a.active{color:var(--gold);border-color:var(--gold)}
+/* HEADER */
+.site-hdr{background:var(--navy2);border-bottom:2px solid var(--navy3);padding:14px 20px;position:sticky;top:0;z-index:100}
+.hdr-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo-row{display:flex;align-items:center;gap:12px}
+.logo-row img{height:32px;display:block}
+.hub-badge{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--gold);padding:3px 8px;border:1px solid rgba(245,158,11,.4);border-radius:4px}
+.nav-pills{display:flex;gap:8px;flex-wrap:wrap}
+.nav-pills a{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);text-decoration:none;padding:5px 12px;border:1px solid var(--navy3);border-radius:20px;transition:all .15s}
+.nav-pills a:hover{color:var(--white);border-color:var(--gray)}
 
-/* ── HERO ── */
-.hero{background:linear-gradient(145deg,#0D1520 0%,#0A0F1E 50%,#0D1A2E 100%);border-bottom:3px solid var(--gold);padding:32px 20px 28px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--gold);opacity:.05;pointer-events:none}
-.hero::after{content:'';position:absolute;right:40px;top:20px;width:120px;height:120px;border-radius:50%;background:var(--teal);opacity:.08;pointer-events:none}
-.hero-eyebrow{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:48px;line-height:1;color:var(--white);margin-bottom:6px;position:relative;z-index:1}
-.hero-title span{color:var(--gold)}
-.hero-tagline{font-family:'Lora',serif;font-style:italic;font-size:15px;color:var(--gray);margin-bottom:20px}
-.handles{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.handle-chip{display:flex;align-items:center;gap:6px;background:var(--navy3);border:1px solid var(--dim);border-radius:20px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--white);text-decoration:none}
-.handle-chip .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.dot-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
-.dot-tt{background:var(--white)}
-.dot-fb{background:#1877F2}
-.hero-meta{display:flex;gap:8px;flex-wrap:wrap}
-.meta-badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px}
-.badge-gold{background:var(--gold);color:var(--navy)}
-.badge-teal{background:var(--teal);color:var(--white)}
-.badge-sv{background:var(--sv);color:var(--white)}
+/* TODAY BAR */
+.today-bar{background:rgba(245,158,11,.06);border-bottom:1px solid rgba(245,158,11,.2);padding:10px 20px}
+.today-bar-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:12px;width:100%}
+.pulse{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.today-text{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:var(--gold)}
+.today-updated{margin-left:auto;font-size:10px;color:var(--muted)}
 
-/* ── SECTIONS ── */
-.section{padding:24px 20px;max-width:640px;margin:0 auto}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;color:var(--gold);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--dim)}
+/* MAIN */
+main{max-width:860px;margin:0 auto;padding:20px}
+.loading,.error{text-align:center;color:var(--gray);padding:40px;font-size:14px}
 
-/* ── ABOUT ── */
-.about-grid{display:flex;flex-direction:column;gap:12px}
-.about-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;padding:16px}
-.about-card h3{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.about-card p{font-size:14px;line-height:1.7;color:var(--gray)}
-.about-card p strong{color:var(--white)}
-.pillars{display:flex;flex-direction:column;gap:8px}
-.pillar{background:var(--navy3);border-radius:8px;padding:12px;display:flex;gap:10px;align-items:flex-start}
-.pillar-icon{font-size:18px;flex-shrink:0;margin-top:1px}
-.pillar-body{flex:1}
-.pillar-day{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
-.pillar-day.mon{color:var(--gold)}
-.pillar-day.wed{color:var(--teal)}
-.pillar-day.fri{color:var(--coral)}
-.pillar-name{font-size:13px;font-weight:700;color:var(--white);margin-bottom:2px}
-.pillar-desc{font-size:12px;color:var(--gray)}
-.voice-rules{list-style:none;display:flex;flex-direction:column;gap:6px}
-.voice-rules li{font-size:13px;color:var(--gray);padding-left:16px;position:relative}
-.voice-rules li::before{content:'—';position:absolute;left:0;color:var(--gold)}
-.voice-rules li strong{color:var(--white)}
+/* WEEK CARDS */
+.week-card{border-radius:14px;margin-bottom:20px;overflow:hidden}
+.card-current{border:2px solid var(--gold);box-shadow:0 0 0 1px rgba(245,158,11,.1),0 4px 24px rgba(245,158,11,.08)}
+.card-next{border:2px solid var(--teal)}
+.card-upcoming{border:1px solid var(--navy3)}
 
-/* ── CALENDAR ── */
-.week-block{margin-bottom:24px}
-.week-label{background:var(--navy3);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:8px 14px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;color:var(--white);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
-.week-label .week-range{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:var(--gray)}
-.post-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;margin-bottom:8px;overflow:hidden}
-.post-card-header{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--navy4);border-bottom:1px solid var(--navy3);flex-wrap:wrap}
-.day-badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px;flex-shrink:0}
-.day-mon{background:var(--gold);color:var(--navy)}
-.day-wed{background:var(--teal);color:var(--white)}
-.day-fri{background:var(--coral);color:var(--white)}
-.post-date{font-size:11px;color:var(--gray)}
-.post-time{font-size:11px;color:var(--muted);margin-left:auto}
-.post-body{padding:12px 14px}
-.post-topic{font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px}
-.post-theme{font-size:12px;color:var(--gray);margin-bottom:10px;font-style:italic}
-.task-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.task-chip{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--navy3);color:var(--gray)}
-.task-chip.done{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.25)}
-.task-chip.active{background:rgba(245,158,11,.12);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
-.status-row{display:flex;align-items:center;gap:8px}
-.status-badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
-.s-planned{background:rgba(148,163,184,.08);color:var(--muted);border:1px solid rgba(148,163,184,.2)}
-.s-script{background:rgba(139,92,246,.12);color:var(--violet);border:1px solid rgba(139,92,246,.3)}
-.s-draft{background:rgba(245,158,11,.12);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
-.s-approved{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.3)}
-.s-posted{background:rgba(16,185,129,.25);color:var(--green);border:1px solid var(--green)}
-.canva-btn{display:inline-block;background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:5px 12px;border-radius:6px;text-decoration:none;flex-shrink:0}
-.canva-btn:hover{opacity:.9}
+.card-hdr{padding:14px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card-current .card-hdr{background:rgba(245,158,11,.07)}
+.card-next .card-hdr{background:rgba(13,148,136,.06)}
+.card-upcoming .card-hdr{background:var(--navy2)}
 
-/* ── CURRENT WEEK SPOTLIGHT ── */
-.spotlight{background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(13,148,136,.06));border:1px solid rgba(245,158,11,.2);border-radius:14px;padding:20px;margin-bottom:24px}
-.spotlight-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.spotlight-posts{display:flex;flex-direction:column;gap:10px}
-.spotlight-item{display:flex;align-items:flex-start;gap:10px}
-.spotlight-bullet{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.spotlight-bullet.mon{background:var(--gold)}
-.spotlight-bullet.wed{background:var(--teal)}
-.spotlight-bullet.fri{background:var(--coral)}
-.spotlight-info{}
-.spotlight-info .s-title{font-size:13px;font-weight:700;color:var(--white)}
-.spotlight-info .s-sub{font-size:11px;color:var(--gray)}
+.card-hdr-left{display:flex;flex-direction:column;gap:5px}
+.week-type-badge{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px;display:inline-block;width:fit-content}
+.card-current .week-type-badge{background:var(--gold);color:var(--navy)}
+.card-next .week-type-badge{background:var(--teal);color:var(--white)}
+.card-upcoming .week-type-badge{background:var(--navy3);color:var(--gray)}
+.week-id-row{display:flex;align-items:baseline;gap:10px}
+.week-id{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;line-height:1}
+.card-current .week-id{color:var(--gold)}
+.card-next .week-id{color:var(--teal)}
+.card-upcoming .week-id{color:var(--white)}
+.week-range{font-size:12px;color:var(--gray)}
+.card-hdr-right{text-align:right;display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+.week-theme{font-size:11px;color:var(--gray);max-width:220px;text-align:right;line-height:1.4}
+.boost-chip{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;background:rgba(249,115,22,.15);color:var(--coral);border:1px solid rgba(249,115,22,.3)}
 
-/* ── CHARACTER CARD ── */
-.char-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:14px;padding:20px;margin-bottom:16px;position:relative;overflow:hidden}
-.char-card::before{content:'';position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;background:var(--gold);opacity:.04}
-.char-name{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--gold);margin-bottom:2px}
-.char-subtitle{font-size:12px;color:var(--gray);margin-bottom:14px}
-.char-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-.char-stat{background:var(--navy3);border-radius:8px;padding:8px 12px;flex:1;min-width:90px}
-.char-stat .s-val{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white)}
-.char-stat .s-key{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-.char-quote{font-family:'Lora',serif;font-style:italic;font-size:14px;color:var(--gray);line-height:1.7;border-left:3px solid var(--gold);padding-left:14px}
+/* POST ROWS */
+.card-posts{padding:0 18px 14px;display:flex;flex-direction:column;gap:0;background:var(--navy)}
+.card-current .card-posts{background:rgba(10,15,30,.85)}
+.card-next .card-posts{background:rgba(10,15,30,.85)}
+.post-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(30,41,59,.8);flex-wrap:wrap}
+.post-row:last-child{border-bottom:none}
+.day-pill{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;padding:3px 9px;border-radius:4px;flex:none;min-width:44px;text-align:center}
+.day-MON{background:rgba(13,148,136,.15);color:var(--teal);border:1px solid rgba(13,148,136,.3)}
+.day-WED{background:rgba(245,158,11,.1);color:var(--gold);border:1px solid rgba(245,158,11,.25)}
+.day-FRI{background:rgba(99,102,241,.12);color:#818CF8;border:1px solid rgba(99,102,241,.25)}
+.day-SUN{background:var(--navy3);color:var(--gray);border:1px solid var(--navy3)}
+.post-info{flex:1;min-width:160px}
+.post-title{font-size:13px;font-weight:700;display:block;line-height:1.3}
+.post-note{font-size:10px;color:var(--muted);display:block;margin-top:2px}
+.post-tag{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#818CF8;margin-left:6px;vertical-align:middle}
+.post-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex-none}
+.post-date{font-size:10px;color:var(--muted)}
+.status-chip{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:3px}
+.status-posted{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.25)}
+.status-draft{background:rgba(245,158,11,.12);color:var(--gold);border:1px solid rgba(245,158,11,.25)}
+.status-planned{background:var(--navy3);color:var(--muted);border:1px solid rgba(71,85,105,.3)}
+.post-link{font-size:10px;font-weight:700;letter-spacing:1px;text-decoration:none;padding:3px 10px;border:1px solid var(--navy3);border-radius:6px;color:var(--gray);white-space:nowrap;transition:all .15s}
+.post-link:hover{border-color:var(--gold);color:var(--gold)}
 
-/* ── FOOTER ── */
-.footer{text-align:center;padding:24px 20px;font-size:11px;color:var(--muted);border-top:1px solid var(--navy3);margin-top:8px}
-.footer strong{color:var(--gray)}
+/* QUICK LINKS */
+.quick-links{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 28px;padding:16px;background:var(--navy2);border-radius:12px;border:1px solid var(--navy3)}
+.quick-links a{text-decoration:none;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:8px 16px;border:1px solid var(--navy3);border-radius:8px;color:var(--gray);transition:all .15s;flex:1;text-align:center;min-width:110px}
+.quick-links a:hover{background:var(--navy3);color:var(--white)}
+.quick-links a.ql-gold{border-color:rgba(245,158,11,.4);color:var(--gold)}
+.quick-links a.ql-gold:hover{background:rgba(245,158,11,.08)}
+.quick-links a.ql-teal{border-color:rgba(13,148,136,.3);color:var(--teal)}
+.quick-links a.ql-teal:hover{background:rgba(13,148,136,.06)}
+
+/* ARCHIVE SECTION */
+.sec-divider{display:flex;align-items:center;gap:12px;margin:28px 0 16px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.sec-divider::before,.sec-divider::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.archive-list{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden}
+.archive-row{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid rgba(30,41,59,.6);flex-wrap:wrap}
+.archive-row:last-child{border-bottom:none}
+.arc-id{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:2px;color:var(--muted);min-width:36px}
+.arc-range{font-size:11px;color:var(--muted);min-width:90px}
+.arc-theme{font-size:11px;color:var(--gray);flex:1}
+.arc-count{font-size:10px;color:var(--muted);min-width:60px;text-align:right}
+.arc-links{display:flex;gap:6px;flex-none}
+.arc-links a{font-size:10px;font-weight:700;letter-spacing:1px;text-decoration:none;padding:2px 8px;border:1px solid var(--navy3);border-radius:4px;color:var(--muted);transition:all .15s}
+.arc-links a:hover{color:var(--white);border-color:var(--gray)}
+
+/* FOOTER */
+.site-ftr{border-top:1px solid var(--navy3);padding:16px 20px;text-align:center;margin-top:40px}
+.site-ftr a{color:var(--muted);text-decoration:none}
+.site-ftr a:hover{color:var(--gold)}
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <a href="#about" class="active">About</a>
-  <a href="#current">This Week</a>
-  <a href="#june">June Calendar</a>
-  <a href="#approval">Approval</a>
-  <a href="captions.html" style="color:var(--gold)">Captions &amp; Designs ↗</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-eyebrow">Content Operations Hub</div>
-  <div class="hero-title">TITO <span>AI</span></div>
-  <div class="hero-tagline">AI Para Sa Ating Lahat · Kumusta, Mga Pamangkin!</div>
-  <div class="handles">
-    <a class="handle-chip" href="https://www.instagram.com/titoaiph" target="_blank">
-      <span class="dot dot-ig"></span>@TitoAIPH
-    </a>
-    <a class="handle-chip" href="https://www.tiktok.com/@titoaiph" target="_blank">
-      <span class="dot dot-tt"></span>@TitoAIPH
-    </a>
-    <a class="handle-chip" href="https://www.facebook.com/titoaiph" target="_blank">
-      <span class="dot dot-fb"></span>Tito AI PH
-    </a>
+<header class="site-hdr">
+  <div class="hdr-inner">
+    <div class="logo-row">
+      <img src="assets/logo-horizontal.png" alt="Tito AI">
+      <span class="hub-badge">CONTENT HUB</span>
+    </div>
+    <nav class="nav-pills">
+      <a href="timeline.html">Timeline</a>
+      <a href="links.html">All Links</a>
+      <a href="https://tiktok.com/@tito.aiph" target="_blank">@tito.aiph ↗</a>
+    </nav>
   </div>
-  <div class="hero-meta">
-    <span class="meta-badge badge-gold">Filipino AI Education</span>
-    <span class="meta-badge badge-teal">Free · Walang Bayad</span>
-    <span class="meta-badge badge-sv">San Jose, CA</span>
+</header>
+
+<div class="today-bar">
+  <div class="today-bar-inner">
+    <span class="pulse"></span>
+    <span class="today-text" id="today-label">LOADING...</span>
+    <span class="today-updated" id="today-updated"></span>
   </div>
 </div>
 
-<!-- ABOUT -->
-<div id="about" class="section">
-  <div class="section-title">ABOUT TITO AI</div>
+<main id="hub">
+  <div class="loading">Loading schedule...</div>
+</main>
 
-  <div class="char-card">
-    <div class="char-name">JOSEPH DE LAS ARMAS</div>
-    <div class="char-subtitle">Creator · @TitoAIPH · San Jose, California</div>
-    <div class="char-stats">
-      <div class="char-stat"><div class="s-val">48</div><div class="s-key">Years Old</div></div>
-      <div class="char-stat"><div class="s-val">Dad</div><div class="s-key">Household</div></div>
-      <div class="char-stat"><div class="s-val">PH</div><div class="s-key">Roots</div></div>
-    </div>
-    <div class="char-quote">"Hindi ako developer. Hindi ako engineer. Nag-try lang ako — paulit-ulit, gabi-gabi, habang tulog ang pamilya ko. Kung kaya ko — kaya mo rin."</div>
-  </div>
-
-  <div class="about-grid">
-    <div class="about-card">
-      <h3>The Mission</h3>
-      <p>Turuan ang bawat Pilipino na gamitin ang AI — <strong>libre, walang jargon, para sa totoong buhay.</strong> Guro man, nanay, freelancer, o negosyante — lahat may pwesto sa AI revolution.</p>
-    </div>
-
-    <div class="about-card">
-      <h3>Content Pillars</h3>
-      <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">💡</div>
-          <div class="pillar-body">
-            <div class="pillar-day mon">Monday · 8:00 PM PHT</div>
-            <div class="pillar-name">AI Tip Reel (30–60s)</div>
-            <div class="pillar-desc">Quick, actionable tip. One tool, one use case, one win.</div>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🖥️</div>
-          <div class="pillar-body">
-            <div class="pillar-day wed">Wednesday · 7:00 PM PHT</div>
-            <div class="pillar-name">Demo / Tutorial (60–90s)</div>
-            <div class="pillar-desc">Real tool, real output on screen. Free tools only.</div>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🇵🇭</div>
-          <div class="pillar-body">
-            <div class="pillar-day fri">Friday · 7:00 PM PHT</div>
-            <div class="pillar-name">Story / Inspiration (60–90s)</div>
-            <div class="pillar-desc">Real Filipino life connected to AI. Warm tito energy.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-card">
-      <h3>Voice &amp; Style</h3>
-      <ul class="voice-rules">
-        <li><strong>Taglish</strong> — natural mix, never forced</li>
-        <li><strong>Warm tito energy</strong> — hindi nagbebenta, hindi naglelecture</li>
-        <li><strong>Always real output</strong> — no stock clips, no fake demos</li>
-        <li><strong>Free tools only</strong> — walang babayaran ang audience</li>
-        <li><strong>Opener:</strong> "Kumusta, mga Pamangkin!"</li>
-        <li><strong>Closer:</strong> "Ingat lagi — Tito AI, AI Para Sa Ating Lahat."</li>
-      </ul>
-    </div>
-
-    <div class="about-card">
-      <h3>Brand Colors</h3>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
-        <div style="background:#0A0F1E;border:1px solid #1E293B;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:600">#0A0F1E<br><span style="color:var(--gray);font-size:10px">Navy BG</span></div>
-        <div style="background:#F59E0B;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:700;color:#0A0F1E">#F59E0B<br><span style="font-size:10px">Gold</span></div>
-        <div style="background:#0D9488;border-radius:8px;padding:10px 14px;font-size:11px;font-weight:600">#0D9488<br><span style="color:rgba(255,255,255,.7);font-size:10px">Teal</span></div>
-      </div>
-    </div>
-  </div>
+<div class="site-ftr">
+  <span>Tito AI · <strong style="color:var(--gold)">@TitoAIPH</strong> · AI Para Sa Ating Lahat ·
+    <a href="timeline.html">Timeline</a> ·
+    <a href="links.html">Links</a> ·
+    <a href="archive/">Archive</a>
+  </span>
 </div>
-
-<!-- CURRENT WEEK -->
-<div id="current" class="section">
-  <div class="section-title">THIS WEEK — W26 (JUN 22–28) · ⭐ BOOST WEEK LAUNCH</div>
-
-  <div class="spotlight">
-    <div class="spotlight-label">&#9889; W26 Posts</div>
-    <div class="spotlight-posts">
-      <div class="spotlight-item">
-        <div class="spotlight-bullet mon"></div>
-        <div class="spotlight-info">
-          <div class="s-title">Mon Jun 22 · 8:00 PM PHT (5:00 AM PST)</div>
-          <div class="s-sub">Ang Sabi Nila — ⭐ Boost TikTok · <span style="color:var(--green);font-weight:700">✅ Posted</span></div>
-        </div>
-      </div>
-      <div class="spotlight-item">
-        <div class="spotlight-bullet wed"></div>
-        <div class="spotlight-info">
-          <div class="s-title">Wed Jun 25 · 7:00 PM PHT (4:00 AM PST)</div>
-          <div class="s-sub">Gemini para sa Guro — <span style="color:var(--green);font-weight:700">✅ Posted</span></div>
-        </div>
-      </div>
-      <div class="spotlight-item">
-        <div class="spotlight-bullet fri"></div>
-        <div class="spotlight-info">
-          <div class="s-title">Fri Jun 27 · 7:00 PM PHT (4:00 AM PST)</div>
-          <div class="s-sub">Claude at Gemini — Nagbabago · <a href="W26-fri-captions.html" style="color:var(--gold)">Review Captions</a> · <a href="W26-fri-carousel.html" style="color:var(--gold)">View Slides</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- W26 Mon Card -->
-  <div class="post-card" style="border-color:rgba(245,158,11,.3)">
-    <div class="post-card-header">
-      <span class="day-badge day-mon">Monday · AI Tip</span>
-      <span class="post-date">Jun 22, 2026</span>
-      <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
-    </div>
-    <div class="post-body">
-      <div class="post-topic">"Ang Sabi Nila: Pang-Matalino Lang Iyan"</div>
-      <div class="post-theme">AI myth-busting. For every Filipino who thinks AI isn't for them.</div>
-      <div style="margin:8px 0 10px;background:#111827;border:1px solid #1E2A3A;border-radius:8px;padding:10px 12px">
-        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#0D9488;margin-bottom:6px">Carousel Slides — Edit in Canva</div>
-        <a href="https://www.canva.com/d/L5dxWuuWIH0mH_H" target="_blank" style="display:block;background:#0A1628;border:1px solid #1E2A3A;border-radius:6px;padding:10px 12px;text-decoration:none;color:#F59E0B;font-size:12px;font-weight:600;word-break:break-all">🎨 Open Carousel in Canva → canva.com/d/L5dxWuuWIH0mH_H</a>
-        <div style="font-size:10px;color:#6B7280;margin-top:6px">Design ID: DAHNQUaAqEQ · Ang Sabi Nila Carousel 4×5 · 5 slides</div>
-      </div>
-      <div class="task-row">
-        <span class="task-chip done">Script ✓</span>
-        <span class="task-chip done">Captions ✓</span>
-        <span class="task-chip done">Slides ✓</span>
-        <span class="task-chip active">Boost: TikTok Jun 23–24</span>
-      </div>
-      <div class="status-row">
-        <span class="status-badge s-posted">✅ Posted</span>
-        <a class="canva-btn" href="W26-mon-captions.html" target="_blank" style="background:var(--navy3);color:var(--gray)">CAPTIONS ↗</a>
-        <a class="canva-btn" href="W26-mon-carousel.html" target="_blank" style="background:var(--navy3);color:var(--gray)">SLIDES ↗</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- JUNE CALENDAR -->
-<div id="june" class="section">
-  <div class="section-title">JUNE 2026 — CHARACTER BUILDING</div>
-
-  <div style="background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;padding:14px;margin-bottom:20px;font-size:13px;color:var(--gray);line-height:1.7">
-    <strong style="color:var(--gold)">The June Arc:</strong> Launch with the Origin Story, then establish Tito AI as the go-to Filipino AI teacher — real tools, real results, libre palagi. By end of June, the audience knows who Tito AI is and what to expect every week.
-  </div>
-
-  <!-- WEEK 23 -->
-  <div class="week-block">
-    <div class="week-label">WEEK 1 — JUN 1–7 <span class="week-range">W23 · Launch Week Follow-Through</span></div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-mon">Monday · AI Tip</span>
-        <span class="post-date">Jun 2, 2026</span>
-        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Tip #1 — "Sino si Claude at Gemini — at bakit mo sila kailangan"</div>
-        <div class="post-theme">Intro to Claude + Gemini. Libre pareho. Walang tech background needed.</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip">D-3: May 30</span>
-          <span class="task-chip">D-2: Jun 1</span>
-          <span class="task-chip">D-0: Jun 2</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-script">Script Ready</span></div>
-        <div style="margin-top:10px"><a href="scripts/w23-mon-script.html" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.35);color:#A78BFA;border-radius:6px;padding:6px 14px;font-size:11px;font-weight:700;text-decoration:none;letter-spacing:.5px">📄 VIEW SCRIPT</a></div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-wed">Wednesday · Demo</span>
-        <span class="post-date">Jun 4, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Demo #1 — "Gemini Beginner's Guide" (Video 2)</div>
-        <div class="post-theme">OFW leave letter demo · gemini.google.com · script ready</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip">D-3: Jun 1</span>
-          <span class="task-chip">D-2: Jun 3</span>
-          <span class="task-chip">D-0: Jun 4</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-script">Script Ready</span></div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-fri">Friday · Inspiration</span>
-        <span class="post-date">Jun 6, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Story #1 — "Hindi degree ang kailangan mo"</div>
-        <div class="post-theme">Anyone can learn AI. No background needed. Real stories.</div>
-        <div class="task-row">
-          <span class="task-chip">D-3: Jun 3</span>
-          <span class="task-chip">D-2: Jun 5</span>
-          <span class="task-chip">D-1: Jun 5</span>
-          <span class="task-chip">D-0: Jun 6</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEEK 24 -->
-  <div class="week-block">
-    <div class="week-label">WEEK 2 — JUN 8–14 <span class="week-range">W24 · Tools Deep-Dive</span></div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-mon">Monday · AI Tip</span>
-        <span class="post-date">Jun 9, 2026</span>
-        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Tip #2 — "Claude vs Gemini: alin ang gagamitin mo?"</div>
-        <div class="post-theme">Simple comparison — when to use which. No jargon. Real use cases.</div>
-        <div class="task-row">
-          <span class="task-chip">D-3: Jun 6</span>
-          <span class="task-chip">D-2: Jun 8</span>
-          <span class="task-chip">D-1: Jun 8</span>
-          <span class="task-chip">D-0: Jun 9</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-wed">Wednesday · Demo</span>
-        <span class="post-date">Jun 11, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Demo #2 — "Claude Live Demo — Sari-Sari Store" (Video 3)</div>
-        <div class="post-theme">Product description para sa Facebook Shop · claude.ai · script ready</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip">D-3: Jun 8</span>
-          <span class="task-chip">D-2: Jun 10</span>
-          <span class="task-chip">D-0: Jun 11</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-script">Script Ready</span></div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-fri">Friday · Inspiration</span>
-        <span class="post-date">Jun 13, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Story #2 — "AI para sa mga OFW"</div>
-        <div class="post-theme">Real OFW use case: translate, write letters, talk to boss — lahat libre.</div>
-        <div class="task-row">
-          <span class="task-chip">D-3: Jun 10</span>
-          <span class="task-chip">D-2: Jun 12</span>
-          <span class="task-chip">D-1: Jun 12</span>
-          <span class="task-chip">D-0: Jun 13</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEEK 25 -->
-  <div class="week-block">
-    <div class="week-label">WEEK 3 — JUN 15–21 <span class="week-range">W25 · Everyday Filipino Life</span></div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-mon">Monday · AI Tip</span>
-        <span class="post-date">Jun 16, 2026</span>
-        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Tip #3 — "3 libreng AI tools na dapat malaman ng bawat Pilipino"</div>
-        <div class="post-theme">Claude, Gemini, at isa pa — quick rundown. Libre lahat.</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip done">Captions ✓</span>
-        </div>
-        <div class="status-row">
-          <span class="status-badge s-draft">Draft Ready</span>
-          <a class="canva-btn" href="W25-mon-captions.html" target="_blank">REVIEW DRAFT</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-wed">Wednesday · Demo</span>
-        <span class="post-date">Jun 18, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Demo #3 — "Gumawa ng Resume Gamit ang Claude (In 2 Minutes)"</div>
-        <div class="post-theme">Real demo: Claude writes a resume. Professional summary, skills, bullets.</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip done">Captions ✓</span>
-        </div>
-        <div class="status-row">
-          <span class="status-badge s-draft">Draft Ready</span>
-          <a class="canva-btn" href="W25-wed-captions.html" target="_blank">REVIEW DRAFT</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-fri">Friday · Story / Inspiration</span>
-        <span class="post-date">Jun 20, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Father's Day — "Tito AI Tries: Php 2,000 Budget"</div>
-        <div class="post-theme">Real Filipino life + AI. Father's Day special. Warm tito energy.</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip done">Captions ✓</span>
-          <span class="task-chip active">Pending Approval</span>
-        </div>
-        <div class="status-row">
-          <span class="status-badge s-draft">Draft Ready</span>
-          <a class="canva-btn" href="W25-fri-captions.html" target="_blank">REVIEW DRAFT</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEEK 26 -->
-  <div class="week-block">
-    <div class="week-label" style="border-color:var(--gold)">WEEK 4 — JUN 22–28 <span class="week-range" style="color:var(--gold)">W26 ⭐ BOOST LAUNCH · Php 2,000 · TikTok</span></div>
-
-    <div class="post-card" style="border-color:rgba(245,158,11,.3)">
-      <div class="post-card-header">
-        <span class="day-badge day-mon">Monday · AI Tip</span>
-        <span class="post-date">Jun 22, 2026</span>
-        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">"Ang Sabi Nila: Pang-Matalino Lang Iyan"</div>
-        <div class="post-theme">AI myth-busting. For every Filipino who thinks AI isn't for them.</div>
-        <div class="task-row">
-          <span class="task-chip done">Script ✓</span>
-          <span class="task-chip done">Captions ✓</span>
-          <span class="task-chip done">Slides ✓</span>
-          <span class="task-chip" style="background:rgba(255,0,80,.12);color:#FF0050;border:1px solid rgba(255,0,80,.3)">Boost: TikTok Jun 23–24</span>
-        </div>
-        <div class="status-row">
-          <span class="status-badge s-draft">Draft Ready</span>
-          <a class="canva-btn" href="W26-mon-captions.html" target="_blank">REVIEW DRAFT</a>
-          <a class="canva-btn" href="W26-mon-carousel.html" target="_blank" style="background:var(--teal);color:var(--white)">VIEW SLIDES</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="post-card" style="border-color:rgba(255,0,80,.25)">
-      <div class="post-card-header">
-        <span class="day-badge day-wed">Wednesday · Demo</span>
-        <span class="post-date">Jun 25, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">"Gemini para sa Guro"</div>
-        <div class="post-theme">Lesson plan in 2 minutes. Para sa 900K+ DepEd teachers.</div>
-        <div class="task-row">
-          <span class="task-chip">Script</span>
-          <span class="task-chip">Captions</span>
-          <span class="task-chip" style="background:rgba(255,0,80,.12);color:#FF0050;border:1px solid rgba(255,0,80,.3)">Boost: TikTok Jun 26–27</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
-      </div>
-    </div>
-
-    <div class="post-card" style="border-color:rgba(255,0,80,.25)">
-      <div class="post-card-header">
-        <span class="day-badge day-fri">Friday · Story / Inspiration</span>
-        <span class="post-date">Jun 27, 2026</span>
-        <span class="post-time">7:00 PM PHT · 4:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">"1 Buwan Kasama Tito AI — Ang Resulta"</div>
-        <div class="post-theme">Month 1 milestone. Real results, real community, tease July.</div>
-        <div class="task-row">
-          <span class="task-chip">Script</span>
-          <span class="task-chip">Captions</span>
-          <span class="task-chip" style="background:rgba(255,0,80,.12);color:#FF0050;border:1px solid rgba(255,0,80,.3)">Boost: TikTok Jun 28–29</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WEEK 27 -->
-  <div class="week-block">
-    <div class="week-label">WEEK 5 — JUN 30 <span class="week-range">W27 · July Bridge</span></div>
-
-    <div class="post-card">
-      <div class="post-card-header">
-        <span class="day-badge day-mon">Monday · AI Tip</span>
-        <span class="post-date">Jun 30, 2026</span>
-        <span class="post-time">8:00 PM PHT · 5:00 AM PST</span>
-      </div>
-      <div class="post-body">
-        <div class="post-topic">Tip #5 — "July: mas maraming tools, mas libre pa rin"</div>
-        <div class="post-theme">Teaser for July content. Build anticipation. End of Month 1.</div>
-        <div class="task-row">
-          <span class="task-chip">D-3: Jun 27</span>
-          <span class="task-chip">D-2: Jun 29</span>
-          <span class="task-chip">D-1: Jun 29</span>
-          <span class="task-chip">D-0: Jun 30</span>
-        </div>
-        <div class="status-row"><span class="status-badge s-planned">Planned</span></div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- APPROVAL SECTION -->
-<div id="approval" class="section">
-  <div class="section-title">WEEKLY APPROVAL</div>
-  <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:16px;margin-bottom:16px">
-    <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px">✅ W25 — JUN 16–20 · POSTED</div>
-    <a href="W25-mon-captions.html" style="display:block;background:var(--navy3);color:var(--gray);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:10px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      W25 MON — 3 Libreng AI Tools · Jun 16 ↗
-    </a>
-    <a href="W25-wed-captions.html" style="display:block;background:var(--navy3);color:var(--gray);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:10px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      W25 WED — Resume Gamit Claude · Jun 18 ↗
-    </a>
-    <a href="W25-fri-captions.html" style="display:block;background:var(--navy3);color:var(--gray);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:10px;border-radius:8px;text-decoration:none;margin-bottom:0">
-      W25 FRI — Father's Day · Tito AI Tries: Php 2,000 · Jun 20 ↗
-    </a>
-  </div>
-  <div style="background:rgba(255,0,80,.05);border:1px solid rgba(255,0,80,.2);border-radius:12px;padding:16px">
-    <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FF0050;margin-bottom:10px">⭐ W26 — JUN 22–28 · BOOST LAUNCH WEEK</div>
-    <a href="W26-mon-captions.html" style="display:block;background:var(--navy3);color:var(--green);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:10px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      ✅ W26 MON — Ang Sabi Nila · POSTED · Jun 22
-    </a>
-    <a href="W26-wed-captions.html" style="display:block;background:var(--navy3);color:var(--green);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:13px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      ✅ W26 WED — Gemini para sa Guro · POSTED · Jun 25
-    </a>
-    <a href="W26-wed-carousel.html" style="display:block;background:var(--teal);color:var(--white);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:11px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      🎠 VIEW CAROUSEL SLIDES ↗
-    </a>
-    <a href="https://www.canva.com/d/GwPucIL1w5a8EZy" target="_blank" style="display:block;background:#0A1628;border:1px solid #1E2A3A;color:#F59E0B;text-align:center;font-size:12px;font-weight:600;padding:11px;border-radius:8px;text-decoration:none;margin-bottom:8px">
-      🎨 Edit in Canva → canva.com/d/GwPucIL1w5a8EZy
-    </a>
-    <div style="display:flex;flex-direction:column;gap:6px">
-    <a href="W26-fri-captions.html" style="display:block;background:var(--gold);color:var(--navy);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:13px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      W26 FRI — Claude at Gemini Nagbabago · Jun 27 · 7 PM PHT ↗
-    </a>
-    <a href="W26-fri-carousel.html" style="display:block;background:var(--teal);color:var(--white);text-align:center;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:11px;border-radius:8px;text-decoration:none;margin-bottom:6px">
-      VIEW SLIDES → W26 Fri Carousel
-    </a>
-    </div>
-  </div>
-</div>
-
-<footer class="footer">
-  <strong>Tito AI</strong> · @TitoAIPH · AI Para Sa Ating Lahat 🇵🇭<br>
-  <span style="margin-top:4px;display:block">Production ops by Jeff · Updated Jun 23, 2026 · PHT</span>
-</footer>
 
 <script>
-  const sections = document.querySelectorAll('[id]');
-  const navLinks = document.querySelectorAll('.nav a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
+const DAY_TIMES = {MON:'8 PM PHT', WED:'7 PM PHT', FRI:'7 PM PHT'};
+
+function statusChip(s) {
+  const m = {
+    posted:{label:'POSTED ✓',cls:'status-posted'},
+    draft:{label:'DRAFT',cls:'status-draft'},
+    planned:{label:'PLANNED',cls:'status-planned'},
+    live:{label:'LIVE ✓',cls:'status-posted'}
+  };
+  const v = m[s] || {label:s.toUpperCase(),cls:'status-planned'};
+  return `<span class="status-chip ${v.cls}">${v.label}</span>`;
+}
+
+function postRow(p) {
+  const tag = p.tag ? `<span class="post-tag">[${p.tag}]</span>` : '';
+  const link = p.url ? `<a class="post-link" href="${p.url}" target="_blank">View →</a>` : '';
+  const drop = DAY_TIMES[p.day] ? ` · ${DAY_TIMES[p.day]}` : '';
+  return `
+    <div class="post-row">
+      <span class="day-pill day-${p.day}">${p.day}</span>
+      <span class="post-info">
+        <span class="post-title">${p.title}${tag}</span>
+        ${p.note ? `<span class="post-note">${p.note}</span>` : ''}
+      </span>
+      <span class="post-meta">
+        ${statusChip(p.status)}
+        <span class="post-date">${p.date}${drop}</span>
+        ${link}
+      </span>
+    </div>`;
+}
+
+function weekCard(w, type) {
+  const badgeText = {current:'⭐ CURRENT WEEK', next:'NEXT WEEK', upcoming:'UPCOMING'}[type] || '';
+  const badge = badgeText ? `<span class="week-type-badge">${badgeText}</span>` : '';
+  const boost = w.boost ? `<span class="boost-chip">⚡ ${w.boost}</span>` : '';
+  return `
+    <div class="week-card card-${type}">
+      <div class="card-hdr">
+        <div class="card-hdr-left">
+          ${badge}
+          <div class="week-id-row">
+            <span class="week-id">${w.id}</span>
+            <span class="week-range">${w.range}</span>
+          </div>
+        </div>
+        <div class="card-hdr-right">
+          <span class="week-theme">${w.theme}</span>
+          ${boost}
+        </div>
+      </div>
+      <div class="card-posts">${(w.posts||[]).map(postRow).join('')}</div>
+    </div>`;
+}
+
+function archiveRow(w) {
+  const posts = w.posts || [];
+  const postedCount = posts.filter(p=>p.status==='posted').length;
+  const links = posts.filter(p=>p.url).map(p=>`<a href="${p.url}" target="_blank">${p.day}</a>`).join('');
+  return `
+    <div class="archive-row">
+      <span class="arc-id">${w.id}</span>
+      <span class="arc-range">${w.range}</span>
+      <span class="arc-theme">${w.theme}</span>
+      <span class="arc-count">${postedCount}/${posts.length} posted</span>
+      <span class="arc-links">${links || '<span style="color:var(--muted);font-size:10px">—</span>'}</span>
+    </div>`;
+}
+
+fetch('schedule.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('today-label').textContent =
+      'TODAY — Jun 26, 2026 · ' + data.handle;
+    document.getElementById('today-updated').textContent =
+      'Updated ' + data.updated;
+
+    const weeks = data.weeks;
+    const ci = weeks.findIndex(w => w.highlight);
+    const current  = weeks[ci];
+    const next     = weeks[ci + 1];
+    const upcoming = weeks[ci + 2];
+    const archive  = weeks.slice(0, ci).reverse();
+
+    let html = '';
+    if (current)  html += weekCard(current,  'current');
+    if (next)     html += weekCard(next,     'next');
+    if (upcoming) html += weekCard(upcoming, 'upcoming');
+
+    html += `
+      <div class="quick-links">
+        <a href="timeline.html" class="ql-gold">📅 Full Timeline</a>
+        <a href="links.html" class="ql-teal">🔗 All Canva Links</a>
+        <a href="scripts/">📄 Scripts</a>
+      </div>`;
+
+    if (archive.length) {
+      const oldest = archive[archive.length-1].id;
+      const newest = archive[0].id;
+      html += `
+        <div class="sec-divider"><span>COMPLETED — ${oldest} to ${newest}</span></div>
+        <div class="archive-list">${archive.map(archiveRow).join('')}</div>`;
+    }
+
+    document.getElementById('hub').innerHTML = html;
+  })
+  .catch(() => {
+    document.getElementById('hub').innerHTML =
+      '<div class="error">Could not load schedule.json</div>';
   });
 </script>
 </body>

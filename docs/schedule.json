@@ -32,7 +32,7 @@
           "note": "Warm tito intro · captions approved",
           "date": "May 30",
           "status": "posted",
-          "url": "W22-captions.html",
+          "url": "archive/W22-captions.html",
           "boost": null
         }
       ]
@@ -55,7 +55,7 @@
         {
           "day": "WED",
           "title": "Demo #1 — Gemini Beginner's Guide",
-          "note": "OFW leave letter demo · gemini.google.com",
+          "note": "Leave letter demo · gemini.google.com",
           "date": "Jun 4",
           "status": "posted",
           "url": null,
@@ -85,7 +85,7 @@
           "note": "When to use which · 5-slide swipe",
           "date": "Jun 9",
           "status": "posted",
-          "url": "W24-mon-captions.html",
+          "url": "archive/W24-mon-captions.html",
           "boost": null
         },
         {
@@ -95,16 +95,16 @@
           "note": "Walang marketing budget? · Php500 campaign",
           "date": "Jun 11",
           "status": "posted",
-          "url": "W24-wed-carousel.html",
+          "url": "archive/W24-wed-carousel.html",
           "boost": null
         },
         {
           "day": "FRI",
           "title": "Story #2 — Ang Trabaho Ko, Napalitan Na Ba?",
-          "note": "AI para sa OFW · translate, letters, libre",
+          "note": "AI para sa trabaho · translate, letters, libre",
           "date": "Jun 13",
           "status": "posted",
-          "url": "W24-fri-captions.html",
+          "url": "archive/W24-fri-captions.html",
           "boost": null
         }
       ]
@@ -121,7 +121,7 @@
           "note": "Dapat malaman ng bawat Pilipino",
           "date": "Jun 16",
           "status": "posted",
-          "url": "W25-mon-captions.html",
+          "url": "archive/W25-mon-captions.html",
           "boost": null
         },
         {
@@ -131,7 +131,7 @@
           "note": "Resume in 2 minutes · 5-slide swipe",
           "date": "Jun 18",
           "status": "posted",
-          "url": "W25-wed-captions.html",
+          "url": "archive/W25-wed-captions.html",
           "boost": null
         },
         {
@@ -140,17 +140,17 @@
           "note": "Real budget challenge · posted",
           "date": "Jun 20",
           "status": "posted",
-          "url": "W25-fri-captions.html",
+          "url": "archive/W25-fri-captions.html",
           "boost": null
         },
         {
           "day": "SUN",
           "title": "Father's Day Greeting — Maligayang Father's Day!",
           "tag": "Special",
-          "note": "Greeting post · design ready · needs approval",
+          "note": "Greeting post · design ready",
           "date": "Jun 21",
-          "status": "draft",
-          "url": "fathers-day-greeting.html",
+          "status": "posted",
+          "url": "archive/fathers-day-greeting.html",
           "boost": null
         }
       ]
@@ -158,14 +158,15 @@
     {
       "id": "W26",
       "range": "Jun 22–28",
-      "theme": "⭐ BOOST LAUNCH · Php 2,000 · TikTok",
+      "theme": "⭐ Boost Launch · Php 2,000 · TikTok",
       "highlight": true,
       "boost": "TikTok",
       "posts": [
         {
           "day": "MON",
           "title": "Ang Sabi Nila: Pang-Matalino Lang Iyan",
-          "note": "AI myth-busting · captions ready",
+          "tag": "Carousel",
+          "note": "AI myth-busting · 5-slide carousel · captions ready",
           "date": "Jun 22",
           "status": "draft",
           "url": "W26-mon-captions.html",
@@ -176,17 +177,18 @@
           "title": "Gemini para sa Guro",
           "note": "Lesson plan in 2 mins · 900K+ teachers",
           "date": "Jun 25",
-          "status": "planned",
-          "url": null,
+          "status": "draft",
+          "url": "W26-wed-captions.html",
           "boost": "TikTok"
         },
         {
           "day": "FRI",
           "title": "1 Buwan Kasama Tito AI — Ang Resulta",
-          "note": "Month 1 milestone · tease July",
+          "tag": "Carousel",
+          "note": "Month 1 milestone · 5-slide carousel · tease July",
           "date": "Jun 27",
-          "status": "planned",
-          "url": null,
+          "status": "draft",
+          "url": "W26-fri-captions.html",
           "boost": "TikTok"
         }
       ]
@@ -218,7 +220,8 @@
         {
           "day": "FRI",
           "title": "Ang Taong Nagsimula Kahapon — May Kalamangan Na",
-          "note": "Compounding advantage · Story/Inspiration · Carousel ready",
+          "tag": "Carousel",
+          "note": "Compounding advantage · 5-slide carousel ready",
           "date": "Jul 4",
           "status": "draft",
           "url": "W27-fri-captions.html",
@@ -230,7 +233,7 @@
       "id": "W28",
       "range": "Jul 6–12",
       "theme": "Everyday Tools · Family Angle",
-      "boost": "All three",
+      "boost": "All Platforms",
       "posts": [
         {
           "day": "MON",
