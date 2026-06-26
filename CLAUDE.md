@@ -172,14 +172,18 @@ Use this process for any carousel post (Mon AI tip, etc.) that needs custom-desi
 - Footer: `docs/assets/logo-horizontal.png` at left (height:68px), 5 `.pip` dots at right (active pip = gold)
 - Logo src during render: `http://localhost:8765/assets/logo-horizontal.png` (served by HTTP server)
 
-**Step 2 — Serve + screenshot with Playwright**
+**Step 2 — Render each slide in isolation (REQUIRED)**
+- **Do NOT screenshot from the stacked multi-slide render HTML.** `scrollIntoView` + viewport resize does not reliably capture just the target slide — content ends up misaligned (too high or too low) in the final PNG.
+- **Create one solo HTML per slide** (or one per batch): `body{width:1080px;height:1350px;overflow:hidden}` — a single `.slide` div, no padding/gap/stack.
+- Example solo file: `docs/w##-fri-s5-solo.html` — only slide 5, body locked to 1080×1350.
+- Navigate directly to the solo file; the full slide fills the viewport with zero offset.
+
 ```bash
 # Kill any existing server on 8765, then start fresh
-lsof -ti:8765 | xargs kill -9 2>/dev/null; python3 -m http.server 8765 &
+lsof -ti:8765 | xargs kill -9 2>/dev/null; cd /Users/jeff/Documents/Claude/TItoAi/docs && python3 -m http.server 8765 &
 ```
-- **Copy render HTML into `docs/` first** — Playwright can't path-traverse above the server root, so `http://localhost:8765/../scratchpad/...` fails. Use `http://localhost:8765/w##-slides-render.html` from the docs/ root.
-- For each slide: `browser_evaluate` to scroll slide into viewport → `browser_resize` to 1080×1350 → `browser_take_screenshot`
-- Screenshots save to home dir by default — move to `docs/slides/W##-mon/`
+- Resize viewport FIRST (`browser_resize 1080×1350`), THEN navigate — never resize after navigate (resets scroll).
+- Screenshot saves to home dir by default — `mv ~/filename.png docs/slides/W##-xxx/`
 
 **Step 3 — Name and store PNGs**
 ```
@@ -196,9 +200,10 @@ docs/slides/W##-mon/
    - **If catbox.moe times out:** commit PNGs to GitHub and use `https://raw.githubusercontent.com/jeffd1130/TitoAi/main/docs/slides/W##-xxx/slide-0n-name.png`
 2. `upload-asset-from-url` for each PNG → get asset IDs
 3. `start-editing-transaction` on the carousel design ID
-4. `perform-editing-operations` — **one call per page** (5 separate calls for 5 slides). `page_index` is a **TOP-LEVEL parameter** of the API call — NOT inside the operations array. Operation format: `{"type":"update_fill","element_id":"...","asset_type":"image","asset_id":"...","alt_text":"..."}`
+4. `perform-editing-operations` — **all pages can be updated in ONE call** (not one call per page). `page_index` is a **TOP-LEVEL parameter** of the API call (the first page being updated); all page operations go in the single `operations` array. For each slide, use 3 operations together: `update_fill` (swap image) + `position_element` (top:0, left:0) + `resize_element` (width:1080, height:1350). The position + resize snaps the element to fill the frame and prevents inherited offset from the base design.
 5. `commit-editing-transaction`
 6. **MUST call `get-design` after commit** → use the returned `edit_url` shortlink (never use design_id directly)
+7. **Always send** the `edit_url` (from `get-design`) + GitHub Pages carousel preview link to Telegram chat `8325608814` immediately after every Canva pipeline — do not wait to be asked.
 
 **Step 5 — Update docs**
 - `docs/slides/W##-mon/*.png` → referenced in carousel HTML and captions HTML as `slides/W##-mon/slide-0n-name.png`
@@ -211,6 +216,7 @@ docs/slides/W##-mon/
 |------|-----------|-------|
 | W26 Mon | `DAHNQUaAqEQ` | "Ang Sabi Nila" · 5 slides · Updated Jun 22 |
 | W26 Wed | `DAHNc6_o6mg` | "Gemini para sa Guro" · 5 slides · Jun 24 |
+| W26 Fri | `DAHNoxGHZaQ` | "Nagbabago. Kaya Mo Pa Ba?" · 5 slides · edit: `https://www.canva.com/d/JzWEuWM_q3ybfdc` |
 
 ---
 
