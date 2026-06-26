@@ -347,11 +347,13 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 
 All scripts live in `automation/`. They run via Mac crontab (Mac is PST/UTC-8; PHT = PST + 16h).
 
-| Script | Purpose | Cron (PST) | Fires (PHT) |
-|--------|---------|-----------|-------------|
-| `tito-summary.py` | Daily status: current/next/upcoming weeks + today's drops | `0 18 * * *` | 10:00 AM PHT daily |
-| `tito-remind.py` | Drop-day reminder: fires 1hr before each post | Mon `0 3 * * 1`, Wed `0 2 * * 3`, Fri `0 2 * * 5` | 7PM Mon / 6PM Wed+Fri PHT |
-| `tito-weekly.py` | Saturday production checklist: shows what still needs scripting/captions for next 2 weeks | `0 17 * * 5` | 9:00 AM PHT Saturday |
+| Script | Purpose | Fires (Manila time) |
+|--------|---------|-------------------|
+| `tito-summary.py` | Daily status: current/next/upcoming weeks + today's drops | 10:00 AM daily |
+| `tito-record.py` | D-3 recording reminder: what to film, specs, where to save | 9:00 AM — Fri / Sun / Tue |
+| `tito-create.py` | D-2 content creation reminder: script + captions + Canva, links to produce-post | 9:00 AM — Sat / Mon / Wed |
+| `tito-weekly.py` | Saturday production overview: shows what still needs work for next 2 weeks | 9:00 AM Saturday |
+| `tito-remind.py` | Drop-day reminder: 1hr before each post with pre-post checklist | 7:00 PM Mon / 7:00 PM Wed / 7:00 PM Fri |
 
 **Setup:**
 ```bash
@@ -361,7 +363,7 @@ bash automation/setup-wake.sh      # schedule Mac wake events for overnight remi
 
 **Log:** `/tmp/titoai-cron.log`
 
-**Mac sleep note:** Drop reminders fire at 2–3 AM PST. Run `setup-wake.sh` once weekly to schedule `pmset` wake events, or the daily 8AM PHT summary will catch today's drops as the primary heads-up.
+**Mac sleep note:** Drop reminders fire at 7 PM Manila = 3 AM Mac local time. Run `setup-wake.sh` once weekly to schedule wake events, or rely on the 10 AM daily summary as your primary heads-up.
 
 **Telegram bot:** `@titoaiph_bot` (token in scripts). Always use curl or `urllib` — never the MCP Telegram tool (wired to Cobrinha bot, not Tito AI).
 
