@@ -217,6 +217,7 @@ docs/slides/W##-mon/
 | W26 Mon | `DAHNQUaAqEQ` | "Ang Sabi Nila" · 5 slides · Updated Jun 22 |
 | W26 Wed | `DAHNc6_o6mg` | "Gemini para sa Guro" · 5 slides · Jun 24 |
 | W26 Fri | `DAHNoxGHZaQ` | "Nagbabago. Kaya Mo Pa Ba?" · 5 slides · edit: `https://www.canva.com/d/JzWEuWM_q3ybfdc` |
+| W27 Fri | `DAHNpfOSrz8` | "Ang Taong Nagsimula Kahapon" · 5 slides · edit: `https://www.canva.com/d/NQZGhE40QTzJKTn` |
 
 ---
 
