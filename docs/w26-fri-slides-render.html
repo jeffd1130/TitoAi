@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#333;display:flex;flex-direction:column;gap:20px;padding:20px;align-items:flex-start}
+.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:flex;flex-direction:column;justify-content:center;padding:80px 90px;flex-shrink:0;overflow:hidden}
+.slide::before{content:'';position:absolute;top:-120px;right:-120px;width:400px;height:400px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
+.slide::after{content:'';position:absolute;bottom:-80px;left:-80px;width:280px;height:280px;border-radius:50%;background:#0D9488;opacity:.05;pointer-events:none}
+.t-line{font-family:'Bebas Neue',Impact,sans-serif;font-size:118px;line-height:1.0;letter-spacing:2px;display:block}
+.t-gold{color:#F59E0B}
+.t-white{color:#ffffff}
+.t-teal{color:#0D9488}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%);margin:32px 0}
+.body-text{font-family:'DM Sans',sans-serif;font-size:38px;color:#CBD5E1;line-height:1.55;font-weight:400}
+.body-text strong{color:#ffffff;font-weight:700}
+.label{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569;margin-bottom:16px}
+.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
+.footer img{height:68px;opacity:.9}
+.pips{display:flex;gap:8px}
+.pip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.pip.active{background:#F59E0B}
+.big-quote{font-family:'DM Sans',sans-serif;font-size:44px;color:#94A3B8;line-height:1.5;font-style:italic;margin-top:24px}
+.big-quote strong{color:#F59E0B;font-style:normal}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Cover/Hook -->
+<div class="slide" id="s1">
+  <div class="label">Tito AI · W26 Biyernes</div>
+  <span class="t-line t-gold">NAGBABAGO.</span>
+  <span class="t-line t-white">KAYA MO</span>
+  <span class="t-line t-teal">PA BA?</span>
+  <div class="divider"></div>
+  <div class="body-text">Claude. Gemini.<br>Bawat buwan — <strong>may bago.</strong></div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip active"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 2: The Feeling -->
+<div class="slide" id="s2">
+  <div class="label">Ang Nararamdaman</div>
+  <span class="t-line t-white">BAWAT</span>
+  <span class="t-line t-white">LINGGO —</span>
+  <span class="t-line t-gold">MAY BAGO.</span>
+  <div class="divider"></div>
+  <div class="body-text">
+    Parang nagsimula ka pa lang<br>matuto — tapos nag-iba<br>na naman ang tool.<br><br>
+    <strong>Nakakapagod. Nakakalito.</strong>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip"></div><div class="pip active"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 3: The Pivot -->
+<div class="slide" id="s3">
+  <div class="label">Ang Katotohanan</div>
+  <span class="t-line t-white">HINDI IYON</span>
+  <span class="t-line t-white">PROBLEMA.</span>
+  <div class="divider"></div>
+  <span class="t-line t-gold">IYON AY</span>
+  <span class="t-line t-gold">BALITA.</span>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip"></div><div class="pip"></div><div class="pip active"></div><div class="pip"></div><div class="pip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 4: The Truth -->
+<div class="slide" id="s4">
+  <div class="label">Sino ang Nakikinabang?</div>
+  <span class="t-line t-gold">ANG TAONG</span>
+  <span class="t-line t-white">GUMAGAMIT</span>
+  <span class="t-line t-teal">NA.</span>
+  <div class="divider"></div>
+  <div class="body-text">
+    Hindi ang naghihintay.<br><br>
+    Claude at Gemini —<br><strong>libre pa rin.</strong><br>
+    At mas malakas ngayon<br>kaysa noong nakaraang buwan.
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip active"></div><div class="pip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 5: CTA -->
+<div class="slide" id="s5">
+  <div class="label">I-comment sa Baba</div>
+  <span class="t-line t-white">CLAUDE</span>
+  <span class="t-line t-white">O</span>
+  <span class="t-line t-gold">GEMINI?</span>
+  <div class="divider"></div>
+  <div class="body-text">
+    Alin ang ginagamit mo ngayon?<br>
+    O wala pa? <strong>Okay lang —</strong><br>
+    iyon ang simula natin.
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip active"></div></div>
+  </div>
+</div>
+
+</body>
+</html>
