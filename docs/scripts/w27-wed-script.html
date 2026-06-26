@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Script — W27 Wed · Claude Projects Setup · Tito AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff;--coral:#F97316;--green:#10B981;--blue:#3B82F6}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.hdr{background:linear-gradient(135deg,#0D1520,#0A0F1E 55%,#0D1A2E);border-bottom:3px solid var(--gold);padding:32px 36px 24px;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:var(--gold);opacity:.06;pointer-events:none}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-blue{background:var(--blue);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(28px,5vw,48px);letter-spacing:1px;line-height:1.05;margin-bottom:6px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:13px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;gap:0;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:12px 16px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.drop-value{font-size:13px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:28px 32px 60px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.section-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:13px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.scene{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden}
+.scene-header{padding:12px 18px;background:var(--navy3);display:flex;align-items:center;gap:12px}
+.scene-time{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);min-width:90px}
+.scene-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white)}
+.scene-tag{margin-left:auto;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.tag-hook{background:var(--coral);color:var(--white)}
+.tag-setup{background:var(--blue);color:var(--white)}
+.tag-demo{background:#8B5CF6;color:var(--white)}
+.tag-result{background:var(--teal);color:var(--white)}
+.tag-cta{background:var(--green);color:var(--navy)}
+.scene-body{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.direction{font-size:12px;color:var(--muted);font-style:italic;background:rgba(255,255,255,.03);border-left:2px solid var(--navy3);padding:8px 12px;border-radius:0 6px 6px 0}
+.dialogue{font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.75;color:var(--white);padding:4px 0}
+.dialogue strong{color:var(--gold);font-style:normal}
+.tool-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.3);border-radius:6px;padding:5px 12px;font-size:11px;font-weight:700;color:#93C5FD;margin-top:4px}
+.screen-note{background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--gold);line-height:1.5;margin-top:4px}
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.note-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:10px;padding:14px 16px}
+.note-icon{font-size:18px;margin-bottom:6px;display:block}
+.note-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.note-text{font-size:12px;color:var(--gray);line-height:1.5}
+.note-text strong{color:var(--white)}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ftr span{font-size:11px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+@media(max-width:600px){.hdr{padding:24px 20px 18px}.main{padding:20px 16px 40px}.drop-bar{flex-wrap:wrap}.drop-cell{min-width:50%}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">W27 · Wednesday</span>
+    <span class="badge badge-blue">Demo / Tutorial</span>
+    <span class="badge badge-navy">Split Screen · 85–90s</span>
+  </div>
+  <h1>Claude Projects — <span>I-Setup Natin</span></h1>
+  <p class="hdr-sub">Ang Iyong Trabaho Space · Libre sa claude.ai</p>
+</div>
+<div class="drop-bar">
+  <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Wed Jul 2 · 7:00 PM</div></div>
+  <div class="drop-cell"><div class="drop-label">Drop (PST)</div><div class="drop-value">Wed Jul 2 · 4:00 AM</div></div>
+  <div class="drop-cell"><div class="drop-label">Platform</div><div class="drop-value">TikTok → IG → FB</div></div>
+  <div class="drop-cell"><div class="drop-label">Target</div><div class="drop-value gold">85–90 seconds</div></div>
+</div>
+<div class="main">
+  <div>
+    <div class="section-label">Script</div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">0:00–0:05</div><div class="scene-title">Hook</div><span class="scene-tag tag-hook">Hook</span></div>
+        <div class="scene-body">
+          <div class="direction">Face cam. Confident, fast. Promise a clear outcome in the first 5 seconds.</div>
+          <div class="dialogue">"Ituturo ko sa iyo ngayon kung paano mag-setup ng Claude Project —<br><strong>libre, tapos na tayo sa 90 segundo.</strong>"</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">0:05–0:30</div><div class="scene-title">Setup Steps</div><span class="scene-tag tag-setup">Setup</span></div>
+        <div class="scene-body">
+          <div class="direction">Switch to split screen — face cam pip, claude.ai screen share main. Show each click clearly. Narrate as you click.</div>
+          <span class="tool-chip">claude.ai → sidebar → Projects → New Project</span>
+          <div class="dialogue">
+            "Pumunta sa claude.ai.<br><br>
+            Sa kaliwang sidebar — may '<strong>Projects</strong>.'<br>
+            I-click. Tapos '<strong>New Project</strong>.'<br><br>
+            Pangalanan mo ito —<br>
+            halimbawa: '<em>Grade 4 Teacher Assistant.</em>'<br><br>
+            Tapos — dito ang importante —<br>
+            may '<strong>Project Instructions</strong>' section."
+          </div>
+          <div class="screen-note">📸 Keep each step on screen for at least 2 seconds — viewers will screenshot this</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">0:30–1:05</div><div class="scene-title">Live Demo</div><span class="scene-tag tag-demo">Demo</span></div>
+        <div class="scene-body">
+          <div class="direction">Still on screen share. Type the instructions live — slowly enough to read. Then start a chat and show it working.</div>
+          <div class="dialogue">
+            "Dito mo isusulat kung sino ang gusto mong maging si Claude<br>para sa project na ito.<br><br>
+            Halimbawa:<br>
+            '<em>Ikaw ay isang assistant para sa isang Grade 4 Filipino teacher.<br>
+            Ang mga estudyante ay nasa edad 9–10.<br>
+            Gumawa ng lesson plans, activities, at quizzes sa Filipino.</em>'<br><br>
+            I-save.<br><br>
+            Ngayon — mag-start ng bagong chat<br>
+            sa loob ng project na ito.<br><br>
+            Tanong: '<em>Gumawa ng 3 activities para sa pagbabasa.</em>'<br><br>
+            Tingnan mo —<br>
+            <strong>alam na ni Claude na teacher ka.</strong><br>
+            Hindi mo na kailangang ulitin ang context<br>
+            sa bawat bagong chat."
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">1:05–1:20</div><div class="scene-title">The Result</div><span class="scene-tag tag-result">Result</span></div>
+        <div class="scene-body">
+          <div class="direction">Back to face cam. Warm, direct. Let the benefit land.</div>
+          <div class="dialogue">
+            "Ito na ang iyong AI assistant.<br><br>
+            Nandito lagi.<br>
+            Hindi mawawala ang context.<br>
+            Hindi mo na kailangang mag-explain ulit sa simula.<br><br>
+            Para sa guro, freelancer, negosyante —<br>
+            <strong>isa itong project para sa bawat trabaho mo.</strong>"
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">1:20–1:30</div><div class="scene-title">CTA + Closer</div><span class="scene-tag tag-cta">CTA</span></div>
+        <div class="scene-body">
+          <div class="direction">Smile. Direct question — drives comment segments (Guro / Freelancer / Negosyante).</div>
+          <div class="dialogue">
+            "I-try mo ngayon — libre sa claude.ai.<br><br>
+            At i-comment sa baba:<br>
+            <strong>Anong project ang gagawin mo?</strong><br>
+            Guro? Freelancer? Negosyante?<br><br>
+            Ingat lagi, mga Pamangkin.<br>
+            <strong>Tito AI — AI Para Sa Ating Lahat.</strong>"
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <div class="section-label">Production Notes</div>
+    <div class="notes-grid">
+      <div class="note-card"><span class="note-icon">🖥</span><div class="note-label">Format</div><div class="note-text">Split screen: face cam pip (left) + claude.ai screen share (main). Return to face cam for Result + CTA.</div></div>
+      <div class="note-card"><span class="note-icon">🐌</span><div class="note-label">Demo Pacing</div><div class="note-text">Slow enough to read. Each click/step needs ~2s on screen. Viewers screenshot tutorial content.</div></div>
+      <div class="note-card"><span class="note-icon">🏷</span><div class="note-label">Lower Thirds</div><div class="note-text">Add: <strong>"claude.ai → Projects"</strong> at screen share start. <strong>"Project Instructions"</strong> when that field appears.</div></div>
+      <div class="note-card"><span class="note-icon">⚠️</span><div class="note-label">UI Changes</div><div class="note-text">If claude.ai UI has changed by Jul 2 — note it verbally. Don't pretend it's the same.</div></div>
+      <div class="note-card"><span class="note-icon">👩‍🏫</span><div class="note-label">Example</div><div class="note-text">Guro example is broad enough — non-teachers see the pattern (freelancer: replace "teacher" with your role).</div></div>
+      <div class="note-card"><span class="note-icon">🆓</span><div class="note-label">Free Tool</div><div class="note-text">Say "libre sa claude.ai" at least twice — at the hook and the CTA.</div></div>
+    </div>
+  </div>
+</div>
+<div class="ftr"><span>Tito AI · @TitoAIPH · W27 Wednesday · Jul 2, 2026</span><b>AI PARA SA ATING LAHAT</b></div>
+</body>
+</html>

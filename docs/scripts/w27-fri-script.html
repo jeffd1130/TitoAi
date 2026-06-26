@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Script — W27 Fri · Ang Taong Nagsimula Kahapon · Tito AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff;--coral:#F97316;--green:#10B981}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.hdr{background:linear-gradient(135deg,#0D1520,#0A0F1E 55%,#0D1A2E);border-bottom:3px solid var(--gold);padding:32px 36px 24px;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:var(--gold);opacity:.06;pointer-events:none}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-coral{background:var(--coral);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(28px,5vw,48px);letter-spacing:1px;line-height:1.05;margin-bottom:6px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:13px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;gap:0;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:12px 16px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.drop-value{font-size:13px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:28px 32px 60px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.section-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:13px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.scene{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden}
+.scene-header{padding:12px 18px;background:var(--navy3);display:flex;align-items:center;gap:12px}
+.scene-time{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);min-width:90px}
+.scene-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white)}
+.scene-tag{margin-left:auto;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.tag-hook{background:var(--coral);color:var(--white)}
+.tag-story{background:#8B5CF6;color:var(--white)}
+.tag-point{background:var(--gold);color:var(--navy)}
+.tag-promise{background:var(--teal);color:var(--white)}
+.tag-cta{background:var(--green);color:var(--navy)}
+.scene-body{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.direction{font-size:12px;color:var(--muted);font-style:italic;background:rgba(255,255,255,.03);border-left:2px solid var(--navy3);padding:8px 12px;border-radius:0 6px 6px 0}
+.dialogue{font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.75;color:var(--white);padding:4px 0}
+.dialogue strong{color:var(--gold);font-style:normal}
+.pause-note{display:inline-flex;align-items:center;gap:6px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.3);border-radius:6px;padding:5px 12px;font-size:11px;font-weight:700;color:#A78BFA;margin-top:4px}
+.notes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.note-card{background:var(--navy2);border:1px solid var(--navy3);border-radius:10px;padding:14px 16px}
+.note-icon{font-size:18px;margin-bottom:6px;display:block}
+.note-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.note-text{font-size:12px;color:var(--gray);line-height:1.5}
+.note-text strong{color:var(--white)}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ftr span{font-size:11px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+@media(max-width:600px){.hdr{padding:24px 20px 18px}.main{padding:20px 16px 40px}.drop-bar{flex-wrap:wrap}.drop-cell{min-width:50%}}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">W27 · Friday</span>
+    <span class="badge badge-coral">Story / Inspiration</span>
+    <span class="badge badge-navy">Talking Head · 80–90s</span>
+  </div>
+  <h1>Ang Taong Nagsimula <span>Kahapon</span></h1>
+  <p class="hdr-sub">May Kalamangan Na · The compounding advantage of starting now</p>
+</div>
+<div class="drop-bar">
+  <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Fri Jul 4 · 7:00 PM</div></div>
+  <div class="drop-cell"><div class="drop-label">Drop (PST)</div><div class="drop-value">Fri Jul 4 · 4:00 AM</div></div>
+  <div class="drop-cell"><div class="drop-label">Platform</div><div class="drop-value">TikTok → IG → FB</div></div>
+  <div class="drop-cell"><div class="drop-label">Target</div><div class="drop-value gold">80–90 seconds</div></div>
+</div>
+<div class="main">
+  <div>
+    <div class="section-label">Script</div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">0:00–0:05</div><div class="scene-title">Hook</div><span class="scene-tag tag-hook">Hook</span></div>
+        <div class="scene-body">
+          <div class="direction">Face cam. Warm smile — not a lecture. Deliver like you're sharing a truth with a kaibigan, not accusing anyone.</div>
+          <div class="dialogue">"Ang taong nagsimula isang buwan na ang nakalipas —<br><strong>mas malakas na siya ngayon kaysa sa iyo.</strong>"</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">0:05–0:40</div><div class="scene-title">The Story</div><span class="scene-tag tag-story">Story</span></div>
+        <div class="scene-body">
+          <div class="direction">Slow down. Let each idea land. This is the emotional core — don't rush it.</div>
+          <div class="dialogue">
+            "Hindi dahil mas matalino siya.<br>
+            Hindi dahil mas marami siyang oras.<br><br>
+            Dahil sa isang simpleng bagay —<br><br>
+            <strong>Nagsimula siya.</strong>"
+          </div>
+          <span class="pause-note">⏸ Full stop — let it breathe</span>
+          <div class="dialogue" style="margin-top:8px">
+            "At sa bawat linggo na gumagamit siya —<br>
+            mas magaling ang kanyang mga tanong.<br>
+            Mas mabilis ang kanyang trabaho.<br>
+            Mas komportable siya sa tool.<br><br>
+            Ito ang tinatawag na <strong>compounding.</strong><br><br>
+            Hindi ito mabilis na makikita.<br>
+            Pero pagkatapos ng isang buwan —<br>
+            malaking pagkakaiba na."
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">0:40–1:05</div><div class="scene-title">The Point</div><span class="scene-tag tag-point">Point</span></div>
+        <div class="scene-body">
+          <div class="direction">Lean forward. Deliberate. Direct eye contact. This is the turn — from reflection to call.</div>
+          <div class="dialogue">
+            "Hindi ito tungkol sa talino.<br><br>
+            <strong>Tungkol ito sa oras.</strong><br><br>
+            At ang oras na mayroon ka —<br>
+            ay ngayon.<br><br>
+            Hindi bukas.<br>
+            Hindi kapag 'handa na.'<br><br>
+            Ngayon.<br><br>
+            Dahil isang buwan mula ngayon —<br>
+            gusto mo bang maging ikaw<br>
+            ang taong nagsimula kahapon."
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">1:05–1:20</div><div class="scene-title">The Promise</div><span class="scene-tag tag-promise">Promise</span></div>
+        <div class="scene-body">
+          <div class="direction">Energy lifts — hopeful, warm, reassuring. Tito mode.</div>
+          <div class="dialogue">
+            "Nandito tayo linggu-linggo.<br><br>
+            Bawat Lunes — bagong tip.<br>
+            Bawat Miyerkules — bagong demo.<br>
+            Bawat Biyernes — pag-usapan natin.<br><br>
+            <strong>Hindi ka mahuhuli kung kasama mo si Tito AI.</strong>"
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-header"><div class="scene-time">1:20–1:30</div><div class="scene-title">CTA + Closer</div><span class="scene-tag tag-cta">CTA</span></div>
+        <div class="scene-body">
+          <div class="direction">Genuine smile. Zero judgment in the voice. Binary choice = maximum comments.</div>
+          <div class="dialogue">
+            "I-comment sa baba —<br><br>
+            Kung nagsimula ka na: <strong>'Nagsimula na.'</strong><br>
+            Kung hindi pa: <strong>'Magsisimula na.'</strong><br><br>
+            Walang judgement dito.<br>
+            Lahat tayo nagsisimula sa iisang lugar.<br><br>
+            Ingat lagi, mga Pamangkin.<br>
+            <strong>Tito AI — AI Para Sa Ating Lahat.</strong>"
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <div class="section-label">Production Notes</div>
+    <div class="notes-grid">
+      <div class="note-card"><span class="note-icon">🎥</span><div class="note-label">Format</div><div class="note-text">Pure face cam — no screen share. Friday = story, not demo.</div></div>
+      <div class="note-card"><span class="note-icon">😊</span><div class="note-label">Hook Tone</div><div class="note-text">Warm smile on delivery. Loving, not confrontational. Like a tito sharing wisdom.</div></div>
+      <div class="note-card"><span class="note-icon">⏸</span><div class="note-label">Story Pause</div><div class="note-text">Full stop after <strong>"Nagsimula siya."</strong> That single line is the emotional anchor.</div></div>
+      <div class="note-card"><span class="note-icon">👁</span><div class="note-label">Point Section</div><div class="note-text">Lean forward, slow down on <strong>"Tungkol ito sa oras."</strong> Direct eye contact throughout.</div></div>
+      <div class="note-card"><span class="note-icon">💬</span><div class="note-label">CTA Design</div><div class="note-text"><strong>"Nagsimula na" / "Magsisimula na"</strong> — binary = easy to comment = high engagement. Zero judgment in voice.</div></div>
+      <div class="note-card"><span class="note-icon">🎵</span><div class="note-label">Audio</div><div class="note-text">No music under voice. Optional soft ambient in post. Keep voice clean.</div></div>
+    </div>
+  </div>
+</div>
+<div class="ftr"><span>Tito AI · @TitoAIPH · W27 Friday · Jul 4, 2026</span><b>AI PARA SA ATING LAHAT</b></div>
+</body>
+</html>
