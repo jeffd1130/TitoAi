@@ -1,6 +1,6 @@
 # W24 Wednesday — Claude para sa Negosyante
 **Format:** Tutorial / Demo Reel · Split screen (face cam + screen share)
-**Drop:** Wednesday June 11, 2026 · 7:00 PM PHT · 4:00 AM PST (Jun 11)
+**Drop:** Wednesday June 11, 2026 · 7:00 PM PHT (Jun 11)
 **Target length:** 1 min 30 sec
 **Tool:** Claude (claude.ai) — free
 **Target:** Small business owners — sari-sari, carinderia, online selling, ukay-ukay

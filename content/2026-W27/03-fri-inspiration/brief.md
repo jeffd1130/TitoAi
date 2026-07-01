@@ -2,7 +2,7 @@
 **Slot:** 03-fri-inspiration
 **Topic:** Ang Taong Nagsimula Kahapon — May Kalamangan Na
 **Format:** Story / Inspiration Reel · Talking head · 75–90s
-**Drop:** Friday Jul 4, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Friday Jul 4, 2026 · 7:00 PM PHT
 
 ## Concept
 The compounding advantage of starting early with AI. Not about being smart or tech-savvy — about the simple math of practice. Someone who started using Claude or Gemini even one month ago is already ahead, not because they're better, but because they have more reps. The message to Pamangkins: the best time to start was last month. The second best time is now.

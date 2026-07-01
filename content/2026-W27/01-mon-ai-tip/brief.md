@@ -2,7 +2,7 @@
 **Slot:** 01-mon-ai-tip
 **Topic:** July na! Ito ang Dalawang Feature na Kailangan Mo
 **Format:** Short AI Tip Reel · Talking head · 45–60s
-**Drop:** Monday Jun 29, 2026 · 8:00 PM PHT / 5:00 AM PST
+**Drop:** Monday Jun 29, 2026 · 8:00 PM PHT
 
 ## Concept
 July teaser + actionable tip. Jeff introduces two real free features — Claude Projects and Gemini Deep Research — that most Pamangkins haven't tried yet. Not a deep tutorial (that's Wednesday). Just awareness + one CTA to try it now.

@@ -1,7 +1,7 @@
 # TITO AI — W24 Monday AI Tip
 ### "Claude o Gemini — alin ang para sa iyo?"
 Format: 55 seconds · Talking head · No B-roll needed
-Drop: Monday, June 9, 2026 · 8:00 PM PHT (5:00 AM PST)
+Drop: Monday, June 9, 2026 · 8:00 PM PHT
 Platform: TikTok first → IG Reels → Facebook Reels
 
 ---

@@ -1,6 +1,6 @@
 # W25 Wednesday — Captions
 **Topic:** Gumawa ng Resume Gamit ang Claude (In 2 Minutes)
-**Drop:** Wednesday June 18, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Wednesday June 18, 2026 · 7:00 PM PHT
 **Canva cover edit:** https://www.canva.com/d/bX7Ved-swnc8PMh
 **Design ID:** DAHMzjC9OHU
 
@@ -61,7 +61,7 @@ Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat. 🇵🇭
 ---
 
 ## Buffer
-Schedule: Wednesday June 18, 2026 · 7:00 PM PHT / 4:00 AM PST
+Schedule: Wednesday June 18, 2026 · 7:00 PM PHT
 Channel: TikTok → use TikTok caption
 Channel: Instagram → use Instagram caption
 Channel: Facebook → use Facebook caption

@@ -2,7 +2,7 @@
 **Slot:** 01-mon-ai-tip
 **Topic:** Ang Sabi Nila: "Pang-Matalino Lang Iyan"
 **Format:** AI Tip Reel · Talking head · 45–60s
-**Drop:** Monday June 22, 2026 · 8:00 PM PHT / 5:00 AM PST
+**Drop:** Monday June 22, 2026 · 8:00 PM PHT
 
 ## Concept
 "Ang Sabi Nila..." myth-busting format. Open with the exact fear/excuse Filipinos actually say about AI — then flip it in 45 seconds with one concrete proof.

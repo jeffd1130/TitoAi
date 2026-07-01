@@ -1,7 +1,7 @@
 # Wednesday Demo — Brief
 
 **Week:** YYYY-W##
-**Drop time:** Wednesday 7:00 PM PHT (4:00 AM PST)
+**Drop time:** Wednesday 7:00 PM PHT
 **Format:** Split screen: face cam + screen share, 60–90 seconds
 **Platform:** TikTok → Facebook Reels
 

@@ -1,6 +1,6 @@
 # Captions — 01-mon-ai-tip — 2026-W24
 **Topic:** Claude o Gemini — alin ang para sa iyo?
-**Drop:** Monday, June 9, 2026 · 8:00 PM PHT (5:00 AM PST)
+**Drop:** Monday, June 9, 2026 · 8:00 PM PHT
 **Platform:** TikTok first → IG Reels → Facebook Reels
 **Format:** Carousel · 5 slides · 1080×1920
 **Tools featured:** Claude (claude.ai) · Gemini (gemini.google.com)

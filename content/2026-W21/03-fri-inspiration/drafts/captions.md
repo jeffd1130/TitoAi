@@ -1,6 +1,6 @@
 # Captions — Tito AI Intro (Origin Story)
 **Video:** `Finished/Tito Ai Intro.mp4`
-**Drop:** Friday, May 29, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Friday, May 29, 2026 · 7:00 PM PHT
 **Canva design:** DAHKj9hQPYw — https://www.canva.com/d/ldOIk0NrlQiKFWq
 
 ---

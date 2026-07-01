@@ -1,6 +1,6 @@
 # W24 Friday — Captions
 **Topic:** Ang Trabaho Ko, Napalitan Na Ba? (Job Security + AI Reframe)
-**Drop:** Friday June 13, 2026 · 7:00 PM PHT · 4:00 AM PST (Jun 13)
+**Drop:** Friday June 13, 2026 · 7:00 PM PHT (Jun 13)
 
 ---
 

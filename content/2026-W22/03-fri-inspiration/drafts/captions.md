@@ -3,7 +3,7 @@
 **Video:** `Finished/Tito Ai Intro.mp4`
 **Specs:** 2:47 · 1440×2560 · HEVC/H.265 · AAC stereo · 12.2 Mbps · May 26, 2026
 **Source:** Direct from Jeff's script (files2/tito-ai-scripts.md — Video 1)
-**Drop:** Friday, May 29, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Friday, May 29, 2026 · 7:00 PM PHT
 **Canva cover:** DAHKj9hQPYw — https://www.canva.com/d/ldOIk0NrlQiKFWq
 
 ---

@@ -1,7 +1,7 @@
 # Script — 01-mon-ai-tip — 2026-W22
 **"Ito ang 3 libreng AI tools na ginagamit ko araw-araw"**
 Format: 45 seconds · Talking head · No B-roll needed
-Drop: Monday, May 26, 2026 · 8:00 PM PHT (5:00 AM PST)
+Drop: Monday, May 26, 2026 · 8:00 PM PHT
 Platform: TikTok → IG Reels → Facebook Reels
 
 ---

@@ -1,7 +1,7 @@
 # Captions — From Actual Video Transcript
 **Video:** `Finished/Tito Ai Intro.mp4`
 **Transcribed:** Whisper (small model) · May 28, 2026
-**Drop:** Friday, May 29, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Friday, May 29, 2026 · 7:00 PM PHT
 
 ## What Jeff Actually Says in the Video
 

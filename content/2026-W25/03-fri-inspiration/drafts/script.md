@@ -1,7 +1,7 @@
 # W25 Friday — Script
 **Topic:** Tito AI Tries: Father's Day Para Sa Php 2,000
 **Format:** Talking head · Face cam · Tito AI Tries challenge format
-**Drop:** Friday June 20, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Friday June 20, 2026 · 7:00 PM PHT
 
 ---
 

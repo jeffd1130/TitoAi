@@ -2,7 +2,7 @@
 **Slot:** 02-wed-demo
 **Topic:** Claude Projects — I-Setup Natin ang Iyong Trabaho Space
 **Format:** Demo / Tutorial Reel · Split screen (face cam + screen share) · 75–90s
-**Drop:** Wednesday Jul 2, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Wednesday Jul 2, 2026 · 7:00 PM PHT
 
 ## Concept
 Live demo of Claude Projects — the free feature Monday's tip introduced. Jeff sets up a Project live on screen for a guro use case: one persistent space with saved instructions, files, and chat history. No more repeating context every time.

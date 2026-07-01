@@ -1,7 +1,7 @@
 # Production Script — W23 Monday AI Tip
 **"Sino si Claude at Gemini — at bakit mo sila kailangan"**
 Format: Talking head · 45–55 seconds · No B-roll needed
-Drop: Monday, June 2, 2026 · 8:00 PM PHT / 5:00 AM PST
+Drop: Monday, June 2, 2026 · 8:00 PM PHT
 
 ---
 

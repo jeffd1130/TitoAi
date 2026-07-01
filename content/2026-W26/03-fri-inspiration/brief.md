@@ -2,7 +2,7 @@
 **Slot:** 03-fri-inspiration
 **Topic:** Claude at Gemini — Nagbabago. Kaya Mo Pa Ba?
 **Format:** Story / Inspiration Reel · Talking head · 75–90s
-**Drop:** Friday June 27, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Friday June 27, 2026 · 7:00 PM PHT
 
 ## Concept
 AI keeps upgrading every week — Claude 4, Gemini updates — and everyday Filipinos feel overwhelmed trying to keep up. Tito AI reframes it: the tools getting better is good news *for you*, as long as you start now. Inspirational, not tutorial.

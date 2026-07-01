@@ -1,7 +1,7 @@
 # W26 Fri — Script Draft
 **Topic:** Claude at Gemini — Nagbabago. Kaya Mo Pa Ba?
 **Format:** Story / Inspiration Reel · Talking head · 75–90s
-**Drop:** Fri Jun 27, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Fri Jun 27, 2026 · 7:00 PM PHT
 
 ---
 

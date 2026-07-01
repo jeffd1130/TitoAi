@@ -1,6 +1,6 @@
 # W25 Friday — Captions
 **Topic:** Tito AI Tries: Father's Day Para Sa Php 2,000
-**Drop:** Friday June 20, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Friday June 20, 2026 · 7:00 PM PHT
 **Canva cover edit:** https://www.canva.com/d/TQlMa76MSmoTSK2
 **Design ID:** DAHM0a1ENbo
 
@@ -77,7 +77,7 @@ Maligayang Father's Day sa lahat ng mga tatay! Ingat lagi, mga Pamangkin. Tito A
 ---
 
 ## Buffer
-Schedule: Friday June 20, 2026 · 7:00 PM PHT / 4:00 AM PST
+Schedule: Friday June 20, 2026 · 7:00 PM PHT
 Channel: TikTok → use TikTok caption
 Channel: Instagram → use Instagram caption
 Channel: Facebook → use Facebook caption

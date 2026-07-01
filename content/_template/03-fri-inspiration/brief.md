@@ -1,7 +1,7 @@
 # Friday Story / Inspiration — Brief
 
 **Week:** YYYY-W##
-**Drop time:** Friday 7:00 PM PHT (4:00 AM PST)
+**Drop time:** Friday 7:00 PM PHT
 **Format:** Talking head, 60–90 seconds, story arc: hook → struggle → win → apply-it-yourself
 **Platform:** TikTok → Instagram Reels → Facebook Reels
 

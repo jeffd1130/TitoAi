@@ -364,7 +364,7 @@ bash automation/setup-cron.sh      # install all cron jobs
 
 **Log:** `/tmp/titoai-cron.log`
 
-**Note:** `automation/setup-wake.sh` is deprecated — it was built on the incorrect assumption that Jeff's Mac runs on Pacific time, requiring overnight wake events to catch PHT-evening reminders. Since the Mac runs on local PHT time, all reminders fire during normal waking hours and no wake-scheduling is needed.
+**Note:** `automation/setup-wake.sh` is deprecated — no longer needed. The Mac runs on Manila time (PHT, UTC+8), so all reminders fire during normal waking hours and no wake-scheduling is needed.
 
 **Telegram bot:** `@titoaiph_bot` (token in scripts). Always use curl or `urllib` — never the MCP Telegram tool (wired to Cobrinha bot, not Tito AI).
 

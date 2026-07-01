@@ -1,7 +1,7 @@
 # Draft — 01-mon-ai-tip — 2026-W23
 
 **Slot:** Monday AI Tip Reel
-**Drop:** Monday, June 2, 2026 · 8:00 PM PHT (5:00 AM PST)
+**Drop:** Monday, June 2, 2026 · 8:00 PM PHT
 **Platform:** TikTok → Instagram Reels → Facebook Reels
 **Format:** Talking head, 30–60 seconds
 **Topic:** "Paano magsimula sa AI — ngayon, libre"

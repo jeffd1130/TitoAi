@@ -1,7 +1,7 @@
 # W27 Mon — Script Draft
 **Topic:** July na! Ito ang Dalawang Feature na Kailangan Mo
 **Format:** Short AI Tip Reel · Talking head · 45–60s
-**Drop:** Mon Jun 29, 2026 · 8:00 PM PHT / 5:00 AM PST
+**Drop:** Mon Jun 29, 2026 · 8:00 PM PHT
 
 ---
 

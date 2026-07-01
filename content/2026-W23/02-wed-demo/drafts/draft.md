@@ -1,7 +1,7 @@
 # Draft — 02-wed-demo — 2026-W23
 
 **Slot:** Wednesday Demo / Tutorial Reel
-**Drop:** Wednesday, June 4, 2026 · 7:00 PM PHT (4:00 AM PST)
+**Drop:** Wednesday, June 4, 2026 · 7:00 PM PHT
 **Platform:** TikTok → Facebook Reels → Instagram Reels
 **Format:** Split screen: face cam + screen share, 60–90 seconds
 **Topic:** "Gemini Beginner's Guide — OFW leave letter demo"

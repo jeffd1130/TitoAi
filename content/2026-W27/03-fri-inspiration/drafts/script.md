@@ -1,7 +1,7 @@
 # W27 Fri — Script Draft
 **Topic:** Ang Taong Nagsimula Kahapon — May Kalamangan Na
 **Format:** Story / Inspiration Reel · Talking head · 75–90s
-**Drop:** Fri Jul 4, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Fri Jul 4, 2026 · 7:00 PM PHT
 
 ---
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Tito AI — Daily Status Update
-Runs at 4 PM PST (8 AM PHT) every day.
+Runs at 10 AM Manila time every day.
 Reads docs/schedule.json, updates "updated" date, commits + pushes, sends Telegram digest.
 """
 

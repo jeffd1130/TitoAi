@@ -1,6 +1,6 @@
 # Captions — 01-mon-ai-tip — 2026-W22
 **Topic:** Dalawa lang ang kailangan mo — libre lahat
-**Drop:** Monday, May 26, 2026 · 8:00 PM PHT (5:00 AM PST)
+**Drop:** Monday, May 26, 2026 · 8:00 PM PHT
 **Platform:** TikTok first → IG Reels → Facebook Reels
 **Format:** Talking head · 40 sec · No B-roll
 **Tools featured:** Claude (claude.ai) · Gemini (gemini.google.com)

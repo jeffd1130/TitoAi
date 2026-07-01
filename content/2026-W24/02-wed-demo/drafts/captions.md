@@ -1,6 +1,6 @@
 # W24 Wednesday — Captions
 **Topic:** Claude para sa Negosyante (Digital Marketing Demo)
-**Drop:** Wednesday June 11, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Wednesday June 11, 2026 · 7:00 PM PHT
 
 ---
 

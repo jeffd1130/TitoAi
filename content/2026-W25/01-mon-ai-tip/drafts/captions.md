@@ -1,6 +1,6 @@
 # W25 Monday — Captions
 **Topic:** Claude o Gemini — Kailan Mo Gagamitin ang Isa't Isa?
-**Drop:** Monday June 16, 2026 · 8:00 PM PHT · 5:00 AM PST
+**Drop:** Monday June 16, 2026 · 8:00 PM PHT
 **Credit:** Inspired by AV Leeneaux (@avdejesus)
 
 ---

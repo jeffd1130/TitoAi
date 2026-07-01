@@ -1,6 +1,6 @@
 # W25 Wednesday — Gumawa ng Resume Gamit ang Claude (In 2 Minutes)
 **Format:** Demo Reel · Split screen (face cam + Claude screen share)
-**Drop:** Wednesday June 18, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Wednesday June 18, 2026 · 7:00 PM PHT
 **Target length:** 75 sec
 **Tool:** Claude (claude.ai) — libre
 

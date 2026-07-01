@@ -2,7 +2,7 @@
 **Video:** `Finished/Tito AI 2.mp4`
 **Specs:** 1:35 · 1440×2560 · HEVC/H.265 · AAC
 **Topic:** Gemini — Pinaka-simpleng paraan para magsimula sa AI
-**Drop:** Wednesday, May 28, 2026 · 7:00 PM PHT (4:00 AM PST)
+**Drop:** Wednesday, May 28, 2026 · 7:00 PM PHT
 **Platform:** TikTok first → Facebook (native upload) → IG Reels
 **Video notes:** Opens with animated Tito AI logo intro · Talking head at home · Green polo, black cap · Wooden shelf background (authentic bahay feel)
 

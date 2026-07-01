@@ -1,7 +1,7 @@
 # W24 Wednesday — Carousel Captions (Finished Slides)
 **Topic:** Claude para sa Negosyante — Carousel / Swipe Post
 **Slides:** Finished/W24 Wed — Claude para sa Negosyante 4×5/ (1.png–5.png)
-**Drop:** Wednesday June 11, 2026 · 7:00 PM PHT · 4:00 AM PST
+**Drop:** Wednesday June 11, 2026 · 7:00 PM PHT
 
 ---
 

@@ -1,7 +1,7 @@
 # W27 Wed — Script Draft
 **Topic:** Claude Projects — I-Setup Natin ang Iyong Trabaho Space
 **Format:** Demo / Tutorial Reel · Split screen · 75–90s
-**Drop:** Wed Jul 2, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Wed Jul 2, 2026 · 7:00 PM PHT
 
 ---
 

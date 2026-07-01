@@ -2,7 +2,7 @@
 **Slot:** 02-wed-demo
 **Topic:** Gemini para sa Guro
 **Format:** Demo/Tutorial Reel · Split screen (face cam + screen) · 60–90s
-**Drop:** Wednesday June 25, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Wednesday June 25, 2026 · 7:00 PM PHT
 
 ## Concept
 Show a Filipino teacher how to use Gemini to make a complete lesson plan in under 3 minutes — from blank page to ready-to-use outline. Real prompt, real output on screen.

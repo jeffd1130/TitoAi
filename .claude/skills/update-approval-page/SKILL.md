@@ -13,7 +13,7 @@ Rebuild `docs/index.html` from current draft files. Push to GitHub Pages.
    - Caption text
    - Hashtags
    - Canva edit URL
-   - Drop time PHT + PST
+   - Drop time (Manila)
    - Approval status
 
 3. **Copy cover preview PNGs** to `docs/assets/` (if not already there).

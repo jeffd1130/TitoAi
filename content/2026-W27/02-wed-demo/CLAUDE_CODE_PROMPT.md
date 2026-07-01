@@ -8,7 +8,7 @@ Produce the W27 Wednesday demo post. The video is already shot, edited, and fina
 
 **Video:** `content/2026-W27/02-wed-demo/approved/W27-wed-claude-projects-FINAL.mp4`
 **Script:** `content/2026-W27/02-wed-demo/drafts/script.md` (already written — "Claude Projects — I-Setup Natin ang Iyong Trabaho Space")
-**Drop:** Wed Jul 2, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Wed Jul 2, 2026 · 7:00 PM PHT
 
 **Flag to me before proceeding:** the final edit runs 2:11 (131s) and is 202MB. That's ~45s over both the script's 85–90s target and the brand's 60–90s ceiling, and over the 100MB Canva-compatibility target. Confirm with me whether to post as-is (exception) or trim before packaging — don't silently cut it yourself.
 

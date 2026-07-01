@@ -1,7 +1,7 @@
 # Script — 02-wed-demo — 2026-W22
 **"Subukan mo ito ngayon — libre, 2 minuto lang"**
 Format: 75 seconds · Split screen: face cam + phone/laptop screen share
-Drop: Wednesday, May 28, 2026 · 7:00 PM PHT (4:00 AM PST)
+Drop: Wednesday, May 28, 2026 · 7:00 PM PHT
 Platform: TikTok → Facebook (native upload)
 
 ---

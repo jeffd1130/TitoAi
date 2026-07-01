@@ -1,7 +1,7 @@
 # Draft — 03-fri-inspiration — 2026-W23
 
 **Slot:** Friday Story / Inspiration Reel
-**Drop:** Friday, June 6, 2026 · 7:00 PM PHT (4:00 AM PST)
+**Drop:** Friday, June 6, 2026 · 7:00 PM PHT
 **Platform:** TikTok → Instagram Reels → Facebook Reels
 **Format:** Talking head, 60–90 seconds
 **Topic:** "Hindi degree ang kailangan mo"

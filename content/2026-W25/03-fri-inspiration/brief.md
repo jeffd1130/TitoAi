@@ -2,7 +2,7 @@
 **Slot:** 03-fri-inspiration
 **Topic:** Nanay + AI — Ganito Namin Ginagamit sa Bahay
 **Format:** Story / Inspiration Reel · 60–90s · Face cam talking head
-**Drop:** Friday June 20, 2026 · 7:00 PM PHT / 4:00 AM PST
+**Drop:** Friday June 20, 2026 · 7:00 PM PHT
 
 ## Concept
 Tito AI tells the story of a nanay (mom) who was scared of AI — and how she started using Claude at home, for real everyday tasks. Emotional, warm, relatable. Targets the nanay/parent audience who fears AI will replace them or their children.

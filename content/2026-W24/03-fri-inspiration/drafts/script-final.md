@@ -1,6 +1,6 @@
 # W24 Friday — Ang Trabaho Ko, Napalitan Na Ba?
 **Format:** Story / Inspiration Reel · Talking head (face cam)
-**Drop:** Friday June 13, 2026 · 7:00 PM PHT · 4:00 AM PST (Jun 13)
+**Drop:** Friday June 13, 2026 · 7:00 PM PHT (Jun 13)
 **Target length:** 60–90 sec
 **Tool:** None — pure story
 **Target:** Anyone worried AI will take their job — BPO, freelancers, office workers, teachers, nurses

@@ -1,6 +1,6 @@
 # W25 Monday — Claude o Gemini: Kailan Mo Gagamitin ang Isa't Isa?
 **Format:** AI Tip Reel · Talking head + optional screen split
-**Drop:** Monday June 16, 2026 · 8:00 PM PHT · 5:00 AM PST
+**Drop:** Monday June 16, 2026 · 8:00 PM PHT
 **Target length:** 60 sec
 **Inspired by:** AV Leeneaux (@avdejesus) — real question from the community
 **Tool:** Claude + Gemini — both free

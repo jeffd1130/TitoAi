@@ -1,7 +1,7 @@
 # Draft — 03-fri-inspiration — 2026-W21
 
 **Slot:** Friday Story / Inspiration
-**Drop:** Friday, May 29, 2026 · 7:00 PM PHT (4:00 AM PST)
+**Drop:** Friday, May 29, 2026 · 7:00 PM PHT
 **Platform:** TikTok → Instagram Reels → Facebook Reels
 **Format:** Talking head, ~80 seconds
 **Canva design ID:** DAHKj9hQPYw
