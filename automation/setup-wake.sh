@@ -1,15 +1,16 @@
 #!/bin/bash
-# Tito AI — schedule Mac wake events for drop reminders
-# Uses pmset to wake the Mac just before each drop reminder fires.
+# DEPRECATED — no longer needed.
 #
-# Drop reminders fire at:
-#   Mon 3:00 AM PST → wake at 2:55 AM PST
-#   Wed 2:00 AM PST → wake at 1:55 AM PST
-#   Fri 2:00 AM PST → wake at 1:55 AM PST
+# This script was built on the incorrect assumption that Jeff's Mac runs on
+# Pacific time (PST/UTC-7), requiring overnight wake events to catch
+# PHT-evening drop reminders. Jeff's Mac actually runs on local PHT (UTC+8)
+# time, so all reminders in setup-cron.sh now fire during normal daytime/
+# evening hours (9 AM, 6-7 PM) and the Mac does not need to be woken from
+# sleep overnight. Kept in the repo for reference only — do not run.
 #
-# pmset only accepts the NEXT single occurrence. Re-run this script weekly
-# (e.g., add it to the weekly cron) to schedule the next week's wake events.
-# The tito-weekly.py reminder fires while Mac is awake (Fri 5 PM PST) so no wake needed for it.
+# Original purpose (obsolete): Uses pmset to wake the Mac just before each
+# drop reminder fires, back when reminders were believed to fire at 1-3 AM
+# Mac local time.
 #
 # Requires sudo — you will be prompted for your password.
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """D-3 media recording reminder — fires 3 days before each post day.
 
-Fires at 9:00 AM Manila time:
-  Friday   → D-3 for Monday post      cron: 0 17 * * 4
-  Sunday   → D-3 for Wednesday post   cron: 0 17 * * 6
-  Tuesday  → D-3 for Friday post      cron: 0 17 * * 1
+Fires at 9:00 AM PHT (Mac runs on local PHT time — direct cron values):
+  Friday   → D-3 for Monday post      cron: 0 9 * * 5
+  Sunday   → D-3 for Wednesday post   cron: 0 9 * * 0
+  Tuesday  → D-3 for Friday post      cron: 0 9 * * 2
 """
 
 import json, os, sys, urllib.request, urllib.parse

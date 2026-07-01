@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Drop-day reminder for Tito AI — fires 1 hour before scheduled post times.
 
-Run via cron at 1 hour before each drop:
-  Mon 7 PM PHT = Mon 3 AM PST  →  0 3 * * 1
-  Wed 6 PM PHT = Wed 2 AM PST  →  0 2 * * 3
-  Fri 6 PM PHT = Fri 2 AM PST  →  0 2 * * 5
+Run via cron at 1 hour before each drop (Mac runs on local PHT time —
+direct cron values, no offset conversion needed):
+  Mon 8 PM PHT drop → fires 7 PM PHT  →  0 19 * * 1
+  Wed 7 PM PHT drop → fires 6 PM PHT  →  0 18 * * 3
+  Fri 7 PM PHT drop → fires 6 PM PHT  →  0 18 * * 5
 """
 
 import json, os, sys, urllib.request, urllib.parse

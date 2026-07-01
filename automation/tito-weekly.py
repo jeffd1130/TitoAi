@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Weekly production reminder for Tito AI — sent Saturday 9 AM PHT (Fri 5 PM PST).
+"""Weekly production reminder for Tito AI — sent Saturday 9 AM PHT.
 
 Reads schedule.json and reports which upcoming posts still need production,
 prompting Jeff to open Claude Code and generate content.
 
-Cron: 0 17 * * 5   (5:00 PM PST Friday = 9:00 AM PHT Saturday)
+Cron: 0 9 * * 6   (9:00 AM PHT Saturday — Mac runs on local PHT time)
 """
 
 import json, os, urllib.request, urllib.parse

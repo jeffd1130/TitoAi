@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """D-2 content creation reminder — fires 2 days before each post day.
 
-Fires at 9:00 AM Manila time:
-  Saturday  → D-2 for Monday post      cron: 0 17 * * 5
-  Monday    → D-2 for Wednesday post   cron: 0 17 * * 0
-  Wednesday → D-2 for Friday post      cron: 0 17 * * 2
+Fires at 9:00 AM PHT (Mac runs on local PHT time — direct cron values):
+  Saturday  → D-2 for Monday post      cron: 0 9 * * 6
+  Monday    → D-2 for Wednesday post   cron: 0 9 * * 1
+  Wednesday → D-2 for Friday post      cron: 0 9 * * 3
 """
 
 import json, os, sys, urllib.request, urllib.parse

@@ -14,9 +14,7 @@ Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent.
 | Wednesday | `02-wed-demo` | Tutorial / Demo Reel (60–90s) | 7:00 PM | `produce-post` |
 | Friday | `03-fri-inspiration` | Story / Inspiration Reel (60–90s) | 7:00 PM | `produce-post` |
 
-All times are **PHT (UTC+8)**. Jeff is in **San Jose, CA (PST, UTC-7)**, so:
-- 8:00 PM PHT = 5:00 AM PST (same day)
-- 7:00 PM PHT = 4:00 AM PST
+All times are **PHT (UTC+8)**. Jeff is based in Manila (PHT, UTC+8) — his Mac runs on local PHT time, so no timezone conversion is needed between drop times and system/cron time.
 
 ---
 
@@ -349,7 +347,7 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 
 ## Automation — Tito AI Daily Routine
 
-All scripts live in `automation/`. They run via Mac crontab (Mac is PST/UTC-8; PHT = PST + 16h).
+All scripts live in `automation/`. They run via Mac crontab. Jeff's Mac runs on local PHT (UTC+8) time, so cron times below are direct PHT wall-clock values — no offset conversion needed.
 
 | Script | Purpose | Fires (Manila time) |
 |--------|---------|-------------------|
@@ -362,12 +360,11 @@ All scripts live in `automation/`. They run via Mac crontab (Mac is PST/UTC-8; P
 **Setup:**
 ```bash
 bash automation/setup-cron.sh      # install all cron jobs
-bash automation/setup-wake.sh      # schedule Mac wake events for overnight reminders (requires sudo)
 ```
 
 **Log:** `/tmp/titoai-cron.log`
 
-**Mac sleep note:** Drop reminders fire at 7 PM Manila = 3 AM Mac local time. Run `setup-wake.sh` once weekly to schedule wake events, or rely on the 10 AM daily summary as your primary heads-up.
+**Note:** `automation/setup-wake.sh` is deprecated — it was built on the incorrect assumption that Jeff's Mac runs on Pacific time, requiring overnight wake events to catch PHT-evening reminders. Since the Mac runs on local PHT time, all reminders fire during normal waking hours and no wake-scheduling is needed.
 
 **Telegram bot:** `@titoaiph_bot` (token in scripts). Always use curl or `urllib` — never the MCP Telegram tool (wired to Cobrinha bot, not Tito AI).
 
@@ -393,7 +390,7 @@ bash automation/setup-wake.sh      # schedule Mac wake events for overnight remi
 3. **Free tools only.** Never recommend or reference paid tools in content.
 4. **Short over long.** 60–90 seconds is the ceiling. Ask before going longer.
 5. **One question max.** If clarification is needed, ask the single most important question.
-6. **PHT first.** Every draft output should show the PHT drop time. Add PST as secondary reference for Jeff.
+6. **PHT first.** Every draft output should show the PHT drop time. Jeff is based in Manila, so PHT is his local time — no secondary timezone reference is needed.
 7. **Parallel agents always.** For multi-slot tasks, spin concurrent agents. `produce-week` runs all 3 slots in parallel.
 8. **No text overlays.** Videos are clean — footage + Tito AI logo only. No text, captions, or graphic overlays on the video itself.
 9. **Don't post.** You produce drafts. Posting is always Tito AI's call.
