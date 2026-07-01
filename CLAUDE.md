@@ -302,14 +302,18 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 |------|-------|--------------------|---------------------|----------------------|
 | W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** (Captions ✓) |
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
-| W27 | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) | Claude Projects — I-Setup Natin ang Iyong Trabaho Space | Ang Taong Nagsimula Kahapon — May Kalamangan Na |
-| W28 | Jul 6–12 | TBD — Monday AI Tip | TBD — Wednesday Demo | TBD — Friday Story |
+| W27 | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ⭐ boost target | Ang Taong Nagsimula Kahapon — May Kalamangan Na |
+| W28 | Jul 6–12 | TBD — Monday AI Tip | Resume at Cover Letter — Claude ang Gagawa (matches proven demo shape) | TBD — Friday Story |
 
 ⭐ W26 = **boost launch week** · Php 2,000/week · TikTok only → TikTok+IG (W27) → All 3 (W28)
 
 **Boost plan deck:** `content/strategy/TitoAI-ContentBoostPlan-W26-W28.pptx` / `.pdf`
 
 **W25 Fri approval page:** `https://jeffd1130.github.io/TitoAi/W25-fri-captions.html`
+
+**Post-level engagement audit (Jul 1, 2026):** `reports/2026-07-01-ig-tiktok-post-mapping.md` — full IG (17) + TikTok (19) post mapping. Two standing insights applied going forward:
+1. **Post once, pin immediately on TikTok — never duplicate-post.** All 3 top-viewed TikTok posts (784/761/630 views) are pinned copies, beating their unpinned duplicate 2–4x every time.
+2. **Named-persona, step-by-step free-tool demos are the top-proven format** ("Mga Guro" post: 784 TikTok / 297–304 IG). Route boost budget to posts matching this shape (e.g. W27 Wed, W28 Wed) over untested formats.
 
 ---
 

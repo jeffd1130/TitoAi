@@ -11,6 +11,10 @@ content/**/raw/*.mp4
 content/**/raw/*.mov
 content/**/raw/*.MP4
 content/**/raw/*.MOV
+content/**/approved/*.mp4
+content/**/approved/*.mov
+content/**/approved/*.MP4
+content/**/approved/*.MOV
 
 # Raw large images
 content/**/raw/*.HEIC
