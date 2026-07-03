@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01",
+  "updated": "2026-07-03",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -215,7 +215,7 @@
           "title": "Claude Projects — I-Setup Natin ang Iyong Trabaho Space",
           "note": "Named-persona step-by-step demo · top-performing shape (Mga Guro post: 784 TikTok / 297-304 IG) · Php 2,000 boost target · post once, pin immediately, no duplicate",
           "date": "Jul 2",
-          "status": "ready",
+          "status": "posted",
           "url": "W27-wed-captions.html",
           "boost": "TikTok + Instagram"
         },
@@ -225,7 +225,7 @@
           "tag": "Carousel",
           "note": "Compounding advantage · 5-slide carousel ready · boost budget redirected to Wed demo this week",
           "date": "Jul 4",
-          "status": "draft",
+          "status": "ready",
           "url": "W27-fri-captions.html",
           "boost": null
         }
