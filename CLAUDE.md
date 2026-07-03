@@ -300,7 +300,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 |------|-------|--------------------|---------------------|----------------------|
 | W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** (Captions ✓) |
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
-| W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 2 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 4 7 PM |
+| W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
 | W28 | Jul 6–12 | TBD — Monday AI Tip | Resume at Cover Letter — Claude ang Gagawa (matches proven demo shape) | TBD — Friday Story |
 
 ⭐ W26 = **boost launch week** · Php 2,000/week · TikTok only → TikTok+IG (W27) → All 3 (W28)
