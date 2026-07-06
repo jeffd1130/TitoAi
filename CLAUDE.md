@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Jul 3, 2026):**
+**Current/Next/Upcoming weeks (as of Jul 7, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current (highlighted in hub) | W27 | Jun 29–Jul 5 |
-| Next | W28 | Jul 6–12 |
-| Upcoming | W29 | Jul 13–19 |
+| Current (highlighted in hub) | W28 | Jul 6–12 |
+| Next | W29 | Jul 13–19 |
+| Upcoming | W30 | Jul 20–26 |
 
 **Key live URLs:**
 | Page | URL |
