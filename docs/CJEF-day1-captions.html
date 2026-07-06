@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CJEF Day 1 AI Training — Captions · Tito AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff;--coral:#F97316;--green:#10B981}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;padding-bottom:60px}
+.hdr{border-bottom:3px solid var(--gold);padding:28px 20px 18px;position:relative;overflow:hidden;background:linear-gradient(135deg,#0D1520,#0A0F1E 60%,#0D1A2E)}
+.hdr::before{content:'';position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:var(--gold);opacity:.06}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-teal{background:var(--teal);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(24px,5vw,40px);letter-spacing:1px;line-height:1.05;margin-bottom:4px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:12px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:10px 14px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.drop-value{font-size:12px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:20px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.sec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.platform-block{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.platform-hdr{padding:10px 16px;background:var(--navy3);display:flex;align-items:center;gap:10px}
+.platform-name{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.p-tiktok{color:#94A3B8}.p-ig{color:#F9A8D4}.p-fb{color:#93C5FD}
+.char-count{margin-left:auto;font-size:10px;color:var(--muted)}
+.caption-body{padding:16px;font-size:15px;line-height:1.75;color:#E2E8F0;white-space:pre-wrap;word-break:break-word}
+.hashtags{padding:0 16px 14px;font-size:12px;color:var(--teal);line-height:1.6}
+.copy-btn{margin:0 16px 14px;padding:9px 16px;background:var(--navy3);border:1px solid #374151;border-radius:8px;color:var(--gray);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;width:calc(100% - 32px);text-align:center}
+.copy-btn:active{background:var(--gold);color:var(--navy)}
+.note-box{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.35);border-radius:12px;padding:14px 16px}
+.note-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
+.note-body{font-size:12.5px;color:#E2E8F0;line-height:1.6}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-top:20px}
+.ftr span{font-size:10px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+</style>
+<script>
+function copyCaption(id,btn){navigator.clipboard.writeText(document.getElementById(id).innerText).then(()=>{const o=btn.textContent;btn.textContent='Copied!';btn.style.background='#F59E0B';btn.style.color='#0A0F1E';setTimeout(()=>{btn.textContent=o;btn.style.background='';btn.style.color=''},2000)})}
+</script>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">Special · W28 Mon</span>
+    <span class="badge badge-teal">AI Training Event</span>
+    <span class="badge badge-navy">Jul 6 · 8:00 PM PHT</span>
+  </div>
+  <h1>Day 1 ng <span>AI Training</span></h1>
+  <p class="hdr-sub">10 photos + 3 videos · comment TRAINING for future workshops · lead gen</p>
+</div>
+<div class="drop-bar">
+  <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Sun Jul 6 · 8:00 PM</div></div>
+  <div class="drop-cell"><div class="drop-label">Media</div><div class="drop-value">10 Photos + 3 Videos</div></div>
+  <div class="drop-cell"><div class="drop-label">CTA</div><div class="drop-value">Comment TRAINING</div></div>
+</div>
+<div class="main">
+  <div class="note-box">
+    <div class="note-label">📌 POSTING NOTES</div>
+    <div class="note-body">
+      <strong style="color:var(--white)">Photos first, videos after.</strong> Post 10 photos as carousel/album. Videos go as separate Reels (one by one or batch).<br><br>
+      <strong style="color:var(--white)">CTA goal: lead gen.</strong> Anyone who comments TRAINING gets a follow-up DM about future AI workshops for their team or business.<br><br>
+      <strong style="color:var(--white)">Audience:</strong> Negosyante, freelancers, small business owners, entrepreneurs — anyone who wants AI training for their team.
+    </div>
+  </div>
+
+  <div>
+    <div class="sec-label">Photos Caption (Carousel / Album)</div>
+    <div class="platform-block">
+      <div class="platform-hdr"><span class="platform-name p-tiktok">TikTok · @tito.aiph</span><span class="char-count">8 hashtags</span></div>
+      <div class="caption-body" id="photo-tt">Ito ang nangyari nang dalhin namin ang AI sa isang buong team.
+
+Negosyante. Freelancer. May sariling business. Lahat — natutunan kung paano gamitin ang Claude at Gemini nang libre. Simula sa zero.
+
+Sa loob ng isang araw — nagagawa na nilang mag-draft, magtanong, mag-summarize. May AI assistant na sila ngayon.
+
+Maraming salamat sa CJEF sa pagtitiwala! 🙏
+
+Gusto mo ito para sa iyong team o business? Comment: TRAINING 👇🇵🇭</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AITraining #NegosyoPH #SmallBusinessPH #FreelancerPH #AIPhilippines</div>
+      <button class="copy-btn" onclick="copyCaption('photo-tt',this)">Copy TikTok Caption</button>
+    </div>
+
+    <div class="platform-block">
+      <div class="platform-hdr"><span class="platform-name p-ig">Instagram · @tito.aiph</span><span class="char-count">15 hashtags</span></div>
+      <div class="caption-body" id="photo-ig">Day 1 ng AI training — at nakikita mo na ang pagbabago.
+
+Isang buong team. Negosyante, freelancer, mga may sariling business. Nagsimula sila sa zero — walang alam sa AI, walang background sa tech.
+
+Sa loob ng isang araw na workshop, natutunan nila kung paano:
+✅ Mag-draft ng emails at dokumento gamit Claude
+✅ Mag-research at mag-summarize gamit Gemini
+✅ Mag-build ng sariling AI workflow — libre, walang bayad
+
+At ang pinaka-nagpapasaya? Wala silang sineseryoso noong una. "Para iyan sa mga techy." Hindi. Para ito sa lahat.
+
+Kung gusto mo ito para sa iyong team, negosyo, o organisasyon — comment: TRAINING
+
+Maraming salamat sa CJEF sa pagtitiwala at sa buong team na bukas sa matuto. 🙏
+
+Magse-set up tayo ng session para sa inyo. 🇵🇭</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AIParaSaAtin #AITraining #NegosyoPH #SmallBusinessPH #FreelancerPH #AIPhilippines #TechPilipinas #DigitalPilipinas #LibreAI #ClaudeAI #GeminiAI #AIForBusiness #PinoyNegosyo</div>
+      <button class="copy-btn" onclick="copyCaption('photo-ig',this)">Copy Instagram Caption</button>
+    </div>
+
+    <div class="platform-block">
+      <div class="platform-hdr"><span class="platform-name p-fb">Facebook · Tito AI Page</span><span class="char-count">6 hashtags</span></div>
+      <div class="caption-body" id="photo-fb">Mga Pamangkin — ito ang nangyari nung dalhin namin ang AI training sa isang buong team.
+
+Negosyante, freelancer, may sariling business — lahat nagsimula sa zero. Walang background sa tech. Pero sa loob ng isang araw na session, natuto sila kung paano gamitin ang Claude at Gemini para sa totoong trabaho.
+
+Drafting ng proposals. Pag-summarize ng mahabang dokumento. Pag-set up ng sariling AI assistant na libre.
+
+Hindi ito para sa mga "techy" lang. Para ito sa sinumang may business na gusto mag-move faster.
+
+Maraming salamat sa CJEF sa pagtitiwala — at sa buong team na bukas magtanong at matuto. 🙏
+
+Kung interested ka ng ganito para sa iyong team o negosyo — comment TRAINING sa baba.
+
+Makikipag-ugnayan ako para sa mga detalye. Libre ang usapan. 🇵🇭</div>
+      <div class="hashtags">#TitoAIPH #MgaPamangkin #AITraining #NegosyoPH #SmallBusinessPH #AIParaSaAtin</div>
+      <button class="copy-btn" onclick="copyCaption('photo-fb',this)">Copy Facebook Caption</button>
+    </div>
+  </div>
+
+  <div>
+    <div class="sec-label">Videos Caption (Reels — use same for all 3)</div>
+    <div class="platform-block">
+      <div class="platform-hdr"><span class="platform-name p-ig">TikTok + IG + FB · All Platforms</span><span class="char-count">Universal</span></div>
+      <div class="caption-body" id="video-all">Ito ang face ng isang negosyante na natuto kung paano gamitin ang AI para sa kanyang trabaho — sa loob ng isang araw.
+
+Libre ang tools. Claude. Gemini. Walang subscription. Walang bayad.
+
+Gusto mo ito para sa iyong team o business? Comment: TRAINING 👇🇵🇭</div>
+      <div class="hashtags">#TitoAIPH #AITraining #NegosyoPH #SmallBusinessPH #FreelancerPH #AIParaSaAtin #LibreAI #MgaPamangkin</div>
+      <button class="copy-btn" onclick="copyCaption('video-all',this)">Copy Video Caption (All Platforms)</button>
+    </div>
+  </div>
+
+</div>
+<div class="ftr"><span>Tito AI · @TitoAIPH · CJEF Day 1 · Jul 6, 2026</span><b>AI PARA SA ATING LAHAT</b></div>
+</body>
+</html>

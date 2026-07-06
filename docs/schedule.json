@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -239,10 +239,21 @@
       "posts": [
         {
           "day": "MON",
+          "title": "CJEF Day 1 AI Training — Special Post",
+          "tag": "Special",
+          "note": "10 photos + 3 videos (~30s each) · negosyante/freelancer/small biz · certificate ceremony · CTA: comment TRAINING · lead gen for future workshops",
+          "date": "Jul 6",
+          "status": "ready",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "MON",
           "title": "Gemini sa Google Docs — Libre At Laging Nandoon",
-          "note": "Practical AI tip · hidden Gemini in Docs sidebar",
+          "tag": "Ep 11",
+          "note": "Ep 11 · 51s · Gemini sidebar in Google Docs · file: Tito AI ep 11 - 1.mp4 · VO script ready",
           "date": "Jul 7",
-          "status": "draft",
+          "status": "ready",
           "url": "W28-mon-captions.html",
           "boost": null
         },
