@@ -234,7 +234,7 @@
     {
       "id": "W28",
       "range": "Jul 6–12",
-      "theme": "Everyday Tools · Family Angle",
+      "theme": "Real Stories · Demos from Life",
       "boost": "All Platforms",
       "posts": [
         {
@@ -244,35 +244,145 @@
           "note": "10 photos + 3 videos (~30s each) · negosyante/freelancer/small biz · certificate ceremony · CTA: comment TRAINING · lead gen for future workshops",
           "date": "Jul 6",
           "status": "ready",
-          "url": null,
+          "url": "CJEF-day1-captions.html",
           "boost": null
         },
         {
           "day": "MON",
-          "title": "Gemini sa Google Docs — Libre At Laging Nandoon",
+          "title": "Paano Makipag-usap sa AI nang Mas Epektibo",
           "tag": "Ep 11",
-          "note": "Ep 11 · 51s · Gemini sidebar in Google Docs · file: Tito AI ep 11 - 1.mp4 · VO script ready",
+          "note": "Quick tip · prompting basics · one concrete example · Mon 8 PM slot",
           "date": "Jul 7",
-          "status": "ready",
+          "status": "draft",
           "url": "W28-mon-captions.html",
           "boost": null
         },
         {
           "day": "WED",
-          "title": "Resume at Cover Letter — Claude ang Gagawa",
-          "note": "Split screen demo · claude.ai libre · matches proven named-persona demo shape · boost confirmed per Jul 1 audit",
+          "title": "Gemini sa Google Docs — Live Demo",
+          "tag": "Ep 11 Demo",
+          "note": "Ep 11 · 51s · file: Tito AI ep 11 - 1.mp4 · VO + captions ready · Gemini sidebar demo · boost confirmed",
           "date": "Jul 9",
-          "status": "draft",
+          "status": "ready",
           "url": "W28-wed-captions.html",
           "boost": "All Platforms"
         },
         {
           "day": "FRI",
-          "title": "Ang Tatay na Nagtanong sa AI",
-          "note": "Family story · hindi degree ang kailangan · isang tanong lang",
+          "title": "Ang Tatay na Nagtatrabaho para sa LA Mula Manila",
+          "tag": "Story S1E1",
+          "note": "Friday Story Series S1 · Ep 1 · Jeff managing Cobrinha LA social media from Manila · AI makes remote international work possible · hook: 'World champion sa LA, analyst sa Manila'",
           "date": "Jul 11",
           "status": "draft",
           "url": "W28-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W29",
+      "range": "Jul 13–19",
+      "theme": "Real Stories · Demos from Life",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "TBD — AI Tip",
+          "note": "Mon quick tip slot · 30–45s",
+          "date": "Jul 14",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "Resume at Cover Letter — Claude ang Gagawa",
+          "note": "Split screen demo · claude.ai libre · matches proven named-persona demo shape · moved from W28",
+          "date": "Jul 16",
+          "status": "draft",
+          "url": "W29-wed-captions.html",
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Ang Restaurant sa Clark na Nagbago",
+          "tag": "Story S1E2",
+          "note": "Friday Story Series S1 · Ep 2 · Pares Clark (Golden Gate 78) · small PH restaurant using AI for ops/bookkeeping · hook: 'May tindahan sa Clark. Hindi nila alam kung bakit lumalaki ang gastos. Hanggang ginamit namin ang AI.'",
+          "date": "Jul 18",
+          "status": "draft",
+          "url": "W29-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W30",
+      "range": "Jul 20–26",
+      "theme": "Real Stories · Demos from Life",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "TBD — AI Tip",
+          "note": "Mon quick tip slot · 30–45s",
+          "date": "Jul 21",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD — Demo",
+          "note": "Wed demo slot · 60–90s",
+          "date": "Jul 23",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Tatay. Analyst. Trainer. Sa Iisang Araw.",
+          "tag": "Story S1E3",
+          "note": "Friday Story Series S1 · Ep 3 · Jeff household dad story · juggling family + 4 client businesses from Manila · AI as equalizer for tatay/nanay with multiple roles",
+          "date": "Jul 25",
+          "status": "draft",
+          "url": "W30-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W31",
+      "range": "Jul 27–Aug 2",
+      "theme": "Real Stories · Demos from Life",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "TBD — AI Tip",
+          "note": "Mon quick tip slot · 30–45s",
+          "date": "Jul 28",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD — Demo",
+          "note": "Wed demo slot · 60–90s",
+          "date": "Jul 30",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Ang BJJ Champion at ang Marketing Analyst na Nasa Manila",
+          "tag": "Story S1E4",
+          "note": "Friday Story Series S1 · Ep 4 · Full Cobrinha LA story · deeper dive · how AI content production closes the 8,000-mile gap between LA and Manila",
+          "date": "Aug 1",
+          "status": "draft",
+          "url": "W31-fri-captions.html",
           "boost": null
         }
       ]

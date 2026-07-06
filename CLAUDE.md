@@ -294,20 +294,40 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 
 ## June–July 2026 Content Calendar
 
-**Arc theme:** Launch with boost → Tools for work/school → Everyday Filipino Life → July scale-up
+**Arc theme (W28+):** Real Stories · AI from Jeff's actual life and clients
 
 | Week | Dates | Mon Tip (8 PM PHT) | Wed Demo (7 PM PHT) | Fri Story (7 PM PHT) |
 |------|-------|--------------------|---------------------|----------------------|
 | W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** (Captions ✓) |
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
 | W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
-| W28 | Jul 6–12 | Gemini sa Google Docs — Libre At Laging Nandoon | **Resume at Cover Letter — Claude ang Gagawa** (matches proven demo shape ⭐ boost confirmed) | Ang Tatay na Nagtanong sa AI |
+| W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Google Docs — Live Demo** · Ep 11 · 51s · file ready ⭐ boost | **Story S1E1** — Ang Tatay na Nagtatrabaho para sa LA Mula Manila (Cobrinha angle) |
+| W29 | Jul 13–19 | TBD tip | Resume at Cover Letter — Claude ang Gagawa (moved from W28) | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
+| W30 | Jul 20–26 | TBD tip | TBD demo | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. (household dad) |
+| W31 | Jul 27–Aug 2 | TBD tip | TBD demo | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (full Cobrinha deep dive) |
+
+## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
+
+Jeff's real stories used as Friday inspiration content. Each episode is a true story from Jeff's actual work — no fabrication.
+
+| Ep | Week | Title | Story |
+|----|------|-------|-------|
+| S1E1 | W28 Fri Jul 11 | Ang Tatay na Nagtatrabaho para sa LA Mula Manila | Jeff manages social media for Cobrinha (BJJ world champion in LA) from Manila. AI closes the 8,000-mile gap. |
+| S1E2 | W29 Fri Jul 18 | Ang Restaurant sa Clark na Nagbago | Pares Clark (Golden Gate 78) — small Filipino restaurant using AI for bookkeeping and ops. |
+| S1E3 | W30 Fri Jul 25 | Tatay. Analyst. Trainer. Sa Iisang Araw. | Jeff as household dad in Manila juggling 4 client businesses using AI tools. |
+| S1E4 | W31 Fri Aug 1 | Ang BJJ Champion at ang Marketing Analyst na Nasa Manila | Full Cobrinha LA story — how the remote content production system works. |
+
+**Story format:** 60–90s · emotional hook → real situation → AI as the solution → apply it yourself → Tito AI closer
+**Source material:** Real details from Jeff's work — never invent quotes, outcomes, or metrics
+**Client references:** Cobrinha = Alliance Cobrinha LA (BJJ, LA) · Pares = The Original Pares Clark (restaurant, Philippines)
 
 ⭐ W26 = **boost launch week** · Php 2,000/week · TikTok only → TikTok+IG (W27) → All 3 (W28)
 
 **Boost plan deck:** `content/strategy/TitoAI-ContentBoostPlan-W26-W28.pptx` / `.pdf`
 
 **W25 Fri approval page:** `https://jeffd1130.github.io/TitoAi/W25-fri-captions.html`
+
+**CJEF Day 1 AI Training (Jul 6, 2026):** First corporate/school training conducted. ~12 participants — guro, admin, school directors. Tools: Claude + Gemini (free). Full day. Certificate ceremony. Assets in `/Users/jeff/Documents/Claude/TitoAI-Training/CJEF_Day1/` — 10 photos + 3 videos (~30s each). Special post published Jul 6 with "TRAINING" CTA for lead gen. Slides: `/Users/jeff/Documents/Claude/TitoAI-Training/slides/CJF_AllRoles_Slides.html`.
 
 **Post-level engagement audit (Jul 1, 2026):** `reports/2026-07-01-ig-tiktok-post-mapping.md` — full IG (17) + TikTok (19) post mapping. Two standing insights applied going forward:
 1. **Post once, pin immediately on TikTok — never duplicate-post.** All 3 top-viewed TikTok posts (784/761/630 views) are pinned copies, beating their unpinned duplicate 2–4x every time.
