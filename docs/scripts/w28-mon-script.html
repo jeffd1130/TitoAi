@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>W28 Mon Script — Gemini sa Google Docs · Tito AI</title>
+<title>W28 Mon Script — Paano Makipag-usap sa AI · Tito AI</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff}
@@ -15,7 +15,7 @@ body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;
 .badge-gold{background:var(--gold);color:var(--navy)}
 .badge-teal{background:var(--teal);color:var(--white)}
 .badge-navy{background:var(--navy3);color:var(--gray)}
-.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(24px,5vw,42px);letter-spacing:1px;line-height:1.05;margin-bottom:4px}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(22px,5vw,40px);letter-spacing:1px;line-height:1.05;margin-bottom:4px}
 .hdr h1 span{color:var(--gold)}
 .hdr-sub{font-size:12px;color:var(--gray);font-style:italic}
 .drop-bar{display:flex;border-bottom:1px solid var(--navy3)}
@@ -32,8 +32,12 @@ body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;
 .scene-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);line-height:1;min-width:28px}
 .scene-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
 .scene-time{margin-left:auto;font-size:10px;color:var(--muted)}
-.scene-body{padding:16px;font-size:16px;line-height:1.8;color:#E2E8F0;white-space:pre-wrap}
-.scene-body em{color:var(--muted);font-style:italic;font-size:13px}
+.scene-body{padding:16px;font-size:16px;line-height:1.9;color:#E2E8F0;white-space:pre-wrap}
+.scene-body em{color:var(--teal);font-style:italic;font-size:13px}
+.prompt-box{background:rgba(13,148,136,.1);border:1px solid rgba(13,148,136,.35);border-radius:10px;padding:14px 18px;font-size:15px;color:#E2E8F0;font-style:italic;line-height:1.6;margin:0 16px 16px}
+.rec-note{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.rec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
+.rec-body{font-size:13px;color:#E2E8F0;line-height:1.7}
 .ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-top:20px}
 .ftr span{font-size:10px;color:var(--muted)}
 .ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
@@ -46,52 +50,67 @@ body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;
     <span class="badge badge-teal">AI Tip</span>
     <span class="badge badge-navy">Jul 7 · 8:00 PM PHT</span>
   </div>
-  <h1>Gemini sa <span>Google Docs</span> — Libre At Laging Nandoon</h1>
-  <p class="hdr-sub">30–45s · Talking head · Hook + demo beat + CTA</p>
+  <h1>Paano Makipag-usap sa <span>AI nang Mas Epektibo</span></h1>
+  <p class="hdr-sub">Talking head · 30–55s · 3 scenes · Prompting basics — Context, Task, Format</p>
 </div>
 <div class="drop-bar">
   <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Mon Jul 7 · 8:00 PM</div></div>
-  <div class="drop-cell"><div class="drop-label">Format</div><div class="drop-value">Reel · 30–45s</div></div>
-  <div class="drop-cell"><div class="drop-label">Tools</div><div class="drop-value">Gemini · libre</div></div>
+  <div class="drop-cell"><div class="drop-label">Target</div><div class="drop-value">30–55s</div></div>
+  <div class="drop-cell"><div class="drop-label">Format</div><div class="drop-value">Talking Head</div></div>
 </div>
 <div class="main">
+
+  <div class="rec-note">
+    <div class="rec-label">🎬 RECORDING SETUP</div>
+    <div class="rec-body">
+      <strong style="color:var(--white)">Format:</strong> Face cam only. No screen share needed — this is a pure talking head tip.<br><br>
+      <strong style="color:var(--white)">Hook rule:</strong> First line IS the hook — no warm-up, no "Kumusta." Land it straight.<br><br>
+      <strong style="color:var(--white)">Pace:</strong> Slow down on the 3 words: Context. Task. Format. One beat per word.
+    </div>
+  </div>
+
   <div>
     <div class="sec-label">Script</div>
 
     <div class="scene">
-      <div class="scene-hdr"><span class="scene-num">01</span><span class="scene-title">Hook</span><span class="scene-time">0:00–0:05</span></div>
-      <div class="scene-body">May AI na nakatago sa Google Docs mo — at hindi mo pa ginagamit.
+      <div class="scene-hdr"><span class="scene-num">01</span><span class="scene-title">Hook</span><span class="scene-time">0:00–0:08</span></div>
+      <div class="scene-body">Hindi sagot ng AI ang gusto mo?
+Hindi siya tamad — kulang lang ang prompt mo.
 
-<em>[direct eye contact, slight lean forward]</em></div>
+<em>[direct cam. confident. eyebrow raise on "kulang lang."]</em></div>
     </div>
 
     <div class="scene">
-      <div class="scene-hdr"><span class="scene-num">02</span><span class="scene-title">Setup</span><span class="scene-time">0:05–0:15</span></div>
-      <div class="scene-body">Ang Gemini — libre siya sa Google Docs kung may Gmail ka.
+      <div class="scene-hdr"><span class="scene-num">02</span><span class="scene-title">The Formula</span><span class="scene-time">0:08–0:45</span></div>
+      <div class="scene-body">Tatlong bagay lang ang kailangan —
 
-Buksan mo ang isang dokumento. Sa kanan, may sidebar. Doon siya.
+Una: Context. Sino ka? Ano ang sitwasyon?
+Pangalawa: Task. Ano ang gusto mong gawin ng AI?
+Pangatlo: Format. Gaano kahaba? Anong istilo?
 
-<em>[gesture right — as if pointing to sidebar]</em></div>
+Halimbawa — sa halip na "gumawa ng email,"
+sabihin mo:
+
+<em>[slow down here. one beat per word.]</em></div>
     </div>
 
-    <div class="scene">
-      <div class="scene-hdr"><span class="scene-num">03</span><span class="scene-title">Demo Beat</span><span class="scene-time">0:15–0:30</span></div>
-      <div class="scene-body">Halimbawa — may liham ka na sinusulat. I-type mo:
-
-"Tulungan mo akong gawing mas propesyonal itong liham."
-
-Sagot kaagad. I-edit mo pa kung gusto mo. Libre. Walang download.
-
-<em>[show screen or mime typing]</em></div>
-    </div>
+    <div class="prompt-box">"Freelancer ako. Gumawa ng follow-up email sa kliyenteng hindi pa nagbabayad. Maging magalang pero malinaw. 3 sentences lang."</div>
 
     <div class="scene">
-      <div class="scene-hdr"><span class="scene-num">04</span><span class="scene-title">CTA</span><span class="scene-time">0:30–0:45</span></div>
-      <div class="scene-body">Subukan mo ngayon. Bukas lang ang Google Docs — nandoon na si Gemini.
+      <div class="scene-hdr"><span class="scene-num">03</span><span class="scene-title">CTA</span><span class="scene-time">0:45–0:55</span></div>
+      <div class="scene-body">Subukan mo ngayon sa Claude o Gemini —
+libre pareho.
 
-Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat.</div>
+Context. Task. Format.
+Tandaan mo lang iyan.
+
+Ingat lagi, mga Pamangkin.
+Tito AI — AI Para Sa Ating Lahat.
+
+<em>[warm smile. confident close.]</em></div>
     </div>
   </div>
+
 </div>
 <div class="ftr"><span>Tito AI · @TitoAIPH · W28 Monday · Jul 7, 2026</span><b>AI PARA SA ATING LAHAT</b></div>
 </body>
