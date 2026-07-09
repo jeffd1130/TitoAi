@@ -335,6 +335,8 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 
 **Weekly check & balance (Jul 6, 2026):** `reports/2026-07-06-weekly-checkbalance.md` — automation/repo health normal (clean git state, up to date with origin). Account-health pull (IG + TikTok follower/engagement check) could not be completed this cycle — browser control was unavailable in the automated run context. W28 Wed boost confirmed per the standing insight above; re-pull W27 post-level metrics next time account access is available to validate the boosted-Wed outcome before repeating the pattern for W29.
 
+**Routine health check (Jul 9, 2026):** `reports/2026-07-09-health-check.md` — repo/automation normal. IG: 70 followers, 90-day views 2,152. TikTok: 146 followers, last-7-days views down 37.8% WoW but profile views +200% and branded search queries appearing ("tito ai story," "claude resume"). Flag: the "Claude Projects" script was duplicate-posted 4x (Jun 30–Jul 3) despite the no-duplicate rule, and its best result was an **unpinned** copy (678 views/24 likes) — first case where pinning didn't win. Treat as a one-off until more data confirms; don't revise the pin-first rule yet. W28 Wed boost post ("Gemini sa Gmail," pinned Jul 8) at only 195 views ~1 day in — recheck after 48–72h.
+
 ---
 
 ## Niche & Growth Strategy
