@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden}
+.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:flex;flex-direction:column;justify-content:center;padding:80px 90px;overflow:hidden}
+.slide::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
+.t-line{font-family:'Bebas Neue',Impact,sans-serif;font-size:118px;line-height:1.0;letter-spacing:2px;display:block}
+.t-gold{color:#F59E0B}.t-white{color:#ffffff}.t-teal{color:#0D9488}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%);margin:28px 0}
+.label{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569;margin-bottom:16px}
+.box{border-radius:12px;padding:20px 24px;margin-top:16px;font-family:'DM Sans',sans-serif;font-size:29px;line-height:1.45}
+.box .tag{font-size:19px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.bad{background:#180F0F;border:2px solid #7F1D1D}
+.bad .tag{color:#EF4444}
+.bad .txt{color:#FCA5A5;font-style:italic}
+.good{background:#0A1A16;border:2px solid #065F46}
+.good .tag{color:#10B981}
+.good .txt{color:#D1FAE5;font-style:italic}
+.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
+.footer img{height:68px;opacity:.9}
+.pips{display:flex;gap:8px}
+.pip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.pip.active{background:#F59E0B}
+</style></head>
+<body>
+<div class="slide">
+  <div class="label">Tito AI · W28 Lunes · AI Tip</div>
+  <span class="t-line t-gold">HALIMBAWA</span>
+  <div class="divider"></div>
+  <div class="box bad">
+    <div class="tag">❌ Noon</div>
+    <div class="txt">"Gumawa ng email."</div>
+  </div>
+  <div class="box good">
+    <div class="tag">✅ Ngayon</div>
+    <div class="txt">"Freelancer ako. Gumawa ng follow-up email sa kliyenteng hindi pa nagbabayad. Maging magalang pero malinaw. 3 sentences lang."</div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8765/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip active"></div><div class="pip"></div></div>
+  </div>
+</div>
+</body></html>
