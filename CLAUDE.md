@@ -302,7 +302,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** (Captions ✓) |
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
 | W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
-| W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Google Docs — Live Demo** · Ep 11 · 51s · file ready ⭐ boost | **Story S1E1** — Ang Tatay na Nagtatrabaho para sa LA Mula Manila (Cobrinha angle) |
+| W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
 | W29 | Jul 13–19 | TBD tip | Resume at Cover Letter — Claude ang Gagawa (moved from W28) | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
 | W30 | Jul 20–26 | TBD tip | TBD demo | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. (household dad) |
 | W31 | Jul 27–Aug 2 | TBD tip | TBD demo | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (full Cobrinha deep dive) |
@@ -313,7 +313,7 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 
 | Ep | Week | Title | Story |
 |----|------|-------|-------|
-| S1E1 | W28 Fri Jul 11 | Ang Tatay na Nagtatrabaho para sa LA Mula Manila | Jeff manages social media for Cobrinha (BJJ world champion in LA) from Manila. AI closes the 8,000-mile gap. |
+| S1E1 | W28 Fri Jul 11 | Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. | Jeff builds client website in 20-min stolen moments while doing dad duties. Gemini for site outline → Claude for copy. Script + captions ready. |
 | S1E2 | W29 Fri Jul 18 | Ang Restaurant sa Clark na Nagbago | Pares Clark (Golden Gate 78) — small Filipino restaurant using AI for bookkeeping and ops. |
 | S1E3 | W30 Fri Jul 25 | Tatay. Analyst. Trainer. Sa Iisang Araw. | Jeff as household dad in Manila juggling 4 client businesses using AI tools. |
 | S1E4 | W31 Fri Aug 1 | Ang BJJ Champion at ang Marketing Analyst na Nasa Manila | Full Cobrinha LA story — how the remote content production system works. |
