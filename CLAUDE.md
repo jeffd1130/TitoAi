@@ -303,7 +303,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
 | W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
 | W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
-| W29 | Jul 13–19 | TBD tip | Resume at Cover Letter — Claude ang Gagawa (moved from W28) | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
+| W29 | Jul 13–19 | Email Drafting — Hayaan ang AI (script + captions ready) | Resume at Cover Letter — Claude ang Gagawa (moved from W28) | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
 | W30 | Jul 20–26 | TBD tip | TBD demo | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. (household dad) |
 | W31 | Jul 27–Aug 2 | TBD tip | TBD demo | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (full Cobrinha deep dive) |
 
@@ -337,6 +337,8 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 **Weekly check & balance (Jul 6, 2026):** `reports/2026-07-06-weekly-checkbalance.md` — automation/repo health normal (clean git state, up to date with origin). Account-health pull (IG + TikTok follower/engagement check) could not be completed this cycle — browser control was unavailable in the automated run context. W28 Wed boost confirmed per the standing insight above; re-pull W27 post-level metrics next time account access is available to validate the boosted-Wed outcome before repeating the pattern for W29.
 
 **Routine health check (Jul 9, 2026):** `reports/2026-07-09-health-check.md` — repo/automation normal. IG: 70 followers, 90-day views 2,152. TikTok: 146 followers, last-7-days views down 37.8% WoW but profile views +200% and branded search queries appearing ("tito ai story," "claude resume"). Flag: the "Claude Projects" script was duplicate-posted 4x (Jun 30–Jul 3) despite the no-duplicate rule, and its best result was an **unpinned** copy (678 views/24 likes) — first case where pinning didn't win. Treat as a one-off until more data confirms; don't revise the pin-first rule yet. W28 Wed boost post ("Gemini sa Gmail," pinned Jul 8) at only 195 views ~1 day in — recheck after 48–72h.
+
+**Weekly check & balance (Jul 13, 2026):** `reports/2026-07-13-weekly-checkbalance.md` — repo/automation normal, W29 Mon synced into schedule.json (was still a TBD placeholder despite script+captions already existing). Account-health pull failed for a **second consecutive cycle** — no browser access in the automated run context — so W28 Wed boost outcome and W28 Fri Story S1E1 engagement remain unconfirmed. W29 Wed recommended for a conservative TikTok-only boost (matches proven named-persona demo shape) rather than repeating "All Platforms," pending that confirmation. Priority for next cycle: re-pull IG + TikTok metrics as soon as browser/account access is available — nearly two weeks of engagement data is now unverified.
 
 ---
 

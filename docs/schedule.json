@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10",
+  "updated": "2026-07-13",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -287,17 +287,17 @@
       "posts": [
         {
           "day": "MON",
-          "title": "TBD — AI Tip",
-          "note": "Mon quick tip slot · 30–45s",
+          "title": "Email Drafting — Hayaan ang AI",
+          "note": "Quick tip · Claude/Gemini draft emails in 30s · script + captions ready",
           "date": "Jul 14",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W29-mon-captions.html",
           "boost": null
         },
         {
           "day": "WED",
           "title": "Resume at Cover Letter — Claude ang Gagawa",
-          "note": "Split screen demo · claude.ai libre · matches proven named-persona demo shape · moved from W28",
+          "note": "Split screen demo · claude.ai libre · matches proven named-persona demo shape · moved from W28 · recommend conservative TikTok-only boost pending confirmed W28 Wed boost outcome",
           "date": "Jul 16",
           "status": "draft",
           "url": "W29-wed-captions.html",
