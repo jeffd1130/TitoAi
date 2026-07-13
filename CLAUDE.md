@@ -244,6 +244,7 @@ docs/slides/W##-mon/
 | W26 Fri | `DAHNoxGHZaQ` | "Nagbabago. Kaya Mo Pa Ba?" · 5 slides · edit: `https://www.canva.com/d/JzWEuWM_q3ybfdc` |
 | W27 Fri | `DAHNpfOSrz8` | "Ang Taong Nagsimula Kahapon" · 5 slides · edit: `https://www.canva.com/d/NQZGhE40QTzJKTn` |
 | W28 Wed | `DAHO3k_NSmo` | "Gemini — Libre sa Gmail Mo" · 5 slides · edit: `https://www.canva.com/d/uWe0RDgpBkdRRvk` |
+| W29 Mon | `DAHPQnSy4aQ` | "Email Drafting — Hayaan ang AI" · 5 slides · edit: `https://www.canva.com/d/MSAgpCJrYKHgUNo` |
 
 ---
 
