@@ -304,7 +304,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
 | W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
 | W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
-| W29 | Jul 13–19 | Email Drafting — Hayaan ang AI (script + captions ready) | Resume at Cover Letter — Claude ang Gagawa (moved from W28) | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
+| W29 | Jul 13–19 | Email Drafting — Hayaan ang AI (script + captions ready) | Resume at Cover Letter — Claude ang Gagawa · VA persona · script + captions ready ✅ | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
 | W30 | Jul 20–26 | TBD tip | TBD demo | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. (household dad) |
 | W31 | Jul 27–Aug 2 | TBD tip | TBD demo | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (full Cobrinha deep dive) |
 
