@@ -341,6 +341,8 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 
 **Weekly check & balance (Jul 13, 2026):** `reports/2026-07-13-weekly-checkbalance.md` — repo/automation normal, W29 Mon synced into schedule.json (was still a TBD placeholder despite script+captions already existing). Account-health pull failed for a **second consecutive cycle** — no browser access in the automated run context — so W28 Wed boost outcome and W28 Fri Story S1E1 engagement remain unconfirmed. W29 Wed recommended for a conservative TikTok-only boost (matches proven named-persona demo shape) rather than repeating "All Platforms," pending that confirmation. Priority for next cycle: re-pull IG + TikTok metrics as soon as browser/account access is available — nearly two weeks of engagement data is now unverified.
 
+**Live update (Jul 14, 2026):** See §5 of `reports/2026-07-13-weekly-checkbalance.md`. IG 90-day views up to 2,348 (from 2,152). TikTok 152 followers/252 likes. Confirmed W28 Fri Story S1E1 live (541 views, pinned) and W29 Mon (185 views, pinned, posted same day). **Standing "pin wins" insight is now in question** — ranked by views, the 2 pinned posts sit at #4 and #10 of 10; the top 3 spots are all unpinned, including the W27 Wed "Claude Projects" duplicate (684 views, still growing) that Jul 9's report flagged as a one-off exception. Do not treat pin-vs-unpinned as settled — next cycle should identify the two unidentified top-viewed posts (768, 654) before revising the rule either way.
+
 ---
 
 ## Niche & Growth Strategy

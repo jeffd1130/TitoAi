@@ -57,3 +57,29 @@ No new metrics were available, so this section reaffirms the standing insights f
 - No caption HTML files were changed — no new insight emerged this cycle to justify updating banners, and the Jul 6 report's claim that insight banners were added to `W28-wed-captions.html` doesn't match the file's current content (no banner present). Flagging this discrepancy rather than assuming it was done.
 
 No metrics were invented anywhere in this report or in the updated files — every number traces back to `reports/2026-07-09-health-check.md` or earlier.
+
+---
+
+## 5. Live update — confirmed Jul 14, 2026
+
+Browser access came back this cycle. Pulled live IG Insights (30-day + 90-day) and TikTok profile/video data directly.
+
+**Instagram:** 70 followers (flat). 90-day views 2,348 (up from 2,152 on Jul 9). Profile visits 243 (~flat vs 240).
+
+**TikTok:** 152 followers (+6 from 146), 252 likes (+21), 127 following.
+
+**TikTok video grid (Latest sort, views):** 768 · 684 · 654 · 541 (Pinned) · 539 · 238 · 197 · 161 · 115 · 185 (Pinned)
+
+Three posts identified and matched to the content calendar:
+
+| Post | Pin status | Views | Likes | Shares | Posted |
+|---|---|---|---|---|---|
+| W29 Mon "Email Drafting — Hayaan ang AI" | Pinned | 185 | 5 | 1 | 17h ago (Jul 14) |
+| W28 Fri Story S1E1 "Dalawang Linggo. Isang Website." | Pinned | 541 | 13 | 5 | 3d ago (Jul 11) |
+| W27 Wed "Claude Projects — I-Setup Natin" (unpinned duplicate copy) | **Not pinned** | 684 | 25 | 8 | Jul 3 |
+
+**This meaningfully updates the standing "pin wins" insight.** Ranked by views, the two Pinned posts sit at #4 (541) and #10/last (185) out of 10 videos in the grid — the top 3 spots (768, 684, 654) and #5 (539) are all unpinned. The Jul 9 report flagged the Claude Projects unpinned copy (678 views then) as a single counterexample to "pin wins," treating it as a one-off. With two more weeks of data, that post has only grown (684 now) and is still outperformed by two other unpinned posts (768, 654) that haven't been identified/matched to specific calendar entries yet. **Recommendation: stop treating pin-vs-unpinned as a settled rule.** The pattern from the original Jul 1 audit (pinned posts sweeping the top 3) no longer holds in this snapshot — worth a deeper pass next cycle to identify what 768 and 654 are and whether something else (posting time, hook, topic) explains the spread better than pin status.
+
+W28 Wed boost post ("Gemini sa Gmail") could not be re-confirmed this pass — did not appear distinctly in the time available; carry forward to next cycle.
+
+No metrics invented — all figures above pulled live from IG Professional Dashboard Insights and TikTok's profile/video pages during this session.
