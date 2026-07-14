@@ -38,3 +38,4 @@ Finished/*.MP4
 Finished/*.mov
 Finished/*.MOV
 scripts/*.log
+logs/*.log
