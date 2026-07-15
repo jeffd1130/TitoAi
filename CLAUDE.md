@@ -245,6 +245,7 @@ docs/slides/W##-mon/
 | W27 Fri | `DAHNpfOSrz8` | "Ang Taong Nagsimula Kahapon" · 5 slides · edit: `https://www.canva.com/d/NQZGhE40QTzJKTn` |
 | W28 Wed | `DAHO3k_NSmo` | "Gemini — Libre sa Gmail Mo" · 5 slides · edit: `https://www.canva.com/d/uWe0RDgpBkdRRvk` |
 | W29 Mon | `DAHPQnSy4aQ` | "Email Drafting — Hayaan ang AI" · 5 slides · edit: `https://www.canva.com/d/MSAgpCJrYKHgUNo` |
+| W29 Wed | `DAHPbFUIlGo` | "Resume mo? Claude ang Gagawa — VA Demo" · 5 slides · edit: `https://www.canva.com/d/MQ1UXEk2VPCTeyS` |
 
 ---
 
