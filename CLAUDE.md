@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Jul 7, 2026):**
+**Current/Next/Upcoming weeks (as of Jul 17, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current (highlighted in hub) | W28 | Jul 6–12 |
-| Next | W29 | Jul 13–19 |
-| Upcoming | W30 | Jul 20–26 |
+| Current (highlighted in hub) | W29 | Jul 13–19 |
+| Next | W30 | Jul 20–26 |
+| Upcoming | W31 | Jul 27–Aug 2 |
 
 **Key live URLs:**
 | Page | URL |
@@ -245,7 +245,7 @@ docs/slides/W##-mon/
 | W27 Fri | `DAHNpfOSrz8` | "Ang Taong Nagsimula Kahapon" · 5 slides · edit: `https://www.canva.com/d/NQZGhE40QTzJKTn` |
 | W28 Wed | `DAHO3k_NSmo` | "Gemini — Libre sa Gmail Mo" · 5 slides · edit: `https://www.canva.com/d/uWe0RDgpBkdRRvk` |
 | W29 Mon | `DAHPQnSy4aQ` | "Email Drafting — Hayaan ang AI" · 5 slides · edit: `https://www.canva.com/d/MSAgpCJrYKHgUNo` |
-| W29 Wed | `DAHPbFUIlGo` | "Resume mo? Claude ang Gagawa — VA Demo" · 5 slides · edit: `https://www.canva.com/d/MQ1UXEk2VPCTeyS` |
+| W29 Wed | `DAHPbFUIlGo` | "Resume mo? Claude ang Gagawa — VA Demo" · 5 slides · edit: `https://www.canva.com/d/NF_8BtbZrObCg78` · all slides re-rendered with logo · no Maria |
 
 ---
 
@@ -305,7 +305,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
 | W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
 | W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
-| W29 | Jul 13–19 | Email Drafting — Hayaan ang AI (script + captions ready) | Resume at Cover Letter — Claude ang Gagawa · VA persona · script + captions ready ✅ | **Story S1E2** — Ang Restaurant sa Clark na Nagbago (Pares angle) |
+| W29 | Jul 13–19 | Email Drafting — Hayaan ang AI ✅ posted Jul 14 | Resume at Cover Letter — Claude ang Gagawa · VA · carousel fixed · ✅ posted Jul 16 | **Story S1E2** — Ang Restaurant sa Clark at ang Social Media na Ginawa Namin · script + captions ready · drops Jul 18 7 PM |
 | W30 | Jul 20–26 | TBD tip | TBD demo | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. (household dad) |
 | W31 | Jul 27–Aug 2 | TBD tip | TBD demo | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (full Cobrinha deep dive) |
 
@@ -316,7 +316,7 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 | Ep | Week | Title | Story |
 |----|------|-------|-------|
 | S1E1 | W28 Fri Jul 11 | Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. | Jeff builds client website in 20-min stolen moments while doing dad duties. Gemini for site outline → Claude for copy. Script + captions ready. |
-| S1E2 | W29 Fri Jul 18 | Ang Restaurant sa Clark na Nagbago | Pares Clark (Golden Gate 78) — small Filipino restaurant using AI for bookkeeping and ops. |
+| S1E2 | W29 Fri Jul 18 | Ang Restaurant sa Clark at ang Social Media na Ginawa Namin | Clark restaurant launch — Jeff did the social media campaign with Claude (captions/tone) + Gemini (content planning). Script + captions ready. |
 | S1E3 | W30 Fri Jul 25 | Tatay. Analyst. Trainer. Sa Iisang Araw. | Jeff as household dad in Manila juggling 4 client businesses using AI tools. |
 | S1E4 | W31 Fri Aug 1 | Ang BJJ Champion at ang Marketing Analyst na Nasa Manila | Full Cobrinha LA story — how the remote content production system works. |
 

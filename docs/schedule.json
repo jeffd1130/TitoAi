@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-17",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -297,19 +297,19 @@
         {
           "day": "WED",
           "title": "Resume at Cover Letter — Claude ang Gagawa",
-          "note": "Demo · VA persona (Maria) · claude.ai libre · named-persona step-by-step · VA applying for US-based client · boost candidate (TikTok-only, check 2h organic first) · carousel DAHPbFUIlGo",
+          "note": "Demo · VA persona (no name) · claude.ai libre · 5-slide carousel DAHPbFUIlGo (all slides re-rendered with logo) · captions ready · posted Jul 16",
           "date": "Jul 16",
-          "status": "ready",
+          "status": "posted",
           "url": "W29-wed-captions.html",
           "boost": null
         },
         {
           "day": "FRI",
-          "title": "Ang Restaurant sa Clark na Nagbago",
+          "title": "Ang Restaurant sa Clark at ang Social Media na Ginawa Namin",
           "tag": "Story S1E2",
-          "note": "Friday Story Series S1 · Ep 2 · Pares Clark (Golden Gate 78) · small PH restaurant using AI for ops/bookkeeping · hook: 'May tindahan sa Clark. Hindi nila alam kung bakit lumalaki ang gastos. Hanggang ginamit namin ang AI.'",
+          "note": "Friday Story Series S1 · Ep 2 · Clark restaurant launch · social media campaign using Claude (captions/tone) + Gemini (content planning) · talking head · no boost · script + captions ready",
           "date": "Jul 18",
-          "status": "draft",
+          "status": "ready",
           "url": "W29-fri-captions.html",
           "boost": null
         }
