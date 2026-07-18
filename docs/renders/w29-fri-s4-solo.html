@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden}
+.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:flex;flex-direction:column;justify-content:center;padding:80px 90px;overflow:hidden}
+.slide::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
+.slide::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:#0D9488;opacity:.05;pointer-events:none}
+.label{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569;margin-bottom:24px}
+.t-line{font-family:'Bebas Neue',Impact,sans-serif;font-size:108px;line-height:1.0;letter-spacing:2px;display:block}
+.t-gold{color:#F59E0B}.t-white{color:#ffffff}.t-teal{color:#0D9488}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%);margin:32px 0}
+.result-line{font-family:'DM Sans',sans-serif;font-size:36px;color:#CBD5E1;line-height:1.7;margin-bottom:6px}
+.result-line strong{color:#ffffff}
+.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
+.footer img{height:68px;opacity:.9}
+.pips{display:flex;gap:8px}
+.pip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.pip.active{background:#F59E0B}
+</style></head>
+<body>
+<div class="slide">
+  <div class="label">Tito AI · Story S1E2 · Ang Resulta</div>
+  <span class="t-line t-white">NAGBUKAS</span>
+  <span class="t-line t-gold">NA MAY</span>
+  <span class="t-line t-teal">BOSES NA.</span>
+  <div class="divider"></div>
+  <div class="result-line">May <strong>presence</strong> na sa online.</div>
+  <div class="result-line">May <strong>content</strong> na ready sa opening day.</div>
+  <div class="result-line">Hindi na nagsimula sa <strong>wala</strong>.</div>
+  <div class="footer">
+    <img src="http://localhost:8766/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="pips"><div class="pip"></div><div class="pip"></div><div class="pip"></div><div class="pip active"></div><div class="pip"></div></div>
+  </div>
+</div>
+</body></html>
