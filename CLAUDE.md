@@ -246,6 +246,7 @@ docs/slides/W##-mon/
 | W28 Wed | `DAHO3k_NSmo` | "Gemini — Libre sa Gmail Mo" · 5 slides · edit: `https://www.canva.com/d/uWe0RDgpBkdRRvk` |
 | W29 Mon | `DAHPQnSy4aQ` | "Email Drafting — Hayaan ang AI" · 5 slides · edit: `https://www.canva.com/d/MSAgpCJrYKHgUNo` |
 | W29 Wed | `DAHPbFUIlGo` | "Resume mo? Claude ang Gagawa — VA Demo" · 5 slides · edit: `https://www.canva.com/d/NF_8BtbZrObCg78` · all slides re-rendered with logo · no Maria |
+| W29 Fri | `DAHPvQsLPFo` | "Ang Restaurant sa Clark" · Story S1E2 · 5 slides · edit: `https://www.canva.com/d/30wpLqyopzazHLs` |
 
 ---
 
