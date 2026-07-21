@@ -1,0 +1,577 @@
+<title>Tito AI — Social Media Executive Summary · July 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #080D1A;
+    --surface:  #0D1624;
+    --card:     #111E30;
+    --border:   #1A2B40;
+    --border2:  #243852;
+
+    --tt:       #F59E0B;   /* TikTok gold */
+    --tt-dim:   rgba(245,158,11,.10);
+    --tt-glow:  rgba(245,158,11,.18);
+
+    --ig:       #F472B6;   /* Instagram pink */
+    --ig-dim:   rgba(244,114,182,.09);
+    --ig-glow:  rgba(244,114,182,.16);
+
+    --teal:     #0D9488;
+    --teal-dim: rgba(13,148,136,.10);
+
+    --indigo:   #818CF8;
+
+    --body:     #7D92A8;
+    --strong:   #CBD5E1;
+    --white:    #F0F6FF;
+    --muted:    #3D5269;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--body);
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 48px 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 800px; margin: 0 auto; }
+
+  /* ── Masthead ── */
+  .masthead {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    border-bottom: 1px solid var(--border2); padding-bottom: 22px; margin-bottom: 36px;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .masthead-left { display: flex; flex-direction: column; gap: 4px; }
+  .eyebrow { font-size: 0.62rem; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); }
+  .masthead-title {
+    font-family: Impact, 'Arial Narrow', sans-serif;
+    font-size: 2.4rem; letter-spacing: 3px; color: var(--tt); text-transform: uppercase; line-height: 1;
+  }
+  .masthead-sub { font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; margin-top: 3px; }
+  .masthead-right { text-align: right; }
+  .masthead-date { font-size: 0.76rem; color: var(--teal); font-weight: 600; letter-spacing: 2px; }
+  .masthead-period { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+
+  /* ── Section label ── */
+  .section-label {
+    font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 16px;
+  }
+
+  /* ── Platform columns ── */
+  .platforms { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 36px; }
+  @media(max-width: 540px) { .platforms { grid-template-columns: 1fr; } }
+
+  .platform {
+    border-radius: 12px; border: 1px solid;
+    overflow: hidden;
+  }
+  .platform.tt { border-color: rgba(245,158,11,.25); }
+  .platform.ig { border-color: rgba(244,114,182,.22); }
+
+  .platform-header {
+    padding: 16px 20px 14px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid;
+  }
+  .tt .platform-header { background: var(--tt-dim); border-color: rgba(245,158,11,.18); }
+  .ig .platform-header { background: var(--ig-dim); border-color: rgba(244,114,182,.15); }
+
+  .platform-name {
+    font-family: Impact, 'Arial Narrow', sans-serif;
+    font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase;
+  }
+  .tt .platform-name { color: var(--tt); }
+  .ig .platform-name { color: var(--ig); }
+
+  .platform-status {
+    font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 20px; font-weight: 700;
+  }
+  .tt .platform-status { background: var(--tt-glow); color: var(--tt); }
+  .ig .platform-status { background: var(--ig-glow); color: var(--ig); }
+
+  .platform-body { padding: 18px 20px; background: var(--surface); }
+
+  .pstats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .pstat { }
+  .pstat-n {
+    font-family: Impact, 'Arial Narrow', sans-serif;
+    font-size: 1.8rem; line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  .tt .pstat-n { color: var(--tt); }
+  .ig .pstat-n { color: var(--ig); }
+  .pstat-l { font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+  .pstat-d { font-size: 0.72rem; color: var(--teal); font-weight: 700; margin-top: 1px; }
+
+  .platform-rule { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+
+  .platform-findings { display: flex; flex-direction: column; gap: 7px; }
+  .pf-item { display: flex; gap: 8px; align-items: flex-start; font-size: 0.8rem; color: var(--strong); line-height: 1.4; }
+  .pf-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .tt .pf-dot { background: var(--tt); }
+  .ig .pf-dot { background: var(--ig); }
+  .pf-sub { font-size: 0.72rem; color: var(--body); }
+
+  .platform-best {
+    margin-top: 14px; border-radius: 8px; padding: 10px 12px;
+    border: 1px solid;
+  }
+  .tt .platform-best { background: var(--tt-dim); border-color: rgba(245,158,11,.2); }
+  .ig .platform-best { background: var(--ig-dim); border-color: rgba(244,114,182,.18); }
+
+  .pb-label { font-size: 0.58rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .pb-title { font-size: 0.82rem; color: var(--white); font-weight: 600; line-height: 1.3; }
+  .pb-meta { font-size: 0.72rem; color: var(--body); margin-top: 2px; }
+
+  /* ── Divider with label ── */
+  .rule-label {
+    display: flex; align-items: center; gap: 12px; margin: 32px 0 24px;
+  }
+  .rule-label::before, .rule-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border2);
+  }
+  .rule-label span {
+    font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── Insights grid ── */
+  .insights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 36px; }
+  @media(max-width:480px) { .insights { grid-template-columns: 1fr; } }
+
+  .insight {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 16px; display: flex; gap: 12px; align-items: flex-start;
+  }
+  .insight-num {
+    font-family: Impact, 'Arial Narrow', sans-serif; font-size: 1.6rem;
+    color: var(--border2); line-height: 1; flex-shrink: 0; width: 28px;
+    font-variant-numeric: tabular-nums;
+  }
+  .insight-body { }
+  .insight-title { font-size: 0.82rem; color: var(--white); font-weight: 600; line-height: 1.35; margin-bottom: 3px; }
+  .insight-desc { font-size: 0.74rem; color: var(--body); line-height: 1.45; }
+
+  /* ── Strategy band ── */
+  .strategy {
+    background: var(--teal-dim); border: 1px solid rgba(13,148,136,.22);
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 36px;
+  }
+  .strategy-head {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px;
+  }
+  .strategy-title {
+    font-family: Impact, 'Arial Narrow', sans-serif; font-size: 1rem;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--teal);
+  }
+  .strategy-sub { font-size: 0.68rem; color: var(--muted); letter-spacing: 1px; }
+  .strategy-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  @media(max-width:480px) { .strategy-items { grid-template-columns: 1fr; } }
+  .strat-item { display: flex; gap: 8px; align-items: flex-start; font-size: 0.8rem; color: var(--strong); line-height: 1.4; }
+  .strat-mark { color: var(--teal); flex-shrink: 0; font-size: 0.8rem; margin-top: 1px; }
+
+  /* ── Calendar ── */
+  .cal-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+  }
+  .cal-legend { display: flex; gap: 14px; flex-wrap: wrap; }
+  .leg-item { display: flex; align-items: center; gap: 5px; font-size: 0.66rem; color: var(--muted); letter-spacing: 1px; }
+  .leg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .ld-posted { background: var(--teal); }
+  .ld-ready  { background: var(--tt); }
+  .ld-needed { background: var(--muted); }
+  .ld-new    { background: var(--indigo); }
+
+  .cal-grid {
+    display: grid; grid-template-columns: repeat(7,1fr);
+    border: 1px solid var(--border2); border-radius: 12px; overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .cal-day-header {
+    padding: 8px 0; text-align: center;
+    font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    background: var(--surface); border-bottom: 1px solid var(--border2);
+  }
+  .cal-day-header:not(:last-child) { border-right: 1px solid var(--border); }
+
+  .cal-day {
+    padding: 10px 8px 12px; min-height: 80px; background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .cal-day:not(:last-child):not(:nth-child(7n)) { border-right: 1px solid var(--border); }
+  .cal-day.empty { background: var(--bg); opacity: .5; }
+  .cal-day.today { background: rgba(13,148,136,.05); }
+
+  .cal-num {
+    font-size: 0.72rem; color: var(--muted); font-variant-numeric: tabular-nums;
+    line-height: 1; margin-bottom: 7px; font-weight: 600;
+  }
+  .cal-day.today .cal-num { color: var(--teal); }
+
+  .cal-post {
+    border-radius: 4px; padding: 4px 6px; margin-bottom: 4px; font-size: 0.64rem;
+    line-height: 1.3; color: var(--white);
+  }
+  .cp-posted { background: rgba(13,148,136,.25); border-left: 2px solid var(--teal); }
+  .cp-ready  { background: rgba(245,158,11,.20); border-left: 2px solid var(--tt); }
+  .cp-needed { background: rgba(100,116,139,.18); border-left: 2px solid var(--muted); }
+  .cp-new    { background: rgba(129,140,248,.18); border-left: 2px solid var(--indigo); }
+
+  .cp-slot   { font-size: 0.56rem; letter-spacing: 1px; text-transform: uppercase; opacity: .7; margin-bottom: 1px; }
+  .cp-title  { font-weight: 600; }
+
+  .cal-week-label {
+    grid-column: 1 / -1;
+    padding: 5px 10px; font-size: 0.57rem; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--indigo); background: rgba(129,140,248,.05);
+    border-top: 1px solid rgba(129,140,248,.12); border-bottom: 1px solid var(--border);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  .footer-brand {
+    font-family: Impact, 'Arial Narrow', sans-serif;
+    font-size: 1rem; letter-spacing: 3px; color: var(--tt); text-transform: uppercase;
+  }
+  .footer-tag { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+  .footer-handle { font-size: 0.78rem; color: var(--teal); font-weight: 600; letter-spacing: 1px; }
+</style>
+
+<div class="page">
+
+  <!-- Masthead -->
+  <div class="masthead">
+    <div class="masthead-left">
+      <div class="eyebrow">Executive Summary</div>
+      <div class="masthead-title">Tito AI</div>
+      <div class="masthead-sub">Social Media Performance + Content Plan · @TitoAIPH 🇵🇭</div>
+    </div>
+    <div class="masthead-right">
+      <div class="masthead-date">JULY 22, 2026</div>
+      <div class="masthead-period">Reporting period: Jul 13–19 · Plan: Jul 22–Aug 1</div>
+    </div>
+  </div>
+
+  <!-- Platform columns -->
+  <div class="section-label">Platform Performance</div>
+  <div class="platforms">
+
+    <!-- TikTok -->
+    <div class="platform tt">
+      <div class="platform-header">
+        <div class="platform-name">TikTok</div>
+        <div class="platform-status">Breaking Out</div>
+      </div>
+      <div class="platform-body">
+        <div class="pstats">
+          <div class="pstat">
+            <div class="pstat-n">4,500</div>
+            <div class="pstat-l">Weekly Views</div>
+            <div class="pstat-d">+317%</div>
+          </div>
+          <div class="pstat">
+            <div class="pstat-n">350</div>
+            <div class="pstat-l">Likes</div>
+            <div class="pstat-d">+1,150%</div>
+          </div>
+          <div class="pstat">
+            <div class="pstat-n">152</div>
+            <div class="pstat-l">Followers</div>
+            <div class="pstat-d">Growing</div>
+          </div>
+          <div class="pstat">
+            <div class="pstat-n">93.7%</div>
+            <div class="pstat-l">FYP Traffic</div>
+            <div class="pstat-d">Organic</div>
+          </div>
+        </div>
+        <hr class="platform-rule">
+        <div class="platform-findings">
+          <div class="pf-item"><span class="pf-dot"></span><span>Carousels outperform reels — 3-week winning streak</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>Algorithm is actively distributing content to cold audiences</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>Branded search appearing: <em>"titoserye Filipino ai"</em></span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>Conversion gap: 4,500 views → only 33 profile visits</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>16 shares (+220%) — content being forwarded organically</span></div>
+        </div>
+        <div class="platform-best">
+          <div class="pb-label">Best Post Ever</div>
+          <div class="pb-title">Resume at Cover Letter — Claude ang Gagawa</div>
+          <div class="pb-meta">1,016 views · 63 likes · W29 Wed · Carousel · VA Demo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="platform ig">
+      <div class="platform-header">
+        <div class="platform-name">Instagram</div>
+        <div class="platform-status">Early Growth</div>
+      </div>
+      <div class="platform-body">
+        <div class="pstats">
+          <div class="pstat">
+            <div class="pstat-n">2,348</div>
+            <div class="pstat-l">90-Day Views</div>
+            <div class="pstat-d">Cumulative</div>
+          </div>
+          <div class="pstat">
+            <div class="pstat-n">70</div>
+            <div class="pstat-l">Followers</div>
+            <div class="pstat-d">Building</div>
+          </div>
+          <div class="pstat">
+            <div class="pstat-n">~230</div>
+            <div class="pstat-l">Avg. Reel Views</div>
+            <div class="pstat-d">Per post</div>
+          </div>
+          <div class="pstat">
+            <div class="pstat-n">8.6%</div>
+            <div class="pstat-l">Eng. Rate</div>
+            <div class="pstat-d">Above avg.</div>
+          </div>
+        </div>
+        <hr class="platform-rule">
+        <div class="platform-findings">
+          <div class="pf-item"><span class="pf-dot"></span><span>Talking-head reels = slide reels in views (~190–260 avg)</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>Caption with a direct question is the engagement diff-maker</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>Comparison/debate hooks drive highest engagement rate</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>Still in follower-building phase — reach not converting to follows</span></div>
+          <div class="pf-item"><span class="pf-dot"></span><span>TikTok → IG cross-promotion is the main growth lever right now</span></div>
+        </div>
+        <div class="platform-best">
+          <div class="pb-label">Best Post (Engagement Rate)</div>
+          <div class="pb-title">Claude vs Gemini — Alin ang Mas Tama?</div>
+          <div class="pb-meta">679 views · 62 likes · Comparison/debate hook format</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Key Insights -->
+  <div class="rule-label"><span>Key Findings</span></div>
+
+  <div class="insights" style="margin-bottom:36px">
+    <div class="insight">
+      <div class="insight-num">01</div>
+      <div class="insight-body">
+        <div class="insight-title">Named persona + step-by-step + free tool = the top format</div>
+        <div class="insight-desc">Posts that name who it's for (VA, Guro, Negosyante) and show one free tool doing one job consistently outperform everything else on both platforms.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-num">02</div>
+      <div class="insight-body">
+        <div class="insight-title">Carousels generate stronger engagement signals than reels</div>
+        <div class="insight-desc">Every swipe is logged as an interaction. TikTok's algorithm reads this as quality content and distributes further — reels don't produce the same signal depth.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-num">03</div>
+      <div class="insight-body">
+        <div class="insight-title">FYP reach is strong — follower conversion is the gap</div>
+        <div class="insight-desc">93.7% of TikTok views come from FYP (cold audience). The channel is reaching people but not closing them as followers. Profile CTA and bio need to be sharper.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-num">04</div>
+      <div class="insight-body">
+        <div class="insight-title">Slide text is indexed by TikTok search</div>
+        <div class="insight-desc">Search traffic is appearing organically for niche queries. Text in carousel slides gets read by the algorithm — this is a compounding SEO-style advantage reels don't have.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-num">05</div>
+      <div class="insight-body">
+        <div class="insight-title">One niche (Guro) is too narrow — broad persona unlocks scale</div>
+        <div class="insight-desc">VA, freelancers, negosyante, and employees are all searching for the same AI tips. Rotating personas expands reach without changing the content format that already works.</div>
+      </div>
+    </div>
+    <div class="insight">
+      <div class="insight-num">06</div>
+      <div class="insight-body">
+        <div class="insight-title">Branded search is appearing — TitoSerye playlist needed now</div>
+        <div class="insight-desc">"Titoserye Filipino ai" is being searched. No playlist exists to capture it. Creating a TitoSerye collection this week will retain viewers who arrive via search and turn them into followers.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Strategy -->
+  <div class="strategy">
+    <div class="strategy-head">
+      <div class="strategy-title">W31 Campaign Direction</div>
+      <div class="strategy-sub">Starts Jul 28 · Image-Enhanced Slides</div>
+    </div>
+    <div class="strategy-items">
+      <div class="strat-item"><span class="strat-mark">▸</span> Keep carousel format — it's the proven engine, don't change it</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Add a companion reel to every carousel (one shoot, two formats)</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Upgrade slides with real photos on S1 hook + S4 result slides</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Rotate personas every post: VA → Freelancer → Negosyante → Employee</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Seed first comment within 5 min of every post to anchor early engagement</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Boost W30 Wed after it drops: ₱900/day · TikTok Ads · Followers objective</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Create TitoSerye playlist on TikTok this week to capture branded search</div>
+      <div class="strat-item"><span class="strat-mark">▸</span> Sharpen profile bio CTA to close the 4,500 views → 33 visits gap</div>
+    </div>
+  </div>
+
+  <!-- Calendar -->
+  <div class="cal-header">
+    <div class="section-label" style="margin-bottom:0">2-Week Content Calendar · Jul 22 – Aug 1</div>
+    <div class="cal-legend">
+      <div class="leg-item"><span class="leg-dot ld-posted"></span> Posted</div>
+      <div class="leg-item"><span class="leg-dot ld-ready"></span> Ready</div>
+      <div class="leg-item"><span class="leg-dot ld-needed"></span> Script needed</div>
+      <div class="leg-item"><span class="leg-dot ld-new"></span> W31 new</div>
+    </div>
+  </div>
+
+  <div class="cal-grid">
+    <!-- Day headers -->
+    <div class="cal-day-header">Mon</div>
+    <div class="cal-day-header">Tue</div>
+    <div class="cal-day-header">Wed</div>
+    <div class="cal-day-header">Thu</div>
+    <div class="cal-day-header">Fri</div>
+    <div class="cal-day-header">Sat</div>
+    <div class="cal-day-header">Sun</div>
+
+    <!-- W30 label -->
+    <div class="cal-week-label">W30 · Jul 20–26</div>
+
+    <!-- Jul 21 Mon -->
+    <div class="cal-day">
+      <div class="cal-num">21</div>
+      <div class="cal-post cp-posted">
+        <div class="cp-slot">Mon AI Tip · 8 PM</div>
+        <div class="cp-title">Tanungin ang AI</div>
+      </div>
+    </div>
+    <!-- Jul 22 Tue TODAY -->
+    <div class="cal-day today">
+      <div class="cal-num">22 ·today</div>
+    </div>
+    <!-- Jul 23 Wed -->
+    <div class="cal-day">
+      <div class="cal-num">23</div>
+      <div class="cal-post cp-ready">
+        <div class="cp-slot">Wed Demo · 7 PM</div>
+        <div class="cp-title">Alinman Ka Man</div>
+      </div>
+    </div>
+    <!-- Jul 24 Thu -->
+    <div class="cal-day">
+      <div class="cal-num">24</div>
+    </div>
+    <!-- Jul 25 Fri -->
+    <div class="cal-day">
+      <div class="cal-num">25</div>
+      <div class="cal-post cp-needed">
+        <div class="cp-slot">Fri Story S1E3 · 7 PM</div>
+        <div class="cp-title">Tatay. Analyst. Trainer.</div>
+      </div>
+    </div>
+    <!-- Jul 26 Sat -->
+    <div class="cal-day">
+      <div class="cal-num">26</div>
+    </div>
+    <!-- Jul 27 Sun -->
+    <div class="cal-day">
+      <div class="cal-num">27</div>
+    </div>
+
+    <!-- W31 label -->
+    <div class="cal-week-label">W31 · Jul 28–Aug 3 · Image-Enhanced Campaign Launches</div>
+
+    <!-- Jul 28 Mon -->
+    <div class="cal-day">
+      <div class="cal-num">28</div>
+      <div class="cal-post cp-new">
+        <div class="cp-slot">Mon AI Tip · 8 PM</div>
+        <div class="cp-title">AI Tip — New Format</div>
+      </div>
+    </div>
+    <!-- Jul 29 Tue -->
+    <div class="cal-day">
+      <div class="cal-num">29</div>
+    </div>
+    <!-- Jul 30 Wed -->
+    <div class="cal-day">
+      <div class="cal-num">30</div>
+      <div class="cal-post cp-new">
+        <div class="cp-slot">Wed Demo · 7 PM · Boost</div>
+        <div class="cp-title">Demo — Image Enhanced</div>
+      </div>
+    </div>
+    <!-- Jul 31 Thu -->
+    <div class="cal-day">
+      <div class="cal-num">31</div>
+    </div>
+    <!-- Aug 1 Fri -->
+    <div class="cal-day">
+      <div class="cal-num">Aug 1</div>
+      <div class="cal-post cp-new">
+        <div class="cp-slot">Fri Story S1E4 · 7 PM</div>
+        <div class="cp-title">BJJ Champion + Analyst</div>
+      </div>
+    </div>
+    <!-- Aug 2 Sat -->
+    <div class="cal-day">
+      <div class="cal-num">Aug 2</div>
+    </div>
+    <!-- Aug 3 Sun -->
+    <div class="cal-day">
+      <div class="cal-num">Aug 3</div>
+    </div>
+  </div>
+
+  <!-- Post detail list -->
+  <div style="display:flex;flex-direction:column;gap:6px;margin-top:14px">
+
+    <div style="display:flex;gap:10px;align-items:center;font-size:0.76rem;color:var(--strong)">
+      <span class="leg-dot ld-posted" style="width:8px;height:8px;border-radius:50%;flex-shrink:0"></span>
+      <span><strong>Jul 21 Mon</strong> · Tanungin ang AI — Mas Mabilis Pa sa Google · Carousel · 8 PM PHT · <span style="color:var(--teal)">Posted ✓</span></span>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:0.76rem;color:var(--strong)">
+      <span class="leg-dot ld-ready" style="width:8px;height:8px;border-radius:50%;flex-shrink:0"></span>
+      <span><strong>Jul 23 Wed</strong> · Alinman Ka Man — Carousel + Reel · 7 PM PHT · <span style="color:var(--tt)">Ready — Boost after drop (₱900/day Followers)</span></span>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:0.76rem;color:var(--strong)">
+      <span class="leg-dot ld-needed" style="width:8px;height:8px;border-radius:50%;flex-shrink:0"></span>
+      <span><strong>Jul 25 Fri</strong> · S1E3 "Tatay. Analyst. Trainer. Sa Iisang Araw." · Story Reel · 7 PM PHT · <span style="color:var(--muted)">Script needed</span></span>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:0.76rem;color:var(--strong)">
+      <span class="leg-dot ld-new" style="width:8px;height:8px;border-radius:50%;flex-shrink:0"></span>
+      <span><strong>Jul 28 Mon</strong> · W31 AI Tip — Image-Enhanced Carousel + Reel · 8 PM PHT · <span style="color:var(--indigo)">New campaign launch</span></span>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:0.76rem;color:var(--strong)">
+      <span class="leg-dot ld-new" style="width:8px;height:8px;border-radius:50%;flex-shrink:0"></span>
+      <span><strong>Jul 30 Wed</strong> · W31 Demo — Image-Enhanced Carousel + Reel · 7 PM PHT · <span style="color:var(--indigo)">Boost candidate</span></span>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:0.76rem;color:var(--strong)">
+      <span class="leg-dot ld-new" style="width:8px;height:8px;border-radius:50%;flex-shrink:0"></span>
+      <span><strong>Aug 1 Fri</strong> · S1E4 "Ang BJJ Champion at ang Marketing Analyst na Nasa Manila" · Story Reel · 7 PM PHT · <span style="color:var(--indigo)">S1 Finale</span></span>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      <div class="footer-brand">Tito AI</div>
+      <div class="footer-tag">AI Para Sa Ating Lahat 🇵🇭</div>
+    </div>
+    <div class="footer-handle">@tito.aiph</div>
+  </div>
+
+</div>
