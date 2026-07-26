@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>W31 Mon Script — VA Inbox · Tito AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;padding-bottom:60px}
+.hdr{border-bottom:3px solid var(--gold);padding:28px 20px 18px;background:linear-gradient(135deg,#0D1520,#0A0F1E 60%,#0D1A2E)}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-teal{background:var(--teal);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(22px,5vw,40px);letter-spacing:1px;line-height:1.05;margin-bottom:4px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:12px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:10px 14px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.drop-value{font-size:12px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:20px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.sec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.scene{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.scene-hdr{padding:10px 16px;background:var(--navy3);display:flex;align-items:center;gap:10px}
+.scene-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);line-height:1;min-width:28px}
+.scene-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.scene-time{margin-left:auto;font-size:10px;color:var(--muted)}
+.scene-body{padding:16px;font-size:16px;line-height:1.9;color:#E2E8F0;white-space:pre-wrap}
+.scene-body em{color:var(--teal);font-style:italic;font-size:13px}
+.prompt-box{background:#0d1a2d;border:1px solid var(--teal);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:monospace;font-size:14px;color:#67e8f9;line-height:1.7}
+.rec-note{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.rec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
+.rec-body{font-size:13px;color:#E2E8F0;line-height:1.7}
+.slide-note{background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.slide-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--teal);margin-bottom:8px}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-top:20px}
+.ftr span{font-size:10px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">W31 · Monday</span>
+    <span class="badge badge-teal">AI Tip · VA</span>
+    <span class="badge badge-navy">Jul 28 · 8:00 PM PHT</span>
+  </div>
+  <h1>Isang Prompt.<br><span>Sampung Email.</span></h1>
+  <p class="hdr-sub">W31 Campaign · Persona: VA · Carousel + Reel · Image-enhanced slides (add real photo on S1 + S4)</p>
+</div>
+<div class="drop-bar">
+  <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Mon Jul 28 · 8:00 PM</div></div>
+  <div class="drop-cell"><div class="drop-label">Target</div><div class="drop-value">30–45s</div></div>
+  <div class="drop-cell"><div class="drop-label">Tool</div><div class="drop-value">Claude</div></div>
+  <div class="drop-cell"><div class="drop-label">Persona</div><div class="drop-value">VA</div></div>
+</div>
+<div class="main">
+
+  <div class="slide-note">
+    <div class="slide-label">W31 SLIDE UPGRADE — ACTION NEEDED</div>
+    <div class="rec-body">
+      <strong style="color:var(--white)">S1 (Hook slide):</strong> Add real photo of Jeff at work / laptop setup as background layer. Text overlays on top.<br><br>
+      <strong style="color:var(--white)">S4 (Result slide):</strong> Add screenshot of actual Claude output as background or inset image.<br><br>
+      These two slides need real visuals before posting. The other 3 slides are text-only as usual.
+    </div>
+  </div>
+
+  <div class="rec-note">
+    <div class="rec-label">RECORDING SETUP</div>
+    <div class="rec-body">
+      <strong style="color:var(--white)">Format:</strong> Talking head. Short and punchy — 30s max. Show the prompt on screen after you say it.<br><br>
+      <strong style="color:var(--white)">Tone:</strong> Direct, practical. VA audience wants the tip fast — no warm-up needed.<br><br>
+      <strong style="color:var(--white)">Hook rule:</strong> First 3 seconds — no "Kumusta." Start with the pain point immediately.
+    </div>
+  </div>
+
+  <div>
+    <div class="sec-label">Script</div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">01</span><span class="scene-title">Hook</span><span class="scene-time">0:00–0:08</span></div>
+      <div class="scene-body">VA ka — at ang inbox mo? Puno na naman.
+
+Heto ang prompt na gagamitin mo sa Claude
+para mag-draft ng sampung emails nang hindi mo iisipin ang bawat isa.
+
+<em>[no greeting. straight to pain point. hold eye contact.]</em></div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">02</span><span class="scene-title">The Prompt</span><span class="scene-time">0:08–0:25</span></div>
+      <div class="scene-body">I-type mo ito sa Claude:
+
+<div class="prompt-box">Ako ay VA para sa [kliyente]. Kailangan ko ng [follow-up / intro / check-in] email para sa [context]. Tone: propesyonal pero mainit. Maigsi lang — 3 talata.</div>
+
+Palitan mo lang ang brackets.
+Claude ang bahala sa words.
+
+<em>[show the prompt on screen. pause after reading it — let it sink in.]</em></div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">03</span><span class="scene-title">CTA + Close</span><span class="scene-time">0:25–0:35</span></div>
+      <div class="scene-body">Libre sa claude.ai. Wala kang bayad.
+
+Sundan mo ang @tito.aiph —
+bawat linggo may bagong tip para sa iyo.
+
+Ingat lagi, mga Pamangkin.
+Tito AI — AI Para Sa Ating Lahat.
+
+<em>[warm, short. done.]</em></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sec-label">Carousel Slides (5 slides)</div>
+    <div class="rec-note">
+      <div class="rec-label">SLIDE GUIDE</div>
+      <div class="rec-body">
+        S1 · Hook: "INBOX MO — PUNO NA NAMAN?" · [+ real photo background]<br>
+        S2 · Problem: "Bawat email — iba ang tono. Iba ang context. Masyadong maraming iniisip."<br>
+        S3 · Prompt: Show the Claude prompt formula in a styled code box<br>
+        S4 · Result: Show Claude output example · [+ screenshot inset]<br>
+        S5 · CTA: "SUBUKAN MO NGAYON · claude.ai · libre · @tito.aiph"
+      </div>
+    </div>
+  </div>
+
+  <div class="rec-note">
+    <div class="rec-label">POST-RECORDING NOTES</div>
+    <div class="rec-body">
+      <strong style="color:var(--white)">Pin immediately on TikTok</strong> after posting.<br><br>
+      <strong style="color:var(--white)">Seed comment</strong> within 5 min: "VA ka? Anong klase ng email ang pinaka-mahirap i-draft? 👇"
+    </div>
+  </div>
+
+</div>
+<div class="ftr"><span>Tito AI · @TitoAIPH · W31 Monday · Jul 28, 2026 · AI Tip · VA</span><b>AI PARA SA ATING LAHAT</b></div>
+</body>
+</html>
