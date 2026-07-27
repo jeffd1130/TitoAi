@@ -1,40 +1,39 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8">
 <title>W31 Mon S2 Problem</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1350px;overflow:hidden;background:#0A0F1E}
-.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:flex;flex-direction:column;overflow:hidden;padding:80px 90px;justify-content:center}
-.slide::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
-.slide::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:#0D9488;opacity:.05;pointer-events:none}
-.t-line{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;display:block}
-.t-gold{color:#F59E0B}.t-white{color:#fff}
-.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%)}
-.lbl2{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569}
-.email-list{display:flex;flex-direction:column;gap:14px}
-.email-item{font-family:'DM Sans',sans-serif;font-size:30px;font-weight:700;display:flex;align-items:center;gap:16px}
-.email-item .icon{font-size:32px}
-.email-item .txt{color:#94A3B8}
-.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
-.footer img{height:68px;opacity:.9}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#FAF8F4}
+.slide{width:1080px;height:1350px;background:#FAF8F4;position:relative;display:flex;flex-direction:column;overflow:hidden;padding:80px 90px 140px}
+.lbl2{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:28px}
+.headline{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;line-height:.92;display:block}
+.h-navy{color:#0A0F1E}
+.h-gold{color:#F59E0B}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.12) 100%);margin:32px 0}
+.list{display:flex;flex-direction:column;gap:20px;margin-top:4px}
+.item{display:flex;align-items:center;gap:20px;background:#fff;border-radius:14px;padding:22px 28px;box-shadow:0 2px 12px rgba(10,15,30,.06)}
+.badge{width:52px;height:52px;border-radius:12px;background:#FEF3C7;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.item-txt{font-family:'DM Sans',sans-serif;font-size:30px;font-weight:600;color:#1E293B;line-height:1.3}
+.footer-band{position:absolute;bottom:0;left:0;right:0;height:96px;background:#0A0F1E;display:flex;align-items:center;justify-content:space-between;padding:0 90px}
+.footer-band img{height:60px;opacity:.9}
 .fpips{display:flex;gap:8px}
-.fpip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.fpip{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2)}
 .fpip.a{background:#F59E0B}
 </style>
 </head><body>
 <div class="slide" data-document-role="page" data-label="S2 Problem">
-  <div class="lbl2" style="margin-bottom:24px">Tito AI · W31 Mon · Problem</div>
-  <span class="t-line t-white" style="font-size:100px;line-height:.95">MASYADONG</span>
-  <span class="t-line t-gold" style="font-size:100px;line-height:.95">MARAMING</span>
-  <span class="t-line t-white" style="font-size:100px;line-height:.95">ISUSULAT.</span>
-  <div class="divider" style="margin:28px 0"></div>
-  <div class="email-list">
-    <div class="email-item"><span class="icon">📧</span><span class="txt">Follow-up sa kliyente</span></div>
-    <div class="email-item"><span class="icon">📄</span><span class="txt">Intro sa bagong contact</span></div>
-    <div class="email-item"><span class="icon">✅</span><span class="txt">Check-in sa boss</span></div>
-    <div class="email-item"><span class="icon">🔔</span><span class="txt">Update sa project</span></div>
+  <div class="lbl2">Tito AI · W31 Mon · Problem</div>
+  <span class="headline h-navy" style="font-size:88px">MASYADONG</span>
+  <span class="headline h-gold" style="font-size:88px">MARAMING</span>
+  <span class="headline h-navy" style="font-size:88px">ISUSULAT.</span>
+  <div class="divider"></div>
+  <div class="list">
+    <div class="item"><div class="badge">📧</div><div class="item-txt">Follow-up sa kliyente</div></div>
+    <div class="item"><div class="badge">📄</div><div class="item-txt">Intro sa bagong contact</div></div>
+    <div class="item"><div class="badge">✅</div><div class="item-txt">Check-in sa boss</div></div>
+    <div class="item"><div class="badge">🔔</div><div class="item-txt">Update sa project</div></div>
   </div>
-  <div class="footer">
+  <div class="footer-band">
     <img src="https://jeffd1130.github.io/TitoAi/assets/logo-horizontal.png" alt="Tito AI">
     <div class="fpips"><div class="fpip"></div><div class="fpip a"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div></div>
   </div>

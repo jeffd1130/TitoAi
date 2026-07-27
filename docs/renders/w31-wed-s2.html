@@ -1,39 +1,40 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8">
 <title>W31 Wed S2 Problem</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1350px;overflow:hidden;background:#0A0F1E}
-.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:flex;flex-direction:column;overflow:hidden;padding:80px 90px;justify-content:center}
-.slide::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
-.slide::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:#0D9488;opacity:.05;pointer-events:none}
-.t-line{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;display:block}
-.t-gold{color:#F59E0B}.t-white{color:#fff}.t-teal{color:#0D9488}
-.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%)}
-.lbl2{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569}
-.problem-list{display:flex;flex-direction:column;gap:16px}
-.problem-item{font-family:'DM Sans',sans-serif;font-size:29px;color:#94A3B8;display:flex;align-items:flex-start;gap:16px;line-height:1.4}
-.problem-item .bullet{color:#F59E0B;font-weight:700;flex-shrink:0}
-.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
-.footer img{height:68px;opacity:.9}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#FAF8F4}
+.slide{width:1080px;height:1350px;background:#FAF8F4;position:relative;display:flex;flex-direction:column;overflow:hidden;padding:80px 90px 140px}
+.lbl2{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:28px}
+.headline{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;line-height:.92;display:block}
+.h-navy{color:#0A0F1E}
+.h-gold{color:#F59E0B}
+.h-teal{color:#0D9488}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.12) 100%);margin:32px 0}
+.list{display:flex;flex-direction:column;gap:18px}
+.item{display:flex;align-items:flex-start;gap:18px;background:#fff;border-radius:14px;padding:20px 26px;box-shadow:0 2px 12px rgba(10,15,30,.06)}
+.badge{width:40px;height:40px;border-radius:10px;background:#F59E0B;display:flex;align-items:center;justify-content:center;color:#0A0F1E;font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;flex-shrink:0;margin-top:3px}
+.item-txt{font-family:'DM Sans',sans-serif;font-size:27px;font-weight:600;color:#1E293B;line-height:1.4}
+.footer-band{position:absolute;bottom:0;left:0;right:0;height:96px;background:#0A0F1E;display:flex;align-items:center;justify-content:space-between;padding:0 90px}
+.footer-band img{height:60px;opacity:.9}
 .fpips{display:flex;gap:8px}
-.fpip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.fpip{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2)}
 .fpip.a{background:#F59E0B}
 </style>
 </head><body>
 <div class="slide" data-document-role="page" data-label="S2 Problem">
-  <div class="lbl2" style="margin-bottom:24px">Tito AI · W31 Wed · Problem</div>
-  <span class="t-line t-white" style="font-size:96px;line-height:.95">ALAM MO</span>
-  <span class="t-line t-gold" style="font-size:96px;line-height:.95">ANG TRABAHO.</span>
-  <span class="t-line t-teal" style="font-size:96px;line-height:.95">PERO ANG SULAT?</span>
-  <div class="divider" style="margin:28px 0"></div>
-  <div class="problem-list">
-    <div class="problem-item"><span class="bullet">→</span><span>Magkano ang isasagot mo sa kliyente?</span></div>
-    <div class="problem-item"><span class="bullet">→</span><span>Ano ang kasama sa package mo?</span></div>
-    <div class="problem-item"><span class="bullet">→</span><span>Paano mo ito gagawing propesyonal?</span></div>
-    <div class="problem-item"><span class="bullet">→</span><span>Ilang oras mo gagastusin dito?</span></div>
+  <div class="lbl2">Tito AI · W31 Wed · Problem</div>
+  <span class="headline h-navy" style="font-size:80px">ALAM MO</span>
+  <span class="headline h-gold" style="font-size:80px">ANG TRABAHO.</span>
+  <span class="headline h-teal" style="font-size:80px">PERO ANG SULAT?</span>
+  <div class="divider"></div>
+  <div class="list">
+    <div class="item"><div class="badge">→</div><div class="item-txt">Magkano ang isasagot mo sa kliyente?</div></div>
+    <div class="item"><div class="badge">→</div><div class="item-txt">Ano ang kasama sa package mo?</div></div>
+    <div class="item"><div class="badge">→</div><div class="item-txt">Paano mo ito gagawing propesyonal?</div></div>
+    <div class="item"><div class="badge">→</div><div class="item-txt">Ilang oras mo gagastusin dito?</div></div>
   </div>
-  <div class="footer">
+  <div class="footer-band">
     <img src="https://jeffd1130.github.io/TitoAi/assets/logo-horizontal.png" alt="Tito AI">
     <div class="fpips"><div class="fpip"></div><div class="fpip a"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div></div>
   </div>

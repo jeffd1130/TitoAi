@@ -1,37 +1,44 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8">
 <title>W31 Wed S3 Prompt</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1080px;height:1350px;overflow:hidden;background:#0A0F1E}
-.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:flex;flex-direction:column;overflow:hidden;padding:80px 90px;justify-content:center}
-.slide::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
-.t-line{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;display:block}
-.t-gold{color:#F59E0B}.t-white{color:#fff}.t-teal{color:#0D9488}
-.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%)}
-.lbl2{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569}
-.prompt-box{background:#0d1a2d;border:2px solid #0D9488;border-radius:12px;padding:24px 28px}
-.prompt-box .plbl{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#0D9488;margin-bottom:12px}
-.prompt-box .ptxt{font-family:monospace;font-size:20px;color:#67e8f9;line-height:1.9}
-.prompt-box .ptxt .br{color:#F59E0B}
-.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
-.footer img{height:68px;opacity:.9}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#FAF8F4}
+.slide{width:1080px;height:1350px;background:#FAF8F4;position:relative;display:flex;flex-direction:column;overflow:hidden;padding:80px 90px 140px}
+.lbl2{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:28px}
+.headline{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;line-height:.92;display:block}
+.h-navy{color:#0A0F1E}
+.h-gold{color:#F59E0B}
+.h-teal{color:#0D9488}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#0D9488 0%,rgba(13,148,136,.1) 100%);margin:32px 0}
+.prompt-card{background:#F0FDFA;border:2px solid #0D9488;border-radius:16px;padding:32px 36px}
+.step-label{display:inline-flex;align-items:center;gap:8px;background:#0D9488;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px}
+.prompt-body{font-family:'DM Sans',sans-serif;font-size:24px;color:#0F172A;line-height:1.9}
+.prompt-body .fill{display:inline;background:#FEF3C7;color:#92400E;font-weight:700;padding:2px 8px;border-radius:6px}
+.footer-band{position:absolute;bottom:0;left:0;right:0;height:96px;background:#0A0F1E;display:flex;align-items:center;justify-content:space-between;padding:0 90px}
+.footer-band img{height:60px;opacity:.9}
 .fpips{display:flex;gap:8px}
-.fpip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.fpip{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2)}
 .fpip.a{background:#F59E0B}
 </style>
 </head><body>
 <div class="slide" data-document-role="page" data-label="S3 Prompt">
-  <div class="lbl2" style="margin-bottom:24px">Tito AI · W31 Wed · Prompt</div>
-  <span class="t-line t-white" style="font-size:96px;line-height:.95">GAMITIN</span>
-  <span class="t-line t-gold" style="font-size:96px;line-height:.95">ITO SA</span>
-  <span class="t-line t-teal" style="font-size:96px;line-height:.95">CLAUDE.</span>
-  <div class="divider" style="margin:24px 0"></div>
-  <div class="prompt-box">
-    <div class="plbl">Claude Prompt</div>
-    <div class="ptxt">Freelancer ako — <span class="br">[iyong trabaho]</span>.<br>Gusto ko ng proposal para sa<br><span class="br">[kliyente / project]</span>.<br>Kasama: scope, bayad, timeline.<br>Tone: propesyonal. 1 pahina lang.</div>
+  <div class="lbl2">Tito AI · W31 Wed · Prompt</div>
+  <span class="headline h-navy" style="font-size:88px">GAMITIN</span>
+  <span class="headline h-gold" style="font-size:88px">ITO SA</span>
+  <span class="headline h-teal" style="font-size:88px">CLAUDE.</span>
+  <div class="divider"></div>
+  <div class="prompt-card">
+    <div class="step-label">✦ Claude Prompt</div>
+    <div class="prompt-body">
+      Freelancer ako — <span class="fill">[iyong trabaho]</span>.<br>
+      Gusto ko ng proposal para sa<br>
+      <span class="fill">[kliyente / project]</span>.<br>
+      Kasama: scope, bayad, timeline.<br>
+      Tone: propesyonal. 1 pahina lang.
+    </div>
   </div>
-  <div class="footer">
+  <div class="footer-band">
     <img src="https://jeffd1130.github.io/TitoAi/assets/logo-horizontal.png" alt="Tito AI">
     <div class="fpips"><div class="fpip"></div><div class="fpip"></div><div class="fpip a"></div><div class="fpip"></div><div class="fpip"></div></div>
   </div>
