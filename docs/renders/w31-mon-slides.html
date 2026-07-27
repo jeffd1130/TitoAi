@@ -1,0 +1,209 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>W31 Mon — VA Inbox Tip</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#0A0F1E}
+
+/* ── NAV BAR (hidden during screenshot — use ?preview=1 to show) ── */
+#nav{display:none;position:fixed;bottom:0;left:0;width:100%;z-index:999;background:rgba(10,15,30,.92);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#nav button{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;padding:10px 24px;border:none;border-radius:6px;cursor:pointer;background:#F59E0B;color:#0A0F1E}
+#nav button:disabled{background:#1E293B;color:#475569;cursor:default}
+#nav .pips{display:flex;gap:8px}
+#nav .pip{width:10px;height:10px;border-radius:50%;background:#1E293B;cursor:pointer}
+#nav .pip.active{background:#F59E0B}
+#nav .label{font-family:'DM Sans',sans-serif;font-size:14px;color:#94A3B8;min-width:120px;text-align:center}
+
+/* ── SLIDES ── */
+.slide{width:1080px;height:1350px;background:#0A0F1E;position:relative;display:none;flex-direction:column;overflow:hidden}
+.slide.active{display:flex}
+
+/* ── SHARED ELEMENTS ── */
+.t-line{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:2px;display:block}
+.t-gold{color:#F59E0B}.t-white{color:#fff}.t-teal{color:#0D9488}
+.divider{width:100%;height:3px;background:linear-gradient(90deg,#F59E0B 0%,rgba(245,158,11,.15) 100%)}
+.label{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#475569}
+.sub{font-family:'DM Sans',sans-serif;font-size:34px;color:#94A3B8;line-height:1.5}
+.handle{font-family:'DM Sans',sans-serif;font-size:32px;font-weight:700;color:#F59E0B}
+.footer{position:absolute;bottom:52px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
+.footer img{height:68px;opacity:.9}
+.fpips{display:flex;gap:8px}
+.fpip{width:10px;height:10px;border-radius:50%;background:#1E293B}
+.fpip.a{background:#F59E0B}
+.orb{position:absolute;border-radius:50%;pointer-events:none}
+
+/* ── SLIDE 1 — HOOK ── */
+#s1{justify-content:flex-end;padding:80px 90px 160px}
+#s1 .photo-zone{position:absolute;top:0;left:0;width:100%;height:65%;background:linear-gradient(135deg,#0D1A2E 0%,#1a2744 40%,#0f2040 60%,#0A0F1E 100%);display:flex;align-items:center;justify-content:center}
+#s1 .photo-label{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(245,158,11,.3);border:2px dashed rgba(245,158,11,.2);padding:20px 36px;border-radius:8px}
+#s1 .overlay{position:absolute;top:0;left:0;width:100%;height:70%;background:linear-gradient(180deg,transparent 30%,#0A0F1E 100%)}
+#s1 .content{position:relative;z-index:2}
+#s1 .t-line{font-size:118px;line-height:.92}
+#s1 .divider{margin:28px 0}
+
+/* ── SLIDE 2 — PROBLEM ── */
+#s2{padding:80px 90px;justify-content:center}
+#s2::before{content:'';top:-120px;right:-120px;width:420px;height:420px;background:#F59E0B;opacity:.04}
+#s2::after{content:'';bottom:-80px;left:-80px;width:300px;height:300px;background:#0D9488;opacity:.05}
+#s2::before,#s2::after{position:absolute;border-radius:50%;pointer-events:none}
+#s2 .t-line{font-size:100px;line-height:.95}
+#s2 .divider{margin:28px 0}
+.email-list{display:flex;flex-direction:column;gap:14px}
+.email-item{font-family:'DM Sans',sans-serif;font-size:30px;font-weight:700;color:#CBD5E1;display:flex;align-items:center;gap:16px}
+.email-item .icon{font-size:32px}
+.email-item .txt{color:#94A3B8}
+
+/* ── SLIDE 3 — PROMPT ── */
+#s3{padding:80px 90px;justify-content:center}
+#s3::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
+#s3 .t-line{font-size:100px;line-height:.95}
+#s3 .divider{margin:28px 0}
+.prompt-box{background:#0d1a2d;border:2px solid #0D9488;border-radius:12px;padding:28px 32px}
+.prompt-box .plabel{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#0D9488;margin-bottom:14px}
+.prompt-box .ptext{font-family:monospace;font-size:24px;color:#67e8f9;line-height:1.8}
+.prompt-box .ptext .br{color:#F59E0B}
+
+/* ── SLIDE 4 — RESULT ── */
+#s4{padding:80px 90px;justify-content:center}
+#s4::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#0D9488;opacity:.04;pointer-events:none}
+#s4 .t-line{font-size:108px;line-height:.95}
+#s4 .divider{margin:24px 0}
+.output-box{background:#111827;border:1px solid #1E293B;border-radius:12px;padding:24px 28px}
+.output-box .olabel{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#0D9488;margin-bottom:12px}
+.output-box .otext{font-family:'DM Sans',sans-serif;font-size:22px;color:#94A3B8;line-height:1.7}
+.photo-badge{position:absolute;top:90px;right:90px;background:rgba(13,148,136,.15);border:2px dashed rgba(13,148,136,.3);border-radius:8px;padding:12px 20px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(13,148,136,.5)}
+
+/* ── SLIDE 5 — CTA ── */
+#s5{padding:80px 90px;justify-content:center}
+#s5::before{content:'';position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:#F59E0B;opacity:.04;pointer-events:none}
+#s5::after{content:'';position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:#0D9488;opacity:.05;pointer-events:none}
+#s5 .t-line{font-size:128px;line-height:.92}
+#s5 .divider{margin:32px 0}
+</style>
+</head><body>
+
+<!-- SLIDE 1 · HOOK -->
+<div class="slide" id="s1">
+  <div class="photo-zone"><div class="photo-label">REPLACE WITH PHOTO</div></div>
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="label" style="margin-bottom:20px">Tito AI · W31 Mon · VA Tip</div>
+    <span class="t-line t-white">INBOX MO</span>
+    <span class="t-line t-gold">PUNO NA</span>
+    <span class="t-line t-white">NAMAN.</span>
+    <div class="divider"></div>
+    <div class="sub">Bawat email — kailangan mong isipin.<br>May mas madaling paraan.</div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8766/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="fpips"><div class="fpip a"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 2 · PROBLEM -->
+<div class="slide" id="s2">
+  <div class="label" style="margin-bottom:24px">Tito AI · W31 Mon · Problem</div>
+  <span class="t-line t-white" style="font-size:100px;line-height:.95">MASYADONG</span>
+  <span class="t-line t-gold" style="font-size:100px;line-height:.95">MARAMING</span>
+  <span class="t-line t-white" style="font-size:100px;line-height:.95">ISUSULAT.</span>
+  <div class="divider" style="margin:28px 0"></div>
+  <div class="email-list">
+    <div class="email-item"><span class="icon">📧</span><span class="txt">Follow-up sa kliyente</span></div>
+    <div class="email-item"><span class="icon">📄</span><span class="txt">Intro sa bagong contact</span></div>
+    <div class="email-item"><span class="icon">✅</span><span class="txt">Check-in sa boss</span></div>
+    <div class="email-item"><span class="icon">🔔</span><span class="txt">Update sa project</span></div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8766/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="fpips"><div class="fpip"></div><div class="fpip a"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 3 · PROMPT -->
+<div class="slide" id="s3">
+  <div class="label" style="margin-bottom:24px">Tito AI · W31 Mon · Prompt</div>
+  <span class="t-line t-white" style="font-size:100px;line-height:.95">I-TYPE</span>
+  <span class="t-line t-gold" style="font-size:100px;line-height:.95">ITO SA</span>
+  <span class="t-line t-teal" style="font-size:100px;line-height:.95">CLAUDE.</span>
+  <div class="divider" style="margin:28px 0"></div>
+  <div class="prompt-box">
+    <div class="plabel">Claude Prompt</div>
+    <div class="ptext">Ako ay VA para sa <span class="br">[kliyente]</span>.<br>Kailangan ko ng <span class="br">[follow-up / intro]</span><br>email para sa <span class="br">[context]</span>.<br>Propesyonal pero mainit.<br>3 talata lang.</div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8766/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="fpips"><div class="fpip"></div><div class="fpip"></div><div class="fpip a"></div><div class="fpip"></div><div class="fpip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 4 · RESULT -->
+<div class="slide" id="s4">
+  <div class="photo-badge">ADD SCREENSHOT</div>
+  <div class="label" style="margin-bottom:24px">Tito AI · W31 Mon · Result</div>
+  <span class="t-line t-gold" style="font-size:108px;line-height:.95">ISANG</span>
+  <span class="t-line t-white" style="font-size:108px;line-height:.95">PROMPT.</span>
+  <span class="t-line t-teal" style="font-size:108px;line-height:.95">TAPOS NA.</span>
+  <div class="divider" style="margin:24px 0"></div>
+  <div class="output-box">
+    <div class="olabel">Claude Output</div>
+    <div class="otext">"Hi [Client name], I wanted to follow up on the deliverables we discussed last week. Everything is on track — I'll send the final files by Friday. Please let me know if you need anything in the meantime."</div>
+  </div>
+  <div class="footer">
+    <img src="http://localhost:8766/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="fpips"><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip a"></div><div class="fpip"></div></div>
+  </div>
+</div>
+
+<!-- SLIDE 5 · CTA -->
+<div class="slide" id="s5">
+  <div class="label" style="margin-bottom:24px">Tito AI · W31 Mon · CTA</div>
+  <span class="t-line t-gold" style="font-size:128px;line-height:.92">SUBUKAN</span>
+  <span class="t-line t-white" style="font-size:128px;line-height:.92">MO</span>
+  <span class="t-line t-teal" style="font-size:128px;line-height:.92">NGAYON.</span>
+  <div class="divider" style="margin:32px 0"></div>
+  <div class="sub">claude.ai — libre. 🇵🇭</div>
+  <div class="handle" style="margin-top:16px">@tito.aiph</div>
+  <div class="footer">
+    <img src="http://localhost:8766/assets/logo-horizontal.png" alt="Tito AI">
+    <div class="fpips"><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip"></div><div class="fpip a"></div></div>
+  </div>
+</div>
+
+<!-- NAV (shown in preview mode) -->
+<div id="nav">
+  <button id="prev" onclick="go(-1)" disabled>← Prev</button>
+  <div class="pips" id="dots"></div>
+  <div class="label" id="lbl">1 / 5</div>
+  <button id="next" onclick="go(1)">Next →</button>
+</div>
+
+<script>
+const IDS = ['s1','s2','s3','s4','s5'];
+let cur = 0;
+const params = new URLSearchParams(location.search);
+const preview = params.get('preview') === '1';
+if (preview) document.getElementById('nav').style.display = 'flex';
+
+// Hash-based: ?slide=N (1-indexed) or default 1
+const slideParam = parseInt(params.get('slide') || '1', 10);
+cur = Math.min(Math.max(slideParam - 1, 0), IDS.length - 1);
+
+function render() {
+  IDS.forEach((id, i) => {
+    document.getElementById(id).classList.toggle('active', i === cur);
+  });
+  if (preview) {
+    document.getElementById('prev').disabled = cur === 0;
+    document.getElementById('next').disabled = cur === IDS.length - 1;
+    document.getElementById('lbl').textContent = (cur+1) + ' / ' + IDS.length;
+    const dots = document.getElementById('dots');
+    dots.innerHTML = IDS.map((_, i) =>
+      `<div class="pip${i===cur?' active':''}" onclick="jump(${i})"></div>`
+    ).join('');
+  }
+}
+function go(d) { cur = Math.min(Math.max(cur+d,0),IDS.length-1); render(); }
+function jump(i) { cur=i; render(); }
+render();
+</script>
+</body></html>
