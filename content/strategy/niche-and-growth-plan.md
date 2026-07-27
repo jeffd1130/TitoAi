@@ -92,8 +92,8 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 
 | Day | Slot | Format | Drop (PHT) | Content type |
 |-----|------|--------|------------|-------------|
-| Monday | `01-mon-ai-tip` | AI Tip Reel (30–60s) | 8:00 PM | Quick tool win · screen record + Taglish voiceover |
-| Wednesday | `02-wed-demo` | Demo / Tutorial Reel (60–90s) | 7:00 PM | Full tool walkthrough · face cam + screen share |
+| Monday | `01-mon-ai-tip` | AI Tip Carousel (5 slides) | 8:00 PM | Quick tool win · prompt formula · dark navy design |
+| Wednesday | `02-wed-demo` | Demo Carousel (5 slides) | 7:00 PM | Named-persona demo · step-by-step prompt + output |
 | Friday | `03-fri-inspiration` | Story / Inspiration Reel (60–90s) | 7:00 PM | Filipino everyday life · warm Tito format |
 
 **Cross-posting rule:** Upload each video natively to TikTok, Instagram Reels, and Facebook — never use TikTok's cross-post link; native uploads get more reach on each platform.

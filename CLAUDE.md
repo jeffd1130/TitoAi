@@ -22,7 +22,7 @@ All times are **PHT (UTC+8)**. Jeff is based in Manila (PHT, UTC+8) — his Mac 
 
 | Day | Stage | Owner | Action |
 |-----|-------|-------|--------|
-| D-3 | Raw assets | Tito AI | Drop videos/photos into `content/<week>/<slot>/raw/` |
+| D-3 | Asset prep | Jeff | Gather S1 photo + S4 Claude screenshot for carousel; no recording needed |
 | D-2 | Script + Design | Jeff | Write script → save as `.md` + `.html` in `drafts/` → copy HTML to `docs/scripts/` → run `produce-week` or per-slot skill → Canva cover + caption generated |
 | D-1 | Approval | Tito AI | Review via **Canva edit link + script link sent by Telegram** — approve or request changes |
 | D-0 | Posting | Tito AI | Schedule in **Buffer** at the PHT drop time → publish |
@@ -152,7 +152,7 @@ Visual identity lives in Canva — see `brand/README.md`.
 content/
   2026-W22/
     01-mon-ai-tip/
-      raw/          ← Jeff drops video/photos here (D-3)
+      raw/          ← carousel assets: S1 photo + S4 Claude screenshot (D-3)
       drafts/       ← D-2 exports here (cover graphic + draft URL)
       approved/     ← D-1 moves approved here
       brief.md      ← optional context note
@@ -393,7 +393,7 @@ All scripts live in `automation/`. They run via Mac crontab. Jeff's Mac runs on 
 | Script | Purpose | Fires (Manila time) |
 |--------|---------|-------------------|
 | `tito-summary.py` | Daily status: current/next/upcoming weeks + today's drops | 10:00 AM daily |
-| `tito-record.py` | D-3 recording reminder: what to film, specs, where to save | 9:00 AM — Fri / Sun / Tue |
+| `tito-record.py` | D-3 asset prep reminder: gather S1 photo + S4 Claude screenshot for carousel | 9:00 AM — Fri / Sun / Tue |
 | `tito-create.py` | D-2 content creation reminder: script + captions + Canva, links to produce-post | 9:00 AM — Sat / Mon / Wed |
 | `tito-weekly.py` | Saturday production overview: shows what still needs work for next 2 weeks | 9:00 AM Saturday |
 | `tito-remind.py` | Drop-day reminder: 1hr before each post with pre-post checklist | 7:00 PM Mon / 7:00 PM Wed / 7:00 PM Fri |
