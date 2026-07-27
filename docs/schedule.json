@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-27",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -323,29 +323,31 @@
       "posts": [
         {
           "day": "MON",
-          "title": "TBD — AI Tip",
-          "note": "Mon quick tip slot · 30–45s · ⚠ NO SCRIPT/CAPTIONS YET — drops Jul 21, needs produce-post today",
-          "date": "Jul 21",
-          "status": "draft",
-          "url": null,
+          "title": "Tanungin ang AI — Mas Mabilis Pa sa Google",
+          "tag": "Carousel",
+          "note": "Confirmed posted Jul 22, 8 PM PHT per Jul 22 live pull",
+          "date": "Jul 22",
+          "status": "posted",
+          "url": "W30-mon-captions.html",
           "boost": null
         },
         {
           "day": "WED",
-          "title": "TBD — Demo",
-          "note": "Wed demo slot · 60–90s · ⚠ NO SCRIPT/CAPTIONS YET — drops Jul 23 · recommend named-persona/step-by-step demo shape (2 consecutive weeks proven)",
+          "title": "Alinman Ka Man",
+          "tag": "Carousel",
+          "note": "Hayaan ang Claude · named-persona/step-by-step demo shape · script+captions+carousel slides completed Jul 23 on schedule · posting on TikTok/IG/FB not confirmed this cycle (no account access)",
           "date": "Jul 23",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W30-wed-captions.html",
           "boost": null
         },
         {
           "day": "FRI",
           "title": "Tatay. Analyst. Trainer. Sa Iisang Araw.",
           "tag": "Story S1E3",
-          "note": "Friday Story Series S1 · Ep 3 · Jeff household dad story · juggling family + 4 client businesses from Manila · AI as equalizer for tatay/nanay with multiple roles · ⚠ schedule.json references W30-fri-captions.html but file does not exist yet — needs script+captions before Jul 24 approval",
+          "note": "Friday Story Series S1 · Ep 3 · Jeff household dad story · script+captions+slides completed Jul 23–24 on schedule · posting not confirmed this cycle (no account access)",
           "date": "Jul 25",
-          "status": "draft",
+          "status": "ready",
           "url": "W30-fri-captions.html",
           "boost": null
         }
@@ -354,36 +356,38 @@
     {
       "id": "W31",
       "range": "Jul 27–Aug 2",
-      "theme": "Real Stories · Demos from Life",
-      "boost": null,
+      "theme": "Real Stories · Demos from Life · Season 1 Finale",
+      "boost": "TikTok — recommend Fri S1E4",
       "posts": [
         {
           "day": "MON",
-          "title": "TBD — AI Tip",
-          "note": "Mon quick tip slot · 30–45s",
+          "title": "VA Inbox",
+          "tag": "Carousel",
+          "note": "Persona: VA · script+captions+carousel slides ready Jul 27, a day ahead of drop · named-persona/step-by-step shape",
           "date": "Jul 28",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W31-mon-captions.html",
           "boost": null
         },
         {
           "day": "WED",
-          "title": "TBD — Demo",
-          "note": "Wed demo slot · 60–90s",
+          "title": "Proposal sa Kliyente, Claude ang Gagawa",
+          "tag": "Carousel",
+          "note": "Persona: Freelancer · same proven organic shape as W27–W29 Wed (3-week streak) · recommend keeping organic, no boost needed",
           "date": "Jul 30",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W31-wed-captions.html",
           "boost": null
         },
         {
           "day": "FRI",
           "title": "Ang BJJ Champion at ang Marketing Analyst na Nasa Manila",
           "tag": "Story S1E4",
-          "note": "Friday Story Series S1 · Ep 4 · Full Cobrinha LA story · deeper dive · how AI content production closes the 8,000-mile gap between LA and Manila",
+          "note": "Friday Story Series S1 · Ep 4 · Season 1 finale · Full Cobrinha LA story · recommend boost here (TikTok, Followers/Profile-visits objective) — S1E2's boosted story drove 365 new followers vs. ~1,100 views for the best boosted carousel · script+captions ready Jul 27",
           "date": "Aug 1",
-          "status": "draft",
+          "status": "ready",
           "url": "W31-fri-captions.html",
-          "boost": null
+          "boost": "TikTok — recommended, not yet placed"
         }
       ]
     }

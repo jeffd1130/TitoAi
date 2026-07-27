@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Jul 17, 2026):**
+**Current/Next/Upcoming weeks (as of Jul 27, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current (highlighted in hub) | W29 | Jul 13–19 |
-| Next | W30 | Jul 20–26 |
-| Upcoming | W31 | Jul 27–Aug 2 |
+| Current (highlighted in hub) | W31 | Jul 27–Aug 2 (Season 1 finale) |
+| Next | — | W32 not yet planned |
+| Upcoming | — | W32 not yet planned |
 
 **Key live URLs:**
 | Page | URL |
@@ -349,6 +349,10 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 **Health check (Jul 18, 2026):** `reports/2026-07-18-health-check.md` — TikTok 7-day views 3,100 (+131.1% WoW), 133 likes, 9 shares, 98% FYP traffic. **W29 Wed carousel ("Resume at Cover Letter") is now the best-performing post in channel history** — 1,016 views/63 likes in 2 days, confirming the named-persona/step-by-step demo shape as the top-proven format (3rd consecutive week: W27 Wed → W28 Wed → W29 Wed). Carousels are outperforming reels on raw views. Branded search growing ("titoserye Filipino ai," "tito ai story"). Boost objective shifted to Followers/Profile visits (98% FYP traffic isn't converting to followers). Two boosts placed same day: W29 Wed carousel ₱300 + W29 Fri S1E2 ₱200, both TikTok, 3-day duration.
 
 **Weekly check & balance (Jul 20, 2026):** `reports/2026-07-20-weekly-checkbalance.md` — automation/repo health normal (clean, pushed, no lock issues), but no commits landed Jul 19–20. Social-health pull failed again this cycle (no browser access) — Jul 18 boost outcomes (W29 Wed ₱300, W29 Fri ₱200) still unconfirmed, now one full cycle overdue. **Urgent flag: W30 Mon (drops Jul 21) and W30 Wed (drops Jul 23) have no script/captions yet** — `schedule.json` still shows both as TBD/draft with no URL; recommend running `produce-post` for W30 Mon immediately. Also found W30 Fri's `schedule.json` entry points to `W30-fri-captions.html`, which doesn't exist yet — needs to be written before the Jul 24 approval step. Standing recommendation: once W30 Wed is scripted, favor the named-persona/step-by-step demo shape that has now won 2 straight weeks.
+
+**Health check (Jul 22, 2026):** `reports/2026-07-22-health-check.md` — live pull via TikTok Studio + IG public profile (this report sat uncommitted until the Jul 27 cycle picked it up — see below). **TikTok crossed 1,000 followers.** 7-day views 4,500 (+317.5% WoW), 350 likes, 16 shares. The Jul 18 boosts are now confirmed: S1E2 (Pares Clark story, ₱200 boost) drove 365 new followers and 4,600 all-time views — over 100x the follower conversion of the W29 Wed carousel boost (₱300 → ~1,100 views). **New standing insight: boosted story reels are the strongest follower-conversion lever found to date**, ahead of carousels. IG at 73 followers, insights still login-gated. W30 Wed/Fri were on track (Wed ready, Fri script still needed at the time).
+
+**Weekly check & balance (Jul 27, 2026):** `reports/2026-07-27-weekly-checkbalance.md` — automation/repo health normal; found and committed a ~6-day-old uncommitted backlog (an exec-summary file rename + last week's own Jul 22 health-check report, which is why that report wasn't logged here until now). Social-health pull failed again (3 of the last 4 cycles) — Claude in Chrome unavailable and `web_fetch` can't render either JS-heavy profile page. `schedule.json` was stale (still showed W30 Wed/Fri as TBD and all of W31 as TBD despite scripts/captions/carousels already existing in the repo) — synced to reflect actual production status. **Applying the Jul 22 story-boost insight:** recommended this week's boost budget go to Fri S1E4 (Season 1 finale) rather than the Wed carousel, and added posting-insight banners to both `docs/W31-wed-captions.html` and `docs/W31-fri-captions.html` reflecting that. Priority for next cycle: get a live account pull (way overdue) and confirm whether W30 Wed/Fri and the S1E4 boost actually went out.
 
 ---
 
