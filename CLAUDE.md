@@ -10,8 +10,8 @@ Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent.
 
 | Day (PHT) | Slot | Format | Drop (PHT) | Skill |
 |-----------|------|--------|------------|-------|
-| Monday | `01-mon-ai-tip` | Short AI Tip Reel (30–60s) | 8:00 PM | `produce-post` |
-| Wednesday | `02-wed-demo` | Tutorial / Demo Reel (60–90s) | 7:00 PM | `produce-post` |
+| Monday | `01-mon-ai-tip` | AI Tip Carousel (5 slides) | 8:00 PM | `produce-post` |
+| Wednesday | `02-wed-demo` | Demo Carousel (5 slides) | 7:00 PM | `produce-post` |
 | Friday | `03-fri-inspiration` | Story / Inspiration Reel (60–90s) | 7:00 PM | `produce-post` |
 
 All times are **PHT (UTC+8)**. Jeff is based in Manila (PHT, UTC+8) — his Mac runs on local PHT time, so no timezone conversion is needed between drop times and system/cron time.
@@ -80,16 +80,16 @@ docs/
 ## Content pillars
 
 **AI Tip (Mondays)**
-- Quick, actionable tip in 30–60 seconds
-- One tool, one use case, one win
-- Talking head — no B-roll required
+- 5-slide dark navy carousel
+- One tool, one use case, one prompt formula
+- S1: hook (photo background) · S2: problem · S3: prompt · S4: Claude output (screenshot) · S5: CTA
 - Hook template: "Alam mo ba na pwede mong [result] in less than [time]?"
 
 **Demo / Tutorial (Wednesdays)**
-- Split screen: face cam + screen share
-- Show a real tool (Claude, Gemini, Notion, etc.) doing something practical
+- 5-slide dark navy carousel · named persona (VA, Guro, Freelancer, BPO)
+- Step-by-step demo: S1 hook → S2 setup → S3 prompt → S4 output → S5 CTA
 - Always free tools — never paid
-- Real output on screen, not stock clips
+- Real prompt + real Claude output in S3/S4
 
 **Story / Inspiration (Fridays)**
 - Story-format: origin, struggle, win, apply-it-yourself
@@ -131,9 +131,8 @@ Visual identity lives in Canva — see `brand/README.md`.
 - **Gold (#F59E0B) accent** — primary highlight color
 - **Teal (#0D9488)** — secondary accent
 - **Bebas Neue** display font (bold headlines)
-- **Lora** serif body font
-- **DM Sans** sans-serif for captions and labels
-- Logo: `files2/logo-horizontal.png` (horizontal) and `files2/logo-icon.png` (icon)
+- **DM Sans** sans-serif for body text, captions, and labels
+- Logo: `docs/assets/logo-horizontal.png` (horizontal) and `docs/assets/logo-icon.png` (icon)
 - Never cartoonish, never overly tech-looking — warm, human, approachable
 
 **Content cover graphic layout (4:5 or 9:16 thumbnail):**
@@ -184,57 +183,39 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 - **Buffer** — Social scheduling for IG + FB + TikTok. Workspace: `jeffd321@live.com` at buffer.com. @TitoAIPH connected on Instagram, Facebook Page, and TikTok. Use for scheduling posts after approval.
 - **Telegram bot** — `@titoaiph_bot` (bot ID: 8960239761). Token: `8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg`. Jeff's chat ID: `8325608814` (@JeffD331). Use `parse_mode=HTML` always (never Markdown — URL underscores break). Send approval notifications to chat ID `8325608814`.
 
-## Carousel slide production (PNG → Canva)
+## Carousel slide production (HTML render → Canva)
 
-Use this process for any carousel post (Mon AI tip, etc.) that needs custom-designed slides.
+Current pipeline: solo HTML files → GitHub Pages → Canva import → assembled carousel.
 
-**Step 1 — Build render HTML**
-- File: `/private/tmp/claude-501/…/scratchpad/w##-slides-render.html` (scratchpad, not committed)
-- Load Bebas Neue + DM Sans via Google Fonts link
-- Each `.slide` = 1080×1350px, `#0A0F1E` background
-- Title block: `.t-line` at 118px Bebas Neue — `.t-gold` (#F59E0B), `.t-white`, `.t-teal` (#0D9488)
-- Gold divider: `width:100%; height:3px; background: linear-gradient(90deg, #F59E0B 0%, rgba(245,158,11,.15) 100%)`
-- Footer: `docs/assets/logo-horizontal.png` at left (height:68px), 5 `.pip` dots at right (active pip = gold)
-- Logo src during render: `http://localhost:8765/assets/logo-horizontal.png` (served by HTTP server)
+**Step 1 — Build solo render HTML files**
+- One file per slide, saved to repo: `docs/renders/w##-xxx-s#.html`
+- Also build a full preview: `docs/renders/w##-xxx-slides.html`
+- Each solo file: `body{width:1080px;height:1350px;overflow:hidden}` — single `.slide` div fills the body, no stack
+- Design spec: `#0A0F1E` bg · gold `#F59E0B` · teal `#0D9488` · Bebas Neue headlines (118px) · DM Sans body
+- Footer: logo at `https://jeffd1130.github.io/TitoAi/assets/logo-horizontal.png` (height:68px) + 5 pip dots (active pip = gold matching slide number)
+- Photo zones (S1 hook bg, S4 screenshot): dashed gold border placeholder — user replaces in Canva
 
-**Step 2 — Render each slide in isolation (REQUIRED)**
-- **Do NOT screenshot from the stacked multi-slide render HTML.** `scrollIntoView` + viewport resize does not reliably capture just the target slide — content ends up misaligned (too high or too low) in the final PNG.
-- **Create one solo HTML per slide** (or one per batch): `body{width:1080px;height:1350px;overflow:hidden}` — a single `.slide` div, no padding/gap/stack.
-- Example solo file: `docs/w##-fri-s5-solo.html` — only slide 5, body locked to 1080×1350.
-- Navigate directly to the solo file; the full slide fills the viewport with zero offset.
-
+**Step 2 — Commit + push, poll for GitHub Pages deploy**
 ```bash
-# Kill any existing server on 8765, then start fresh
-lsof -ti:8765 | xargs kill -9 2>/dev/null; cd /Users/jeff/Documents/Claude/TItoAi/docs && python3 -m http.server 8765 &
-```
-- Resize viewport FIRST (`browser_resize 1080×1350`), THEN navigate — never resize after navigate (resets scroll).
-- Screenshot saves to home dir by default — `mv ~/filename.png docs/slides/W##-xxx/`
-
-**Step 3 — Name and store PNGs**
-```
-docs/slides/W##-mon/
-  slide-01-hook.png
-  slide-02-[name].png
-  slide-03-[name].png
-  slide-04-[name].png
-  slide-05-cta.png
+git add docs/renders/ && git commit -m "add W## renders" && git push
+until curl -sf https://jeffd1130.github.io/TitoAi/renders/w##-xxx-s1.html | grep -q '0A0F1E'; do sleep 5; done
 ```
 
-**Step 4 — Upload to Canva + update design**
-1. Get public URL for each PNG: `curl -F "reqtype=fileupload" -F "fileToUpload=@file.png" https://catbox.moe/user/api.php`
-   - **If catbox.moe times out:** commit PNGs to GitHub and use `https://raw.githubusercontent.com/jeffd1130/TitoAi/main/docs/slides/W##-xxx/slide-0n-name.png`
-2. `upload-asset-from-url` for each PNG → get asset IDs
-3. `start-editing-transaction` on the carousel design ID
-4. `perform-editing-operations` — **all pages can be updated in ONE call** (not one call per page). `page_index` is a **TOP-LEVEL parameter** of the API call (the first page being updated); all page operations go in the single `operations` array. For each slide, use 3 operations together: `update_fill` (swap image) + `position_element` (top:0, left:0) + `resize_element` (width:1080, height:1350). The position + resize snaps the element to fill the frame and prevents inherited offset from the base design.
-5. `commit-editing-transaction`
-6. **MUST call `get-design` after commit** → use the returned `edit_url` shortlink (never use design_id directly)
-7. **Always send** the `edit_url` (from `get-design`) + GitHub Pages carousel preview link to Telegram chat `8325608814` immediately after every Canva pipeline — do not wait to be asked.
+**Step 3 — Import into Canva**
+- `import-design-from-url` for each slide's GitHub Pages URL (NOT raw PNG or local file)
+- Each import creates a single-page Canva design — note IDs for S1–S5
+- `create_new_design` using S1 (design_type: `social_media`) → base carousel design
+- 4× `modify_existing_design` to append S2 → S3 → S4 → S5 (**one operation per API call**)
+- The final `modify_existing_design` response contains the edit URL
 
-**Step 5 — Update docs**
-- `docs/slides/W##-mon/*.png` → referenced in carousel HTML and captions HTML as `slides/W##-mon/slide-0n-name.png`
-- Update `docs/W##-mon-carousel.html`: replace CSS slide blocks with `<img>` tags referencing the PNGs
-- Add Canva block in captions HTML with fresh edit URL from `get-design`
-- Update `docs/links.html` W## section with new Canva URL
+**Step 4 — Update schedule.json + send Telegram**
+- Add Canva design ID and edit URL to the post's `note` field in `docs/schedule.json`
+- Send edit URL + GitHub Pages preview link to Telegram chat `8325608814` via Python urllib, `parse_mode=HTML`
+- **Always send immediately** after every carousel pipeline — do not wait to be asked
+
+**Step 5 — User completes in Canva**
+- Open the edit URL → replace S1 background photo + S4 screenshot zone with real images
+- Buffer schedule at the PHT drop time
 
 **Canva carousel design IDs:**
 | Week | Design ID | Notes |
@@ -248,6 +229,8 @@ docs/slides/W##-mon/
 | W29 Wed | `DAHPbFUIlGo` | "Resume mo? Claude ang Gagawa — VA Demo" · 5 slides · edit: `https://www.canva.com/d/NF_8BtbZrObCg78` · all slides re-rendered with logo · no Maria |
 | W29 Fri | `DAHPvQsLPFo` | "Ang Restaurant sa Clark" · Story S1E2 · 5 slides · edit: `https://www.canva.com/d/30wpLqyopzazHLs` |
 | W30 Mon | `DAHP4nHcYXk` | "Tanungin ang AI — Mas Mabilis Pa sa Google" · 5 slides · S5 follow CTA updated · edit: `https://www.canva.com/d/13YetQMLiwYpfKS` |
+| W31 Mon | `DAHQkNgsdss` | "Isang Prompt. Sampung Email." · VA persona · 5 slides · edit: `https://www.canva.com/d/GDxs5Mk_1pvE6AF` |
+| W31 Wed | `DAHQkBdVE5E` | "Proposal sa Kliyente, Claude ang Gagawa" · Freelancer persona · 5 slides · edit: `https://www.canva.com/d/ZtQ24Mkd0S1e9O6` |
 
 ---
 
@@ -308,8 +291,8 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
 | W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
 | W29 | Jul 13–19 | Email Drafting — Hayaan ang AI ✅ posted Jul 14 | Resume at Cover Letter — Claude ang Gagawa · VA · carousel fixed · ✅ posted Jul 16 | **Story S1E2** — Ang Restaurant sa Clark at ang Social Media na Ginawa Namin · script + captions ready · drops Jul 18 7 PM |
-| W30 | Jul 20–26 | ⚠ TBD tip — no script yet, drops Jul 21 | ⚠ TBD demo — no script yet, drops Jul 23 · favor named-persona/step-by-step shape | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. (household dad) · ⚠ script+captions not yet written, drops Jul 25 |
-| W31 | Jul 27–Aug 2 | TBD tip | TBD demo | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (full Cobrinha deep dive) |
+| W30 | Jul 20–26 | Tanungin ang AI — Mas Mabilis Pa sa Google ✅ posted Jul 22 | Alinman Ka Man — Hayaan ang Claude ✅ posted Jul 23 | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. ✅ posted Jul 24 |
+| W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ ready Jul 28 | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ ready Jul 30 | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) · boost recommended |
 
 ## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
 
@@ -319,7 +302,7 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 |----|------|-------|-------|
 | S1E1 | W28 Fri Jul 11 | Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. | Jeff builds client website in 20-min stolen moments while doing dad duties. Gemini for site outline → Claude for copy. Script + captions ready. |
 | S1E2 | W29 Fri Jul 18 | Ang Restaurant sa Clark at ang Social Media na Ginawa Namin | Clark restaurant launch — Jeff did the social media campaign with Claude (captions/tone) + Gemini (content planning). Script + captions ready. |
-| S1E3 | W30 Fri Jul 25 | Tatay. Analyst. Trainer. Sa Iisang Araw. | Jeff as household dad in Manila juggling 4 client businesses using AI tools. |
+| S1E3 | W30 Fri Jul 24 | Tatay. Analyst. Trainer. Sa Iisang Araw. | Jeff as household dad in Manila juggling 4 client businesses using AI tools. ✅ posted |
 | S1E4 | W31 Fri Aug 1 | Ang BJJ Champion at ang Marketing Analyst na Nasa Manila | Full Cobrinha LA story — how the remote content production system works. |
 
 **Story format:** 60–90s · emotional hook → real situation → AI as the solution → apply it yourself → Tito AI closer

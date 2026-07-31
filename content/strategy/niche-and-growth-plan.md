@@ -1,5 +1,5 @@
 # Tito AI — Niche & Growth Plan
-**Last updated: June 2026 — Combined audit + brief review**
+**Last updated: July 2026 — Schedule format updated to carousels (Mon/Wed), TikTok-first strategy confirmed**
 
 ---
 

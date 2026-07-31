@@ -39,3 +39,7 @@ Finished/*.mov
 Finished/*.MOV
 scripts/*.log
 logs/*.log
+
+# Root-level stray files
+Screenshot*.png
+titoai.png
