@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>W32 Mon Script — Data Analyst + AI Side Hustle · Tito AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;padding-bottom:60px}
+.hdr{border-bottom:3px solid var(--gold);padding:28px 20px 18px;background:linear-gradient(135deg,#0D1520,#0A0F1E 60%,#0D1A2E)}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-teal{background:var(--teal);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(22px,5vw,40px);letter-spacing:1px;line-height:1.05;margin-bottom:4px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:12px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:10px 14px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.drop-value{font-size:12px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:20px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.sec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.slide-block{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.slide-hdr{padding:10px 16px;background:var(--navy3);display:flex;align-items:center;gap:10px}
+.slide-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);line-height:1;min-width:28px}
+.slide-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.slide-body{padding:16px;font-size:15px;line-height:1.85;color:#E2E8F0;white-space:pre-wrap}
+.slide-body em{color:var(--teal);font-style:italic;font-size:13px}
+.slide-body strong{color:var(--gold)}
+.note-box{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.note-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
+.note-body{font-size:13px;color:#E2E8F0;line-height:1.7}
+.reply-box{background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.4);border-radius:12px;padding:16px;margin-bottom:16px}
+.reply-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--teal);margin-bottom:10px}
+.reply-body{font-size:15px;color:#E2E8F0;line-height:1.85;white-space:pre-wrap}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-top:20px}
+.ftr span{font-size:10px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">W32 · Monday</span>
+    <span class="badge badge-teal">AI Tip Carousel</span>
+    <span class="badge badge-navy">Aug 3 · 8:00 PM PHT</span>
+  </div>
+  <h1>NASA DATA WORLD KA.<br><span>MAY SIDE HUSTLE NANG NAGHIHINTAY.</span></h1>
+  <p class="hdr-sub">Persona: Analytics / Corporate worker · 5-slide dark navy carousel · Inspired by a commenter's question on W30 Wed</p>
+</div>
+
+<div class="drop-bar">
+  <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Mon Aug 3 · 8:00 PM</div></div>
+  <div class="drop-cell"><div class="drop-label">Persona</div><div class="drop-value">Data / Analytics</div></div>
+  <div class="drop-cell"><div class="drop-label">Format</div><div class="drop-value">5-Slide Carousel</div></div>
+  <div class="drop-cell"><div class="drop-label">Tool</div><div class="drop-value">Claude (libre)</div></div>
+</div>
+
+<div class="main">
+
+  <div class="note-box">
+    <div class="note-label">CONTEXT — Why this post</div>
+    <div class="note-body">
+      Inspired by a real comment from a follower — sports data analyst manager who wants to build an AI side hustle in his free time. This is the answer turned into content that speaks to every analytics worker in the audience. Hook comes from a real question = more authentic, more shares.
+    </div>
+  </div>
+
+  <div class="reply-box">
+    <div class="reply-label">💬 TIKTOK REPLY (paste this in comments now)</div>
+    <div class="reply-body">Magandang tanong! Sports data + AI = underrated combo 🔥
+
+Tatlong landas ang karaniwang sinusundan:
+
+1️⃣ AI data storytelling — i-turn ang sports stats sa content para sa brands
+2️⃣ Automated insight reports — para sa clients na gusto ng regular summaries
+3️⃣ Prompt consulting — tulungan ang teams na hindi tech-savvy
+
+Lahat libre — Claude lang kailangan.
+
+Gagawa ako ng carousel tungkol dito — para sa iyo at sa lahat ng nasa analytics world. Abangan! 👊</div>
+  </div>
+
+  <div>
+    <div class="sec-label">Carousel Script — 5 Slides</div>
+
+    <div class="slide-block">
+      <div class="slide-hdr"><span class="slide-num">S1</span><span class="slide-title">Hook</span></div>
+      <div class="slide-body"><strong>HEADLINE (Bebas Neue, gold/white):</strong>
+NASA DATA WORLD KA.
+MAY SIDE HUSTLE
+NANG NAGHIHINTAY.
+
+<strong>SUBHEAD (DM Sans):</strong>
+3 na paraan para gamitin ang AI sa labas ng opisina mo — lahat libre.
+
+<em>[S1 photo zone: person at laptop with data on screen, analytics dashboard — dark, professional vibe. User adds in Canva.]</em></div>
+    </div>
+
+    <div class="slide-block">
+      <div class="slide-hdr"><span class="slide-num">S2</span><span class="slide-title">Problem</span></div>
+      <div class="slide-body"><strong>HEADLINE:</strong>
+ALAM MO ANG DATA.
+PERO PAANO MO
+ITO GAGAWIN PERA?
+
+<strong>CARD ITEMS (translucent dark bg):</strong>
+· Puno na ng trabaho sa opisina — walang oras para magsimula
+· Hindi alam kung anong AI side hustle ang angkop sa skills mo
+· Pakiramdam: "Para ba ito sa mga coder lang?"
+
+<strong>BOTTOM TEXT:</strong>
+Hindi. Para rin ito sa iyo.</div>
+    </div>
+
+    <div class="slide-block">
+      <div class="slide-hdr"><span class="slide-num">S3</span><span class="slide-title">Prompt Formula</span></div>
+      <div class="slide-body"><strong>HEADLINE:</strong>
+I-TYPE ITO SA
+CLAUDE (LIBRE):
+
+<strong>TEAL PROMPT CARD:</strong>
+"Ikaw ay data analyst sa [sports / negosyo / anumang industriya]. Gumawa ng malinaw na insight summary ng [trend o resulta]. Para ito sa [brand / manager / audience] na hindi data professional. Engaging, maigsi, at may takeaway."
+
+<strong>GOLD FILL TEXT (below card):</strong>
+Palitan ang brackets → ito na ang iyong first deliverable.</div>
+    </div>
+
+    <div class="slide-block">
+      <div class="slide-hdr"><span class="slide-num">S4</span><span class="slide-title">Output (Screenshot Zone)</span></div>
+      <div class="slide-body"><strong>HEADLINE:</strong>
+ITO ANG RESULTA:
+
+<strong>GOLD RESULT CARD (left border accent):</strong>
+Claude generates a clean, readable data narrative — ang klase ng output na puwede mong ibenta sa brands na may data pero walang magsasabi sa tao kung ano ang ibig sabihin nito.
+
+<em>[S4 screenshot zone: place your actual Claude output screenshot here — show a real data narrative/insight summary from Claude. User adds in Canva.]</em>
+
+<strong>BOTTOM TEXT (small):</strong>
+Ito ang ginagawa ng mga data storytellers sa labas.</div>
+    </div>
+
+    <div class="slide-block">
+      <div class="slide-hdr"><span class="slide-num">S5</span><span class="slide-title">CTA</span></div>
+      <div class="slide-body"><strong>HEADLINE:</strong>
+TATLONG LANDAS
+PARA MAGSIMULA:
+
+<strong>CARD ITEMS (gold-bordered list):</strong>
+1. AI data storytelling — para sa sports / negosyo brands
+2. Automated insight reports — regular deliverable sa clients
+3. Prompt consulting — tulungan ang teams na hindi tech-savvy
+
+<strong>CTA TEXT:</strong>
+Lahat libre — claude.ai lang kailangan.
+Sundan si @TitoAIPH para sa susunod na carousel.
+
+<strong>FOOTER:</strong> Logo + 5 active pips</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <div class="note-label">PRODUCTION NOTES</div>
+    <div class="note-body">
+      <strong style="color:var(--white)">S1 photo:</strong> Use a photo of a laptop with a data dashboard or spreadsheet — dark vibe. No face needed; the hook text carries the visual.<br><br>
+      <strong style="color:var(--white)">S4 screenshot:</strong> Open claude.ai, use the exact prompt from S3 with a real industry (e.g., sports, restaurant, or retail data). Screenshot Claude's response — must be a real output, no fabrication.<br><br>
+      <strong style="color:var(--white)">Audience fit:</strong> Data analysts, BPO workers, corporate employees with analytics skills — this is a new persona not heavily featured yet. High share potential among this group.<br><br>
+      <strong style="color:var(--white)">Boost:</strong> Organic first. If W32 Wed is a stronger demo shape, route boost there. This Mon tip rides on real comment momentum — organic authenticity is the edge here.
+    </div>
+  </div>
+
+</div>
+<div class="ftr"><span>Tito AI · @TitoAIPH · W32 Monday · Aug 3, 2026 · AI Tip Carousel · Data/Analytics Persona</span><b>AI PARA SA ATING LAHAT</b></div>
+</body>
+</html>
