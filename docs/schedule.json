@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-08-03",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -357,15 +357,15 @@
       "id": "W31",
       "range": "Jul 27–Aug 2",
       "theme": "Real Stories · Demos from Life · Season 1 Finale",
-      "boost": "TikTok — recommend Fri S1E4",
+      "boost": "TikTok — Fri S1E4 recommended",
       "posts": [
         {
           "day": "MON",
           "title": "VA Inbox",
           "tag": "Carousel",
-          "note": "Persona: VA · 5-page carousel DAHQkNgsdss · edit: https://www.canva.com/d/GDxs5Mk_1pvE6AF · all-dark navy · S1+S4 photo zones pending",
+          "note": "Persona: VA · 5-page carousel DAHQkNgsdss · edit: https://www.canva.com/d/GDxs5Mk_1pvE6AF · confirmed live via Aug 3 TikTok pull — 260 all-time views, pinned",
           "date": "Jul 28",
-          "status": "ready",
+          "status": "posted",
           "url": "W31-mon-captions.html",
           "boost": null
         },
@@ -373,9 +373,9 @@
           "day": "WED",
           "title": "Proposal sa Kliyente, Claude ang Gagawa",
           "tag": "Carousel",
-          "note": "Persona: Freelancer · 5-page carousel DAHQkBdVE5E · edit: https://www.canva.com/d/ZtQ24Mkd0S1e9O6 · all-dark navy · S1+S4 photo zones pending · keep organic, no boost needed",
+          "note": "Persona: Freelancer · 5-page carousel DAHQkBdVE5E · edit: https://www.canva.com/d/ZtQ24Mkd0S1e9O6 · confirmed live via Aug 3 TikTok pull — 213 all-time views (4d), organic, no boost needed",
           "date": "Jul 30",
-          "status": "ready",
+          "status": "posted",
           "url": "W31-wed-captions.html",
           "boost": null
         },
@@ -383,11 +383,49 @@
           "day": "FRI",
           "title": "Ang BJJ Champion at ang Marketing Analyst na Nasa Manila",
           "tag": "Story S1E4",
-          "note": "Friday Story Series S1 · Ep 4 · Season 1 finale · Full Cobrinha LA story · recommend boost here (TikTok, Followers/Profile-visits objective) — S1E2's boosted story drove 365 new followers vs. ~1,100 views for the best boosted carousel · script+captions ready Jul 27",
+          "note": "Friday Story Series S1 · Ep 4 · Season 1 finale (Cobrinha LA story) · confirmed live via Aug 3 TikTok pull — 169 all-time views (2d) · boost placement status unconfirmed (S1E2's Jul 18 boosted story drove 365 new followers vs. ~1,100 views for the best boosted carousel, so this is the highest-leverage post to place spend on) — verify in TikTok Promote tab",
           "date": "Aug 1",
-          "status": "ready",
+          "status": "posted",
           "url": "W31-fri-captions.html",
-          "boost": "TikTok — recommended, not yet placed"
+          "boost": "TikTok — recommended, placement unconfirmed"
+        }
+      ]
+    },
+    {
+      "id": "W32",
+      "range": "Aug 3–9",
+      "theme": "Season 2 opener · Data/Analytics Persona",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Nasa Data World Ka. May Side Hustle Nang Naghihintay.",
+          "tag": "Carousel",
+          "note": "Persona: Data Analyst · script + captions + 5 render slides committed Jul 31, live on GitHub Pages · NO Canva design assembled yet as of Aug 3 AM pull · drop is TODAY per captions.html (Aug 3, 8 PM PHT) — run the render-to-Canva import pipeline before drop or move the date explicitly, see Aug 3 health-check report",
+          "date": "Aug 3",
+          "status": "draft",
+          "url": "W32-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": null,
+          "note": "Not yet scripted",
+          "date": "Aug 5",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "S2E1 — Season 2 opener",
+          "tag": "Story",
+          "note": "Not yet scripted — Season 1 wrapped Aug 1 with S1E4, no S2 arc/script drafted yet",
+          "date": "Aug 7",
+          "status": "tbd",
+          "url": null,
+          "boost": null
         }
       ]
     }

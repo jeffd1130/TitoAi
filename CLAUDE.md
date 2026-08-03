@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Jul 27, 2026):**
+**Current/Next/Upcoming weeks (as of Aug 3, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current (highlighted in hub) | W31 | Jul 27–Aug 2 (Season 1 finale) |
-| Next | — | W32 not yet planned |
-| Upcoming | — | W32 not yet planned |
+| Current (highlighted in hub) | W32 | Aug 3–9 (Season 2 opener) — Mon drops tonight, Canva not yet assembled (see Aug 3 health-check) |
+| Next | — | W33 not yet planned |
+| Upcoming | — | W33 not yet planned |
 
 **Key live URLs:**
 | Page | URL |
@@ -292,7 +292,8 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
 | W29 | Jul 13–19 | Email Drafting — Hayaan ang AI ✅ posted Jul 14 | Resume at Cover Letter — Claude ang Gagawa · VA · carousel fixed · ✅ posted Jul 16 | **Story S1E2** — Ang Restaurant sa Clark at ang Social Media na Ginawa Namin · script + captions ready · drops Jul 18 7 PM |
 | W30 | Jul 20–26 | Tanungin ang AI — Mas Mabilis Pa sa Google ✅ posted Jul 22 | Alinman Ka Man — Hayaan ang Claude ✅ posted Jul 23 | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. ✅ posted Jul 24 |
-| W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ ready Jul 28 | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ ready Jul 30 | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) · boost recommended |
+| W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ posted Jul 28 (260 views) | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ posted Jul 30 (213 views) | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) ✅ posted Aug 1 (169 views) · boost placement unconfirmed |
+| W32 | Aug 3–9 | Nasa Data World Ka. May Side Hustle Nang Naghihintay. — Data Analyst Carousel · script/captions/slides ready, **Canva not assembled**, drops tonight Aug 3 8 PM | TBD — not yet scripted | **S2E1** (Season 2 opener) — TBD, not yet scripted |
 
 ## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
 
@@ -336,6 +337,8 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 **Health check (Jul 22, 2026):** `reports/2026-07-22-health-check.md` — live pull via TikTok Studio + IG public profile (this report sat uncommitted until the Jul 27 cycle picked it up — see below). **TikTok crossed 1,000 followers.** 7-day views 4,500 (+317.5% WoW), 350 likes, 16 shares. The Jul 18 boosts are now confirmed: S1E2 (Pares Clark story, ₱200 boost) drove 365 new followers and 4,600 all-time views — over 100x the follower conversion of the W29 Wed carousel boost (₱300 → ~1,100 views). **New standing insight: boosted story reels are the strongest follower-conversion lever found to date**, ahead of carousels. IG at 73 followers, insights still login-gated. W30 Wed/Fri were on track (Wed ready, Fri script still needed at the time).
 
 **Weekly check & balance (Jul 27, 2026):** `reports/2026-07-27-weekly-checkbalance.md` — automation/repo health normal; found and committed a ~6-day-old uncommitted backlog (an exec-summary file rename + last week's own Jul 22 health-check report, which is why that report wasn't logged here until now). Social-health pull failed again (3 of the last 4 cycles) — Claude in Chrome unavailable and `web_fetch` can't render either JS-heavy profile page. `schedule.json` was stale (still showed W30 Wed/Fri as TBD and all of W31 as TBD despite scripts/captions/carousels already existing in the repo) — synced to reflect actual production status. **Applying the Jul 22 story-boost insight:** recommended this week's boost budget go to Fri S1E4 (Season 1 finale) rather than the Wed carousel, and added posting-insight banners to both `docs/W31-wed-captions.html` and `docs/W31-fri-captions.html` reflecting that. Priority for next cycle: get a live account pull (way overdue) and confirm whether W30 Wed/Fri and the S1E4 boost actually went out.
+
+**Health check (Aug 3, 2026):** `reports/2026-08-03-health-check.md` — repo/automation clean (git up to date with origin, no lock issues); no cron log present in this run environment (expected — cron runs on Jeff's Mac, not reachable from here). **Live account pull succeeded** (public profiles via Playwright) after 3 straight failed cycles. TikTok crossed 1,012 followers (+12 WoW, growth normalizing after the S1E2 boost tail) with total likes up +339 WoW to 990. All 3 W31 posts confirmed live and marked `posted` in `schedule.json`: Mon VA Inbox (260 views, pinned), Wed Freelancer Proposal (213 views), Fri S1E4 Season 1 finale (169 views/2d — boost placement still unconfirmed, needs a TikTok Promote-tab check). IG flat at 75 followers (+1). **Urgent flag caught this cycle:** `docs/W32-mon-captions.html` (script+captions+render slides all committed Jul 31) states the Data Analyst carousel drops **today, Aug 3, 8 PM PHT** — but no Canva design has been assembled yet, and `schedule.json` had no W32 entry at all before this cycle (added now, status `draft`). Also no S2 arc/Wed/Fri scripts exist yet for the new season. Priority for next cycle: confirm whether W32 Mon actually got assembled and posted on time, and whether the S1E4 boost was ever placed.
 
 ---
 
