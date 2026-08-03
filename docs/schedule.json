@@ -401,7 +401,7 @@
           "day": "MON",
           "title": "Nasa Data World Ka. May Side Hustle Nang Naghihintay.",
           "tag": "Carousel",
-          "note": "Persona: Data Analyst · script + captions + 5 render slides committed Jul 31, live on GitHub Pages · NO Canva design assembled yet as of Aug 3 AM pull · drop is TODAY per captions.html (Aug 3, 8 PM PHT) — run the render-to-Canva import pipeline before drop or move the date explicitly, see Aug 3 health-check report",
+          "note": "Persona: Data Analyst · 5-slide carousel · slides built (GitHub Pages renders/w32-mon-s1-s5.html) · needs Canva assembly · S1+S4 photo zones pending · drops TONIGHT 8 PM PHT",
           "date": "Aug 3",
           "status": "draft",
           "url": "W32-mon-captions.html",
@@ -422,6 +422,44 @@
           "title": "S2E1 — Season 2 opener",
           "tag": "Story",
           "note": "Not yet scripted — Season 1 wrapped Aug 1 with S1E4, no S2 arc/script drafted yet",
+          "date": "Aug 7",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W32",
+      "range": "Aug 3–9",
+      "theme": "Season 2 Launch",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "NASA DATA WORLD KA. MAY SIDE HUSTLE NANG NAGHIHINTAY.",
+          "tag": "Carousel",
+          "note": "Persona: Data Analyst · 5-slide carousel · slides built (GitHub Pages renders/w32-mon-s1-s5.html) · needs Canva assembly · S1+S4 photo zones pending · drops TONIGHT 8 PM PHT",
+          "date": "Aug 3",
+          "status": "draft",
+          "url": "W32-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": "Carousel",
+          "note": "TBD",
+          "date": "Aug 5",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Season 2 Opener (S2E1)",
+          "tag": "Story",
+          "note": "Season 2 launch · S2 arc TBD · script not yet written",
           "date": "Aug 7",
           "status": "tbd",
           "url": null,
