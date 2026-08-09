@@ -447,20 +447,58 @@
         },
         {
           "day": "WED",
-          "title": "TBD",
+          "title": "30 Bata. 30 Reports. 3 Minuto kay Claude.",
           "tag": "Carousel",
-          "note": "TBD",
+          "note": "Persona: Guro · 5-slide carousel DAHRYiEjngw · edit: https://www.canva.com/d/_6ph5CxOnGxFIDS · posted Aug 5",
           "date": "Aug 5",
+          "status": "posted",
+          "url": "W32-wed-captions.html",
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Iba't Ibang Kliyente. Iisang AI. Kaya ng Lahat.",
+          "tag": "Story",
+          "note": "S2E1 · Season 2 opener · Talking head · script: scripts/w32-fri-script.html · posted Aug 7",
+          "date": "Aug 7",
+          "status": "posted",
+          "url": "scripts/w32-fri-script.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W33",
+      "range": "Aug 10–16",
+      "theme": "Season 2 · BPO / Workforce persona",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "BPO ka? Claude ang Bagong Teammate Mo.",
+          "tag": "Carousel",
+          "note": "Persona: BPO · 5-slide carousel DAHR158OONs · edit: https://www.canva.com/d/P_idSQAwoyC18DI · S1 photo + S4 screenshot needed · drops 8 PM PHT",
+          "date": "Aug 10",
+          "status": "draft",
+          "url": "W33-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": null,
+          "note": "Not yet scripted",
+          "date": "Aug 12",
           "status": "tbd",
           "url": null,
           "boost": null
         },
         {
           "day": "FRI",
-          "title": "Season 2 Opener (S2E1)",
-          "tag": "Story",
-          "note": "Season 2 launch · S2 arc TBD · script not yet written",
-          "date": "Aug 7",
+          "title": "TBD",
+          "tag": null,
+          "note": "Not yet scripted",
+          "date": "Aug 14",
           "status": "tbd",
           "url": null,
           "boost": null
