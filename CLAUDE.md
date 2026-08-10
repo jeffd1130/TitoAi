@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Aug 3, 2026):**
+**Current/Next/Upcoming weeks (as of Aug 10, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current (highlighted in hub) | W32 | Aug 3–9 (Season 2 opener) — Mon drops tonight, Canva not yet assembled (see Aug 3 health-check) |
-| Next | — | W33 not yet planned |
-| Upcoming | — | W33 not yet planned |
+| Current | W33 | Aug 10–16 — Mon BPO carousel (draft, drops tonight 8 PM PHT), Wed Negosyante carousel (slides + captions built), Fri S2E2 CJEF training story (script + captions ready) |
+| Next | W34 | Aug 17–23 — not yet planned |
+| Upcoming | W35 | Aug 24–30 — not yet planned |
 
 **Key live URLs:**
 | Page | URL |
@@ -185,6 +185,8 @@ Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
 
 ## Carousel slide production (HTML render → Canva)
 
+> ⚠️ **CLI limitation:** Canva import/create/merge tools (`import-design-from-url`, `create_new_design`, `modify_existing_design`) are NOT available in Claude Code CLI. They only work in **claude.ai web**. Step 3 below must be done there. Steps 1–2 can run from CLI as normal.
+
 Current pipeline: solo HTML files → GitHub Pages → Canva import → assembled carousel.
 
 **Step 1 — Build solo render HTML files**
@@ -293,7 +295,8 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W29 | Jul 13–19 | Email Drafting — Hayaan ang AI ✅ posted Jul 14 | Resume at Cover Letter — Claude ang Gagawa · VA · carousel fixed · ✅ posted Jul 16 | **Story S1E2** — Ang Restaurant sa Clark at ang Social Media na Ginawa Namin · script + captions ready · drops Jul 18 7 PM |
 | W30 | Jul 20–26 | Tanungin ang AI — Mas Mabilis Pa sa Google ✅ posted Jul 22 | Alinman Ka Man — Hayaan ang Claude ✅ posted Jul 23 | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. ✅ posted Jul 24 |
 | W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ posted Jul 28 (260 views) | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ posted Jul 30 (213 views) | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) ✅ posted Aug 1 (169 views) · boost placement unconfirmed |
-| W32 | Aug 3–9 | Nasa Data World Ka. May Side Hustle Nang Naghihintay. — Data Analyst Carousel · script/captions/slides ready, **Canva not assembled**, drops tonight Aug 3 8 PM | TBD — not yet scripted | **S2E1** (Season 2 opener) — TBD, not yet scripted |
+| W32 | Aug 3–9 | Nasa Data World Ka. May Side Hustle Nang Naghihintay. — Data Analyst · DAHRNqXlTbc ✅ posted Aug 3 | 30 Bata. 30 Reports. 3 Minuto kay Claude. — Guro · DAHRYiEjngw ✅ posted Aug 5 | S2E1 — Iba't Ibang Kliyente. Iisang AI. Kaya ng Lahat. ✅ posted Aug 7 |
+| W33 | Aug 10–16 | BPO ka? Claude ang Bagong Teammate Mo. — BPO · DAHR158OONs · draft, drops 8 PM PHT | Negosyante ka? Claude ang Susulat ng Posts Mo. — slides + captions built, Canva pending | S2E2 — Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao · script + captions ready |
 
 ## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
 

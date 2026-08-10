@@ -485,22 +485,22 @@
         },
         {
           "day": "WED",
-          "title": "TBD",
-          "tag": null,
-          "note": "Not yet scripted",
+          "title": "Negosyante ka? Claude ang Susulat ng Posts Mo.",
+          "tag": "Carousel",
+          "note": "Persona: Negosyante · 5-slide carousel · slides built · Canva pending · drops 7:00 PM PHT",
           "date": "Aug 12",
-          "status": "tbd",
-          "url": null,
+          "status": "draft",
+          "url": "W33-wed-captions.html",
           "boost": null
         },
         {
           "day": "FRI",
-          "title": "TBD",
-          "tag": null,
-          "note": "Not yet scripted",
+          "title": "Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao.",
+          "tag": "Story",
+          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · script + captions ready · drops 7:00 PM PHT",
           "date": "Aug 14",
-          "status": "tbd",
-          "url": null,
+          "status": "draft",
+          "url": "scripts/w33-fri-script.html",
           "boost": null
         }
       ]

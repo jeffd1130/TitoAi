@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>W33 Fri Script — S2E2 · Ang Unang Araw na Nagturo Ako ng AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0F1E;--navy2:#111827;--navy3:#1E293B;--gold:#F59E0B;--teal:#0D9488;--gray:#94A3B8;--muted:#475569;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;padding-bottom:60px}
+.hdr{border-bottom:3px solid var(--gold);padding:28px 20px 18px;background:linear-gradient(135deg,#0D1520,#0A0F1E 60%,#0D1A2E)}
+.hdr-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:3px}
+.badge-gold{background:var(--gold);color:var(--navy)}
+.badge-teal{background:var(--teal);color:var(--white)}
+.badge-navy{background:var(--navy3);color:var(--gray)}
+.badge-red{background:#DC2626;color:var(--white)}
+.hdr h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(22px,5vw,40px);letter-spacing:1px;line-height:1.05;margin-bottom:4px}
+.hdr h1 span{color:var(--gold)}
+.hdr-sub{font-size:12px;color:var(--gray);font-style:italic}
+.drop-bar{display:flex;border-bottom:1px solid var(--navy3)}
+.drop-cell{flex:1;padding:10px 14px;border-right:1px solid var(--navy3);text-align:center}
+.drop-cell:last-child{border-right:none}
+.drop-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.drop-value{font-size:12px;font-weight:700;color:var(--white)}
+.drop-value.gold{color:var(--gold)}
+.main{padding:20px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.sec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--navy3)}
+.scene{background:var(--navy2);border:1px solid var(--navy3);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.scene-hdr{padding:10px 16px;background:var(--navy3);display:flex;align-items:center;gap:10px}
+.scene-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;color:var(--gold);line-height:1;min-width:28px}
+.scene-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.scene-time{margin-left:auto;font-size:10px;color:var(--muted)}
+.scene-body{padding:16px;font-size:16px;line-height:1.9;color:#E2E8F0;white-space:pre-wrap}
+.scene-body em{color:var(--teal);font-style:italic;font-size:13px}
+.rec-note{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.rec-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
+.rec-body{font-size:13px;color:#E2E8F0;line-height:1.7}
+.arc-note{background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.3);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.arc-label{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:2px;color:var(--teal);margin-bottom:8px}
+.ftr{border-top:1px solid var(--navy3);background:var(--navy2);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-top:20px}
+.ftr span{font-size:10px;color:var(--muted)}
+.ftr b{font-size:10px;color:var(--gold);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="hdr-meta">
+    <span class="badge badge-gold">W33 · Friday</span>
+    <span class="badge badge-red">Season 2 · Ep 2</span>
+    <span class="badge badge-teal">Story · Inspiration</span>
+    <span class="badge badge-navy">Aug 14 · 7:00 PM PHT</span>
+  </div>
+  <h1>Ang Unang Araw<br><span>na Nagturo Ako ng AI sa Ibang Tao.</span></h1>
+  <p class="hdr-sub">W33 Fri · S2E2 · True story — CJEF Day 1 Training, Jul 6, 2026 · Talking head · 60–90s</p>
+</div>
+<div class="drop-bar">
+  <div class="drop-cell"><div class="drop-label">Drop (PHT)</div><div class="drop-value gold">Fri Aug 14 · 7:00 PM</div></div>
+  <div class="drop-cell"><div class="drop-label">Target</div><div class="drop-value">60–90s</div></div>
+  <div class="drop-cell"><div class="drop-label">Format</div><div class="drop-value">Talking Head</div></div>
+  <div class="drop-cell"><div class="drop-label">Season</div><div class="drop-value gold">S2E2</div></div>
+</div>
+<div class="main">
+
+  <div class="arc-note">
+    <div class="arc-label">EPISODE CONTEXT</div>
+    <div class="rec-body">
+      True story: July 6, 2026 — Jeff's first corporate/school AI training at CJEF. ~12 participants: guro, admin, school directors. Tools taught: Claude + Gemini (free). Full day. Certificate ceremony at the end.<br><br>
+      <strong style="color:var(--white)">Why this works for S2E2:</strong> S2E1 established Jeff as a PM who uses AI for clients. S2E2 shows the next layer — he now teaches it to others. This builds credibility for the 2nd batch CTA and shows that the training is real and has already happened. "Ika-2 batch" becomes believable because Batch 1 is proven.
+    </div>
+  </div>
+
+  <div class="rec-note">
+    <div class="rec-label">RECORDING SETUP</div>
+    <div class="rec-body">
+      <strong style="color:var(--white)">Format:</strong> Talking head. Direct to camera. Warm, reflective energy — you're sharing a memory that moved you.<br><br>
+      <strong style="color:var(--white)">Tone:</strong> Honest and a little surprised — like you didn't expect how it would feel to teach. Not proud, just genuinely moved.<br><br>
+      <strong style="color:var(--white)">Key moment:</strong> The participant who said "kaya pala" — that's the emotional core. Pause there. Let it breathe.<br><br>
+      <strong style="color:var(--white)">Hook rule:</strong> Open with the scene, not a greeting. Drop the audience into the room immediately.
+    </div>
+  </div>
+
+  <div>
+    <div class="sec-label">Script</div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">01</span><span class="scene-title">Hook — Into the Room</span><span class="scene-time">0:00–0:12</span></div>
+      <div class="scene-body">Noong July 6, nandoon ako sa harap
+ng sampung guro at school director.
+
+Hindi ako student.
+Ako ang nagtuturo.
+
+At ang tinuturo ko?
+Claude at Gemini — parehong libre.
+
+<em>[no greeting. open mid-scene. "Hindi ako student. Ako ang nagtuturo." — pause between the two lines. contrast lands harder with silence.]</em></div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">02</span><span class="scene-title">The Story — What Happened</span><span class="scene-time">0:12–0:42</span></div>
+      <div class="scene-body">Isang buong araw ang training.
+
+Guro, admin, school directors —
+mga taong bihasa sa kanilang trabaho,
+pero hindi pa natutukan ang AI.
+
+Doon namin buksan ang claude.ai
+para sa unang beses sa kanila.
+
+Sinabi ng isa sa kanila —
+pagkatapos na makita ang output ni Claude:
+
+"Kaya pala."
+
+Dalawang salita lang.
+Pero alam mo kung ano ang ibig sabihin noon.
+
+Naiintindihan na niya kung bakit
+may advantage ang mga taong gumagamit nito
+sa mga hindi pa.
+
+<em>[slow down at "Kaya pala." Two words — let them land. Don't rush to explain. The pause IS the point.]</em></div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">03</span><span class="scene-title">The Point — Anyone Can Learn</span><span class="scene-time">0:42–1:00</span></div>
+      <div class="scene-body">Hindi kailangan ng coding.
+Hindi kailangan ng tech background.
+
+Kailangan lang ng willingness
+na subukan — at ng tamang gabay.
+
+Iyan ang natutunan nila sa isang araw.
+Iyan ang maaari ring matutunan mo.
+
+<em>[confident, calm. "Iyan ang maaari ring matutunan mo" — look directly into the camera here. this line is the bridge to the CTA.]</em></div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-hdr"><span class="scene-num">04</span><span class="scene-title">Closer + 2nd Batch CTA</span><span class="scene-time">1:00–1:20</span></div>
+      <div class="scene-body">Nagsisimula na kami ng ika-2 batch
+ng aming AI class.
+
+Gusto mong sumali sa susunod —
+bilang kumpanya o bilang indibidwal?
+
+Mag-comment o mag-DM sa amin.
+
+Ingat lagi, mga Pamangkin.
+Tito AI — AI Para Sa Ating Lahat.
+
+<em>[warm, unhurried close. "bilang kumpanya o bilang indibidwal" — slight pause between the two. let them self-identify. not a pitch — an open door.]</em></div>
+    </div>
+
+  </div>
+
+  <div>
+    <div class="sec-label">Captions</div>
+
+    <div class="rec-note">
+      <div class="rec-label">TIKTOK</div>
+      <div class="rec-body" style="white-space:pre-wrap;font-size:14px">Noong July 6, nagturo ako ng AI sa sampung guro at school director.
+
+Isang buong araw. Claude at Gemini — parehong libre.
+
+Pagkatapos makita ang output ni Claude, sinabi ng isa:
+
+"Kaya pala."
+
+Dalawang salita. Pero alam mo kung ano ang ibig sabihin noon.
+
+🎓 Nagsisimula ang ika-2 batch ng aming AI class. Gusto mong sumali — bilang kumpanya o bilang indibidwal? Mag-comment o mag-DM.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AILibre #FilipinoContent #Season2</div>
+    </div>
+
+    <div class="rec-note">
+      <div class="rec-label">INSTAGRAM</div>
+      <div class="rec-body" style="white-space:pre-wrap;font-size:14px">Noong July 6, nagturo ako ng AI sa sampung guro at school director. Isang buong araw.
+
+Hindi sila tech people. Guro sila. Admin. School directors. Mga taong bihasa sa kanilang trabaho — pero hindi pa natutukan ang AI.
+
+Buksan namin ang claude.ai para sa unang beses.
+
+Pagkatapos makita ang output, sinabi ng isa:
+
+"Kaya pala."
+
+Dalawang salita lang. Pero alam mo kung ano ang ibig sabihin noon — naiintindihan na niya ang advantage ng mga taong gumagamit nito sa mga hindi pa.
+
+Hindi kailangan ng coding. Hindi kailangan ng tech background. Kailangan lang ng willingness — at ng tamang gabay.
+
+Iyan ang natutunan nila. Iyan ang maaari ring matutunan mo.
+
+🎓 Nagsisimula na ang ika-2 batch ng aming AI class — para sa mga kumpanya at para sa mga indibidwal. Mag-comment o mag-DM para sa detalye. 👇
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #GeminiAI #AILibre #FilipinoContent #Season2 #PinoyCreator #AITraining #DigitalSkills #GuroPH #TeacherPH #WorkSmarter #AIForEveryone</div>
+    </div>
+
+    <div class="rec-note">
+      <div class="rec-label">FACEBOOK</div>
+      <div class="rec-body" style="white-space:pre-wrap;font-size:14px">Noong July 6, nagturo ako ng AI sa sampung guro at school director. Isang buong araw — Claude at Gemini, parehong libre.
+
+Pagkatapos makita ang output ni Claude, sinabi ng isa: "Kaya pala."
+
+Dalawang salita. Pero naiintindihan na niya ang advantage ng mga gumagamit ng AI sa mga hindi pa.
+
+Hindi kailangan ng tech background. Kailangan lang ng tamang gabay.
+
+Nagsisimula na kami ng ika-2 batch ng aming AI class — para sa mga kumpanya at para sa mga indibidwal. Gusto mong sumali sa susunod na batch? Mag-comment o mag-message sa amin.
+
+#TitoAIPH #AIParaSaAtin #ClaudeAI #MgaPamangkin #FilipinoContent #Season2 #AITraining</div>
+    </div>
+
+    <div class="rec-note">
+      <div class="rec-label">SEED COMMENT (pin within 5 min)</div>
+      <div class="rec-body" style="font-size:14px">Anong "kaya pala" moment mo sa AI? At kung gusto mong maranasan ang ganoon sa aming AI class — bilang kumpanya o indibidwal — mag-comment ng "GUSTO" dito. 👇</div>
+    </div>
+  </div>
+
+</div>
+<div class="ftr">
+  <span>W33 Fri · S2E2 · CJEF Training Story · Talking Head · Aug 14 7:00 PM PHT</span>
+  <b>TITO AI</b>
+</div>
+</body>
+</html>
