@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03",
+  "updated": "2026-08-13",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -394,44 +394,6 @@
     {
       "id": "W32",
       "range": "Aug 3–9",
-      "theme": "Season 2 opener · Data/Analytics Persona",
-      "boost": null,
-      "posts": [
-        {
-          "day": "MON",
-          "title": "Nasa Data World Ka. May Side Hustle Nang Naghihintay.",
-          "tag": "Carousel",
-          "note": "Persona: Data Analyst · 5-slide carousel DAHRNqXlTbc · edit: https://www.canva.com/d/2mrUeuKwt5u8SSF · S1+S4 photo zones: replace in Canva before posting · drops TONIGHT 8 PM PHT",
-          "date": "Aug 3",
-          "status": "draft",
-          "url": "W32-mon-captions.html",
-          "boost": null
-        },
-        {
-          "day": "WED",
-          "title": "30 Bata. 30 Reports. 3 Minuto kay Claude.",
-          "tag": "Carousel",
-          "note": "Persona: Guro · 5-slide carousel DAHRYiEjngw · edit: https://www.canva.com/d/_6ph5CxOnGxFIDS · S1 photo + S4 screenshot needed in Canva · drops 7:00 PM PHT",
-          "date": "Aug 5",
-          "status": "draft",
-          "url": "W32-wed-captions.html",
-          "boost": null
-        },
-        {
-          "day": "FRI",
-          "title": "S2E1 — Season 2 opener",
-          "tag": "Story",
-          "note": "Not yet scripted — Season 1 wrapped Aug 1 with S1E4, no S2 arc/script drafted yet",
-          "date": "Aug 7",
-          "status": "tbd",
-          "url": null,
-          "boost": null
-        }
-      ]
-    },
-    {
-      "id": "W32",
-      "range": "Aug 3–9",
       "theme": "Season 2 Launch",
       "boost": null,
       "posts": [
@@ -439,9 +401,9 @@
           "day": "MON",
           "title": "NASA DATA WORLD KA. MAY SIDE HUSTLE NANG NAGHIHINTAY.",
           "tag": "Carousel",
-          "note": "Persona: Data Analyst · 5-slide carousel DAHRNqXlTbc · edit: https://www.canva.com/d/2mrUeuKwt5u8SSF · S1+S4 photo zones: replace in Canva before posting · drops TONIGHT 8 PM PHT",
+          "note": "Persona: Data Analyst · 5-slide carousel DAHRNqXlTbc · edit: https://www.canva.com/d/2mrUeuKwt5u8SSF · confirmed live via Aug 13 TikTok pull · 303 all-time views",
           "date": "Aug 3",
-          "status": "draft",
+          "status": "posted",
           "url": "W32-mon-captions.html",
           "boost": null
         },
@@ -449,7 +411,7 @@
           "day": "WED",
           "title": "30 Bata. 30 Reports. 3 Minuto kay Claude.",
           "tag": "Carousel",
-          "note": "Persona: Guro · 5-slide carousel DAHRYiEjngw · edit: https://www.canva.com/d/_6ph5CxOnGxFIDS · posted Aug 5",
+          "note": "Persona: Guro · 5-slide carousel DAHRYiEjngw · edit: https://www.canva.com/d/_6ph5CxOnGxFIDS · posted Aug 5 · 258 all-time views, pinned (Aug 13 pull)",
           "date": "Aug 5",
           "status": "posted",
           "url": "W32-wed-captions.html",
@@ -459,7 +421,7 @@
           "day": "FRI",
           "title": "Iba't Ibang Kliyente. Iisang AI. Kaya ng Lahat.",
           "tag": "Story",
-          "note": "S2E1 · Season 2 opener · Talking head · script: scripts/w32-fri-script.html · posted Aug 7",
+          "note": "S2E1 · Season 2 opener · Talking head · script: scripts/w32-fri-script.html · posted Aug 7 · 271 all-time views (Aug 13 pull)",
           "date": "Aug 7",
           "status": "posted",
           "url": "scripts/w32-fri-script.html",
@@ -477,9 +439,9 @@
           "day": "MON",
           "title": "BPO ka? Claude ang Bagong Teammate Mo.",
           "tag": "Carousel",
-          "note": "Persona: BPO · 5-slide carousel DAHR158OONs · edit: https://www.canva.com/d/P_idSQAwoyC18DI · S1 photo + S4 screenshot needed · drops 8 PM PHT",
+          "note": "Persona: BPO · 5-slide carousel DAHR158OONs · edit: https://www.canva.com/d/P_idSQAwoyC18DI · confirmed live via Aug 13 TikTok pull · 335 views, 8 likes, 0 comments, 3 saves · public page showed 2d age, so exact on-time status is unconfirmed",
           "date": "Aug 10",
-          "status": "draft",
+          "status": "posted",
           "url": "W33-mon-captions.html",
           "boost": null
         },
@@ -487,9 +449,9 @@
           "day": "WED",
           "title": "Negosyante ka? Claude ang Susulat ng Posts Mo.",
           "tag": "Carousel",
-          "note": "Persona: Negosyante · 5-slide carousel DAHR5lxJ_lY · edit: https://www.canva.com/d/ByXctrH4FtOA3AC · S1 photo + S4 screenshot needed · drops 7:00 PM PHT",
+          "note": "Persona: Negosyante · 5-slide carousel DAHR5lxJ_lY · edit: https://www.canva.com/d/ByXctrH4FtOA3AC · confirmed live via Aug 13 TikTok pull · 265 views, 7 likes, 0 comments, 4 saves · public page showed 6h age at 4:47 PM PHT, indicating a late Aug 13 publish vs. Aug 12 7 PM target",
           "date": "Aug 12",
-          "status": "draft",
+          "status": "posted",
           "url": "W33-wed-captions.html",
           "boost": null
         },
@@ -497,7 +459,7 @@
           "day": "FRI",
           "title": "Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao.",
           "tag": "Story",
-          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · script + captions ready · drops 7:00 PM PHT · companion: CJ testimonial video (local MP4, post same day natively)",
+          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · script + platform captions ready in scripts/w33-fri-script.html · drops Aug 14 at 7:00 PM PHT · companion: CJ testimonial video (local MP4, post same day natively) · not live as of Aug 13 pull",
           "date": "Aug 14",
           "status": "draft",
           "url": "scripts/w33-fri-script.html",

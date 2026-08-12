@@ -59,10 +59,10 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Aug 10, 2026):**
+**Current/Next/Upcoming weeks (as of Aug 13, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W33 | Aug 10–16 — Mon BPO carousel (draft, drops tonight 8 PM PHT), Wed Negosyante carousel (slides + captions built), Fri S2E2 CJEF training story (script + captions ready) |
+| Current | W33 | Aug 10–16 — Mon BPO carousel posted (335 views), Wed Negosyante carousel posted late Aug 13 (265 views), Fri S2E2 CJEF training story ready for Aug 14 |
 | Next | W34 | Aug 17–23 — not yet planned |
 | Upcoming | W35 | Aug 24–30 — not yet planned |
 
@@ -296,7 +296,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W30 | Jul 20–26 | Tanungin ang AI — Mas Mabilis Pa sa Google ✅ posted Jul 22 | Alinman Ka Man — Hayaan ang Claude ✅ posted Jul 23 | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. ✅ posted Jul 24 |
 | W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ posted Jul 28 (260 views) | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ posted Jul 30 (213 views) | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) ✅ posted Aug 1 (169 views) · boost placement unconfirmed |
 | W32 | Aug 3–9 | Nasa Data World Ka. May Side Hustle Nang Naghihintay. — Data Analyst · DAHRNqXlTbc ✅ posted Aug 3 | 30 Bata. 30 Reports. 3 Minuto kay Claude. — Guro · DAHRYiEjngw ✅ posted Aug 5 | S2E1 — Iba't Ibang Kliyente. Iisang AI. Kaya ng Lahat. ✅ posted Aug 7 |
-| W33 | Aug 10–16 | BPO ka? Claude ang Bagong Teammate Mo. — BPO · DAHR158OONs · draft, drops 8 PM PHT | Negosyante ka? Claude ang Susulat ng Posts Mo. — slides + captions built, Canva pending | S2E2 — Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao · script + captions ready |
+| W33 | Aug 10–16 | BPO ka? Claude ang Bagong Teammate Mo. — BPO · DAHR158OONs · ✅ posted (335 views Aug 13) | Negosyante ka? Claude ang Susulat ng Posts Mo. · DAHR5lxJ_lY · ✅ posted late Aug 13 (265 views) | S2E2 — Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao · script + captions ready · drops Aug 14 7 PM PHT |
 
 ## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
 
@@ -342,6 +342,8 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 **Weekly check & balance (Jul 27, 2026):** `reports/2026-07-27-weekly-checkbalance.md` — automation/repo health normal; found and committed a ~6-day-old uncommitted backlog (an exec-summary file rename + last week's own Jul 22 health-check report, which is why that report wasn't logged here until now). Social-health pull failed again (3 of the last 4 cycles) — Claude in Chrome unavailable and `web_fetch` can't render either JS-heavy profile page. `schedule.json` was stale (still showed W30 Wed/Fri as TBD and all of W31 as TBD despite scripts/captions/carousels already existing in the repo) — synced to reflect actual production status. **Applying the Jul 22 story-boost insight:** recommended this week's boost budget go to Fri S1E4 (Season 1 finale) rather than the Wed carousel, and added posting-insight banners to both `docs/W31-wed-captions.html` and `docs/W31-fri-captions.html` reflecting that. Priority for next cycle: get a live account pull (way overdue) and confirm whether W30 Wed/Fri and the S1E4 boost actually went out.
 
 **Health check (Aug 3, 2026):** `reports/2026-08-03-health-check.md` — repo/automation clean (git up to date with origin, no lock issues); no cron log present in this run environment (expected — cron runs on Jeff's Mac, not reachable from here). **Live account pull succeeded** (public profiles via Playwright) after 3 straight failed cycles. TikTok crossed 1,012 followers (+12 WoW, growth normalizing after the S1E2 boost tail) with total likes up +339 WoW to 990. All 3 W31 posts confirmed live and marked `posted` in `schedule.json`: Mon VA Inbox (260 views, pinned), Wed Freelancer Proposal (213 views), Fri S1E4 Season 1 finale (169 views/2d — boost placement still unconfirmed, needs a TikTok Promote-tab check). IG flat at 75 followers (+1). **Urgent flag caught this cycle:** `docs/W32-mon-captions.html` (script+captions+render slides all committed Jul 31) states the Data Analyst carousel drops **today, Aug 3, 8 PM PHT** — but no Canva design has been assembled yet, and `schedule.json` had no W32 entry at all before this cycle (added now, status `draft`). Also no S2 arc/Wed/Fri scripts exist yet for the new season. Priority for next cycle: confirm whether W32 Mon actually got assembled and posted on time, and whether the S1E4 boost was ever placed.
+
+**Health check (Aug 13, 2026):** `reports/2026-08-13-health-check.md` — automation log is healthy and current through Aug 12; daily summaries, weekly production reminders, D-3/D-2 checks, and Aug 10 weekly health reminder fired. Repo matched `origin/main` before this update, but five user-owned untracked items remain untouched. Live public pull: TikTok **1,017 followers / 1,025 total likes** (+5 / +35 vs. Aug 3); IG flat at **75 followers**. W33 Mon BPO is live at 335 views/8 likes/3 saves; W33 Wed Negosyante is live at 265 views/7 likes/4 saves but appears to have published ~16 hours after its Aug 12 7 PM target. `schedule.json` had a duplicate W32 block and stale W33 draft statuses; both were corrected. Priority: publish W33 Fri S2E2 on Aug 14 at 7 PM PHT, then plan W34 immediately (no files or schedule entry yet). Do not boost W33 Mon/Wed based on current evidence; test stronger save-first and comment-choice CTAs next week.
 
 ---
 
