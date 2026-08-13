@@ -165,7 +165,7 @@ Every video must open in second 1 with one of:
 
 **Goal:** Grow qualified followers and profile visits by boosting only content that has already shown strong organic intent.
 
-**Weekly budget: Php 2,000** · 3-week commitment (W26–W28) · Total: Php 6,000
+**Current W34 allocation:** No spend pre-assigned. Keep up to Php 2,000 available only for a post that clears the organic decision gate below.
 
 **Rule:** Post organically → evaluate after 12–24 hours → boost only if the post shows above-baseline saves, shares, profile visits, follower conversion, or watch completion. Do not boost a post solely to rescue weak organic performance.
 
@@ -173,7 +173,7 @@ Every video must open in second 1 with one of:
 
 ---
 
-### Per-post budget allocation
+### Historical W26–W28 allocation (archive—not the current rule)
 
 | Platform | Objective | Budget/post | Duration | Daily spend |
 |----------|-----------|-------------|----------|-------------|
@@ -182,11 +182,11 @@ Every video must open in second 1 with one of:
 | Instagram Boost | Profile visits + Follow | Php 600 | 2 days | Php 300/day |
 | **Weekly total** | | **Php 2,000** | | |
 
-Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instagram.
+This rotation documents the original test. Do not automatically rotate platforms or spend by slot going forward.
 
 ---
 
-### Platform ramp-up strategy
+### Historical platform ramp-up strategy (W26–W28)
 
 **Posting continues on all platforms (TikTok, Instagram, Facebook) every week.** Only the paid boost budget ramps up — start with one platform to learn the mechanics, then layer in more each week.
 
@@ -198,7 +198,7 @@ Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instag
 
 ---
 
-### 3-Week boost calendar
+### Historical 3-week boost calendar
 
 **WEEK 1 — W26 (Jun 22–28) · TikTok only · Php 2,000**
 
