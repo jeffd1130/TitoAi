@@ -1,5 +1,5 @@
 # Tito AI — Niche & Growth Plan
-**Last updated: July 2026 — Schedule format updated to carousels (Mon/Wed), TikTok-first strategy confirmed**
+**Last updated: Aug 13, 2026 — W34 plan, proof-first hooks, privacy rules, and evidence-based boosting**
 
 ---
 
@@ -68,7 +68,7 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 
 | Platform | Role | Priority | Why |
 |----------|------|----------|-----|
-| TikTok | Discovery engine — viral reach | 🥇 Primary | Algorithm-favored education niche; zero ad spend needed to go viral; 4x/week minimum |
+| TikTok | Discovery engine — viral reach | 🥇 Primary | Primary testing channel for hooks, saves, shares, and follower growth; 3 core posts/week |
 | Instagram | Authority + depth — convert lurkers | 🥈 Secondary | Reels + Carousels drive saves; 25-34 urban professionals; best for follower conversion |
 | Facebook | Paid boost + community | 🥉 Support | Lower organic reach but cheapest PH CPM (65-75% cheaper than US); best for boosting proven content |
 
@@ -80,7 +80,7 @@ Every video either removes a fear ("hindi mahirap 'to") or delivers a visible wi
 
 | # | Format | Platform | Why it converts | Hook template |
 |---|--------|----------|----------------|---------------|
-| 1 | Tool demo — screen record | TikTok, IG Reels | High watch-through; saves drive algorithm | "I used AI to do this in 5 mins" |
+| 1 | Tool demo — real output first | TikTok, IG Reels | Shows proof in the first 3 seconds; strong save potential | "20-email thread → one clear reply" |
 | 2 | Comparison — tested X tools | TikTok, IG Reels | Trust-building; high share rate | "I tested 5 AI tools so you don't have to" |
 | 3 | Before / after productivity | IG Reels, TikTok | Emotional hook; relatable | "3 hours of work → 5 minutes with AI" |
 | 4 | Carousel — tools for [specific job] | IG, Facebook | High saves; shareable to groups | "5 AI tools para sa Filipino freelancers" |
@@ -135,7 +135,7 @@ Warmth + identity. Builds community.
 
 ---
 
-## Hook formula
+## Hook formula — proof first
 
 Every video must open in second 1 with one of:
 1. **Fear hook** — "Kung BPO worker ka, pakinggan mo 'to."
@@ -145,15 +145,31 @@ Every video must open in second 1 with one of:
 
 **Never open with "Kumusta" first** — hook lands in second 1, opener comes after.
 
+**Current operating rule (Aug 2026):**
+- Lead with the pain or visible result, not the tool name.
+- Show the finished output in the first 1–3 seconds whenever possible.
+- Use the standard greeting only after the hook.
+- One post = one primary CTA. Educational posts ask for a save; conversation posts ask one binary/choice question; lead-gen stories ask for one keyword comment.
+- Never present AI output as ready to send without human review.
+
+### Privacy and trust rule
+
+- Never tell viewers to paste personal, client, student, patient, financial, or confidential information into an AI tool.
+- Demonstrations must use fictional or fully anonymized examples.
+- For workplace use, tell viewers to follow their employer's AI and data policies.
+- Frame outputs as first drafts: check facts, tone, and policy before sending or publishing.
+
 ---
 
-## Boost strategy
+## Boost strategy — evidence based
 
-**Goal:** Grow followers and video views — 3 posts boosted per week across TikTok, Facebook, and Instagram.
+**Goal:** Grow qualified followers and profile visits by boosting only content that has already shown strong organic intent.
 
 **Weekly budget: Php 2,000** · 3-week commitment (W26–W28) · Total: Php 6,000
 
-**Rule:** Post organically → wait 12–24 hours → boost regardless of organic performance (new channel needs paid seeding to build baseline audience).
+**Rule:** Post organically → evaluate after 12–24 hours → boost only if the post shows above-baseline saves, shares, profile visits, follower conversion, or watch completion. Do not boost a post solely to rescue weak organic performance.
+
+**Current evidence:** The boosted S1E2 story remains the strongest follower-acquisition result. Recent W33 carousels are useful save content but do not yet justify spend. Favor proof-led stories for follower/profile-visit campaigns; keep ordinary prompt carousels organic unless they materially exceed the recent 250–350-view baseline.
 
 ---
 
@@ -230,7 +246,7 @@ Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instag
 
 **TikTok Promote:**
 1. Open TikTok app → posted video → tap "…" → "Promote"
-2. Goal: **More video views** (views drive algorithm + organic follower growth; don't pick "More followers" — too expensive per result)
+2. Goal: **More followers / profile visits** when available; use video views only for a deliberate awareness test
 3. Audience: **Automatic**
 4. Duration: 2 days · Budget: Php 300/day
 5. Start: morning after posting
@@ -274,11 +290,12 @@ Rotate platforms per post slot: Mon → TikTok, Wed → Facebook, Fri → Instag
 
 ## Engagement tactics
 
-1. **End every video with a YES/NO or CHOICE question** — "Claude o Gemini — alin ang subukan mo muna?"
+1. **Use one CTA per post.** Save CTA for reference content; one YES/NO or choice question for conversation; one keyword for lead generation.
 2. **Reply to every comment in the first hour** — TikTok/IG reward fast early engagement
 3. **Pin first comment within 5 min** — bonus tip or tool link
 4. **Post times (PHT):** TikTok = 8–10 PM. IG = 7–9 PM.
 5. **Share to Facebook Stories immediately** after posting Reels
+6. **Do not stack two similar feed videos within 1–2 hours.** Give the primary post its first engagement window; publish proof/testimonial follow-ups the next day.
 
 ---
 

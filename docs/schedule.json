@@ -466,6 +466,44 @@
           "boost": null
         }
       ]
+    },
+    {
+      "id": "W34",
+      "range": "Aug 17–23",
+      "theme": "Mas Kaunting Rework · Mas Malinaw na Trabaho",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Tatlong Revision. Isang Malinaw na Reply.",
+          "tag": "Carousel · Freelancer",
+          "note": "Proof-first before/after carousel · fictional/anonymized client feedback only · save CTA · brief: content/strategy/w34-content-plan.md",
+          "date": "Aug 17",
+          "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "May Parent Meeting Bukas? Gawin Muna Ito.",
+          "tag": "Demo · Guro",
+          "note": "30–45s screen-record demo with optional carousel cutdown · no student PII · choice CTA: Parent update o lesson plan?",
+          "date": "Aug 19",
+          "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Ano ang Nagbago Pagkatapos ng Unang AI Class?",
+          "tag": "Story · Proof",
+          "note": "60–75s real CJEF footage · observable facts only · one CTA: Comment GUSTO · testimonial follow-up Aug 22 or later",
+          "date": "Aug 21",
+          "status": "planned",
+          "url": null,
+          "boost": null
+        }
+      ]
     }
   ]
 }

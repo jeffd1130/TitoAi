@@ -63,7 +63,7 @@ docs/
 | Role | Week | Dates |
 |------|------|-------|
 | Current | W33 | Aug 10–16 — Mon BPO carousel posted (335 views), Wed Negosyante carousel posted late Aug 13 (265 views), Fri S2E2 CJEF training story ready for Aug 14 |
-| Next | W34 | Aug 17–23 — not yet planned |
+| Next | W34 | Aug 17–23 — planned: Freelancer revisions, Guro parent update, CJEF proof story |
 | Upcoming | W35 | Aug 24–30 — not yet planned |
 
 **Key live URLs:**
@@ -297,6 +297,7 @@ Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/
 | W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ posted Jul 28 (260 views) | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ posted Jul 30 (213 views) | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) ✅ posted Aug 1 (169 views) · boost placement unconfirmed |
 | W32 | Aug 3–9 | Nasa Data World Ka. May Side Hustle Nang Naghihintay. — Data Analyst · DAHRNqXlTbc ✅ posted Aug 3 | 30 Bata. 30 Reports. 3 Minuto kay Claude. — Guro · DAHRYiEjngw ✅ posted Aug 5 | S2E1 — Iba't Ibang Kliyente. Iisang AI. Kaya ng Lahat. ✅ posted Aug 7 |
 | W33 | Aug 10–16 | BPO ka? Claude ang Bagong Teammate Mo. — BPO · DAHR158OONs · ✅ posted (335 views Aug 13) | Negosyante ka? Claude ang Susulat ng Posts Mo. · DAHR5lxJ_lY · ✅ posted late Aug 13 (265 views) | S2E2 — Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao · script + captions ready · drops Aug 14 7 PM PHT |
+| W34 | Aug 17–23 | Tatlong Revision. Isang Malinaw na Reply. — Freelancer · proof-first carousel | May Parent Meeting Bukas? Gawin Muna Ito. — Guro · screen-record demo | Ano ang Nagbago Pagkatapos ng Unang AI Class? — real-footage proof story |
 
 ## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
 
