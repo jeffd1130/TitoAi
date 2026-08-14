@@ -459,10 +459,10 @@
           "day": "FRI",
           "title": "Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao.",
           "tag": "Story",
-          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · voiceover + real CJEF B-roll/photo plan ready in scripts/w33-fri-script.html · target 60–70s · drops Aug 14 at 7:00 PM PHT · one CTA: Comment GUSTO · 3-minute testimonial held for Aug 15 or later · final voice recording still needed",
+          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · final 64s vertical video with complete original voice recording ready in outputs/w33-fri-voiceover/ · platform-specific captions ready · drops Aug 14 at 7:00 PM PHT · one CTA: Comment GUSTO · 3-minute testimonial held for Aug 15 or later",
           "date": "Aug 14",
-          "status": "draft",
-          "url": "scripts/w33-fri-script.html",
+          "status": "ready",
+          "url": "W33-fri-captions.html",
           "boost": null
         }
       ]
