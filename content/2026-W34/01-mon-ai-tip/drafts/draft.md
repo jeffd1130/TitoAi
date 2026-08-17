@@ -14,7 +14,7 @@ Kapag magulo ang client feedback, huwag agad manghula. I-paste ito sa Claude par
 
 Gumamit lang ng anonymized o fictional feedback—huwag ilagay ang confidential client data.
 
-I-save mo itong prompt bago ang susunod na revision. 📌
+Anong mas mahirap para sa iyo—FEEDBACK o REPLY? Comment ang sagot mo. 👇
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #FreelancerPH #AILibre #ClientWork #WorkSmarter
 
@@ -28,7 +28,7 @@ Gamitin ang prompt sa carousel para hatiin ang feedback sa requested changes, cl
 
 Gumamit lang ng anonymized o fictional feedback at sundin ang data policy ng client mo.
 
-I-save mo itong prompt bago ang susunod na revision. 📌
+Anong mas mahirap para sa iyo—FEEDBACK o REPLY? Comment ang sagot mo. 👇
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #FreelancerPH #FreelanceTips #ClientWork #AILibre #WorkSmarter #DigitalSkills #PinoyFreelancer #AITools #ProductivityPH #RemoteWorkPH #FilipinoContent
 
@@ -40,13 +40,13 @@ Bago ka gumawa, ipaayos muna sa Claude ang feedback bilang requested changes, cl
 
 Gumamit lang ng anonymized o fictional feedback. Huwag maglagay ng confidential client data.
 
-I-save mo itong prompt bago ang susunod na revision.
+Anong mas mahirap para sa iyo—FEEDBACK o REPLY? Comment ang sagot mo.
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ClaudeAI #FreelancerPH #WorkSmarter
 
 ## Seed comment
 
-Anong mas mahirap para sa iyo: mag-decipher ng feedback o gumawa ng client reply? 👇
+FEEDBACK o REPLY? Pili ka sa comments—susunod natin ang mas maraming sagot. 👇
 
 ## Buffer
 
@@ -55,4 +55,3 @@ Channels: Upload natively to TikTok, Instagram, and Facebook
 Media: Export all five Canva pages as PNG files and upload in slide order  
 Caption: Use the matching platform caption above  
 After posting: Pin the seed comment within five minutes and reply during the first hour
-
