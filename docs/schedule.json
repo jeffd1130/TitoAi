@@ -496,11 +496,11 @@
         {
           "day": "FRI",
           "title": "Ano ang Nagbago Pagkatapos ng Unang AI Class?",
-          "tag": "Story · Proof",
-          "note": "60–75s real CJEF footage · observable facts only · one CTA: Comment GUSTO · testimonial follow-up Aug 22 or later",
+          "tag": "Story S2E3 · Proof",
+          "note": "65–75s real CJEF footage + talking head · observable facts only · one CTA: Comment GUSTO · script: scripts/w34-fri-script.html · assets: /Users/jeff/Documents/Claude/TitoAI-Training/CJEF_Day1/",
           "date": "Aug 21",
-          "status": "planned",
-          "url": null,
+          "status": "ready",
+          "url": "scripts/w34-fri-script.html",
           "boost": null
         }
       ]
