@@ -459,9 +459,9 @@
           "day": "FRI",
           "title": "Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao.",
           "tag": "Story",
-          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · final 64s vertical video with complete original voice recording ready in outputs/w33-fri-voiceover/ · platform-specific captions ready · drops Aug 14 at 7:00 PM PHT · one CTA: Comment GUSTO · 3-minute testimonial held for Aug 15 or later",
+          "note": "S2E2 · CJEF Day 1 training story (Jul 6) · posted Aug 14 7 PM PHT · one CTA: Comment GUSTO · companion testimonial video posted separately",
           "date": "Aug 14",
-          "status": "ready",
+          "status": "posted",
           "url": "W33-fri-captions.html",
           "boost": null
         }
@@ -477,9 +477,9 @@
           "day": "MON",
           "title": "Tatlong Revision. Isang Malinaw na Reply.",
           "tag": "Carousel · Freelancer",
-          "note": "Proof-first 5-slide before/after carousel · fictional/anonymized client feedback only · brighter generated visuals + official logo · one binary comment CTA: FEEDBACK o REPLY · editable Canva design DAHShWC855Q · captions ready",
+          "note": "Proof-first 5-slide before/after carousel · Canva DAHShWC855Q · edit: https://www.canva.com/d/AAFaI_vkYJJLQnW · confirmed posted Aug 17",
           "date": "Aug 17",
-          "status": "draft",
+          "status": "posted",
           "url": "W34-mon-captions.html",
           "boost": null
         },
@@ -497,9 +497,9 @@
           "day": "FRI",
           "title": "Ano ang Nagbago Pagkatapos ng Unang AI Class?",
           "tag": "Story S2E3 · Proof",
-          "note": "65–75s real CJEF footage + talking head · observable facts only · one CTA: Comment GUSTO · script: scripts/w34-fri-script.html · assets: /Users/jeff/Documents/Claude/TitoAI-Training/CJEF_Day1/",
+          "note": "S2E3 · 65–75s real CJEF footage + talking head · one CTA: Comment GUSTO · script: scripts/w34-fri-script.html · posted Aug 21",
           "date": "Aug 21",
-          "status": "ready",
+          "status": "posted",
           "url": "scripts/w34-fri-script.html",
           "boost": null
         }
