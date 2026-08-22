@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Aug 13, 2026):**
+**Current/Next/Upcoming weeks (as of Aug 22, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W33 | Aug 10–16 — Mon BPO carousel posted (335 views), Wed Negosyante carousel posted late Aug 13 (265 views), Fri S2E2 CJEF training story ready for Aug 14 |
-| Next | W34 | Aug 17–23 — planned: Freelancer revisions, Guro parent update, CJEF proof story |
-| Upcoming | W35 | Aug 24–30 — not yet planned |
+| Current | W34 | Aug 17–23 — Mon Freelancer carousel posted (279 views), Wed Guro demo posted (94 views, weakest since W31), Fri planned S2E3 CJEF proof story never produced — swapped same-day for S2E4 bonus tip (210 views); CJEF script still unused |
+| Next | W35 | Aug 24–30 — not yet planned; top priority is producing/pinning the unused CJEF proof story (`docs/scripts/w34-fri-script.html`) for Friday |
+| Upcoming | W36 | Aug 31–Sep 6 — not yet planned |
 
 **Key live URLs:**
 | Page | URL |
@@ -347,6 +347,8 @@ Jeff's real stories used as Friday inspiration content. Each episode is a true s
 **Health check (Aug 13, 2026):** `reports/2026-08-13-health-check.md` — automation log is healthy and current through Aug 12; daily summaries, weekly production reminders, D-3/D-2 checks, and Aug 10 weekly health reminder fired. Repo matched `origin/main` before this update, but five user-owned untracked items remain untouched. Live public pull: TikTok **1,017 followers / 1,025 total likes** (+5 / +35 vs. Aug 3); IG flat at **75 followers**. W33 Mon BPO is live at 335 views/8 likes/3 saves; W33 Wed Negosyante is live at 265 views/7 likes/4 saves but appears to have published ~16 hours after its Aug 12 7 PM target. `schedule.json` had a duplicate W32 block and stale W33 draft statuses; both were corrected. Priority: publish W33 Fri S2E2 on Aug 14 at 7 PM PHT, then plan W34 immediately (no files or schedule entry yet). Do not boost W33 Mon/Wed based on current evidence; test stronger save-first and comment-choice CTAs next week.
 
 **W34 plan + W33 Fri revision (Aug 13, 2026):** `content/strategy/w34-content-plan.md` — W34 is now planned around proof-first hooks, visible before/after outputs, privacy-safe fictional/anonymized inputs, and one CTA per post. Monday targets freelancer revisions (save CTA), Wednesday tests a Guro screen-record demo (choice CTA), and Friday uses real CJEF proof footage (comment `GUSTO`). `content/strategy/niche-and-growth-plan.md` was refreshed to replace automatic boosting with a 12–24-hour evidence gate and to add workplace/student data-safety rules. Tomorrow's `docs/scripts/w33-fri-script.html` was tightened to 65–75s, removes the unverified direct quote, uses verified participant framing plus real CJEF footage, and moves the companion testimonial to Aug 15 or later.
+
+**Weekly check & balance (Aug 22, 2026):** `reports/2026-08-22-weekly-checkbalance.md` — automation/repo health normal (`main` == `origin/main`, clean tree, Aug 21 auto-sync commits present as expected). Live pull via authenticated TikTok Studio + public IG profile: TikTok now displays rounded "1K" followers/likes (Studio UI change, not a data gap); last-7-days views down 31.3% WoW and likes down 57.1% WoW with 0 net new followers, driven entirely by two unpinned, prompt-recitation-style posts (W34 Wed Guro 94 views, W34 Fri bonus 210 views) — not a platform-wide issue. IG up to 77 followers (+2). **Confirmed the planned S2E3 CJEF proof story never ran** — commit `0ac73ed` shows it was swapped same-day for the lighter S2E4 "prep question" bonus tip; `schedule.json` corrected to reflect the actual post (S2E4, not S2E3) and the CJEF script (`docs/scripts/w34-fri-script.html`) is flagged as ready and unused for W35 Fri. Also corrected `schedule.json`: W34 Wed status `draft` → `posted` with live metrics (it had quietly gone live without the schedule being updated), and refreshed the W33 Wed view count (292, up from 265). **Pin effect is no longer ambiguous** — every pinned post now outperforms every unpinned post by a wide margin across three independent comparisons; pin every post going forward, no exceptions. Priority for next cycle: produce and pin the CJEF proof story for W35 Fri, verify the pin-everything rule holds for a 4th/5th data point, and reply to the real inbound comment (`jkp_7777`) on the pinned Clark story.
 
 ---
 
