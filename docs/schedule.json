@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22",
+  "updated": "2026-08-24",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -501,6 +501,44 @@
           "date": "Aug 21",
           "status": "posted",
           "url": "scripts/w34-fri-bonus-script.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W35",
+      "range": "Aug 24–30",
+      "theme": "AI Safety · Proof · Real Training",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Ligtas Ba ang AI? Huwag Ilagay Ito.",
+          "tag": "Carousel · AI Safety",
+          "note": "5-slide proof-first safety carousel · generated images + official logo inserted · based on real TikTok search signal 'safety ba ang ai' · Canva DAHTMpOz_FM · edit: https://www.canva.com/d/ChQpKHfrUqtR-8p · pin immediately · one CTA: Comment SAFE",
+          "date": "Aug 24",
+          "status": "ready",
+          "url": "W35-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": "Demo",
+          "note": "Not yet planned",
+          "date": "Aug 26",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Ano ang Nagbago Pagkatapos ng Unang AI Class?",
+          "tag": "Story S2E3 · Proof",
+          "note": "Reuse the ready, unused CJEF proof story · real footage + script: scripts/w34-fri-script.html · produce and pin",
+          "date": "Aug 28",
+          "status": "draft",
+          "url": "scripts/w34-fri-script.html",
           "boost": null
         }
       ]
