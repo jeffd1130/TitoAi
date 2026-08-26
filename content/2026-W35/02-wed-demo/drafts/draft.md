@@ -5,7 +5,7 @@
 - Persona: Filipino freelancer
 - Tool: Claude (free)
 - CTA: Comment CLEAN
-- Canva: being finalized
+- Canva: https://www.canva.com/d/HsnwNicN6AeH8vu
 - Captions: https://jeffd1130.github.io/TitoAi/W35-wed-captions.html
 - Preview: https://jeffd1130.github.io/TitoAi/renders/w35-wed-carousel.html
 
