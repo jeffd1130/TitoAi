@@ -5,7 +5,7 @@
 - Audience: Senior high and college students
 - Tool: Gemini (free)
 - CTA: Comment REVIEWER
-- Canva: being finalized
+- Canva: https://www.canva.com/d/ke6gsEyn-lS9L6W
 - Captions: https://jeffd1130.github.io/TitoAi/W36-mon-captions.html
 - Preview: https://jeffd1130.github.io/TitoAi/renders/w36-mon-carousel.html
 
