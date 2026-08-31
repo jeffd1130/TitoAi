@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26",
+  "updated": "2026-08-31",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -539,6 +539,44 @@
           "date": "Aug 28",
           "status": "draft",
           "url": "scripts/w34-fri-script.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W36",
+      "range": "Aug 31–Sep 6",
+      "theme": "AI para sa Students · Study Smarter",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Mahabang Notes? Gawing Reviewer sa Gemini.",
+          "tag": "Carousel · AI Tip for Students",
+          "note": "5-slide proof-first student carousel · generated images + official logo prepared · Gemini free-tool workflow · verify answers against original notes · pin immediately · one CTA: Comment REVIEWER · Canva being finalized",
+          "date": "Aug 31",
+          "status": "draft",
+          "url": "W36-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": "Demo",
+          "note": "Not yet planned",
+          "date": "Sep 2",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "TBD",
+          "tag": "Story",
+          "note": "Not yet planned",
+          "date": "Sep 4",
+          "status": "draft",
+          "url": null,
           "boost": null
         }
       ]
