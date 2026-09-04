@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02",
+  "updated": "2026-09-04",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -571,12 +571,12 @@
         },
         {
           "day": "FRI",
-          "title": "TBD",
-          "tag": "Story",
-          "note": "Not yet planned",
+        "title": "Pagkatapos ng AI Seminar, Ito ang Narinig Namin",
+        "tag": "Carousel · Real Testimony",
+        "note": "5-slide proof-first carousel from a real Tito AI seminar testimonial video · real stills + official logo inserted · no participant count or invented outcome · pin immediately · one CTA: Comment CLASS",
           "date": "Sep 4",
-          "status": "draft",
-          "url": null,
+        "status": "ready",
+        "url": "W36-fri-captions.html",
           "boost": null
         }
       ]
