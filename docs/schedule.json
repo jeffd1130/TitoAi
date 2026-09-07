@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-07",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -535,7 +535,7 @@
           "day": "FRI",
           "title": "Ano ang Nagbago Pagkatapos ng Unang AI Class?",
           "tag": "Story S2E3 · Proof",
-          "note": "STILL UNPRODUCED as of Aug 31 (3rd cycle carried over) · real footage + script ready: scripts/w34-fri-script.html · CTA Comment GUSTO · NOTE: a different, undocumented TikTok-only post using the same CJEF footage ('Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?', CTA Comment STUDENT) went live Aug 29 and took the rotating pin slot (129 views/2 likes/1 comment) — it has no script/caption file in this repo and never posted to IG; not treated as this slot's fulfillment pending confirmation with Jeff. Produce the actual scripted version for W36 or retire it.",
+          "note": "STILL UNPRODUCED as of Sep 7 (4th cycle carried over) · real footage + script ready: scripts/w34-fri-script.html · CTA Comment GUSTO · NOTE: a different, undocumented TikTok-only post using the same CJEF footage ('Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?', CTA Comment STUDENT) went live Aug 29 and still holds the rotating pin slot as of Sep 7 (133 views) despite three stronger unpinned posts produced since (590, 260, 212 views) — it has no script/caption file in this repo and never posted to IG; not treated as this slot's fulfillment pending confirmation with Jeff. Produce the actual scripted version or formally retire it — 4 cycles carried over.",
           "date": "Aug 28",
           "status": "draft",
           "url": "scripts/w34-fri-script.html",
@@ -553,9 +553,9 @@
           "day": "MON",
           "title": "Mahabang Notes? Gawing Reviewer sa Gemini.",
           "tag": "Carousel · AI Tip for Students",
-          "note": "5-slide proof-first student carousel · generated images + official logo inserted · Gemini free-tool workflow · verify answers against original notes · Canva DAHT0HqNtiE · edit: https://www.canva.com/d/ke6gsEyn-lS9L6W · pin immediately · one CTA: Comment REVIEWER",
+          "note": "5-slide proof-first student carousel · generated images + official logo inserted · Gemini free-tool workflow · verify answers against original notes · Canva DAHT0HqNtiE · edit: https://www.canva.com/d/ke6gsEyn-lS9L6W · pin immediately · one CTA: Comment REVIEWER · confirmed live on TikTok · Sep 7 pull: 212 views, unpinned (weakest of the three W36 posts)",
           "date": "Aug 31",
-          "status": "ready",
+          "status": "posted",
           "url": "W36-mon-captions.html",
           "boost": null
         },
@@ -563,9 +563,9 @@
           "day": "WED",
           "title": "May Lecture PDF Ka? Huwag Basahin Lang.",
           "tag": "Carousel · Student Demo",
-          "note": "5-slide grounded Gemini demo · generated images + official logo inserted · upload PDF, ask from file only, verify against source · Canva DAHUBAlO2hE · edit: https://www.canva.com/d/ovKlcmRFH7zU4nc · pin immediately · one CTA: Comment EXPLAIN",
+          "note": "5-slide grounded Gemini demo · generated images + official logo inserted · upload PDF, ask from file only, verify against source · Canva DAHUBAlO2hE · edit: https://www.canva.com/d/ovKlcmRFH7zU4nc · pin immediately · one CTA: Comment EXPLAIN · confirmed live on TikTok+IG · Sep 7 pull: 590 views, unpinned — BEST UNPINNED RESULT IN CHANNEL HISTORY, beating W35 Mon (556) and W35 Wed (531); should get the rotating pin slot over the weaker Aug 29 post currently holding it",
           "date": "Sep 2",
-          "status": "ready",
+          "status": "posted",
           "url": "W36-wed-captions.html",
           "boost": null
         },
@@ -573,10 +573,48 @@
           "day": "FRI",
         "title": "Pagkatapos ng AI Seminar, Ito ang Narinig Namin",
         "tag": "Carousel · Real Testimony",
-        "note": "5-slide proof-first carousel from a real Tito AI seminar testimonial video · varied real stills from two speakers + official logo inserted · no participant count or invented outcome · Canva DAHUOl4hl8I · edit: https://www.canva.com/d/Efu577o1sttCuI8 · pin immediately · one CTA: Comment CLASS",
+        "note": "5-slide proof-first carousel from a real Tito AI seminar testimonial video · varied real stills from two speakers + official logo inserted · no participant count or invented outcome · Canva DAHUOl4hl8I · edit: https://www.canva.com/d/Efu577o1sttCuI8 · pin immediately · one CTA: Comment CLASS · confirmed live on TikTok+IG · Sep 7 pull: 260 views, unpinned",
           "date": "Sep 4",
-        "status": "ready",
+        "status": "posted",
         "url": "W36-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W37",
+      "range": "Sep 7–13",
+      "theme": "TBD — not yet planned",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "TBD",
+          "tag": "Carousel",
+          "note": "URGENT: no script, captions, or Canva design exist as of Sep 7 8 AM PHT — the 8 PM PHT drop is same-day. Flagged in the Sep 7 weekly check & balance.",
+          "date": "Sep 7",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": "Demo",
+          "note": "Not yet planned. Consider continuing the grounded-document-prompting angle that set the channel's unpinned view record in W36 Wed (590 views).",
+          "date": "Sep 9",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "TBD",
+          "tag": "Story",
+          "note": "Not yet planned. Top priority remains producing or retiring the CJEF proof story (scripts/w34-fri-script.html, CTA Comment GUSTO) — unproduced for 4 straight cycles.",
+          "date": "Sep 11",
+          "status": "draft",
+          "url": null,
           "boost": null
         }
       ]
