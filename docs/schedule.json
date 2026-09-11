@@ -609,12 +609,12 @@
         },
         {
           "day": "FRI",
-          "title": "TBD",
-          "tag": "Story",
-          "note": "Not yet planned. Top priority remains producing or retiring the CJEF proof story (scripts/w34-fri-script.html, CTA Comment GUSTO) — unproduced for 4 straight cycles.",
+          "title": "AI Can Polish Your Resume—But It Must Still Be Your Story",
+          "tag": "Carousel · Career Story",
+          "note": "5-slide career-integrity story · five original images + official logo inserted · AI may improve wording but must not invent skills, results, or responsibilities · every resume claim needs real interview proof · pin immediately · one CTA: Comment TOTOO · CJEF carryover formally retired from this slot after 4 cycles; its footage remains available for future reuse",
           "date": "Sep 11",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W37-fri-captions.html",
           "boost": null
         }
       ]
