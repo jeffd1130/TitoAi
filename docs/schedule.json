@@ -622,17 +622,17 @@
     {
       "id": "W38",
       "range": "Sep 14–20",
-      "theme": "TBD",
+      "theme": "Proof-First Workflows · VA & Freelancer",
       "boost": null,
       "posts": [
         {
           "day": "MON",
-          "title": "TBD",
-          "tag": null,
-          "note": "URGENT (flagged Sep 14 weekly check): zero planning as of Monday morning — no script, captions, or Canva design for any slot. Monday 8 PM PHT drop is same-day. Recommend leaning back toward the proof-first, named-persona student/freelancer demo shape (W36 avg ~354 views) rather than the job-seeker/career framing that underperformed in W37 (avg ~223 views).",
+          "title": "Magulong Meeting Notes? Gawing Action Plan.",
+          "tag": "Carousel · VA AI Tip",
+          "note": "5-slide proof-first named-persona carousel · five original images + official logo inserted · Gemini free-tool workflow · meeting notes are the only source · mark missing owners/deadlines TBD instead of guessing · Canva DAHVKkuhaII · edit: https://www.canva.com/d/IWS8S2rWaAfoswj · pin immediately · one CTA: Comment ACTION",
           "date": "Sep 14",
-          "status": "tbd",
-          "url": null,
+          "status": "ready",
+          "url": "W38-mon-captions.html",
           "boost": null
         },
         {
