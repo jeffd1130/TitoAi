@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07",
+  "updated": "2026-09-14",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -535,7 +535,7 @@
           "day": "FRI",
           "title": "Ano ang Nagbago Pagkatapos ng Unang AI Class?",
           "tag": "Story S2E3 · Proof",
-          "note": "STILL UNPRODUCED as of Sep 7 (4th cycle carried over) · real footage + script ready: scripts/w34-fri-script.html · CTA Comment GUSTO · NOTE: a different, undocumented TikTok-only post using the same CJEF footage ('Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?', CTA Comment STUDENT) went live Aug 29 and still holds the rotating pin slot as of Sep 7 (133 views) despite three stronger unpinned posts produced since (590, 260, 212 views) — it has no script/caption file in this repo and never posted to IG; not treated as this slot's fulfillment pending confirmation with Jeff. Produce the actual scripted version or formally retire it — 4 cycles carried over.",
+          "note": "STILL UNPRODUCED as of Sep 7 (4th cycle carried over) · real footage + script ready: scripts/w34-fri-script.html · CTA Comment GUSTO · NOTE: a different, undocumented TikTok-only post using the same CJEF footage ('Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?', CTA Comment STUDENT) went live Aug 29 and still holds the rotating pin slot as of Sep 7 (133 views) despite three stronger unpinned posts produced since (590, 260, 212 views) — it has no script/caption file in this repo; not treated as this slot's fulfillment pending confirmation with Jeff. CORRECTION (Sep 14): live IG pull confirms this post did cross-post to IG (dated Aug 28, 10 likes, 2 comments) — the earlier 'never posted to IG' note was wrong. Sep 14: unproduced for a 5th straight cycle; footage + script still ready.",
           "date": "Aug 28",
           "status": "draft",
           "url": "scripts/w34-fri-script.html",
@@ -591,9 +591,9 @@
           "day": "MON",
           "title": "May Job Description Ka? Gawing Interview Reviewer.",
           "tag": "Carousel · AI Tip for Job Seekers",
-          "note": "5-slide grounded-document carousel · five original images + official logo inserted · Gemini free-tool workflow · job description is the only source · remove sensitive details · answer with real experience only · Canva DAHUhHh-tWY · edit: https://www.canva.com/d/Fv8G61GsQ6ht5nq · pin immediately · one CTA: Comment INTERVIEW",
+          "note": "5-slide grounded-document carousel · five original images + official logo inserted · Gemini free-tool workflow · job description is the only source · remove sensitive details · answer with real experience only · Canva DAHUhHh-tWY · edit: https://www.canva.com/d/Fv8G61GsQ6ht5nq · CTA Comment INTERVIEW · confirmed live via Sep 14 TikTok pull: 238 views, 2 likes, 3 shares, unpinned — weakest of the three W37 posts",
           "date": "Sep 7",
-          "status": "ready",
+          "status": "posted",
           "url": "W37-mon-captions.html",
           "boost": null
         },
@@ -601,9 +601,9 @@
           "day": "WED",
           "title": "Resume Mo vs. Job Post: Ano ang Kulang?",
           "tag": "Carousel · Job Seeker Demo",
-          "note": "5-slide grounded-document demo · five original images + official logo inserted · Gemini free-tool workflow · compare resume vs job description using only those sources · remove sensitive details · never invent skills or experience · Canva DAHUryDY5iI · edit: https://www.canva.com/d/cMjcwF2r9ZFAhpb · pin immediately · one CTA: Comment MATCH",
+          "note": "5-slide grounded-document demo · five original images + official logo inserted · Gemini free-tool workflow · compare resume vs job description using only those sources · remove sensitive details · never invent skills or experience · Canva DAHUryDY5iI · edit: https://www.canva.com/d/cMjcwF2r9ZFAhpb · CTA Comment MATCH · confirmed live via Sep 14 TikTok pull: 230 views, 12 likes, 3 shares, unpinned",
           "date": "Sep 9",
-          "status": "ready",
+          "status": "posted",
           "url": "W37-wed-captions.html",
           "boost": null
         },
@@ -611,10 +611,48 @@
           "day": "FRI",
           "title": "AI Can Polish Your Resume—But It Must Still Be Your Story",
           "tag": "Carousel · Career Story",
-          "note": "5-slide career-integrity story · five original images + official logo inserted · AI may improve wording but must not invent skills, results, or responsibilities · every resume claim needs real interview proof · Canva DAHU4tAO7KY · edit: https://www.canva.com/d/nRofDON2fsz_XRz · pin immediately · one CTA: Comment TOTOO · CJEF carryover formally retired from this slot after 4 cycles; its footage remains available for future reuse",
+          "note": "5-slide career-integrity story · five original images + official logo inserted · AI may improve wording but must not invent skills, results, or responsibilities · every resume claim needs real interview proof · Canva DAHU4tAO7KY · edit: https://www.canva.com/d/nRofDON2fsz_XRz · CTA Comment TOTOO · CJEF carryover formally retired from this slot after 4 cycles; its footage remains available for future reuse · confirmed live via Sep 14 TikTok pull: 201 views, 8 likes, 3 shares, unpinned · IG carousel version got 2 likes. W37 as a whole (238/230/201 views) is the weakest full week on record — well below W36 (590/260/212)",
           "date": "Sep 11",
-          "status": "ready",
+          "status": "posted",
           "url": "W37-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W38",
+      "range": "Sep 14–20",
+      "theme": "TBD",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "TBD",
+          "tag": null,
+          "note": "URGENT (flagged Sep 14 weekly check): zero planning as of Monday morning — no script, captions, or Canva design for any slot. Monday 8 PM PHT drop is same-day. Recommend leaning back toward the proof-first, named-persona student/freelancer demo shape (W36 avg ~354 views) rather than the job-seeker/career framing that underperformed in W37 (avg ~223 views).",
+          "date": "Sep 14",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD",
+          "tag": null,
+          "note": "Not yet planned as of Sep 14.",
+          "date": "Sep 16",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "TBD",
+          "tag": null,
+          "note": "Not yet planned as of Sep 14. CJEF proof story (scripts/w34-fri-script.html) remains available and unproduced for a 5th cycle — consider for this slot or formally retire.",
+          "date": "Sep 18",
+          "status": "tbd",
+          "url": null,
           "boost": null
         }
       ]
