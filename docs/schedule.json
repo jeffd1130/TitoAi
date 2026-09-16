@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-16",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -637,12 +637,12 @@
         },
         {
           "day": "WED",
-          "title": "TBD",
-          "tag": null,
-          "note": "Not yet planned as of Sep 14.",
+        "title": "Action Plan Mo? Gawing Client Follow-Up Email.",
+        "tag": "Carousel · VA Demo",
+        "note": "5-slide proof-first named-persona carousel · five original images + official logo inserted · Gemini free-tool workflow · verified action plan is the only source · remove private details · do not invent commitments, owners, or deadlines · pin immediately · one CTA: Comment FOLLOW-UP",
           "date": "Sep 16",
-          "status": "tbd",
-          "url": null,
+        "status": "ready",
+        "url": "W38-wed-captions.html",
           "boost": null
         },
         {
