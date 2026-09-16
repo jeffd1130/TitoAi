@@ -15,5 +15,6 @@ Use a verified action plan to draft a concise client follow-up email. The action
 - Captions: `docs/W38-wed-captions.html`
 - Original images: `docs/renders/w38-wed-assets/`
 - Official Tito AI logo inserted on all slides.
+- Editable Canva: https://www.canva.com/d/d2VuQpMLGb7--7I (`DAHVUaFJFnY`)
 
 Draft only. Nothing was scheduled or published.
