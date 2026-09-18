@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -647,12 +647,12 @@
         },
         {
           "day": "FRI",
-          "title": "TBD",
-          "tag": null,
-          "note": "Not yet planned as of Sep 14. CJEF proof story (scripts/w34-fri-script.html) remains available and unproduced for a 5th cycle — consider for this slot or formally retire.",
+        "title": "Hindi Ito Demo. Aktwal na AI Training Ito.",
+        "tag": "Story Carousel · CJEF Proof",
+        "note": "5-slide real-story carousel · real CJEF Day 1 photos + official Tito AI logo inserted · confirmed July 6 hands-on training details only · no participant count or invented outcomes · exactly five hashtags per platform · pin immediately · one CTA: Comment GUSTO",
           "date": "Sep 18",
-          "status": "tbd",
-          "url": null,
+        "status": "ready",
+        "url": "W38-fri-captions.html",
           "boost": null
         }
       ]
