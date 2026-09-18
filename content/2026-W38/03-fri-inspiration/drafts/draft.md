@@ -12,6 +12,7 @@ Uses only confirmed details and real event photos: teachers, administrators, and
 - Preview: `docs/renders/w38-fri-carousel.html`
 - Captions: `docs/W38-fri-captions.html`
 - Real photos + official logo: `docs/renders/w38-fri-assets/`
+- Editable Canva: https://www.canva.com/d/HOumfxU5RrbXNBR (`DAHVgbjU09c`)
 
 ## Buffer
 
