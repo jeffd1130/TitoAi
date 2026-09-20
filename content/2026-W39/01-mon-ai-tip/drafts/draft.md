@@ -18,6 +18,7 @@
 - Preview: `docs/renders/w39-mon-carousel.html`
 - Captions: `docs/W39-mon-captions.html`
 - Original project images: `docs/renders/w39-mon-assets/`
+- Editable Canva: https://www.canva.com/d/OaXWZGCLHynZioJ (`DAHVx5vf96s`)
 
 ## Buffer
 

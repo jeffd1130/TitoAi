@@ -59,12 +59,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Sep 14, 2026):**
+**Current/Next/Upcoming weeks (as of Sep 21, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W37 | Sep 7–13 — all 3 posted (Grounded AI · Career Upgrade theme): Mon interview-reviewer carousel (238 views), Wed resume-vs-job-post demo (230 views), Fri career-integrity story (201 views). **Weakest full week on record** — all three landed in a narrow 200–240 band, well below W36. Rotating TikTok pin slot moved to W36 Mon (212 views, the weakest of that week) instead of W36 Wed (593 views, still the best unpinned result in channel history and still unpinned after 3 cycles) |
-| Next | W38 | Sep 14–20 — **URGENT: not yet planned at all**, no script/captions/Canva for any slot; Monday's 8 PM PHT drop is same-day as of this check (same pattern as W37 last week). CJEF proof story (`docs/scripts/w34-fri-script.html`, CTA Comment GUSTO) still **unproduced for a 5th cycle** |
-| Upcoming | W39 | Sep 21–27 — not yet planned |
+| Current | W39 | Sep 21–27 — **AI Para sa Paglago Mo**: Mon 7-Day AI Growth Reset ready; Wed ChatGPT Study Mode demo planned; Fri Philippine women's soft-tennis achievement story planned |
+| Next | W40 | Sep 28–Oct 4 — not yet planned |
+| Upcoming | W41 | Oct 5–11 — not yet planned |
 
 **Key live URLs:**
 | Page | URL |
