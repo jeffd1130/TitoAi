@@ -28,7 +28,7 @@ Gusto mong maging parang Alex Eala? Huwag magsimula sa trophy. Magsimula sa gina
 
 - Preview: `docs/renders/w39-alex-carousel.html`
 - Captions: `docs/W39-mon-alex-captions.html`
-- Canva: https://www.canva.com/d/Uv9MAG9_rrJdNph
-- Canva preview: https://www.canva.com/d/VnG8zr0qW7fkSx_
+- Canva (1080 × 1350, 4:5): https://www.canva.com/d/PqvwZ9LG1SeaDp8
+- Canva preview: https://www.canva.com/d/mDZJvkG6n2Zfu7-
 - WTA profile: https://www.wtatennis.com/players/330332/name
 - WTA interview: https://www.wtatennis.com/news/4472861/1-on-1-with-eala-her-mindset-her-truth-and-her-favorite-sitcoms
