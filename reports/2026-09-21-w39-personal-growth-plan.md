@@ -11,9 +11,9 @@
 
 | Slot | Concept | Format | Hook / CTA |
 |---|---|---|---|
-| Mon Sep 21 | **7-Day AI Growth Reset** — ChatGPT + Gemini + Claude | 5-slide challenge carousel | “Hindi trabaho ang project. Ikaw mismo.” · Comment RESET |
+| Mon Sep 21 | **Alex Eala: Kopyahin ang Process** — athlete-inspired personal growth | 5-slide appreciation carousel | “Huwag magsimula sa trophy.” · Comment LABAN · tag @alex.eala respectfully |
 | Wed Sep 23 | **ChatGPT Study Mode: Matuto, Huwag Mangopya** | Named-persona demo carousel | One lesson + one practice + one knowledge check · Comment ARAL |
-| Fri Sep 25 | **Unang Asian Games Medal ng PH Women's Soft Tennis** | Achievement story carousel | First podium since PH soft-tennis debut in 1994; connect persistence to a 7-day reflection prompt · Comment LABAN |
+| Fri Sep 25 | **7-Day AI Growth Reset** — ChatGPT + Gemini + Claude | 5-slide challenge carousel | Moved from Monday after Alex Eala opportunity post · Comment RESET |
 
 ## Creative rules for reach
 
