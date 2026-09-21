@@ -23,6 +23,20 @@
 4. Use one comment keyword only, reply in the first hour, and pin the first useful comment.
 5. Native upload per platform. No duplicate TikTok posts and no boost until organic traction is visible.
 
+## Growth goal — attention must lead somewhere
+
+Reference reviewed: Ella Does Social Media Facebook reel shared by Jeff on Sep 21. Its core point is that visually attractive content is not enough when it produces no business or audience action.
+
+Apply this to Tito AI without copying the creator's language or becoming salesy:
+
+1. Give every post one measurable job: follow, comment, save, share, or qualified workshop inquiry.
+2. Match the CTA to the content: inspiration → comment; tutorial → save; proof/training story → inquiry.
+3. Keep the value inside the post. Never withhold the useful answer merely to force engagement.
+4. Track conversion signals alongside views. A high-view post with no follows, saves, comments, or inquiries is awareness—not complete growth.
+5. Use celebrity/athlete tags only when the story is relevant, respectful, verified, and clearly not an endorsement.
+
+For tonight's Alex Eala carousel, the single growth action is **Comment LABAN**. The purpose is community participation and identifying followers interested in personal-development content—not selling a product.
+
 ## Verified context used
 
 - OpenAI says ChatGPT Study mode guides learning with questions, step-by-step scaffolding, practice, and self-reflection; it is available across ChatGPT plans globally.
@@ -30,3 +44,5 @@
 - GMA News reported that the Philippine women's soft-tennis team secured the country's first Asian Games medal in the sport after the Philippines debuted in 1994. Use only that confirmed achievement in Friday's story; re-check results before production because the tournament is ongoing.
 
 Sources: OpenAI Study Mode (https://openai.com/index/chatgpt-study-mode/) · TikTok Next 2026 Trend Report (https://ads.tiktok.com/business/library/TikTok_Next_2026_Trend_Report_EN_METAP.pdf) · GMA News soft-tennis achievement (https://www.gmanetwork.com/news/sports/othersports/1002951/no-heartbreak-this-time-as-ph-soft-tennis-team-ends-asian-games-medal-drought/story/)
+
+Growth reference: Ella Does Social Media Facebook reel (https://www.facebook.com/reel/1437270418308778)

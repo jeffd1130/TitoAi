@@ -62,7 +62,7 @@ docs/
 **Current/Next/Upcoming weeks (as of Sep 21, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W39 | Sep 21–27 — **AI Para sa Paglago Mo**: Mon 7-Day AI Growth Reset ready; Wed ChatGPT Study Mode demo planned; Fri Philippine women's soft-tennis achievement story planned |
+| Current | W39 | Sep 21–27 — **AI Para sa Paglago Mo**: Mon Alex Eala process carousel ready for tonight; Wed ChatGPT Study Mode demo planned; Fri 7-Day AI Growth Reset ready |
 | Next | W40 | Sep 28–Oct 4 — not yet planned |
 | Upcoming | W41 | Oct 5–11 — not yet planned |
 
@@ -439,6 +439,7 @@ bash automation/setup-cron.sh      # install all cron jobs
 9. **Don't post.** You produce drafts. Posting is always Tito AI's call.
 10. **Platform-specific captions.** TikTok (short, 8 hashtags), Instagram (medium, 15 hashtags), Facebook (story-length, 6 hashtags). Never use one caption for all three.
 11. **Virality checklist (post day):** First 3 seconds = silent hook + direct eye contact. Native upload to each platform (no cross-posting). Jeff seeds first comment within 5 min of posting.
+12. **Growth beyond views:** Every post gets one measurable job—follow, comment, save, share, or qualified inquiry. Match the CTA to the post's intent, keep the full value inside the post, and review conversion signals alongside reach. Celebrity/athlete tags must be relevant, respectful, fact-checked, and never imply endorsement.
 
 ---
 
