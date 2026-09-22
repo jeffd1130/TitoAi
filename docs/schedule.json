@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -675,12 +675,12 @@
         },
         {
           "day": "WED",
-          "title": "ChatGPT Study Mode: Matuto, Huwag Mangopya",
-          "tag": "Carousel · Personal Learning Demo",
-          "note": "Planned: named-persona demo using one lesson, one practice, and one knowledge check. Re-check current ChatGPT interface before production.",
+          "title": "AI o Ay? Sinagot Ka Ba ng ChatGPT—or Tinuruan?",
+          "tag": "Carousel · AI o Ay? Episode 1",
+          "note": "First post under the entertainment-led Tito AI — AI sa Totoong Buhay recalibration · five original 1080x1350 images + official logo · verified ChatGPT Study mode behavior from OpenAI Help Center · no fabricated interface or outcomes · one CTA: Comment AI · preview: renders/w39-wed-ai-o-ay-carousel.html",
           "date": "Sep 23",
-          "status": "tbd",
-          "url": null,
+          "status": "ready",
+          "url": "W39-wed-captions.html",
           "boost": null
         },
         {
@@ -691,6 +691,44 @@
           "date": "Sep 25",
           "status": "ready",
           "url": "W39-mon-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W40",
+      "range": "Sep 28–Oct 4",
+      "theme": "Tito AI — AI sa Totoong Buhay · Relaunch Week 2",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "AI Life Advice: Helpful o Generic?",
+          "tag": "Reaction Reel · AI o Ay? Episode 2",
+          "note": "30–45s entertainment-led reaction reel · generic quote vs useful contextual advice · optional 2-second disclosed Tito Bot buzzer · do not pre-record a fabricated AI result · one CTA: vote AI or AY",
+          "date": "Sep 28",
+          "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "ChatGPT vs Gemini vs Claude: One Real Task",
+          "tag": "Comparison Reel · Tito AI Tries Episode 1",
+          "note": "45–60s real-output comparison · same 20-minute learning-plan prompt for all tools · judge clarity, practice, and reflection · never preselect or script a winner · one CTA: comment the next tool to test",
+          "date": "Sep 30",
+          "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Hindi Ito Demo. Aktwal na AI Training Ito.",
+          "tag": "Proof Reel · Seminar Diaries Episode 1",
+          "note": "45–60s CJEF proof reel using existing real footage · confirmed seminar details only · no participant count, invented quote, or outcome · one CTA: Comment TRAINING",
+          "date": "Oct 2",
+          "status": "planned",
+          "url": "W38-fri-captions.html",
           "boost": null
         }
       ]
