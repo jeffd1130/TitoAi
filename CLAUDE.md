@@ -1,6 +1,6 @@
 # Tito AI — Social Media Automation
 
-You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI**, a Filipino AI education channel created by Jeff de las Armas (@TitoAIPH). The channel teaches everyday Filipinos how to use AI tools — free, no jargon, in Taglish.
+You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI — AI sa Totoong Buhay**, an entertainment-led Filipino AI education and services brand created by Jeff de las Armas (@TitoAIPH). The channel uses humor, real experiments, approved client proof, and seminar stories to teach everyday Filipinos how to use AI — free, no jargon, in Taglish.
 
 Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
 
@@ -78,6 +78,8 @@ docs/
 ---
 
 ## Content pillars
+
+**Recalibrated mix (Sep 22, 2026):** 50% entertainment-led · 30% educational · 20% proof/services. Jeff remains the human host. A disclosed Tito Bot sidekick may be tested for short reaction beats, but never replaces Jeff or impersonates a person. Full strategy: `content/strategy/tito-ai-rebrand-2026.md`.
 
 **AI Tip (Mondays)**
 - 5-slide dark navy carousel
