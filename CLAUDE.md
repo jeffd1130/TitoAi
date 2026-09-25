@@ -59,11 +59,11 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Sep 21, 2026):**
+**Current/Next/Upcoming weeks (as of Sep 25, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W39 | Sep 21–27 — **AI Para sa Paglago Mo**: Mon Alex Eala process carousel ready for tonight; Wed ChatGPT Study Mode demo planned; Fri 7-Day AI Growth Reset ready |
-| Next | W40 | Sep 28–Oct 4 — not yet planned |
+| Current | W39 | Sep 21–27 — **AI Para sa Paglago Mo**: Mon Alex Eala carousel prepared; Wed AI o Ay? carousel prepared; Fri 7-Day AI Growth Reset finalized for 7 PM PHT |
+| Next | W40 | Sep 28–Oct 4 — AI o Ay? reaction, three-tool comparison, CJEF Seminar Diary planned |
 | Upcoming | W41 | Oct 5–11 — not yet planned |
 
 **Key live URLs:**
