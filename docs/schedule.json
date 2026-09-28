@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-28",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -704,11 +704,11 @@
         {
           "day": "MON",
           "title": "AI Life Advice: Helpful o Generic?",
-          "tag": "Reaction Reel · AI o Ay? Episode 2",
-          "note": "30–45s entertainment-led reaction reel · generic quote vs useful contextual advice · optional 2-second disclosed Tito Bot buzzer · do not pre-record a fabricated AI result · one CTA: vote AI or AY",
+          "tag": "Carousel · AI o Ay? Episode 2",
+          "note": "Five original 1080x1350 slides with images and Tito AI logo · entertainment-led generic-quote vs contextual-prompt lesson · sample prompt, not a recorded AI result · optional reaction reel script needs Jeff recording · exactly five hashtags per platform · Canva DAHWcZWt-CQ (5 editable pages), edit: https://www.canva.com/d/yGf9eLo8WdWFsJ5 · preview: renders/w40-mon-ai-o-ay-carousel.html · download: downloads/W40-mon-ai-o-ay-slides.zip · one CTA: comment AI or AY · no boost recommended before organic signal",
           "date": "Sep 28",
-          "status": "planned",
-          "url": null,
+          "status": "ready",
+          "url": "W40-mon-captions.html",
           "boost": null
         },
         {
