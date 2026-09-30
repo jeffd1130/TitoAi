@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-30",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -714,11 +714,11 @@
         {
           "day": "WED",
           "title": "ChatGPT vs Gemini vs Claude: One Real Task",
-          "tag": "Comparison Reel · Tito AI Tries Episode 1",
-          "note": "45–60s real-output comparison · same 20-minute learning-plan prompt for all tools · judge clarity, practice, and reflection · never preselect or script a winner · one CTA: comment the next tool to test",
+          "tag": "Demo Carousel · Tito AI Tries Episode 1",
+          "note": "Five original 1080x1350 slides with generated images and Tito AI logo · same safe 20-minute spoken-English prompt actually run in ChatGPT, Gemini, and Claude on Sep 30 · all produced café role-play; Claude's labeled blocks totaled 19, not 20, minutes in this one run · no universal winner or fabricated result · exactly five hashtags per platform · Canva DAHWoSk6x7Q (5 editable pages), edit: https://www.canva.com/d/YPFNOHhiPM5mSag · preview: renders/w40-wed-three-tool-carousel.html · download: downloads/W40-wed-three-tool-slides.zip · script: scripts/w40-wed-script.html · one CTA: comment your tool pick · no boost before organic signal",
           "date": "Sep 30",
-          "status": "planned",
-          "url": null,
+          "status": "ready",
+          "url": "W40-wed-captions.html",
           "boost": null
         },
         {

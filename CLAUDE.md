@@ -62,7 +62,7 @@ docs/
 **Current/Next/Upcoming weeks (as of Sep 28, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W40 | Sep 28–Oct 4 — Mon **AI o Ay? #2** five-slide carousel + captions ready for 8 PM PHT; Wed three-tool comparison and Fri CJEF Seminar Diary still planned |
+| Current | W40 | Sep 28–Oct 4 — Mon **AI o Ay? #2** carousel ready; Wed **Tito AI Tries #1** real-output comparison carousel + captions ready for 7 PM PHT; Fri CJEF Seminar Diary still planned |
 | Next | W41 | Oct 5–11 — not yet planned |
 | Upcoming | W42 | Oct 12–18 — not yet planned |
 
