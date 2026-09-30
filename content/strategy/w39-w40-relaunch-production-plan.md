@@ -15,7 +15,7 @@ The days stay the same because they create a sustainable rhythm and preserve the
 | Wed Sep 23 | AI o Ay? #1 | Sinagot Ka Ba ng ChatGPT—or Tinuruan? | 5-slide carousel | Relaunch + comments | `AI` |
 | Fri Sep 25 | Pamangkin Challenge #1 | 7-Day AI Growth Reset | 5-slide challenge | Saves + participation | `RESET` |
 | Mon Sep 28 | AI o Ay? #2 | AI Life Advice: Helpful o Generic? | 30–45s reaction reel | Reach + shares | `AY` or `AI` |
-| Wed Sep 30 | Tito AI Tries #1 | ChatGPT vs Gemini vs Claude: One Real Task | 45–60s comparison reel | Watch time + authority | `TEAM` |
+| Wed Sep 30 | Tito AI Tries #1 | ChatGPT vs Gemini vs Claude: One Real Task | 5-slide real-output comparison carousel (ready); optional 45–60s reel script requires Jeff recording | Saves + comments | Comment your tool pick |
 | Fri Oct 2 | Seminar Diaries #1 | Hindi Ito Demo. Aktwal na AI Training Ito. | 45–60s proof reel | Workshop leads | `TRAINING` |
 
 ## Prepared briefs
@@ -31,6 +31,8 @@ Cold open: Jeff reads, “Believe in yourself and stay consistent,” then looks
 ### Wed Sep 30 — Three-tool challenge
 
 Task: create a 20-minute learning session for one safe, non-confidential skill. Use the same input for ChatGPT, Gemini, and Claude. Judge on clarity, practice, and reflection—not a preselected winner. Show real outputs on recording day. Never script a winner before the test. CTA: comment the tool they want tested next.
+
+**Sep 30 production update:** Same spoken-English prompt was actually run in fresh chats across the three tools. All produced café role-plays. ChatGPT included extra free-speaking practice; Gemini used a detailed 15-minute role-play; Claude's labeled timing added to 19 minutes despite its 20-minute heading. The ready asset is a five-slide comparison carousel with real observations and no universal winner; the optional reel remains unrecorded. CTA changed to a single tool-pick comment.
 
 ### Fri Oct 2 — Seminar Diary
 
