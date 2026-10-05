@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-10-05",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -729,6 +729,44 @@
           "date": "Oct 2",
           "status": "ready",
           "url": "W40-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W41",
+      "range": "Oct 5–11",
+      "theme": "AI sa Totoong Buhay · Personal Growth, Small Steps",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Monday Motivation? Gawing Isang Maliit na Action",
+          "tag": "AI Tip Carousel · AI o Ay? Personal Growth",
+          "note": "Five 1080x1350 slides with two AI-generated illustrative lifestyle images and Tito AI logo · ChatGPT copy-ready goal/time/obstacle/fallback prompt; slide 4 plan is explicitly illustrative, not a live tool output · exactly five hashtags per platform · Canva DAHXGWxBpBI (5 editable pages), edit: https://www.canva.com/d/sLZBlh_QsS1vhoN · preview: renders/w41-mon-monday-reset.html · download: downloads/W41-mon-monday-reset-slides.zip · script: scripts/w41-mon-script.html · one CTA: Comment GAWIN · no boost before organic signal",
+          "date": "Oct 5",
+          "status": "ready",
+          "url": "W41-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD — Personal Growth Demo",
+          "tag": "Demo Carousel",
+          "note": "Not yet produced. Prefer one real tool run and visible output; do not invent results.",
+          "date": "Oct 7",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "TBD — Real Story or Seminar Diary",
+          "tag": "Story / Proof",
+          "note": "Not yet produced. Use approved real footage or verified personal story only.",
+          "date": "Oct 9",
+          "status": "tbd",
+          "url": null,
           "boost": null
         }
       ]
