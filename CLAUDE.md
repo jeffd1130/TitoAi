@@ -59,10 +59,10 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Oct 5, 2026):**
+**Current/Next/Upcoming weeks (as of Oct 7, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W41 | Oct 5–11 — Mon **Monday Motivation? Gawing Isang Maliit na Action** 5-slide carousel, captions, script, Canva ready for 8 PM PHT; Wed/Fri still TBD |
+| Current | W41 | Oct 5–11 — Mon **Monday Motivation? Gawing Isang Maliit na Action** carousel ready; Wed **Gemini Study Coach** real-output demo carousel, captions, script, Canva ready for 7 PM PHT; Fri still TBD |
 | Next | W42 | Oct 12–18 — not yet planned |
 | Upcoming | W43 | Oct 19–25 — not yet planned |
 

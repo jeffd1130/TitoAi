@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-07",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -751,12 +751,12 @@
         },
         {
           "day": "WED",
-          "title": "TBD — Personal Growth Demo",
-          "tag": "Demo Carousel",
-          "note": "Not yet produced. Prefer one real tool run and visible output; do not invent results.",
+          "title": "Quiz Bukas? Gemini Bilang Study Coach",
+          "tag": "Demo Carousel · One Real Gemini Run",
+          "note": "Five 1080x1350 slides with two AI-generated illustrative student images and Tito AI logo · fictional learner, no private student data · exact first question and hint observed in a signed-out Gemini Flash-Lite test on Oct 7; one run only, outputs can vary · ChatGPT attempt stopped at verification and was not used · exactly five hashtags per platform · Canva DAHXSQD_YTM (5 editable pages), edit: https://www.canva.com/d/9IXngNRr1UgqvEw · preview: renders/w41-wed-study-coach.html · download: downloads/W41-wed-study-coach-slides.zip · script: scripts/w41-wed-script.html · one CTA: Save · no boost before organic signal",
           "date": "Oct 7",
-          "status": "tbd",
-          "url": null,
+          "status": "ready",
+          "url": "W41-wed-captions.html",
           "boost": null
         },
         {
