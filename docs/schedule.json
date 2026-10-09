@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-09",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -761,12 +761,12 @@
         },
         {
           "day": "FRI",
-          "title": "TBD — Real Story or Seminar Diary",
-          "tag": "Story / Proof",
-          "note": "Not yet produced. Use approved real footage or verified personal story only.",
+          "title": "Friday Na. Bakit Parang Kulang Pa Rin?",
+          "tag": "Story Carousel · Friday Check-in",
+          "note": "Five original 1080x1350 story slides with three AI-generated illustrative images and Tito AI logo; fictional everyday scenario, not Jeff/client footage or a measured AI result · copy-ready honest-reflection prompt · exactly five hashtags per platform · Canva DAHXeTcfcpE (5 editable pages), edit: https://www.canva.com/d/HupBIyBwkiOLmyr · preview: renders/w41-fri-friday-check-in.html · download: downloads/W41-fri-friday-check-in-slides.zip · script: scripts/w41-fri-script.html · one CTA: Comment ISA · no boost before organic signal · optional voiceover not recorded",
           "date": "Oct 9",
-          "status": "tbd",
-          "url": null,
+          "status": "ready",
+          "url": "W41-fri-captions.html",
           "boost": null
         }
       ]
