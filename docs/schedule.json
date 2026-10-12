@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-12",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -767,6 +767,44 @@
           "date": "Oct 9",
           "status": "ready",
           "url": "W41-fri-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W42",
+      "range": "Oct 12–18",
+      "theme": "AI sa Totoong Buhay · Everyday Decisions",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Ref Mo: Itlog, Kamatis. Ano Na?",
+          "tag": "AI Tip Carousel · Tito AI Tries: Pantry Challenge",
+          "note": "Five 1080x1350 slides with two AI-generated illustrative food images and Tito AI logo · one real signed-out Gemini Flash-Lite run on Oct 12 suggested Pritong Itlog na may Ginisang Kamatis at Sibuyas and answered Wala na to shopping question; exact observed excerpt, not screenshot; no dish cooked or tasted · exactly five hashtags per platform · Canva DAHXwZ6dO6E (5 editable pages), edit: https://www.canva.com/d/ayHM3MCnuzcCENq · preview: renders/w42-mon-pantry-challenge.html · download: downloads/W42-mon-pantry-challenge-slides.zip · script: scripts/w42-mon-script.html · one CTA: Comment ULAM · no boost before organic signal",
+          "date": "Oct 12",
+          "status": "ready",
+          "url": "W42-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD — Wednesday Demo",
+          "tag": "Demo Carousel",
+          "note": "Not yet produced. Use a real free-tool run and verified output.",
+          "date": "Oct 14",
+          "status": "tbd",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "TBD — Friday Story",
+          "tag": "Story / Inspiration",
+          "note": "Not yet produced. Use an approved real story or clearly illustrative scenario.",
+          "date": "Oct 16",
+          "status": "tbd",
+          "url": null,
           "boost": null
         }
       ]
