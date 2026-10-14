@@ -20,7 +20,7 @@ Not publishable: it mixes a customer-facing reply with placeholders and internal
 
 ## Second Gemini output (verbatim)
 
-> Hi! Ico-confirm lang po namin ang updated price at stock ng notebook sa aming team, at magre-reply po kami agad sa inyo dito.
+> Hi! Ico-confirm lang po namin ang updated price at stock ng notebook sa aming team, at mag-re-reply po kami agad sa inyo dito.
 
 Still adds unverified stock/team details and promises a quick reply. The slide's final wording is a *human-proposed edit*, not Gemini output and not an actual customer reply:
 
