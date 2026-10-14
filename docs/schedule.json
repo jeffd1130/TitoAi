@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-14",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -789,12 +789,12 @@
         },
         {
           "day": "WED",
-          "title": "TBD — Wednesday Demo",
-          "tag": "Demo Carousel",
-          "note": "Not yet produced. Use a real free-tool run and verified output.",
+          "title": "Magkano Po? AI, Huwag Mag-imbento!",
+          "tag": "Demo Carousel · AI o Ay? · Negosyante",
+          "note": "Five 1080x1350 slides with original AI-generated illustrative shop images and Tito AI logo; fictional customer scenario, not a real exchange. One observed signed-out Gemini test Oct 14: first answer contained placeholders; corrected answer still added unverified stock/team details and a quick-reply promise. Exact excerpts shown, final safe wording labeled human edit. No price or outcome claimed. Exactly five hashtags in each platform caption; one CTA: Save. Canva DAHX8TU18_I (five editable pages), edit: https://www.canva.com/d/rMucsYxKPyu4v9H · preview: renders/w42-wed-price-reply.html · download: downloads/W42-wed-price-reply-slides.zip · script: scripts/w42-wed-script.html · organic only, no boost pending current engagement data. Approval draft; not scheduled/published.",
           "date": "Oct 14",
-          "status": "tbd",
-          "url": null,
+          "status": "ready",
+          "url": "W42-wed-captions.html",
           "boost": null
         },
         {

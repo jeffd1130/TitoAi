@@ -59,10 +59,10 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Oct 12, 2026):**
+**Current/Next/Upcoming weeks (as of Oct 14, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W42 | Oct 12–18 — Mon **Ref Mo: Itlog, Kamatis. Ano Na?** five-slide real-Gemini pantry tip, captions, script, editable Canva ready for 8 PM PHT (not published); Wed/Fri TBD |
+| Current | W42 | Oct 12–18 — Mon **Ref Mo: Itlog, Kamatis. Ano Na?** five-slide real-Gemini pantry tip ready (posting not verified); Wed **Magkano Po? AI, Huwag Mag-imbento!** five-slide fictional-negosyante demo with observed Gemini excerpts, images, captions, script, editable Canva ready for 7 PM PHT (not published); Fri TBD |
 | Next | W43 | Oct 19–25 — not yet planned |
 | Upcoming | W44 | Oct 26–Nov 1 — not yet planned |
 
