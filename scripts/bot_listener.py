@@ -66,8 +66,18 @@ def get_updates(offset: int) -> list:
     try:
         result = _call("getUpdates", {"timeout": POLL_TIMEOUT, "offset": offset})
         return result.get("result", [])
+    except urllib.error.HTTPError as e:
+        if e.code == 409:
+            # Another instance is polling this token — wait instead of spinning
+            log.warning("getUpdates 409 Conflict: another bot instance is running. Retrying in 60s.")
+            time.sleep(60)
+        else:
+            log.warning("getUpdates HTTP %s. Retrying in 10s.", e.code)
+            time.sleep(10)
+        return []
     except Exception:
         log.warning("getUpdates failed:\n%s", traceback.format_exc())
+        time.sleep(10)
         return []
 
 
