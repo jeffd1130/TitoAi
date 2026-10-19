@@ -18,6 +18,7 @@ These are **public websites and creator-controlled pages**, not a live audit of 
 | [Pinoy VA Job Hiring](https://linktr.ee/pinoyvajobhiring) | AI-assisted VA career tools, niche finder, applications, profiles, job updates. | Avoid competing on job-listing promises. Teach a safe sample a beginner can actually make before applying. |
 | [The Freelance Movement](https://thefreelancemovement.com/freelancer-launchpad-4/) | Client-focused freelancer positioning and showing value before a sale. | Show an audience/problem/brief rather than just a generic “copy this prompt” tip. |
 | [WorkPinoy VA tools guide](https://www.workpinoy.com/articles/best-ai-tools-filipino-virtual-assistants/) | AI tools by VA task and the need to edit/check AI drafts before client use. | Make the **AI mistake → human correction** the entertaining, memorable part of the lesson. |
+| [CatGPT / @askcatgpt](https://www.askcatgpt.com/) | AI education through an approachable creator personality, humor, and everyday use. | Let Jeff's warm Tito voice lead; demonstrate rather than lecture. This is a format reference, not a Philippine VA competitor. |
 
 **Limits:** Some comparable social platforms restrict public viewing; this scan is not evidence of what is currently viral. Do not claim a format will go viral. The latest Tito AI measured report in this repo is Sep 14; it favored a concrete student demo over generic career framing. Validate this new pathway with current organic post data before scaling or boosting.
 
