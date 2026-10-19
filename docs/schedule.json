@@ -846,6 +846,44 @@
           "boost": null
         }
       ]
+    },
+    {
+      "id": "W44",
+      "range": "Oct 26–Nov 1",
+      "theme": "AI sa Totoong Buhay · Human Skills + AI",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "AI Draft vs Human Edit: Ang Caption",
+          "tag": "AI Tip Carousel · Everyday Content Creation",
+          "note": "Brief only. Show a real tool test and clear human correction; fictional practice case unless a real client approves use. No assets or captions yet.",
+          "date": "Oct 26",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "VA Handoff Checklist: Bago Ipadala",
+          "tag": "Demo Carousel · Aspiring VA / Freelancer",
+          "note": "Brief only. Teach file naming, fact check, and approval handoff with a safe fictional example. No assets or captions yet.",
+          "date": "Oct 28",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Seminar o Client Workflow Diary — Pending Proof",
+          "tag": "Story / Inspiration Reel · Proof",
+          "note": "Brief only. Requires Jeff-confirmed footage and any necessary client/participant approval; otherwise use a clearly fictional practice challenge. No assets or captions yet.",
+          "date": "Oct 30",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        }
+      ]
     }
   ]
 }
