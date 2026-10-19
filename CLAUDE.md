@@ -62,11 +62,11 @@ docs/
 **Current/Next/Upcoming weeks (as of Oct 19, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W43 | Oct 19–25 — Mon **Puwede Kang Tumanggi Nang Maayos** five-slide fictional personal-growth carousel ready for Jeff review, 8 PM PHT target; editable Canva `DAHYcXzbcso`, captions and rendered PNGs ready, posting not verified. Wed/Fri not yet planned. |
-| Next | W44 | Oct 26–Nov 1 — not yet planned |
+| Current | W43 | Oct 19–25 — Mon **Gagawa Ka ng Post Para sa Turon?** five-slide fictional practice-brief carousel ready for Jeff review, 8 PM PHT target; editable Canva `DAHYcjHt_3Q`, captions and rendered PNGs ready, posting not verified. Earlier boundary-setting draft is superseded. Wed **Mula Brief Hanggang Portfolio Sample** and Fri **Human Review Checklist** are briefs only, not produced. |
+| Next | W44 | Oct 26–Nov 1 — AI draft vs human edit; VA handoff checklist; verified seminar/client workflow if approved. Briefs only. |
 | Upcoming | W45 | Nov 2–8 — not yet planned |
 
-**Oct 19 Canva recovery:** W42 Fri **Pati Pahinga, May Deadline?** is now an editable five-page Canva design (`DAHYcb26WHk`); link and captions were sent to Jeff via Telegram. It remains unposted/unverified, and no voiceover or reel has been completed. W43 Mon uses an explicitly fictional weekend-boundary scenario and quotes one observed Gemini Flash-Lite output; no real message was sent. Do not boost without current organic engagement data.
+**Oct 19 Canva recovery and content pivot:** W42 Fri **Pati Pahinga, May Deadline?** is an editable five-page Canva design (`DAHYcb26WHk`); link and captions were sent to Jeff via Telegram. It remains unposted/unverified, and no voiceover or reel has been completed. W43 Mon's first boundary-setting draft was replaced at Jeff's request by **Gagawa Ka ng Post Para sa Turon?**. Keep teaching AI to regular Pinoys; add a practice-to-portfolio pathway for curious VAs, freelancers, and content creators without promising jobs or treating fictional samples as real client work. The new post quotes one observed Gemini failure and shows a human correction. See `content/strategy/2026-10-19-va-freelancer-content-pivot.md`. Do not boost without current organic engagement data.
 
 **Key live URLs:**
 | Page | URL |
