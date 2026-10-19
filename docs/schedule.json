@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-19",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -801,9 +801,9 @@
           "day": "FRI",
           "title": "Pati Pahinga, May Deadline?",
           "tag": "Story Carousel · Weekend Reset",
-          "note": "Draft five-slide 1080x1350 story carousel with two original AI-generated illustrative images and Tito AI logos. Fictional weekend scenario, not Jeff's real story or a testimonial. Copy-ready AI prompt was not tested (Gemini unavailable Oct 16); no AI output or outcome claimed. Exactly five hashtags per platform, one CTA: Comment PAHINGA. Preview: renders/w42-fri-weekend-reset.html · captions: W42-fri-captions.html · slides: downloads/W42-fri-weekend-reset-slides.zip · script: scripts/w42-fri-script.html. Canva edit design could NOT be created Oct 16 because the Canva connection requires reauthentication. Optional Jeff voiceover is not recorded; no completed reel. Hold for Canva reconnect and Jeff approval; do not schedule/publish; no boost without current engagement data.",
+          "note": "Five-slide 1080x1350 story carousel with two original AI-generated illustrative images and Tito AI logos. Fictional weekend scenario, not Jeff's real story or a testimonial. Copy-ready AI prompt was not tested (Gemini unavailable Oct 16); no AI output or outcome claimed. Exactly five hashtags per platform, one CTA: Comment PAHINGA. Canva DAHYcb26WHk (five editable 1080x1350 pages), edit: https://www.canva.com/d/wem-uwyxpjEHTOb · preview: renders/w42-fri-weekend-reset.html · captions: W42-fri-captions.html · slides: downloads/W42-fri-weekend-reset-slides.zip · script: scripts/w42-fri-script.html. Canva import completed Oct 19 after account reconnection. Optional Jeff voiceover is not recorded; no completed reel. Ready for Jeff review, not scheduled/published; no boost without current engagement data.",
           "date": "Oct 16",
-          "status": "draft",
+          "status": "ready",
           "url": "W42-fri-captions.html",
           "boost": null
         }

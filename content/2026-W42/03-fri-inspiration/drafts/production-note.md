@@ -7,3 +7,5 @@ The prompt on slide 3 is copy-ready but not tested here: Gemini's page returned 
 This does not reuse CJEF training footage or claim a new seminar. The last measured engagement report is September 14; no Oct 16 boost recommendation is supported by current metrics.
 
 Do not schedule or publish on behalf of Tito AI. Jeff may choose the final carousel for native posting after review. The optional voiceover should be recorded and approved before any later reel.
+
+**Oct 19 update:** Canva connection restored and five-page editable design created: https://www.canva.com/d/wem-uwyxpjEHTOb (DAHYcb26WHk). Friday's original posting remains unverified; this is an approval-ready carousel, not a completed voiced reel.
