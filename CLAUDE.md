@@ -59,12 +59,14 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Oct 16, 2026):**
+**Current/Next/Upcoming weeks (as of Oct 19, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W42 | Oct 12–18 — Mon **Ref Mo: Itlog, Kamatis. Ano Na?** ready (posting not verified); Wed **Magkano Po? AI, Huwag Mag-imbento!** ready (posting not verified); Fri **Pati Pahinga, May Deadline?** five-slide fictional weekend-reset story carousel, images, captions, and script drafted for 7 PM PHT, but Canva import blocked by reauthentication—NOT finalized or published |
-| Next | W43 | Oct 19–25 — not yet planned |
-| Upcoming | W44 | Oct 26–Nov 1 — not yet planned |
+| Current | W43 | Oct 19–25 — Mon **Puwede Kang Tumanggi Nang Maayos** five-slide fictional personal-growth carousel ready for Jeff review, 8 PM PHT target; editable Canva `DAHYcXzbcso`, captions and rendered PNGs ready, posting not verified. Wed/Fri not yet planned. |
+| Next | W44 | Oct 26–Nov 1 — not yet planned |
+| Upcoming | W45 | Nov 2–8 — not yet planned |
+
+**Oct 19 Canva recovery:** W42 Fri **Pati Pahinga, May Deadline?** is now an editable five-page Canva design (`DAHYcb26WHk`); link and captions were sent to Jeff via Telegram. It remains unposted/unverified, and no voiceover or reel has been completed. W43 Mon uses an explicitly fictional weekend-boundary scenario and quotes one observed Gemini Flash-Lite output; no real message was sent. Do not boost without current organic engagement data.
 
 **Key live URLs:**
 | Page | URL |
