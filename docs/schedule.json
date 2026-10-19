@@ -808,6 +808,44 @@
           "boost": null
         }
       ]
+    },
+    {
+      "id": "W43",
+      "range": "Oct 19–25",
+      "theme": "AI sa Totoong Buhay · Personal Boundaries",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Puwede Kang Tumanggi Nang Maayos",
+          "tag": "AI Tip Carousel · Personal Growth",
+          "note": "Five original 1080x1350 slides with two AI-generated illustrative images and Tito AI logo. Fictional friend/volunteer scenario; one exact Gemini Flash-Lite response observed Oct 19, no real message sent. Exactly five hashtags per platform; one CTA: Comment HINDI. Canva DAHYcXzbcso (five editable pages), edit: https://www.canva.com/d/7ecF0IxjMW57vRn · preview: renders/w43-mon-polite-no.html · download: downloads/W43-mon-polite-no-slides.zip · script: scripts/w43-mon-script.html. Approval draft, not posted/scheduled; no boost pending current engagement data.",
+          "date": "Oct 19",
+          "status": "ready",
+          "url": "W43-mon-captions.html",
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "TBD — personal-growth demo",
+          "tag": "Demo Carousel",
+          "note": "Unplanned; no script, captions, images, or Canva design yet.",
+          "date": "Oct 21",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "TBD — real story or inspiration",
+          "tag": "Story / Inspiration Reel",
+          "note": "Unplanned; use only confirmed real details. No script, captions, footage, or Canva design yet.",
+          "date": "Oct 23",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        }
+      ]
     }
   ]
 }
