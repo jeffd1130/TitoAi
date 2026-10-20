@@ -62,7 +62,7 @@ docs/
 **Current/Next/Upcoming weeks (as of Oct 20, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W43 | Oct 19–25 — Mon **Gagawa Ka ng Post Para sa Turon?** confirmed posted by Jeff on Oct 20 (platform/time/metrics unverified). Wed **Tanong ng Buyer, Gawing Helpful Post gamit AI** and Fri **Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot** are fresh small-business briefs only, not produced. |
+| Current | W43 | Oct 19–25 — Mon **Gagawa Ka ng Post Para sa Turon?** confirmed posted by Jeff on Oct 20 (platform/time/metrics unverified). Wed **Tanong ng Buyer, Gawing Helpful Post gamit AI** is a five-slide approval sample with Canva, PNGs, script, and captions ready for Jeff; not published. Fri **Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot** remains a brief only. |
 | Next | W44 | Oct 26–Nov 1 — AI draft vs human edit; VA handoff checklist; verified seminar/client workflow if approved. Briefs only. |
 | Upcoming | W45 | Nov 2–8 — not yet planned |
 
@@ -71,6 +71,8 @@ docs/
 **Oct 20 small-business follower-plan correction:** Jeff confirmed the turon post is already live; `schedule.json` now records this as user-reported `posted`, without inventing platform, time, or metrics. Do not repeat the turon/product-caption challenge. Lead the next series with buyer questions turned into helpful AI-assisted posts, then show Jeff's human fact-checking using carefully reviewed seminar footage. Audience remains regular Pinoys, with small-business owners first; VA/freelance is a later application. See `content/strategy/2026-10-20-small-business-follower-plan.md`. No seminar attendee should be featured without appropriate permission; video metadata indicates Aug 22, not Oct 20.
 
 **Oct 20 chibi-host pilot:** Jeff wants an illustrated Tito AI character to stand in for him visually in new educational posts/videos. The wave, teach, and surprised transparent PNGs are in `docs/assets/avatars/`; a silent three-second vertical motion preview is in `docs/renders/tito-ai-chibi-motion-preview.mp4`. Use the chibi as an engaging presenter, but keep real tool output and accurate teaching at the center; do not present it as actual seminar or client footage. No talking/lip-synced video or finished post has been produced from it yet. See `brand/tito-ai-chibi-avatar.md`. Pilot brighter cream/marigold/coral/teal layouts with navy text in new work; leave archived artwork unchanged.
+
+**Oct 20 W43 Wed approval sample:** A bright five-slide small-business carousel now uses the chibi host, the official logo, and an exact Gemini Flash-Lite practice answer for a fictional print shop. Script, separate TikTok/IG/FB captions (five hashtags each), PNGs, and editable Canva design `DAHYhsMdmdQ` are ready; see `docs/W43-wed-print-captions.html`. Jeff must approve before any native posting; no Buffer scheduling, publication, boost, or real customer outcome is claimed.
 
 **Key live URLs:**
 | Page | URL |
