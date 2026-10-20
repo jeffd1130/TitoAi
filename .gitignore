@@ -20,6 +20,9 @@ content/**/approved/*.MOV
 content/**/raw/*.HEIC
 content/**/raw/*.heic
 
+# Raw seminar/participant media — keep local; do not auto-publish to GitHub
+Images/
+
 # macOS
 .DS_Store
 **/.DS_Store
