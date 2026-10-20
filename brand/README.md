@@ -51,12 +51,16 @@
 
 ## Visual signature
 
-- **Dark navy background** — dominant. Never white, never light.
+- **New-content pilot from Oct 20:** use brighter warm cream `#FFF8E7` backgrounds with navy `#0A0F1E` text, marigold `#FFB800`, coral `#FF6B4A`, and deep teal `#0D6B63`. Keep navy/gold in the logo and selected proof frames; do not retroactively restyle archived posts.
 - **Gold accent** — headlines, lines, logo elements
 - **Hero media in framed window** — not full-bleed; breathing room above and below
-- **Bebas Neue bold headline** — large, white, takes upper portion of frame
-- **Warm, human** — Jeff at home, natural light, real setting
-- **No stock photos.** Always real: real screen, real Jeff, real output.
+- **Bebas Neue bold headline** — large, navy on light or white on navy, with strong mobile contrast
+- **Warm, human** — a real Jeff voice or verified proof can accompany the illustrated chibi host
+- **No fake proof.** Use real screens/outputs for demonstrations; label practice examples and generated illustrations clearly. Do not imply an avatar physically attended an event.
+
+## Chibi host pilot
+
+Jeff requested a human chibi Tito AI character as the main visual host for upcoming education posts and videos. Transparent wave/teach/surprised PNGs live in `docs/assets/avatars/`; a silent vertical motion preview lives in `docs/renders/tito-ai-chibi-motion-preview.mp4`. See `brand/tito-ai-chibi-avatar.md` for precise use, limitations, and consistency rules. The avatar is not the logo, and the motion preview is not lip-synced or voiced.
 
 ## Voice
 

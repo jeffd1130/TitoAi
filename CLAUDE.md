@@ -70,6 +70,8 @@ docs/
 
 **Oct 20 small-business follower-plan correction:** Jeff confirmed the turon post is already live; `schedule.json` now records this as user-reported `posted`, without inventing platform, time, or metrics. Do not repeat the turon/product-caption challenge. Lead the next series with buyer questions turned into helpful AI-assisted posts, then show Jeff's human fact-checking using carefully reviewed seminar footage. Audience remains regular Pinoys, with small-business owners first; VA/freelance is a later application. See `content/strategy/2026-10-20-small-business-follower-plan.md`. No seminar attendee should be featured without appropriate permission; video metadata indicates Aug 22, not Oct 20.
 
+**Oct 20 chibi-host pilot:** Jeff wants an illustrated Tito AI character to stand in for him visually in new educational posts/videos. The wave, teach, and surprised transparent PNGs are in `docs/assets/avatars/`; a silent three-second vertical motion preview is in `docs/renders/tito-ai-chibi-motion-preview.mp4`. Use the chibi as an engaging presenter, but keep real tool output and accurate teaching at the center; do not present it as actual seminar or client footage. No talking/lip-synced video or finished post has been produced from it yet. See `brand/tito-ai-chibi-avatar.md`. Pilot brighter cream/marigold/coral/teal layouts with navy text in new work; leave archived artwork unchanged.
+
 **Key live URLs:**
 | Page | URL |
 |------|-----|
@@ -83,7 +85,7 @@ docs/
 
 ## Content pillars
 
-**Recalibrated mix (Sep 22, 2026):** 50% entertainment-led · 30% educational · 20% proof/services. Jeff remains the human host. A disclosed Tito Bot sidekick may be tested for short reaction beats, but never replaces Jeff or impersonates a person. Full strategy: `content/strategy/tito-ai-rebrand-2026.md`.
+**Recalibrated mix (Sep 22, 2026; Oct 20 host update):** 50% entertainment-led · 30% educational · 20% proof/services. The new human chibi Tito AI may lead educational posts/videos visually at Jeff's request; real proof, voice, and factual accountability still come from Jeff and verified material. Do not present the illustrated host as a real seminar attendee or client. Full strategy: `content/strategy/tito-ai-rebrand-2026.md`; chibi pilot: `brand/tito-ai-chibi-avatar.md`.
 
 **AI Tip (Mondays)**
 - 5-slide dark navy carousel
