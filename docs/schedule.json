@@ -829,10 +829,10 @@
           "day": "WED",
           "title": "Tanong ng Buyer, Gawing Helpful Post gamit AI",
           "tag": "Demo Carousel · Small Business · AI Content Creation",
-          "note": "New angle after Jeff confirmed turon was posted: turn a clearly labeled sample buyer question into an answer-first post, using verified business facts supplied by the owner. Show the prompt, real tool output, and human fact-check; do not invent a real customer, product details, or results. Draft brief only; no script, captions, images, or Canva design yet. Follower goal: viewers know this is the first of a repeatable small-business AI series.",
+          "note": "Approval sample: fictional print-shop buyer question, not a real customer/client. One observed Gemini Flash-Lite test on Oct 20 used only two approved practice facts (PDF requests by DM; shop pick-up), and its exact answer is quoted on slide 4. Owner must verify address, hours, turnaround, payment and prices before adapting to a real shop. Five 1080x1350 slides with chibi Tito AI avatar and official logo; Canva DAHYhsMdmdQ (five editable pages), edit: https://www.canva.com/d/hKezZmfEpPyxslb · preview: renders/w43-wed-print-buyer-question.html · download: downloads/W43-wed-print-buyer-question-slides.zip · script: scripts/w43-wed-print-script.html. Exactly five hashtags per platform. For Jeff approval only; not scheduled or published; no boost pending organic evidence.",
           "date": "Oct 21",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W43-wed-print-captions.html",
           "boost": null
         },
         {
