@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -812,24 +812,24 @@
     {
       "id": "W43",
       "range": "Oct 19–25",
-      "theme": "AI sa Totoong Buhay · Practice-to-Portfolio",
+      "theme": "AI sa Totoong Buhay · Small-Business Questions to Content",
       "boost": null,
       "posts": [
         {
           "day": "MON",
           "title": "Gagawa Ka ng Post Para sa Turon?",
           "tag": "AI Tip Carousel · AI o Ay? · Beginner Content Creation",
-          "note": "REPLACES earlier boundary-setting draft; old approval packet is superseded. Five 1080x1350 slides with original AI-generated illustrative turon image and Tito AI logo. Fictional practice brief, not a real client. One observed Gemini Flash-Lite test Oct 19 inserted unsupported claims; slide 4 quotes excerpts, slide 5 is human edit. Exactly five hashtags per platform; one CTA: Comment BRIEF. Canva DAHYcjHt_3Q (five editable pages), edit: https://www.canva.com/d/JbHmWh0HxRUQ5gh · preview: renders/w43-mon-turon-practice.html · download: downloads/W43-mon-turon-practice-slides.zip · script: scripts/w43-mon-turon-script.html. Approval draft, not posted/scheduled; no boost pending current engagement data.",
+          "note": "Jeff confirmed on Oct 20 that the turon post has already been published. Platform, exact publication time, engagement, and boost were not independently verified. Fictional practice brief, not a real client. Canva DAHYcjHt_3Q (five editable pages), edit: https://www.canva.com/d/JbHmWh0HxRUQ5gh · preview: renders/w43-mon-turon-practice.html · download: downloads/W43-mon-turon-practice-slides.zip · script: scripts/w43-mon-turon-script.html. Do not repeat this angle in the next slot.",
           "date": "Oct 19",
-          "status": "ready",
+          "status": "posted",
           "url": "W43-mon-turon-captions.html",
           "boost": null
         },
         {
           "day": "WED",
-          "title": "Mula Brief Hanggang Portfolio Sample",
-          "tag": "Demo Carousel · Aspiring VA / Freelancer",
-          "note": "Planned brief only: demonstrate a three-post mini-plan for a fictional local business, including fact and tone checks. Keep accessible to regular Pinoys. No script, captions, images, or Canva design yet; no real client claim.",
+          "title": "Tanong ng Buyer, Gawing Helpful Post gamit AI",
+          "tag": "Demo Carousel · Small Business · AI Content Creation",
+          "note": "New angle after Jeff confirmed turon was posted: turn a clearly labeled sample buyer question into an answer-first post, using verified business facts supplied by the owner. Show the prompt, real tool output, and human fact-check; do not invent a real customer, product details, or results. Draft brief only; no script, captions, images, or Canva design yet. Follower goal: viewers know this is the first of a repeatable small-business AI series.",
           "date": "Oct 21",
           "status": "draft",
           "url": null,
@@ -837,9 +837,9 @@
         },
         {
           "day": "FRI",
-          "title": "Bago Ko Ipadala sa Kliyente: Human Review Checklist",
-          "tag": "Story / Inspiration Reel · Behind the Scenes",
-          "note": "Planned brief only. Jeff may show a real workflow if confirmed; do not name a client, show private materials, or claim outcomes without approval. No script, captions, footage, or Canva design yet.",
+          "title": "Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot",
+          "tag": "Story / Inspiration Reel · Seminar Proof · Small Business",
+          "note": "Planned brief only: Jeff-led lesson on checking AI drafts against business facts, with available classroom footage as context. Video metadata points to Aug 22, not Oct 20; verify event identity and permission before featuring attendees, especially anyone who may be a minor. Do not invent seminar quotes, participant outcomes, client results, or a lesson not supported by the selected footage. No script, captions, edit, or Canva design yet.",
           "date": "Oct 23",
           "status": "draft",
           "url": null,
