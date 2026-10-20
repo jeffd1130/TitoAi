@@ -22,10 +22,12 @@ The PNGs are 1024×1536 with an opaque dark gradient background (no alpha channe
 - In 9:16 videos, show the avatar as framed artwork over screen recordings or simple backgrounds unless a genuine transparent version is produced. The included motion preview has a gentle vertical bounce and no speech or audio. Do not imply lip-sync or Jeff's voice is present until an actual voice/video pass is produced.
 - Keep on-screen claims grounded. Never imply the illustrated character attended a seminar or served a client. Use real seminar footage only with event details and participant permissions verified.
 - Use a brighter pilot palette for new content: warm cream `#FFF8E7`, marigold `#FFB800`, coral `#FF6B4A`, deep teal `#0D6B63`, and navy text `#0A0F1E`. Existing logo and archive assets stay unchanged. Avoid small white text on coral.
-- Keep the avatar recognizably consistent: short black hair, clean-shaven chin, no hanging belt strap, white shirt, blue jeans, white shoes, friendly adult chibi proportions, orange/teal edge accents. Do not present it as a real photo or undisclosed human testimony.
+- Keep the avatar recognizably consistent: short black hair, no mustache or goatee, no hanging belt strap, a tablet with its back facing the viewer in the wave pose, a snug watchband naturally wrapped around the wrist, white shirt, blue jeans, white shoes, friendly adult chibi proportions, orange/teal edge accents. Do not present it as a real photo or undisclosed human testimony.
 
 ## Generation record
 
 Built-in imagegen mode, `stylized-concept`: reference Jeff's solo classroom portrait for likeness and the existing Tito AI logo for colors/mood; create a polished adult Filipino human chibi with transparent background, then two consistent pose/expression variants. No text, no invented people or event details. The pose files were saved into the project; discarded variations are not part of the asset set.
 
 **Oct 20 refinement:** Built-in imagegen `precise-object-edit` on each pose removed the goatee/chin stubble and loose brown belt strap while preserving the pose and style. The resulting files remained opaque despite the original transparency request; confirm actual alpha before describing future exports as cutouts. The W43 Wednesday carousel and Canva design were rebuilt from these refined poses.
+
+**Oct 20 final pass:** Removed remaining mustache shading from all poses, changed the wave pose's tablet to show its matte rear casing, and fitted the watch straps to their wrists. Rebuilt the Wednesday carousel, PNG bundle, motion preview, and Canva design from the final pose files.
