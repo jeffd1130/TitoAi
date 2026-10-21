@@ -36,6 +36,7 @@
 ## Logo assets (local)
 
 - **Logo horizontal:** `files2/logo-horizontal.png`
+- **Transparent horizontal variants for new posts:** `docs/assets/logo-horizontal-light.png` (cream), `docs/assets/logo-horizontal-dark-transparent.png` (navy), `docs/assets/logo-horizontal-gold-transparent.png` (marigold). The navy inside the robot badge is intentional; none has an outer black rectangle.
 - **Logo icon:** `files2/logo-icon.png`
 - **Facebook cover:** `files2/fb-cover.png`
 - **Profile — Instagram:** `files2/profile-instagram.png`
