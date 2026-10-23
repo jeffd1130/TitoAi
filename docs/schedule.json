@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-23",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -838,11 +838,11 @@
         {
           "day": "FRI",
           "title": "Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot",
-          "tag": "Story / Inspiration Reel · Seminar Proof · Small Business",
-          "note": "Planned brief only: Jeff-led lesson on checking AI drafts against business facts, with available classroom footage as context. Video metadata points to Aug 22, not Oct 20; verify event identity and permission before featuring attendees, especially anyone who may be a minor. Do not invent seminar quotes, participant outcomes, client results, or a lesson not supported by the selected footage. No script, captions, edit, or Canva design yet.",
+          "tag": "Short Video + Story Carousel · Human Fact-Check · Small Business",
+          "note": "Approval draft: 28-second silent 1080x1920 MP4 plus five 1080x1350 story slides, using transparent chibi avatar and Tito AI logos. Based on documented Oct 20 Gemini Flash-Lite test for a fictional print shop; slide 3 quotes its observed answer exactly. No real buyer, client, seminar attendee, outcome, or Jeff voiceover is claimed. The Images folder has solo Jeff footage but attendee permissions remain unverified, so no classroom footage appears in this draft. Canva DAHYzu5tuDc (five editable pages), edit: https://www.canva.com/d/ORiLvaXgMMCupbc · video: videos/w43-fri-human-check-short.mp4 · preview: renders/w43-fri-human-check.html · PNG download: downloads/W43-fri-human-check-slides.zip · script: scripts/w43-fri-human-check-script.html. Captions have exactly five hashtags per platform. Jeff approval required; not scheduled/published; no boost pending fresh organic data.",
           "date": "Oct 23",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W43-fri-human-check-captions.html",
           "boost": null
         }
       ]
