@@ -839,10 +839,20 @@
           "day": "FRI",
           "title": "Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot",
           "tag": "Short Video + Story Carousel · Human Fact-Check · Small Business",
-          "note": "Approval draft: 28-second silent 1080x1920 MP4 plus five 1080x1350 story slides, using transparent chibi avatar and Tito AI logos. Based on documented Oct 20 Gemini Flash-Lite test for a fictional print shop; slide 3 quotes its observed answer exactly. No real buyer, client, seminar attendee, outcome, or Jeff voiceover is claimed. The Images folder has solo Jeff footage but attendee permissions remain unverified, so no classroom footage appears in this draft. Canva DAHYzu5tuDc (five editable pages), edit: https://www.canva.com/d/ORiLvaXgMMCupbc · video: videos/w43-fri-human-check-short.mp4 · preview: renders/w43-fri-human-check.html · PNG download: downloads/W43-fri-human-check-slides.zip · script: scripts/w43-fri-human-check-script.html. Captions have exactly five hashtags per platform. Jeff approval required; not scheduled/published; no boost pending fresh organic data.",
+          "note": "Jeff reported on Oct 23 that this piece was already posted. Platform, exact publication time, engagement, and boost are not independently verified. The draft was a 28-second silent 1080x1920 MP4 plus five story slides, based on the documented fictional print-shop Gemini test; no real buyer or outcome is claimed. Canva DAHYzu5tuDc: https://www.canva.com/d/ORiLvaXgMMCupbc · video: videos/w43-fri-human-check-short.mp4 · captions: W43-fri-human-check-captions.html. Do not repost; a distinct Friday draft follows.",
+          "date": "Oct 23",
+          "status": "posted",
+          "url": "W43-fri-human-check-captions.html",
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Ayaw Mo sa Camera? Tatlong Shots, May Video Plan Ka Na",
+          "tag": "Short Video + Carousel · Small Business · AI Shot List",
+          "note": "New replacement/bonus approval draft for Oct 23; distinct from the already-posted human-check piece. 28-second silent 1080x1920 MP4 and five 1080x1350 branded slides. Fictional beginner exercise; prompt untested, sample shot list human-written, and no real client or outcome claimed. Canva DAHYzgSoVrY: https://www.canva.com/d/Z9GG9ZTTBu25dn3 · video: videos/w43-fri-no-face-video.mp4 · preview: renders/w43-fri-no-face-video.html · PNGs: downloads/W43-fri-no-face-slides.zip · optional VO script: scripts/w43-fri-no-face-script.html. Exactly five hashtags per platform. Jeff approval required; no Buffer/social publishing or boost placed.",
           "date": "Oct 23",
           "status": "ready",
-          "url": "W43-fri-human-check-captions.html",
+          "url": "W43-fri-no-face-captions.html",
           "boost": null
         }
       ]
