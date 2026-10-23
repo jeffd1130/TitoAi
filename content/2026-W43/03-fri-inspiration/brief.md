@@ -2,7 +2,7 @@
 
 **Drop:** Friday, Oct 23, 2026 · 7:00 PM PHT. **Status:** approval draft only.
 
-This is a five-slide chibi-led story carousel, not a finished Reel: there is no Jeff voice recording or approved seminar footage in this slot. Do not imply a seminar appearance, real print-shop client, buyer, or business outcome.
+This is a five-slide chibi-led story carousel and a 28-second silent 1080×1920 MP4 cut of those slides. There is no Jeff voice recording or approved seminar footage in this slot. Do not imply a seminar appearance, real print-shop client, buyer, or business outcome.
 
 The only proof is the documented Oct 20 Gemini Flash-Lite **fictional print-shop practice test** in `content/2026-W43/02-wed-demo/drafts/brief.md` and the W43 Wednesday script. Two practice facts were supplied: PDF requests via DM and shop pickup. The AI's quoted line is reproduced exactly from the saved test. The output also flagged missing address, hours, turnaround, and payment details. Prices were not supplied, so owner verification remains essential.
 

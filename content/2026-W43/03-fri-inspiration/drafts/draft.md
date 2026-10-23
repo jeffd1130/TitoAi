@@ -1,6 +1,6 @@
 # W43 Friday approval draft
 
-**Drop:** Friday, October 23, 2026 · 7:00 PM PHT. **Format:** five-slide story carousel; optional Jeff voiceover not recorded. **Status:** ready for Jeff review, not scheduled or published.
+**Drop:** Friday, October 23, 2026 · 7:00 PM PHT. **Format:** five-slide story carousel + 28-second silent vertical MP4; optional Jeff voiceover not recorded. **Status:** ready for Jeff review, not scheduled or published.
 
 **Hook:** Maganda ang AI draft. Postable ba?
 
@@ -26,7 +26,7 @@ Pamangkin, hindi porke maayos pakinggan ang AI draft ay puwede na itong i-post. 
 
 ## Handoff
 
-Canva: pending import. Preview: `docs/renders/w43-fri-human-check.html`. Script: `docs/scripts/w43-fri-human-check-script.html`. PNGs: `docs/slides/W43-fri-human-check/`.
+Canva (five editable pages): https://www.canva.com/d/ORiLvaXgMMCupbc · Preview: `docs/renders/w43-fri-human-check.html` · Short MP4: `docs/videos/w43-fri-human-check-short.mp4` · Script: `docs/scripts/w43-fri-human-check-script.html` · PNGs: `docs/slides/W43-fri-human-check/`.
 
 ## Buffer
 
