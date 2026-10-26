@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-26",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -865,12 +865,12 @@
       "posts": [
         {
           "day": "MON",
-          "title": "AI Draft vs Human Edit: Ang Caption",
-          "tag": "AI Tip Carousel · Everyday Content Creation",
-          "note": "Brief only. Show a real tool test and clear human correction; fictional practice case unless a real client approves use. No assets or captions yet.",
+          "title": "Kalat ang Notes Mo? Gawing Action List gamit AI",
+          "tag": "AI Tip Carousel · Small Business · Organize with AI",
+          "note": "Ready for Jeff approval: five 1080x1350 bright chibi/logo slides, using reused approved Tito AI artwork rather than attendee/client media. Fictional bakery practice notes; copy-ready prompt was not tested because local Claude Code authentication expired Oct 26. Slide 4 is human-written, not observed AI output. Canva DAHZFR2N2Tk: https://www.canva.com/d/ZfUUFg_g224Nw_T · preview: renders/w44-mon-messy-notes.html · PNGs: downloads/W44-mon-messy-notes-slides.zip · script: scripts/w44-mon-messy-notes-script.html. Three platform captions have exactly five hashtags each. Supersedes the AI-draft-vs-human-edit brief to avoid repeating the piece Jeff reported already posted. No Buffer/social publishing or boost.",
           "date": "Oct 26",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W44-mon-messy-notes-captions.html",
           "boost": null
         },
         {
