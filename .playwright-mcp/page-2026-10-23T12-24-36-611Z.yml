@@ -1,0 +1,23 @@
+- main [ref=e2]:
+  - paragraph [ref=e3]: TITO AI · FRIDAY OCT 23 · 7:00 PM PHT · CAROUSEL FOR REVIEW
+  - heading "Ayaw Mo sa Camera? Tatlong Shots, May Content Plan Ka Na." [level=1] [ref=e4]
+  - generic [ref=e5]: Bagong five-slide carousel ito; hindi replay ng na-post nang “AI draft, human check.” Hindi ito video. Fictional beginner scenario at human-written sample shot list ito; hindi totoong client work o tested AI output. Palitan ng verified product/order details bago i-post.
+  - paragraph [ref=e6]:
+    - link "Edit five-page Canva design" [ref=e7] [cursor=pointer]:
+      - /url: https://www.canva.com/d/Z9GG9ZTTBu25dn3
+    - text: ·
+    - link "Preview all slides" [ref=e8] [cursor=pointer]:
+      - /url: renders/w43-fri-no-face-carousel.html
+    - text: ·
+    - link "Download five PNG slides" [ref=e9] [cursor=pointer]:
+      - /url: downloads/W43-fri-no-face-slides.zip
+    - text: ·
+    - link "Slide-by-slide guide" [ref=e10] [cursor=pointer]:
+      - /url: scripts/w43-fri-no-face-script.html
+  - heading "TikTok caption" [level=2] [ref=e11]
+  - generic [ref=e12]: "Ayaw mo sa camera pero gusto mong gumawa ng content para sa negosyo? Product close-up, totoong process, at verified next step—tatlong shots na kaya sa cellphone. Puwede mong hingin sa AI ang shot list; ikaw pa rin ang magche-check ng facts. Follow Tito AI para sa next practical AI lesson. #TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #ContentCreationPH"
+  - heading "Instagram caption" [level=2] [ref=e13]
+  - generic [ref=e14]: "Hindi mo kailangang mag-face cam para maipakita ang produkto mo. Subukan ang tatlong simple shots: close-up, hands-on process, at malinaw na next step na talagang kaya mong tuparin. Gamitin ang libreng AI chat para magplano, pero huwag hayaang mag-imbento ito ng presyo o claims. Follow Tito AI para sa susunod na AI lesson sa negosyo. #TitoAIPH #MgaPamangkin #AIParaSaAtin #SmallBusinessPH #AIContentCreation"
+  - heading "Facebook caption" [level=2] [ref=e15]
+  - generic [ref=e16]: "Pamangkin, kung may maliit kang negosyo at nahihiya kang humarap sa camera, okay lang. Ipakita muna ang produkto, ang totoong proseso, at ang verified na paraan para magtanong o umorder. Puwede kang magpatulong sa libreng AI chat gumawa ng shot list para sa susunod mong cellphone content. Pero ikaw ang magpapatunay ng presyo, details, at claims bago ito i-post. Follow Tito AI para sa next AI lesson sa negosyo. #TitoAIPH #MgaPamangkin #AIParaSaAtin #NegosyoPH #LibrengAI"
+  - paragraph [ref=e17]: Exactly five hashtags and one CTA per platform. Five 1080×1350 slides; no video. Jeff to approve and post natively; no scheduling or publishing by this draft.

@@ -1,0 +1,25 @@
+- main [ref=e2]:
+  - paragraph [ref=e3]: FRI OCT 23, 2026 · 7:00 PM PHT · FIVE-SLIDE CAROUSEL
+  - heading "Ayaw mo sa camera? Tatlong shots, may content plan ka na." [level=1] [ref=e4]
+  - paragraph [ref=e5]:
+    - link "Preview slides" [ref=e6] [cursor=pointer]:
+      - /url: ../renders/w43-fri-no-face-carousel.html
+    - text: ·
+    - link "Captions and approval links" [ref=e7] [cursor=pointer]:
+      - /url: ../W43-fri-no-face-captions.html
+  - generic [ref=e8]:
+    - strong [ref=e9]: Slide 1 · Hook
+    - paragraph [ref=e10]: Ayaw mong humarap sa camera? Okay lang, Pamangkin.
+  - generic [ref=e11]:
+    - strong [ref=e12]: Slide 2 · Problem
+    - paragraph [ref=e13]: Kung may produkto ka, puwede mo pa ring ipakita ang tunay na gawa mo. Fictional beginner scenario ito.
+  - generic [ref=e14]:
+    - strong [ref=e15]: Slide 3 · Prompt
+    - paragraph [ref=e16]: "Sabihin sa libreng AI chat: “Bigyan mo ako ng tatlong cellphone shots para sa 15-second product video. Magtanong muna tungkol sa produkto at verified order details.” Hindi pa ito tested AI output."
+  - generic [ref=e17]:
+    - strong [ref=e18]: Slide 4 · Human sample
+    - paragraph [ref=e19]: Close-up; kamay habang ginagawa; totoong paraan para magtanong o umorder. Palitan ng verified business details.
+  - generic [ref=e20]:
+    - strong [ref=e21]: Slide 5 · Close
+    - paragraph [ref=e22]: AI ang plano; ikaw ang fact-check. Follow Tito AI para sa susunod na AI lesson.
+  - paragraph [ref=e23]: Guide lang ito para sa carousel, hindi video o recorded voiceover. Fictional beginner scenario; no client result claimed.
