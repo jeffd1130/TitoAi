@@ -30,6 +30,7 @@ Images/
 # Editor
 .vscode/
 .idea/
+.playwright-mcp/
 
 # Local env
 .env
