@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -877,10 +877,10 @@
           "day": "WED",
           "title": "VA Handoff Checklist: Bago Ipadala",
           "tag": "Demo Carousel · Aspiring VA / Freelancer",
-          "note": "Brief, script, TikTok/IG/FB captions, and ChatGPT slide pack drafted Oct 27 in content/2026-W44/02-wed-demo/ (fictional Ana + Linis Express Laundry practice example). Gemini prompt untested: S4 is a placeholder until Jeff runs it. No slides, Canva, or posting yet.",
+          "note": "Ready for Jeff review: five 1080x1350 bright chibi/logo slides for fictional Ana + Linis Express Laundry VA handoff practice. Gemini prompt is untested; S4 is clearly human-written, not observed AI output. Canva DAHZQS2Ci1w: https://www.canva.com/d/8ZGIGbxWLaNaKnL · preview: renders/w44-wed-va-handoff.html · PNGs: downloads/W44-wed-va-handoff-slides.zip · captions: W44-wed-va-handoff-captions.html. TikTok/IG/FB captions each have exactly five hashtags. No Buffer/social publishing or boost.",
           "date": "Oct 28",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W44-wed-va-handoff-captions.html",
           "boost": null
         },
         {
