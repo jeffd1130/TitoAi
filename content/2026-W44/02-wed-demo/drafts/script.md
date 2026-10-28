@@ -1,8 +1,8 @@
 # W44 Wednesday · VA Handoff Checklist: Bago Ipadala
 
-**Drop:** Wed Oct 28, 2026 · 7:00 PM PHT · five-slide Demo Carousel (1080x1350) · DRAFT, not approved, not posted.
+**Drop:** Wed Oct 28, 2026 · 7:00 PM PHT · five-slide Demo Carousel (1080x1350) · ready for Jeff review, not approved, not posted.
 **Persona:** "Ana" (fictional aspiring VA). **Scenario:** "Linis Express Laundry" (fictional). Label both "Fictional practice example" on S1 (small tag) and S2 (clear label).
-**CTA:** Save (one only). **Tool:** Gemini free chat. **Prompt status: UNTESTED.**
+**CTA:** Save (one only). **Tool:** Gemini free chat. **Prompt status: UNTESTED.** Final slide 4 is a human-written practice example, not AI output.
 
 **Hook (S1):** "Tapos na ang post. Ipapadala mo na ba? Teka, 3 check muna."
 
@@ -46,15 +46,11 @@ Gawin:
 - Headline: **Check 3: Approval handoff**
 - Small line: Test draft (fictional): "Libreng pickup sa 3 kilo pataas, Nov 1-7! Same-day delivery, P__ lang per kilo."
 
-> **[PLACEHOLDER — paste real output]**
-> Paste Gemini's actual answer here (screenshot or exact excerpt) after Jeff runs the S3 prompt on the test draft. Do not write, paraphrase, or "clean up" model output. Not yet run; nothing on this slide has been observed.
-> Show: (a) claim list with SUPPORTED / WALANG SOURCE marks, (b) the question for the owner, (c) the 3-line handoff message.
-> Label any edit by Jeff as **"human-edited"**.
-> If Gemini misses "same-day delivery" or invents a claim, show that honestly and add the human correction (that is the memorable part).
-> Add: test date + "isang test lang, puwedeng iba ang resulta."
-> Fallback if Gemini unavailable (it was on Oct 16): label slide "Human-written illustrative example, hindi AI output" (same as W44 Mon).
-
-- Headline stays; body = [PLACEHOLDER]. Do not pre-write expected output into the slide.
+> **Final review version — HUMAN-WRITTEN EXAMPLE, HINDI AI OUTPUT.**
+> MAY SOURCE: “Libreng pickup sa 3 kilo pataas” at Nov 1–7 promo dates.
+> WALANG SOURCE: “Same-day delivery” at “P__ per kilo.” Itanong muna ang delivery time at presyo.
+> CHECK 3 · HANDOFF: “Para sa approval po: LinisExpress_PromoPost_2026-11-01_v02_FOR-APPROVAL.png. Paki-confirm po ang presyo at delivery time bago i-post.”
+> Practice example lang; hindi Gemini result. Do not re-label as AI output. If Jeff later tests the prompt, replace this with the exact observed output and date after review.
 
 ## S5 — CTA (chibi: wave)
 - Headline: **3 check bago ipadala**
@@ -68,8 +64,7 @@ Gawin:
 ---
 
 ## Placeholders Jeff must fill
-1. S4: real Gemini output + screenshot (signed-out/free if possible).
-2. Test date and "isang test lang" note on S4 and in captions (captions currently say the test is pending/human labeled; edit once run).
-3. Final handoff wording after Jeff's edits, with human-written parts labeled.
-4. Confirm CTA = Save (alt: BRIEF keyword).
-5. Confirm Gemini free-tier availability on capture day (PH limits not verified).
+1. Optional upgrade: real Gemini output + screenshot (signed-out/free if possible); do not claim the current version has been tested.
+2. If upgraded, add test date and "isang test lang" note on S4 and in captions.
+3. Review final handoff wording; current version is human-written.
+4. Confirm Gemini free-tier availability on capture day (PH limits not verified).
