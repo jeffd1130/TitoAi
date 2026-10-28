@@ -62,7 +62,7 @@ docs/
 **Current/Next/Upcoming weeks (as of Oct 26, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo? Gawing Action List gamit AI** has five-slide Canva carousel, PNGs, script, and platform captions ready for Jeff review; not posted. Wed **VA Handoff Checklist** and Fri **Seminar o Client Workflow Diary** remain briefs only, with proof/permission gating for Fri. |
+| Current | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo? Gawing Action List gamit AI** and Wed **VA Handoff Checklist: Bago Ipadala** have five-slide Canva carousels, PNGs, and platform captions ready for Jeff review; neither is confirmed posted. Wed uses a fictional practice example and clearly human-written S4 because its Gemini prompt is untested. Fri **Seminar o Client Workflow Diary** remains a brief with proof/permission gating. |
 | Next | W45 | Nov 2–8 — not yet planned |
 | Completed | W43 | Oct 19–25 — Mon **Gagawa Ka ng Post Para sa Turon?** and Fri **Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot** were reported posted by Jeff (platform/time/metrics unverified). Wed print-shop demo and Fri replacement **Ayaw Mo sa Camera?** remain approval drafts; do not assume publication. |
 
