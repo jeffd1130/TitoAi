@@ -2,19 +2,27 @@
 
 Target slot: Friday, Oct 30, 2026 · 7:00 PM PHT. **Not approved or scheduled.**
 
-This 30-second 9:16 short uses only a Jeff-only seminar photo, the transparent Tito AI chibi, and the Tito AI logo. It has no text overlays. The review export includes a **candidate chibi voice**, distinct from Jeff's voice. The seminar photo is visual context only—this draft makes no claim about attendees, their results, or the event date. Final review media: `docs/media/W44-fri-tito-ai-first-skill.mp4` with leveled audio, plus `docs/media/W44-fri-tito-ai-first-skill-cover.jpg`. Approval page: `docs/W44-fri-first-skill-captions.html`.
+This 30-second 9:16 short uses a Jeff-only seminar photo, the transparent Tito AI chibi, and the Tito AI logo. Per Jeff's latest request, the updated version adds a hook, one-skill step, copyable prompt, and comment CTA as text overlays. The review export includes a **candidate chibi voice**, distinct from Jeff's voice. The seminar photo is visual context only—this draft makes no claim about attendees, their results, or the event date. Updated review media: `docs/media/W44-fri-tito-ai-first-skill-with-prompts.mp4` with leveled audio, plus `docs/media/W44-fri-tito-ai-first-skill-with-prompts-cover.jpg`. Approval page: `docs/W44-fri-first-skill-captions.html`.
 
 ## Candidate chibi voice — review, not yet approved
 
 - Tone target: pleasant, helpful, smart; warm Taglish delivery, not a Jeff voice clone.
 - Source: HeyGen public catalog voice “DARAN INSIDE 2 with mic”; voice ID `5a3cff20eddd491ca1196ffd1a868fdb`; requested engine `orca` (HeyGen Voice compatibility alias); normal speed.
-- Generated take: 29.231 seconds. Local source: `out/tito-ai-chibi-voice-candidate.mp3` (the service URL ended in .wav, but the returned file is MP3). The whole take was included without cutting it. Final review video: `docs/media/W44-fri-tito-ai-first-skill.mp4`.
+- Generated take: 29.231 seconds. Local source: `public/tito-ai-chibi-voice-candidate.mp3` (the service URL ended in .wav, but the returned file is MP3). The whole take was included without cutting it. Updated review video: `docs/media/W44-fri-tito-ai-first-skill-with-prompts.mp4`.
 - Voice tool request ID: `3fbd40ca35994bb6af8ff4c9e9df7f5c`. This is a candidate only; do not treat the voice as the permanent Tito AI identity until Jeff approves it.
 - Listening limitation: duration and word timestamps were verified from the service response and local file, but naturalness/pronunciation still need Jeff's ear check.
 
 ### Exact spoken text in the generated take
 
 Akala mo kailangan mong maging techie bago gumamit ng AI? Hindi, Pamangkin. Pumili ka lang ng isang skill na gusto mong matutunan. Sabihin mo sa ChatGPT o Gemini: Turuan mo ako ng isang skill sa simpleng Taglish. Bigyan mo ako ng isang maliit na practice task na kaya kong gawin ngayon. Huwag sabay-sabay. Isang tanong, isang hakbang. Anong skill ang gusto mong simulan? Follow Tito AI para sabay tayong matuto.
+
+### On-screen text and prompts
+
+- 0–8s: “DI KAILANGAN MAGING TECHIE”
+- 8–12s: “PUMILI NG ISANG SKILL.”
+- 12–22s: “Turuan mo ako ng [SKILL] sa simpleng Taglish. Bigyan mo ako ng isang maliit na practice task.”
+- 22–30s: “ANONG SKILL ANG SISIMULAN MO? COMMENT MO SA BABA”
+- Follow-up prompt on review page: “Gawing 10-minute practice plan ang task. Magtanong ka pagkatapos para ma-check ko kung naintindihan ko.” These are template prompts, not observed model output.
 
 ## Original Jeff voiceover alternative (~30 seconds, not used in this export)
 
