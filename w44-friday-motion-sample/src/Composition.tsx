@@ -18,7 +18,7 @@ const PhotoScene = () => {
     </div>
     <div style={{position: 'absolute', left: 55, top: 1040, width: 380, height: 380, borderRadius: '50%', backgroundColor: gold, opacity: .95}} />
     <Img src={staticFile('chibi-wave.png')} style={{position: 'absolute', width: 475, height: 713, objectFit: 'contain', left: -30, top: 820, translate: `0px ${(1-entrance)*500}px`, rotate: `${Math.sin(frame/9)*2}deg`}} />
-    <Logo onDark />
+    <Logo />
   </AbsoluteFill>;
 };
 
@@ -36,7 +36,7 @@ const TeachingScene = () => {
       <div style={{height: 20, width: 610, borderRadius: 20, margin: '0 60px 25px', backgroundColor: '#B8C9C3'}} />
       <div style={{height: 20, width: 380, borderRadius: 20, margin: '0 60px', backgroundColor: '#B8C9C3'}} />
     </div>
-    <Logo />
+    <Logo onDark />
   </AbsoluteFill>;
 };
 
