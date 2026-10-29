@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -885,12 +885,12 @@
         },
         {
           "day": "FRI",
-          "title": "Seminar o Client Workflow Diary — Pending Proof",
-          "tag": "Story / Inspiration Reel · Proof",
-          "note": "Brief only. Requires Jeff-confirmed footage and any necessary client/participant approval; otherwise use a clearly fictional practice challenge. No assets or captions yet.",
+          "title": "Isang Skill, Isang Hakbang — AI para sa Personal Growth",
+          "tag": "Chibi Voice Short · Beginner AI · Personal Growth",
+          "note": "Review-ready 30-second 1080x1920 vertical MP4 with complete candidate chibi voice, Jeff-only seminar photo, transparent chibi, and Tito AI logo; no participant footage or outcome claims. Captions for TikTok, Instagram, and Facebook each have exactly five hashtags. Video and cover: media/W44-fri-tito-ai-first-skill.mp4 and media/W44-fri-tito-ai-first-skill-cover.jpg. Voice tone and Taglish pronunciation require Jeff approval before posting; no Canva edit design for this video, no Buffer/social scheduling, and no boost.",
           "date": "Oct 30",
-          "status": "draft",
-          "url": null,
+          "status": "ready",
+          "url": "W44-fri-first-skill-captions.html",
           "boost": null
         }
       ]
