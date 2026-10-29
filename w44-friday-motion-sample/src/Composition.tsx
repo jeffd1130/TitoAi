@@ -82,7 +82,7 @@ export const SampleVideo = () => {
       <Series.Sequence name="Chibi teaches" durationInFrames={14 * fps} premountFor={fps}><TeachingScene /></Series.Sequence>
       <Series.Sequence name="Tito AI close" durationInFrames={8 * fps} premountFor={fps}><ClosingScene /></Series.Sequence>
     </Series>
-    <Audio name="Chibi narration — complete take" src={staticFile('tito-ai-chibi-voice-candidate.mp3')} premountFor={fps} />
+    <Audio name="Kuya Chris Filipino narration — complete take" src={staticFile('tito-ai-kuya-chris-filipino-voice.mp3')} premountFor={fps} />
   </>;
 };
 

@@ -1,0 +1,21 @@
+0 16 * * * /usr/bin/python3 /Users/jeff/Documents/Claude/TItoAi/scripts/daily_update.py >> /Users/jeff/Documents/Claude/TItoAi/scripts/daily_update.log 2>&1
+# --- Tito AI Automation ---
+# Daily summary at 10:00 AM PHT (6:00 PM PST)
+0 18 * * * /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-summary.py >> /tmp/titoai-cron.log 2>&1
+# D-3 recording reminders at 9:00 AM PHT (5:00 PM PST day before)
+0 17 * * 4 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-record.py >> /tmp/titoai-cron.log 2>&1
+0 17 * * 6 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-record.py >> /tmp/titoai-cron.log 2>&1
+0 17 * * 1 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-record.py >> /tmp/titoai-cron.log 2>&1
+# D-2 content creation reminders at 9:00 AM PHT (5:00 PM PST day before)
+0 17 * * 5 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-create.py >> /tmp/titoai-cron.log 2>&1
+0 17 * * 0 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-create.py >> /tmp/titoai-cron.log 2>&1
+0 17 * * 2 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-create.py >> /tmp/titoai-cron.log 2>&1
+# Weekly production overview at 9:00 AM PHT Saturday (5:00 PM PST Friday)
+0 17 * * 5 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-weekly.py >> /tmp/titoai-cron.log 2>&1
+# Drop reminders 1hr before each post (overnight PST — needs Mac awake)
+0 3 * * 1 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-remind.py >> /tmp/titoai-cron.log 2>&1
+0 2 * * 3 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-remind.py >> /tmp/titoai-cron.log 2>&1
+0 2 * * 5 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-remind.py >> /tmp/titoai-cron.log 2>&1
+# --- End Tito AI Automation ---
+# Weekly health check reminder — Monday 8 AM PHT
+0 8 * * 1 /opt/homebrew/bin/python3 /Users/jeff/Documents/Claude/TItoAi/automation/tito-health-check.py >> /tmp/titoai-cron.log 2>&1
