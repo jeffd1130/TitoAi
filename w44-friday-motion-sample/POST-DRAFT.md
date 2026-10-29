@@ -2,9 +2,21 @@
 
 Target slot: Friday, Oct 30, 2026 · 7:00 PM PHT. **Not approved or scheduled.**
 
-This 30-second 9:16 visual sample uses only a Jeff-only seminar photo, the transparent Tito AI chibi, and the Tito AI logo. It has no audio or text overlays. Add Jeff's complete voice recording after approval; do not cut his audio. The seminar photo is visual context only—this draft makes no claim about attendees, their results, or the event date.
+This 30-second 9:16 sample uses only a Jeff-only seminar photo, the transparent Tito AI chibi, and the Tito AI logo. It has no text overlays. The review export includes a **candidate chibi voice**, distinct from Jeff's voice. The seminar photo is visual context only—this draft makes no claim about attendees, their results, or the event date.
 
-## Jeff voiceover draft (~30 seconds)
+## Candidate chibi voice — review, not yet approved
+
+- Tone target: pleasant, helpful, smart; warm Taglish delivery, not a Jeff voice clone.
+- Source: HeyGen public catalog voice “DARAN INSIDE 2 with mic”; voice ID `5a3cff20eddd491ca1196ffd1a868fdb`; requested engine `orca` (HeyGen Voice compatibility alias); normal speed.
+- Generated take: 29.231 seconds. Local source: `out/tito-ai-chibi-voice-candidate.mp3` (the service URL ended in .wav, but the returned file is MP3). Review video: `out/tito-ai-friday-motion-with-voice.mp4`.
+- Voice tool request ID: `3fbd40ca35994bb6af8ff4c9e9df7f5c`. This is a candidate only; do not treat the voice as the permanent Tito AI identity until Jeff approves it.
+- Listening limitation: duration and word timestamps were verified from the service response and local file, but naturalness/pronunciation still need Jeff's ear check.
+
+### Exact spoken text in the generated take
+
+Akala mo kailangan mong maging techie bago gumamit ng AI? Hindi, Pamangkin. Pumili ka lang ng isang skill na gusto mong matutunan. Sabihin mo sa ChatGPT o Gemini: Turuan mo ako ng isang skill sa simpleng Taglish. Bigyan mo ako ng isang maliit na practice task na kaya kong gawin ngayon. Huwag sabay-sabay. Isang tanong, isang hakbang. Anong skill ang gusto mong simulan? Follow Tito AI para sabay tayong matuto.
+
+## Original Jeff voiceover alternative (~30 seconds, not used in this export)
 
 Akala mo kailangan mong maging techie bago gumamit ng AI? Hindi, Pamangkin. Pumili ka lang ng isang skill na gusto mong matutunan. Sabihin mo sa ChatGPT o Gemini: “Turuan mo ako ng [skill] sa simpleng Taglish. Bigyan mo ako ng isang maliit na practice task na kaya kong gawin ngayon.” Huwag sabay-sabay. Isang tanong, isang hakbang. Anong skill ang gusto mong simulan? Follow Tito AI para sabay tayong matuto.
 
@@ -22,7 +34,7 @@ Mga Pamangkin, puwedeng gamitin ang AI para sa personal growth, hindi lang sa tr
 
 ## Before posting
 
-- Review the sample animation and record Jeff's voice for the exact script (or revise script to fit the recording).
-- Add the **whole** approved recording without trimming; adjust visual duration instead if necessary.
-- Confirm photo/brand approval and export the finished audio version.
+- Listen to the full chibi voice candidate and check Taglish pronunciation, warmth, and pacing.
+- If Jeff prefers his own voice instead, record it and add the **whole** approved recording without trimming; adjust visual duration instead if necessary.
+- Confirm photo/brand approval before final posting export.
 - Tito AI decides whether and when to publish. Do not auto-schedule or post.
