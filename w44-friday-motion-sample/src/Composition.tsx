@@ -8,20 +8,21 @@ const teal = '#0D6B63';
 
 const Logo = ({onDark = false}: {onDark?: boolean}) => <Img src={staticFile(onDark ? 'tito-logo-on-dark.png' : 'tito-logo.png')} style={{position: 'absolute', width: 300, bottom: 105, left: 80}} />;
 
-const PhotoScene = () => {
+const OpeningScene = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const photoScale = interpolate(frame, [0, 8 * fps], [1, 1.09], {extrapolateRight: 'clamp'});
   const entrance = spring({frame, fps, config: {damping: 15, stiffness: 95}});
   return <AbsoluteFill style={{backgroundColor: cream, overflow: 'hidden'}}>
-    <div style={{position: 'absolute', width: 980, height: 1250, top: 150, left: 50, borderRadius: 44, overflow: 'hidden', boxShadow: '0 25px 90px #0A0F1E35'}}>
-      <Img src={staticFile('seminar-jeff-only.jpeg')} style={{width: '100%', height: '100%', objectFit: 'cover', scale: photoScale}} />
+    <div style={{position: 'absolute', width: 980, height: 1250, top: 150, left: 50, borderRadius: 44, overflow: 'hidden', backgroundColor: navy, boxShadow: '0 25px 90px #0A0F1E35'}}>
+      <div style={{position: 'absolute', width: 850, height: 850, borderRadius: '50%', left: 250, top: 420, backgroundColor: teal, opacity: .9}} />
+      <div style={{position: 'absolute', width: 570, height: 570, borderRadius: '50%', left: 90, top: 690, backgroundColor: gold, opacity: .95}} />
+      <div style={{position: 'absolute', width: 720, height: 720, borderRadius: '50%', left: 410, top: 760, backgroundColor: cream, opacity: .15}} />
     </div>
-    <div style={{position: 'absolute', left: 95, top: 225, width: 880, color: navy, fontFamily: 'Arial, sans-serif', fontSize: 90, lineHeight: 0.96, fontWeight: 900, letterSpacing: -3, textShadow: '0 2px 20px #FFF8E7', opacity: entrance}}>
+    <div style={{position: 'absolute', left: 95, top: 225, width: 880, color: cream, fontFamily: 'Arial, sans-serif', fontSize: 90, lineHeight: 0.96, fontWeight: 900, letterSpacing: -3, opacity: entrance}}>
       DI KAILANGAN<br/>MAGING TECHIE
     </div>
     <div style={{position: 'absolute', left: 55, top: 1040, width: 380, height: 380, borderRadius: '50%', backgroundColor: gold, opacity: .95}} />
-    <Img src={staticFile('chibi-wave.png')} style={{position: 'absolute', width: 475, height: 713, objectFit: 'contain', left: -30, top: 820, translate: `0px ${(1-entrance)*500}px`, rotate: `${Math.sin(frame/9)*2}deg`}} />
+    <Img src={staticFile('chibi-wave.png')} style={{position: 'absolute', width: 650, height: 975, objectFit: 'contain', left: 215, top: 505, translate: `0px ${(1-entrance)*500}px`, rotate: `${Math.sin(frame/9)*2}deg`}} />
     <Logo />
   </AbsoluteFill>;
 };
@@ -77,7 +78,7 @@ export const SampleVideo = () => {
   const {fps} = useVideoConfig();
   return <>
     <Series>
-      <Series.Sequence name="Real seminar photo" durationInFrames={8 * fps} premountFor={fps}><PhotoScene /></Series.Sequence>
+      <Series.Sequence name="Illustrated opening — no personal photo" durationInFrames={8 * fps} premountFor={fps}><OpeningScene /></Series.Sequence>
       <Series.Sequence name="Chibi teaches" durationInFrames={14 * fps} premountFor={fps}><TeachingScene /></Series.Sequence>
       <Series.Sequence name="Tito AI close" durationInFrames={8 * fps} premountFor={fps}><ClosingScene /></Series.Sequence>
     </Series>
