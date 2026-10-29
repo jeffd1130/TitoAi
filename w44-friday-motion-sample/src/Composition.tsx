@@ -1,4 +1,5 @@
 import {AbsoluteFill, Composition, Img, Series, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Audio} from '@remotion/media';
 
 const navy = '#0A0F1E';
 const cream = '#FFF8E7';
@@ -74,11 +75,14 @@ const ClosingScene = () => {
 
 export const SampleVideo = () => {
   const {fps} = useVideoConfig();
-  return <Series>
-    <Series.Sequence name="Real seminar photo" durationInFrames={8 * fps} premountFor={fps}><PhotoScene /></Series.Sequence>
-    <Series.Sequence name="Chibi teaches" durationInFrames={14 * fps} premountFor={fps}><TeachingScene /></Series.Sequence>
-    <Series.Sequence name="Tito AI close" durationInFrames={8 * fps} premountFor={fps}><ClosingScene /></Series.Sequence>
-  </Series>;
+  return <>
+    <Series>
+      <Series.Sequence name="Real seminar photo" durationInFrames={8 * fps} premountFor={fps}><PhotoScene /></Series.Sequence>
+      <Series.Sequence name="Chibi teaches" durationInFrames={14 * fps} premountFor={fps}><TeachingScene /></Series.Sequence>
+      <Series.Sequence name="Tito AI close" durationInFrames={8 * fps} premountFor={fps}><ClosingScene /></Series.Sequence>
+    </Series>
+    <Audio name="Chibi narration — complete take" src={staticFile('tito-ai-chibi-voice-candidate.mp3')} premountFor={fps} />
+  </>;
 };
 
 export const MyComposition = () => <Composition id="TitoAiFridaySample" component={SampleVideo} durationInFrames={900} fps={30} width={1080} height={1920} />;
