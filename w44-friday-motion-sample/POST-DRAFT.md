@@ -11,7 +11,7 @@ This 30-second 9:16 short uses the transparent Tito AI chibi, illustrated brand 
 - Original local source: `public/tito-ai-kuya-chris-filipino-voice.mp3`. The service URL ended in `.wav`, but the downloaded file probes as MP3 at 44.1 kHz mono. The entire take was placed in the 30-second video without trimming, speed change, or pitch change. Final AAC audio was loudness-leveled only.
 - Jeff still needs to judge the accent, warmth, and Taglish pronunciation by listening. The catalog label and word timestamps do not prove that the delivery sounds natural.
 
-## Candidate chibi voice — review, not yet approved
+## Previous chibi voice take — superseded
 
 - Tone target: pleasant, helpful, smart; warm Taglish delivery, not a Jeff voice clone.
 - Source: HeyGen public catalog voice “DARAN INSIDE 2 with mic”; voice ID `5a3cff20eddd491ca1196ffd1a868fdb`; requested engine `orca` (HeyGen Voice compatibility alias); normal speed.
