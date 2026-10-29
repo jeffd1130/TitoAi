@@ -5,7 +5,7 @@ const cream = '#FFF8E7';
 const gold = '#FFB800';
 const teal = '#0D6B63';
 
-const Logo = () => <Img src={staticFile('tito-logo.png')} style={{position: 'absolute', width: 300, bottom: 105, left: 80}} />;
+const Logo = ({onDark = false}: {onDark?: boolean}) => <Img src={staticFile(onDark ? 'tito-logo-on-dark.png' : 'tito-logo.png')} style={{position: 'absolute', width: 300, bottom: 105, left: 80}} />;
 
 const PhotoScene = () => {
   const frame = useCurrentFrame();
@@ -18,7 +18,7 @@ const PhotoScene = () => {
     </div>
     <div style={{position: 'absolute', left: 55, top: 1040, width: 380, height: 380, borderRadius: '50%', backgroundColor: gold, opacity: .95}} />
     <Img src={staticFile('chibi-wave.png')} style={{position: 'absolute', width: 475, height: 713, objectFit: 'contain', left: -30, top: 820, translate: `0px ${(1-entrance)*500}px`, rotate: `${Math.sin(frame/9)*2}deg`}} />
-    <Logo />
+    <Logo onDark />
   </AbsoluteFill>;
 };
 
@@ -48,7 +48,7 @@ const ClosingScene = () => {
     <div style={{position: 'absolute', width: 900, height: 900, left: 90, top: 320, borderRadius: '50%', backgroundColor: cream, scale: pop}} />
     <Img src={staticFile('chibi-wave.png')} style={{position: 'absolute', width: 720, height: 1080, objectFit: 'contain', left: 180, top: 260, rotate: `${Math.sin(frame/7)*3}deg`}} />
     <div style={{position: 'absolute', bottom: 0, height: 460, width: '100%', backgroundColor: navy}} />
-    <Img src={staticFile('tito-logo.png')} style={{position: 'absolute', width: 620, left: 230, bottom: 170}} />
+    <Img src={staticFile('tito-logo-on-dark.png')} style={{position: 'absolute', width: 620, left: 230, bottom: 170}} />
   </AbsoluteFill>;
 };
 
