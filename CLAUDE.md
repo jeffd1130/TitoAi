@@ -84,6 +84,8 @@ docs/
 
 **Oct 29 W44 Fri overlay revision:** Jeff explicitly requested text overlays and prompts for the voiced short, overriding the older video no-overlay default for this piece. The updated 30-second export uses a hook on the Jeff-only photo, a one-skill step, a copyable ChatGPT/Gemini prompt template, and a comment question. The full original voice take remains uncut. The updated MP4/cover use the `-with-prompts` filename and are linked from `docs/W44-fri-first-skill-captions.html`; a second follow-up prompt is on the review page. These are prompt templates, not tested AI output. The prior no-text export remains in `docs/media/` only as an older version. No posting or scheduling.
 
+**Oct 29 W44 Fri photo-removal revision:** Jeff then requested removal of his photo. The current export is avatar-only: illustrated navy/gold/teal opening, chibi host, Tito AI logo, the same hook/prompt/comment overlays, and the complete candidate voice take. Current MP4/cover use the `-avatar-only` filename and are linked from `docs/W44-fri-first-skill-captions.html`; older exports remain archival, not the current approval version. No social posting or scheduling.
+
 **Key live URLs:**
 | Page | URL |
 |------|-----|
