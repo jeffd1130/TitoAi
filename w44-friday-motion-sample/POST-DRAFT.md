@@ -2,13 +2,13 @@
 
 Target slot: Friday, Oct 30, 2026 · 7:00 PM PHT. **Not approved or scheduled.**
 
-This 30-second 9:16 short uses a Jeff-only seminar photo, the transparent Tito AI chibi, and the Tito AI logo. Per Jeff's latest request, the updated version adds a hook, one-skill step, copyable prompt, and comment CTA as text overlays. The review export includes a **candidate chibi voice**, distinct from Jeff's voice. The seminar photo is visual context only—this draft makes no claim about attendees, their results, or the event date. Updated review media: `docs/media/W44-fri-tito-ai-first-skill-with-prompts.mp4` with leveled audio, plus `docs/media/W44-fri-tito-ai-first-skill-with-prompts-cover.jpg`. Approval page: `docs/W44-fri-first-skill-captions.html`.
+This 30-second 9:16 short uses the transparent Tito AI chibi, illustrated brand shapes, and Tito AI logo. Jeff's photo was removed at his request. The video includes a hook, one-skill step, copyable prompt, and comment CTA as text overlays. The review export includes a **candidate chibi voice**, distinct from Jeff's voice. This draft makes no claim about seminar attendees, results, or event dates. Current review media: `docs/media/W44-fri-tito-ai-first-skill-avatar-only.mp4` with leveled audio, plus `docs/media/W44-fri-tito-ai-first-skill-avatar-only-cover.jpg`. Approval page: `docs/W44-fri-first-skill-captions.html`.
 
 ## Candidate chibi voice — review, not yet approved
 
 - Tone target: pleasant, helpful, smart; warm Taglish delivery, not a Jeff voice clone.
 - Source: HeyGen public catalog voice “DARAN INSIDE 2 with mic”; voice ID `5a3cff20eddd491ca1196ffd1a868fdb`; requested engine `orca` (HeyGen Voice compatibility alias); normal speed.
-- Generated take: 29.231 seconds. Local source: `public/tito-ai-chibi-voice-candidate.mp3` (the service URL ended in .wav, but the returned file is MP3). The whole take was included without cutting it. Updated review video: `docs/media/W44-fri-tito-ai-first-skill-with-prompts.mp4`.
+- Generated take: 29.231 seconds. Local source: `public/tito-ai-chibi-voice-candidate.mp3` (the service URL ended in .wav, but the returned file is MP3). The whole take was included without cutting it. Current review video: `docs/media/W44-fri-tito-ai-first-skill-avatar-only.mp4`.
 - Voice tool request ID: `3fbd40ca35994bb6af8ff4c9e9df7f5c`. This is a candidate only; do not treat the voice as the permanent Tito AI identity until Jeff approves it.
 - Listening limitation: duration and word timestamps were verified from the service response and local file, but naturalness/pronunciation still need Jeff's ear check.
 
@@ -44,5 +44,5 @@ Mga Pamangkin, puwedeng gamitin ang AI para sa personal growth, hindi lang sa tr
 
 - Listen to the full chibi voice candidate and check Taglish pronunciation, warmth, and pacing.
 - If Jeff prefers his own voice instead, record it and add the **whole** approved recording without trimming; adjust visual duration instead if necessary.
-- Confirm photo/brand approval before social posting. The review export is complete; no Canva edit design was made for this video.
+- Confirm avatar/brand approval before social posting. The review export is complete; no Canva edit design was made for this video.
 - Tito AI decides whether and when to publish. Do not auto-schedule or post.
