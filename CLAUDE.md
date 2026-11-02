@@ -61,12 +61,12 @@ docs/
   renders/            ← Solo render HTML files (production artifacts, not published)
 ```
 
-**Current/Next/Upcoming weeks (as of Oct 29, 2026):**
+**Current/Next/Upcoming weeks (as of Nov 2, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo? Gawing Action List gamit AI** and Wed **VA Handoff Checklist: Bago Ipadala** have five-slide Canva carousels, PNGs, and platform captions ready for Jeff review; neither is confirmed posted. Wed uses a fictional practice example and clearly human-written S4 because its Gemini prompt is untested. Fri **Isang Skill, Isang Hakbang** is a 30-second voiced chibi video with a Jeff-only seminar photo, user-requested text/prompt overlays, and three five-hashtag captions, ready for Jeff's voice/brand approval; no Canva edit design. |
-| Next | W45 | Nov 2–8 — not yet planned |
-| Completed | W43 | Oct 19–25 — Mon **Gagawa Ka ng Post Para sa Turon?** and Fri **Bakit Hindi Ko Hinahayaang AI Lang ang Sumagot** were reported posted by Jeff (platform/time/metrics unverified). Wed print-shop demo and Fri replacement **Ayaw Mo sa Camera?** remain approval drafts; do not assume publication. |
+| Current | W45 | Nov 2–8 — Mon **“HM po?” Hindi Presyo Lang ang Sagot** has five illustrated 1080×1350 slides, PNGs, script, and platform captions as an approval draft; not confirmed posted. Wed/Fri not yet planned. |
+| Next | W46 | Nov 9–15 — not yet planned. |
+| Completed | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo?** and Wed **VA Handoff Checklist** have five-slide Canva carousels; Fri **Isang Skill, Isang Hakbang** has a voiced chibi short. All are approval assets; publication and current metrics remain unverified. |
 
 **Oct 19 Canva recovery and content pivot:** W42 Fri **Pati Pahinga, May Deadline?** is an editable five-page Canva design (`DAHYcb26WHk`); link and captions were sent to Jeff via Telegram. It remains unposted/unverified, and no voiceover or reel has been completed. W43 Mon's first boundary-setting draft was replaced at Jeff's request by **Gagawa Ka ng Post Para sa Turon?**. Keep teaching AI to regular Pinoys; add a practice-to-portfolio pathway for curious VAs, freelancers, and content creators without promising jobs or treating fictional samples as real client work. The new post quotes one observed Gemini failure and shows a human correction. See `content/strategy/2026-10-19-va-freelancer-content-pivot.md`. Do not boost without current organic engagement data.
 
