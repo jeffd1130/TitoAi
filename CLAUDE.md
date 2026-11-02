@@ -64,7 +64,7 @@ docs/
 **Current/Next/Upcoming weeks (as of Nov 2, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W45 | Nov 2–8 — Mon **“HM po?” Hindi Presyo Lang ang Sagot** has five illustrated 1080×1350 slides, PNGs, script, and platform captions as an approval draft; not confirmed posted. Wed/Fri not yet planned. |
+| Current | W45 | Nov 2–8 — Mon **“HM po?” Hindi Presyo Lang ang Sagot** has five illustrated 1080×1350 slides, PNGs, script, and platform captions as an approval draft; not confirmed posted. A separate five-part recut of the original Tito AI video is ready for review, with no release dates assigned. Wed/Fri not yet planned. |
 | Next | W46 | Nov 9–15 — not yet planned. |
 | Completed | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo?** and Wed **VA Handoff Checklist** have five-slide Canva carousels; Fri **Isang Skill, Isang Hakbang** has a voiced chibi short. All are approval assets; publication and current metrics remain unverified. |
 
@@ -89,6 +89,8 @@ docs/
 **Oct 29 W44 Fri photo-removal revision:** Jeff then requested removal of his photo. The current export is avatar-only: illustrated navy/gold/teal opening, chibi host, Tito AI logo, the same hook/prompt/comment overlays, and the complete candidate voice take. Current MP4/cover use the `-avatar-only` filename and are linked from `docs/W44-fri-first-skill-captions.html`; older exports remain archival, not the current approval version. No social posting or scheduling.
 
 **Oct 29 W44 Fri Filipino-voice revision:** Jeff asked for a more Filipino accent and approved a retry after the first voice-engine mismatch. The same spoken script was generated once with HeyGen's Filipino-labeled “Kuya Chris Cruz” public voice using the required Orca engine (28.238s full take). The current avatar-only export is `docs/media/W44-fri-tito-ai-first-skill-filipino-voice.mp4`, linked from `docs/W44-fri-first-skill-captions.html`; the prior MP4 remains archival. The voice is not a Jeff clone and still needs his listening approval for natural Taglish delivery. No posting or scheduling.
+
+**Nov 3 origin-story recut:** Jeff supplied `/Users/jeff/Downloads/Tito AI 1.mp4` (2:48 old origin story) for a more entertaining repost. Five 25–30-second 1080×1920 approval clips now live in `docs/media/tito-ai-origin-recut/`, with original voice/burned-in subtitles, approved chibi, short hook labels and next-part cues. The review page is `docs/W45-origin-recut-review.html`; separate TikTok/IG/FB captions are in `content/2026-W45/bonus-origin-recut/captions.md`. The original old footage shows a Silicon Valley visit, not an employment or endorsement claim. Jeff must listen to all chapter boundaries and approve before any native upload; no release dates, Buffer scheduling, social publication, or boost are set. First test should be Part 1 only, then use actual completion and follow conversion to decide whether to release the rest.
 
 **Key live URLs:**
 | Page | URL |
