@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-11-02",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -891,6 +891,24 @@
           "date": "Oct 30",
           "status": "ready",
           "url": "W44-fri-first-skill-captions.html",
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W45",
+      "range": "Nov 2–8",
+      "theme": "AI para sa Small Business · Buyer-Reply Quick Win",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "“HM po?” Hindi Presyo Lang ang Sagot",
+          "tag": "AI Tip Carousel · Small Business · Customer Reply",
+          "note": "Five 1080×1350 slides with an AI-generated illustration, existing Tito AI chibi/avatar and logo; fictional banana-chip example, human-written sample reply, untested AI prompt. Approval draft only. Growth hypothesis: useful, saveable customer-reply template may earn follows; compare follows per 1,000 views, saves and shares with recent posts. Preview: renders/w45-mon-hm-reply.html · PNGs: downloads/W45-mon-hm-reply-slides.zip · script: scripts/w45-mon-hm-reply-script.html. TikTok/IG/FB captions each have exactly five hashtags. Canva edit link pending. No Buffer/social posting or boost.",
+          "date": "Nov 2",
+          "status": "draft",
+          "url": "W45-mon-hm-reply-captions.html",
           "boost": null
         }
       ]
