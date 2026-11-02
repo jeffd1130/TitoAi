@@ -13,7 +13,7 @@ Produce one complete draft for a specific content slot (cover graphic + caption 
 
 3. **Check for raw assets** in `content/<YYYY-W##>/<slot>/raw/`. If the folder is missing or empty, create it and produce an on-brand image or short video draft using the approved chibi/logo assets and, when useful, a newly generated visual. Label generated imagery and practice examples clearly. Save the asset in the Tito AI project and continue toward a review draft; do not stop merely because Jeff has not supplied media. Do not use identifiable seminar attendees or client material without verified permission. Send the new asset to Jeff for approval before any posting.
 
-4. **Select cover asset:**
+4. **Select cover asset and visual host:** Include the approved Tito AI chibi avatar and logo in every new carousel or video, with a pose that fits the story, unless Jeff explicitly asks otherwise.
    - Look for `.jpg` / `.jpeg` still frames first (preferred for cover graphic).
    - If only video, extract a representative still (use the first frame or a notable moment).
    - Fallback: use the newly created draft asset or approved chibi artwork. Do not silently substitute old or unrelated footage.
