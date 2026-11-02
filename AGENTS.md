@@ -432,6 +432,7 @@ bash automation/setup-cron.sh      # install all cron jobs
 ## When something is missing
 
 - **Every new post** → include the approved Tito AI chibi avatar as a recognizable visual host alongside the logo, with a pose suited to the story, unless Jeff explicitly asks otherwise.
+- **Before sharing a Canva import** → open the actual Canva pages and visually verify that the hero image, chibi, and logo appear; page count alone is not enough. If the HTML import drops images, fix asset URLs or use a visual-proof import and clearly state any editability tradeoff.
 - **Raw assets missing** → work in `/Users/jeff/Documents/Claude/TItoAi/` and create an on-brand image or video draft in the slot's `raw/` folder for Jeff's approval. Review recent posts and available engagement first, avoid repeats, and record one testable views/follows growth hypothesis. Never invent proof or guarantee results; do not schedule or publish.
 - **Canva not connected** → stop, surface the connection step
 - **Brand kit not found** → check `brand/README.md`
