@@ -431,7 +431,7 @@ bash automation/setup-cron.sh      # install all cron jobs
 
 ## When something is missing
 
-- **Raw assets missing** → tell Jeff which slot is empty, suggest Jeff drop video in `Videos/<content-type>/`
+- **Raw assets missing** → work in `/Users/jeff/Documents/Claude/TItoAi/` and create an on-brand image or video draft in the slot's `raw/` folder for Jeff's approval. Review recent posts and available engagement first, avoid repeats, and record one testable views/follows growth hypothesis. Never invent proof or guarantee results; do not schedule or publish.
 - **Canva not connected** → stop, surface the connection step
 - **Brand kit not found** → check `brand/README.md`
 

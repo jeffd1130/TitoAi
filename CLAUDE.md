@@ -29,6 +29,8 @@ All times are **PHT (UTC+8)**. Jeff is based in Manila (PHT, UTC+8) — his Mac 
 
 After each production run, send the Canva edit URL + script link to chat ID `8325608814` via `@titoaiph_bot`. Use `parse_mode=HTML` always.
 
+**Standing production direction (Nov 2, 2026):** Always work in `/Users/jeff/Documents/Claude/TItoAi/`. When a scheduled slot has no raw assets, create an on-brand image or video draft in that week's `raw/` folder using approved Tito AI chibi/logo assets and, when useful, newly generated media; do not stop just because Jeff has not supplied footage. Label illustrations and fictional practice examples, never imply they are real client/seminar proof, and send the draft for Jeff's approval. Before each post, review the recent schedule, captions, and latest available engagement data to avoid repeats; choose one growth job and record a testable hook/format/CTA hypothesis. Compare views with saves, shares, comments, and follows after posting. Growth is a goal, not a guaranteed outcome. Do not publish or schedule on Jeff's behalf.
+
 ---
 
 ## GitHub Pages hub
@@ -469,6 +471,6 @@ bash automation/setup-cron.sh      # install all cron jobs
 
 ## When something is missing
 
-- **Raw assets missing** → tell Jeff which slot is empty, suggest Jeff drop video in `Videos/<content-type>/`
+- **Raw assets missing** → create an on-brand image or video draft in the slot's `raw/` folder for Jeff's approval; use approved chibi/logo assets and label any generated illustration or practice example. Ask Jeff for real footage only when the concept requires verified real-world proof.
 - **Canva not connected** → stop, surface the connection step
 - **Brand kit not found** → check `brand/README.md`
