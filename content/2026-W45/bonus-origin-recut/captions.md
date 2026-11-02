@@ -32,7 +32,7 @@ Kailangan ko ng website. Wala akong web-dev background, kaya nagtanong ako sa AI
 
 **Instagram**
 
-Isang gabi, phone ang hawak ko at tinanong ko ang Claude kung paano gumawa ng website. Tumulong din ang Gemini habang pinag-aaralan ko ang proseso. Ang lesson: puwedeng magsimula sa tanong kahit hindi ka developer. Follow Tito AI para sa susunod na parte.
+Tuwing gabi, phone ang hawak ko at tinanong ko ang Claude kung paano gumawa ng website. Tumulong din ang Gemini habang pinag-aaralan ko ang proseso. Ang lesson: puwedeng magsimula sa tanong kahit hindi ka developer. Follow Tito AI para sa susunod na parte.
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #LearnWithAI #WebsiteJourney
 
@@ -46,7 +46,7 @@ Noong kailangan kong magkaroon ng website para sa side hustle, hindi ko pa alam 
 
 **TikTok**
 
-Wala akong web-dev background. Nang may nagtanong tungkol sa social media, wala rin akong ready na sagot. Ang ginawa ko: nag-aral at sumubok. Follow Tito AI para sa Part 4.
+Wala akong web-dev background. Nang may nagtanong tungkol sa social media, wala rin akong background doon. Ang ginawa ko: nag-aral at sumubok. Follow Tito AI para sa Part 4.
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #LearnByDoing #PinoyFreelancer
 
