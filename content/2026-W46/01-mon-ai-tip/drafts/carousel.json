@@ -1,0 +1,57 @@
+{
+  "title": "W46 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
+  "series": "W46 · Monday 8:00 PM PHT",
+  "captions": "content/2026-W46/01-mon-ai-tip/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "cream",
+      "kicker": "TITO AI TIP",
+      "headline": "Buy 1 Take 1 mo…",
+      "highlight": "Lugi pala?",
+      "body": "I-check muna ang promo bago i-post.",
+      "chibi": "surprised",
+      "label": "Fictional practice example"
+    },
+    {
+      "bg": "marigold",
+      "headline": "Masarap ang promo kung tubo pa.",
+      "body": "Presyo: ₱120 / 200g pack • Puhunan: ₱70 / pack (kasama packaging) • Promo: Buy 1 Take 1. Madaling mag-isip ng promo. Mahirap kapag hindi kinuwenta. Hindi pa kasama ang delivery at platform fee.",
+      "chibi": "teach",
+      "label": "Fictional practice example — dried mango seller"
+    },
+    {
+      "bg": "cream",
+      "headline": "Copy-paste sa Gemini o Claude (libre)",
+      "body": "Hindi pa nasubukan ang prompt na ito. Subukan mo at i-check ang math.",
+      "prompt": "Ikaw ang tagasuri ng promo para sa maliit kong negosyo. Numbers lang na ibibigay ko ang gamitin mo; huwag mag-imbento.\n\nProdukto: [produkto]\nPresyo ng benta bawat piraso: ₱[__]\nPuhunan bawat piraso (kasama packaging): ₱[__]\nPromo na gusto kong subukan: [hal. Buy 1 Take 1]\n\nGawin:\n1. Ipakita step-by-step ang kita, gastos, at tubo kada order, may promo vs. walang promo.\n2. Sabihin kung tubo pa o lugi.\n3. Magbigay ng 2 mas ligtas na bersyon ng promo, kasama ang computation.",
+      "chibi": "none",
+      "label": "Gamitin ang sarili mong numbers. Huwag mag-paste ng contracts o detalye ng customer."
+    },
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL PRACTICE EXAMPLE",
+      "headline": "Buy 1 Take 1 = −₱20 kada set",
+      "body": "Human-written illustrative example, hindi output ng AI. Calculator mo pa rin ang final check. Hindi pa kasama ang delivery at platform fee.",
+      "list": [
+        "Walang promo (1 pack): ₱120 − ₱70 = +₱50",
+        "Buy 1 Take 1 (2 packs): ₱120 − ₱140 = −₱20 (LUGI)",
+        "Mas ligtas: ₱10 off kada pack, ₱110 − ₱70 = +₱40 kada pack",
+        "Mas ligtas: 3 packs for ₱330, ₱330 − ₱210 = +₱120 kada set (₱40 kada pack)"
+      ],
+      "chibi": "none",
+      "label": "Human-written illustrative example, hindi output ng AI"
+    },
+    {
+      "bg": "marigold",
+      "headline": "3 hakbang bago mag-promo",
+      "list": [
+        "Ilagay ang presyo at puhunan.",
+        "Ilagay ang promo.",
+        "I-check ang math."
+      ],
+      "cta": "I-SAVE PARA MAGAMIT MO.",
+      "chibi": "wave",
+      "label": "Follow @TitoAIPH — Tito AI, AI Para Sa Ating Lahat."
+    }
+  ]
+}
