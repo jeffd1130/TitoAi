@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tito AI Studio</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">TITO <b>AI</b></span> Studio</div>
+    <nav class="tabs">
+      <button class="tab active" data-tab="board">Agents</button>
+      <button class="tab" data-tab="video">Video</button>
+    </nav>
+    <div class="status" id="status"></div>
+    <button class="btn gold" id="tgBtn">Send to Telegram</button>
+  </header>
+
+  <main>
+    <section id="board" class="panel active">
+      <div class="columns" id="columns"></div>
+    </section>
+
+    <section id="video" class="panel">
+      <div class="video-grid">
+        <div class="card pad">
+          <h3>Render a video</h3>
+          <p class="muted">Renders a Remotion composition with Jeff's voice, captions, logo and cues, then levels audio to about -14 LUFS. Output: <code>docs/media/studio/</code></p>
+          <div class="row">
+            <select id="compSel"></select>
+            <button class="btn gold" id="renderBtn">Render</button>
+          </div>
+          <h3 class="mt">Flow / Gemini prompt helper</h3>
+          <p class="muted">Copy into Google Flow (Veo 3.1 Lite, 9:16, x1, silent ON, Frames mode with a Part 1 start frame). Gemini only after Flow credits run out.</p>
+          <textarea id="promptHelper" rows="9"></textarea>
+          <div class="row"><button class="btn" id="copyPrompt">Copy prompt</button></div>
+        </div>
+        <div class="card pad">
+          <h3>Videos <button class="btn small" id="refreshMedia">Refresh</button></h3>
+          <div id="media" class="media-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="newRun">
+    <form method="dialog" class="dlg">
+      <h3>New agent run · <span id="nrStage"></span></h3>
+      <label>Agent <select id="nrAgent"></select></label>
+      <p class="muted" id="nrDesc"></p>
+      <label>Title <input id="nrTitle" placeholder="e.g. W46 Mon brief"></label>
+      <label>What should it do? <textarea id="nrPrompt" rows="6"></textarea></label>
+      <div class="chips" id="nrChips"></div>
+      <div class="row end"><button class="btn" value="cancel">Cancel</button><button class="btn gold" id="nrGo" value="go">Start</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="tg">
+    <form method="dialog" class="dlg">
+      <h3>Send approval update to Tito AI Telegram</h3>
+      <p class="muted">Goes to Jeff's chat via @titoaiph_bot (HTML). Nothing is posted to social media.</p>
+      <textarea id="tgText" rows="10"></textarea>
+      <div class="row end"><button class="btn" value="cancel">Cancel</button><button class="btn gold" id="tgSend" value="send">Send</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="viewer">
+    <form method="dialog" class="dlg wide">
+      <h3 id="vTitle"></h3>
+      <div id="vBody"></div>
+      <div class="row end"><button class="btn" value="close">Close</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

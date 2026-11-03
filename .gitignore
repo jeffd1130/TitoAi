@@ -47,3 +47,6 @@ logs/*.log
 # Root-level stray files
 Screenshot*.png
 titoai.png
+
+# Tito AI Studio local state
+studio/data/
