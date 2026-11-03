@@ -20,7 +20,8 @@ const OriginChibiGeminiPart1Video = () => {
       src={staticFile('tito-ai-chibi-gemini-origin-30-silent.mp4')}
       premountFor={fps}
       muted
-      style={{width: '100%', height: '100%', objectFit: 'cover'}}
+      objectFit="cover"
+      style={{width: '100%', height: '100%'}}
     />
     <Audio name="Jeff original voice — uncut" src={staticFile('origin-part-1.m4a')} premountFor={fps} />
 
