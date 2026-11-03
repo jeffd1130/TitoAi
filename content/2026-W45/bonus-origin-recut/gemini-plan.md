@@ -48,3 +48,9 @@ The current Part 1 is the laptop still version. To add motion later, use the sti
 - A: He walks along a sunny street holding the closed laptop, smiling and waving at the camera.
 - B (extend): He sits at an outdoor café table and opens the laptop. The screen shows a simple pretend social-media content calendar grid. He types happily.
 - C (extend): He turns to the camera, gives a warm smile, waves goodbye, and points at the camera as if saying "follow".
+
+## Part 2 redo — style match (Jeff, Nov 3: "the image is not the same from video 1 and the elbow has corners like a puppet")
+- The first Flow Part 2 (Ingredients mode) drifted into a stiff 3D-toy look with jointed elbows. **Fix: use Flow "Frames" mode, with the start frame taken from Part 1 itself** (`w44-friday-motion-sample/public/origin-gemini-part-1-unpatched.mp4` at 18.5s: seated at the desk, smiling, tablet on its stand).
+- Add to every prompt: "keeps the EXACT same Tito AI chibi and the same soft, painterly 2D-illustrated style, colors and beige room… Smooth, soft, rounded arms and elbows with natural bends; not a puppet, toy, action figure or 3D render, no visible joints or hard corners."
+- Test shot A done Nov 3 (last 10 credits): `docs/media/tito-ai-origin-recut/flow-part-2/test-frames-style-match.mp4`. It **matches Part 1** (same room, face and soft arms; the tablet screen faces the viewer). In Flow it's the tile "Character picking up tablet".
+- Next (Nov 4, 50 credits): open that clip in Flow and Extend it 3 times (B night/yawn/typing, C chat bubbles "aha", D picks up the tablet and shows the finished site with a thumbs up) using the style lines above. That's 30 credits, about 32s. Then trim to 30.0s and swap into `public/origin-gemini-part-2.mp4`.
