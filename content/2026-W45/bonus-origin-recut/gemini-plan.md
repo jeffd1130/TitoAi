@@ -21,6 +21,12 @@ Gemini video limit resets **Nov 4, 2026, 1:52 PM PHT**. Daily allowance is only 
 Common suffix for every shot:
 > Keep the EXACT same character from the attached image: completely clean-shaven, plain white crew-neck T-shirt, jeans, white sneakers, black watch, bead bracelet, same warm 3D illustrated style. One silver laptop; its bright screen faces the viewer at a three-quarter angle and is fully in frame. The screen shows only a simple pretend website, with no real brands or logos. Real articulated body, hand, head and face movement, not a floating still. Correct hands, no extra people. No captions, voice, dialogue, music or sound.
 
+## Part 1 (optional) — Tatay, nasa Silicon Valley? (30s)
+The current Part 1 is the laptop still version. To add motion later, use the stills `tito-ai-chibi-laptop-kitchen.jpg`, `-website.jpg` and `-cafe-sv.jpg` as references:
+- A: In the kitchen, he flips an egg, then lifts the kid's backpack and smiles. The laptop on the table shows the pretend site.
+- B (extend): At the home table, he types on the laptop and points at the "MY DESIGN STUDIO" site.
+- C (extend): At a sunny Silicon Valley café table (no logos), he waves at the camera next to the open laptop.
+
 ## Part 2 — Website? AI ang tinanong ko. (30.0s)
 - A: Daytime, cozy home workspace. He sits at the table typing on the laptop showing the pretend "MY DESIGN STUDIO" website, looks up and smiles at the camera, then points at the screen.
 - B (extend): Evening falls, the window turns to a starry night, and the desk lamp switches on. He yawns, then leans in and types a question. Soft glowing blank chat bubbles (no readable text) float up from the screen; he reads them and gives an "aha" nod.

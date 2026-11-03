@@ -1,3 +1,4 @@
+import React from 'react';
 import {Audio, Video} from '@remotion/media';
 import {AbsoluteFill, Composition, Img, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ORIGIN_CAPTIONS} from './originCaptions';
@@ -41,7 +42,7 @@ const Captions = ({n, lift = 0}: {n: number; lift?: number}) => {
 type Pt = [number, number];
 // Scales the still about focus point `c` and moves that point from `t0` to `t1`, so framing can be checked numerically:
 // at scale 1 the screen spans x 664–1037, y 788–1134; head ≈ (457, 595).
-const LaptopStill = ({len, s0 = 1, s1 = 1.05, c = [540, 960] as Pt, t0, t1, night = 0}: {len: number; s0?: number; s1?: number; c?: Pt; t0?: Pt; t1?: Pt; night?: number}) => {
+const LaptopStill = ({len, src = 'chibi-laptop-website.jpg', s0 = 1, s1 = 1.05, c = [540, 960] as Pt, t0, t1, night = 0}: {len: number; src?: string; s0?: number; s1?: number; c?: Pt; t0?: Pt; t1?: Pt; night?: number}) => {
   const frame = useCurrentFrame();
   const k = interpolate(frame, [0, len], [0, 1], clamp);
   const sc = s0 + (s1 - s0) * k;
@@ -49,7 +50,7 @@ const LaptopStill = ({len, s0 = 1, s1 = 1.05, c = [540, 960] as Pt, t0, t1, nigh
   const tx = from[0] + (to[0] - from[0]) * k - c[0] * sc, ty = from[1] + (to[1] - from[1]) * k - c[1] * sc;
   const o = interpolate(frame, [0, 8, len - 8, len], [0, 1, 1, 0], clamp);
   return <AbsoluteFill style={{opacity: o, overflow: 'hidden'}}>
-    <Img src={staticFile('chibi-laptop-website.jpg')} style={{position: 'absolute', left: 0, top: 0, width: 1080, height: 1935,
+    <Img src={staticFile(src)} style={{position: 'absolute', left: 0, top: 0, width: 1080, height: 1935,
       transformOrigin: '0 0', transform: `translate(${tx}px, ${ty}px) scale(${sc})`}} />
     {night ? <AbsoluteFill style={{backgroundColor: '#0A1638', opacity: night, mixBlendMode: 'multiply'}} /> : null}
     {night ? <AbsoluteFill style={{background: 'radial-gradient(circle at 72% 55%, #FFE7A855 0%, transparent 36%)'}} /> : null}
@@ -85,8 +86,22 @@ const Part2Visual = () => {
   </>;
 };
 
+
+// Part 1: same chibi across three approved stills (docs/assets/avatars/tito-ai-chibi-laptop-{kitchen,website,cafe-sv}.jpg).
+// Screen centres at scale 1: kitchen ≈ (857, 918), home ≈ (850, 960), café ≈ (911, 1005).
+const Part1Visual = () => {
+  const {fps} = useVideoConfig();
+  const s = (sec: number) => Math.round(sec * fps);
+  return <>
+    <Sequence name="Kitchen: household dad" durationInFrames={s(8.7)}><LaptopStill src="chibi-laptop-kitchen.jpg" len={s(8.7)} s0={1} s1={1.07} c={[540, 900]} /></Sequence>
+    <Sequence name="Home: side hustle, push to site" from={s(8.5)} durationInFrames={s(7.7)}><LaptopStill len={s(7.7)} s0={1} s1={1.6} c={[850, 961]} t1={[720, 860]} /></Sequence>
+    <Sequence name="Silicon Valley café" from={s(16)} durationInFrames={s(10.2)}><LaptopStill src="chibi-laptop-cafe-sv.jpg" len={s(10.2)} s0={1.0} s1={1.05} c={[560, 800]} /></Sequence>
+    <Sequence name="Back to household dad" from={s(26)} durationInFrames={s(4.1)}><LaptopStill src="chibi-laptop-kitchen.jpg" len={s(4.1) + 8} s0={1.08} s1={1.0} c={[540, 900]} /></Sequence>
+  </>;
+};
+
 // Parts still using the laptop-still version; remove a part once its Gemini clip is in public/origin-gemini-part-N.mp4.
-const STILL_PARTS = new Set([2]);
+const STILL_PARTS: Record<number, () => React.ReactElement> = {1: Part1Visual, 2: Part2Visual};
 
 const OriginChibiGeminiVideo = ({n, seconds, hook, next}: Part) => {
   const frame = useCurrentFrame();
@@ -99,7 +114,7 @@ const OriginChibiGeminiVideo = ({n, seconds, hook, next}: Part) => {
   </div>;
 
   return <AbsoluteFill style={{backgroundColor: navy, overflow: 'hidden'}}>
-    {STILL_PARTS.has(n) ? <Part2Visual /> : <Video name={`Gemini chibi animation — Part ${n}`} src={staticFile(`origin-gemini-part-${n}.mp4`)} premountFor={fps}
+    {STILL_PARTS[n] ? React.createElement(STILL_PARTS[n]) : <Video name={`Gemini chibi animation — Part ${n}`} src={staticFile(`origin-gemini-part-${n}.mp4`)} premountFor={fps}
       muted objectFit="cover" style={{width: '100%', height: '100%'}} />}
     <Audio name="Jeff original voice — uncut" src={staticFile(`origin-part-${n}.m4a`)} premountFor={fps} />
 
