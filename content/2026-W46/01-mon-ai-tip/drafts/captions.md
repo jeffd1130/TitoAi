@@ -67,4 +67,4 @@ Gawin:
 - Math: 120 vs 2 × 70 = 140 → −20 ✔
 - Labels: "fictional practice example," untested prompt, human-written S4 ✔
 - No metrics, quotes, or client proof ✔
-- First comment (Jeff seeds within 5 min): optional, keep it to the save ask or the full prompt text; do not add a second CTA.
+- First comment (Jeff seeds within 5 min): optional, the full prompt above only; no second CTA.
