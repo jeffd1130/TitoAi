@@ -912,6 +912,24 @@
           "boost": null
         }
       ]
+    },
+    {
+      "id": "W46",
+      "range": "Nov 9–15",
+      "theme": "AI para sa Small Business · Promo Profit Check",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
+          "tag": "AI Tip Carousel · Small Business · Promo Math",
+          "note": "Five 1080×1350 slides (Studio carousel render) with the approved Tito AI chibi and logo. Fictional dried-mango example: price ₱120, cost ₱70; Buy 1 Take 1 = −₱20 per set. S3 prompt is UNTESTED and S4 is a human-written illustrative example, not AI output (both labeled on the slides). Growth job: SAVE; hypothesis: a loss-visible hook plus one reusable prompt earns more saves per 1,000 views than W44/W45 Mon. Files: content/2026-W46/01-mon-ai-tip/ (brief.md, drafts/script.md, drafts/captions.md, drafts/slides/). Review in Studio Approve & Post. Drop: Mon Nov 9, 8:00 PM PHT. Jeff approval required; no Buffer/social posting or boost.",
+          "date": "Nov 9",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        }
+      ]
     }
   ]
 }
