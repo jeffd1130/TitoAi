@@ -6,9 +6,9 @@
     {
       "bg": "cream",
       "kicker": "FICTIONAL PRACTICE EXAMPLE",
-      "headline": "Buy 1 Take 1",
-      "highlight": "mo… Lugi pala?",
-      "body": "TITO AI TIP: I‑check muna ang promo bago i‑post.",
+      "headline": "Buy 1 Take 1",
+      "highlight": "mo… Lugi pala?",
+      "body": "TITO AI TIP: I‑check muna ang promo bago i‑post.",
       "chibi": "surprised"
     },
     {
@@ -17,29 +17,29 @@
       "headline": "Masarap ang promo kung tubo pa.",
       "body": "Dried mango seller. Madaling mag‑isip ng promo. Mahirap kapag hindi kinuwenta.",
       "list": [
-        "Presyo: ₱120 / 200g pack",
-        "Puhunan: ₱70 / pack (kasama packaging)",
-        "Promo: Buy 1 Take 1"
+        "Presyo: ₱120 / 200g pack",
+        "Puhunan: ₱70 / pack (kasama packaging)",
+        "Promo: Buy 1 Take 1"
       ],
       "chibi": "teach"
     },
     {
       "bg": "cream",
-      "headline": "Copy-paste sa Gemini o Claude (libre)",
-      "body": "Hindi pa nasubukan ang prompt na ito. Subukan mo at i‑check ang math. Gamitin ang sarili mong numbers. Huwag mag‑paste ng contracts o detalye ng customer.",
-      "prompt": "Ikaw ang tagasuri ng promo para sa maliit kong negosyo. Numbers lang na ibibigay ko ang gamitin mo; huwag mag‑imbento.\nProdukto: [produkto]\nPresyo ng benta bawat piraso: ₱[__]\nPuhunan bawat piraso (kasama packaging): ₱[__]\nPromo na gusto kong subukan: [hal. Buy 1 Take 1]\n\nGawin:\n1. Ipakita step‑by‑step ang kita, gastos, at tubo kada order, may promo vs. walang promo.\n2. Sabihin kung tubo pa o lugi.\n3. Magbigay ng 2 mas ligtas na bersyon ng promo, kasama ang computation.",
+      "headline": "Copy-paste sa libreng AI",
+      "body": "Hindi pa nasubukan ang prompt na ito. Sarili mong numbers lang; huwag mag‑paste ng detalye ng customer.",
+      "prompt": "Ikaw ang tagasuri ng promo ng maliit kong negosyo. Numbers ko lang ang gamitin mo.\nProdukto: [produkto]\nPresyo: ₱[__]\nPuhunan: ₱[__]\nPromo: [hal. Buy 1 Take 1]\n\nGawin:\n1. Ipakita ang kita, gastos at tubo, may promo vs. walang.\n2. Sabihin kung tubo pa o lugi.\n3. Magbigay ng 2 mas ligtas na promo, may computation.",
       "chibi": "none"
     },
     {
       "bg": "cream",
       "kicker": "FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI",
-      "headline": "Buy 1 Take 1 = −₱20 kada set",
+      "headline": "Buy 1 Take 1 = −₱20 kada set",
       "body": "Calculator mo pa rin ang final check. Hindi pa kasama ang delivery at platform fee.",
       "list": [
-        "Walang promo (1 pack): ₱120 − ₱70 = +₱50",
-        "Buy 1 Take 1 (2 packs): ₱120 − ₱140 = −₱20 (LUGI)",
-        "Mas ligtas: ₱10 off: ₱110 − ₱70 = +₱40 kada pack",
-        "Mas ligtas: 3 packs ₱330: ₱330 − ₱210 = +₱120 kada set (₱40 kada pack)"
+        "Walang promo: ₱120 − ₱70 = +₱50",
+        "Buy 1 Take 1: ₱120 − ₱140 = −₱20",
+        "₱10 off: ₱110 − ₱70 = +₱40 / pack",
+        "3 packs ₱330: ₱330 − ₱210 = +₱120"
       ],
       "chibi": "none"
     },
