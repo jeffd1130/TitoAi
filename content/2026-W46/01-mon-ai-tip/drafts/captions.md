@@ -37,6 +37,29 @@ I-save para magamit mo.
 
 ---
 
+## First comment (optional, Jeff pastes after posting)
+
+**Untested prompt, i-check ang math.** Ito ang mas buong bersyon ng prompt sa slide 3. Sarili mong numbers lang; huwag mag-paste ng detalye ng customer.
+
+```
+Ikaw ang tagasuri ng promo ng maliit kong negosyo. Numbers ko lang ang gamitin mo; huwag mag-imbento.
+
+Produkto: [produkto]
+Presyo bawat piraso: ₱[__]
+Puhunan bawat piraso (kasama packaging): ₱[__]
+Promo: [hal. Buy 1 Take 1]
+
+Gawin:
+1. Itanong muna sa akin kung may kulang na numero (hal. delivery, platform fee) bago ka mag-compute.
+2. Ipakita step-by-step ang kita, gastos at tubo, may promo vs. walang promo.
+3. Sabihin kung tubo pa o lugi.
+4. Magbigay ng 2 mas ligtas na promo, may computation.
+```
+
+(No second CTA in the comment. If Jeff records a real test run, update the "untested" label before pasting.)
+
+---
+
 ## Checks
 - Emoji: 1 per caption (max 3) ✔
 - Hashtags: 5 each, all include #TitoAIPH #MgaPamangkin #AIParaSaAtin ✔
