@@ -51,7 +51,7 @@ const WorkScene = () => {
       borderRadius: '50%', backgroundColor: teal}} />
     <div style={{position: 'absolute', left: 85, top: 145, color: cream, width: 910,
       fontFamily: 'Arial, sans-serif', fontWeight: 900, fontSize: 94, lineHeight: 1.02}}>
-      MAY IBANG<br/><span style={{color: gold}}>PINAGKAKAABALAHAN.</span>
+      GRAPHIC<br/><span style={{color: gold}}>DESIGNER DIN.</span>
     </div>
     <AnimatedHost pose="teach" left={130} top={415} width={820} />
     <div style={{position: 'absolute', left: 85, top: 1290, width: 910, height: 310,
