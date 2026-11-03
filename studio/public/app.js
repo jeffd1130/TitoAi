@@ -2,7 +2,7 @@
 const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const PAGES = 'https://jeffd1130.github.io/TitoAi/';
-const state = {stages: [], agents: [], runs: {}, status: {}, compositions: [], media: []};
+const state = {stages: [], agents: [], runs: {}, status: {}, compositions: [], media: [], posts: []};
 const STATUS_LABEL = {queued: 'Queued', running: 'Working…', review: 'Needs your review', approved: 'Approved', failed: 'Failed', stopped: 'Stopped'};
 
 // Quick-start prompts per stage (Jeff can edit before starting).
@@ -177,7 +177,7 @@ $('#renderBtn').onclick = async () => {
   if (!confirm(`Render ${comp}? This takes a minute or two.`)) return;
   try { const run = await api('/api/runs', {stage: 'video', agent: 'video-producer', title: `Render ${comp}`, composition: comp, prompt: comp}); state.runs[run.id] = run; renderBoard(); switchTab('board'); toast('Render started'); } catch (err) { toast(err.message); }
 };
-$('#copyPrompt').onclick = () => { navigator.clipboard.writeText($('#promptHelper').value); toast('Prompt copied'); };
+$('#copyPrompt').onclick = () => copyText($('#promptHelper').value);
 $('#refreshMedia').onclick = async () => { state.media = await api('/api/media'); renderVideo(); };
 
 // ---------- Telegram ----------
@@ -195,6 +195,87 @@ $('#tg').addEventListener('close', async () => {
   try { await api('/api/telegram', {text: $('#tgText').value}); toast('Sent to Telegram'); } catch (e) { toast(e.message); }
 });
 
+
+// ---------- approve & post ----------
+const PLATFORM_LIST = [['tiktok', 'TikTok'], ['instagram', 'Instagram'], ['facebook', 'Facebook']];
+function copyText(text) {
+  // Works on http phone links too (clipboard API needs https).
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+  let ok = false; try { ok = document.execCommand('copy'); } catch {}
+  ta.remove();
+  if (!ok && navigator.clipboard) navigator.clipboard.writeText(text).then(() => toast('Copied'), () => toast('Long-press the text to copy'));
+  else toast(ok ? 'Copied' : 'Long-press the text to copy');
+}
+function renderPosts() {
+  const el = $('#posts');
+  if (!el) return;
+  el.innerHTML = state.posts.map((p) => {
+    const st = p.state || {posted: {}};
+    const postedCount = Object.keys(st.posted || {}).length;
+    const badge = postedCount === 3 ? '<span class="badge green">Posted everywhere</span>'
+      : postedCount ? `<span class="badge blue">Posted ${postedCount}/3</span>`
+      : st.approved ? '<span class="badge green">Approved</span>' : '<span class="badge gold">Needs approval</span>';
+    const media = p.type === 'video'
+      ? p.media.map((m) => `<video src="${fileUrl(m)}" ${p.cover ? `poster="${fileUrl(p.cover)}"` : ''} controls playsinline preload="none"></video>`).join('')
+      : `<div class="slides">${p.media.map((m, i) => `<img src="${fileUrl(m)}" loading="lazy" alt="Slide ${i + 1}" data-open="${esc(m)}">`).join('')}</div>`;
+    const downloads = p.media.map((m, i) => `<a class="btn small" href="${fileUrl(m)}" download>⬇ ${p.type === 'video' ? 'Video' : 'Slide ' + (i + 1)}</a>`).join('');
+    const caps = PLATFORM_LIST.map(([k, label]) => {
+      const text = (p.captionsText || {})[k] || '';
+      const done = (st.posted || {})[k];
+      return `<div class="cap">
+        <div class="cap-head"><b>${label}</b>
+          ${done ? `<span class="badge green">Posted ${new Date(done.at).toLocaleDateString()}${done.link ? ` · <a href="${esc(done.link)}" target="_blank">link</a>` : ''}</span>` : ''}</div>
+        <pre class="cap-text">${esc(text) || '<i>No caption found</i>'}</pre>
+        <div class="row wrap">
+          <button class="btn small" data-copy="${p.id}:${k}">Copy caption</button>
+          ${done ? `<button class="btn small" data-unpost="${p.id}:${k}">Undo posted</button>` : `<button class="btn small gold" data-post="${p.id}:${k}" ${st.approved ? '' : 'disabled title="Approve first"'}>Mark posted</button>`}
+        </div>
+      </div>`;
+    }).join('');
+    const seed = (p.captionsText || {}).seed;
+    return `<article class="card post" data-post-id="${p.id}">
+      <div class="post-head"><div><div class="muted">${esc(p.series || '')}</div><h3>${esc(p.title)}</h3></div>${badge}</div>
+      <div class="post-body">
+        <div class="post-media">${media}<div class="row wrap">${downloads}</div></div>
+        <div class="post-caps">
+          <div class="row wrap">
+            ${st.approved ? `<button class="btn small" data-unapprove="${p.id}">Undo approval</button>` : `<button class="btn green" data-approve-post="${p.id}">✓ Approve</button>`}
+            <button class="btn small" data-change="${p.id}">✍️ Ask Kuya Sulat for changes</button>
+            <a class="btn small" data-open="${esc(p.captions.file)}">Open captions file</a>
+          </div>
+          ${caps}
+          ${seed ? `<div class="cap"><div class="cap-head"><b>Seed comment</b> <span class="muted">pin within 5 min</span></div><pre class="cap-text">${esc(seed)}</pre><button class="btn small" data-copy="${p.id}:seed">Copy</button></div>` : ''}
+          <label>Notes<textarea rows="2" data-notes="${p.id}" placeholder="e.g. posted TikTok 7 PM, pinned">${esc(st.notes || '')}</textarea></label>
+        </div>
+      </div>
+    </article>`;
+  }).join('') || '<div class="empty">No posts yet. Add them to studio/posts.json.</div>';
+}
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-copy],[data-post],[data-unpost],[data-approve-post],[data-unapprove],[data-change]');
+  if (!t) return;
+  const d = t.dataset;
+  const [id, k] = (d.copy || d.post || d.unpost || '').split(':');
+  const post = state.posts.find((p) => p.id === (id || d.approvePost || d.unapprove || d.change));
+  try {
+    if (d.copy) return copyText(post.captionsText[k] || '');
+    if (d.post) { const link = prompt(`Paste the ${k} post link (optional):`, ''); if (link === null) return; await api(`/api/posts/${id}/posted`, {platform: k, link}); toast('Marked posted'); }
+    if (d.unpost) await api(`/api/posts/${id}/unposted`, {platform: k});
+    if (d.approvePost) { await api(`/api/posts/${d.approvePost}/approve`, {}); toast('Approved'); }
+    if (d.unapprove) await api(`/api/posts/${d.unapprove}/unapprove`, {});
+    if (d.change) {
+      const stage = 'script';
+      openNewRun(stage, `Update the captions for "${post.title}" in ${post.captions.file}${post.captions.section ? ` (section "${post.captions.section}")` : ''}. Change: <describe the change>. Keep 5 hashtags and one follow CTA.`, `Captions: ${post.title}`);
+      $('#nrAgent').value = 'tito-scriptwriter';
+    }
+    await loadPosts();
+  } catch (err) { toast(err.message); }
+});
+document.addEventListener('change', (e) => { const id = e.target.dataset.notes; if (id) api(`/api/posts/${id}/notes`, {notes: e.target.value}).then(() => toast('Notes saved')); });
+async function loadPosts() { state.posts = await api('/api/posts'); renderPosts(); }
+
 // ---------- live updates ----------
 function connect() {
   const es = new EventSource('/api/events');
@@ -208,6 +289,7 @@ function connect() {
     }
     if (msg.type === 'deleted') { delete state.runs[msg.id]; renderBoard(); renderStatus(); }
     if (msg.type === 'status') { state.status = msg.status; renderStatus(); }
+    if (msg.type === 'posts') loadPosts();
   };
   es.onerror = () => { es.close(); setTimeout(connect, 2000); };
 }
@@ -215,6 +297,6 @@ function connect() {
 (async () => {
   const b = await api('/api/bootstrap');
   Object.assign(state, b, {runs: Object.fromEntries(b.runs.map((r) => [r.id, r]))});
-  renderBoard(); renderStatus(); renderVideo(); connect();
+  renderBoard(); renderStatus(); renderVideo(); loadPosts(); connect();
   setInterval(renderStatus, 30000);
 })();

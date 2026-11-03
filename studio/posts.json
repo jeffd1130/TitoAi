@@ -1,0 +1,34 @@
+[
+  {
+    "id": "origin-p1",
+    "title": "Origin story · Part 1 — Tatay, nasa Silicon Valley?",
+    "series": "W45 bonus · origin recut",
+    "type": "video",
+    "media": ["docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4"],
+    "cover": "docs/media/tito-ai-origin-recut/part-1-chibi-cover.jpg",
+    "captions": {"file": "content/2026-W45/bonus-origin-recut/captions.md", "section": "Part 1 — animated chibi version"}
+  },
+  {
+    "id": "origin-p2",
+    "title": "Origin story · Part 2 — Website? AI ang tinanong ko.",
+    "series": "W45 bonus · origin recut",
+    "type": "video",
+    "media": ["docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4"],
+    "cover": "docs/media/tito-ai-origin-recut/part-2-chibi-flow-cover.jpg",
+    "captions": {"file": "content/2026-W45/bonus-origin-recut/captions.md", "section": "Part 2 — animated chibi version"}
+  },
+  {
+    "id": "w45-mon",
+    "title": "W45 Mon · “HM po?” Hindi Presyo Lang ang Sagot",
+    "series": "W45 · Monday 8:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W45/01-mon-ai-tip/drafts/slide-1.png",
+      "content/2026-W45/01-mon-ai-tip/drafts/slide-2.png",
+      "content/2026-W45/01-mon-ai-tip/drafts/slide-3.png",
+      "content/2026-W45/01-mon-ai-tip/drafts/slide-4.png",
+      "content/2026-W45/01-mon-ai-tip/drafts/slide-5.png"
+    ],
+    "captions": {"file": "content/2026-W45/01-mon-ai-tip/drafts/draft.md"}
+  }
+]

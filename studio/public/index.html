@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0F1E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Tito AI Studio</title>
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -11,6 +13,7 @@
     <div class="brand"><span class="logo">TITO <b>AI</b></span> Studio</div>
     <nav class="tabs">
       <button class="tab active" data-tab="board">Agents</button>
+      <button class="tab" data-tab="posting">Approve &amp; Post</button>
       <button class="tab" data-tab="video">Video</button>
     </nav>
     <div class="status" id="status"></div>
@@ -20,6 +23,11 @@
   <main>
     <section id="board" class="panel active">
       <div class="columns" id="columns"></div>
+    </section>
+
+    <section id="posting" class="panel">
+      <p class="muted intro">Approve each post, then post it yourself in TikTok, Instagram and Facebook: download the video or slides, copy the caption, then tap <b>Mark posted</b>. The studio never posts for you.</p>
+      <div id="posts" class="posts"></div>
     </section>
 
     <section id="video" class="panel">

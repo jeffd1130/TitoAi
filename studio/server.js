@@ -226,6 +226,46 @@ function frameStrip(rel, cb) {
   p.on('close', (code) => cb(code === 0 ? null : new Error('ffmpeg failed'), `/strips/${name}`));
 }
 
+// ---------- posts: approval + posting ----------
+// Post list lives in studio/posts.json (committed); captions are read live from the content .md files;
+// approval/posted state is local (studio/data/posts-state.json).
+const POSTS_FILE = path.join(__dirname, 'posts.json');
+const POST_STATE_FILE = path.join(DATA, 'posts-state.json');
+const postState = loadJSON(POST_STATE_FILE, {});
+const PLATFORMS = [['tiktok', 'TikTok'], ['instagram', 'Instagram'], ['facebook', 'Facebook'], ['seed', 'Seed comment']];
+
+function parseCaptions(rel, section) {
+  const abs = safePath(rel);
+  if (!abs) return {};
+  let text = fs.readFileSync(abs, 'utf8');
+  if (section) {
+    const i = text.indexOf(`## ${section}`);
+    if (i < 0) return {};
+    const rest = text.slice(i + 3);
+    const j = rest.search(/\n## /);
+    text = j >= 0 ? rest.slice(0, j) : rest;
+  }
+  // Blocks start at "**TikTok**" or "## TikTok" style headings.
+  const re = /^(?:\*\*|##\s+)(TikTok|Instagram|Facebook|Seed comment[^*\n]*|Production note[^*\n]*)\**\s*$/gim;
+  const marks = [...text.matchAll(re)];
+  const out = {};
+  marks.forEach((m, k) => {
+    const end = k + 1 < marks.length ? marks[k + 1].index : text.length;
+    const body = text.slice(m.index + m[0].length, end).replace(/\n## [\s\S]*$/, '').trim();
+    const name = m[1].toLowerCase();
+    const key = name.startsWith('seed') ? 'seed' : name.startsWith('production') ? null : name;
+    if (key) out[key] = body;
+  });
+  return out;
+}
+
+function listPosts() {
+  const posts = loadJSON(POSTS_FILE, []);
+  return posts.map((p) => ({...p, captionsText: parseCaptions(p.captions.file, p.captions.section),
+    media: p.media.filter((m) => safePath(m)), state: postState[p.id] || {approved: false, posted: {}, notes: ''}}));
+}
+function savePostState() { fs.writeFileSync(POST_STATE_FILE, JSON.stringify(postState, null, 1)); broadcast({type: 'posts'}); }
+
 // ---------- Telegram (button press only) ----------
 function telegramToken() {
   if (process.env.TITO_TELEGRAM_TOKEN) return process.env.TITO_TELEGRAM_TOKEN;
@@ -278,9 +318,30 @@ function newRun({stage, agent, title, prompt}) {
   return run;
 }
 
+// Phone mode (STUDIO_LAN=1): listen on the home Wi-Fi, but every request needs the private key
+// (from the ?key= link once, then a cookie). Desktop mode listens on 127.0.0.1 only.
+const LAN = process.env.STUDIO_LAN === '1';
+const KEY_FILE = path.join(DATA, 'access-key');
+const ACCESS_KEY = fs.existsSync(KEY_FILE) ? fs.readFileSync(KEY_FILE, 'utf8').trim()
+  : (() => { const k = crypto.randomBytes(12).toString('hex'); fs.writeFileSync(KEY_FILE, k, {mode: 0o600}); return k; })();
+function authorized(req, url, res) {
+  if (!LAN) return true;
+  const cookie = (req.headers.cookie || '').match(/studio_key=(\w+)/);
+  const given = url.searchParams.get('key');
+  if (given && given === ACCESS_KEY) {
+    res.setHeader('Set-Cookie', `studio_key=${ACCESS_KEY}; Path=/; Max-Age=2592000; SameSite=Strict; HttpOnly`);
+    return true;
+  }
+  return !!(cookie && cookie[1] === ACCESS_KEY);
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const p = url.pathname;
+  if (!authorized(req, url, res)) {
+    res.writeHead(401, {'Content-Type': 'text/html'});
+    return res.end('<meta name="viewport" content="width=device-width"><body style="font-family:system-ui;background:#0A0F1E;color:#E2E8F0;padding:24px">Tito AI Studio: open the private link from your Mac’s terminal (it includes <code>?key=</code>).</body>');
+  }
   if (req.method === 'GET' && p === '/api/events') {
     res.writeHead(200, {'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive'});
     res.write(': hi\n\n');
@@ -292,6 +353,7 @@ const server = http.createServer((req, res) => {
     return json(res, 200, {stages: STAGES, agents: readAgents(), runs: Object.values(runs), status, compositions: listCompositions(), media: listMedia()});
   }
   if (req.method === 'GET' && p === '/api/media') return json(res, 200, listMedia());
+  if (req.method === 'GET' && p === '/api/posts') return json(res, 200, listPosts());
   if (req.method === 'GET' && p === '/file') {
     const abs = safePath(url.searchParams.get('path'));
     return abs ? sendFile(req, res, abs) : json(res, 404, {error: 'not found'});
@@ -323,6 +385,16 @@ const server = http.createServer((req, res) => {
         else if (m[2] === 'delete') { const c = procs.get(run.id); if (c) c.kill('SIGTERM'); delete runs[run.id]; save(); broadcast({type: 'deleted', id: run.id}); }
         return json(res, 200, {ok: true});
       }
+      if ((m = p.match(/^\/api\/posts\/([\w-]+)\/(approve|unapprove|posted|unposted|notes)$/))) {
+        const st = postState[m[1]] || (postState[m[1]] = {approved: false, posted: {}, notes: ''});
+        if (m[2] === 'approve') { st.approved = true; st.approvedAt = Date.now(); }
+        if (m[2] === 'unapprove') st.approved = false;
+        if (m[2] === 'posted') st.posted[b.platform] = {at: Date.now(), link: (b.link || '').slice(0, 300)};
+        if (m[2] === 'unposted') delete st.posted[b.platform];
+        if (m[2] === 'notes') st.notes = String(b.notes || '').slice(0, 2000);
+        savePostState();
+        return json(res, 200, st);
+      }
       if (p === '/api/status') { Object.assign(status, b); save(); broadcast({type: 'status', status}); return json(res, 200, status); }
       if (p === '/api/framestrip') return frameStrip(b.path, (err, u) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {url: u})));
       if (p === '/api/telegram') return sendTelegram(b.text || '', (err) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {ok: true})));
@@ -334,4 +406,10 @@ const server = http.createServer((req, res) => {
   json(res, 404, {error: 'not found'});
 });
 
-server.listen(PORT, '127.0.0.1', () => console.log(`Tito AI Studio → http://localhost:${PORT}`));
+server.listen(PORT, LAN ? '0.0.0.0' : '127.0.0.1', () => {
+  console.log(`Tito AI Studio → http://localhost:${PORT}`);
+  if (LAN) {
+    const ips = Object.values(require('os').networkInterfaces()).flat().filter((i) => i && i.family === 'IPv4' && !i.internal).map((i) => i.address);
+    for (const ip of ips) console.log(`Phone link (same Wi-Fi): http://${ip}:${PORT}/?key=${ACCESS_KEY}`);
+  }
+});

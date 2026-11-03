@@ -6,11 +6,18 @@ It runs on your Mac and uses your **Claude plan through Claude Code**, so there 
 
 ## Start it
 
+On this Mac only:
 ```bash
 bash /Users/jeff/Documents/Claude/TItoAi/studio/start.sh
 ```
 
-This opens http://localhost:4545. Stop it with Ctrl+C in that terminal. It only listens on your own computer.
+With your phone too (same home Wi-Fi):
+```bash
+bash /Users/jeff/Documents/Claude/TItoAi/studio/start.sh phone
+```
+The terminal prints a **private phone link** (`http://<your-Mac-IP>:4545/?key=…`). Open it once on your phone, then add it to your Home Screen. Without the key, the studio refuses every request, so others on the Wi-Fi can't use it. The key lives in `studio/data/access-key`; delete that file to get a new one.
+
+Stop it with Ctrl+C in that terminal.
 
 ## The team
 
@@ -36,7 +43,12 @@ The names are only for the studio. The agent files in `.claude/agents/` keep the
    - **Render** a composition (Parts 1–5, W34 bonus, …) to `docs/media/studio/`.
    - Use **Frame strip** to check that the chibi matches before approving.
    - Copy the **Flow prompt** in the style-matched format.
-6. **Send to Telegram** opens an editable approval message. Nothing sends until you press Send. Nothing is ever posted to social media.
+6. **Approve & Post tab** (works on your phone):
+   - each post has its video or swipeable slides, a download button, and the TikTok / IG / FB captions plus the seed comment, each with **Copy**
+   - **✓ Approve**, then post it yourself in each app, then tap **Mark posted** (optionally paste the post link)
+   - **Ask Kuya Sulat for changes** opens a caption-edit run for that post
+   - posts are listed in `studio/posts.json`; captions are read live from the content `.md` files, so edits show up right away
+7. **Send to Telegram** opens an editable approval message. Nothing sends until you press Send. Nothing is ever posted to social media.
 
 ## Good to know
 
