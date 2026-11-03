@@ -29,8 +29,8 @@ TikTok says user interactions, including watch time, are important recommendatio
 
 ## Chibi version status (Nov 3, 2026, owner: Claude Code)
 
-- Part 1 (FINAL, awaiting Jeff's approval): `docs/media/tito-ai-origin-recut/part-1-chibi-laptop.mp4` + `part-1-chibi-laptop-cover.jpg`. Laptop chibi stills (kitchen, home, Silicon Valley café) with camera moves, Jeff's voice, captions, about -14 LUFS.
-- Part 1 alternate (Gemini tablet motion): `part-1-chibi-final.mp4` + `part-1-chibi-cover.jpg`. Gemini chibi animation, Jeff's uncut voice, recovered subtitles, hook/cue lifted above the bottom UI, about -14 LUFS. Tablet glitches at about 21s and 23.5s replaced with clean cuts. Captions: `captions.md`.
+- Part 1 (FINAL, Jeff chose the Gemini cut on Nov 3): `docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4` + `part-1-chibi-cover.jpg`. Gemini animation with the tablet (glitches cut), Jeff's voice, captions, about -14 LUFS.
+- Part 1 alternate: `part-1-chibi-laptop.mp4` (laptop chibi stills) + `part-1-chibi-cover.jpg`. Gemini chibi animation, Jeff's uncut voice, recovered subtitles, hook/cue lifted above the bottom UI, about -14 LUFS. Tablet glitches at about 21s and 23.5s replaced with clean cuts. Captions: `captions.md`.
 - Part 2 (current): `part-2-chibi-laptop.mp4`. Laptop + pretend-website chibi, still-image camera moves. To be replaced with Gemini motion after the limit resets.
 - Parts 3–5: pending Gemini; see `gemini-plan.md`.
 - Rejected: `tito-ai-chibi-gemini-part-2-raw.mp4` (chibi drifted: stubble, collared shirt).

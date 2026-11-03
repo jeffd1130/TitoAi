@@ -11,7 +11,7 @@ const gold = '#F59E0B';
 const cream = '#FFF8E7';
 const FPS = 30;
 
-type Part = {n: number; seconds: number; hook: [string, string]; next: [string, string]};
+type Part = {n: number; seconds: number; hook: [string, string]; next: [string, string]; laptopAlt?: boolean};
 
 const PARTS: Part[] = [
   {n: 1, seconds: 30, hook: ['TATAY AKO.', 'NASA SILICON VALLEY?'], next: ['SUNOD:', 'WEBSITE? AI ANG TINANONG KO.']},
@@ -101,9 +101,11 @@ const Part1Visual = () => {
 };
 
 // Parts still using the laptop-still version; remove a part once its Gemini clip is in public/origin-gemini-part-N.mp4.
-const STILL_PARTS: Record<number, () => React.ReactElement> = {1: Part1Visual, 2: Part2Visual};
+// Part 1 final = Gemini animation (Jeff, Nov 3); Part1Visual is kept for the laptop alternate.
+const STILL_PARTS: Record<number, () => React.ReactElement> = {2: Part2Visual};
 
-const OriginChibiGeminiVideo = ({n, seconds, hook, next}: Part) => {
+const OriginChibiGeminiVideo = ({n, seconds, hook, next, laptopAlt}: Part) => {
+  const Still = laptopAlt ? Part1Visual : STILL_PARTS[n];
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const hookOpacity = interpolate(frame, [0, 0.2 * fps, 2.8 * fps, 3.3 * fps], [1, 1, 1, 0], clamp);
@@ -114,7 +116,7 @@ const OriginChibiGeminiVideo = ({n, seconds, hook, next}: Part) => {
   </div>;
 
   return <AbsoluteFill style={{backgroundColor: navy, overflow: 'hidden'}}>
-    {STILL_PARTS[n] ? React.createElement(STILL_PARTS[n]) : <Video name={`Gemini chibi animation — Part ${n}`} src={staticFile(`origin-gemini-part-${n}.mp4`)} premountFor={fps}
+    {Still ? <Still /> : <Video name={`Gemini chibi animation — Part ${n}`} src={staticFile(`origin-gemini-part-${n}.mp4`)} premountFor={fps}
       muted objectFit="cover" style={{width: '100%', height: '100%'}} />}
     <Audio name="Jeff original voice — uncut" src={staticFile(`origin-part-${n}.m4a`)} premountFor={fps} />
 
@@ -131,6 +133,8 @@ const OriginChibiGeminiVideo = ({n, seconds, hook, next}: Part) => {
 };
 
 export const OriginChibiGeminiParts = () => <>
+  <Composition id="OriginChibiLaptopP1" component={OriginChibiGeminiVideo} defaultProps={{...PARTS[0], laptopAlt: true}}
+    durationInFrames={Math.round(PARTS[0].seconds * FPS)} fps={FPS} width={1080} height={1920} />
   {PARTS.map((p) => <Composition key={p.n} id={`OriginChibiGeminiP${p.n}`} component={OriginChibiGeminiVideo}
     defaultProps={p} durationInFrames={Math.round(p.seconds * FPS)} fps={FPS} width={1080} height={1920} />)}
 </>;
