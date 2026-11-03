@@ -1,5 +1,7 @@
 # Tito AI — Social Media Posting & Content Creation Handover
 
+> **Task ownership (Nov 3, 2026):** Claude Code is now the final owner of all Tito AI production tasks. ChatGPT may draft, but Claude Code reviews and finishes the work, and `CLAUDE.md` is the source of truth for current status. This handover is from Aug 2026 and may be out of date.
+
 Companion to `HANDOVER-chatgpt.md` (which covers niche/theme/strategy). This doc covers the **operational side**: how a post actually gets made, approved, and published each week.
 
 ---

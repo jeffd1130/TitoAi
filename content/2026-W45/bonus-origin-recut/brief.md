@@ -26,3 +26,11 @@ TikTok says user interactions, including watch time, are important recommendatio
 - Files: `docs/media/tito-ai-origin-recut/part-1.mp4` through `part-5.mp4`.
 - Captions: `captions.md` and the GitHub Pages approval page.
 - Every part was rendered with its original audio track and inspected for 1080×1920 geometry, duration, subtitles, logo, hook, cue, and chibi. Jeff should listen through each cut before approving publication to catch any spoken syllable clipped at a chapter boundary.
+
+## Chibi version status (Nov 3, 2026, owner: Claude Code)
+
+- Part 1 (current): `docs/media/tito-ai-origin-recut/part-1-chibi-gemini-captioned.mp4`. Gemini chibi animation, Jeff's uncut voice, recovered subtitles, hook/cue lifted above the bottom UI, about -14 LUFS.
+- Part 2 (current): `part-2-chibi-laptop.mp4`. Laptop + pretend-website chibi, still-image camera moves. To be replaced with Gemini motion after the limit resets.
+- Parts 3–5: pending Gemini; see `gemini-plan.md`.
+- Rejected: `tito-ai-chibi-gemini-part-2-raw.mp4` (chibi drifted: stubble, collared shirt).
+- Rules: same clean-shaven white-tee chibi in every shot; the laptop and its pretend website stay fully in frame.

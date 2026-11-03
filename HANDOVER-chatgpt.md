@@ -1,5 +1,7 @@
 # Tito AI — Handover for ChatGPT
 
+> **Task ownership (Nov 3, 2026):** Claude Code is now the final owner of all Tito AI production tasks. ChatGPT may draft, but Claude Code reviews and finishes the work, and `CLAUDE.md` is the source of truth for current status. This handover is from Aug 2026 and may be out of date.
+
 Paste this whole doc into ChatGPT to bring it up to speed on the Tito AI social channel: niche, posting themes, and content plan. Written for whoever/whatever picks this up next — no prior context assumed.
 
 ---

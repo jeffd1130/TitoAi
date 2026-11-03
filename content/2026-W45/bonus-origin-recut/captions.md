@@ -2,7 +2,33 @@
 
 Approval drafts only. Native upload after Jeff listens and approves. Each caption has exactly five hashtags and one primary follow CTA. The footage shows a visit to Silicon Valley; do not suggest employment or endorsement by companies visible in the background.
 
-## Part 1 — Tatay, nasa Silicon Valley?
+## Part 1 — animated chibi version (current: `docs/media/tito-ai-origin-recut/part-1-chibi-gemini-captioned.mp4`)
+
+Use these for the Gemini chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow).
+
+**TikTok**
+
+Household dad. May side hustle. Tapos… nasa Silicon Valley? 👀 Part 1 ng totoong kuwento ko: animated si Tito AI, pero boses ko 'yan. Follow para sa Part 2.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #PinoySideHustle #TitoAIStory
+
+**Instagram**
+
+Luto, hatid-sundo ng bata, tapos side hustle bilang graphic designer: 'yan ang araw ko noon. Paano ako napunta sa Silicon Valley? Hindi dahil bigla akong naging tech expert. Animated ang Tito AI dito, pero totoo ang kuwento at boses. Follow Tito AI para sa Part 2. 🎬
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #PinoyCreator #TitoAIStory
+
+**Facebook**
+
+Mga Pamangkin, household dad ako. Luto, hatid-sundo ng mga bata, all that stuff, at sa gabi, side hustle bilang graphic designer. Pero isang araw, nasa Silicon Valley na ako. Ikinukuwento ko sa five-part series na ito kung paano nangyari 'yon, at hindi ito kuwento ng instant success. Animated na Tito AI ang kasama natin dito, pero boses at kuwento ko 'yan. Follow Tito AI para sa Part 2: ang unang tanong ko sa AI tungkol sa website.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #SideHustlePH #PinoyStories
+
+**Seed comment (pin within 5 min)**
+
+Hulaan mo: ano ang unang tinanong ko sa AI? Comment mo hula mo 👇
+
+## Part 1 — original footage version (archival)
 
 **TikTok**
 

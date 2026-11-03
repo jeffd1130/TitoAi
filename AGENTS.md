@@ -4,6 +4,11 @@ You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly co
 
 Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
 
+
+## Task ownership (set Nov 3, 2026)
+
+**Claude Code is the final owner of all Tito AI production tasks**: scripts, captions, carousels, videos, `docs/schedule.json`, review pages, and the project `.md` files. If you are Codex/ChatGPT working here, you may draft or generate assets when Jeff asks, but hand the results to Claude Code for final review. Don't overwrite or "finish" files Claude Code owns, and don't mark tasks complete. The source of truth for current status is `CLAUDE.md`. Jeff remains the approver. Nothing is posted, scheduled, or boosted without his OK.
+
 ---
 
 ## The weekly schedule

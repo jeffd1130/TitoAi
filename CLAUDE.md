@@ -4,6 +4,11 @@ You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly co
 
 Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
 
+
+## Task ownership (set Nov 3, 2026)
+
+**Claude Code is the final owner of all Tito AI production tasks**: scripts, captions, carousels, videos, `docs/schedule.json`, review pages, and these `.md` files. ChatGPT/Codex and Gemini may draft or generate assets, but Claude Code reviews and finishes that work and records its final state here. Jeff remains the approver. Nothing is posted, scheduled, or boosted without his OK.
+
 ---
 
 ## The weekly schedule
@@ -64,7 +69,7 @@ docs/
 **Current/Next/Upcoming weeks (as of Nov 2, 2026):**
 | Role | Week | Dates |
 |------|------|-------|
-| Current | W45 | Nov 2–8 — Mon **“HM po?” Hindi Presyo Lang ang Sagot** has five illustrated 1080×1350 slides, PNGs, script, and platform captions as an approval draft; not confirmed posted. A separate five-part recut of the original Tito AI video is ready for review, with no release dates assigned. Wed/Fri not yet planned. |
+| Current | W45 | Nov 2–8 — Mon **“HM po?” Hindi Presyo Lang ang Sagot** has five illustrated 1080×1350 slides, PNGs, script, and platform captions as an approval draft; not confirmed posted. A separate five-part origin recut is in progress with the animated chibi: Part 1 (Gemini motion, captioned) and Part 2 (laptop chibi, still-image motion) are review-ready; Parts 3–5 wait on Gemini's video limit (resets Nov 4, 1:52 PM PHT). No release dates. Wed/Fri not yet planned. |
 | Next | W46 | Nov 9–15 — not yet planned. |
 | Completed | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo?** and Wed **VA Handoff Checklist** have five-slide Canva carousels; Fri **Isang Skill, Isang Hakbang** has a voiced chibi short. All are approval assets; publication and current metrics remain unverified. |
 
@@ -91,6 +96,10 @@ docs/
 **Oct 29 W44 Fri Filipino-voice revision:** Jeff asked for a more Filipino accent and approved a retry after the first voice-engine mismatch. The same spoken script was generated once with HeyGen's Filipino-labeled “Kuya Chris Cruz” public voice using the required Orca engine (28.238s full take). The current avatar-only export is `docs/media/W44-fri-tito-ai-first-skill-filipino-voice.mp4`, linked from `docs/W44-fri-first-skill-captions.html`; the prior MP4 remains archival. The voice is not a Jeff clone and still needs his listening approval for natural Taglish delivery. No posting or scheduling.
 
 **Nov 3 origin-story recut:** Jeff supplied `/Users/jeff/Downloads/Tito AI 1.mp4` (2:48 old origin story) for a more entertaining repost. Five 25–30-second 1080×1920 approval clips now live in `docs/media/tito-ai-origin-recut/`, with original voice/burned-in subtitles, approved chibi, short hook labels and next-part cues. The review page is `docs/W45-origin-recut-review.html`; separate TikTok/IG/FB captions are in `content/2026-W45/bonus-origin-recut/captions.md`. The original old footage shows a Silicon Valley visit, not an employment or endorsement claim. Jeff must listen to all chapter boundaries and approve before any native upload; no release dates, Buffer scheduling, social publication, or boost are set. First test should be Part 1 only, then use actual completion and follow conversion to decide whether to release the rest.
+
+**Nov 3 origin recut, chibi version (owner: Claude Code):** Codex/ChatGPT started an animated version of the recut: a 30s Gemini chibi animation for Part 1 (`docs/media/tito-ai-origin-recut/part-1-chibi-gemini-final.mp4`, kept as-is). Claude Code reviewed it and produced the current Part 1, `part-1-chibi-gemini-captioned.mp4`. That version restores the narration subtitles (OCR'd from the original cuts and proofread, including "PAMANGKIN"), moves the hook and next-part text above the TikTok/Reels bottom UI, and normalizes loudness to about -14 LUFS. Jeff then asked for (1) a laptop on a table instead of the tablet, with the screen showing a pretend website, (2) the same chibi in every shot, and (3) correct laptop framing. New reference: `docs/assets/avatars/tito-ai-chibi-laptop-website.jpg` (clean-shaven, white tee, pretend "MY DESIGN STUDIO" site, no real brands). A Gemini Part 2 clip (`tito-ai-chibi-gemini-part-2-raw.mp4`) was **rejected** because the chibi drifted (stubble, collared shirt). The current Part 2, `part-2-chibi-laptop.mp4`, is built only from the laptop reference with camera moves, night lighting and blank chat bubbles. The laptop stays fully in frame throughout. Gemini video hit its daily limit (about 4–5 videos a day; resets Nov 4, 1:52 PM PHT). Next: Jeff will ping Claude Code after the reset to run `content/2026-W45/bonus-origin-recut/gemini-plan.md`, which regenerates Part 2 with real motion and then Parts 3–5, about one part per day. Remotion source: `w44-friday-motion-sample/src/OriginChibiGemini.tsx` (`OriginChibiGeminiP1`–`P5`), with captions in `originCaptions.ts`. Part 1 social captions for the chibi cut are in `captions.md`. Nothing is posted or scheduled.
+
+**Nov 3 W34 Fri bonus video draft (paused):** At Jeff's request, a 65s 9:16 video version of the already-posted W34 Fri bonus carousel ("Ang Tanong na Palagi Kong Tinatanong sa Claude") was drafted in Remotion (`w44-friday-motion-sample/src/W34FriBonus.tsx`, render `out/w34/W34-fri-bonus-silent.mp4`). It reuses the 5 carousel images, the chibi, the logo, verbatim script captions, and the Comment YES CTA. Jeff stopped the work mid-way; it has no voiceover and no final QA.
 
 **Key live URLs:**
 | Page | URL |
