@@ -19,7 +19,7 @@ I-save para magamit mo.
 
 ## Instagram
 
-Buy 1 Take 1 mo… lugi pala? 😅 Bago mag-post ng promo, i-check muna ang numbers. Sa fictional practice example ng dried mango seller (₱120 presyo, ₱70 puhunan), lugi ng ₱20 kada set ang Buy 1 Take 1. Libre ang Gemini at Claude para sa basic na version, pero hindi pa nasubukan ang prompt at ang slide 4 ay human-written, hindi output ng AI. Calculator mo pa rin ang final check.
+Buy 1 Take 1 mo… lugi pala? 😅 Bago mag-post ng promo, i-check muna ang numbers. Sa fictional practice example ng dried mango seller (₱120 presyo, ₱70 puhunan), lugi ng ₱20 kada set ang Buy 1 Take 1. Libre ang basic na version ng Gemini at Claude, pero hindi pa nasubukan ang prompt at ang slide 4 ay human-written, hindi output ng AI. Calculator mo pa rin ang final check.
 
 I-save para magamit mo.
 
