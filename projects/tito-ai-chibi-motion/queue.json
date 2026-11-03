@@ -1,0 +1,46 @@
+{
+  "project": "tito-ai-chibi-motion",
+  "route": {
+    "valid": true,
+    "kind": "video",
+    "intent": "draft",
+    "control_layer": "reference",
+    "model": "seedance-2.5",
+    "quality": "1080p",
+    "detail_level": "",
+    "aspect_ratio": "16:9",
+    "duration": 8,
+    "reference_count": 1,
+    "generated_audio_supported": null,
+    "audio_flag_supported": false,
+    "audio_control": "provider_default",
+    "membership_tier": "unknown",
+    "reasons": [
+      "Seedance 2.5 at 1080p is the default for drafts and final video alike."
+    ],
+    "issues": [],
+    "chain": [
+      {
+        "role": "motion draft",
+        "mode": "create reference",
+        "model": "seedance-2.5",
+        "quality": "1080p",
+        "command_template": "pixverse create reference --model seedance-2.5 --quality 1080p --duration 8 --aspect-ratio 16:9 --images <reference-image> --prompt <prompt>"
+      }
+    ],
+    "alternatives": [],
+    "command_template": "pixverse create reference --model seedance-2.5 --quality 1080p --duration 8 --aspect-ratio 16:9 --images <reference-image> --prompt <prompt>",
+    "capability_source": "PixVerse CLI normalized create capability domain",
+    "basic_fallback_accepted": false,
+    "membership_choice_required": false,
+    "prompt_enhance_skill": "skills-internal/pixverse-seedance-prompt-enhance/SKILL.md"
+  },
+  "tasks": [
+    {
+      "id": "film",
+      "label": "motion draft",
+      "cmd": "pixverse create reference --model seedance-2.5 --quality 1080p --duration 8 --aspect-ratio 16:9 --images /Users/jeff/Documents/Claude/TItoAi/w44-friday-motion-sample/public/chibi-wave.png --prompt 'Image 1 is the exact Tito AI chibi character identity, outfit, tablet and wristwatch. A new 8-second vertical character-animation shot on a clean warm-cream background with navy and gold accents. 0–2s: the character takes two visible steps toward camera, natural leg and torso movement, face turns toward viewer. 2–5s: he lifts his free hand and waves twice with a clear elbow and wrist arc while the other hand securely holds the tablet; hair and shirt respond subtly. 5–8s: he shifts weight, turns three-quarters, points at the back of the tablet with a cheerful, helpful expression, then holds the final pose. Animate mouth and eyebrows as if speaking conversationally, but generate no intelligible speech, captions, logos, or music. Keep facial features, clean-shaven face, tablet back, watch placement and proportions consistent with Image 1. No extra arms or fingers. Stationary portrait camera; the body movement is the focus.'"
+    }
+  ],
+  "basic_fallback_accepted": false
+}
