@@ -2,7 +2,7 @@
 
 Approval drafts only. Native upload after Jeff listens and approves. Each caption has exactly five hashtags and one primary follow CTA. The footage shows a visit to Silicon Valley; do not suggest employment or endorsement by companies visible in the background.
 
-## Part 1 — animated chibi version (current: `docs/media/tito-ai-origin-recut/part-1-chibi-gemini-captioned.mp4`)
+## Part 1 — animated chibi version (FINAL: `docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4`)
 
 Use these for the Gemini chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow).
 
@@ -28,6 +28,32 @@ Mga Pamangkin, household dad ako. Luto, hatid-sundo ng mga bata, all that stuff,
 
 Hulaan mo: ano ang unang tinanong ko sa AI? Comment mo hula mo 👇
 
+## Part 2 — animated chibi version (FINAL: `docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4`)
+
+For the Google Flow chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow).
+
+**TikTok**
+
+Kailangan ng website ng side hustle ko, pero wala akong alam sa web dev. Kaya tuwing gabi, habang tulog sila, nagtanong ako kay Claude. 🌙 Part 2: animated si Tito AI, boses ko 'yan. Follow para sa Part 3.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #LearnWithAI #TitoAIStory
+
+**Instagram**
+
+Website para sa side hustle, pero walang web-dev background. Ang ginawa ko: tuwing gabi, habang tulog ang mga bata, tinanong ko ang Claude kung paano gumawa ng website, at tumulong din ang Gemini habang inaaral ko ang proseso. Hindi ito magic; may oras at trial and error pa rin. Animated ang Tito AI dito, pero totoo ang kuwento at boses. Follow Tito AI para sa Part 3. 💻
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #WebsiteJourney #TitoAIStory
+
+**Facebook**
+
+Mga Pamangkin, ito ang Part 2. Kailangan ng side hustle ko ng website, at siguro pati social media page, pero hindi ako web developer. Kaya tuwing gabi, bago matulog at habang tulog na ang pamilya, kinuha ko ang phone ko at tinanong si Claude: "How do I make a website?" Sa tulong nina Claude at Gemini, nagawa ko ang website, pero may oras, pagbasa, at pagsubok pa rin sa likod niyan. Animated na Tito AI ang kasama natin dito, pero boses at kuwento ko 'yan. Follow Tito AI para sa Part 3: wala akong background, pero sumubok pa rin ako.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #AIForBeginnersPH #SideHustlePH
+
+**Seed comment (pin within 5 min)**
+
+Tama ba hula mo? "How do I make a website?" 😄 Ikaw, ano ang una mong tinanong sa AI? 👇
+
 ## Part 1 — original footage version (archival)
 
 **TikTok**
@@ -48,7 +74,7 @@ Mga Pamangkin, dati household dad ang araw ko at side hustle ang singit ko. Sa l
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #SideHustlePH #PinoyStories
 
-## Part 2 — Website? AI ang tinanong ko.
+## Part 2 — original footage version (archival)
 
 **TikTok**
 
