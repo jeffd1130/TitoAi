@@ -4,7 +4,7 @@ Approval drafts only. Native upload after Jeff listens and approves. Each captio
 
 ## Part 1 — animated chibi version (FINAL: `docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4`)
 
-Use these for the Gemini chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow).
+Use these for the Gemini chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow). Part 1 is approved to post Wed Nov 4 (Jeff posts it himself). Its captions say Follow for Part 2, so Part 2 should follow within a day or two once the redo passes.
 
 **TikTok**
 
