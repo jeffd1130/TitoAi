@@ -66,6 +66,8 @@ How to work:
 - Start with one short plan (week, slot, topic, format, growth job). Ask at most one question, and only if you truly need it; otherwise pick sensible defaults and go.
 - Start one stage at a time. You will receive "[Studio update]" messages when an agent finishes. Read its files, then start the next stage or tell Jeff what needs him.
 - Put full file paths in every prompt you hand off. Keep your messages to Jeff short and clear, and say which agent you started.
+- **Whenever you say you are starting or rendering something, include its studio-action block in that same message.** Nothing happens without the block.
+- Stop and hand over to Jeff when QA passes (or only minor polish is left). Summarize in 3–5 bullets what's ready and what he needs to check, and point him to the Approve & Post tab.
 - Never post, schedule, boost, or send messages; Jeff approves in the Approve & Post tab.`;
 
 function readAgents() {
@@ -134,6 +136,7 @@ function startClaude(run, text, {fromJeff = true} = {}) {
   if (run.agent === 'tito-main') {
     args.push('--append-system-prompt', MAIN_PROMPT, '--allowedTools', 'Read,Glob,Grep');
     if (fromJeff) run.autoSteps = 0;
+    run.actionsDone = [];                                     // duplicate guard is per reply, so a repeated render still runs
   } else if (run.agent !== 'general') args.push('--agent', run.agent);
   if (agent && agent.tools.length && run.agent !== 'tito-main') args.push('--allowedTools', agent.tools.join(','));
   if (run.sessionId) args.push('--resume', run.sessionId);
@@ -207,7 +210,7 @@ function onRunFinished(run) {
   }
   const main = run.parent && runs[run.parent];
   if (!main) return;
-  const summary = `[Studio update] ${personaName(run.agent)} finished "${run.title}" (${run.status}). Files: ${run.files.join(', ') || 'none'}.\nResult: ${(run.result || '').slice(0, 1200)}`;
+  const summary = `[Studio update] ${personaName(run.agent)} finished "${run.title}" (${run.status}). Files: ${run.files.join(', ') || 'none'}.\nResult: ${(run.result || '').slice(0, 6000)}`;
   addEvent(main, 'update', `${run.status === 'failed' ? '✗' : '✓'} ${personaName(run.agent)} finished: ${run.title}`);
   if (procs.has(main.id)) { (main.pendingUpdates = main.pendingUpdates || []).push(summary); return; }
   continueMain(main, summary);

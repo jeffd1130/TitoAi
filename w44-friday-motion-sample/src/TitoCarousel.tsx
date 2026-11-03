@@ -56,7 +56,7 @@ const SlideView = ({slide, index, total}: {slide: Slide; index: number; total: n
           <div style={{font: `700 38px/1.28 ${font}`, paddingTop: 6}}>{item}</div>
         </div>)}
       </div> : null}
-      {slide.prompt ? <div style={{backgroundColor: '#FFFFFF', color: navy, border: `4px solid ${teal}`, borderRadius: 28, padding: '28px 32px', font: `600 ${slide.prompt.length > 260 ? 28 : 33}px/1.4 ${font}`, boxShadow: '0 14px 40px #0A0F1E22'}}>
+      {slide.prompt ? <div style={{backgroundColor: '#FFFFFF', color: navy, border: `4px solid ${teal}`, borderRadius: 28, padding: '28px 32px', whiteSpace: 'pre-wrap', font: `600 ${slide.prompt.length > 260 ? 28 : 33}px/1.4 ${font}`, boxShadow: '0 14px 40px #0A0F1E22'}}>
         <div style={{font: `900 22px ${font}`, color: teal, letterSpacing: 2, marginBottom: 12}}>COPY THIS PROMPT</div>
         {slide.prompt}
       </div> : null}
