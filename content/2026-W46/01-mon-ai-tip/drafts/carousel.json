@@ -27,7 +27,7 @@
       "bg": "cream",
       "headline": "Copy-paste sa libreng AI",
       "body": "Hindi pa nasubukan ang prompt na ito. Sarili mong numbers lang; huwag mag‑paste ng detalye ng customer.",
-      "prompt": "Ikaw ang tagasuri ng promo ng maliit kong negosyo. Numbers ko lang ang gamitin mo.\nProdukto: [produkto]\nPresyo: ₱[__]\nPuhunan: ₱[__]\nPromo: [hal. Buy 1 Take 1]\n\nGawin:\n1. Ipakita ang kita, gastos at tubo, may promo vs. walang.\n2. Sabihin kung tubo pa o lugi.\n3. Magbigay ng 2 mas ligtas na promo, may computation.",
+      "prompt": "Ikaw ang tagasuri ng promo ng maliit kong negosyo. Numbers ko lang ang gamitin mo.\nProdukto: [produkto]\nPresyo bawat piraso: ₱[__]\nPuhunan bawat piraso: ₱[__]\nPromo: [hal. Buy 1 Take 1]\n\nGawin:\n1. Ipakita ang kita, gastos at tubo, may promo vs. walang.\n2. Sabihin kung tubo pa o lugi.\n3. Magbigay ng 2 mas ligtas na promo, may computation.",
       "chibi": "none"
     },
     {
