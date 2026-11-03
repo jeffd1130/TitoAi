@@ -3,6 +3,7 @@ import { OriginChibiPart1 } from "./OriginChibiPart1";
 import { OriginChibiGeminiPart1 } from "./OriginChibiGeminiPart1";
 import { W34FriBonus } from "./W34FriBonus";
 import { OriginChibiGeminiParts } from "./OriginChibiGemini";
+import { TitoCarousel } from "./TitoCarousel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ export const RemotionRoot: React.FC = () => {
       <OriginChibiGeminiPart1 />
       <W34FriBonus />
       <OriginChibiGeminiParts />
+      <TitoCarousel />
     </>
   );
 };

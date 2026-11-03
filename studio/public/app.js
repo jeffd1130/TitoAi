@@ -32,7 +32,7 @@ const ago = (t) => { const s = Math.round((Date.now() - t) / 1000); return s < 6
 function renderBoard() {
   const cols = $('#columns');
   cols.innerHTML = state.stages.map((st) => {
-    const runs = Object.values(state.runs).filter((r) => r.stage === st.id).sort((a, b) => b.updatedAt - a.updatedAt);
+    const runs = Object.values(state.runs).filter((r) => r.stage === st.id && r.agent !== 'tito-main').sort((a, b) => b.updatedAt - a.updatedAt);
     return `<div class="col" data-stage="${st.id}">
       <div class="col-head"><div><h2>${esc(st.label)}<span class="count">${runs.length || ''}</span></h2><div class="muted">${esc(who(st.agent))}</div></div>
         <button class="btn small" data-new="${st.id}">+ Run</button></div>
@@ -51,7 +51,7 @@ function runCard(r) {
     <div class="meta"><span class="chip agent" title="${esc(r.agent)}">${esc(who(r.agent))}</span><span>${STATUS_LABEL[r.status] || r.status}</span><span>· ${ago(r.updatedAt)}</span></div>
     <div class="log">${events || '<div class="ev log">Starting…</div>'}</div>
     ${files ? `<div class="files">${files}</div>` : ''}
-    ${r.agent !== 'video-producer' ? `<div class="chat"><input placeholder="${busy ? 'Working… you can Stop' : 'Tell this agent what to change'}" ${busy ? 'disabled' : ''} data-chat="${r.id}"><button class="btn small" data-send="${r.id}" ${busy ? 'disabled' : ''}>Send</button></div>` : ''}
+    ${!['video-producer', 'carousel-render'].includes(r.agent) ? `<div class="chat"><input placeholder="${busy ? 'Working… you can Stop' : 'Tell this agent what to change'}" ${busy ? 'disabled' : ''} data-chat="${r.id}"><button class="btn small" data-send="${r.id}" ${busy ? 'disabled' : ''}>Send</button></div>` : ''}
     <div class="actions">
       ${r.status === 'review' ? `<button class="btn small green" data-act="approve" data-id="${r.id}">Approve</button>` : ''}
       ${r.status === 'approved' ? `<button class="btn small" data-act="reopen" data-id="${r.id}">Reopen</button>${nextButton(r)}` : ''}
@@ -276,6 +276,72 @@ document.addEventListener('click', async (e) => {
 document.addEventListener('change', (e) => { const id = e.target.dataset.notes; if (id) api(`/api/posts/${id}/notes`, {notes: e.target.value}).then(() => toast('Notes saved')); });
 async function loadPosts() { state.posts = await api('/api/posts'); renderPosts(); }
 
+
+// ---------- Tito AI main chat ----------
+const MAIN_CHIPS = [
+  'Gawin natin ang susunod na post. Video kung may Flow credits ako ngayon.',
+  'Walang video credits ngayon. Gawin nating carousel ang susunod na post.',
+  'Plan W46 (Mon, Wed, Fri) at simulan ang Monday.',
+  'Ano ang naghihintay sa approval ko?',
+];
+const currentMain = () => Object.values(state.runs).filter((r) => r.agent === 'tito-main').sort((a, b) => b.createdAt - a.createdAt)[0];
+let freshChat = false;
+function renderMain() {
+  const main = freshChat ? null : currentMain();
+  const thread = $('#thread');
+  if (!thread) return;
+  const md = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code>$1</code>');
+  thread.innerHTML = main ? main.events.map((e) => {
+    if (e.kind === 'you') return `<div class="bubble me">${md(e.text)}</div>`;
+    if (e.kind === 'text') return `<div class="bubble tito">${md(e.text)}</div>`;
+    if (e.kind === 'action') return `<div class="note action">${md(e.text)}</div>`;
+    if (e.kind === 'update') return e.text.startsWith('[Studio update]') ? '' : `<div class="note update">${md(e.text)}</div>`;
+    if (e.kind === 'error') return `<div class="note err">${md(e.text)}</div>`;
+    if (e.kind === 'tool') return `<div class="note tool">🔍 ${md(e.text)}</div>`;
+    return '';
+  }).join('') + (main.status === 'running' ? '<div class="bubble tito typing">Tito AI is thinking…</div>' : '')
+    : `<div class="welcome"><div class="big">🎙️</div><b>Kumusta, Jeff!</b><p class="muted">Tell me what post to make. I'll plan it, then Tita Saliksik, Kuya Sulat, Ate Disenyo and Lola Suri get to work. If there are no video credits, I'll make a carousel instead.</p></div>`;
+  thread.scrollTop = thread.scrollHeight;
+  const busy = main && main.status === 'running';
+  $('#mainSend').disabled = !!busy;
+  $('#mainSend').textContent = busy ? '…' : 'Send';
+  // team list: runs started by this conversation (newest first)
+  const kids = main ? Object.values(state.runs).filter((r) => r.parent === main.id).sort((a, b) => b.createdAt - a.createdAt) : [];
+  $('#teamList').innerHTML = kids.map((r) => `<div class="team-item ${r.status}" data-goto="${r.id}">
+      <span class="dot"></span><div><b>${esc(who(r.agent))}</b><div class="muted">${esc(r.title)}</div>
+      <div class="muted">${STATUS_LABEL[r.status] || r.status}</div></div></div>`).join('') || '<p class="muted">No one is working yet. Start a chat and Tito AI will assign the team.</p>';
+}
+$('#mainChips').innerHTML = MAIN_CHIPS.map((c) => `<button type="button" class="chip">${esc(c)}</button>`).join('');
+$('#mainChips').addEventListener('click', (e) => { if (e.target.classList.contains('chip')) { $('#mainInput').value = e.target.textContent; $('#mainInput').focus(); } });
+async function sendMain() {
+  const text = $('#mainInput').value.trim();
+  if (!text) return;
+  try {
+    const run = await api('/api/main', {text, newChat: freshChat});
+    freshChat = false; state.runs[run.id] = run; $('#mainInput').value = ''; renderMain();
+  } catch (e) { toast(e.message); }
+}
+$('#mainSend').onclick = sendMain;
+$('#mainInput').addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey && window.innerWidth > 760) { e.preventDefault(); sendMain(); } });
+$('#newChat').onclick = () => { freshChat = true; renderMain(); toast('New chat. Your next message starts it.'); };
+document.addEventListener('click', (e) => {
+  const g = e.target.closest('[data-goto]');
+  if (!g) return;
+  switchTab('board');
+  setTimeout(() => { const c = document.querySelector(`.run[data-id="${g.dataset.goto}"]`); if (c) { c.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'}); c.classList.add('flash'); setTimeout(() => c.classList.remove('flash'), 1600); } }, 50);
+});
+
+// ---------- carousel render ----------
+async function loadSpecs() {
+  const specs = await api('/api/carousel-specs');
+  $('#specSel').innerHTML = specs.map((s) => `<option>${esc(s)}</option>`).join('') || '<option value="">No carousel.json yet</option>';
+}
+$('#carouselBtn').onclick = async () => {
+  const spec = $('#specSel').value;
+  if (!spec) return toast('No carousel.json found yet. Ask Tito AI to make one.');
+  try { const run = await api('/api/runs', {stage: 'create', agent: 'carousel-render', title: `Render carousel · ${spec.split('/').slice(-4, -2).join(' ')}`, prompt: spec}); state.runs[run.id] = run; renderBoard(); switchTab('board'); toast('Rendering slides'); } catch (err) { toast(err.message); }
+};
+
 // ---------- live updates ----------
 function connect() {
   const es = new EventSource('/api/events');
@@ -283,11 +349,12 @@ function connect() {
     const msg = JSON.parse(m.data);
     if (msg.type === 'run') {
       const typing = document.activeElement && document.activeElement.dataset.chat === msg.run.id ? document.activeElement.value : null;
-      state.runs[msg.run.id] = msg.run; renderBoard(); renderStatus();
+      state.runs[msg.run.id] = msg.run; renderBoard(); renderStatus(); renderMain();
       if (typing !== null) { const i = document.querySelector(`[data-chat="${msg.run.id}"]`); if (i && !i.disabled) { i.value = typing; i.focus(); } }
+      if (msg.run.agent === 'carousel-render' && msg.run.status === 'review') { loadPosts(); loadSpecs(); }
       if (msg.run.agent === 'video-producer' && msg.run.status === 'review') api('/api/media').then((m2) => { state.media = m2; renderVideo(); });
     }
-    if (msg.type === 'deleted') { delete state.runs[msg.id]; renderBoard(); renderStatus(); }
+    if (msg.type === 'deleted') { delete state.runs[msg.id]; renderBoard(); renderStatus(); renderMain(); }
     if (msg.type === 'status') { state.status = msg.status; renderStatus(); }
     if (msg.type === 'posts') loadPosts();
   };
@@ -297,6 +364,6 @@ function connect() {
 (async () => {
   const b = await api('/api/bootstrap');
   Object.assign(state, b, {runs: Object.fromEntries(b.runs.map((r) => [r.id, r]))});
-  renderBoard(); renderStatus(); renderVideo(); loadPosts(); connect();
+  renderBoard(); renderStatus(); renderVideo(); loadPosts(); renderMain(); loadSpecs(); connect();
   setInterval(renderStatus, 30000);
 })();

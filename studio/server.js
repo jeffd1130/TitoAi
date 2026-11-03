@@ -35,8 +35,38 @@ const PERSONAS = {
   'video-producer': {display: 'Kuya Kamera', emoji: '🎬', role: 'Video producer'},
   'tito-qa': {display: 'Lola Suri', emoji: '🧐', role: 'QA reviewer'},
   'tito-analyst': {display: 'Tito Numero', emoji: '📊', role: 'Analyst'},
-  'general': {display: 'Tito AI', emoji: '🤖', role: 'General helper'},
+  'general': {display: 'Tito Helper', emoji: '🤖', role: 'General helper'},
+  'tito-main': {display: 'Tito AI', emoji: '🎙️', role: 'Producer — plans the post and runs the team'},
+  'carousel-render': {display: 'Ate Disenyo', emoji: '🖼️', role: 'Carousel render'},
 };
+
+// The main producer agent: plans with Jeff, then starts the team by writing studio-action blocks.
+const MAIN_PROMPT = `You are **Tito AI**, the main producer agent inside Tito AI Studio (a local dashboard Jeff uses). You chat with Jeff in Taglish/English, plan the content, and run the team. Read CLAUDE.md for the brand rules (Taglish, free tools only, no fabrication, approved chibi host, five hashtags, Jeff approves and posts himself).
+
+Do not write the content yourself; delegate to the team by writing an action block, which the studio runs immediately:
+
+\`\`\`studio-action
+{"action": "start_run", "stage": "research|script|create|qa|insights", "agent": "<agent id>", "title": "short card title", "prompt": "complete instructions incl. exact file paths"}
+\`\`\`
+
+Team (agent ids):
+- tito-researcher (Tita Saliksik): plans weeks, writes content/<YYYY-W##>/<slot>/brief.md
+- tito-scriptwriter (Kuya Sulat): writes drafts/script.md and drafts/captions.md from the brief
+- tito-content-creator (Ate Disenyo): slide content. For a carousel, she writes drafts/carousel.json following studio/carousel-schema.md (read it), plus captions.md if missing
+- tito-qa (Lola Suri): read-only review, gives a VERDICT
+- tito-analyst (Tito Numero): metrics and reports
+
+Other actions:
+- {"action": "render_carousel", "spec": "content/.../drafts/carousel.json"}: the studio renders branded PNG slides and adds the post to Approve & Post.
+- {"action": "render_video", "composition": "<Remotion id>"}: only when the Flow/Gemini clip already exists.
+
+Video vs carousel: Reels need chibi motion clips that Jeff generates by hand in Google Flow (Veo 3.1 Lite, about 50 free credits a day, 10 per 8s clip) first, then Gemini. If Jeff says there are no credits, there's no time, or video isn't possible, **switch to the carousel fallback**: Kuya Sulat (script + captions) → Ate Disenyo (carousel.json) → render_carousel → Lola Suri QA.
+
+How to work:
+- Start with one short plan (week, slot, topic, format, growth job). Ask at most one question, and only if you truly need it; otherwise pick sensible defaults and go.
+- Start one stage at a time. You will receive "[Studio update]" messages when an agent finishes. Read its files, then start the next stage or tell Jeff what needs him.
+- Put full file paths in every prompt you hand off. Keep your messages to Jeff short and clear, and say which agent you started.
+- Never post, schedule, boost, or send messages; Jeff approves in the Approve & Post tab.`;
 
 function readAgents() {
   const dir = path.join(ROOT, '.claude', 'agents');
@@ -51,6 +81,8 @@ function readAgents() {
   }
   agents.push({name: 'video-producer', description: 'Renders a Remotion composition and levels the audio (ffmpeg loudnorm -14 LUFS).', tools: [], kind: 'render'});
   agents.push({name: 'general', description: 'Plain Claude Code in the TitoAi project (reads CLAUDE.md).', tools: ['Read', 'Glob', 'Grep', 'Write', 'Edit', 'WebSearch', 'WebFetch'], kind: 'claude'});
+  agents.push({name: 'tito-main', description: 'Main producer: chats with Jeff, plans the post, and starts the team.', tools: ['Read', 'Glob', 'Grep'], kind: 'main'});
+  agents.push({name: 'carousel-render', description: 'Renders a carousel.json spec into branded PNG slides.', tools: [], kind: 'render'});
   return agents.map((a) => ({...a, ...(PERSONAS[a.name] || {display: a.name, emoji: '🤖', role: ''})}));
 }
 
@@ -96,14 +128,17 @@ function relFile(p) {
   return rel.startsWith('..') ? null : rel;
 }
 
-function startClaude(run, text) {
+function startClaude(run, text, {fromJeff = true} = {}) {
   const agent = readAgents().find((a) => a.name === run.agent);
   const args = ['-p', text, '--output-format', 'stream-json', '--verbose', '--permission-mode', 'acceptEdits'];
-  if (run.agent !== 'general') args.push('--agent', run.agent);
-  if (agent && agent.tools.length) args.push('--allowedTools', agent.tools.join(','));
+  if (run.agent === 'tito-main') {
+    args.push('--append-system-prompt', MAIN_PROMPT, '--allowedTools', 'Read,Glob,Grep');
+    if (fromJeff) run.autoSteps = 0;
+  } else if (run.agent !== 'general') args.push('--agent', run.agent);
+  if (agent && agent.tools.length && run.agent !== 'tito-main') args.push('--allowedTools', agent.tools.join(','));
   if (run.sessionId) args.push('--resume', run.sessionId);
   run.status = 'running';
-  addEvent(run, 'you', text);
+  addEvent(run, fromJeff ? 'you' : 'update', text);
   const child = spawn('claude', args, {cwd: ROOT, env: process.env, stdio: ['ignore', 'pipe', 'pipe']});
   procs.set(run.id, child);
   let buf = '';
@@ -124,7 +159,64 @@ function startClaude(run, text) {
     if (run.status === 'running') run.status = code === 0 ? 'review' : 'failed';
     if (code !== 0 && run.status === 'failed') addEvent(run, 'error', `Agent exited with code ${code}`);
     pushRun(run);
+    onRunFinished(run);
   });
+}
+
+// ---------- main producer: actions + auto-continue ----------
+const MAX_AUTO_STEPS = 8;                                     // per message from Jeff, so the team can't loop forever
+function personaName(id) { const p = PERSONAS[id]; return p ? `${p.emoji} ${p.display}` : id; }
+
+function runActions(main, text) {
+  main.actionsDone = main.actionsDone || [];
+  for (const m of text.matchAll(/```studio-action\s*\n([\s\S]*?)```/g)) {
+    const key = crypto.createHash('md5').update(m[1]).digest('hex');
+    if (main.actionsDone.includes(key)) continue;
+    main.actionsDone.push(key);
+    let a;
+    try { a = JSON.parse(m[1]); } catch { addEvent(main, 'error', 'Could not read an action block (bad JSON)'); continue; }
+    try {
+      if (a.action === 'start_run') {
+        if (!a.prompt || !a.agent) throw new Error('start_run needs agent and prompt');
+        const child = newRun({stage: a.stage, agent: a.agent, title: a.title, prompt: a.prompt});
+        child.parent = main.id;
+        addEvent(main, 'action', `▶ Started ${personaName(child.agent)}: ${child.title}`);
+        startClaude(child, a.prompt);
+      } else if (a.action === 'render_carousel') {
+        const child = newRun({stage: 'create', agent: 'carousel-render', title: `Render carousel · ${path.basename(path.dirname(path.dirname(a.spec)))}`, prompt: a.spec});
+        child.parent = main.id;
+        addEvent(main, 'action', `▶ Rendering carousel slides from ${a.spec}`);
+        startCarousel(child, a.spec);
+      } else if (a.action === 'render_video') {
+        const child = newRun({stage: 'video', agent: 'video-producer', title: `Render ${a.composition}`, prompt: a.composition});
+        child.parent = main.id;
+        addEvent(main, 'action', `▶ Rendering video ${a.composition}`);
+        startRender(child, a.composition);
+      } else throw new Error(`Unknown action ${a.action}`);
+    } catch (err) { addEvent(main, 'error', err.message); }
+  }
+}
+
+function onRunFinished(run) {
+  if (run.agent === 'tito-main') {                           // flush updates that arrived while it was busy
+    if (run.pendingUpdates && run.pendingUpdates.length) {
+      const text = run.pendingUpdates.join('\n\n'); run.pendingUpdates = [];
+      continueMain(run, text);
+    }
+    return;
+  }
+  const main = run.parent && runs[run.parent];
+  if (!main) return;
+  const summary = `[Studio update] ${personaName(run.agent)} finished "${run.title}" (${run.status}). Files: ${run.files.join(', ') || 'none'}.\nResult: ${(run.result || '').slice(0, 1200)}`;
+  addEvent(main, 'update', `${run.status === 'failed' ? '✗' : '✓'} ${personaName(run.agent)} finished: ${run.title}`);
+  if (procs.has(main.id)) { (main.pendingUpdates = main.pendingUpdates || []).push(summary); return; }
+  continueMain(main, summary);
+}
+
+function continueMain(main, text) {
+  main.autoSteps = (main.autoSteps || 0) + 1;
+  if (main.autoSteps > MAX_AUTO_STEPS) { addEvent(main, 'error', 'Paused after 8 automatic steps. Send a message to continue.'); main.status = 'review'; pushRun(main); return; }
+  startClaude(main, `${text}\n\nDecide the next step: start the next agent with a studio-action block, or tell Jeff what needs his input.`, {fromJeff: false});
 }
 
 function handleStreamLine(run, line) {
@@ -133,7 +225,11 @@ function handleStreamLine(run, line) {
   if (o.session_id && !run.sessionId) run.sessionId = o.session_id;
   if (o.type === 'assistant' && o.message && Array.isArray(o.message.content)) {
     for (const c of o.message.content) {
-      if (c.type === 'text' && c.text.trim()) addEvent(run, 'text', c.text);
+      if (c.type === 'text' && c.text.trim()) {
+        const shown = c.text.replace(/```studio-action[\s\S]*?```/g, '').trim();
+        if (shown) addEvent(run, 'text', shown);
+        if (run.agent === 'tito-main') runActions(run, c.text);
+      }
       if (c.type === 'tool_use') {
         const inp = c.input || {};
         const target = inp.file_path || inp.path || inp.pattern || inp.query || inp.url || inp.command || '';
@@ -170,6 +266,7 @@ function startRender(run, composition) {
       run.status = 'review';
       run.result = `Rendered ${rel}`;
       addEvent(run, 'text', `Done: ${rel} (audio leveled to about -14 LUFS)`);
+      onRunFinished(run);
       return;
     }
     const [cmd, args, cwd] = steps[i];
@@ -182,11 +279,74 @@ function startRender(run, composition) {
     child.on('close', (code) => {
       procs.delete(run.id);
       if (run.status !== 'running') return;
-      if (code !== 0) { run.status = 'failed'; addEvent(run, 'error', `${cmd} exited with code ${code}`); return; }
+      if (code !== 0) { run.status = 'failed'; addEvent(run, 'error', `${cmd} exited with code ${code}`); onRunFinished(run); return; }
       next(i + 1);
     });
   };
   next(0);
+}
+
+// ---------- carousel render (fallback when video isn't possible) ----------
+function startCarousel(run, specRel) {
+  run.status = 'running';
+  addEvent(run, 'you', `Render carousel ${specRel}`);
+  const abs = safePath(specRel);
+  let spec;
+  try { spec = JSON.parse(fs.readFileSync(abs, 'utf8')); } catch (e) {
+    run.status = 'failed'; addEvent(run, 'error', `Can't read ${specRel}: ${abs ? e.message : 'file not found'}`); onRunFinished(run); return;
+  }
+  const n = Math.min((spec.slides || []).length, 10);
+  if (!n) { run.status = 'failed'; addEvent(run, 'error', 'The spec has no slides'); onRunFinished(run); return; }
+  const outDir = path.join(path.dirname(abs), 'slides');
+  fs.mkdirSync(outDir, {recursive: true});
+  const shot = (i) => {
+    if (i >= n) {
+      const media = Array.from({length: n}, (_, k) => path.relative(ROOT, path.join(outDir, `slide-${k + 1}.png`)));
+      run.files = media;
+      run.status = 'review';
+      run.result = `Rendered ${n} slides into ${path.relative(ROOT, outDir)}/ and added the post to Approve & Post.`;
+      addEvent(run, 'text', run.result);
+      upsertPost(specRel, spec, media);
+      onRunFinished(run);
+      return;
+    }
+    addEvent(run, 'tool', `Slide ${i + 1}/${n}`);
+    const child = spawn('npx', ['remotion', 'still', 'TitoCarousel', path.join(outDir, `slide-${i + 1}.png`), `--frame=${i}`, `--props=${abs}`, '--log=error'], {cwd: REMOTION, env: process.env});
+    procs.set(run.id, child);
+    child.stderr.on('data', (d) => { const s = String(d).trim(); if (s) addEvent(run, 'log', s); });
+    child.on('close', (code) => {
+      procs.delete(run.id);
+      if (run.status !== 'running') return;
+      if (code !== 0) { run.status = 'failed'; addEvent(run, 'error', `Slide ${i + 1} failed (code ${code})`); onRunFinished(run); return; }
+      shot(i + 1);
+    });
+  };
+  shot(0);
+}
+
+function upsertPost(specRel, spec, media) {
+  const posts = loadJSON(POSTS_FILE, []);
+  const id = path.dirname(path.dirname(specRel)).split(path.sep).slice(-2).join('-').toLowerCase().replace(/[^a-z0-9-]/g, '');
+  const entry = {id, title: spec.title || id, series: spec.series || '', type: 'carousel', media,
+    captions: {file: spec.captions || path.join(path.dirname(specRel), 'captions.md')}};
+  const i = posts.findIndex((p) => p.id === id);
+  if (i >= 0) posts[i] = {...posts[i], ...entry}; else posts.unshift(entry);
+  fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2) + '\n');
+  broadcast({type: 'posts'});
+}
+
+function listCarouselSpecs() {
+  const out = [];
+  const walk = (dir, depth) => {
+    if (depth > 4 || !fs.existsSync(dir)) return;
+    for (const f of fs.readdirSync(dir)) {
+      const p = path.join(dir, f);
+      if (fs.statSync(p).isDirectory()) walk(p, depth + 1);
+      else if (f === 'carousel.json') out.push(path.relative(ROOT, p));
+    }
+  };
+  walk(path.join(ROOT, 'content'), 0);
+  return out.sort().reverse();
 }
 
 function listCompositions() {
@@ -311,7 +471,7 @@ function readBody(req, cb) {
   req.on('end', () => { try { cb(d ? JSON.parse(d) : {}); } catch { cb({}); } });
 }
 function newRun({stage, agent, title, prompt}) {
-  const st = STAGES.find((s) => s.id === stage) || STAGES[0];
+  const st = stage === 'main' ? {id: 'main', agent: 'tito-main'} : STAGES.find((s) => s.id === stage) || STAGES.find((s) => s.agent === agent) || STAGES[0];
   const run = {id: crypto.randomUUID().slice(0, 8), stage: st.id, agent: agent || st.agent, title: (title || prompt || 'Untitled').slice(0, 90),
     prompt, status: 'queued', sessionId: null, events: [], files: [], result: '', createdAt: Date.now(), updatedAt: Date.now()};
   runs[run.id] = run;
@@ -354,6 +514,7 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'GET' && p === '/api/media') return json(res, 200, listMedia());
   if (req.method === 'GET' && p === '/api/posts') return json(res, 200, listPosts());
+  if (req.method === 'GET' && p === '/api/carousel-specs') return json(res, 200, listCarouselSpecs());
   if (req.method === 'GET' && p === '/file') {
     const abs = safePath(url.searchParams.get('path'));
     return abs ? sendFile(req, res, abs) : json(res, 404, {error: 'not found'});
@@ -369,8 +530,18 @@ const server = http.createServer((req, res) => {
         if (!b.prompt && b.agent !== 'video-producer') return json(res, 400, {error: 'prompt required'});
         const run = newRun(b);
         if (run.agent === 'video-producer') startRender(run, b.composition || b.prompt);
+        else if (run.agent === 'carousel-render') startCarousel(run, b.prompt);
         else startClaude(run, b.prompt);
         return json(res, 200, run);
+      }
+      if (p === '/api/main') {                                // talk to the main producer
+        const text = String(b.text || '').trim();
+        if (!text) return json(res, 400, {error: 'Say something to Tito AI'});
+        let main = !b.newChat && Object.values(runs).filter((r) => r.agent === 'tito-main').sort((x, y) => y.createdAt - x.createdAt)[0];
+        if (main && procs.has(main.id)) return json(res, 409, {error: 'Tito AI is still replying — wait a moment or press Stop'});
+        if (!main) main = newRun({stage: 'main', agent: 'tito-main', title: text.slice(0, 60), prompt: text});
+        startClaude(main, text);
+        return json(res, 200, main);
       }
       if ((m = p.match(/^\/api\/runs\/(\w+)\/(message|approve|stop|delete|reopen)$/))) {
         const run = runs[m[1]];

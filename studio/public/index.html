@@ -12,7 +12,8 @@
   <header class="top">
     <div class="brand"><span class="logo">TITO <b>AI</b></span> Studio</div>
     <nav class="tabs">
-      <button class="tab active" data-tab="board">Agents</button>
+      <button class="tab active" data-tab="main">💬 Tito AI</button>
+      <button class="tab" data-tab="board">Agents</button>
       <button class="tab" data-tab="posting">Approve &amp; Post</button>
       <button class="tab" data-tab="video">Video</button>
     </nav>
@@ -21,7 +22,28 @@
   </header>
 
   <main>
-    <section id="board" class="panel active">
+    <section id="main" class="panel active">
+      <div class="main-wrap">
+        <div class="chat-card card">
+          <div class="chat-head">
+            <div><b>🎙️ Tito AI</b> <span class="muted">· producer. Tell me what to make, and I'll run the team.</span></div>
+            <button class="btn small" id="newChat">New chat</button>
+          </div>
+          <div class="thread" id="thread"></div>
+          <div class="chips" id="mainChips"></div>
+          <div class="composer">
+            <textarea id="mainInput" rows="2" placeholder="e.g. Gawin natin ang W46 Mon post. Walang Flow credits, carousel na lang."></textarea>
+            <button class="btn gold" id="mainSend">Send</button>
+          </div>
+        </div>
+        <aside class="team card pad">
+          <h3>Team at work</h3>
+          <div id="teamList"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="board" class="panel">
       <div class="columns" id="columns"></div>
     </section>
 
@@ -39,6 +61,9 @@
             <select id="compSel"></select>
             <button class="btn gold" id="renderBtn">Render</button>
           </div>
+          <h3 class="mt">Render a carousel (no-video fallback)</h3>
+          <p class="muted">Turns a <code>carousel.json</code> (see <code>studio/carousel-schema.md</code>) into branded 1080×1350 slides and adds the post to Approve &amp; Post.</p>
+          <div class="row"><select id="specSel"></select><button class="btn gold" id="carouselBtn">Render slides</button></div>
           <h3 class="mt">Flow / Gemini prompt helper</h3>
           <p class="muted">Copy into Google Flow (Veo 3.1 Lite, 9:16, x1, silent ON, Frames mode with a Part 1 start frame). Gemini only after Flow credits run out.</p>
           <textarea id="promptHelper" rows="9"></textarea>

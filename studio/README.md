@@ -19,6 +19,18 @@ The terminal prints a **private phone link** (`http://<your-Mac-IP>:4545/?key=�
 
 Stop it with Ctrl+C in that terminal.
 
+## 💬 Start with Tito AI (the main producer)
+
+Open the **💬 Tito AI** tab (the home screen) and just say what you want, e.g. *"Gawin natin ang W46 Monday post. Walang Flow credits, carousel na lang."*
+
+1. **Tito AI** (🎙️) makes a short plan (week, slot, topic, format, growth job), asking at most one question.
+2. It **starts the team one by one**. Each agent shows up under **Team at work** and as a live card in **Agents**.
+3. When an agent finishes, Tito AI reads the result and **starts the next step on its own** (up to 8 steps per message, so it can't loop forever).
+4. You can talk to Tito AI at any time, or tap a team member to open its card and talk to that agent directly.
+5. Finished posts land in **Approve & Post**.
+
+**Video or carousel?** Reels need chibi motion clips you make by hand in Google Flow, then Gemini. If you have no credits (or no time), tell Tito AI and it switches to the **carousel fallback**: Kuya Sulat writes the script and captions, Ate Disenyo writes `carousel.json` (`studio/carousel-schema.md`), the studio **renders branded 1080×1350 slides itself** (chibi, logo, page dots), Lola Suri runs QA, and the post appears in Approve & Post.
+
 ## The team
 
 | Column | Agent | Real agent file | Job |
@@ -29,7 +41,9 @@ Stop it with Ctrl+C in that terminal.
 | Video | 🎬 **Kuya Kamera** | `video-producer` (built-in) | Renders a Remotion video and levels the audio |
 | QA | 🧐 **Lola Suri** | `tito-qa` | Checks brand, accuracy and captions, then gives a VERDICT |
 | Insights | 📊 **Tito Numero** | `tito-analyst` | Reads metrics and writes the weekly check & balance |
-| (any column) | 🤖 **Tito AI** | `general` | Plain Claude Code in the project |
+| 💬 tab | 🎙️ **Tito AI** | `tito-main` (built-in) | Producer: plans with you and runs the team |
+| Create | 🖼️ **Ate Disenyo** (render) | `carousel-render` (built-in) | Turns `carousel.json` into PNG slides |
+| (any column) | 🤖 **Tito Helper** | `general` | Plain Claude Code in the project |
 
 The names are only for the studio. The agent files in `.claude/agents/` keep their `tito-*` IDs.
 
@@ -40,6 +54,7 @@ The names are only for the studio. The agent files in `.claude/agents/` keep the
 3. Use the card's **chat box** to steer it ("shorter hook", "use 5 hashtags"). It continues the same conversation.
 4. When you're happy, click **Approve**. Then **→ Next** starts the next column with the files passed along.
 5. **Video tab:**
+   - **Render slides** from any `carousel.json` (the no-video fallback).
    - **Render** a composition (Parts 1–5, W34 bonus, …) to `docs/media/studio/`.
    - Use **Frame strip** to check that the chibi matches before approving.
    - Copy the **Flow prompt** in the style-matched format.
