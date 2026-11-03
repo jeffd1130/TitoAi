@@ -31,7 +31,8 @@ TikTok says user interactions, including watch time, are important recommendatio
 
 - Part 1 (FINAL, Jeff chose the Gemini cut on Nov 3): `docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4` + `part-1-chibi-cover.jpg`. Gemini animation with the tablet (glitches cut), Jeff's voice, captions, about -14 LUFS.
 - Part 1 alternate: `part-1-chibi-laptop.mp4` (laptop chibi stills) + `part-1-chibi-cover.jpg`. Gemini chibi animation, Jeff's uncut voice, recovered subtitles, hook/cue lifted above the bottom UI, about -14 LUFS. Tablet glitches at about 21s and 23.5s replaced with clean cuts. Captions: `captions.md`.
-- Part 2 (current): `part-2-chibi-laptop.mp4`. Laptop + pretend-website chibi, still-image camera moves. To be replaced with Gemini motion after the limit resets.
+- Part 2 (FINAL, Nov 3): `docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4` + cover. Google Flow, Veo 3.1 Lite: one 8s clip plus 3 extends, trimmed to 30.0s, with the same tablet chibi reference and ChatGPT prompt format as Part 1 and the old video's audio. The tablet is briefly edge-on while he walks (~9s) and set down between ~21–24s; it never shows its back. Raw scene and shot A: `flow-part-2/`.
+- Part 2 alternate: `part-2-chibi-laptop.mp4` (laptop stills).
 - Parts 3–5: pending Gemini; see `gemini-plan.md`.
 - Rejected: `tito-ai-chibi-gemini-part-2-raw.mp4` (chibi drifted: stubble, collared shirt).
 - Rules: same clean-shaven white-tee chibi in every shot; the laptop and its pretend website stay fully in frame.

@@ -102,7 +102,9 @@ const Part1Visual = () => {
 
 // Parts still using the laptop-still version; remove a part once its Gemini clip is in public/origin-gemini-part-N.mp4.
 // Part 1 final = Gemini animation (Jeff, Nov 3); Part1Visual is kept for the laptop alternate.
-const STILL_PARTS: Record<number, () => React.ReactElement> = {2: Part2Visual};
+// Part 2 = Google Flow (Veo 3.1 Lite) clip; Part2Visual kept as the laptop-stills fallback.
+const STILL_PARTS: Record<number, () => React.ReactElement> = {};
+export const LAPTOP_FALLBACKS = {Part2Visual};
 
 const OriginChibiGeminiVideo = ({n, seconds, hook, next, laptopAlt}: Part) => {
   const Still = laptopAlt ? Part1Visual : STILL_PARTS[n];

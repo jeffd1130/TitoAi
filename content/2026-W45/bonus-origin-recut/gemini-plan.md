@@ -1,8 +1,10 @@
 # Origin recut — Gemini video plan, Parts 2–5 (laptop chibi)
 
+**Tool order:** Google Flow first (Veo 3.1 Lite, 9:16, x1, silent videos ON, chibi as Ingredient, 10 credits per clip or extend, 50 free credits a day), then Gemini Videos once Flow credits run out. Part 2 matches Part 1: tablet chibi reference `tito-ai-chibi-wave-screen.png`, ChatGPT's Gemini prompt format, and the old video's audio.
+
 Owner: Claude Code (final owner of all Tito AI production tasks since Nov 3, 2026). Jeff approves. Trigger: Jeff pings Claude Code after the reset.
 
-Status: Part 1 done (Gemini motion, tablet). Part 2 done as a still-image version (`docs/media/tito-ai-origin-recut/part-2-chibi-laptop.mp4`), to be replaced by Gemini motion. Parts 3–5 not started.
+Status (Nov 3, 4 PM PHT): Part 1 final (Gemini tablet cut). **Part 2 final via Google Flow** (`part-2-chibi-flow.mp4`). Parts 3–5 next: Flow first, using Part 1's tablet chibi reference and prompt format. Earlier status: Part 1 done (Gemini motion, tablet). Part 2 done as a still-image version (`docs/media/tito-ai-origin-recut/part-2-chibi-laptop.mp4`), to be replaced by Gemini motion. Parts 3–5 not started.
 Gemini video limit resets **Nov 4, 2026, 1:52 PM PHT**. Daily allowance is only ~4–5 videos, so expect about one 30-second part per day.
 
 ## Non-negotiable character rules (Jeff, Nov 3)
