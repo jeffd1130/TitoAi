@@ -1,21 +1,47 @@
 [
   {
+    "id": "2026-w46-01-mon-ai-tip",
+    "title": "W46 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
+    "series": "W46 · Monday 8:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W46/01-mon-ai-tip/drafts/slides/slide-1.png",
+      "content/2026-W46/01-mon-ai-tip/drafts/slides/slide-2.png",
+      "content/2026-W46/01-mon-ai-tip/drafts/slides/slide-3.png",
+      "content/2026-W46/01-mon-ai-tip/drafts/slides/slide-4.png",
+      "content/2026-W46/01-mon-ai-tip/drafts/slides/slide-5.png"
+    ],
+    "captions": {
+      "file": "content/2026-W46/01-mon-ai-tip/drafts/captions.md"
+    }
+  },
+  {
     "id": "origin-p1",
     "title": "Origin story · Part 1 — Tatay, nasa Silicon Valley?",
     "series": "W45 bonus · origin recut",
     "type": "video",
-    "media": ["docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4"],
+    "media": [
+      "docs/media/tito-ai-origin-recut/part-1-chibi-final.mp4"
+    ],
     "cover": "docs/media/tito-ai-origin-recut/part-1-chibi-cover.jpg",
-    "captions": {"file": "content/2026-W45/bonus-origin-recut/captions.md", "section": "Part 1 — animated chibi version"}
+    "captions": {
+      "file": "content/2026-W45/bonus-origin-recut/captions.md",
+      "section": "Part 1 — animated chibi version"
+    }
   },
   {
     "id": "origin-p2",
     "title": "Origin story · Part 2 — Website? AI ang tinanong ko.",
     "series": "W45 bonus · origin recut",
     "type": "video",
-    "media": ["docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4"],
+    "media": [
+      "docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4"
+    ],
     "cover": "docs/media/tito-ai-origin-recut/part-2-chibi-flow-cover.jpg",
-    "captions": {"file": "content/2026-W45/bonus-origin-recut/captions.md", "section": "Part 2 — animated chibi version"}
+    "captions": {
+      "file": "content/2026-W45/bonus-origin-recut/captions.md",
+      "section": "Part 2 — animated chibi version"
+    }
   },
   {
     "id": "w45-mon",
@@ -29,6 +55,8 @@
       "content/2026-W45/01-mon-ai-tip/drafts/slide-4.png",
       "content/2026-W45/01-mon-ai-tip/drafts/slide-5.png"
     ],
-    "captions": {"file": "content/2026-W45/01-mon-ai-tip/drafts/draft.md"}
+    "captions": {
+      "file": "content/2026-W45/01-mon-ai-tip/drafts/draft.md"
+    }
   }
 ]
