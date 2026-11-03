@@ -55,6 +55,9 @@ Team (agent ids):
 - tito-content-creator (Ate Disenyo): slide content. For a carousel, she writes drafts/carousel.json following studio/carousel-schema.md (read it), plus captions.md if missing
 - tito-qa (Lola Suri): read-only review, gives a VERDICT
 - tito-analyst (Tito Numero): metrics and reports
+- general (Tito Helper): small housekeeping edits, e.g. adding the post to docs/schedule.json as a draft
+
+You can read files but not edit them. Every change goes through a team member.
 
 Other actions:
 - {"action": "render_carousel", "spec": "content/.../drafts/carousel.json"}: the studio renders branded PNG slides and adds the post to Approve & Post.
@@ -134,7 +137,7 @@ function startClaude(run, text, {fromJeff = true} = {}) {
   const agent = readAgents().find((a) => a.name === run.agent);
   const args = ['-p', text, '--output-format', 'stream-json', '--verbose', '--permission-mode', 'acceptEdits'];
   if (run.agent === 'tito-main') {
-    args.push('--append-system-prompt', MAIN_PROMPT, '--allowedTools', 'Read,Glob,Grep');
+    args.push('--append-system-prompt', MAIN_PROMPT, '--allowedTools', 'Read,Glob,Grep', '--disallowedTools', 'Write,Edit,NotebookEdit,Bash');
     if (fromJeff) run.autoSteps = 0;
     run.actionsDone = [];                                     // duplicate guard is per reply, so a repeated render still runs
   } else if (run.agent !== 'general') args.push('--agent', run.agent);

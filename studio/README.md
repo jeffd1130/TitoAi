@@ -19,6 +19,8 @@ The terminal prints a **private phone link** (`http://<your-Mac-IP>:4545/?key=�
 
 Stop it with Ctrl+C in that terminal.
 
+**Double-click apps:** **Tito AI Studio** and **Tito AI Studio (Phone)** are on your Desktop. Each opens Terminal and starts the studio. (On a Mac this replaces a Windows `.exe`; macOS can't run `.exe` files.)
+
 ## 💬 Start with Tito AI (the main producer)
 
 Open the **💬 Tito AI** tab (the home screen) and just say what you want, e.g. *"Gawin natin ang W46 Monday post. Walang Flow credits, carousel na lang."*
