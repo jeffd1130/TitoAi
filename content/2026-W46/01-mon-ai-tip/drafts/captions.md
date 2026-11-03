@@ -29,7 +29,7 @@ I-save para magamit mo.
 
 ## Facebook
 
-Buy 1 Take 1 mo… lugi pala? 😅 Madaling mag-isip ng promo, mahirap kapag hindi kinuwenta. Sa fictional practice example na ito (dried mangoes, ₱120 benta, ₱70 puhunan), ₱120 lang ang pasok pero ₱140 ang gastos sa 2 packs, kaya −₱20 kada set. Nasa carousel ang prompt na pwede mong i-copy sa libreng Gemini o Claude. Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at hindi pa kasama ang delivery at platform fee.
+Buy 1 Take 1 mo… lugi pala? 😅 Madaling mag-isip ng promo, mahirap kapag hindi kinuwenta. Sa fictional practice example na ito (dried mangoes, ₱120 benta, ₱70 puhunan), ₱120 lang ang pasok pero ₱140 ang gastos sa 2 packs, kaya −₱20 kada set. Nasa carousel ang prompt na pwede mong i-copy sa Gemini o Claude (libre ang basic na version). Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at hindi pa kasama ang delivery at platform fee.
 
 I-save para magamit mo.
 
