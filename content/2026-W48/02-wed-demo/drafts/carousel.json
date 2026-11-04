@@ -1,0 +1,51 @@
+{
+  "title": "W48 Wed · Galit ang Customer, Mag-practice Muna",
+  "series": "W48 · Wednesday 7:00 PM PHT",
+  "captions": "content/2026-W48/02-wed-demo/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL PRACTICE EXAMPLE",
+      "headline": "Galit ang customer.",
+      "body": "Mag‑practice ka muna kay AI bago ang shift. Customer (fictional): “Ilang araw nang late ang parcel ko!”",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "FICTIONAL · MIGS",
+      "headline": "Si Migs, may shift mamayang gabi.",
+      "list": [
+        "Gawa‑gawang kompanya lang.",
+        "Walang totoong customer o script ng employer.",
+        "Sundin ang AI policy ng kompanya mo."
+      ],
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "headline": "Copy‑paste sa libreng AI",
+      "body": "Hindi pa nasubukan ang prompt na ito.",
+      "prompt": "Mag‑roleplay tayo para sa practice ko. Ikaw ang galit na customer dahil late ang parcel (fictional na kompanya: Padala Express). Ako ang agent.\n- Isang maikling mensahe bawat turn.\n- Hindi mapang‑abuso.\n- Huwag mag‑imbento ng patakaran ng kompanya.\nPagkatapos ng 5 palitan:\n1. I‑score ako (1–5): empathy, linaw, next step.\n2. Piliin ang pinakamahina kong sagot at bigyan ng 1 mas magandang bersyon.\nSimulan mo na.",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI",
+      "headline": "Score + mas magandang sagot",
+      "body": "Customer: “Ilang araw nang late ang parcel ko!” Migs: “Hintayin n'yo na lang po.” Customer: “Wala bang ibang magagawa?!” Scorecard (illustrative): Empathy 3/5 · Linaw 4/5 · Next step 2/5. Mas magandang sagot: “Pasensya na po at na‑late ang parcel. Titingnan ko po ang status ngayon. Pakibigay po ang order number para masabi ko ang susunod na hakbang.” Opinyon lang ng AI ang score, hindi QA score. Tingnan kung totoo ang sinabi tungkol sa patakaran; kay AI hindi galing ang policy ng kompanya mo.",
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "headline": "3 hakbang",
+      "body": "Tito AI — AI Para Sa Ating Lahat.",
+      "list": [
+        "Gawa‑gawang customer.",
+        "Limang palitan.",
+        "Score + mas magandang sagot."
+      ],
+      "cta": "I‑SAVE PARA MAGAMIT BAGO ANG SHIFT.",
+      "chibi": "wave"
+    }
+  ]
+}
