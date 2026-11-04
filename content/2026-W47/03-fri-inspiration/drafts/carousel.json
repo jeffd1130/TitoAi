@@ -1,0 +1,47 @@
+{
+  "title": "W47 Fri · Ginamit ng Anak Ko ang AI sa Assignment",
+  "series": "W47 · Friday 7:00 PM PHT",
+  "captions": "content/2026-W47/03-fri-inspiration/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL STORY · TATAY BEN",
+      "headline": "“Ginamit ng anak ko ang AI sa assignment.”",
+      "highlight": "Galit ba ako… o magtatanong muna?",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "FICTIONAL PRACTICE STORY",
+      "headline": "Parang sobrang ganda ng sagot.",
+      "body": "Grade 5 ang anak ni Tatay Ben. Unang naramdaman niya: magalit. Huminto muna siya.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "headline": "Magtanong muna",
+      "body": "Hindi pa nasubukan ang prompt na ito.",
+      "prompt": "Ang anak ko ay nasa Grade 5 at gumamit ng AI para sa assignment niya tungkol sa mga bahagi ng halaman. Hindi ko alam ang subject na ito.\nGumawa ng 3 simpleng tanong sa Taglish na pwede kong itanong sa kanya.\n- Isa: \"Ipaliwanag mo sa sarili mong salita.\"\n- Magalang, hindi nang‑aakusa.\n- Huwag mag‑imbento ng laman ng assignment niya.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI",
+      "headline": "3 tanong, walang sumbat.",
+      "body": "Kung kaya niyang ipaliwanag, natutunan niya. Kung hindi, doon kayo magsimula. Alamin ang patakaran ng school ng anak mo.",
+      "list": [
+        "Ipaliwanag mo sa sarili mong salita: para saan ang ugat ng halaman?",
+        "Anong parte ang pinakamadaling intindihin? Alin ang medyo malabo?",
+        "Paano mo malalaman kung tama ang sagot na nakuha mo?"
+      ],
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "headline": "Sa bahay n'yo, alin?",
+      "body": "A — Bawal ang AI sa assignment. B — Pwede basta ipaliwanag. C — Depende sa subject. Tito AI — AI Para Sa Ating Lahat.",
+      "cta": "I‑COMMENT ANG LETRA.",
+      "chibi": "wave"
+    }
+  ]
+}
