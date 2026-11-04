@@ -56,7 +56,7 @@ Gusto kong marinig: A, B, o C sa bahay n'yo? (Same poll as the post; no second C
 ## Checks
 - Emoji: 1 per caption (max 3) ✔
 - Hashtags: 5 each, all include #TitoAIPH #MgaPamangkin #AIParaSaAtin ✔
-- Body: TikTok 4 sentences, IG 5, FB 5 (+ CTA line) ✔
+- Body: TikTok 5 sentences, IG 5, FB 5 (+ CTA line) ✔ (hook quote = 2)
 - One CTA each (COMMENT A/B/C) ✔
 - Labels: fictional story, untested prompt, human-written S4 ✔
 - Hook is attributed to fictional Tatay Ben, not Jeff ✔
