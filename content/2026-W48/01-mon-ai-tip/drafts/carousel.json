@@ -1,0 +1,48 @@
+{
+  "title": "W48 Mon · Na-lock Daw ang Account Mo?",
+  "series": "W48 · Monday 8:00 PM PHT",
+  "captions": "content/2026-W48/01-mon-ai-tip/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL SAMPLE · HINDI TOTOONG BANGKO",
+      "headline": "Na‑lock daw ang account mo?",
+      "highlight": "Magtanong muna. Huwag mag‑click.",
+      "body": "“BANKO NI JUAN: Na‑lock ang account mo. I‑verify sa loob ng 1 oras: [link]…”",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "FICTIONAL SAMPLE · HINDI TOTOONG BANGKO",
+      "headline": "Mabilis ang text. Mas mabilis kung hindi ka mag‑iisip.",
+      "body": "“BANKO NI JUAN: Na‑lock ang account mo. I‑verify sa loob ng 1 oras: [link]. Ibigay ang OTP para ma‑unlock.” Huwag mag‑click. Huwag magbigay ng OTP.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "headline": "Ipasuri sa AI",
+      "body": "Hindi pa nasubukan ang prompt na ito. Alisin ang link, OTP at account number bago i‑paste.",
+      "prompt": "Suriin ang text na ito. Hindi mo ma‑verify kung totoo, kaya red flags ang i‑focus mo.\n1. Ilista ang red flags.\n2. Ano ang DAPAT kong gawin?\n3. Ano ang HINDI ko dapat gawin?\n4. Sabihin na hindi ka final na judge.\nText: \"[i‑paste dito, walang link, OTP o account number]\"",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI",
+      "headline": "Ito ang hahanapin sa text.",
+      "body": "Red flags: nagmamadali (“sa loob ng 1 oras”), may link na pinapa‑click, hinihingi ang OTP. DAPAT: Buksan mismo ang official app o tawagan ang official hotline ng bangko mo. HINDI: Mag‑click ng link. Magbigay ng OTP o password. Kahit sabihing “mukhang scam,” official app pa rin ang final check.",
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "headline": "3 hakbang",
+      "body": "Tito AI — AI Para Sa Ating Lahat.",
+      "list": [
+        "Huwag i‑click.",
+        "Ipasuri sa AI.",
+        "I‑check sa official app."
+      ],
+      "cta": "I‑SEND ITO SA NANAY, LOLA, O FAMILY GC.",
+      "chibi": "wave"
+    }
+  ]
+}
