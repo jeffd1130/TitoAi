@@ -925,9 +925,9 @@
           "day": "FRI",
           "title": "Origin Recut Part 2",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 2 of 5",
-          "note": "BLOCKED: the first Flow cut (part-2-chibi-flow.mp4) was rejected for style drift (3D-toy look, stubble). Redo in Google Flow Frames mode from a Part 1 frame on Nov 4; see content/2026-W45/bonus-origin-recut/gemini-plan.md. Captions: content/2026-W45/bonus-origin-recut/captions.md. Drop: Fri Nov 6, 7:00 PM PHT, if the redo is approved in time. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Candidate Flow redo rendered Nov 5 (flow-part-2/part-2-chibi-codex-review.mp4, 1080x1920, 30fps, original Part 2 audio uncut, about -14.8 LUFS per Codex measurement). Claude Code reviewed a 10-frame contact sheet only; style is glossier than Part 1 and the full motion has not been checked frame by frame. Needs Jeff to watch it next to Part 1 and approve. Jeff posts it himself; nothing is scheduled. Fallback if not approved by Nov 6 afternoon: move Part 2 to Mon Nov 9.",
           "date": "Nov 6",
-          "status": "blocked",
+          "status": "draft",
           "url": null,
           "boost": null
         }
