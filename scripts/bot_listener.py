@@ -28,13 +28,6 @@ POLL_TIMEOUT  = 30   # seconds for long-polling
 PHT = timezone(timedelta(hours=8))
 
 # Alliance daily-report commands for the Alliance group chat (handled by the Alliance project)
-sys.path.insert(0, "/Users/jeff/Documents/Claude/Alliance-Finance-Agent/scripts")
-try:
-    import alliance_bot
-    alliance_bot.set_token(BOT_TOKEN)
-except Exception:
-    alliance_bot = None
-
 STATUS_EMOJI = {
     "posted":  "✅",
     "draft":   "📝",
@@ -196,9 +189,6 @@ def main() -> None:
 
                 # Authorisation gate — silently ignore anyone else
                 from_chat = msg.get("chat", {}).get("id")
-                if alliance_bot and from_chat in alliance_bot.ALLOWED_CHATS:
-                    alliance_bot.handle(msg)
-                    continue
                 if from_chat != CHAT_ID:
                     log.info("Ignored message from chat_id=%s", from_chat)
                     continue
