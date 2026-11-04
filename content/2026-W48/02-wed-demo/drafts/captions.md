@@ -29,7 +29,7 @@ I-save para magamit bago ang shift.
 
 ## Facebook
 
-Galit ang customer. Mag-practice ka muna kay AI bago ang shift. 🎧 Sa fictional practice example na ito, si Migs ay nag-practice sa libreng AI (libre ang basic na version) na gumaganap na galit na customer ng gawa-gawang kompanyang Padala Express. Pagkatapos ng 5 palitan, nagpa-score siya sa empathy, linaw, at next step. Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at dapat sundin ang AI policy ng kompanya ninyo. Huwag mag-paste ng totoong customer o script.
+Galit ang customer. Mag-practice ka muna kay AI bago ang shift. 🎧 Sa fictional practice example na ito, si Migs ay nag-practice sa libreng AI (libre ang basic na version) na gumaganap na galit na customer ng gawa-gawang kompanyang Padala Express. Pagkatapos ng 5 palitan, nagpa-score siya sa empathy, linaw, at next step. Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at huwag mag-paste ng totoong customer o script; sundin ang AI policy ng kompanya.
 
 I-save para magamit bago ang shift.
 
