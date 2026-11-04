@@ -1,0 +1,42 @@
+{
+  "title": "W48 Fri · Saan Mapupunta ang 13th Month?",
+  "series": "W48 · Friday 7:00 PM PHT",
+  "captions": "content/2026-W48/03-fri-inspiration/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL STORY · ATE JOY",
+      "headline": "Darating na ang 13th month.",
+      "body": "May plano ka na ba, o “saan napunta?” na naman?",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "FICTIONAL PRACTICE STORY",
+      "headline": "“Parang ang bilis lang mawala.”",
+      "body": "Iyan ang sabi ni Ate Joy tungkol sa 13th month. Ngayong taon, gusto niyang isulat muna kung saan ito pupunta. Kung employee ka at tumatanggap ng 13th month.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "headline": "Listahan lang.",
+      "body": "Hindi AI ang magpapasya. Hindi pa nasubukan ang prompt na ito.",
+      "prompt": "Tulungan mo akong gumawa ng simpleng plano para sa 13th month ko. Numbers ko lang ang gamitin mo.\n- Darating: ₱[__]\n- Bills/utang: ₱[__]\n- Noche Buena: ₱[__]\n- Regalo: ₱[__]\n- Ipon: ₱[__]\n1. Magtanong muna kung may kulang.\n2. Ipakita ang hati, step‑by‑step.\n3. Sabihin kung lumampas.\n4. Walang investment, loan o app. Listahan lang.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL NUMBERS · HUMAN-WRITTEN, HINDI OUTPUT NG AI",
+      "headline": "Lampas ng ₱1,000. Ano'ng gagalawin?",
+      "body": "Darating (fictional): ₱20,000. Draft na hati: Bills/utang ₱8,000, Noche Buena ₱5,000, Regalo ₱3,000, Ipon ₱5,000. Total: ₱8,000 + ₱5,000 + ₱3,000 + ₱5,000 = ₱21,000 → lampas ng ₱1,000. Desisyon ni Ate Joy: Noche Buena, ₱4,000 na lang. Bagong total: ₱8,000 + ₱4,000 + ₱3,000 + ₱5,000 = ₱20,000. Calculator mo pa rin ang final check. Listahan lang ito, hindi financial advice.",
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "headline": "Isulat muna kung saan pupunta, bago pumasok ang pera.",
+      "body": "Tito AI — AI Para Sa Ating Lahat.",
+      "cta": "FOLLOW TITO AI PARA SA SUSUNOD NA AI LESSON.",
+      "chibi": "wave"
+    }
+  ]
+}
