@@ -59,7 +59,7 @@ Simulan mo na.
 ## Checks
 - Emoji: 1 per caption (max 3) ✔
 - Hashtags: 5 each, all include #TitoAIPH #MgaPamangkin #AIParaSaAtin ✔
-- Body: TikTok 3 sentences, IG 5, FB 5 (+ CTA line) ✔
+- Body: TikTok 4 sentences, IG 4, FB 5 (+ CTA line) ✔
 - One CTA each (SAVE) ✔
 - Labels: fictional practice example, untested prompt, human-written S4, score is AI opinion ✔
 - No stats, job-security claims, "café"/"English practice," or real company ✔
