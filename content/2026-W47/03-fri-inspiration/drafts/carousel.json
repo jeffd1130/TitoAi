@@ -14,15 +14,15 @@
       "bg": "marigold",
       "kicker": "FICTIONAL PRACTICE STORY",
       "headline": "Parang sobrang ganda ng sagot.",
-      "body": "Grade 5 ang anak ni Tatay Ben. Unang naramdaman niya: magalit. Huminto muna siya.",
+      "body": "Grade 5 ang anak ni Tatay Ben. Unang naramdaman niya: magalit. Huminto muna siya.",
       "chibi": "teach"
     },
     {
       "bg": "cream",
-      "headline": "Magtanong muna",
+      "headline": "“Hindi ko alam ang subject. Pero pwede akong magtanong.”",
       "body": "Hindi pa nasubukan ang prompt na ito.",
-      "prompt": "Ang anak ko ay nasa Grade 5 at gumamit ng AI para sa assignment niya tungkol sa mga bahagi ng halaman. Hindi ko alam ang subject na ito.\nGumawa ng 3 simpleng tanong sa Taglish na pwede kong itanong sa kanya.\n- Isa: \"Ipaliwanag mo sa sarili mong salita.\"\n- Magalang, hindi nang‑aakusa.\n- Huwag mag‑imbento ng laman ng assignment niya.",
-      "chibi": "teach"
+      "prompt": "Ang anak ko ay nasa Grade 5 at gumamit ng AI para sa assignment niya tungkol sa mga bahagi ng halaman. Hindi ko alam ang subject na ito.\nGumawa ng 3 simpleng tanong sa Taglish na pwede kong itanong sa kanya.\n- Isa: \"Ipaliwanag mo sa sarili mong salita.\"\n- Magalang, hindi nang‑aakusa.\n- Huwag mag‑imbento ng laman ng assignment niya.",
+      "chibi": "none"
     },
     {
       "bg": "cream",
@@ -39,7 +39,12 @@
     {
       "bg": "marigold",
       "headline": "Sa bahay n'yo, alin?",
-      "body": "A — Bawal ang AI sa assignment. B — Pwede basta ipaliwanag. C — Depende sa subject. Tito AI — AI Para Sa Ating Lahat.",
+      "body": "Tito AI — AI Para Sa Ating Lahat.",
+      "list": [
+        "A. Bawal ang AI sa assignment.",
+        "B. Pwede basta ipaliwanag.",
+        "C. Depende sa subject."
+      ],
       "cta": "I‑COMMENT ANG LETRA.",
       "chibi": "wave"
     }
