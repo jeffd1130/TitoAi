@@ -19,7 +19,7 @@ I-save para magamit bago ang shift.
 
 ## Instagram
 
-Galit ang customer. Mag-practice ka muna kay AI bago ang shift. 🎧 Sa fictional practice example ni Migs, gawa-gawang customer at kompanya (Padala Express) ang gamit, at walang totoong script ng employer. Pagkatapos ng 5 palitan, may score at isang mas magandang sagot. Opinyon lang ng AI ang score, hindi QA score. Hindi pa nasubukan ang prompt at human-written ang slide 4.
+Galit ang customer. Mag-practice ka muna kay AI bago ang shift. 🎧 Sa fictional practice example ni Migs, gawa-gawang customer at kompanya (Padala Express) ang gamit, at may score at mas magandang sagot pagkatapos ng 5 palitan. Opinyon lang ng AI ang score, hindi QA score, at hindi pa nasubukan ang prompt.
 
 I-save para magamit bago ang shift.
 
