@@ -59,7 +59,7 @@ Text: "[ipaste dito ang text. Alisin muna ang link, OTP, at account number.]"
 ## Checks
 - Emoji: 1 per caption (max 3) ✔
 - Hashtags: 5 each, all include #TitoAIPH #MgaPamangkin #AIParaSaAtin ✔
-- Body: TikTok 5 sentences, IG 5, FB 5 (+ CTA line) ✔
+- Body: TikTok 5 sentences, IG 5, FB 5 (+ CTA line) ✔ (quote counts as one)
 - One CTA each (SHARE) ✔
 - Labels: fictional sample, untested prompt, human-written S4, AI is second opinion ✔
 - No scam-season claims, stats, real brands, hotline numbers or victim stories ✔
