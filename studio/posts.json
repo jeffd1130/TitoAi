@@ -1,5 +1,85 @@
 [
   {
+    "id": "2026-w47-02-wed-demo",
+    "title": "W47 Wed · Gemini ang Gagawa ng Quiz",
+    "series": "W47 · Wednesday 7:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W47/02-wed-demo/drafts/slides/slide-1.png",
+      "content/2026-W47/02-wed-demo/drafts/slides/slide-2.png",
+      "content/2026-W47/02-wed-demo/drafts/slides/slide-3.png",
+      "content/2026-W47/02-wed-demo/drafts/slides/slide-4.png",
+      "content/2026-W47/02-wed-demo/drafts/slides/slide-5.png"
+    ],
+    "captions": {
+      "file": "content/2026-W47/02-wed-demo/drafts/captions.md"
+    }
+  },
+  {
+    "id": "2026-w48-02-wed-demo",
+    "title": "W48 Wed · Galit ang Customer, Mag-practice Muna",
+    "series": "W48 · Wednesday 7:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W48/02-wed-demo/drafts/slides/slide-1.png",
+      "content/2026-W48/02-wed-demo/drafts/slides/slide-2.png",
+      "content/2026-W48/02-wed-demo/drafts/slides/slide-3.png",
+      "content/2026-W48/02-wed-demo/drafts/slides/slide-4.png",
+      "content/2026-W48/02-wed-demo/drafts/slides/slide-5.png"
+    ],
+    "captions": {
+      "file": "content/2026-W48/02-wed-demo/drafts/captions.md"
+    }
+  },
+  {
+    "id": "2026-w48-03-fri-inspiration",
+    "title": "W48 Fri · Saan Mapupunta ang 13th Month?",
+    "series": "W48 · Friday 7:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W48/03-fri-inspiration/drafts/slides/slide-1.png",
+      "content/2026-W48/03-fri-inspiration/drafts/slides/slide-2.png",
+      "content/2026-W48/03-fri-inspiration/drafts/slides/slide-3.png",
+      "content/2026-W48/03-fri-inspiration/drafts/slides/slide-4.png",
+      "content/2026-W48/03-fri-inspiration/drafts/slides/slide-5.png"
+    ],
+    "captions": {
+      "file": "content/2026-W48/03-fri-inspiration/drafts/captions.md"
+    }
+  },
+  {
+    "id": "2026-w47-03-fri-inspiration",
+    "title": "W47 Fri · Ginamit ng Anak Ko ang AI sa Assignment",
+    "series": "W47 · Friday 7:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W47/03-fri-inspiration/drafts/slides/slide-1.png",
+      "content/2026-W47/03-fri-inspiration/drafts/slides/slide-2.png",
+      "content/2026-W47/03-fri-inspiration/drafts/slides/slide-3.png",
+      "content/2026-W47/03-fri-inspiration/drafts/slides/slide-4.png",
+      "content/2026-W47/03-fri-inspiration/drafts/slides/slide-5.png"
+    ],
+    "captions": {
+      "file": "content/2026-W47/03-fri-inspiration/drafts/captions.md"
+    }
+  },
+  {
+    "id": "2026-w48-01-mon-ai-tip",
+    "title": "W48 Mon · Na-lock Daw ang Account Mo?",
+    "series": "W48 · Monday 8:00 PM PHT",
+    "type": "carousel",
+    "media": [
+      "content/2026-W48/01-mon-ai-tip/drafts/slides/slide-1.png",
+      "content/2026-W48/01-mon-ai-tip/drafts/slides/slide-2.png",
+      "content/2026-W48/01-mon-ai-tip/drafts/slides/slide-3.png",
+      "content/2026-W48/01-mon-ai-tip/drafts/slides/slide-4.png",
+      "content/2026-W48/01-mon-ai-tip/drafts/slides/slide-5.png"
+    ],
+    "captions": {
+      "file": "content/2026-W48/01-mon-ai-tip/drafts/captions.md"
+    }
+  },
+  {
     "id": "2026-w46-01-mon-ai-tip",
     "title": "W46 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
     "series": "W46 · Monday 8:00 PM PHT",
