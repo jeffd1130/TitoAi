@@ -1,0 +1,58 @@
+{
+  "title": "W47 Wed · Gemini ang Gagawa ng Quiz",
+  "series": "W47 · Wednesday 7:00 PM PHT",
+  "captions": "content/2026-W47/02-wed-demo/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL PRACTICE EXAMPLE",
+      "headline": "Gemini ang gagawa ng quiz.",
+      "highlight": "Ikaw ang bahala sa tamang sagot.",
+      "body": "10 items, isang handout. Ikaw ang mag‑eedit.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "FICTIONAL · MA'AM LYN",
+      "headline": "Si Ma'am Lyn, Grade 5 Science.",
+      "body": "Kailangan niya ng quiz sa water cycle. Tatlo ang rules niya:",
+      "list": [
+        "Walang pangalan ng bata.",
+        "Answer key, hiwalay.",
+        "Siya ang final check."
+      ],
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "headline": "Copy‑paste sa libreng Gemini",
+      "body": "Hindi pa nasubukan ang prompt na ito.",
+      "prompt": "Gumawa ng 10‑item multiple‑choice quiz para sa Grade 5 Science: water cycle.\n- 4 choices, isa lang ang tamang sagot.\n- Simpleng Filipino/English.\n- Answer key sa hiwalay na seksyon sa dulo.\n- Walang pangalan ng estudyante o school.\n- Lagyan ng \"?\" ang item na hindi ka sigurado.\nGawing PDF handout.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI",
+      "headline": "Item 4: i‑edit para mas madali.",
+      "body": "I‑highlight ang item 4 → “Gawing mas madali para sa Grade 5.” Bago: “Aling proseso ang nagpapalit ng water vapor sa liquid water?” Pagkatapos: “Lumalamig ang singaw ng tubig sa ulap at nagiging patak. Ano ito?” Sagot sa dalawa: Condensation.",
+      "list": [
+        "Tama ba ang sagot?",
+        "Angkop ba sa level ng klase?",
+        "May AI‑use note ba ayon sa school?"
+      ],
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "headline": "3 hakbang",
+      "body": "Tito AI — AI Para Sa Ating Lahat.",
+      "list": [
+        "Ilatag ang rules.",
+        "I‑edit ang mahinang item.",
+        "Ikaw ang mag‑check."
+      ],
+      "cta": "I‑SEND SA CO‑TEACHER MO.",
+      "chibi": "wave"
+    }
+  ]
+}
