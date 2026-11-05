@@ -925,9 +925,9 @@
           "day": "FRI",
           "title": "Origin Recut Part 2",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 2 of 5",
-          "note": "Candidate Flow redo rendered Nov 5 (flow-part-2/part-2-chibi-codex-review.mp4, 1080x1920, 30fps, original Part 2 audio uncut, about -14.8 LUFS per Codex measurement). Claude Code reviewed a 10-frame contact sheet only; style is glossier than Part 1 and the full motion has not been checked frame by frame. Needs Jeff to watch it next to Part 1 and approve. Jeff posts it himself; nothing is scheduled. Fallback if not approved by Nov 6 afternoon: move Part 2 to Mon Nov 9.",
+          "note": "Candidate Flow redo rendered Nov 5 (flow-part-2/part-2-chibi-codex-review.mp4, 1080x1920, 30fps, original Part 2 audio uncut, about -14.8 LUFS per Codex measurement). Claude Code reviewed a 10-frame contact sheet only; style is glossier than Part 1 and the full motion has not been checked frame by frame. Needs Jeff to watch it next to Part 1 and approve. Jeff posts it himself; nothing is scheduled. Fallback if not approved by Nov 6 afternoon: move Part 2 to Mon Nov 9. Jeff approved it in Tito AI Studio (Nov 5); he posts it himself Fri Nov 6, 7:00 PM PHT.",
           "date": "Nov 6",
-          "status": "draft",
+          "status": "ready",
           "url": null,
           "boost": null
         }

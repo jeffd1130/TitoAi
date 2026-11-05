@@ -226,7 +226,8 @@ function copyText(text) {
 function renderPosts() {
   const el = $('#posts');
   if (!el) return;
-  el.innerHTML = state.posts.map((p) => {
+  const bySlot = (a, b) => (a.slot || '9999').localeCompare(b.slot || '9999');   // calendar order, unscheduled last
+  el.innerHTML = [...state.posts].sort(bySlot).map((p) => {
     const st = p.state || {posted: {}};
     const postedCount = Object.keys(st.posted || {}).length;
     const badge = postedCount === 3 ? '<span class="badge green">Posted everywhere</span>'
@@ -254,14 +255,8 @@ function renderPosts() {
     const scLine = !sc ? '' : sc.status === 'running' ? `📅 Kuya Iskedyul is scheduling for ${esc(fmtPHT(sc.when))}…`
       : sc.status === 'done' ? `📅 Scheduled ${esc(fmtPHT(sc.when))}${sc.result ? ' · ' + Object.entries(sc.result).map(([k, v]) => `${k} ${v ? '✓' : '—'}`).join(' · ') : ''}`
       : `📅 Scheduling ${esc(sc.status)} · see the Schedule column on Agents`;
-    const schedule = !st.approved ? '' : `<div class="cap sched">
-        <div class="cap-head"><b>📅 Schedule on Meta + TikTok</b> <span class="muted">Kuya Iskedyul uploads it to the calendars. Schedule only, never posts now.</span></div>
-        ${scLine ? `<p class="sched-line ${sc.status}" ${scRun ? `data-goto-run="${sc.runId}"` : ''}>${scLine}</p>` : ''}
-        <div class="row wrap">
-          <input type="datetime-local" data-sched-when="${p.id}" value="${esc((sc && sc.when) || p.slot || '')}"> <span class="muted">PHT</span>
-          ${['facebook', 'instagram', 'tiktok'].map((k) => `<label class="chk"><input type="checkbox" data-sched-pf="${p.id}" value="${k}" ${!(st.posted || {})[k] ? 'checked' : ''}> ${{facebook: 'Facebook', instagram: 'Instagram', tiktok: 'TikTok'}[k]}</label>`).join('')}
-          <button class="btn small gold" data-schedule="${p.id}" ${sc && sc.status === 'running' ? 'disabled' : ''}>${sc && sc.status === 'done' ? 'Schedule again' : 'Schedule'}</button>
-        </div></div>`;
+    // Calendar uploads are off (Jeff, Nov 5); the slot stays as a posting guide.
+    const schedule = !p.slot ? '' : `<div class="cap sched"><div class="cap-head"><b>📅 Post on ${esc(fmtPHT(p.slot))} PHT</b> <span class="muted">Guide from the schedule. You post it yourself.</span></div></div>`;
     return `<article class="card post" data-post-id="${p.id}">
       <div class="post-head"><div><div class="muted">${esc(p.series || '')}</div><h3>${esc(p.title)}</h3></div>${badge}</div>
       <div class="post-body">

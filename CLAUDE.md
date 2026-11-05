@@ -4,6 +4,8 @@ You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly co
 
 Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
 
+**Market (Jeff, Nov 5, 2026): Class B and C first, with some Class A.** C: BPO workers, guro, freelancers/VAs starting out, sari-sari and small sellers. B: office professionals, supervisors/managers, small-business owners with staff, OFW families. A (some): business owners, executives and school/company decision-makers who could book a Tito AI training. For B/A, lead with time saved, better work and business results; keep visuals polished and the Taglish natural (a bit more English is fine). Free tools stay first; never talk down to C or show off to A.
+
 
 ## Task ownership (set Nov 3, 2026)
 
@@ -411,7 +413,7 @@ Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https:/
 
 **Niche:** "The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."
 
-**Target audience:** Freelancers (1.5M+) · Guro/Teachers (900K+) · BPO workers · Nanays/tatays · Small business owners
+**Target audience:** Class B and C first, some Class A (see the market note at the top). Freelancers (1.5M+) · Guro/Teachers (900K+) · BPO workers · Nanays/tatays · Small business owners · Office professionals and managers · Business owners and decision-makers (training leads)
 
 **Primary tools featured in all content:** Claude (claude.ai) + Gemini (gemini.google.com) — both free. Never reference paid tools.
 

@@ -1,4 +1,4 @@
-// Tito AI Studio main board: a Figma-style canvas with the chief-of-staff chat, the live workflow,
+// Tito AI Studio main board: a Figma-style canvas with updates (agent activity + what's waiting on Jeff), the live workflow,
 // the ChatGPT → Claude handoff inbox, the final-approval queue, the content calendar and sticky notes.
 // Uses globals from app.js (state, api, esc, who, toast, openFile, openNewRun, switchTab, copyText, STATUS_LABEL, ago).
 (() => {
@@ -9,12 +9,12 @@
 
   // ---------- frames (world coordinates) ----------
   const FRAMES = [
-    {id: 'cos', name: 'Chief of Staff · Tito AI', x: 0, y: 0, w: 700, h: 1740},
-    {id: 'flow', name: 'Workflow · live', x: 760, y: 0, w: 1720, h: 540},
-    {id: 'handoff', name: 'ChatGPT → Claude handoff', x: 760, y: 600, w: 840, h: 280},
-    {id: 'approve', name: 'Your approvals · final only', x: 1640, y: 600, w: 840, h: 280},
-    {id: 'cal', name: 'Content calendar', x: 760, y: 940, w: 1720, h: 800},
-    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 1800, w: 2480, h: 440},
+    {id: 'updates', name: 'Updates · agents + waiting on you', x: 0, y: 0, w: 1720, h: 360},
+    {id: 'flow', name: 'Workflow · live', x: 0, y: 420, w: 1720, h: 540},
+    {id: 'handoff', name: 'ChatGPT → Claude handoff', x: 0, y: 1020, w: 840, h: 280},
+    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 1020, w: 840, h: 280},
+    {id: 'cal', name: 'Content calendar', x: 0, y: 1360, w: 1720, h: 800},
+    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 2220, w: 1720, h: 440},
   ];
 
   // ---------- workflow nodes (inside the Workflow frame) ----------
@@ -41,7 +41,6 @@
 
   // ---------- helpers ----------
   const runsOf = (agent) => Object.values(state.runs).filter((r) => r.agent === agent).sort((a, b) => b.updatedAt - a.updatedAt);
-  const mains = () => runsOf('tito-main').sort((a, b) => b.createdAt - a.createdAt);
   const md = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code>$1</code>');
   const pendingPosts = () => state.posts.filter((p) => !p.state.approved);
   const pendingVideos = () => runsOf('video-producer').filter((r) => r.status === 'review');
@@ -56,13 +55,8 @@
     $('#fgLayers').innerHTML = '<div class="fg-ph">Layers</div>' + FRAMES.map((f) => `<div class="fg-layer" data-zoom="${f.id}"><span class="fg-hash">#</span>${esc(f.name)}</div>`).join('') +
       '<div class="fg-ph mt">Sticky notes</div><div id="fgNoteLayers"></div>' +
       '<div class="fg-ph mt">Shortcuts</div><div class="fg-keys">Drag or scroll to move<br>⌘ + scroll or pinch to zoom<br>Double-click to add a sticky<br>Press 1 to fit</div>';
-    // Chief of staff frame
-    $('#fb-cos').innerHTML = `<div class="cos">
-      <div class="cos-list"><button class="fg-btn primary" id="cosNew">+ New conversation</button><div id="cosChats"></div></div>
-      <div class="cos-main"><div class="cos-head" id="cosHead"></div><div class="cos-thread fg-scroll" id="cosThread"></div>
-        <div class="cos-chips" id="cosChips"></div>
-        <div class="cos-composer"><textarea id="cosInput" rows="2" placeholder="Message your chief of staff…"></textarea><button class="fg-btn primary" id="cosSend">Send</button></div></div></div>`;
-    $('#cosChips').innerHTML = MAIN_CHIPS.slice(0, 3).map((c) => `<button class="fg-chip">${esc(c)}</button>`).join('');
+    $('#fb-updates').innerHTML = `<div class="ins upd"><div class="ins-col fg-scroll"><div class="fg-ph">⏳ Waiting on you</div><div id="updPending"></div></div>
+      <div class="ins-col fg-scroll"><div class="fg-ph">🤖 Agent activity</div><div id="updActivity"></div></div></div>`;
     // Workflow frame
     $('#fb-flow').innerHTML = `<svg class="fg-edges" id="fgEdges" width="1720" height="500"></svg>
       <div class="lane-label" style="left:870px;top:18px">VIDEO LANE · Flow first, Gemini after credits</div>
@@ -75,42 +69,6 @@
       <button class="fg-btn" id="calToday">Today</button><span class="cal-legend"><i class="st-posted"></i>Posted <i class="st-ready"></i>Ready <i class="st-draft"></i>Draft <i class="st-planned"></i>Planned</span></div>
       <div class="cal-grid" id="calGrid"></div>`;
     drawEdges();
-  }
-
-  // ---------- chief of staff ----------
-  function currentChat() { if (B.newChat) return null; return (B.chat && state.runs[B.chat]) || mains()[0] || null; }
-  function renderCos() {
-    const list = mains();
-    const cur = currentChat();
-    $('#cosChats').innerHTML = list.map((r) => {
-      const last = [...r.events].reverse().find((e) => e.kind === 'text' || e.kind === 'you');
-      return `<div class="cos-chat ${cur && cur.id === r.id ? 'on' : ''} ${r.status}" data-chat-id="${r.id}"><b>${esc(r.title.replace(/^\[[^\]]*\]\s*/, ''))}</b>
-        <span>${r.status === 'running' ? '● typing…' : esc((last ? last.text : '').slice(0, 60))}</span><em>${ago(r.updatedAt)}</em></div>`;
-    }).join('') || '<p class="fg-muted">No conversations yet.</p>';
-    $('#cosHead').innerHTML = `<b>🎙️ Tito AI</b> <span class="fg-muted">· your chief of staff. ${cur ? esc(cur.title) : 'New conversation'}</span>`;
-    const th = $('#cosThread');
-    const atBottom = th.scrollHeight - th.scrollTop - th.clientHeight < 60;
-    th.innerHTML = cur ? cur.events.map((e) => {
-      if (e.kind === 'you') return `<div class="cb me">${md(e.text)}</div>`;
-      if (e.kind === 'text') return `<div class="cb tito">${md(e.text)}</div>`;
-      if (e.kind === 'action') return `<div class="cn act">${md(e.text)}</div>`;
-      if (e.kind === 'update') return e.text.startsWith('[Studio update]') ? '' : e.text.startsWith('[Handoff') ? `<div class="cn hand">🤝 ChatGPT handoff sent to Claude</div>` : `<div class="cn">${md(e.text)}</div>`;
-      if (e.kind === 'error') return `<div class="cn err">${md(e.text)}</div>`;
-      return '';
-    }).join('') + (cur.status === 'running' ? '<div class="cb tito typing">Tito AI is thinking…</div>' : '')
-      : '<div class="cos-empty">🎙️<b>Kumusta, Jeff!</b><span>Tell me what to make. I plan it, run the team, and only bring you the final video or post to approve.</span></div>';
-    if (atBottom || !B.ready) th.scrollTop = th.scrollHeight;
-    const busy = cur && cur.status === 'running';
-    $('#cosSend').disabled = !!busy; $('#cosSend').textContent = busy ? '…' : 'Send';
-  }
-  async function sendCos() {
-    const text = $('#cosInput').value.trim();
-    if (!text) return;
-    const cur = currentChat();
-    try {
-      const run = await api('/api/main', {text, newChat: B.newChat, chatId: cur && cur.id});
-      B.newChat = false; B.chat = run.id; state.runs[run.id] = run; $('#cosInput').value = ''; renderCos(); renderMain();
-    } catch (e) { toast(e.message); }
   }
 
   // ---------- workflow ----------
@@ -168,7 +126,7 @@
   }
 
   // ---------- handoff ----------
-  async function loadHandoffs() { B.handoffs = await api('/api/handoffs'); renderHandoffs(); renderNodes(); }
+  async function loadHandoffs() { B.handoffs = await api('/api/handoffs'); renderHandoffs(); renderNodes(); renderUpdates(); }
   function renderHandoffs() {
     const LBL = {new: 'New from ChatGPT', 'with-claude': 'With Claude', done: 'Done'};
     $('#handList').innerHTML = B.handoffs.map((h) => {
@@ -182,6 +140,28 @@
         ${st === 'with-claude' ? `<button class="fg-btn" data-chat-id="${h.state.chatId}">Open conversation</button><button class="fg-btn" data-hand-done="${esc(h.id)}">Mark done</button>` : ''}
         ${st === 'done' ? `<button class="fg-btn" data-hand-reopen="${esc(h.id)}">Reopen</button>` : ''}</div></div></div>`;
     }).join('') || `<div class="hand-empty"><b>No handoffs yet.</b> ChatGPT saves a video plus a same-name <code>.md</code> note in <code>handoff/chatgpt/</code> (rules in its README). It shows up here, and <b>Hand to Claude</b> sends it to your chief of staff to review frames for chibi consistency, then finish it.</div>`;
+  }
+
+  // ---------- updates: what's waiting on Jeff + recent agent activity ----------
+  function renderUpdates() {
+    if (!$('#updPending')) return;
+    const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+    const soon = new Date(Date.now() + (8 + 7 * 24) * 3600e3).toISOString().slice(0, 16);
+    const item = (icon, text, sub, attrs) => `<div class="upd-item" ${attrs}><span>${icon}</span><div><b>${esc(text)}</b><em>${esc(sub)}</em></div></div>`;
+    const toPost = state.posts.filter((p) => p.state.approved && p.slot && p.slot <= soon && Object.keys(p.state.posted || {}).length < 3)
+      .sort((a, b) => a.slot.localeCompare(b.slot));
+    const pending = [
+      ...pendingVideos().map((r) => item('🎬', `Approve video: ${r.title}`, `${who(r.agent)} · ${ago(r.updatedAt)}`, `data-zoom="approve"`)),
+      ...pendingPosts().map((p) => item('📝', `Approve post: ${p.title}`, p.slot ? `Post on ${fmtPHT(p.slot)} PHT` : (p.series || ''), `data-goto-post="${esc(p.id)}"`)),
+      ...B.handoffs.filter((h) => (h.state.status || 'new') === 'new').map((h) => item('🤝', `ChatGPT clip waiting: ${h.id}`, 'Press Hand to Claude', 'data-zoom="handoff"')),
+      ...toPost.map((p) => item(p.slot.slice(0, 10) < today ? '⚠️' : '📅', `Post it yourself: ${p.title}`, `${p.slot.slice(0, 10) < today ? 'Overdue · was ' : ''}${fmtPHT(p.slot)} PHT`, `data-goto-post="${esc(p.id)}"`)),
+      ...Object.values(state.runs).filter((r) => r.status === 'failed' && Date.now() - r.updatedAt < 2 * 86400e3)
+        .map((r) => item('❗', `Failed: ${r.title}`, `${who(r.agent)} · ${ago(r.updatedAt)} · retry or ask Tito AI`, `data-goto="${r.id}"`)),
+    ];
+    $('#updPending').innerHTML = pending.join('') || '<div class="hand-empty">Nothing waiting on you. 🎉</div>';
+    const runs = Object.values(state.runs).sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 10);
+    $('#updActivity').innerHTML = runs.map((r) => item(r.status === 'running' ? '🟢' : r.status === 'failed' ? '🔴' : '⚪', `${who(r.agent)} · ${r.title.replace(/^\[[^\]]*\]\s*/, '')}`,
+      `${STATUS_LABEL[r.status] || r.status} · ${ago(r.updatedAt)}`, r.agent === 'tito-main' ? 'data-goto-main' : `data-goto="${r.id}"`)).join('') || '<div class="hand-empty">No agent activity yet.</div>';
   }
 
   // ---------- approvals (final only) ----------
@@ -271,7 +251,7 @@
         html += `<div class="fg-ph mt">Recent runs</div>` + (rs.map((r) => `<div class="ins-run ${r.status}" data-goto="${r.id}"><b>${esc(r.title)}</b><span>${STATUS_LABEL[r.status] || r.status} · ${ago(r.updatedAt)}</span></div>`).join('') || '<p class="fg-muted">No runs yet.</p>');
         if (n.stage) html += `<button class="fg-btn primary mt" data-new-run="${n.stage}">+ New run</button>`;
       }
-      if (id === 'tito-main') html += '<button class="fg-btn primary mt" data-zoom="cos">Open conversations</button>';
+      if (id === 'tito-main') html += '<button class="fg-btn primary mt" data-goto-main>Open Tito AI chat</button>';
       if (id === 'chatgpt') html += `<div class="fg-ph mt">How ChatGPT hands off</div><ol class="ins-ol"><li>Make the clip in Google Flow (Veo 3.1 Lite, 9:16, x1, silent ON). Use Gemini only after Flow credits run out.</li><li>Save it to <code>handoff/chatgpt/</code> with a same-name <code>.md</code> note (what it's for, the prompt).</li><li>Press <b>Hand to Claude</b> in the handoff frame.</li></ol><button class="fg-btn mt" data-copy-flow>Copy Flow prompt</button>`;
       if (id === 'claude') html += '<p class="fg-muted">Claude Code owns the finish: checks the chibi frames, places the file, writes captions, renders and sends it to Lola Suri.</p><button class="fg-btn primary mt" data-zoom="handoff">Open handoff inbox</button>';
       if (id === 'final') html += '<p class="fg-muted">You approve only finished videos and posts. Everything before that flows on automatically.</p><button class="fg-btn primary mt" data-zoom="approve">Open approvals</button>';
@@ -282,7 +262,7 @@
       if (p) html = `<div class="fg-ph">${esc(p.week)} ${esc(p.day)} · ${esc(p.date)}</div><h4 class="ins-title">${esc(p.title)}</h4>
         <span class="pill st-${esc(p.status)}">${esc(p.status)}</span><p class="fg-muted">${esc(p.tag || '')}</p><p class="ins-note">${esc(p.note || '')}</p>
         ${p.url ? `<a class="fg-btn" href="${/^https?:/.test(p.url) ? esc(p.url) : PAGES + esc(p.url)}" target="_blank">Open link</a>` : ''}
-        <button class="fg-btn primary mt" data-ask-cos="${esc(`Let's work on ${p.week} ${p.day} (${p.date}): "${p.title}". What's the status and what's next?`)}">Ask chief of staff</button>`;
+        <button class="fg-btn primary mt" data-ask-cos="${esc(`Let's work on ${p.week} ${p.day} (${p.date}): "${p.title}". What's the status and what's next?`)}">Ask Tito AI</button>`;
     } else if (kind === 'note') {
       html = '<div class="fg-ph">Sticky note</div><div class="note-colors">' + ['yellow', 'pink', 'green', 'blue', 'purple'].map((c) => `<button class="sw n-${c}" data-note-color="${c}"></button>`).join('') +
         `</div><button class="fg-btn mt" data-note-del="${id}">Delete note</button>`;
@@ -316,7 +296,7 @@
     vp().style.backgroundSize = `${20 * B.view.z}px ${20 * B.view.z}px`;
     vp().style.backgroundPosition = `${B.view.x}px ${B.view.y}px`;
     $('#fgZoom').textContent = `${Math.round(B.view.z * 100)}%`;
-    store('fg-view3', B.view);
+    store('fg-view4', B.view);
   }
   function zoomAt(z, cx, cy) {
     z = Math.min(3, Math.max(0.15, z));
@@ -357,7 +337,7 @@
     let pan = null, pinch = null, drag = null, space = false;
     const isBg = (t) => t === v || t === world() || t.id === 'fgNotes' || t.classList.contains('fg-label') || t.classList.contains('fg-body') || !!t.closest('svg.fg-edges') || t.classList.contains('lane-label');
     // Anything that isn't a control, text field or scroll list can be dragged to pan (needed on phones).
-    const canPan = (t) => !t.closest('button,input,textarea,select,a,video,[contenteditable="true"],.hand,.appr,.cos-thread,.cos-list,.cos-composer');
+    const canPan = (t) => !t.closest('button,input,textarea,select,a,video,[contenteditable="true"],.hand,.appr,.upd .ins-col');
     let swallowClick = false;
     v.addEventListener('click', (e) => { if (swallowClick) { e.stopPropagation(); e.preventDefault(); swallowClick = false; } }, true);
     v.addEventListener('pointerdown', (e) => {
@@ -432,11 +412,8 @@
       if ((el = g('[data-note-go]'))) { const n = B.notes.find((x) => x.id === el.dataset.noteGo); const r = v.getBoundingClientRect(); B.view.x = r.width / 2 - (n.x + 100) * B.view.z; B.view.y = r.height / 2 - (n.y + 80) * B.view.z; apply(); return inspect('note', n.id); }
       if ((el = g('[data-note-color]'))) { const n = B.notes.find((x) => 'note:' + x.id === B.selected); if (n) { n.color = el.dataset.noteColor; renderNotes(); saveNotes(); } return; }
       if ((el = g('[data-note-del]'))) return delNote(el.dataset.noteDel);
-      if ((el = g('[data-chat-id]'))) { B.chat = el.dataset.chatId; B.newChat = false; renderCos(); if (!g('#fb-cos')) fit(['cos']); return; }
-      if (g('#cosNew')) { B.newChat = true; renderCos(); $('#cosInput').focus(); return; }
-      if (g('#cosSend')) return sendCos();
-      if ((el = g('.fg-chip'))) { $('#cosInput').value = el.textContent; $('#cosInput').focus(); return; }
-      if ((el = g('[data-ask-cos]'))) { $('#cosInput').value = el.dataset.askCos; fit(['cos']); setTimeout(() => $('#cosInput').focus(), 450); return; }
+      if (g('[data-chat-id]') || g('[data-goto-main]')) { switchTab('main'); renderMain(); return; }
+      if ((el = g('[data-ask-cos]'))) { switchTab('main'); $('#mainInput').value = el.dataset.askCos; setTimeout(() => $('#mainInput').focus(), 60); return; }
       if ((el = g('[data-copy-link]'))) return copyText(el.dataset.copyLink);
       if ((el = g('[data-open-file]'))) return el.dataset.openFile && openFile(el.dataset.openFile);
       if ((el = g('[data-hand]'))) { el.disabled = true; el.textContent = 'Sending…'; try { const run = await api(`/api/handoffs/${el.dataset.hand}/claude`, {}); B.chat = run.id; B.newChat = false; toast('Handed to Claude. Tito AI is reviewing it.'); loadHandoffs(); } catch (err) { toast(err.message); el.disabled = false; el.textContent = 'Hand to Claude'; } return; }
@@ -457,27 +434,26 @@
       const l = document.querySelector(`[data-note-go="${id}"]`); if (l) l.lastChild.textContent = (n.text || 'Empty note').slice(0, 26);
     });
     $('#canvas').addEventListener('focusout', (e) => { if (e.target.dataset && e.target.dataset.noteText) setTimeout(renderNotes, 0); });
-    $('#cosInput').addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey && window.innerWidth > 760) { e.preventDefault(); sendCos(); } });
   }
   function delNote(id) { B.notes = B.notes.filter((n) => n.id !== id); inspect(null); saveNotes(); }
 
-  function renderAll() { if (!B.ready) return; renderCos(); renderNodes(); renderHandoffs(); renderApprovals(); }
+  function renderAll() { if (!B.ready) return; renderUpdates(); renderNodes(); renderHandoffs(); renderApprovals(); }
 
   // ---------- hooks from app.js ----------
   window.boardInit = async () => {
     const size = () => { $('#canvas').style.height = `${window.innerHeight - $('.top').offsetHeight}px`; };
     size(); window.addEventListener('resize', size);
     build(); wire(); setTool('move');
-    const saved = load('fg-view3');
+    const saved = load('fg-view4');
     B.ready = true;
     renderAll(); inspect(null);
-    if (saved && saved.z) { B.view = saved; apply(); } else setTimeout(() => fit(), 120);
+    if (saved && saved.z) { B.view = saved; apply(); } else setTimeout(() => fit(['updates', 'flow']), 120);
     try { B.notes = (await api('/api/board')).notes || []; renderNotes(); } catch {}
     loadHandoffs(); loadSchedule(); loadInsights();
     setInterval(loadInsights, 300000);
     setInterval(loadSchedule, 60000);
     const firstShow = !saved;
-    document.querySelector('.tab[data-tab="canvas"]').addEventListener('click', () => { if (firstShow) requestAnimationFrame(() => fit()); });
+    document.querySelector('.tab[data-tab="canvas"]').addEventListener('click', () => { if (firstShow) requestAnimationFrame(() => fit(['updates', 'flow'])); });
   };
   let t = null;
   window.boardUpdate = (msg) => {
@@ -486,5 +462,5 @@
     clearTimeout(t); t = setTimeout(renderAll, 120);
   };
   const origRenderPosts = renderPosts;
-  renderPosts = function () { origRenderPosts(); renderStatus(); if (B.ready) { renderApprovals(); renderNodes(); } };   // eslint-disable-line no-global-assign
+  renderPosts = function () { origRenderPosts(); renderStatus(); if (B.ready) { renderUpdates(); renderApprovals(); renderNodes(); } };   // eslint-disable-line no-global-assign
 })();

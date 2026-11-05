@@ -18,6 +18,7 @@ const REMOTION = path.join(ROOT, 'w44-friday-motion-sample');
 fs.mkdirSync(path.join(DATA, 'strips'), {recursive: true});
 
 // ---------- stages + agents ----------
+const SCHEDULING_OFF = true;   // Jeff, Nov 5: stop scheduling. Set to false to turn Kuya Iskedyul back on.
 const STAGES = [
   {id: 'research', label: 'Research', agent: 'tito-researcher'},
   {id: 'script', label: 'Script', agent: 'tito-scriptwriter'},
@@ -702,6 +703,7 @@ const server = http.createServer((req, res) => {
         return json(res, 200, {ok: true});
       }
       if ((m = p.match(/^\/api\/posts\/([\w-]+)\/schedule$/))) {   // Jeff's Schedule button: one approved post, one time
+        if (SCHEDULING_OFF) return json(res, 403, {error: 'Scheduling is turned off'});
         const post = loadJSON(POSTS_FILE, []).find((x) => x.id === m[1]);
         const st = postState[m[1]];
         if (!post || !st || !st.approved) return json(res, 400, {error: 'Approve the post first'});
