@@ -168,3 +168,9 @@ a.btn { text-decoration: none; display: inline-block; }
   .bubble { max-width: 90%; }
   .team { max-height: none; }
 }
+
+/* Status bar: readable credits box, clickable approvals pill */
+#flowCredits { width: 52px; margin: 0 2px 0 6px; padding: 1px 6px; background: #FFFFFF; color: #111; border: 1px solid #BBB; font-weight: 700; text-align: center; }
+#flowCredits::placeholder { color: #999; font-weight: 400; }
+.status .pill-btn { background: #F0F0F0; color: #555; font: inherit; font-weight: 600; cursor: pointer; }
+.status .pill-btn:hover { border-color: #F7931E; }

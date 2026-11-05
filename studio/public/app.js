@@ -142,13 +142,16 @@ function switchTab(id) {
 // ---------- status bar ----------
 function renderStatus() {
   const running = Object.values(state.runs).filter((r) => r.status === 'running').length;
-  const review = Object.values(state.runs).filter((r) => r.status === 'review').length + state.posts.filter((p) => !p.state.approved).length;
+  const vids = Object.values(state.runs).filter((r) => r.status === 'review').length, posts = state.posts.filter((p) => !p.state.approved).length;
+  const review = vids + posts;
+  const parts = [posts && `${posts} post${posts > 1 ? 's' : ''}`, vids && `${vids} video${vids > 1 ? 's' : ''}`].filter(Boolean).join(' + ');
   const s = state.status;
   $('#status').innerHTML = `
     <span class="pill">🤖 ${running} working</span>
-    <span class="pill">👀 ${review} waiting on you</span>
-    <span class="pill">Flow credits today <input id="flowCredits" type="number" min="0" max="50" value="${s.flowCredits ?? ''}" title="Type what Flow shows in your profile menu"></span>
+    <button class="pill pill-btn" id="toApprove" title="Click to open Approve & Post">👀 ${review ? `${review} to approve (${parts})` : 'Nothing to approve'}</button>
+    <span class="pill">Flow credits today <input id="flowCredits" type="number" min="0" max="50" placeholder="type" value="${s.flowCredits ?? ''}" title="Type what Flow shows in your profile menu">/50</span>
     <span class="pill" title="${esc(s.flowNote)}">Flow first → Gemini after</span>`;
+  $('#toApprove').onclick = () => switchTab('posting');
   $('#flowCredits').onchange = (e) => api('/api/status', {flowCredits: e.target.value === '' ? null : Number(e.target.value)});
 }
 
