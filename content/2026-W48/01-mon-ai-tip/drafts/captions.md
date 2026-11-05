@@ -23,7 +23,7 @@ I-send ito sa nanay, lola, o family group chat.
 
 I-send ito sa nanay, lola, o family group chat.
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #OnlineSafetyPH #LibreAngAI
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #OnlineSafetyPH #AITip
 
 ---
 
