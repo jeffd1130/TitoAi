@@ -1,49 +1,50 @@
 # W47 Wed Demo — "Gemini ang Gagawa ng Quiz. Ikaw ang Bahala sa Tamang Sagot."
 
-**Slot:** `02-wed-demo` · **Drop:** Wed Nov 18, 2026 · 7:00 PM PHT
+**Slot:** `02-wed-demo` · **Drop:** Thu Nov 12, 2026 · 12:15 PM PHT (test posting time, not a verified best time; Jeff posts or schedules natively)
 **Format:** 5-slide carousel, 1080×1350 · **Growth job:** SHARE (send to a co-teacher)
 **Tool:** Gemini free chat · no paid tools · "libre ang basic na version" only, no limit numbers
 **Persona:** Ma'am Lyn, **fictional** guro, Grade 5 Science (water cycle)
 **Status:** DRAFT for Jeff's approval. Prompt UNTESTED (Hindi pa nasubukan). S4 is a human-written illustrative example, not model output.
+**Source of truth for on-slide text:** `drafts/carousel.json` (edited after QA and re-rendered). Slide text below mirrors it exactly.
 
-**Cover-line change (required):** W41 Wed was "Quiz Bukas? Gemini Bilang Study Coach." This post does NOT use "Quiz Bukas?" or "Study Coach." It uses the brief's alt hook, and the angle is teacher-makes-handout, not student-coach. Keep the cover visually distinct from the Fri Nov 20 parent post.
+**Cover-line change (required):** W41 Wed was "Quiz Bukas? Gemini Bilang Study Coach." This post does NOT use "Quiz Bukas?" or "Study Coach." It uses the brief's alt hook, and the angle is teacher-makes-handout, not student-coach. Keep the cover visually distinct from the Sat Nov 14 parent post.
 Also removed from slides: "5 minuto" (untimed) and "exam week" (no verified exam dates).
 
 Palette: cream `#FFF8E7` bg, marigold `#FFB800`, coral `#FF6B4A`, deep teal `#0D6B63`, navy `#0A0F1E` text. No small white text on coral. Footer: Tito AI logo + 5 pips. Hyphenated words below use a non-breaking hyphen (‑) so they don't wrap mid-word; keep it when building slides.
 
 ---
 
-## S1 — HOOK (cream)
-**Chibi:** `surprised` (hero size).
+## S1 — HOOK (marigold)
+**Chibi:** `wave`.
 
 - Kicker: FICTIONAL PRACTICE EXAMPLE
 - Headline: **Gemini ang gagawa ng quiz.**
-- Sub-headline: *Ikaw ang bahala sa tamang sagot.*
+- Highlight: *Ikaw ang bahala sa tamang sagot.*
 - Body: 10 items, isang handout. Ikaw ang mag‑eedit.
 
 ---
 
 ## S2 — SETUP (marigold)
-**Chibi:** `teach` (small, corner).
+**Chibi:** `teach`.
 
 - Kicker: FICTIONAL · MA'AM LYN
 - Headline: **Si Ma'am Lyn, Grade 5 Science.**
 - Body: Kailangan niya ng quiz sa water cycle. Tatlo ang rules niya:
-  1. Walang pangalan ng bata.
-  2. Answer key, hiwalay.
-  3. Siya ang final check.
+  - Walang pangalan ng bata.
+  - Answer key, hiwalay.
+  - Siya ang final check.
 
 ---
 
 ## S3 — PROMPT (cream)
-**Chibi:** `teach` (small).
+**Chibi:** none.
 
 - Headline: **Copy‑paste sa libreng Gemini**
-- Tag: Hindi pa nasubukan ang prompt na ito.
+- Body: Hindi pa nasubukan ang prompt na ito.
 - Prompt block (shortened; full version is the first comment):
 
 ```
-Gumawa ng 10-item multiple-choice quiz para sa Grade 5 Science: water cycle.
+Gumawa ng 10‑item multiple‑choice quiz para sa Grade 5 Science: water cycle.
 - 4 choices, isa lang ang tamang sagot.
 - Simpleng Filipino/English.
 - Answer key sa hiwalay na seksyon sa dulo.
@@ -52,7 +53,7 @@ Gumawa ng 10-item multiple-choice quiz para sa Grade 5 Science: water cycle.
 Gawing PDF handout.
 ```
 
-*If Jeff runs it: change the tag to "Nasubukan ko noong [date]. Isang test lang, puwedeng iba ang resulta."*
+*If Jeff runs it: change the body line to "Nasubukan ko noong [date]. Isang test lang, puwedeng iba ang resulta."*
 
 ---
 
@@ -65,14 +66,11 @@ Gawing PDF handout.
 
 - Kicker: FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI
 - Headline: **Item 4: i‑edit para mas madali.**
-- Edit step (second message): i‑highlight ang item 4 → "Gawing mas madali para sa Grade 5."
-- Bago: *"Aling proseso ang nagpapalit ng water vapor sa liquid water?"*
-- Pagkatapos: *"Lumalamig ang singaw ng tubig sa ulap at nagiging patak. Ano ito?"*
-- Sagot sa dalawa: **Condensation**
-- 3 checks ni Ma'am Lyn:
-  - ☐ Tama ba ang sagot?
-  - ☐ Angkop ba sa level ng klase?
-  - ☐ May AI‑use note ba ayon sa school?
+- Body: I‑highlight ang item 4 → “Gawing mas madali para sa Grade 5.” Bago: “Aling proseso ang nagpapalit ng water vapor sa liquid water?” Pagkatapos: “Lumalamig ang singaw ng tubig sa ulap at nagiging patak. Ano ito?” Sagot sa dalawa: Condensation. 3 checks ni Ma'am Lyn:
+- List rows:
+  - Tama ba ang sagot?
+  - Angkop ba sa level ng klase?
+  - May AI‑use note ba ayon sa school?
 
 ---
 
@@ -80,11 +78,12 @@ Gawing PDF handout.
 **Chibi:** `wave`.
 
 - Headline: **3 hakbang**
-  1. Ilatag ang rules.
-  2. I‑edit ang mahinang item.
-  3. Ikaw ang mag‑check.
-- Sign-off: Tito AI — AI Para Sa Ating Lahat.
-- Big CTA (the only ask): **I‑SEND SA CO‑TEACHER MO.**
+- Body: Tito AI — AI Para Sa Ating Lahat.
+- List rows:
+  - Ilatag ang rules.
+  - I‑edit ang mahinang item.
+  - Ikaw ang mag‑check.
+- CTA (the only ask): **I‑SEND SA CO‑TEACHER MO.**
 
 No follow/save wording on this slide.
 
@@ -104,5 +103,16 @@ No follow/save wording on this slide.
 4. If you use a real run, quote it exactly and note the model label shown on "Auto."
 5. No student names, grades or school in the prompt (Google advises against confidential input).
 6. Confirm free access on capture day (no trial banner or paid plan). No limit numbers appear anywhere.
-7. Capture by Sat Nov 14 (D-3). Hashtag count: CLAUDE.md says 8–15; this draft uses exactly five per platform like recent posts. Confirm.
+7. **Run the untested prompt in free Gemini by Mon Nov 9** (at least 3 days before the Thu Nov 12 post) and capture the output. Hashtag count: CLAUDE.md says 8–15; this draft uses exactly five per platform like recent posts. Confirm.
 8. Chibi is a presenter, not a real teacher. Fictional labels on S1, S2, S4 and in all captions.
+9. Posting time (Thu 12:15 PM PHT) is a test slot, not a verified best time.
+
+---
+
+## Changes vs original script
+Synced to `carousel.json` (the post-QA source of truth):
+- **S1:** background cream → marigold; chibi `surprised` → `wave`; "Sub-headline" relabeled Highlight (text unchanged).
+- **S3:** chibi `teach` → none; "Tag" is now the body line (text unchanged); prompt block now uses the slide's non-breaking hyphens ("10‑item multiple‑choice").
+- **S4:** the explanation is now one body paragraph (edit step, Bago, Pagkatapos, Sagot, "3 checks ni Ma'am Lyn:") followed by three plain list rows; checkbox marks (☐) and the "second message" wording removed.
+- **S5:** sign-off is now the body line (text unchanged).
+- Drop moved from Wed Nov 18, 7:00 PM to Thu Nov 12, 12:15 PM PHT; the cross-reference to the parent post is now Sat Nov 14; prompt-capture date moved to Mon Nov 9.
