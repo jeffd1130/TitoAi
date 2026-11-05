@@ -1029,11 +1029,21 @@
         },
         {
           "day": "WED",
-          "title": "TBD — trend research",
+          "title": "OPEN — Studio series or new content (Jeff to decide)",
           "tag": "New content slot",
-          "note": "Placeholder pending trend research. Drop: Wed Nov 18, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Open slot (Guro quiz handout moved to Thu Nov 12, Jeff, Nov 5). Former drop: Wed Nov 18, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
           "date": "Nov 18",
           "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "THU",
+          "title": "TBD — trend research",
+          "tag": "New content slot",
+          "note": "Moved to Tue/Thu/Sat (Jeff, Nov 5); test posting time, not verified best time; Jeff posts or schedules it himself. BPO angry-customer practice; moved from Wed Nov 25. Content: content/2026-W48/02-wed-demo/. Prompt capture: run the untested prompt in free Gemini by Mon Nov 16 (at least 3 days before posting). Drop: Thu Nov 19, 12:15 PM PHT (time-of-day test). Nothing is scheduled or posted.",
+          "date": "Nov 19",
+          "status": "draft",
           "url": null,
           "boost": null
         },
