@@ -1,6 +1,6 @@
 # W47 Wed Demo — Captions
 
-**Drop:** Wed Nov 18, 2026 · 7:00 PM PHT · Native upload per platform (no cross-posting)
+**Drop:** Thu Nov 12, 2026 · 12:15 PM PHT (test posting time, not a verified best time; Jeff posts or schedules natively) · Native upload per platform (no cross-posting)
 **Status:** DRAFT. Prompt is untested. S4 is a human-written example unless Jeff replaces it with a recorded run.
 **CTA (one per caption):** I-send sa co-teacher mo.
 **Hashtags:** exactly five per platform.
