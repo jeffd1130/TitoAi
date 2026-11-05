@@ -1049,11 +1049,21 @@
         },
         {
           "day": "FRI",
-          "title": "TBD — trend research",
+          "title": "OPEN — Studio series or new content (Jeff to decide)",
           "tag": "New content slot",
-          "note": "Placeholder pending trend research. Drop: Fri Nov 20, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Open slot (parent/child AI assignment story moved to Sat Nov 14, Jeff, Nov 5). Former drop: Fri Nov 20, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
           "date": "Nov 20",
           "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "SAT",
+          "title": "TBD — trend research",
+          "tag": "New content slot",
+          "note": "Moved to Tue/Thu/Sat (Jeff, Nov 5); test posting time, not verified best time; Jeff posts or schedules it himself. 13th-month pay plan; moved from Fri Nov 27. Content: content/2026-W48/03-fri-inspiration/. Prompt capture: run the untested prompt in free Gemini by Wed Nov 18 (at least 3 days before posting). Drop: Sat Nov 21, 10:00 AM PHT (time-of-day test). Nothing is scheduled or posted.",
+          "date": "Nov 21",
+          "status": "draft",
           "url": null,
           "boost": null
         }
