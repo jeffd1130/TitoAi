@@ -259,7 +259,7 @@ function renderPosts() {
         ${scLine ? `<p class="sched-line ${sc.status}" ${scRun ? `data-goto-run="${sc.runId}"` : ''}>${scLine}</p>` : ''}
         <div class="row wrap">
           <input type="datetime-local" data-sched-when="${p.id}" value="${esc((sc && sc.when) || p.slot || '')}"> <span class="muted">PHT</span>
-          ${['facebook', 'instagram', 'tiktok'].map((k) => `<label class="chk"><input type="checkbox" data-sched-pf="${p.id}" value="${k}" ${!(st.posted || {})[k] ? 'checked' : ''}> ${k[0].toUpperCase() + k.slice(1)}</label>`).join('')}
+          ${['facebook', 'instagram', 'tiktok'].map((k) => `<label class="chk"><input type="checkbox" data-sched-pf="${p.id}" value="${k}" ${!(st.posted || {})[k] ? 'checked' : ''}> ${{facebook: 'Facebook', instagram: 'Instagram', tiktok: 'TikTok'}[k]}</label>`).join('')}
           <button class="btn small gold" data-schedule="${p.id}" ${sc && sc.status === 'running' ? 'disabled' : ''}>${sc && sc.status === 'done' ? 'Schedule again' : 'Schedule'}</button>
         </div></div>`;
     return `<article class="card post" data-post-id="${p.id}">

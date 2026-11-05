@@ -206,3 +206,4 @@ a.btn { text-decoration: none; display: inline-block; }
 .sched .chk input { width: auto; }
 .sched-line { margin: 4px 0 8px; font-size: 13px; cursor: pointer; }
 .sched-line.done { color: #4ADE80; } .sched-line.failed, .sched-line.stopped { color: #F87171; }
+.sched label.chk { display: inline-flex; flex-direction: row; margin: 0 4px; }
