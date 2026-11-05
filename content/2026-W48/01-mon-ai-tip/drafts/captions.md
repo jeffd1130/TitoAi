@@ -1,6 +1,6 @@
 # W48 Mon AI Tip — Captions
 
-**Drop:** Mon Nov 23, 2026 · 8:00 PM PHT · Native upload per platform (no cross-posting)
+**Drop:** Tue Nov 17, 2026 · 7:30 PM PHT (test posting time, not a verified best time; Jeff posts or schedules natively) · Native upload per platform (no cross-posting)
 **Status:** DRAFT. Prompt is untested. S4 is a human-written checklist unless Jeff replaces it with a recorded run.
 **CTA (one per caption):** I-send ito sa nanay, lola, o family group chat.
 **Hashtags:** exactly five per platform.
