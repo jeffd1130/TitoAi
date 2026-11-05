@@ -62,4 +62,6 @@ Simulan mo na.
 - Body: TikTok 4 sentences, IG 4, FB 5 (+ CTA line) ✔
 - One CTA each (SAVE) ✔
 - Labels: fictional practice example, untested prompt, human-written S4, score is AI opinion ✔
+- Slide 4 scorecard is now Empathy 2/5 · Linaw 2/5 · Next step 2/5; no caption quotes scores, so none needed changing ✔
+- "Libre" wording: only "libre ang basic na version"; no limit claims; #LibreAngAI swapped (#AITip on TikTok, #CustomerService on FB) ✔
 - No stats, job-security claims, "café"/"English practice," or real company ✔
