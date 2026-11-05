@@ -29,7 +29,7 @@ I-send sa co-teacher mo.
 
 ## Facebook
 
-Gemini ang gagawa ng quiz handout. Ikaw ang bahala sa tamang sagot. 📝 Sa fictional practice example na ito, si Ma'am Lyn (Grade 5 Science, water cycle) ay nagpa-gawa ng 10-item quiz, nag-edit ng isang item, at siya pa rin ang nag-check ng answer key. Nasa carousel ang prompt na pwedeng i-copy sa libreng Gemini. Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at dapat sundin ang patakaran ng school sa paggamit ng AI.
+Gemini ang gagawa ng quiz handout. Ikaw ang bahala sa tamang sagot. 📝 Sa fictional practice example na ito, si Ma'am Lyn (Grade 5 Science, water cycle) ay nagpagawa ng 10-item quiz, nag-edit ng isang item, at siya pa rin ang nag-check ng answer key. Nasa carousel ang prompt na pwedeng i-copy sa Gemini (libre ang basic na version). Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at dapat sundin ang patakaran ng school sa paggamit ng AI.
 
 I-send sa co-teacher mo.
 
