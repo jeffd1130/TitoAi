@@ -182,15 +182,19 @@
   }
 
   // ---------- approvals (final only) ----------
+  const link = (f) => `${location.origin}${fileUrl(f)}`;
+  const linkBox = (f) => `<a class="thumb vid" href="${esc(link(f))}" target="_blank" rel="noopener" title="Open video">🔗</a>`;
+  const linkRow = (f) => `<p class="appr-link"><a href="${esc(link(f))}" target="_blank" rel="noopener">${esc(f.split('/').pop())}</a></p>`;
   function renderApprovals() {
     const posts = pendingPosts(), vids = pendingVideos();
     $('#apprList').innerHTML = [
-      ...vids.map((r) => `<div class="appr">${r.files[0] ? `<video class="thumb" src="${fileUrl(r.files[0])}#t=1" preload="metadata" muted playsinline controls></video>` : '<div class="thumb vid">🎬</div>'}<div class="hb"><b>${esc(r.title)}</b><span class="pill st-draft">Final video</span>
-        <p>${esc(r.files.join(', '))}</p><div class="row"><button class="fg-btn" data-open-file="${esc(r.files[0] || '')}">Watch</button>
+      ...vids.map((r) => `<div class="appr">${r.files[0] ? linkBox(r.files[0]) : '<div class="thumb vid">🎬</div>'}<div class="hb"><b>${esc(r.title)}</b><span class="pill st-draft">Final video</span>
+        ${r.files[0] ? linkRow(r.files[0]) : ''}<div class="row">${r.files[0] ? `<button class="fg-btn" data-copy-link="${esc(link(r.files[0]))}">Copy link</button>` : ''}
         <button class="fg-btn primary" data-approve-run="${r.id}">Approve video</button></div></div></div>`),
-      ...posts.map((p) => `<div class="appr">${p.type === 'video' ? `<video class="thumb" src="${fileUrl(p.media[0] || '')}" ${p.cover ? `poster="${fileUrl(p.cover)}"` : ''} preload="metadata" muted playsinline controls></video>` : `<img class="thumb" src="${fileUrl(p.media[0] || '')}">`}
+      ...posts.map((p) => `<div class="appr">${p.type === 'video' ? linkBox(p.media[0] || '') : `<img class="thumb" src="${fileUrl(p.media[0] || '')}">`}
         <div class="hb"><b>${esc(p.title)}</b><span class="pill st-draft">${esc(p.type)} · ${esc(p.series || '')}</span>
-        <div class="row"><button class="fg-btn primary" data-goto-post="${esc(p.id)}">Review captions &amp; approve</button></div></div></div>`),
+        ${p.type === 'video' && p.media[0] ? linkRow(p.media[0]) : ''}
+        <div class="row">${p.type === 'video' && p.media[0] ? `<button class="fg-btn" data-copy-link="${esc(link(p.media[0]))}">Copy link</button>` : ''}<button class="fg-btn primary" data-goto-post="${esc(p.id)}">Review captions &amp; approve</button></div></div></div>`),
     ].join('') || '<div class="hand-empty">Nothing waiting. Research, scripts and other steps flow on their own; only final videos and posts land here.</div>';
   }
 
@@ -395,6 +399,7 @@
       if (g('#cosSend')) return sendCos();
       if ((el = g('.fg-chip'))) { $('#cosInput').value = el.textContent; $('#cosInput').focus(); return; }
       if ((el = g('[data-ask-cos]'))) { $('#cosInput').value = el.dataset.askCos; fit(['cos']); setTimeout(() => $('#cosInput').focus(), 450); return; }
+      if ((el = g('[data-copy-link]'))) return copyText(el.dataset.copyLink);
       if ((el = g('[data-open-file]'))) return el.dataset.openFile && openFile(el.dataset.openFile);
       if ((el = g('[data-hand]'))) { el.disabled = true; el.textContent = 'Sending…'; try { const run = await api(`/api/handoffs/${el.dataset.hand}/claude`, {}); B.chat = run.id; B.newChat = false; toast('Handed to Claude. Tito AI is reviewing it.'); loadHandoffs(); } catch (err) { toast(err.message); el.disabled = false; el.textContent = 'Hand to Claude'; } return; }
       if ((el = g('[data-hand-done]'))) { await api(`/api/handoffs/${el.dataset.handDone}/done`, {}); return loadHandoffs(); }

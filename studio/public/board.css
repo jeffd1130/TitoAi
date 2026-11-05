@@ -172,3 +172,6 @@
 /* Board inputs: light fields with dark text (overrides the app's dark theme) */
 #canvas input, #canvas select, #canvas textarea { background: #FFFFFF; color: #1E1E1E; border-color: #DDD; }
 #canvas input::placeholder, #canvas textarea::placeholder { color: #999; }
+a.thumb.vid { text-decoration: none; color: inherit; }
+.appr-link { margin: 4px 0; font-size: 12px; word-break: break-all; }
+.appr-link a { color: var(--fg-blue); }
