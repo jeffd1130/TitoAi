@@ -13,7 +13,7 @@ Gemini ang gagawa ng quiz. Ikaw ang bahala sa tamang sagot. 📝 Sa fictional pr
 
 I-send sa co-teacher mo.
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #GuroPH #LibreAngAI
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #GuroPH #AITip
 
 ---
 
