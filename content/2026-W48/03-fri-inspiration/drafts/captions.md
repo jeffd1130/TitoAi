@@ -33,7 +33,7 @@ Darating na ang 13th month. May plano ka na ba, o "saan napunta?" na naman? 💸
 
 Follow Tito AI para sa susunod na AI lesson.
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #13thMonth #LibreAngAI
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #13thMonth #PinoyBudget
 
 ---
 
