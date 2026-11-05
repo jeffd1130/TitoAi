@@ -66,4 +66,6 @@ Gawin:
 - One CTA each (FOLLOW) ✔
 - Labels: fictional story/numbers, untested prompt, human-written S4, not financial advice ✔
 - Math: 8,000 + 5,000 + 3,000 + 5,000 = 21,000 (lampas ₱1,000); with ₱4,000 Noche Buena = 20,000 ✔
+- IG dangling fragment replaced with the full sentence "Para ito sa employee na tumatanggap ng 13th month." ✔
+- "Libre" wording: only "libre ang basic na version"; no limit claims; #LibreAngAI swapped for #PinoyBudget on FB ✔
 - No "tubo/lugi," deadline/coverage claims, investments, stats or series promise ✔
