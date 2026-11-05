@@ -115,9 +115,9 @@
     "series": "W45 bonus · origin recut",
     "type": "video",
     "media": [
-      "docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4"
+      "docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4"
     ],
-    "cover": "docs/media/tito-ai-origin-recut/part-2-chibi-flow-cover.jpg",
+    "cover": "docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review-cover.jpg",
     "captions": {
       "file": "content/2026-W45/bonus-origin-recut/captions.md",
       "section": "Part 2 — animated chibi version"
