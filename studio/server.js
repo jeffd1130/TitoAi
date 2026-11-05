@@ -509,6 +509,7 @@ const board = loadJSON(BOARD_FILE, {notes: []});
 const POSTS_FILE = path.join(__dirname, 'posts.json');
 const POST_STATE_FILE = path.join(DATA, 'posts-state.json');
 const postState = loadJSON(POST_STATE_FILE, {});
+for (const st of Object.values(postState)) if (st.schedule && st.schedule.status === 'running') st.schedule.status = 'stopped';   // server restarted mid-run
 const PLATFORMS = [['tiktok', 'TikTok'], ['instagram', 'Instagram'], ['facebook', 'Facebook'], ['seed', 'Seed comment']];
 
 function parseCaptions(rel, section) {

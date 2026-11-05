@@ -198,3 +198,11 @@ a.btn { text-decoration: none; display: inline-block; }
 .btn.ghost-danger { background: transparent; border-color: transparent; color: #F87171; }
 .run .summary { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
 .run.approved { border-color: var(--line); }
+
+/* Schedule box on approved posts */
+.cap.sched { border-color: #5A4A1A; background: rgba(247, 147, 30, .06); }
+.sched input[type="datetime-local"] { width: auto; }
+.sched .chk { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; }
+.sched .chk input { width: auto; }
+.sched-line { margin: 4px 0 8px; font-size: 13px; cursor: pointer; }
+.sched-line.done { color: #4ADE80; } .sched-line.failed, .sched-line.stopped { color: #F87171; }

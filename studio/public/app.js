@@ -73,11 +73,12 @@ function runCard(r) {
 function nextButton(r) {
   const i = state.stages.findIndex((s) => s.id === r.stage);
   const next = state.stages[i + 1];
-  if (!next || next.id === 'insights') return '';
+  if (!next || next.id === 'insights' || next.id === 'publish') return '';   // scheduling starts only from Approve & Post
   return `<button class="btn small gold" data-next="${r.id}">→ ${esc(next.label)}</button>`;
 }
 
 function openNewRun(stageId, presetPrompt = '', presetTitle = '') {
+  if (stageId === 'publish') { switchTab('posting'); return toast('Approve a post, then press Schedule on it'); }
   const st = state.stages.find((s) => s.id === stageId);
   $('#nrStage').textContent = st.label;
   const sel = $('#nrAgent');
@@ -249,6 +250,18 @@ function renderPosts() {
       </div>`;
     }).join('');
     const seed = (p.captionsText || {}).seed;
+    const sc = st.schedule, scRun = sc && state.runs[sc.runId];
+    const scLine = !sc ? '' : sc.status === 'running' ? `📅 Kuya Iskedyul is scheduling for ${esc(fmtPHT(sc.when))}…`
+      : sc.status === 'done' ? `📅 Scheduled ${esc(fmtPHT(sc.when))}${sc.result ? ' · ' + Object.entries(sc.result).map(([k, v]) => `${k} ${v ? '✓' : '—'}`).join(' · ') : ''}`
+      : `📅 Scheduling ${esc(sc.status)} · see the Schedule column on Agents`;
+    const schedule = !st.approved ? '' : `<div class="cap sched">
+        <div class="cap-head"><b>📅 Schedule on Meta + TikTok</b> <span class="muted">Kuya Iskedyul uploads it to the calendars. Schedule only, never posts now.</span></div>
+        ${scLine ? `<p class="sched-line ${sc.status}" ${scRun ? `data-goto-run="${sc.runId}"` : ''}>${scLine}</p>` : ''}
+        <div class="row wrap">
+          <input type="datetime-local" data-sched-when="${p.id}" value="${esc((sc && sc.when) || p.slot || '')}"> <span class="muted">PHT</span>
+          ${['facebook', 'instagram', 'tiktok'].map((k) => `<label class="chk"><input type="checkbox" data-sched-pf="${p.id}" value="${k}" ${!(st.posted || {})[k] ? 'checked' : ''}> ${k[0].toUpperCase() + k.slice(1)}</label>`).join('')}
+          <button class="btn small gold" data-schedule="${p.id}" ${sc && sc.status === 'running' ? 'disabled' : ''}>${sc && sc.status === 'done' ? 'Schedule again' : 'Schedule'}</button>
+        </div></div>`;
     return `<article class="card post" data-post-id="${p.id}">
       <div class="post-head"><div><div class="muted">${esc(p.series || '')}</div><h3>${esc(p.title)}</h3></div>${badge}</div>
       <div class="post-body">
@@ -259,6 +272,7 @@ function renderPosts() {
             <button class="btn small" data-change="${p.id}">✍️ Ask Kuya Sulat for changes</button>
             <a class="btn small" data-open="${esc(p.captions.file)}">Open captions file</a>
           </div>
+          ${schedule}
           ${caps}
           ${seed ? `<div class="cap"><div class="cap-head"><b>Seed comment</b> <span class="muted">pin within 5 min</span></div><pre class="cap-text">${esc(seed)}</pre><button class="btn small" data-copy="${p.id}:seed">Copy</button></div>` : ''}
           <label>Notes<textarea rows="2" data-notes="${p.id}" placeholder="e.g. posted TikTok 7 PM, pinned">${esc(st.notes || '')}</textarea></label>
@@ -267,7 +281,20 @@ function renderPosts() {
     </article>`;
   }).join('') || '<div class="empty">No posts yet. Add them to studio/posts.json.</div>';
 }
+const fmtPHT = (w) => new Date(w + ':00+08:00').toLocaleString('en-US', {timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
 document.addEventListener('click', async (e) => {
+  const s = e.target.closest('[data-schedule]');
+  if (s) {
+    const id = s.dataset.schedule, when = document.querySelector(`[data-sched-when="${id}"]`).value;
+    const platforms = [...document.querySelectorAll(`[data-sched-pf="${id}"]:checked`)].map((c) => c.value);
+    const post = state.posts.find((p) => p.id === id);
+    if (!when || !platforms.length) return toast('Pick a time and at least one platform');
+    if (!confirm(`Schedule "${post.title}" on ${platforms.join(', ')} for ${fmtPHT(when)} PHT?\n\nKuya Iskedyul will upload it in Chrome and set it to publish at that time.`)) return;
+    try { const run = await api(`/api/posts/${id}/schedule`, {when, platforms}); state.runs[run.id] = run; toast('Kuya Iskedyul is on it'); loadPosts(); renderBoard(); } catch (err) { toast(err.message); }
+    return;
+  }
+  const g = e.target.closest('[data-goto-run]');
+  if (g) { switchTab('board'); OPEN.add(g.dataset.gotoRun); renderBoard(); return; }
   const t = e.target.closest('[data-copy],[data-post],[data-unpost],[data-approve-post],[data-unapprove],[data-change]');
   if (!t) return;
   const d = t.dataset;
