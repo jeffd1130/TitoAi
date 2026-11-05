@@ -23,7 +23,7 @@ Gemini ang gagawa ng quiz handout, ikaw ang bahala sa tamang sagot. 📝 Sa fict
 
 I-send sa co-teacher mo.
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #GuroTips #LibreAngAI
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #GuroTips #AITip
 
 ---
 
