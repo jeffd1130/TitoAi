@@ -9,7 +9,7 @@
 
 ## TikTok
 
-"Na-lock ang account mo. I-click mo ngayon." Bago mag-click, magtanong muna. 📱 Sa fictional sample na ito (hindi totoong bangko), pwedeng ipasuri sa libreng AI ang red flags, pero hindi ito final na judge. Official app o hotline pa rin ang final check. Hindi pa nasubukan ang prompt; huwag i-paste ang link, OTP, o account number.
+"Na-lock ang account mo. I-click mo ngayon." 📱 Sa fictional sample na ito (hindi totoong bangko), pwedeng ipasuri sa AI (libre ang basic na version) ang red flags, pero hindi ito final na judge. Official app o hotline pa rin ang final check. Hindi pa nasubukan ang prompt; huwag i-paste ang link, OTP, o account number.
 
 I-send ito sa nanay, lola, o family group chat.
 
