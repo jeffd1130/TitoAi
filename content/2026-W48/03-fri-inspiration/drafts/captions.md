@@ -1,6 +1,6 @@
 # W48 Fri Story — Captions
 
-**Drop:** Fri Nov 27, 2026 · 7:00 PM PHT · Native upload per platform (no cross-posting)
+**Drop:** Sat Nov 21, 2026 · 10:00 AM PHT (test posting time, not a verified best time; Jeff posts or schedules natively) · Native upload per platform (no cross-posting)
 **Status:** DRAFT. Fictional story and numbers. Prompt is untested. S4 is human-written unless Jeff replaces it with a recorded run.
 **CTA (one per caption):** Follow Tito AI para sa susunod na AI lesson.
 **Hashtags:** exactly five per platform.
