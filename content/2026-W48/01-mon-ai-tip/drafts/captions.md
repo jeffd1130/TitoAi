@@ -19,7 +19,7 @@ I-send ito sa nanay, lola, o family group chat.
 
 ## Instagram
 
-"Na-lock ang account mo. I-click mo ngayon." Magtanong muna, hindi mag-click. 📱 Sa fictional sample (hindi totoong bangko), ipinakita kung paano humingi sa libreng AI ng red flags at ng dapat gawin. Second opinion lang ang AI; official app o hotline pa rin ang final check. Hindi pa nasubukan ang prompt, human-written ang slide 4, at alisin ang link, OTP, at account number bago i-paste.
+"Na-lock ang account mo. I-click mo ngayon." 📱 Sa fictional sample (hindi totoong bangko), ipinakita kung paano humingi sa AI (libre ang basic na version) ng red flags at ng dapat gawin. Second opinion lang ang AI; official app o hotline pa rin ang final check. Hindi pa nasubukan ang prompt, human-written ang slide 4, at alisin ang link, OTP, at account number bago i-paste.
 
 I-send ito sa nanay, lola, o family group chat.
 
