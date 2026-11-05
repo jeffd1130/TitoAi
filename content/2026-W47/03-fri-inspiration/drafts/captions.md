@@ -1,6 +1,6 @@
 # W47 Fri Story — Captions
 
-**Drop:** Fri Nov 20, 2026 · 7:00 PM PHT · Native upload per platform (no cross-posting)
+**Drop:** Sat Nov 14, 2026 · 10:00 AM PHT (test posting time, not a verified best time; Jeff posts or schedules natively) · Native upload per platform (no cross-posting)
 **Status:** DRAFT. Fictional story. Prompt is untested. S4 questions are human-written unless Jeff replaces them with a recorded run.
 **CTA (one per caption):** Comment A, B, o C.
 **Hashtags:** exactly five per platform.
