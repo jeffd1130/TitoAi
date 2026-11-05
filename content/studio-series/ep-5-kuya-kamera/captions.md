@@ -21,7 +21,7 @@ Ep 5/7 ng "Ang Team ni Tito AI."
 
 Si Kuya Kamera ang video renderer. Kapag may clip na at may audio na, binubuo niya ang mga ito sa Remotion at pinapantay ang lakas ng tunog, para hindi sabog o mahina ang boses sa bawat video. May frame strip din sa Studio na ginagamit ko para i-check kung pareho pa rin ang itsura ng chibi sa lahat ng frame.
 
-Pero may hangganan siya: hindi siya gumagawa ng clip. Ako mismo ang gumagawa nito sa Google Flow, mano-mano, at mas mabagal iyon kaysa sa inaakala mo. Kapag wala pang clip, wala pang mai-render. Illustration ang character sa video.
+Pero may hangganan siya: hindi siya gumagawa ng clip. Ako mismo ang gumagawa nito sa Google Flow, mano-mano. Kapag wala pang clip, wala pang mai-render. Illustration ang character sa video.
 
 Follow ka sa Tito AI para sa susunod na episode: si Lola Suri.
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAIStudio #AIPilipinas
