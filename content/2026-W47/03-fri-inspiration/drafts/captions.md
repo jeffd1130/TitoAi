@@ -29,7 +29,7 @@ Sa bahay n'yo, alin? A Bawal ang AI sa assignment · B Pwede basta ipaliwanag ·
 
 ## Facebook
 
-"Ginamit ng anak ko ang AI sa assignment. Galit ba ako… o magtatanong muna?" Fictional na kuwento ito ni Tatay Ben; walang totoong bata, school o assignment. 🤔 Humingi siya ng 3 magalang na tanong sa libreng AI (libre ang basic na version), kahit hindi niya alam ang subject. Hindi pa nasubukan ang prompt, human-written ang slide 4, at iba-iba ang patakaran ng bawat school.
+"Ginamit ng anak ko ang AI sa assignment. Galit ba ako… o magtatanong muna?" Fictional na kuwento ito ni Tatay Ben; walang totoong bata, school o assignment. 🤔 Humingi siya ng 3 magalang na tanong sa AI (libre ang basic na version), kahit hindi niya alam ang subject. Hindi pa nasubukan ang prompt, human-written ang slide 4, at iba-iba ang patakaran ng bawat school.
 
 Sa bahay n'yo, alin? A Bawal ang AI sa assignment · B Pwede basta ipaliwanag · C Depende sa subject. Comment ang letra.
 
