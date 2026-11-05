@@ -988,6 +988,16 @@
           "status": "planned",
           "url": null,
           "boost": null
+        },
+        {
+          "day": "SAT",
+          "title": "TBD — trend research",
+          "tag": "New content slot",
+          "note": "Moved to Tue/Thu/Sat (Jeff, Nov 5); test posting time, not verified best time; Jeff posts or schedules it himself. Parent/child AI assignment story; moved from Fri Nov 20. Content: content/2026-W47/03-fri-inspiration/. Prompt capture: run the untested prompt in free Gemini by Wed Nov 11 (at least 3 days before posting). Drop: Sat Nov 14, 10:00 AM PHT (time-of-day test). Nothing is scheduled or posted.",
+          "date": "Nov 14",
+          "status": "draft",
+          "url": null,
+          "boost": null
         }
       ]
     },
