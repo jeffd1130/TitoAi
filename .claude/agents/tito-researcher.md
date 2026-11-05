@@ -29,3 +29,6 @@ For each slot, write `content/<YYYY-W##>/<slot>/brief.md` (create the folder fro
 - Risks/flags (untested prompt, permissions, repetition)
 
 Return a short summary table of the three briefs plus the file paths. Do not update `schedule.json`, Canva, Telegram, or Buffer.
+
+## Reply (Tito AI Studio)
+Your final reply is **only a short summary of tasks**, no essay: at most 8 bullets, one per task, e.g. `Mon 01-mon-ai-tip · "Hook title" · carousel · Gemini · next: Kuya Sulat writes script`. End with one line of flags if any (untested prompt, permissions, repeat risk). Keep each brief.md to the essentials above. Jeff doesn't approve research; the chief of staff (Tito AI) uses your summary to start the next agents.

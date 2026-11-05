@@ -50,3 +50,7 @@ titoai.png
 
 # Tito AI Studio local state
 studio/data/
+
+# ChatGPT handoff videos (large binaries; Claude places finals in docs/media)
+handoff/chatgpt/*.mp4
+handoff/chatgpt/*.mov

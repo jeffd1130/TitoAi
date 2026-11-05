@@ -36,12 +36,12 @@ const PERSONAS = {
   'tito-qa': {display: 'Lola Suri', emoji: '🧐', role: 'QA reviewer'},
   'tito-analyst': {display: 'Tito Numero', emoji: '📊', role: 'Analyst'},
   'general': {display: 'Tito Helper', emoji: '🤖', role: 'General helper'},
-  'tito-main': {display: 'Tito AI', emoji: '🎙️', role: 'Producer — plans the post and runs the team'},
+  'tito-main': {display: 'Tito AI', emoji: '🎙️', role: 'Chief of Staff — plans the post and runs the team'},
   'carousel-render': {display: 'Ate Disenyo', emoji: '🖼️', role: 'Carousel render'},
 };
 
 // The main producer agent: plans with Jeff, then starts the team by writing studio-action blocks.
-const MAIN_PROMPT = `You are **Tito AI**, the main producer agent inside Tito AI Studio (a local dashboard Jeff uses). You chat with Jeff in Taglish/English, plan the content, and run the team. Read CLAUDE.md for the brand rules (Taglish, free tools only, no fabrication, approved chibi host, five hashtags, Jeff approves and posts himself).
+const MAIN_PROMPT = `You are **Tito AI**, Jeff's chief of staff and main producer agent inside Tito AI Studio (a local dashboard Jeff uses). You chat with Jeff in Taglish/English, plan the content, and run the team. Read CLAUDE.md for the brand rules (Taglish, free tools only, no fabrication, approved chibi host, five hashtags, Jeff approves and posts himself).
 
 Do not write the content yourself; delegate to the team by writing an action block, which the studio runs immediately:
 
@@ -62,6 +62,9 @@ You can read files but not edit them. Every change goes through a team member.
 Other actions:
 - {"action": "render_carousel", "spec": "content/.../drafts/carousel.json"}: the studio renders branded PNG slides and adds the post to Approve & Post.
 - {"action": "render_video", "composition": "<Remotion id>"}: only when the Flow/Gemini clip already exists.
+- {"action": "place_file", "from": "handoff/chatgpt/<file>", "to": "w44-friday-motion-sample/public/<file>" or "docs/media/<folder>/<file>"}: copies a handed-off video or image into place (the team can't copy binary files).
+
+ChatGPT → Claude handoff: ChatGPT (Codex) may generate a video in Flow/Gemini and drop it in handoff/chatgpt/ with a same-name .md note. When you get a "[Handoff from ChatGPT]" message, you own the finish: Read the frame strip image it gives you and check the chibi against the rules (same clean-shaven chibi, soft 2D style, rounded elbows, no puppet/3D look, screen facing the viewer, nothing cut off). If it fails, tell Jeff exactly what to regenerate. If it passes, place_file it, have the team write or update captions and docs, render if a Remotion composition uses it, then send it to Lola Suri.
 
 Video vs carousel: Reels need chibi motion clips that Jeff generates by hand in Google Flow (Veo 3.1 Lite, about 50 free credits a day, 10 per 8s clip) first, then Gemini. If Jeff says there are no credits, there's no time, or video isn't possible, **switch to the carousel fallback**: Kuya Sulat (script + captions) → Ate Disenyo (carousel.json) → render_carousel → Lola Suri QA.
 
@@ -70,6 +73,8 @@ How to work:
 - Start one stage at a time. You will receive "[Studio update]" messages when an agent finishes. Read its files, then start the next stage or tell Jeff what needs him.
 - Put full file paths in every prompt you hand off. Keep your messages to Jeff short and clear, and say which agent you started.
 - **Whenever you say you are starting or rendering something, include its studio-action block in that same message.** Nothing happens without the block.
+- Jeff approves only the final content: the finished post in Approve & Post and the final rendered video. Don't ask him to approve research, scripts or other in-between steps; move straight on to the next agent.
+- Tita Saliksik returns only a short summary of tasks. Use it to start the next agents.
 - Stop and hand over to Jeff when QA passes (or only minor polish is left). Summarize in 3–5 bullets what's ready and what he needs to check, and point him to the Approve & Post tab.
 - Never post, schedule, boost, or send messages; Jeff approves in the Approve & Post tab.`;
 
@@ -95,7 +100,10 @@ function readAgents() {
 const loadJSON = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return d; } };
 const runs = loadJSON(RUNS_FILE, {});
 let status = loadJSON(STATUS_FILE, {flowCredits: null, flowNote: '50 free credits/day · Veo 3.1 Lite = 10 per clip', geminiNote: 'Gemini Videos: ~4–5/day'});
-for (const r of Object.values(runs)) if (r.status === 'running') r.status = 'stopped';   // server restarted mid-run
+for (const r of Object.values(runs)) {
+  if (r.status === 'running') r.status = 'stopped';                                       // server restarted mid-run
+  if (r.status === 'review' && r.agent !== 'video-producer') r.status = 'done';           // only final videos wait for approval
+}
 let saveTimer = null;
 function save() {
   clearTimeout(saveTimer);
@@ -162,7 +170,7 @@ function startClaude(run, text, {fromJeff = true} = {}) {
   });
   child.on('close', (code) => {
     procs.delete(run.id);
-    if (run.status === 'running') run.status = code === 0 ? 'review' : 'failed';
+    if (run.status === 'running') run.status = code === 0 ? 'done' : 'failed';   // steps flow on; Jeff approves only the final video/post
     if (code !== 0 && run.status === 'failed') addEvent(run, 'error', `Agent exited with code ${code}`);
     pushRun(run);
     onRunFinished(run);
@@ -198,6 +206,13 @@ function runActions(main, text) {
         child.parent = main.id;
         addEvent(main, 'action', `▶ Rendering video ${a.composition}`);
         startRender(child, a.composition);
+      } else if (a.action === 'place_file') {
+        const from = safePath(a.from), to = path.resolve(ROOT, a.to || '');
+        if (!from || !/^handoff\//.test(path.relative(ROOT, from))) throw new Error('place_file: "from" must be an existing file in handoff/');
+        if (!/^(w44-friday-motion-sample\/public|docs\/media)\//.test(path.relative(ROOT, to)) || to.includes('..')) throw new Error('place_file: "to" must be in w44-friday-motion-sample/public/ or docs/media/');
+        fs.mkdirSync(path.dirname(to), {recursive: true});
+        fs.copyFileSync(from, to);
+        addEvent(main, 'action', `▶ Placed ${a.from} → ${a.to}`);
       } else throw new Error(`Unknown action ${a.action}`);
     } catch (err) { addEvent(main, 'error', err.message); }
   }
@@ -221,7 +236,7 @@ function onRunFinished(run) {
 
 function continueMain(main, text) {
   main.autoSteps = (main.autoSteps || 0) + 1;
-  if (main.autoSteps > MAX_AUTO_STEPS) { addEvent(main, 'error', 'Paused after 8 automatic steps. Send a message to continue.'); main.status = 'review'; pushRun(main); return; }
+  if (main.autoSteps > MAX_AUTO_STEPS) { addEvent(main, 'error', 'Paused after 8 automatic steps. Send a message to continue.'); main.status = 'done'; pushRun(main); return; }
   startClaude(main, `${text}\n\nDecide the next step: start the next agent with a studio-action block, or tell Jeff what needs his input.`, {fromJeff: false});
 }
 
@@ -309,7 +324,7 @@ function startCarousel(run, specRel) {
     if (i >= n) {
       const media = Array.from({length: n}, (_, k) => path.relative(ROOT, path.join(outDir, `slide-${k + 1}.png`)));
       run.files = media;
-      run.status = 'review';
+      run.status = 'done';
       run.result = `Rendered ${n} slides into ${path.relative(ROOT, outDir)}/ and added the post to Approve & Post.`;
       addEvent(run, 'text', run.result);
       upsertPost(specRel, spec, media);
@@ -391,6 +406,73 @@ function frameStrip(rel, cb) {
   const p = spawn('ffmpeg', ['-loglevel', 'error', '-y', '-i', abs, '-vf', 'fps=1/2,scale=160:-1,tile=8x2', '-frames:v', '1', out]);
   p.on('close', (code) => cb(code === 0 ? null : new Error('ffmpeg failed'), `/strips/${name}`));
 }
+
+// ---------- chief of staff (main chat) ----------
+function talkToMain(text, {newChat = false, chatId = null} = {}) {
+  if (!text) return {code: 400, error: 'Say something to Tito AI'};
+  const mains = Object.values(runs).filter((r) => r.agent === 'tito-main').sort((x, y) => y.createdAt - x.createdAt);
+  let main = newChat ? null : (chatId ? runs[chatId] : mains[0]);
+  if (main && procs.has(main.id)) return {code: 409, error: 'Tito AI is still replying — wait a moment or press Stop'};
+  if (!main) main = newRun({stage: 'main', agent: 'tito-main', title: text.replace(/^\[[^\]]*\]\s*/, '').slice(0, 60), prompt: text});
+  startClaude(main, text);
+  return {run: main};
+}
+
+// ---------- main board: calendar, ChatGPT handoff inbox, sticky notes ----------
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function listSchedule() {
+  const sched = loadJSON(path.join(ROOT, 'docs', 'schedule.json'), {weeks: []});
+  const out = [];
+  for (const w of sched.weeks || []) {
+    for (const p of w.posts || []) {
+      const m = String(p.date || '').match(/([A-Z][a-z]{2})\w*\.?\s+(\d{1,2})/);
+      const mi = m ? MONTHS.indexOf(m[1]) : -1;
+      const year = 2026 + (mi === 0 && +String(w.id).replace(/\D/g, '') > 45 ? 1 : 0);
+      out.push({week: w.id, range: w.range, theme: w.theme, day: p.day, title: p.title, tag: p.tag, note: p.note, status: p.status, url: p.url,
+        date: mi >= 0 ? `${year}-${String(mi + 1).padStart(2, '0')}-${String(m[2]).padStart(2, '0')}` : null});
+    }
+  }
+  return out;
+}
+
+const HANDOFF_DIR = path.join(ROOT, 'handoff', 'chatgpt');
+const HANDOFF_STATE_FILE = path.join(DATA, 'handoffs-state.json');
+const handoffState = loadJSON(HANDOFF_STATE_FILE, {});
+fs.mkdirSync(HANDOFF_DIR, {recursive: true});
+function saveHandoffs() { fs.writeFileSync(HANDOFF_STATE_FILE, JSON.stringify(handoffState, null, 1)); broadcast({type: 'handoffs'}); }
+function listHandoffs() {
+  const files = fs.readdirSync(HANDOFF_DIR).filter((f) => !f.startsWith('.') && f !== 'README.md');
+  const ids = new Map();
+  for (const f of files) {
+    const id = f.replace(/\.[^.]+$/, '');
+    const e = ids.get(id) || {id, media: null, note: null, mtime: 0};
+    const rel = path.relative(ROOT, path.join(HANDOFF_DIR, f));
+    if (/\.md$/i.test(f)) e.note = rel; else if (/\.(mp4|mov|png|jpe?g|webp)$/i.test(f)) e.media = rel; else continue;
+    e.mtime = Math.max(e.mtime, fs.statSync(path.join(HANDOFF_DIR, f)).mtimeMs);
+    ids.set(id, e);
+  }
+  return [...ids.values()].map((e) => ({...e, noteText: e.note ? fs.readFileSync(path.join(ROOT, e.note), 'utf8').slice(0, 3000) : '',
+    state: handoffState[e.id] || {status: 'new'}})).sort((a, b) => b.mtime - a.mtime);
+}
+let handoffTimer = null;
+fs.watch(HANDOFF_DIR, () => { clearTimeout(handoffTimer); handoffTimer = setTimeout(() => broadcast({type: 'handoffs'}), 500); });
+
+function handToClaude(h, cb) {
+  const send = (stripAbs) => {
+    const text = `[Handoff from ChatGPT] ChatGPT made ${h.media ? `\`${h.media}\`` : 'a draft'} and handed it to Claude Code for the finish.` +
+      (h.note ? `\nChatGPT's note (\`${h.note}\`):\n${h.noteText}` : '\nNo note was left; ask Jeff what it is for if unclear.') +
+      (stripAbs ? `\nFrame strip (one frame every 2s): ${stripAbs} . Read it to check the chibi.` : '') +
+      '\nReview it, then finish it with the team or tell Jeff what to regenerate.';
+    const r = talkToMain(text, {});
+    if (r.error) return cb(r.error);
+    cb(null, r.run);
+  };
+  if (h.media && /\.(mp4|mov)$/i.test(h.media)) return frameStrip(h.media, (err, u) => send(err ? null : path.join(DATA, 'strips', path.basename(u))));
+  send(h.media ? path.join(ROOT, h.media) : null);
+}
+
+const BOARD_FILE = path.join(DATA, 'board.json');
+const board = loadJSON(BOARD_FILE, {notes: []});
 
 // ---------- posts: approval + posting ----------
 // Post list lives in studio/posts.json (committed); captions are read live from the content .md files;
@@ -519,6 +601,9 @@ const server = http.createServer((req, res) => {
     return json(res, 200, {stages: STAGES, agents: readAgents(), runs: Object.values(runs), status, compositions: listCompositions(), media: listMedia()});
   }
   if (req.method === 'GET' && p === '/api/media') return json(res, 200, listMedia());
+  if (req.method === 'GET' && p === '/api/schedule') return json(res, 200, listSchedule());
+  if (req.method === 'GET' && p === '/api/handoffs') return json(res, 200, listHandoffs());
+  if (req.method === 'GET' && p === '/api/board') return json(res, 200, board);
   if (req.method === 'GET' && p === '/api/posts') return json(res, 200, listPosts());
   if (req.method === 'GET' && p === '/api/carousel-specs') return json(res, 200, listCarouselSpecs());
   if (req.method === 'GET' && p === '/file') {
@@ -540,14 +625,28 @@ const server = http.createServer((req, res) => {
         else startClaude(run, b.prompt);
         return json(res, 200, run);
       }
-      if (p === '/api/main') {                                // talk to the main producer
-        const text = String(b.text || '').trim();
-        if (!text) return json(res, 400, {error: 'Say something to Tito AI'});
-        let main = !b.newChat && Object.values(runs).filter((r) => r.agent === 'tito-main').sort((x, y) => y.createdAt - x.createdAt)[0];
-        if (main && procs.has(main.id)) return json(res, 409, {error: 'Tito AI is still replying — wait a moment or press Stop'});
-        if (!main) main = newRun({stage: 'main', agent: 'tito-main', title: text.slice(0, 60), prompt: text});
-        startClaude(main, text);
-        return json(res, 200, main);
+      if (p === '/api/main') {                                // talk to the chief of staff
+        const r = talkToMain(String(b.text || '').trim(), {newChat: b.newChat, chatId: b.chatId});
+        return r.error ? json(res, r.code, {error: r.error}) : json(res, 200, r.run);
+      }
+      if ((m = p.match(/^\/api\/handoffs\/([\w.-]+)\/(claude|done|reopen)$/))) {
+        const h = listHandoffs().find((x) => x.id === m[1]);
+        if (!h) return json(res, 404, {error: 'no handoff'});
+        const st = handoffState[h.id] = handoffState[h.id] || {};
+        if (m[2] === 'done') st.status = 'done';
+        if (m[2] === 'reopen') st.status = 'new';
+        if (m[2] !== 'claude') { saveHandoffs(); return json(res, 200, st); }
+        return handToClaude(h, (err, run) => {
+          if (err) return json(res, 409, {error: err});
+          Object.assign(st, {status: 'with-claude', chatId: run.id, at: Date.now()}); saveHandoffs();
+          json(res, 200, run);
+        });
+      }
+      if (p === '/api/board') {
+        board.notes = (Array.isArray(b.notes) ? b.notes : []).slice(0, 200).map((n) => ({id: String(n.id).slice(0, 20), x: +n.x || 0, y: +n.y || 0,
+          text: String(n.text || '').slice(0, 1000), color: String(n.color || 'yellow').slice(0, 12)}));
+        fs.writeFileSync(BOARD_FILE, JSON.stringify(board, null, 1)); broadcast({type: 'board', board});
+        return json(res, 200, board);
       }
       if ((m = p.match(/^\/api\/runs\/(\w+)\/(message|approve|stop|delete|reopen)$/))) {
         const run = runs[m[1]];

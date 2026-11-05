@@ -9,6 +9,8 @@ Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent.
 
 **Claude Code is the final owner of all Tito AI production tasks**: scripts, captions, carousels, videos, `docs/schedule.json`, review pages, and the project `.md` files. If you are Codex/ChatGPT working here, you may draft or generate assets when Jeff asks, but hand the results to Claude Code for final review. Don't overwrite or "finish" files Claude Code owns, and don't mark tasks complete. The source of truth for current status is `CLAUDE.md`. Jeff remains the approver. Nothing is posted, scheduled, or boosted without his OK.
 
+**Video handoff to Claude Code (Nov 5, 2026):** When Jeff asks you to make a video, generate it (Google Flow first, then Gemini), then save the file and a same-name `.md` note in `handoff/chatgpt/` (see `handoff/chatgpt/README.md`). That's the end of your part: Claude Code reviews and finishes it in Tito AI Studio.
+
 ---
 
 ## The weekly schedule

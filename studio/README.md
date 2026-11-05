@@ -74,3 +74,11 @@ The names are only for the studio. The agent files in `.claude/agents/` keep the
 - Agents run with `--permission-mode acceptEdits` and only the tools listed in their agent file.
 - Cards and history survive a restart. A run that was working when the server stopped shows as **Stopped**; chat to it again to continue.
 - Parts 3–5 render only after their Flow/Gemini clip is saved as `w44-friday-motion-sample/public/origin-gemini-part-N.mp4`.
+
+## Main board (🗺️ Board tab, default)
+A Figma-style canvas: drag the background or scroll to move, ⌘/Ctrl + scroll or pinch to zoom, **Fit** (or `1`) to see everything, double-click to add a sticky note (saved in `studio/data/board.json`). Frames:
+- **Chief of Staff · Tito AI**: every conversation with the main agent, with a composer. Same agent as the 💬 Tito AI tab.
+- **Workflow · live**: Jeff → Tito AI → Tita Saliksik (task summary only) → Kuya Sulat → video lane (ChatGPT makes the clip in Flow, then Gemini → Claude Code handoff review → Kuya Kamera) or carousel fallback (Ate Disenyo → slide render) → Lola Suri → your approval. Working agents pulse and show Figma-style cursors.
+- **ChatGPT → Claude handoff**: lists files in `handoff/chatgpt/` (video plus same-name `.md` note; see its README). **Hand to Claude** sends it to the chief of staff with a frame strip, who checks the chibi and finishes it (the `place_file` action copies it into `w44-friday-motion-sample/public/` or `docs/media/`).
+- **Your approvals · final only**: final videos and unapproved posts. Research, scripts and other steps finish as **Done** and flow on without your approval.
+- **Content calendar**: month view of `docs/schedule.json`, colored by status. Click a post for its notes or to ask the chief of staff about it.

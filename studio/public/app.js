@@ -3,7 +3,7 @@ const $ = (s, el = document) => el.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const PAGES = 'https://jeffd1130.github.io/TitoAi/';
 const state = {stages: [], agents: [], runs: {}, status: {}, compositions: [], media: [], posts: []};
-const STATUS_LABEL = {queued: 'Queued', running: 'Working…', review: 'Needs your review', approved: 'Approved', failed: 'Failed', stopped: 'Stopped'};
+const STATUS_LABEL = {queued: 'Queued', running: 'Working…', review: 'Needs your review', approved: 'Approved', done: 'Done', failed: 'Failed', stopped: 'Stopped'};
 
 // Quick-start prompts per stage (Jeff can edit before starting).
 const TEMPLATES = {
@@ -55,6 +55,7 @@ function runCard(r) {
     <div class="actions">
       ${r.status === 'review' ? `<button class="btn small green" data-act="approve" data-id="${r.id}">Approve</button>` : ''}
       ${r.status === 'approved' ? `<button class="btn small" data-act="reopen" data-id="${r.id}">Reopen</button>${nextButton(r)}` : ''}
+      ${r.status === 'done' ? nextButton(r) : ''}
       ${busy ? `<button class="btn small danger" data-act="stop" data-id="${r.id}">Stop</button>` : ''}
       <button class="btn small danger" data-act="delete" data-id="${r.id}">Delete</button>
     </div>
@@ -141,7 +142,7 @@ function switchTab(id) {
 // ---------- status bar ----------
 function renderStatus() {
   const running = Object.values(state.runs).filter((r) => r.status === 'running').length;
-  const review = Object.values(state.runs).filter((r) => r.status === 'review').length;
+  const review = Object.values(state.runs).filter((r) => r.status === 'review').length + state.posts.filter((p) => !p.state.approved).length;
   const s = state.status;
   $('#status').innerHTML = `
     <span class="pill">🤖 ${running} working</span>
@@ -351,12 +352,13 @@ function connect() {
       const typing = document.activeElement && document.activeElement.dataset.chat === msg.run.id ? document.activeElement.value : null;
       state.runs[msg.run.id] = msg.run; renderBoard(); renderStatus(); renderMain();
       if (typing !== null) { const i = document.querySelector(`[data-chat="${msg.run.id}"]`); if (i && !i.disabled) { i.value = typing; i.focus(); } }
-      if (msg.run.agent === 'carousel-render' && msg.run.status === 'review') { loadPosts(); loadSpecs(); }
+      if (msg.run.agent === 'carousel-render' && msg.run.status === 'done') { loadPosts(); loadSpecs(); }
       if (msg.run.agent === 'video-producer' && msg.run.status === 'review') api('/api/media').then((m2) => { state.media = m2; renderVideo(); });
     }
     if (msg.type === 'deleted') { delete state.runs[msg.id]; renderBoard(); renderStatus(); renderMain(); }
     if (msg.type === 'status') { state.status = msg.status; renderStatus(); }
     if (msg.type === 'posts') loadPosts();
+    if (window.boardUpdate) boardUpdate(msg);
   };
   es.onerror = () => { es.close(); setTimeout(connect, 2000); };
 }
@@ -365,5 +367,6 @@ function connect() {
   const b = await api('/api/bootstrap');
   Object.assign(state, b, {runs: Object.fromEntries(b.runs.map((r) => [r.id, r]))});
   renderBoard(); renderStatus(); renderVideo(); loadPosts(); renderMain(); loadSpecs(); connect();
+  if (window.boardInit) boardInit();
   setInterval(renderStatus, 30000);
 })();

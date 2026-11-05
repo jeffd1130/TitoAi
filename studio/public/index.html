@@ -7,12 +7,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Tito AI Studio</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/board.css">
 </head>
 <body>
   <header class="top">
     <div class="brand"><span class="logo">TITO <b>AI</b></span> Studio</div>
     <nav class="tabs">
-      <button class="tab active" data-tab="main">💬 Tito AI</button>
+      <button class="tab active" data-tab="canvas">🗺️ Board</button>
+      <button class="tab" data-tab="main">💬 Tito AI</button>
       <button class="tab" data-tab="board">Agents</button>
       <button class="tab" data-tab="posting">Approve &amp; Post</button>
       <button class="tab" data-tab="video">Video</button>
@@ -22,7 +24,24 @@
   </header>
 
   <main>
-    <section id="main" class="panel active">
+    <section id="canvas" class="panel active">
+      <div class="fg-top">
+        <div class="fg-tools">
+          <button class="fg-tool on" data-tool="move" title="Move (V)"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 2 L3 13 L6 10 L8 15 L10 14 L8 9 L12 9 Z" fill="currentColor"/></svg></button>
+          <button class="fg-tool" data-tool="hand" title="Hand (H)">✋</button>
+          <button class="fg-tool" data-tool="sticky" title="Sticky note (S)">🗒️</button>
+        </div>
+        <div class="fg-file"><span class="fg-muted">Tito AI Studio /</span> <b>Main board</b></div>
+        <div class="fg-zoomctl"><button class="fg-tool" id="fgZoomOut" title="Zoom out (-)">−</button><span id="fgZoom">100%</span><button class="fg-tool" id="fgZoomIn" title="Zoom in (+)">+</button><button class="fg-tool wide" id="fgFit" title="Fit all (1)">Fit</button></div>
+      </div>
+      <div class="fg-wrap">
+        <aside class="fg-layers" id="fgLayers"></aside>
+        <div class="fg-viewport" id="fgViewport"><div class="fg-world" id="fgWorld"></div></div>
+        <aside class="fg-inspector"><button class="fg-x" id="fgInsClose" title="Close">×</button><div id="fgInspector"></div></aside>
+      </div>
+    </section>
+
+    <section id="main" class="panel">
       <div class="main-wrap">
         <div class="chat-card card">
           <div class="chat-head">
@@ -108,5 +127,6 @@
 
   <div id="toast"></div>
   <script src="/app.js"></script>
+  <script src="/board.js"></script>
 </body>
 </html>
