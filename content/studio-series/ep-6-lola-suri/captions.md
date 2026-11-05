@@ -19,7 +19,7 @@ Follow ka para sa susunod: si Tito Numero.
 ## Facebook
 Ep 6/7 ng "Ang Team ni Tito AI."
 
-Si Lola Suri ang QA, ang taga-check bago may lumabas. Read-only siya, kaya hindi niya binabago ang file; ibinibigay lang niya ang verdict: Pass, Fix Needed, o Blocked. Sa listahan niya, blocker ang pekeng AI output at ang gawa-gawang halimbawa na walang label. Sinusuri rin niya kung tama ang bilang ng hashtag at kung isa lang ang CTA.
+Si Lola Suri ang QA, ang taga-check bago may lumabas. Read-only siya, kaya hindi niya binabago ang file; ibinibigay lang niya ang verdict: Pass o Fix, may numbered list. Isang halimbawa: sa W46 Monday carousel, slide 4, na-flag niya na naiwan sa dulo ng linya ang plus at minus, kaya hindi malinis basahin ang mga numero.
 
 Hindi siya gumagawa ng pagbabago, at review lang ang verdict niya, hindi approval. Ako pa rin ang nag-aapprove ng lahat. Illustration ang character sa video.
 
