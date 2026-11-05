@@ -185,10 +185,10 @@
   function renderApprovals() {
     const posts = pendingPosts(), vids = pendingVideos();
     $('#apprList').innerHTML = [
-      ...vids.map((r) => `<div class="appr"><div class="thumb vid">🎬</div><div class="hb"><b>${esc(r.title)}</b><span class="pill st-draft">Final video</span>
+      ...vids.map((r) => `<div class="appr">${r.files[0] ? `<video class="thumb" src="${fileUrl(r.files[0])}#t=1" preload="metadata" muted playsinline controls></video>` : '<div class="thumb vid">🎬</div>'}<div class="hb"><b>${esc(r.title)}</b><span class="pill st-draft">Final video</span>
         <p>${esc(r.files.join(', '))}</p><div class="row"><button class="fg-btn" data-open-file="${esc(r.files[0] || '')}">Watch</button>
         <button class="fg-btn primary" data-approve-run="${r.id}">Approve video</button></div></div></div>`),
-      ...posts.map((p) => `<div class="appr">${p.type === 'video' ? `<img class="thumb" src="${fileUrl(p.cover || '')}">` : `<img class="thumb" src="${fileUrl(p.media[0] || '')}">`}
+      ...posts.map((p) => `<div class="appr">${p.type === 'video' ? `<video class="thumb" src="${fileUrl(p.media[0] || '')}" ${p.cover ? `poster="${fileUrl(p.cover)}"` : ''} preload="metadata" muted playsinline controls></video>` : `<img class="thumb" src="${fileUrl(p.media[0] || '')}">`}
         <div class="hb"><b>${esc(p.title)}</b><span class="pill st-draft">${esc(p.type)} · ${esc(p.series || '')}</span>
         <div class="row"><button class="fg-btn primary" data-goto-post="${esc(p.id)}">Review captions &amp; approve</button></div></div></div>`),
     ].join('') || '<div class="hand-empty">Nothing waiting. Research, scripts and other steps flow on their own; only final videos and posts land here.</div>';
