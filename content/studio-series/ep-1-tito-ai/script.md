@@ -26,9 +26,7 @@
 | 0:13.7–0:20.0 | Kapag wala akong video credits… lilipat siya sa carousel. | "Carousel na lang" → carousel fallback | C: a card flips into a stack of slides |
 | 0:20.0–0:22.4 | Hindi siya nagpo-post. Ako ang nag-aapprove. | Hindi nagpo-post. Si Jeff ang nag-aapprove. | D: Tito raises a hand (approve), thumbs up |
 | 0:22.4–0:24.3 | Follow ka sa Tito AI. | Follow ka sa Tito AI | D |
-| 0:24.3–0:26.7 | Susunod: si Tita Saliksik, ang taga-research. | Susunod: Tita Saliksik 🔎 → (no emoji in video; text only) | D, small "Illustration" tag |
-
-(Remove the emoji in the last caption cell when building; text only.)
+| 0:24.3–0:26.7 | Susunod: si Tita Saliksik, ang taga-research. | Susunod: Tita Saliksik | D, small "Illustration" tag |
 
 ## What's true here (source)
 - Tito AI = `tito-main`, the chief of staff; chats, plans (week, slot, topic, format, growth job), starts agents one by one, continues after each finishes, up to 8 steps per message. Source: `studio/README.md`, `studio/server.js`.
