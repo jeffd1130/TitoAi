@@ -24,6 +24,7 @@ const STAGES = [
   {id: 'create', label: 'Create', agent: 'tito-content-creator'},
   {id: 'video', label: 'Video', agent: 'video-producer'},
   {id: 'qa', label: 'QA', agent: 'tito-qa'},
+  {id: 'publish', label: 'Schedule', agent: 'tito-publisher'},
   {id: 'insights', label: 'Insights', agent: 'tito-analyst'},
 ];
 
@@ -34,6 +35,7 @@ const PERSONAS = {
   'tito-content-creator': {display: 'Ate Disenyo', emoji: '🎨', role: 'Content creator'},
   'video-producer': {display: 'Kuya Kamera', emoji: '🎬', role: 'Video producer'},
   'tito-qa': {display: 'Lola Suri', emoji: '🧐', role: 'QA reviewer'},
+  'tito-publisher': {display: 'Kuya Iskedyul', emoji: '📅', role: 'Scheduler — Meta + TikTok calendars'},
   'tito-analyst': {display: 'Tito Numero', emoji: '📊', role: 'Analyst'},
   'general': {display: 'Tito Helper', emoji: '🤖', role: 'General helper'},
   'tito-main': {display: 'Tito AI', emoji: '🎙️', role: 'Chief of Staff — plans the post and runs the team'},
@@ -150,6 +152,7 @@ function startClaude(run, text, {fromJeff = true} = {}) {
     run.actionsDone = [];                                     // duplicate guard is per reply, so a repeated render still runs
   } else if (run.agent !== 'general') args.push('--agent', run.agent);
   if (agent && agent.tools.length && run.agent !== 'tito-main') args.push('--allowedTools', agent.tools.join(','));
+  if (run.agent === 'tito-publisher') args.push('--chrome');           // drives Chrome to reach the schedulers
   if (run.sessionId) args.push('--resume', run.sessionId);
   run.status = 'running';
   addEvent(run, fromJeff ? 'you' : 'update', text);
@@ -192,6 +195,7 @@ function runActions(main, text) {
     try {
       if (a.action === 'start_run') {
         if (!a.prompt || !a.agent) throw new Error('start_run needs agent and prompt');
+        if (a.agent === 'tito-publisher' || a.stage === 'publish') throw new Error('Scheduling starts only from Jeff\'s Schedule button in Approve & Post');
         const child = newRun({stage: a.stage, agent: a.agent, title: a.title, prompt: a.prompt});
         child.parent = main.id;
         addEvent(main, 'action', `▶ Started ${personaName(child.agent)}: ${child.title}`);
@@ -219,6 +223,15 @@ function runActions(main, text) {
 }
 
 function onRunFinished(run) {
+  if (run.agent === 'tito-publisher' && run.postId) {         // record what the scheduler confirmed
+    const st = postState[run.postId];
+    const m = (run.result || '').match(/SCHEDULED:\s*(\{[^\n]*\})/);
+    if (st && st.schedule) {
+      st.schedule.status = run.status === 'done' ? 'done' : 'failed';
+      if (m) try { st.schedule.result = JSON.parse(m[1]); } catch {}
+      savePostState();
+    }
+  }
   if (run.agent === 'tito-main') {                           // flush updates that arrived while it was busy
     if (run.pendingUpdates && run.pendingUpdates.length) {
       const text = run.pendingUpdates.join('\n\n'); run.pendingUpdates = [];
@@ -525,7 +538,16 @@ function parseCaptions(rel, section) {
 
 function listPosts() {
   const posts = loadJSON(POSTS_FILE, []);
-  return posts.map((p) => ({...p, captionsText: parseCaptions(p.captions.file, p.captions.section),
+  const sched = listSchedule();
+  const slotOf = (p) => {
+    const m = String(p.series || '').match(/^(W\d+)\s*·\s*(\w{3})\w*\s+(\d+):(\d+)\s*(AM|PM)/i);
+    if (!m) return null;
+    const e = sched.find((x) => x.week === m[1].toUpperCase() && x.day === m[2].toUpperCase());
+    if (!e || !e.date) return null;
+    const h = (+m[3] % 12) + (/PM/i.test(m[5]) ? 12 : 0);
+    return `${e.date}T${String(h).padStart(2, '0')}:${m[4]}`;
+  };
+  return posts.map((p) => ({...p, slot: slotOf(p), captionsText: parseCaptions(p.captions.file, p.captions.section),
     media: p.media.filter((m) => safePath(m)), state: postState[p.id] || {approved: false, posted: {}, notes: ''}}));
 }
 function savePostState() { fs.writeFileSync(POST_STATE_FILE, JSON.stringify(postState, null, 1)); broadcast({type: 'posts'}); }
@@ -677,6 +699,32 @@ const server = http.createServer((req, res) => {
         else if (m[2] === 'stop') { const c = procs.get(run.id); if (c) c.kill('SIGTERM'); run.status = 'stopped'; addEvent(run, 'error', 'Stopped'); }
         else if (m[2] === 'delete') { const c = procs.get(run.id); if (c) c.kill('SIGTERM'); delete runs[run.id]; save(); broadcast({type: 'deleted', id: run.id}); }
         return json(res, 200, {ok: true});
+      }
+      if ((m = p.match(/^\/api\/posts\/([\w-]+)\/schedule$/))) {   // Jeff's Schedule button: one approved post, one time
+        const post = loadJSON(POSTS_FILE, []).find((x) => x.id === m[1]);
+        const st = postState[m[1]];
+        if (!post || !st || !st.approved) return json(res, 400, {error: 'Approve the post first'});
+        const when = String(b.when || '');
+        if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(when) || new Date(when + ':00+08:00') < Date.now() + 15 * 60000) return json(res, 400, {error: 'Pick a time at least 15 minutes from now (PHT)'});
+        const platforms = (Array.isArray(b.platforms) ? b.platforms : []).filter((x) => ['facebook', 'instagram', 'tiktok'].includes(x));
+        if (!platforms.length) return json(res, 400, {error: 'Pick at least one platform'});
+        if (st.schedule && st.schedule.status === 'running') return json(res, 409, {error: 'Already scheduling this post'});
+        const pretty = new Date(when + ':00+08:00').toLocaleString('en-US', {timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
+        const prompt = `Schedule this approved post. Jeff pressed Schedule in Tito AI Studio for this post and time only.
+Post id: ${post.id} (${post.title})
+Type: ${post.type}
+Media, in order (absolute paths):
+${post.media.map((f, i) => `${i + 1}. ${path.join(ROOT, f)}`).join('\n')}
+Captions file: ${path.join(ROOT, post.captions.file)}${post.captions.section ? ` (section: "${post.captions.section}")` : ''}
+Platforms: ${platforms.join(', ')}
+Date and time: ${pretty} PHT (${when} +08:00)
+Follow .claude/skills/schedule-post/SKILL.md. Schedule only; never post now or boost.`;
+        const run = newRun({stage: 'publish', agent: 'tito-publisher', title: `Schedule · ${post.title}`.slice(0, 90), prompt});
+        run.postId = post.id;
+        st.schedule = {when, platforms, runId: run.id, at: Date.now(), status: 'running'};
+        savePostState();
+        startClaude(run, prompt);
+        return json(res, 200, run);
       }
       if ((m = p.match(/^\/api\/posts\/([\w-]+)\/(approve|unapprove|posted|unposted|notes)$/))) {
         const st = postState[m[1]] || (postState[m[1]] = {approved: false, posted: {}, notes: ''});
