@@ -1,54 +1,56 @@
 # W47 Fri Story — "Ginamit ng Anak Ko ang AI sa Assignment. Galit Ba Ako?"
 
-**Slot:** `03-fri-inspiration` · **Drop:** Fri Nov 20, 2026 · 7:00 PM PHT
+**Slot:** `03-fri-inspiration` · **Drop:** Sat Nov 14, 2026 · 10:00 AM PHT (test posting time, not a verified best time; Jeff posts or schedules natively)
 **Format:** 5-slide story carousel, 1080×1350 · **Growth job:** COMMENT (A/B/C)
 **Tool:** Gemini free (primary) · Claude free (fallback) · "libre ang basic na version" only, no limit numbers
 **Persona:** Tatay Ben and his child, **both fictional**. No real child, school or work.
 **Status:** DRAFT for Jeff's approval. Prompt UNTESTED. S4 questions are human-written, not model output.
+**Source of truth for on-slide text:** `drafts/carousel.json` (edited after QA and re-rendered). Slide text below mirrors it exactly.
 
 Fictional-label note: the hook is a quote from the fictional Tatay Ben, attributed on S1, so it is not read as Jeff's own child. I invented no personal story or reaction for Jeff.
 
-Topic choice: "mga bahagi ng halaman," not water cycle, so this post doesn't echo Wed Nov 18. Swap if you prefer.
+Topic choice: "mga bahagi ng halaman," not water cycle, so this post doesn't echo Thu Nov 12. Swap if you prefer.
 
 Palette: cream `#FFF8E7`, marigold `#FFB800`, coral `#FF6B4A`, deep teal `#0D6B63`, navy `#0A0F1E` text. Different layout/cover from the Wed guro post. Non-breaking hyphens (‑) keep words from wrapping.
 
 ---
 
 ## S1 — HOOK (cream)
-**Chibi:** `surprised` (hero size).
+**Chibi:** `surprised`.
 
 - Kicker: FICTIONAL STORY · TATAY BEN
-- Headline: **"Ginamit ng anak ko ang AI sa assignment."**
-- Sub-headline: *Galit ba ako… o magtatanong muna?*
+- Headline: **“Ginamit ng anak ko ang AI sa assignment.”**
+- Highlight: *Galit ba ako… o magtatanong muna?*
 
 ---
 
 ## S2 — SCENE (marigold)
-**Chibi:** `teach` (small, corner).
+**Chibi:** `teach`.
 
 - Kicker: FICTIONAL PRACTICE STORY
 - Headline: **Parang sobrang ganda ng sagot.**
 - Body: Grade 5 ang anak ni Tatay Ben. Unang naramdaman niya: magalit. Huminto muna siya.
-- *[OPTIONAL — Jeff's own true sentence, labeled as his. Leave out if none.]*
+
+*[OPTIONAL, not on the current slide: Jeff's own true sentence, labeled as his. Leave out if none.]*
 
 ---
 
 ## S3 — TURN + PROMPT (cream)
-**Chibi:** `teach` (small).
+**Chibi:** none.
 
-- Headline: **"Hindi ko alam ang subject. Pero pwede akong magtanong."**
-- Tag: Hindi pa nasubukan ang prompt na ito.
+- Headline: **“Hindi ko alam ang subject. Pero pwede akong magtanong.”**
+- Body: Hindi pa nasubukan ang prompt na ito.
 - Prompt block (shortened; full version is the first comment):
 
 ```
 Ang anak ko ay nasa Grade 5 at gumamit ng AI para sa assignment niya tungkol sa mga bahagi ng halaman. Hindi ko alam ang subject na ito.
 Gumawa ng 3 simpleng tanong sa Taglish na pwede kong itanong sa kanya.
 - Isa: "Ipaliwanag mo sa sarili mong salita."
-- Magalang, hindi nang-aakusa.
-- Huwag mag-imbento ng laman ng assignment niya.
+- Magalang, hindi nang‑aakusa.
+- Huwag mag‑imbento ng laman ng assignment niya.
 ```
 
-Fictional input only: no child name, school or real work pasted.
+Fictional input only: no child name, school or real work pasted (note for Jeff, not on the slide).
 
 ---
 
@@ -61,11 +63,11 @@ Fictional input only: no child name, school or real work pasted.
 
 - Kicker: FICTIONAL · HUMAN-WRITTEN, HINDI OUTPUT NG AI
 - Headline: **3 tanong, walang sumbat.**
-  1. Ipaliwanag mo sa sarili mong salita: para saan ang ugat ng halaman?
-  2. Anong parte ang pinakamadaling intindihin? Alin ang medyo malabo?
-  3. Paano mo malalaman kung tama ang sagot na nakuha mo?
-- Line: Kung kaya niyang ipaliwanag, natutunan niya. Kung hindi, doon kayo magsimula.
-- Footnote: Alamin ang patakaran ng school ng anak mo.
+- Body: Kung kaya niyang ipaliwanag, natutunan niya. Kung hindi, doon kayo magsimula. Alamin ang patakaran ng school ng anak mo.
+- List rows:
+  - Ipaliwanag mo sa sarili mong salita: para saan ang ugat ng halaman?
+  - Anong parte ang pinakamadaling intindihin? Alin ang medyo malabo?
+  - Paano mo malalaman kung tama ang sagot na nakuha mo?
 
 ---
 
@@ -73,11 +75,12 @@ Fictional input only: no child name, school or real work pasted.
 **Chibi:** `wave`.
 
 - Headline: **Sa bahay n'yo, alin?**
-  - **A** Bawal ang AI sa assignment
-  - **B** Pwede basta ipaliwanag
-  - **C** Depende sa subject
-- Big CTA (the only ask): **I‑COMMENT ANG LETRA.**
-- Sign-off: Tito AI — AI Para Sa Ating Lahat.
+- Body: Tito AI — AI Para Sa Ating Lahat.
+- List rows:
+  - A. Bawal ang AI sa assignment.
+  - B. Pwede basta ipaliwanag.
+  - C. Depende sa subject.
+- CTA (the only ask): **I‑COMMENT ANG LETRA.**
 
 No follow, share or save ask on this slide.
 
@@ -94,9 +97,20 @@ No follow, share or save ask on this slide.
 1. **ASEAN Foundation / Manila Bulletin (Feb 10, 2026):** only the headline was seen. This draft prints **no statistic**. Read it before adding any figure. The "83% of Filipino students" figure is unverified and is not used.
 2. **Read DepEd Order No. 003, s. 2026** before characterizing disclosure or integrity rules. The slides say only "alamin ang patakaran ng school."
 3. Rules differ by school. The post does not say AI is "pwede" or "bawal."
-4. Run the prompt; confirm the questions are useful and gentle. Edit anything accusatory.
+4. **Run the untested prompt in free Gemini by Wed Nov 11** (at least 3 days before the Sat Nov 14 post). Confirm the questions are useful and gentle. Edit anything accusatory.
 5. Is "ugat ng halaman" a fair Grade 5 topic for your audience? Swap the topic if not.
-6. Confirm free access on capture day. Capture by Tue Nov 17 (D-3).
+6. Confirm free access on capture day.
 7. Optional: one true sentence from your own home for S2. I invented none.
 8. Hashtags: exactly five per platform (CLAUDE.md says 8–15). Confirm.
 9. If you have your own clips/voiceover, this can become a 60–90s reel; otherwise carousel.
+10. Posting time (Sat 10:00 AM PHT) is a test slot, not a verified best time.
+
+---
+
+## Changes vs original script
+Synced to `carousel.json` (the post-QA source of truth):
+- **S1:** headline now uses curly quotes; "Sub-headline" relabeled Highlight (text unchanged). Chibi `surprised` unchanged.
+- **S3:** chibi `teach` → none; "Tag" is now the body line (text unchanged); prompt block uses the slide's non-breaking hyphens; the "Fictional input only" line is kept as a note for Jeff but is not on the slide.
+- **S4:** the line and footnote are merged into one body paragraph ("Kung kaya niyang ipaliwanag… Alamin ang patakaran ng school ng anak mo.") placed before the three list rows; the numbered 1–3 list is now plain rows.
+- **S5:** poll rows now read "A. / B. / C." with periods; sign-off is the body line.
+- Drop moved from Fri Nov 20, 7:00 PM to Sat Nov 14, 10:00 AM PHT; topic cross-reference now Thu Nov 12; prompt-capture date moved to Wed Nov 11.
