@@ -9,7 +9,7 @@ Hindi nag-eedit si Lola. 🧐 Ep 6/7: si Lola Suri ang QA. Read-only siya at ver
 ## Instagram
 Ep 6/7: Kilalanin si Lola Suri, ang QA ng Tito AI Studio. 🧐
 
-Read-only siya: hindi niya binabago ang file, ibinibigay lang niya ang verdict: Pass, Fix Needed, o Blocked. Blocker sa kanya ang pekeng AI output at ang gawa-gawang halimbawa na walang label. Sinusuri rin niya ang bilang ng hashtag at kung isa lang ang CTA.
+Read-only siya: hindi niya binabago ang file, ibinibigay lang niya ang verdict: Pass o Fix, may numbered list. Sa W46 Monday carousel, slide 4, ang na-flag niya: naiwan sa dulo ng linya ang plus at minus, kaya hindi malinis basahin ang mga numero.
 
 Review lang ito, hindi approval. Ako pa rin ang magde-desisyon. Illustration ang character dito.
 
