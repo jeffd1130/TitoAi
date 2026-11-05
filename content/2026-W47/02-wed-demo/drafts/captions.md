@@ -63,4 +63,5 @@ Pangalawang mensahe: i-highlight ang item 4 sa editor at itanong, "Gawing mas ma
 - Body: TikTok 3 sentences, IG 4, FB 4 (+ CTA line) ✔
 - One CTA each (SHARE) ✔
 - Labels: fictional practice example, untested prompt, human-written S4 ✔
+- "Libre" wording: only "libre ang basic na version"; no limit claims; #LibreAngAI swapped for #AITip ✔
 - No "Quiz Bukas?", "Study Coach", "5 minuto", "exam week", limit numbers, DepEd quotes, metrics or real-teacher claims ✔
