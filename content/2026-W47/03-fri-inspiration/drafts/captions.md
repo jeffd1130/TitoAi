@@ -23,7 +23,7 @@ Sa bahay n'yo, alin? A Bawal ang AI sa assignment · B Pwede basta ipaliwanag ·
 
 Sa bahay n'yo, alin? A Bawal ang AI sa assignment · B Pwede basta ipaliwanag · C Depende sa subject. Comment ang letra.
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #ParentingPH #LibreAngAI
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #ParentingPH #AIsaBahay
 
 ---
 
