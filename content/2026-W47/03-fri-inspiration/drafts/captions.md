@@ -60,4 +60,6 @@ Gusto kong marinig: A, B, o C sa bahay n'yo? (Same poll as the post; no second C
 - One CTA each (COMMENT A/B/C) ✔
 - Labels: fictional story, untested prompt, human-written S4 ✔
 - Hook is attributed to fictional Tatay Ben, not Jeff ✔
+- No invented outcome (the child's explanation removed from IG) ✔
+- "Libre" wording: only "libre ang basic na version"; no limit claims; #LibreAngAI swapped for #AIsaBahay on IG ✔
 - No statistics, DepEd quotes, real child/school, or invented reactions ✔
