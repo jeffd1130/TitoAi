@@ -29,7 +29,7 @@ I-send ito sa nanay, lola, o family group chat.
 
 ## Facebook
 
-May natanggap ka bang text na "Na-lock ang account mo, i-click mo ngayon"? Huwag munang mag-click at huwag magbigay ng OTP. 📱 Sa fictional sample na ito (hindi totoong bangko), ipinakita kung paano gamitin ang libreng AI bilang second opinion na maglilista ng red flags. Hindi ito final na judge at pwede itong magkamali, kaya buksan ang official app o tawagan ang official hotline. Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at alisin ang link, OTP, at account number bago mag-paste.
+May natanggap ka bang text na "Na-lock ang account mo, i-click mo ngayon"? Huwag munang mag-click at huwag magbigay ng OTP. 📱 Sa fictional sample na ito (hindi totoong bangko), ipinakita kung paano gamitin ang AI (libre ang basic na version) bilang second opinion na maglilista ng red flags. Hindi ito final na judge at pwede itong magkamali, kaya buksan ang official app o tawagan ang official hotline. Paalala: hindi pa nasubukan ang prompt, human-written ang slide 4, at alisin ang link, OTP, at account number bago mag-paste.
 
 I-send ito sa nanay, lola, o family group chat.
 
