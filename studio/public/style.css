@@ -182,3 +182,19 @@ a.btn { text-decoration: none; display: inline-block; }
 #flowCredits { width: 40px; }
 #tgBtn.ghost { background: transparent; color: #E6E6E6; border: 1px solid #3A4152; padding: 6px 12px; font-size: 13px; }
 #tgBtn.ghost:hover { border-color: #F7931E; color: #fff; }
+
+/* Agents tab: compact cards, details on click */
+.run { gap: 6px; padding: 12px; }
+.run-head { cursor: pointer; align-items: flex-start; }
+.run-title { font-size: 14px; line-height: 1.35; }
+.caret { color: var(--muted); font-size: 12px; flex: none; }
+.run .meta { font-size: 12px; color: var(--muted); gap: 4px; padding-left: 17px; }
+.run .summary { margin: 0; padding-left: 17px; font-size: 12.5px; line-height: 1.45; color: #A9B4C7; }
+.run .actions { padding-left: 17px; }
+.run.compact { cursor: default; }
+.done .dot { background: var(--green); }
+.more { background: transparent; border: 1px dashed var(--line); color: var(--muted); border-radius: 8px; padding: 8px; font: inherit; font-size: 12px; cursor: pointer; }
+.more:hover { color: var(--text); }
+.btn.ghost-danger { background: transparent; border-color: transparent; color: #F87171; }
+.run .summary { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.run.approved { border-color: var(--line); }

@@ -29,6 +29,7 @@ const fileUrl = (p) => `/file?path=${encodeURIComponent(p)}`;
 const ago = (t) => { const s = Math.round((Date.now() - t) / 1000); return s < 60 ? `${s}s ago` : s < 3600 ? `${Math.round(s / 60)}m ago` : `${Math.round(s / 3600)}h ago`; };
 
 // ---------- board ----------
+const OPEN = new Set(), SHOW_ALL = new Set();   // expanded cards, columns showing all runs
 function renderBoard() {
   const cols = $('#columns');
   cols.innerHTML = state.stages.map((st) => {
@@ -36,28 +37,35 @@ function renderBoard() {
     return `<div class="col" data-stage="${st.id}">
       <div class="col-head"><div><h2>${esc(st.label)}<span class="count">${runs.length || ''}</span></h2><div class="muted">${esc(who(st.agent))}</div></div>
         <button class="btn small" data-new="${st.id}">+ Run</button></div>
-      <div class="col-body">${runs.map(runCard).join('') || `<div class="empty">No runs yet.<br>${esc(who(st.agent))} is ready<br><span class="muted">${esc(persona(st.agent).role)}</span></div>`}</div>
+      <div class="col-body">${(SHOW_ALL.has(st.id) ? runs : runs.slice(0, 5)).map(runCard).join('')}${runs.length > 5 ? `<button class="more" data-more="${st.id}">${SHOW_ALL.has(st.id) ? 'Show fewer' : `Show ${runs.length - 5} older`}</button>` : ''}${runs.length ? '' : `<div class="empty">No runs yet.<br>${esc(who(st.agent))} is ready<br><span class="muted">${esc(persona(st.agent).role)}</span></div>`}</div>
     </div>`;
   }).join('');
   cols.querySelectorAll('.log').forEach((l) => (l.scrollTop = l.scrollHeight));
 }
 
 function runCard(r) {
+  const busy = r.status === 'running', open = OPEN.has(r.id) || busy;
+  const last = [...r.events].reverse().find((e) => e.kind === 'text' || e.kind === 'error');
+  const summary = (r.result || (last && last.text) || '').replace(/[#*`>|]/g, '').replace(/\s+/g, ' ').trim();
+  const head = `<div class="run-head" data-toggle="${r.id}"><span class="dot"></span><span class="run-title">${esc(r.title)}</span><span class="caret">${open ? '▾' : '▸'}</span></div>
+    <div class="meta"><span>${STATUS_LABEL[r.status] || r.status}</span><span>· ${ago(r.updatedAt)}</span>${r.files.length ? `<span>· ${r.files.length} file${r.files.length > 1 ? 's' : ''}</span>` : ''}</div>`;
+  const mainBtns = `${r.status === 'review' ? `<button class="btn small green" data-act="approve" data-id="${r.id}">Approve</button>` : ''}
+      ${busy ? `<button class="btn small danger" data-act="stop" data-id="${r.id}">Stop</button>` : ''}`;
+  if (!open) {
+    return `<div class="card run compact ${r.status}" data-id="${r.id}">${head}
+      ${summary ? `<p class="summary">${esc(summary.slice(0, 140))}${summary.length > 140 ? '…' : ''}</p>` : ''}
+      ${mainBtns.trim() ? `<div class="actions">${mainBtns}</div>` : ''}</div>`;
+  }
   const events = r.events.slice(-60).map((e) => `<div class="ev ${e.kind}">${e.kind === 'you' ? '▸ ' : ''}${esc(e.text)}</div>`).join('');
-  const files = r.files.map((f) => `<a data-open="${esc(f)}">📄 ${esc(f)}</a>`).join('');
-  const busy = r.status === 'running';
-  return `<div class="card run ${r.status}" data-id="${r.id}">
-    <div class="run-head"><span class="dot"></span><span class="run-title">${esc(r.title)}</span></div>
-    <div class="meta"><span class="chip agent" title="${esc(r.agent)}">${esc(who(r.agent))}</span><span>${STATUS_LABEL[r.status] || r.status}</span><span>· ${ago(r.updatedAt)}</span></div>
+  const files = r.files.map((f) => `<a data-open="${esc(f)}">📄 ${esc(f.split('/').slice(-2).join('/'))}</a>`).join('');
+  return `<div class="card run ${r.status}" data-id="${r.id}">${head}
     <div class="log">${events || '<div class="ev log">Starting…</div>'}</div>
     ${files ? `<div class="files">${files}</div>` : ''}
     ${!['video-producer', 'carousel-render'].includes(r.agent) ? `<div class="chat"><input placeholder="${busy ? 'Working… you can Stop' : 'Tell this agent what to change'}" ${busy ? 'disabled' : ''} data-chat="${r.id}"><button class="btn small" data-send="${r.id}" ${busy ? 'disabled' : ''}>Send</button></div>` : ''}
-    <div class="actions">
-      ${r.status === 'review' ? `<button class="btn small green" data-act="approve" data-id="${r.id}">Approve</button>` : ''}
-      ${r.status === 'approved' ? `<button class="btn small" data-act="reopen" data-id="${r.id}">Reopen</button>${nextButton(r)}` : ''}
-      ${r.status === 'done' ? nextButton(r) : ''}
-      ${busy ? `<button class="btn small danger" data-act="stop" data-id="${r.id}">Stop</button>` : ''}
-      <button class="btn small danger" data-act="delete" data-id="${r.id}">Delete</button>
+    <div class="actions">${mainBtns}
+      ${r.status === 'approved' || r.status === 'done' ? nextButton(r) : ''}
+      ${r.status === 'approved' ? `<button class="btn small" data-act="reopen" data-id="${r.id}">Reopen</button>` : ''}
+      <button class="btn small ghost-danger" data-act="delete" data-id="${r.id}">Delete</button>
     </div>
   </div>`;
 }
@@ -99,6 +107,9 @@ $('#newRun').addEventListener('close', async () => {
 
 document.addEventListener('click', async (e) => {
   const t = e.target;
+  const tg = t.closest('[data-toggle]');
+  if (tg) { const id = tg.dataset.toggle; OPEN.has(id) ? OPEN.delete(id) : OPEN.add(id); return renderBoard(); }
+  if (t.dataset.more) { const id = t.dataset.more; SHOW_ALL.has(id) ? SHOW_ALL.delete(id) : SHOW_ALL.add(id); return renderBoard(); }
   if (t.dataset.new) return openNewRun(t.dataset.new);
   if (t.dataset.open) return openFile(t.dataset.open);
   if (t.dataset.send) return sendChat(t.dataset.send);
