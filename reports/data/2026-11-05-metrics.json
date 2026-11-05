@@ -1,0 +1,29 @@
+{
+  "pulled": "2026-11-05 PHT",
+  "pulled_by": "Claude Code via Chrome (Browser 4 profile, logged in as Tito AI)",
+  "sources": {
+    "tiktok": "https://www.tiktok.com/tiktokstudio/analytics (and /content, /analytics/followers)",
+    "meta": "https://business.facebook.com/latest/insights/overview?asset_id=1108395249032434&business_id=1496630368854152 (Tito Ai PH)"
+  },
+  "tiktok_account_7d": {"window": "Oct 28 - Nov 3, 2026", "video_views": 425, "video_views_change": "-60.8%", "profile_views": 0, "likes": 1, "likes_change": "-92.3%", "comments": 0, "shares": 1, "net_followers": 0, "total_followers": "1K (rounded by Studio)",
+    "traffic": {"for_you": "93.1%", "search": "4.9%", "profile": "1.5%", "following": "0.5%"},
+    "top_search_queries": {"tito ai": "29.2%", "titoai": "8.3%", "Totoo Ai": "8.3%", "lebih bagus mana claude atau gemini": "8.3%"},
+    "audience": {"male": "87%", "age_25_34": "34%", "age_18_24": "27%", "philippines": "62.8%", "us": "4.0%"}},
+  "tiktok_posts": [
+    {"date": "2026-11-04 12:09", "post": "W45 Wed Origin Part 1", "pinned": true, "views": 111, "likes": 1, "comments": 0},
+    {"date": "2026-11-02 14:48", "post": "W45 Mon HM po", "views": 213, "likes": 0, "comments": 0},
+    {"date": "2026-10-30 20:03", "post": "W44 Fri Isang Skill", "views": 136, "likes": 1, "comments": 0},
+    {"date": "2026-10-26 18:13", "post": "W44 Mon Kalat ang Notes Mo", "views": 302, "likes": 6, "comments": 0},
+    {"date": "2026-10-23 20:31", "post": "Three phone shots (product content)", "views": 377, "likes": 4, "comments": 0},
+    {"date": "2026-07-17", "post": "Clark restaurant story", "pinned": true, "views": 4747, "likes": 579, "comments": 3},
+    {"date": "2026-07-16", "post": "VA resume + cover letter", "pinned": true, "views": 1122, "likes": 65, "comments": 1}
+  ],
+  "meta_facebook_28d": {"window": "Oct 7 - Nov 3, 2026", "views": 952, "views_change": "-13.9%", "viewers": 825, "from_non_followers": "94.0%", "follows": 1, "unfollows": 0, "page_visits": 6, "interactions": 13, "three_sec_views": 174, "watch_time": "33m 50s", "conversations": 0},
+  "meta_instagram_28d": {"window": "Oct 7 - Nov 3, 2026", "views": "1.4K", "reach": 79, "from_followers": "72.9%"},
+  "meta_posts_ig_fb_crossposted": [
+    {"date": "2026-11-04 12:10", "post": "W45 Wed Origin Part 1", "views": 266, "viewers": 205, "interactions": 8, "likes": 5, "comments": 2, "shares": 0, "saves": 0, "three_sec_views": 41, "avg_play": "2s"},
+    {"date": "2026-11-02 14:50", "post": "W45 Mon HM po", "views": 43, "viewers": 9, "interactions": 0, "three_sec_views": 4, "avg_play": "3s"},
+    {"date": "2026-10-30 20:22", "post": "W44 Fri Isang Skill", "views": 51, "viewers": 14, "interactions": 4, "likes": 2, "shares": 1, "three_sec_views": 7, "avg_play": "5s"}
+  ],
+  "not_found": ["W44 Wed VA Handoff Checklist (Oct 28) is not in the TikTok post list", "IG follower count not shown in Business Suite", "TikTok exact follower count (Studio shows 1K)"]
+}
