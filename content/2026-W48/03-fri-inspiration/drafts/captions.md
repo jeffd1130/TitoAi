@@ -19,7 +19,7 @@ Follow Tito AI para sa susunod na AI lesson.
 
 ## Instagram
 
-Bago pumasok ang 13th month, isulat muna kung saan ito pupunta. 💸 Sa fictional na kuwento ni Ate Joy (gawa-gawang numbers lang), lumampas ng ₱1,000 ang plano, kaya siya mismo ang nagbawas sa Noche Buena. Listahan lang ito sa libreng AI, hindi financial advice, at calculator pa rin ang final check. Kung employee ka at tumatanggap ng 13th month. Hindi pa nasubukan ang prompt at human-written ang slide 4.
+Bago pumasok ang 13th month, isulat muna kung saan ito pupunta. 💸 Sa fictional na kuwento ni Ate Joy (gawa-gawang numbers lang), lumampas ng ₱1,000 ang plano, kaya siya mismo ang nagbawas sa Noche Buena. Listahan lang ito mula sa AI (libre ang basic na version), hindi financial advice, at calculator pa rin ang final check. Para ito sa employee na tumatanggap ng 13th month. Hindi pa nasubukan ang prompt at human-written ang slide 4.
 
 Follow Tito AI para sa susunod na AI lesson.
 
