@@ -3,7 +3,7 @@
 Exactly five hashtags per platform. One CTA (follow). Max 3 emoji. Illustrated characters. Nothing posted or scheduled.
 
 ## TikTok
-Hindi nag-eedit si Lola. 🧐 Ep 6/7: si Lola Suri ang QA. Read-only siya at verdict lang ang binibigay: Pass, Fix Needed o Blocked. Ako pa rin ang nag-aapprove. Follow ka para sa susunod.
+Hindi nag-eedit si Lola. 🧐 Ep 6/7: si Lola Suri ang QA. Read-only siya at verdict lang ang binibigay: Pass o Fix. Ako pa rin ang nag-aapprove. Follow ka para sa susunod.
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAIStudio #LolaSuri
 
 ## Instagram
