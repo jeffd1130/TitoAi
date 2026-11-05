@@ -183,3 +183,28 @@ a.thumb.vid { text-decoration: none; color: inherit; }
   .fg-layers { width: 200px; }
 }
 .fg-keys { padding: 4px 14px; font-size: 12px; line-height: 1.7; color: #8A8A8A; }
+
+/* Results · Tito Numero */
+.ins { position: absolute; inset: 0; display: grid; grid-template-columns: 1.15fr 1fr 1.1fr; gap: 0; }
+.ins-col { padding: 18px 22px; overflow: auto; border-right: 1px solid #EEE; }
+.ins-col:last-child { border-right: 0; }
+.ins-meta { font-size: 12px; color: #8A8A8A; margin-bottom: 8px; }
+.ins-meta a { color: var(--fg-blue); }
+.ins-meta .stale { color: #D93025; font-weight: 600; }
+.ins-top ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.5; color: #333; }
+.ins-top code { font-size: 12px; background: #F2F2F2; padding: 0 4px; border-radius: 4px; }
+.ins-boost { margin: 14px 0 0; font-size: 13px; line-height: 1.5; color: #444; background: #FFF8E6; border-radius: 8px; padding: 10px 12px; }
+.ins-boost span { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #B8860B; margin-bottom: 2px; }
+.ins h4 { margin: 0 0 8px; font-size: 13px; color: #1E1E1E; }
+.ins h4 small { font-weight: 400; color: #999; margin-left: 6px; }
+.kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+.kpi { border: 1px solid #EEE; border-radius: 8px; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; }
+.kpi span { font-size: 11px; color: #8A8A8A; }
+.kpi b { font-size: 20px; color: #1E1E1E; }
+.kpi em { font-style: normal; font-size: 11px; font-weight: 600; }
+.kpi em.down { color: #D93025; } .kpi em.up { color: #188038; }
+.ins-posts table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ins-posts th { text-align: right; font-size: 11px; font-weight: 600; color: #8A8A8A; padding: 6px 8px; border-bottom: 1px solid #EEE; }
+.ins-posts td { text-align: right; padding: 8px; border-bottom: 1px solid #F3F3F3; color: #333; font-variant-numeric: tabular-nums; }
+.ins-posts th:first-child, .ins-posts td:first-child { text-align: left; }
+.ins-posts td small { display: block; font-size: 11px; color: #999; }

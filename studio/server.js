@@ -420,6 +420,22 @@ function talkToMain(text, {newChat = false, chatId = null} = {}) {
 
 // ---------- main board: calendar, ChatGPT handoff inbox, sticky notes ----------
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// Latest analyst results for the board: newest metrics pull + top line of the newest report.
+function listInsights() {
+  const newest = (dir, re) => { try { return fs.readdirSync(dir).filter((f) => re.test(f)).sort().pop() || null; } catch { return null; } };
+  const dataFile = newest(path.join(ROOT, 'reports', 'data'), /^\d{4}-\d{2}-\d{2}-metrics\.json$/);
+  const repFile = newest(path.join(ROOT, 'reports'), /^\d{4}-\d{2}-\d{2}-weekly-checkbalance\.md$/);
+  let metrics = null, topline = [], boost = '';
+  if (dataFile) try { metrics = JSON.parse(fs.readFileSync(path.join(ROOT, 'reports', 'data', dataFile), 'utf8')); } catch {}
+  if (repFile) {
+    const md = fs.readFileSync(path.join(ROOT, 'reports', repFile), 'utf8');
+    const sec = (h) => { const m = md.match(new RegExp(`## ${h}[^\\n]*\\n([\\s\\S]*?)(?=\\n## |$)`)); return m ? m[1].trim() : ''; };
+    topline = sec('1\\.').split('\n').filter((l) => l.startsWith('- ')).map((l) => l.slice(2));
+    boost = sec('4\\.').split('\n\n')[0];
+  }
+  return {dataFile: dataFile && `reports/data/${dataFile}`, report: repFile && `reports/${repFile}`, date: dataFile && dataFile.slice(0, 10), metrics, topline, boost};
+}
+
 function listSchedule() {
   const sched = loadJSON(path.join(ROOT, 'docs', 'schedule.json'), {weeks: []});
   const out = [];
@@ -601,6 +617,7 @@ const server = http.createServer((req, res) => {
     return json(res, 200, {stages: STAGES, agents: readAgents(), runs: Object.values(runs), status, compositions: listCompositions(), media: listMedia()});
   }
   if (req.method === 'GET' && p === '/api/media') return json(res, 200, listMedia());
+  if (req.method === 'GET' && p === '/api/insights') return json(res, 200, listInsights());
   if (req.method === 'GET' && p === '/api/schedule') return json(res, 200, listSchedule());
   if (req.method === 'GET' && p === '/api/handoffs') return json(res, 200, listHandoffs());
   if (req.method === 'GET' && p === '/api/board') return json(res, 200, board);

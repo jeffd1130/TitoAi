@@ -82,3 +82,5 @@ A Figma-style canvas: drag the background or scroll to move, ⌘/Ctrl + scroll o
 - **ChatGPT → Claude handoff**: lists files in `handoff/chatgpt/` (video plus same-name `.md` note; see its README). **Hand to Claude** sends it to the chief of staff with a frame strip, who checks the chibi and finishes it (the `place_file` action copies it into `w44-friday-motion-sample/public/` or `docs/media/`).
 - **Your approvals · final only**: final videos and unapproved posts. Research, scripts and other steps finish as **Done** and flow on without your approval.
 - **Content calendar**: month view of `docs/schedule.json`, colored by status. Click a post for its notes or to ask the chief of staff about it.
+
+**Results · Tito Numero (Nov 5):** the bottom frame on the Board shows the newest `reports/data/*-metrics.json` pull (TikTok Studio + Meta Business Suite) and the top line and boost call from the newest weekly report. It flags pulls older than 7 days. It refreshes every 5 minutes; new pulls show up without a restart.

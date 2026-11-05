@@ -14,6 +14,7 @@
     {id: 'handoff', name: 'ChatGPT → Claude handoff', x: 760, y: 600, w: 840, h: 280},
     {id: 'approve', name: 'Your approvals · final only', x: 1640, y: 600, w: 840, h: 280},
     {id: 'cal', name: 'Content calendar', x: 760, y: 940, w: 1720, h: 800},
+    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 1800, w: 2480, h: 440},
   ];
 
   // ---------- workflow nodes (inside the Workflow frame) ----------
@@ -68,6 +69,7 @@
       <div class="lane-label" style="left:870px;top:478px">CAROUSEL FALLBACK · no video credits</div>
       <div id="fgNodes"></div>`;
     $('#fb-handoff').innerHTML = '<div class="fg-scroll hand-list" id="handList"></div>';
+    $('#fb-insights').innerHTML = '<div class="ins" id="insBody"><div class="hand-empty">Loading results…</div></div>';
     $('#fb-approve').innerHTML = '<div class="fg-scroll appr-list" id="apprList"></div>';
     $('#fb-cal').innerHTML = `<div class="cal-head"><button class="fg-btn" id="calPrev">‹</button><h3 id="calTitle"></h3><button class="fg-btn" id="calNext">›</button>
       <button class="fg-btn" id="calToday">Today</button><span class="cal-legend"><i class="st-posted"></i>Posted <i class="st-ready"></i>Ready <i class="st-draft"></i>Draft <i class="st-planned"></i>Planned</span></div>
@@ -199,6 +201,41 @@
     ].join('') || '<div class="hand-empty">Nothing waiting. Research, scripts and other steps flow on their own; only final videos and posts land here.</div>';
   }
 
+  // ---------- results (Tito Numero) ----------
+  async function loadInsights() { try { B.insights = await api('/api/insights'); renderInsights(); } catch {} }
+  function renderInsights() {
+    const I = B.insights, el = $('#insBody');
+    if (!el || !I) return;
+    if (!I.metrics) { el.innerHTML = '<div class="hand-empty">No results yet. Ask Claude Code to pull Meta Business Suite + TikTok Studio into reports/data/.</div>'; return; }
+    const m = I.metrics, n = (v) => (v === undefined || v === null ? '–' : typeof v === 'number' ? v.toLocaleString() : esc(v));
+    const md = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`(.+?)`/g, '<code>$1</code>');
+    const age = Math.floor((Date.now() - new Date(I.date + 'T12:00:00+08:00')) / 864e5);
+    const tile = (label, v, d) => `<div class="kpi"><span>${label}</span><b>${n(v)}</b>${d ? `<em class="${String(d).startsWith('-') ? 'down' : 'up'}">${esc(d)}</em>` : ''}</div>`;
+    const tt = m.tiktok_account_7d || {}, fb = m.meta_facebook_28d || {}, ig = m.meta_instagram_28d || {};
+    const metaBy = Object.fromEntries((m.meta_posts_ig_fb_crossposted || []).map((p) => [p.post, p]));
+    const posts = (m.tiktok_posts || []).filter((p) => !p.pinned || metaBy[p.post]).slice(0, 6);
+    el.innerHTML = `
+      <div class="fg-scroll ins-col ins-top">
+        <div class="ins-meta">Pulled ${esc(I.date)}${age > 7 ? ` · <span class="stale">${age} days old, ask for a fresh pull</span>` : ''}
+          · <a href="#" data-open-file="${esc(I.report || '')}">Open report</a></div>
+        <ul>${I.topline.map((t) => `<li>${md(t)}</li>`).join('')}</ul>
+        ${I.boost ? `<p class="ins-boost"><span>Boost call</span> ${md(I.boost)}</p>` : ''}
+      </div>
+      <div class="fg-scroll ins-col ins-kpis">
+        <h4>TikTok · 7 days <small>${esc(tt.window || '')}</small></h4>
+        <div class="kpi-row">${tile('Views', tt.video_views, tt.video_views_change)}${tile('Likes', tt.likes, tt.likes_change)}${tile('Shares', tt.shares)}${tile('New followers', tt.net_followers)}</div>
+        <h4>Facebook · 28 days <small>${esc(fb.window || '')}</small></h4>
+        <div class="kpi-row">${tile('Views', fb.views, fb.views_change)}${tile('Viewers', fb.viewers)}${tile('Interactions', fb.interactions)}${tile('New follows', fb.follows)}</div>
+        <h4>Instagram · 28 days</h4>
+        <div class="kpi-row">${tile('Views', ig.views)}${tile('Reach', ig.reach)}</div>
+      </div>
+      <div class="fg-scroll ins-col ins-posts">
+        <h4>Recent posts</h4>
+        <table><thead><tr><th>Post</th><th>TikTok views</th><th>TikTok likes</th><th>IG+FB views</th><th>IG+FB interactions</th></tr></thead>
+        <tbody>${posts.map((p) => { const mp = metaBy[p.post] || {}; return `<tr><td>${esc(p.post)}<small>${esc((p.date || '').slice(5, 10))}${p.pinned ? ' · pinned' : ''}</small></td><td>${n(p.views)}</td><td>${n(p.likes)}</td><td>${n(mp.views)}</td><td>${n(mp.interactions)}</td></tr>`; }).join('')}</tbody></table>
+      </div>`;
+  }
+
   // ---------- calendar ----------
   async function loadSchedule() { B.schedule = await api('/api/schedule'); renderCal(); }
   function renderCal() {
@@ -279,7 +316,7 @@
     vp().style.backgroundSize = `${20 * B.view.z}px ${20 * B.view.z}px`;
     vp().style.backgroundPosition = `${B.view.x}px ${B.view.y}px`;
     $('#fgZoom').textContent = `${Math.round(B.view.z * 100)}%`;
-    store('fg-view2', B.view);
+    store('fg-view3', B.view);
   }
   function zoomAt(z, cx, cy) {
     z = Math.min(3, Math.max(0.15, z));
@@ -431,12 +468,13 @@
     const size = () => { $('#canvas').style.height = `${window.innerHeight - $('.top').offsetHeight}px`; };
     size(); window.addEventListener('resize', size);
     build(); wire(); setTool('move');
-    const saved = load('fg-view2');
+    const saved = load('fg-view3');
     B.ready = true;
     renderAll(); inspect(null);
     if (saved && saved.z) { B.view = saved; apply(); } else setTimeout(() => fit(), 120);
     try { B.notes = (await api('/api/board')).notes || []; renderNotes(); } catch {}
-    loadHandoffs(); loadSchedule();
+    loadHandoffs(); loadSchedule(); loadInsights();
+    setInterval(loadInsights, 300000);
     setInterval(loadSchedule, 60000);
     const firstShow = !saved;
     document.querySelector('.tab[data-tab="canvas"]').addEventListener('click', () => { if (firstShow) requestAnimationFrame(() => fit()); });
