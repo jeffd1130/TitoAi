@@ -33,7 +33,7 @@ Galit ang customer. Mag-practice ka muna kay AI bago ang shift. 🎧 Sa fictiona
 
 I-save para magamit bago ang shift.
 
-#TitoAIPH #MgaPamangkin #AIParaSaAtin #BPOPH #LibreAngAI
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #BPOPH #CustomerService
 
 ---
 
