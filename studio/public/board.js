@@ -9,11 +9,11 @@
 
   // ---------- frames (world coordinates) ----------
   const FRAMES = [
-    {id: 'cos', name: 'Chief of Staff · Tito AI', x: 0, y: 0, w: 700, h: 880},
+    {id: 'cos', name: 'Chief of Staff · Tito AI', x: 0, y: 0, w: 700, h: 1740},
     {id: 'flow', name: 'Workflow · live', x: 760, y: 0, w: 1720, h: 540},
     {id: 'handoff', name: 'ChatGPT → Claude handoff', x: 760, y: 600, w: 840, h: 280},
     {id: 'approve', name: 'Your approvals · final only', x: 1640, y: 600, w: 840, h: 280},
-    {id: 'cal', name: 'Content calendar', x: 0, y: 940, w: 1120, h: 800},
+    {id: 'cal', name: 'Content calendar', x: 760, y: 940, w: 1720, h: 800},
   ];
 
   // ---------- workflow nodes (inside the Workflow frame) ----------
@@ -53,7 +53,8 @@
       <div class="fg-label" data-frame="${f.id}">${esc(f.name)}</div><div class="fg-body" id="fb-${f.id}"></div></div>`).join('') +
       '<div id="fgNotes"></div><div id="fgCursors"></div>';
     $('#fgLayers').innerHTML = '<div class="fg-ph">Layers</div>' + FRAMES.map((f) => `<div class="fg-layer" data-zoom="${f.id}"><span class="fg-hash">#</span>${esc(f.name)}</div>`).join('') +
-      '<div class="fg-ph mt">Sticky notes</div><div id="fgNoteLayers"></div>';
+      '<div class="fg-ph mt">Sticky notes</div><div id="fgNoteLayers"></div>' +
+      '<div class="fg-ph mt">Shortcuts</div><div class="fg-keys">Drag or scroll to move<br>⌘ + scroll or pinch to zoom<br>Double-click to add a sticky<br>Press 1 to fit</div>';
     // Chief of staff frame
     $('#fb-cos').innerHTML = `<div class="cos">
       <div class="cos-list"><button class="fg-btn primary" id="cosNew">+ New conversation</button><div id="cosChats"></div></div>
@@ -278,7 +279,7 @@
     vp().style.backgroundSize = `${20 * B.view.z}px ${20 * B.view.z}px`;
     vp().style.backgroundPosition = `${B.view.x}px ${B.view.y}px`;
     $('#fgZoom').textContent = `${Math.round(B.view.z * 100)}%`;
-    store('fg-view', B.view);
+    store('fg-view2', B.view);
   }
   function zoomAt(z, cx, cy) {
     z = Math.min(3, Math.max(0.15, z));
@@ -430,10 +431,10 @@
     const size = () => { $('#canvas').style.height = `${window.innerHeight - $('.top').offsetHeight}px`; };
     size(); window.addEventListener('resize', size);
     build(); wire(); setTool('move');
-    const saved = load('fg-view');
+    const saved = load('fg-view2');
     B.ready = true;
     renderAll(); inspect(null);
-    if (saved && saved.z) { B.view = saved; apply(); } else requestAnimationFrame(() => fit());
+    if (saved && saved.z) { B.view = saved; apply(); } else setTimeout(() => fit(), 120);
     try { B.notes = (await api('/api/board')).notes || []; renderNotes(); } catch {}
     loadHandoffs(); loadSchedule();
     setInterval(loadSchedule, 60000);

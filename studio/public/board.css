@@ -175,3 +175,11 @@
 a.thumb.vid { text-decoration: none; color: inherit; }
 .appr-link { margin: 4px 0; font-size: 12px; word-break: break-all; }
 .appr-link a { color: var(--fg-blue); }
+
+/* Cleaner desktop: inspector only when something is selected */
+@media (min-width: 761px) {
+  .fg-inspector { display: none; }
+  .fg-has-sel .fg-inspector { display: block; }
+  .fg-layers { width: 200px; }
+}
+.fg-keys { padding: 4px 14px; font-size: 12px; line-height: 1.7; color: #8A8A8A; }

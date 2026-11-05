@@ -147,10 +147,9 @@ function renderStatus() {
   const parts = [posts && `${posts} post${posts > 1 ? 's' : ''}`, vids && `${vids} video${vids > 1 ? 's' : ''}`].filter(Boolean).join(' + ');
   const s = state.status;
   $('#status').innerHTML = `
-    <span class="pill">🤖 ${running} working</span>
-    <button class="pill pill-btn" id="toApprove" title="Click to open Approve & Post">👀 ${review ? `${review} to approve (${parts})` : 'Nothing to approve'}</button>
-    <span class="pill">Flow credits today <input id="flowCredits" type="number" min="0" max="50" placeholder="type" value="${s.flowCredits ?? ''}" title="Type what Flow shows in your profile menu">/50</span>
-    <span class="pill" title="${esc(s.flowNote)}">Flow first → Gemini after</span>`;
+    ${running ? `<span class="pill live">🤖 ${running} working</span>` : ''}
+    <button class="pill pill-btn ${review ? 'hot' : ''}" id="toApprove" title="${review ? esc(parts) + ' · click to open Approve & Post' : 'Nothing waiting'}">${review ? `${review} to approve` : 'All approved'}</button>
+    <span class="pill" title="Flow first, Gemini after. ${esc(s.flowNote || '')}">Flow <input id="flowCredits" type="number" min="0" max="50" placeholder="–" value="${s.flowCredits ?? ''}">/50</span>`;
   $('#toApprove').onclick = () => switchTab('posting');
   $('#flowCredits').onchange = (e) => api('/api/status', {flowCredits: e.target.value === '' ? null : Number(e.target.value)});
 }

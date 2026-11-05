@@ -174,3 +174,11 @@ a.btn { text-decoration: none; display: inline-block; }
 #flowCredits::placeholder { color: #999; font-weight: 400; }
 .status .pill-btn { background: #F0F0F0; color: #555; font: inherit; font-weight: 600; cursor: pointer; }
 .status .pill-btn:hover { border-color: #F7931E; }
+.status { gap: 8px; }
+.status .pill { border: 0; padding: 4px 12px; }
+.status .pill.live { background: #E6F7EE; color: #0B7A43; }
+.status .pill-btn.hot { background: #F7931E; color: #fff; }
+.status .pill-btn.hot:hover { filter: brightness(1.05); }
+#flowCredits { width: 40px; }
+#tgBtn.ghost { background: transparent; color: #E6E6E6; border: 1px solid #3A4152; padding: 6px 12px; font-size: 13px; }
+#tgBtn.ghost:hover { border-color: #F7931E; color: #fff; }
