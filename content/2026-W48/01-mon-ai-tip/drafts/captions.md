@@ -59,7 +59,8 @@ Text: "[ipaste dito ang text. Alisin muna ang link, OTP, at account number.]"
 ## Checks
 - Emoji: 1 per caption (max 3) ✔
 - Hashtags: 5 each, all include #TitoAIPH #MgaPamangkin #AIParaSaAtin ✔
-- Body: TikTok 5 sentences, IG 5, FB 5 (+ CTA line) ✔ (quote counts as one)
+- Body: TikTok 4 sentences, IG 4, FB 5 (+ CTA line) ✔ (hook quote counted as one; still within 3–5 if it is counted as two for TikTok/IG)
+- "Libre" wording: only "libre ang basic na version"; no limit claims; #LibreAngAI swapped for #AITip on IG ✔
 - One CTA each (SHARE) ✔
 - Labels: fictional sample, untested prompt, human-written S4, AI is second opinion ✔
 - No scam-season claims, stats, real brands, hotline numbers or victim stories ✔
