@@ -1009,10 +1009,20 @@
       "posts": [
         {
           "day": "MON",
-          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
-          "tag": "AI Tip Carousel · Small Business · Promo Math",
-          "note": "Moved from Nov 9 because origin Part 3 takes that slot; Jeff may change the date. Five 1080×1350 slides (Studio carousel render) with the approved Tito AI chibi and logo. Fictional dried-mango example: price ₱120, cost ₱70; Buy 1 Take 1 = −₱20 per set. S3 prompt is UNTESTED and S4 is a human-written illustrative example, not AI output (both labeled on the slides). Growth job: SAVE; hypothesis: a loss-visible hook plus one reusable prompt earns more saves per 1,000 views than W44/W45 Mon. Files: content/2026-W46/01-mon-ai-tip/ (brief.md, drafts/script.md, drafts/captions.md, drafts/slides/); the folder keeps its W46 name. Review in Studio Approve & Post. Drop: Mon Nov 16, 8:00 PM PHT. Jeff approval required; Jeff posts everything himself; no Buffer scheduling, posting or boost.",
+          "title": "OPEN — Studio series or new content (Jeff to decide)",
+          "tag": "New content slot",
+          "note": "Open slot (Buy 1 Take 1 moved to Tue Nov 10, Jeff, Nov 5). Former drop: Mon Nov 16, 8:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
           "date": "Nov 16",
+          "status": "planned",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "TUE",
+          "title": "TBD — trend research",
+          "tag": "New content slot",
+          "note": "Moved to Tue/Thu/Sat (Jeff, Nov 5); test posting time, not verified best time; Jeff posts or schedules it himself. Suspicious-text/OTP safety tip; moved from Mon Nov 23. Content: content/2026-W48/01-mon-ai-tip/. Prompt capture: run the untested prompt in free Gemini by Sat Nov 14 (at least 3 days before posting). Drop: Tue Nov 17, 7:30 PM PHT (time-of-day test). Nothing is scheduled or posted.",
+          "date": "Nov 17",
           "status": "draft",
           "url": null,
           "boost": null
