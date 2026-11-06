@@ -105,7 +105,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   <section class="ask" aria-labelledby="ask-h">
     <h2 id="ask-h">Message Tito AI</h2>
     <div class="chips" id="chips"></div>
-    <textarea id="ask-text" rows="3" placeholder="Hal. Gawin na natin ang plan para sa Part 4 (Wed Nov 11)."></textarea>
+    <textarea id="ask-text" rows="3" placeholder="e.g. Start the plan for Part 4 (Wed Nov 11)."></textarea>
     <a class="send-ask" id="ask-send" href="https://t.me/titoaiph_bot" target="_blank" rel="noopener">Send to Tito AI</a>
     <p class="note" id="ask-note">Sends through your Telegram bot to the Tito AI chief of staff in the Studio. Your message is copied; paste it in the chat that opens and tap send. The reply comes back in Telegram.</p>
   </section>
@@ -216,7 +216,7 @@ document.addEventListener('click', async (e) => {
     setTimeout(() => { b.textContent = `Copy ${PLAT[tab] || tab} caption`; }, 1800);
   }
 });
-const CHIPS = ['Ano ang status ngayon?', 'Simulan ang plan para sa Part 4', 'Ano ang naghihintay sa approval ko?', '/send', '/posts'];
+const CHIPS = ['What is the status now?', 'Start the plan for Part 4', 'What is waiting on my approval?', '/send', '/posts'];
 $('#chips').innerHTML = CHIPS.map((c) => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('');
 try { $('#ask-text').value = localStorage.getItem('ask-draft') || ''; } catch {}
 $('#ask-text').addEventListener('input', (e) => { try { localStorage.setItem('ask-draft', e.target.value); } catch {} });

@@ -218,8 +218,8 @@ function board() {
 }
 function askBox() {
   return `<div class="panel mt ask"><h3>💬 Message Tito AI</h3>
-    <div class="chips">${['Ano ang status ngayon?', 'Simulan ang plan para sa Part 4', 'Ano ang naghihintay sa approval ko?', '/send', '/posts'].map((c) => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('')}</div>
-    <textarea id="ask-text" rows="2" placeholder="Hal. Gawin na natin ang plan para sa Part 4 (Wed Nov 11)."></textarea>
+    <div class="chips">${['What is the status now?', 'Start the plan for Part 4', 'What is waiting on my approval?', '/send', '/posts'].map((c) => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+    <textarea id="ask-text" rows="2" placeholder="e.g. Start the plan for Part 4 (Wed Nov 11)."></textarea>
     <div class="row"><a class="send-ask" id="ask-send" href="${D.links.bot}" target="_blank" rel="noopener">Send to Tito AI</a><span class="meta" id="ask-note">Copies your message and opens @titoaiph_bot; paste and send. The reply comes back in Telegram. Needs the Studio running on your Mac.</span></div></div>`;
 }
 function calendarHtml() {
