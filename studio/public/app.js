@@ -26,6 +26,22 @@ async function api(path, body) {
 const persona = (name) => state.agents.find((a) => a.name === name) || {display: name, emoji: '🤖', role: ''};
 const who = (name) => { const a = persona(name); return `${a.emoji} ${a.display}`; };
 const fileUrl = (p) => `/file?path=${encodeURIComponent(p)}`;
+// ---------- live hub (GitHub Pages) ----------
+let HUB = null;
+function renderHub(h) {
+  if (h) HUB = h;
+  if (!HUB) return;
+  const b = $('#hubSync');
+  b.disabled = HUB.busy || HUB.off;
+  b.textContent = HUB.off ? 'Sync off' : HUB.busy ? 'Syncing…' : '↻ Sync';
+  b.title = HUB.off ? 'Hub sync is off (TITO_HUB_SYNC=0)' : `${HUB.last ? 'Last sync ' + ago(HUB.last) + (HUB.result ? ' · ' + HUB.result : '') : 'Not synced yet this session'}${HUB.pending ? ' · next sync queued' : ''}. Phone: ${HUB.mobile}`;
+}
+fetch('/api/hub').then((r) => r.json()).then(renderHub).catch(() => {});
+setInterval(() => renderHub(), 30000);
+document.addEventListener('click', async (e) => {
+  if (!e.target.closest('#hubSync')) return;
+  try { renderHub(await api('/api/hub/sync', {})); toast('Syncing the live hub. Phones update within about 2 minutes.'); } catch (err) { toast(err.message); }
+});
 const ago = (t) => { const s = Math.round((Date.now() - t) / 1000); return s < 60 ? `${s}s ago` : s < 3600 ? `${Math.round(s / 60)}m ago` : `${Math.round(s / 3600)}h ago`; };
 
 // ---------- board ----------
@@ -408,6 +424,7 @@ function connect() {
     if (msg.type === 'deleted') { delete state.runs[msg.id]; renderBoard(); renderStatus(); renderMain(); }
     if (msg.type === 'status') { state.status = msg.status; renderStatus(); }
     if (msg.type === 'posts') loadPosts();
+    if (msg.type === 'hub') renderHub(msg.hub);
     if (window.boardUpdate) boardUpdate(msg);
   };
   es.onerror = () => { es.close(); setTimeout(connect, 2000); };

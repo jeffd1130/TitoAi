@@ -126,19 +126,23 @@ function broadcast(msg) {
 // ---------- live hub on GitHub Pages (docs/hub, public) ----------
 // After changes, re-export docs/hub/data.json and push it (at most every 5 min) so the laptop and
 // phone hubs stay in sync. Set TITO_HUB_SYNC=0 to turn it off.
-let hubTimer = null, hubBusy = false, hubLast = 0;
-function hubSync() {
-  if (process.env.TITO_HUB_SYNC === '0' || hubTimer) return;
+let hubTimer = null, hubBusy = false, hubLast = 0, hubResult = '';
+function hubSync(now) {
+  if (process.env.TITO_HUB_SYNC === '0' || (hubTimer && !now)) return;
+  clearTimeout(hubTimer);
   hubTimer = setTimeout(() => {
     hubTimer = null;
     if (hubBusy) return hubSync();
-    hubBusy = true; hubLast = Date.now();
+    hubBusy = true; hubLast = Date.now(); broadcastHub();
     const child = spawn('python3', [path.join(ROOT, 'studio', 'artifacts', 'export.py'), '--pages', '--push'], {cwd: ROOT, env: process.env});
     let out = '';
     child.stdout.on('data', (d) => (out += d)); child.stderr.on('data', (d) => (out += d));
-    child.on('close', () => { hubBusy = false; console.log('[hub]', out.trim().split('\n').pop() || 'done'); });
-  }, Math.max(90e3, hubLast + 300e3 - Date.now()));
+    child.on('close', () => { hubBusy = false; hubResult = out.trim().split('\n').pop() || 'done'; console.log('[hub]', hubResult); broadcastHub(); });
+  }, now ? 0 : Math.max(90e3, hubLast + 300e3 - Date.now()));
 }
+const hubInfo = () => ({url: 'https://jeffd1130.github.io/TitoAi/hub/', mobile: 'https://jeffd1130.github.io/TitoAi/hub/m.html',
+  off: process.env.TITO_HUB_SYNC === '0', busy: hubBusy, pending: !!hubTimer, last: hubLast, result: hubResult});
+function broadcastHub() { const line = `data: ${JSON.stringify({type: 'hub', hub: hubInfo()})}\n\n`; for (const res of clients) res.write(line); }
 setInterval(hubSync, 15 * 60e3);   // also catches schedule.json and report edits made outside the Studio
 const pending = new Map();
 function pushRun(run) {                                     // throttle full-run broadcasts per card
@@ -709,6 +713,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && p === '/api/schedule') return json(res, 200, listSchedule());
   if (req.method === 'GET' && p === '/api/handoffs') return json(res, 200, listHandoffs());
   if (req.method === 'GET' && p === '/api/board') return json(res, 200, board);
+  if (req.method === 'GET' && p === '/api/hub') return json(res, 200, hubInfo());
   if (req.method === 'GET' && p === '/api/posts') return json(res, 200, listPosts());
   if (req.method === 'GET' && p === '/api/carousel-specs') return json(res, 200, listCarouselSpecs());
   if (req.method === 'GET' && p === '/file') {
@@ -810,6 +815,7 @@ Follow .claude/skills/schedule-post/SKILL.md. Schedule only; never post now or b
         if (!post) return json(res, 404, {error: 'No such post'});
         return sendPostToTelegram(post, (err, n) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {ok: true, messages: n})));
       }
+      if (p === '/api/hub/sync') { hubSync(true); return json(res, 200, hubInfo()); }
       if (p === '/api/telegram') return sendTelegram(b.text || '', (err) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {ok: true})));
       return json(res, 404, {error: 'unknown'});
     });

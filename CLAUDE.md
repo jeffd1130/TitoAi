@@ -25,7 +25,7 @@ Older production notes, audits and health checks (May–Nov 3, 2026) are in `rep
 
 ## Tito AI Studio
 
-Local dashboard: `bash studio/start.sh`, then http://localhost:4545. It runs the agents through Claude Code on Jeff's plan (no API). See `studio/README.md`.
+Local dashboard at http://localhost:4545. It starts at login and restarts itself if it stops (launchd `com.titoai.studio`, log `~/Library/Logs/titoai-studio.log`); after code changes restart it with `launchctl kickstart -k gui/$(id -u)/com.titoai.studio`. `bash studio/start.sh` just opens it. It runs the agents through Claude Code on Jeff's plan (no API). See `studio/README.md`.
 
 - **🗺️ Board**: Updates (waiting on Jeff + agent activity), live workflow, ChatGPT → Claude handoff inbox, final approvals, content calendar, Results (Tito Numero).
 - **💬 Tito AI**: chief-of-staff chat (`tito-main`). It plans and starts the team (up to 8 steps per message).
