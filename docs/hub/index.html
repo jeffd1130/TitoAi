@@ -251,7 +251,7 @@ document.addEventListener('click', async (e) => {
   catch { const pre = b.closest('details')?.querySelector('pre'); if (pre) { b.closest('details').open = true; const r = document.createRange(); r.selectNodeContents(pre); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = 'Selected'; } }
   setTimeout(() => { b.textContent = 'Copy'; }, 1500);
 });
-$('#stamp').textContent = 'Snapshot · ' + D.generated;
+$('#stamp').innerHTML = D.live ? 'Live · updated ' + esc(D.generated) : `Snapshot · ${esc(D.generated)} · <a href="${D.links.liveStudio}" target="_blank" rel="noopener" style="color:#F59E0B">Open live hub</a>`;
 $('#mob').href = D.links.mobile;
 board(); calendar(); lists(); route();
 addEventListener('hashchange', route);

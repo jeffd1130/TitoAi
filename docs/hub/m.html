@@ -229,7 +229,7 @@ document.addEventListener('change', (e) => {
   const k = e.target.dataset && e.target.dataset.tick; if (!k) return;
   const ticks = store.get('ticks-' + next.id) || {}; ticks[k] = e.target.checked; store.set('ticks-' + next.id, ticks);
 });
-$('#stamp').innerHTML = 'Snapshot<br>' + esc(D.generated);
+$('#stamp').innerHTML = D.live ? 'Live · updated<br>' + esc(D.generated) : `Snapshot · ${esc(D.generated)}<br><a href="${D.links.liveMobile}" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700">Open live hub</a>`;
 tasks(); hero(); lists(); setInterval(tickCount, 30000);
 </script>
 
