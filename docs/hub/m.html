@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Tito AI Mobile Hub</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<style>
+/* Layout: one phone column. "Tonight" card with countdown and copyable captions, then the line-up, then posted links. */
+:root {
+  --bg: #FBF8F1; --surface: #FFFFFF; --ink: #0A0F1E; --muted: #5B6275; --line: #E6E1D6;
+  --gold: #B97706; --gold-soft: #FDF0D3; --teal: #0D9488; --teal-soft: #DDF3F0; --coral: #C2462B; --coral-soft: #FBE4DD;
+  --hero: #0A0F1E; --hero-ink: #F7F3EA; --marigold: #F59E0B;
+  --display: "Bebas Neue", "Oswald", Impact, sans-serif; --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0A0F1E; --surface: #121A2E; --ink: #F2EEE4; --muted: #9AA3B8; --line: #22304D;
+  --gold: #FBBF24; --gold-soft: #3A2C0B; --teal: #2DD4BF; --teal-soft: #0E2F2D; --coral: #F08A70; --coral-soft: #3A1D16;
+  --hero: #05080F; --hero-ink: #F7F3EA; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0A0F1E; --surface: #121A2E; --ink: #F2EEE4; --muted: #9AA3B8; --line: #22304D;
+  --gold: #FBBF24; --gold-soft: #3A2C0B; --teal: #2DD4BF; --teal-soft: #0E2F2D; --coral: #F08A70; --coral-soft: #3A1D16;
+  --hero: #05080F; --hero-ink: #F7F3EA; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.col { max-width: 520px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 16px 40px; display: grid; gap: 22px; }
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.brand { font-family: var(--display); font-size: 30px; letter-spacing: .04em; line-height: 1; }
+.brand span { color: var(--marigold); }
+.stamp { font-size: 12px; color: var(--muted); text-align: right; }
+h2 { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: .03em; margin: 0 0 8px; }
+.label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.hero { background: var(--hero); color: var(--hero-ink); border-radius: 18px; padding: 18px; display: grid; gap: 14px; }
+.hero .label { color: var(--marigold); }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1.02; margin: 4px 0 0; text-wrap: balance; }
+.hero .when { font-size: 15px; opacity: .85; }
+.count { font-family: var(--display); font-size: 44px; line-height: 1; color: var(--marigold); font-variant-numeric: tabular-nums; }
+.count small { font-family: var(--body); font-size: 13px; color: var(--hero-ink); opacity: .7; display: block; margin-top: 4px; }
+.hero .media { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; }
+.hero img { width: 96px; max-width: 100%; border-radius: 10px; aspect-ratio: 9 / 16; object-fit: cover; }
+.hero img.slide { aspect-ratio: 4 / 5; }
+.hero a { color: var(--marigold); font-weight: 700; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tabs button { font: inherit; font-size: 14px; font-weight: 700; border: 1px solid rgba(247,243,234,.3); background: transparent; color: var(--hero-ink); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--marigold); border-color: var(--marigold); color: #0A0F1E; }
+.capbox { background: rgba(247,243,234,.08); border-radius: 12px; padding: 12px; display: grid; gap: 10px; }
+.capbox pre { white-space: pre-wrap; font-family: var(--body); font-size: 15px; margin: 0; overflow-wrap: anywhere; max-height: 260px; overflow: auto; }
+.big { font: inherit; font-weight: 700; font-size: 16px; border: 0; border-radius: 12px; padding: 12px; background: var(--marigold); color: #0A0F1E; cursor: pointer; width: 100%; }
+.check { display: grid; gap: 6px; font-size: 14px; }
+.check label { display: flex; gap: 10px; align-items: center; }
+.check input { width: 20px; height: 20px; accent-color: var(--marigold); }
+.list { display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px; }
+.row img, .row .ph { width: 52px; height: 52px; border-radius: 8px; object-fit: cover; background: var(--line); }
+.row b { display: block; font-size: 15px; line-height: 1.3; overflow-wrap: anywhere; }
+.row em { font-style: normal; font-size: 13px; color: var(--muted); }
+.row > div { min-width: 0; }
+.pill { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; white-space: nowrap; background: var(--line); color: var(--muted); }
+.pill.ok { background: var(--gold-soft); color: var(--gold); } .pill.no { background: var(--coral-soft); color: var(--coral); } .pill.done { background: var(--teal-soft); color: var(--teal); }
+.plinks { display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; }
+.plinks a, .quick a { color: var(--teal); font-weight: 700; }
+.quick { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.quick a { text-align: center; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 6px; font-size: 14px; }
+.note { font-size: 13px; color: var(--muted); }
+.ask { display: grid; gap: 10px; }
+.ask h2 { margin: 0; }
+.ask textarea { font: inherit; font-size: 16px; width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: var(--surface); color: var(--ink); resize: vertical; }
+.chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+.chips button { font: inherit; font-size: 13px; white-space: nowrap; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.send-ask { display: block; text-align: center; text-decoration: none; font: inherit; font-weight: 700; font-size: 16px; border: 0; border-radius: 12px; padding: 13px; background: #2AABEE; color: #FFFFFF; cursor: pointer; }
+.tg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tg a { display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 15px; border-radius: 12px; padding: 12px 8px; }
+.tg .send { background: #2AABEE; color: #FFFFFF; }
+.tg .chat { border: 1px solid rgba(247,243,234,.35); color: var(--hero-ink); }
+.tg-help { font-size: 13px; opacity: .8; margin: 0; }
+.row .sendmini { font-size: 12px; font-weight: 700; color: #1C8ED1; text-decoration: none; white-space: nowrap; }
+.sum { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+.sum div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 8px; text-align: center; }
+.sum b { display: block; font-family: var(--display); font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; }
+.sum span { font-size: 12px; color: var(--muted); }
+.sum .hot { border-color: var(--marigold); } .sum .hot b { color: var(--gold); }
+.tasks { display: grid; gap: 14px; }
+.grp .label { color: var(--muted); margin-bottom: 6px; }
+.task { display: grid; grid-template-columns: 24px 1fr; gap: 10px; padding: 9px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin-top: 6px; }
+.task b { display: block; font-size: 15px; line-height: 1.3; overflow-wrap: anywhere; }
+.task em { font-style: normal; font-size: 13px; color: var(--muted); }
+.task > div { min-width: 0; }
+.task.late { border-color: var(--coral); }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+
+<div class="col">
+  <div class="top"><div class="brand">TITO <span>AI</span></div><div class="stamp" id="stamp"></div></div>
+  <section class="ask" aria-labelledby="ask-h">
+    <h2 id="ask-h">Message Tito AI</h2>
+    <div class="chips" id="chips"></div>
+    <textarea id="ask-text" rows="3" placeholder="Hal. Gawin na natin ang plan para sa Part 4 (Wed Nov 11)."></textarea>
+    <a class="send-ask" id="ask-send" href="https://t.me/titoaiph_bot" target="_blank" rel="noopener">Send to Tito AI</a>
+    <p class="note" id="ask-note">Sends through your Telegram bot to the Tito AI chief of staff in the Studio. Your message is copied; paste it in the chat that opens and tap send. The reply comes back in Telegram.</p>
+  </section>
+  <section><h2>Tasks</h2><div class="sum" id="sum"></div><div class="tasks" id="tasks"></div></section>
+  <section class="hero" id="hero"></section>
+  <section><h2>Line-up</h2><div class="list" id="lineup"></div></section>
+  <section><h2>Posted</h2><div class="list" id="posted"></div></section>
+  <section class="quick" id="quick"></section>
+  <p class="note">Snapshot from Tito AI Studio. Approve and Mark posted in the Studio on your Mac; this page is for posting from your phone. The checklist ticks stay on this phone only.</p>
+</div>
+
+<script>
+const D = (() => {
+  // Live hub: read data.json now, then reload when the Studio publishes a newer one.
+  const x = new XMLHttpRequest(); x.open('GET', 'data.json?t=' + Date.now(), false); x.send();
+  const d = JSON.parse(x.responseText);
+  setInterval(() => fetch('data.json?t=' + Date.now()).then((r) => r.json()).then((n) => {
+    if (n.generated !== d.generated && !document.activeElement.matches('textarea')) location.reload();
+  }).catch(() => {}), 60000);
+  return d;
+})();
+const $ = (s) => document.querySelector(s);
+const esc = (t) => String(t ?? '').replace(/[&<>"]/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const PLAT = {tiktok: 'TikTok', instagram: 'Instagram', facebook: 'Facebook', seed: 'Seed comment'};
+function fmtSlot(s, short) {
+  if (!s) return 'No date yet';
+  const [d, t] = s.split('T'); const [y, m, dd] = d.split('-').map(Number); const [h, mi] = t.split(':').map(Number);
+  const wd = DAYS[new Date(Date.UTC(y, m - 1, dd)).getUTCDay()];
+  const time = `${(h % 12) || 12}:${String(mi).padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}`;
+  return short ? `${wd} ${MON[m - 1]} ${dd} · ${time}` : `${wd}, ${MON[m - 1]} ${dd} · ${time} PHT`;
+}
+const at = (s) => new Date(s + ':00+08:00').getTime();
+const store = { get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+
+const bySlot = (a, b) => (a.slot || '9').localeCompare(b.slot || '9');
+const open = D.posts.filter((p) => Object.keys(p.posted).length < 3 && p.slot).sort(bySlot);
+const next = open.find((p) => at(p.slot) > Date.now() - 6 * 3600e3) || open[0];
+let tab = next && Object.keys(next.captions)[0];
+
+function hero() {
+  if (!next) { $('#hero').innerHTML = '<div class="label">Up next</div><h1>Nothing scheduled</h1>'; return; }
+  const caps = next.captions, keys = Object.keys(caps);
+  const ticks = store.get('ticks-' + next.id) || {};
+  $('#hero').innerHTML = `
+    <div><div class="label">Up next</div><h1>${esc(next.title)}</h1><div class="when">📅 ${fmtSlot(next.slot)}</div></div>
+    <div class="count" id="count"></div>
+    <div class="media">${next.thumb ? `<img class="${next.type === 'video' ? '' : 'slide'}" src="${next.thumb}" alt="${esc(next.title)} cover">` : '<div></div>'}
+      <div>${next.approved ? '✅ Approved' : '⚠️ Not approved yet'}<br>${next.type === 'video' ? 'Video' : next.slides + '-slide carousel'}
+      ${next.mediaUrl ? `<br><a href="${esc(next.mediaUrl)}" target="_blank" rel="noopener">Open ${next.type === 'video' ? 'video' : 'slides'}</a>` : '<br><span style="opacity:.75">Media is in Telegram (📨 Send to Telegram)</span>'}</div></div>
+    <div class="tg"><a class="send" href="${D.links.bot}?start=send_${encodeURIComponent(next.id)}" target="_blank" rel="noopener">📨 Send to Telegram</a>
+      <a class="chat" href="${D.links.bot}" target="_blank" rel="noopener">Open Telegram chat</a></div>
+    <p class="tg-help">Tap Send, then tap <b>Start</b> in Telegram. The bot sends the ${next.type === 'video' ? 'video' : 'slides'} and each caption; long-press to save or copy. Needs Tito AI Studio running on your Mac.</p>
+    ${keys.length ? `<div class="tabs" role="group" aria-label="Caption">${keys.map((k) => `<button type="button" data-tab="${k}" aria-pressed="${k === tab}">${PLAT[k] || k}</button>`).join('')}</div>
+      <div class="capbox"><pre id="cap">${esc(caps[tab])}</pre><button class="big" type="button" id="copy">Copy ${PLAT[tab] || tab} caption</button></div>` : '<div>No captions yet.</div>'}
+    <div class="check">${[['tiktok', 'Posted on TikTok'], ['instagram', 'Posted on Instagram'], ['facebook', 'Posted on Facebook'], ['pin', 'Seeded + pinned first comment']]
+      .map(([k, l]) => `<label><input type="checkbox" id="tick-${k}" data-tick="${k}" ${ticks[k] || next.posted[k] !== undefined ? 'checked' : ''}> ${l}</label>`).join('')}</div>`;
+  tickCount();
+}
+function tickCount() {
+  const el = $('#count'); if (!el || !next) return;
+  const ms = at(next.slot) - Date.now(), a = Math.abs(ms);
+  const h = Math.floor(a / 3600e3), m = Math.floor((a % 3600e3) / 60e3), d = Math.floor(h / 24);
+  const txt = d >= 1 ? `${d}d ${h % 24}h` : `${h}h ${String(m).padStart(2, '0')}m`;
+  el.innerHTML = ms >= 0 ? `${txt}<small>until posting time</small>` : `${txt} ago<small>posting time has passed</small>`;
+}
+function row(p, right) {
+  return `<div class="row">${p.thumb ? `<img src="${p.thumb}" alt="">` : '<div class="ph"></div>'}<div><b>${esc(p.title)}</b><em>${fmtSlot(p.slot, true)}</em>${right.links || ''}</div>${right.pill}</div>`;
+}
+function lists() {
+  $('#lineup').innerHTML = open.filter((p) => p !== next).map((p) => row(p, {pill: p.approved ? '<span class="pill ok">Approved</span>' : '<span class="pill no">Approve</span>',
+    links: `<a class="sendmini" href="${D.links.bot}?start=send_${encodeURIComponent(p.id)}" target="_blank" rel="noopener">📨 Send to Telegram</a>`})).join('') || '<p class="note">Nothing else lined up.</p>';
+  const done = D.posts.filter((p) => Object.keys(p.posted).length).sort((a, b) => bySlot(b, a));
+  $('#posted').innerHTML = done.map((p) => row(p, {pill: `<span class="pill done">${Object.keys(p.posted).length}/3</span>`,
+    links: `<div class="plinks">${Object.entries(p.posted).filter(([, l]) => l).map(([k, l]) => `<a href="${esc(/^https?:/.test(l) ? l : 'https://' + l)}" target="_blank" rel="noopener">${PLAT[k]}</a>`).join('')}</div>`})).join('') || '<p class="note">Nothing posted yet.</p>';
+  $('#quick').innerHTML = `<a href="${D.links.tiktok}" target="_blank" rel="noopener">TikTok</a><a href="${D.links.instagram}" target="_blank" rel="noopener">Instagram</a><a href="${D.links.hub}" target="_blank" rel="noopener">Hub</a><a href="${D.links.studio}" target="_blank" rel="noopener">Studio</a>`;
+}
+function tasks() {
+  const T = D.tasks || {agents: [], toMake: [], handoffs: []};
+  const now = Date.now(), week = now + 7 * 864e5;
+  const post = open.filter((p) => p.approved && at(p.slot) <= week);
+  const approve = D.posts.filter((p) => !p.approved);
+  const make = T.toMake.map((t) => ({...t, when: `${t.day === 'MON' ? '8:00 PM' : '7:00 PM'}`}));
+  const t = (icon, title, sub, late) => `<div class="task ${late ? 'late' : ''}"><span>${icon}</span><div><b>${esc(title)}</b><em>${esc(sub)}</em></div></div>`;
+  const dLabel = (iso) => fmtSlot(iso + 'T00:00', true).split(' · ')[0];
+  const counts = [['To post', post.length], ['To approve', approve.length], ['To make', make.length], ['Agents busy', T.agents.length]];
+  $('#sum').innerHTML = counts.map(([l, n]) => `<div class="${n ? 'hot' : ''}"><b>${n}</b><span>${l}</span></div>`).join('');
+  const groups = [
+    ['Post it yourself', post.map((p) => t(at(p.slot) < now ? '⚠️' : '📅', p.title, (at(p.slot) < now ? 'Overdue · ' : '') + fmtSlot(p.slot), at(p.slot) < now))],
+    ['Approve in the Studio', approve.map((p) => t('📝', p.title, p.slot ? 'Post ' + fmtSlot(p.slot, true) : p.series))],
+    ['Still to make', make.map((m) => t('🎬', m.title, `Due ${dLabel(m.date)} · ${m.when} PHT · Flow → ChatGPT handoff → Claude finish`))],
+    ['ChatGPT clips waiting', T.handoffs.map((h) => t('🤝', h, 'Hand to Claude in the Studio'))],
+    ['Agents working', T.agents.map((a) => t(a.status === 'review' ? '🟡' : '🟢', `${a.who} · ${a.title}`, a.status))],
+  ].filter(([, rows]) => rows.length);
+  const recent = D.runs.filter((r) => ['done', 'approved'].includes(r.status)).slice(0, 3)
+    .map((r) => t('✅', `${r.who} · ${r.title}`, new Date(r.at).toLocaleString('en-US', {timeZone: 'Asia/Manila', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'})));
+  $('#tasks').innerHTML = groups.map(([l, rows]) => `<div class="grp"><div class="label">${l}</div>${rows.join('')}</div>`).join('') +
+    (T.agents.length ? '' : '<p class="note">No agent is working right now.</p>') +
+    (recent.length ? `<div class="grp"><div class="label">Recently done</div>${recent.join('')}</div>` : '');
+}
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-tab]');
+  if (t) { tab = t.dataset.tab; hero(); return; }
+  if (e.target.id === 'copy') {
+    const b = e.target;
+    try { await navigator.clipboard.writeText(next.captions[tab]); b.textContent = 'Copied ✓'; }
+    catch { const r = document.createRange(); r.selectNodeContents($('#cap')); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = 'Selected — tap Copy'; }
+    setTimeout(() => { b.textContent = `Copy ${PLAT[tab] || tab} caption`; }, 1800);
+  }
+});
+const CHIPS = ['Ano ang status ngayon?', 'Simulan ang plan para sa Part 4', 'Ano ang naghihintay sa approval ko?', '/send', '/posts'];
+$('#chips').innerHTML = CHIPS.map((c) => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('');
+try { $('#ask-text').value = localStorage.getItem('ask-draft') || ''; } catch {}
+$('#ask-text').addEventListener('input', (e) => { try { localStorage.setItem('ask-draft', e.target.value); } catch {} });
+document.addEventListener('click', (e) => {
+  const c = e.target.closest('[data-chip]'); if (c) { $('#ask-text').value = c.dataset.chip; $('#ask-text').focus(); }
+});
+$('#ask-send').addEventListener('click', (e) => {
+  const text = $('#ask-text').value.trim(), note = $('#ask-note');
+  if (!text) { e.preventDefault(); note.textContent = 'Type a message first.'; $('#ask-text').focus(); return; }
+  navigator.clipboard.writeText(text)
+    .then(() => { note.textContent = 'Copied. In Telegram, paste it and tap send.'; try { localStorage.removeItem('ask-draft'); } catch {} })
+    .catch(() => { $('#ask-text').select(); note.textContent = 'Copy your message, then paste it in Telegram and send.'; });
+});
+document.addEventListener('change', (e) => {
+  const k = e.target.dataset && e.target.dataset.tick; if (!k) return;
+  const ticks = store.get('ticks-' + next.id) || {}; ticks[k] = e.target.checked; store.set('ticks-' + next.id, ticks);
+});
+$('#stamp').innerHTML = 'Snapshot<br>' + esc(D.generated);
+tasks(); hero(); lists(); setInterval(tickCount, 30000);
+</script>
+
+</body>
+</html>
