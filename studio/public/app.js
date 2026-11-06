@@ -265,6 +265,7 @@ function renderPosts() {
           <div class="row wrap">
             ${st.approved ? `<button class="btn small" data-unapprove="${p.id}">Undo approval</button>` : `<button class="btn green" data-approve-post="${p.id}">✓ Approve</button>`}
             <button class="btn small" data-change="${p.id}">✍️ Ask Kuya Sulat for changes</button>
+            <button class="btn small" data-tg-post="${p.id}">📨 Send to Telegram</button>
             <a class="btn small" data-open="${esc(p.captions.file)}">Open captions file</a>
           </div>
           ${schedule}
@@ -290,6 +291,13 @@ document.addEventListener('click', async (e) => {
   }
   const g = e.target.closest('[data-goto-run]');
   if (g) { switchTab('board'); OPEN.add(g.dataset.gotoRun); renderBoard(); return; }
+  const tgp = e.target.closest('[data-tg-post]');
+  if (tgp) {
+    tgp.disabled = true; tgp.textContent = 'Sending…';
+    try { await api(`/api/posts/${tgp.dataset.tgPost}/telegram`, {}); toast('Sent to Telegram: media + captions'); } catch (err) { toast(err.message); }
+    tgp.disabled = false; tgp.textContent = '📨 Send to Telegram';
+    return;
+  }
   const t = e.target.closest('[data-copy],[data-post],[data-unpost],[data-approve-post],[data-unapprove],[data-change]');
   if (!t) return;
   const d = t.dataset;

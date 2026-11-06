@@ -572,6 +572,50 @@ function sendTelegram(text, cb) {
   req.end(body);
 }
 
+// Upload files to Telegram (sendVideo / sendPhoto / sendMediaGroup) with a hand-built multipart body.
+function telegramUpload(method, fields, files, cb) {
+  const token = telegramToken();
+  if (!token) return cb(new Error('No Telegram token (set TITO_TELEGRAM_TOKEN)'));
+  const boundary = '----tito' + Date.now().toString(16);
+  const parts = [];
+  for (const [k, v] of Object.entries({chat_id: '8325608814', ...fields})) parts.push(Buffer.from(`--${boundary}\r\nContent-Disposition: form-data; name="${k}"\r\n\r\n${v}\r\n`));
+  for (const f of files) {
+    parts.push(Buffer.from(`--${boundary}\r\nContent-Disposition: form-data; name="${f.field}"; filename="${path.basename(f.abs)}"\r\nContent-Type: application/octet-stream\r\n\r\n`));
+    parts.push(fs.readFileSync(f.abs), Buffer.from('\r\n'));
+  }
+  parts.push(Buffer.from(`--${boundary}--\r\n`));
+  const body = Buffer.concat(parts);
+  const req = require('https').request({hostname: 'api.telegram.org', path: `/bot${token}/${method}`, method: 'POST',
+    headers: {'Content-Type': `multipart/form-data; boundary=${boundary}`, 'Content-Length': body.length}}, (res) => {
+    let d = ''; res.on('data', (c) => (d += c)); res.on('end', () => { try { const j = JSON.parse(d); cb(j.ok ? null : new Error(j.description), j); } catch (e) { cb(e); } });
+  });
+  req.on('error', cb);
+  req.end(body);
+}
+const htmlEsc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// One post to Jeff's Telegram: the media first, then one message per platform caption so each is easy to copy on the phone.
+function sendPostToTelegram(post, cb) {
+  const caps = parseCaptions(post.captions.file, post.captions.section);
+  const media = (post.media || []).map(safePath).filter(Boolean);
+  if (!media.length) return cb(new Error('No media file found for this post'));
+  const head = `<b>${htmlEsc(post.title)}</b>\n${htmlEsc(post.series || '')}\nYou post it yourself.`;
+  const steps = [];
+  if (post.type === 'video') {
+    if (fs.statSync(media[0]).size > 50 * 1024 * 1024) return cb(new Error('Video is over Telegram\'s 50 MB bot limit'));
+    steps.push((next) => telegramUpload('sendVideo', {caption: head, parse_mode: 'HTML', supports_streaming: 'true'}, [{field: 'video', abs: media[0]}], next));
+  } else {
+    const slides = media.slice(0, 10);
+    const group = slides.map((_, i) => ({type: 'photo', media: `attach://s${i}`, ...(i === 0 ? {caption: head, parse_mode: 'HTML'} : {})}));
+    steps.push((next) => telegramUpload('sendMediaGroup', {media: JSON.stringify(group)}, slides.map((abs, i) => ({field: `s${i}`, abs})), next));
+  }
+  for (const [k, label] of [['tiktok', 'TikTok'], ['instagram', 'Instagram'], ['facebook', 'Facebook'], ['seed', 'Seed comment']]) {
+    if (caps[k]) steps.push((next) => sendTelegram(`<b>${label}</b>\n\n${htmlEsc(caps[k]).slice(0, 3900)}`, next));
+  }
+  let i = 0;
+  const run = (err) => (err ? cb(err) : i < steps.length ? steps[i++](run) : cb(null, steps.length));
+  run();
+}
+
 // ---------- HTTP ----------
 function safePath(rel) {
   if (!rel) return null;
@@ -741,6 +785,11 @@ Follow .claude/skills/schedule-post/SKILL.md. Schedule only; never post now or b
       }
       if (p === '/api/status') { Object.assign(status, b); save(); broadcast({type: 'status', status}); return json(res, 200, status); }
       if (p === '/api/framestrip') return frameStrip(b.path, (err, u) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {url: u})));
+      if ((m = p.match(/^\/api\/posts\/([\w-]+)\/telegram$/))) {
+        const post = listPosts().find((x) => x.id === m[1]);
+        if (!post) return json(res, 404, {error: 'No such post'});
+        return sendPostToTelegram(post, (err, n) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {ok: true, messages: n})));
+      }
       if (p === '/api/telegram') return sendTelegram(b.text || '', (err) => (err ? json(res, 400, {error: err.message}) : json(res, 200, {ok: true})));
       return json(res, 404, {error: 'unknown'});
     });

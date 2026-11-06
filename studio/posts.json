@@ -124,6 +124,20 @@
     }
   },
   {
+    "id": "origin-p3",
+    "title": "Origin story · Part 3 — Wala akong background.",
+    "series": "W46 · Monday 8:00 PM PHT · Origin recut Part 3",
+    "type": "video",
+    "media": [
+      "handoff/chatgpt/origin-part-3-matched-review.mp4"
+    ],
+    "cover": "docs/media/tito-ai-origin-recut/part-3-cover.jpg",
+    "captions": {
+      "file": "content/2026-W45/bonus-origin-recut/captions.md",
+      "section": "Part 3 — animated chibi version"
+    }
+  },
+  {
     "id": "w45-mon",
     "title": "W45 Mon · “HM po?” Hindi Presyo Lang ang Sagot",
     "series": "W45 · Monday 8:00 PM PHT",
