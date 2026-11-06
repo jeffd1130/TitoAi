@@ -346,10 +346,10 @@ async function loadPosts() { state.posts = await api('/api/posts'); renderPosts(
 
 // ---------- Tito AI main chat ----------
 const MAIN_CHIPS = [
-  'Gawin natin ang susunod na post. Video kung may Flow credits ako ngayon.',
-  'Walang video credits ngayon. Gawin nating carousel ang susunod na post.',
-  'Plan W46 (Mon, Wed, Fri) at simulan ang Monday.',
-  'Ano ang naghihintay sa approval ko?',
+  'Make the next post. Video if I have Flow credits today.',
+  'No video credits today. Make the next post a carousel.',
+  'Plan W46 (Mon, Wed, Fri) and start Monday.',
+  'What is waiting on my approval?',
 ];
 const currentMain = () => Object.values(state.runs).filter((r) => r.agent === 'tito-main').sort((a, b) => b.createdAt - a.createdAt)[0];
 let freshChat = false;
@@ -367,7 +367,7 @@ function renderMain() {
     if (e.kind === 'tool') return `<div class="note tool">🔍 ${md(e.text)}</div>`;
     return '';
   }).join('') + (main.status === 'running' ? '<div class="bubble tito typing">Tito AI is thinking…</div>' : '')
-    : `<div class="welcome"><div class="big">🎙️</div><b>Kumusta, Jeff!</b><p class="muted">Tell me what post to make. I'll plan it, then Tita Saliksik, Kuya Sulat, Ate Disenyo and Lola Suri get to work. If there are no video credits, I'll make a carousel instead.</p></div>`;
+    : `<div class="welcome"><div class="big">🎙️</div><b>Hi, Jeff!</b><p class="muted">Tell me what post to make. I'll plan it, then Tita Saliksik, Kuya Sulat, Ate Disenyo and Lola Suri get to work. If there are no video credits, I'll make a carousel instead.</p></div>`;
   thread.scrollTop = thread.scrollHeight;
   const busy = main && main.status === 'running';
   $('#mainSend').disabled = !!busy;

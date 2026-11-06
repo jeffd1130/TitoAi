@@ -14,6 +14,7 @@ Older production notes, audits and health checks (May–Nov 3, 2026) are in `rep
 
 ## Ground rules (current)
 
+- **Language (Nov 6):** Taglish is only for content (scripts, captions, slides, voiceover). Everything else is English: the Studio board, hub, chat replies, Telegram messages, docs and reports. Agent names stay as they are (Tita Saliksik, Kuya Sulat, Ate Disenyo, Kuya Kamera, Lola Suri).
 - **Claude Code owns all production tasks** (Nov 3): scripts, captions, carousels, videos, `docs/schedule.json`, review pages, these `.md` files. ChatGPT/Codex and Gemini may draft; Claude Code reviews and finishes.
 - **Jeff approves and posts everything himself.** Never post, schedule or boost. Calendar uploading (Kuya Iskedyul) was turned off Nov 5; the schedule is only a posting guide.
 - **Video order:** Google Flow first (Veo 3.1 Lite, 9:16, x1, "Return silent videos" ON, chibi as Ingredient; 50 free credits a day, 10 per 8s clip, often blocked about 10 PM–1 AM PHT). Gemini Videos only after Flow credits run out. Keep Jeff's original audio. Don't pay for HeyGen or other tools without his OK.
