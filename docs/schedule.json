@@ -943,9 +943,9 @@
           "day": "MON",
           "title": "Origin Recut Part 3",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 3 of 5",
-          "note": "Planned, not started. Locked plan (Jeff, Nov 3); follows Gemini/Flow plan in content/2026-W45/bonus-origin-recut/gemini-plan.md. Drop: Mon Nov 9, 8:00 PM PHT. Takes the slot the Buy 1 Take 1 carousel had. Jeff posts everything himself; nothing is scheduled or posted. Candidate matched review cut received Nov 6 (handoff/chatgpt/origin-part-3-matched-review.mp4). Claude Code frame-strip review done; full-motion check and Jeff approval pending. Hold behind Part 2: Part 2 must be approved and posted first. Jeff posts it himself; nothing scheduled. Jeff approved the Part 3 video and captions (Nov 6, 2026). Not posted or scheduled. Post after Part 2 is posted. File (local): handoff/chatgpt/origin-part-3-matched-review.mp4. Approved by Jeff in Tito AI Studio (Nov 6). He posts it himself Mon Nov 9, 8 PM PHT. User-reported posted by Jeff (Nov 6, 2026) ahead of the Nov 9 slot; platform(s), exact time and metrics not independently verified. Check 3-second retention at 48h against Part 1 (15.4% on Meta) and Part 2.",
+          "note": "Planned, not started. Locked plan (Jeff, Nov 3); follows Gemini/Flow plan in content/2026-W45/bonus-origin-recut/gemini-plan.md. Drop: Mon Nov 9, 8:00 PM PHT. Takes the slot the Buy 1 Take 1 carousel had. Jeff posts everything himself; nothing is scheduled or posted. Candidate matched review cut received Nov 6 (handoff/chatgpt/origin-part-3-matched-review.mp4). Claude Code frame-strip review done; full-motion check and Jeff approval pending. Hold behind Part 2: Part 2 must be approved and posted first. Jeff posts it himself; nothing scheduled. Jeff approved the Part 3 video and captions (Nov 6, 2026). Not posted or scheduled. Part 2 is now posted (user-reported, Nov 6), so Part 3 is clear to post. File (local): handoff/chatgpt/origin-part-3-matched-review.mp4. Approved by Jeff in Tito AI Studio (Nov 6). He posts it himself Mon Nov 9, 8 PM PHT.",
           "date": "Nov 9",
-          "status": "posted",
+          "status": "ready",
           "url": null,
           "boost": null
         },
