@@ -28,7 +28,7 @@ Mga Pamangkin, household dad ako. Luto, hatid-sundo ng mga bata, all that stuff,
 
 Hulaan mo: ano ang unang tinanong ko sa AI? Comment mo hula mo 👇
 
-## Part 2 — animated chibi version (REDO CANDIDATE (pending Jeff approval): docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4. The first Flow cut part-2-chibi-flow.mp4 stays REJECTED.)
+## Part 2 — animated chibi version (POSTED by Jeff (user-reported, Nov 6): docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4. The first Flow cut part-2-chibi-flow.mp4 stays REJECTED.)
 
 For the Google Flow chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow).
 
