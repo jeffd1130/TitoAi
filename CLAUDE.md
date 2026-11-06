@@ -1,499 +1,169 @@
 # Tito AI — Social Media Automation
 
-You are helping Jeff (Senior Marketing Analyst, Manila, UTC+8) run the weekly content production system for **Tito AI — AI sa Totoong Buhay**, an entertainment-led Filipino AI education and services brand created by Jeff de las Armas (@TitoAIPH). The channel uses humor, real experiments, approved client proof, and seminar stories to teach everyday Filipinos how to use AI — free, no jargon, in Taglish.
+You help Jeff (Senior Marketing Analyst, Manila, UTC+8) run weekly content for **Tito AI — AI sa Totoong Buhay** (@TitoAIPH): an entertainment-led Filipino AI education and services brand. It uses humor, real experiments, approved client proof and seminar stories to teach Filipinos to use AI, in Taglish.
 
-Your job is to make the **D-3 → D-0 workflow** fast, on-brand, and consistent. Target audience: "Mga Pamangkin" — everyday Filipinos: freelancers, guro/teachers, BPO workers, nanays/tatays, small business owners.
+**Market (Jeff, Nov 5, 2026): Class B and C first, with some Class A.**
+- C: BPO workers, guro, starting freelancers/VAs, sari-sari and small sellers.
+- B: office professionals, supervisors/managers, small-business owners with staff, OFW families.
+- A (some): business owners, executives, school/company decision-makers who could book a Tito AI training.
+- Each week include at least one B/A topic (time saved, team or business results). Keep visuals polished and Taglish natural (a bit more English is fine for B/A). Free tools first. Never talk down to C or show off to A.
 
-**Market (Jeff, Nov 5, 2026): Class B and C first, with some Class A.** C: BPO workers, guro, freelancers/VAs starting out, sari-sari and small sellers. B: office professionals, supervisors/managers, small-business owners with staff, OFW families. A (some): business owners, executives and school/company decision-makers who could book a Tito AI training. For B/A, lead with time saved, better work and business results; keep visuals polished and the Taglish natural (a bit more English is fine). Free tools stay first; never talk down to C or show off to A.
-
-
-## Task ownership (set Nov 3, 2026)
-
-**Claude Code is the final owner of all Tito AI production tasks**: scripts, captions, carousels, videos, `docs/schedule.json`, review pages, and these `.md` files. ChatGPT/Codex and Gemini may draft or generate assets, but Claude Code reviews and finishes that work and records its final state here. Jeff remains the approver. Nothing is posted, scheduled, or boosted without his OK.
-
-
-**Video generation order (Jeff, Nov 3, 2026):** For Tito AI chibi motion clips, use **Google Flow first** (flow.google.com, Veo 3.1 Lite, 9:16, x1, "Return silent videos" ON, chibi reference added as an Ingredient). The account gets 50 free Flow credits a day; Lite costs 10 per 8s clip or extend, credits don't roll over, and video may be blocked at peak (about 10 PM–1 AM PHT). Use **Gemini** (gemini.google.com Videos) only once the day's Flow credits run out. Follow ChatGPT's Part 1 Gemini prompt format: "Create an 8-second vertical 9:16 animated video using the attached Tito AI chibi as the exact character reference…", with the screen facing the viewer, the same clean-shaven chibi, real articulated movement, and "no new voice, dialogue, text, logos or music". Keep Jeff's original audio from the old video. Don't pay for HeyGen or other tools without Jeff's OK.
-
-
-**Tito AI Studio (Nov 3, 2026):** Local dashboard at `studio/` (start with `bash studio/start.sh`, then open http://localhost:4545). It runs the agents through Claude Code on Jeff's plan (no API) and streams their work live, with chat, approve, and next-step buttons. Agent names: 🔎 Tita Saliksik (researcher), ✍️ Kuya Sulat (scriptwriter), 🎨 Ate Disenyo (content creator), 🎬 Kuya Kamera (video render), 🧐 Lola Suri (QA), 📊 Tito Numero (analyst). Its home tab is **💬 Tito AI**, a main producer agent (`tito-main`) that chats with Jeff, plans the post, and starts the team one by one, continuing automatically as each agent finishes (up to 8 steps per message). When video isn't possible (no Flow/Gemini credits), it uses the **carousel fallback**: Ate Disenyo writes `drafts/carousel.json` (`studio/carousel-schema.md`) and the studio renders branded 1080×1350 slides with Remotion (`TitoCarousel`). There's also an **Approve & Post** tab (captions with Copy, Approve, Mark posted; phone-ready), a Video tab, and a Send to Telegram button that only sends when pressed. See `studio/README.md`. **Nov 5 update:** the home tab is now a Figma-style **🗺️ Board** with the chief-of-staff conversations (Tito AI), the live workflow, a content calendar from `docs/schedule.json`, a final-only approvals frame, and a **ChatGPT → Claude handoff** inbox: ChatGPT saves a generated video plus a same-name `.md` note in `handoff/chatgpt/`, and Claude Code (via Tito AI) reviews the frames and finishes it. Jeff approves only the final video and the finished post; research, scripts and other steps finish as Done and flow on. Tita Saliksik replies with a short task summary only.
+Older production notes, audits and health checks (May–Nov 3, 2026) are in `reports/history-2026.md`. Read it only when you need past detail.
 
 ---
 
-## The weekly schedule
+## Ground rules (current)
 
-| Day (PHT) | Slot | Format | Drop (PHT) | Skill |
-|-----------|------|--------|------------|-------|
-| Monday | `01-mon-ai-tip` | AI Tip Carousel (5 slides) | 8:00 PM | `produce-post` |
-| Wednesday | `02-wed-demo` | Demo Carousel (5 slides) | 7:00 PM | `produce-post` |
-| Friday | `03-fri-inspiration` | Story / Inspiration Reel (60–90s) | 7:00 PM | `produce-post` |
-
-All times are **PHT (UTC+8)**. Jeff is based in Manila (PHT, UTC+8) — his Mac runs on local PHT time, so no timezone conversion is needed between drop times and system/cron time.
+- **Claude Code owns all production tasks** (Nov 3): scripts, captions, carousels, videos, `docs/schedule.json`, review pages, these `.md` files. ChatGPT/Codex and Gemini may draft; Claude Code reviews and finishes.
+- **Jeff approves and posts everything himself.** Never post, schedule or boost. Calendar uploading (Kuya Iskedyul) was turned off Nov 5; the schedule is only a posting guide.
+- **Video order:** Google Flow first (Veo 3.1 Lite, 9:16, x1, "Return silent videos" ON, chibi as Ingredient; 50 free credits a day, 10 per 8s clip, often blocked about 10 PM–1 AM PHT). Gemini Videos only after Flow credits run out. Keep Jeff's original audio. Don't pay for HeyGen or other tools without his OK.
+- **Same chibi every shot** (clean-shaven, white tee, laptop fully in frame). Reject drifted clips.
+- **No fabrication.** Never invent quotes, metrics, comments or events. Label illustrations and fictional practice examples. No identifiable seminar attendees or client material without verified permission.
+- **Telegram only when asked** (or when Jeff presses a Studio button).
 
 ---
 
-## The workflow
+## Tito AI Studio
 
-| Day | Stage | Owner | Action |
-|-----|-------|-------|--------|
-| D-3 | Asset prep | Jeff | Gather S1 photo + S4 Claude screenshot for carousel; no recording needed |
-| D-2 | Script + Design | Jeff | Write script → save as `.md` + `.html` in `drafts/` → copy HTML to `docs/scripts/` → run `produce-week` or per-slot skill → Canva cover + caption generated |
-| D-1 | Approval | Tito AI | Review via **Canva edit link + script link sent by Telegram** — approve or request changes |
-| D-0 | Posting | Tito AI | Schedule in **Buffer** at the PHT drop time → publish |
+Local dashboard: `bash studio/start.sh`, then http://localhost:4545. It runs the agents through Claude Code on Jeff's plan (no API). See `studio/README.md`.
 
-After each production run, send the Canva edit URL + script link to chat ID `8325608814` via `@titoaiph_bot`. Use `parse_mode=HTML` always.
+- **🗺️ Board**: Updates (waiting on Jeff + agent activity), live workflow, ChatGPT → Claude handoff inbox, final approvals, content calendar, Results (Tito Numero).
+- **💬 Tito AI**: chief-of-staff chat (`tito-main`). It plans and starts the team (up to 8 steps per message).
+- **Agents**: 🔎 Tita Saliksik (research, short summary only), ✍️ Kuya Sulat (script + captions), 🎨 Ate Disenyo (carousel fallback), 🎬 Kuya Kamera (render), 🧐 Lola Suri (QA), 📊 Tito Numero (analyst).
+- **Approve & Post**: unposted posts in calendar order, with captions, Copy, Approve, Mark posted, a 📅 posting-time guide and 📨 Send to Telegram (media + one message per caption).
+- **Posted**: anything marked posted, newest first.
+- **ChatGPT handoff**: ChatGPT saves a video + same-name `.md` note in `handoff/chatgpt/`; Claude Code reviews the frames and finishes it. Jeff approves only the final video and post.
+- **Carousel fallback** (no video credits): Ate Disenyo writes `drafts/carousel.json` (`studio/carousel-schema.md`), rendered to 1080×1350 slides with Remotion (`TitoCarousel`).
 
-**Standing production direction (Nov 2, 2026):** Always work in `/Users/jeff/Documents/Claude/TItoAi/`. Use the approved Tito AI chibi avatar as a recognizable visual host in every new carousel or video, alongside the logo; vary its pose to fit the story, but keep it visible unless Jeff explicitly asks otherwise. When a scheduled slot has no raw assets, create an on-brand image or video draft in that week's `raw/` folder using approved Tito AI chibi/logo assets and, when useful, newly generated media; do not stop just because Jeff has not supplied footage. Label illustrations and fictional practice examples, never imply they are real client/seminar proof, and send the draft for Jeff's approval. Before each post, review the recent schedule, captions, and latest available engagement data to avoid repeats; choose one growth job and record a testable hook/format/CTA hypothesis. Compare views with saves, shares, comments, and follows after posting. Growth is a goal, not a guaranteed outcome. Do not publish or schedule on Jeff's behalf.
+---
+
+## Weekly schedule (PHT)
+
+| Day | Slot | Format | Post time |
+|-----|------|--------|-----------|
+| Monday | `01-mon-ai-tip` | AI tip carousel (5 slides) | 8:00 PM |
+| Wednesday | `02-wed-demo` | Demo carousel (5 slides) | 7:00 PM |
+| Friday | `03-fri-inspiration` | Story / reel (30–90s) | 7:00 PM |
+
+Jeff's Mac runs on PHT, so cron and post times need no conversion.
+
+**Current (Nov 6, 2026):**
+- W45 (Nov 2–8): Mon "HM po?" posted; origin recut Part 1 posted Wed Nov 4; Part 2 (`docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4`, approved) posts Fri Nov 6, 7 PM. Parts 3–5 wait until Jeff says go. Plan and captions: `content/2026-W45/bonus-origin-recut/` (`captions.md`, `gemini-plan.md`). Remotion source: `w44-friday-motion-sample/src/OriginChibiGemini.tsx`.
+- W46–W48: Mon/Wed/Fri drafts are in `content/2026-W46`–`W48` and in the Studio.
+- Post status lives in the Studio (`studio/data/posts-state.json`) and `docs/schedule.json`.
 
 ---
 
 ## GitHub Pages hub
 
-The channel hub lives at **`https://jeffd1130.github.io/TitoAi/`**
-
-- Source: `docs/` folder in `main` branch — GitHub Pages serves everything under `docs/`
-- **`docs/index.html`** — Content Hub: Current week highlighted (gold), Next week (teal), Upcoming, Completed archive section. Data-driven from `docs/schedule.json`.
-- **Scripts** — `docs/scripts/<week>-<slot>-script.html`. Copy template from any existing script file.
-
-**`docs/` directory structure:**
-```
-docs/
-  index.html          ← Content Hub (current/next/upcoming + archive links)
-  links.html          ← All Canva + GitHub Pages links
-  timeline.html       ← Full content timeline (rendered from schedule.json)
-  schedule.json       ← Single source of truth for timeline + hub
-  assets/             ← Logo files
-  scripts/            ← All production scripts (W##-slot-script.html)
-  slides/             ← Carousel PNGs (W##-mon/, W##-fri/ etc.)
-  archive/            ← Completed weeks W21–W25 (moved here when shipped)
-    index.html        ← Archive index page
-    W22-captions.html
-    W24-*.html
-    W25-*.html
-    niche-plan.html
-    fathers-day-greeting.html
-  renders/            ← Solo render HTML files (production artifacts, not published)
-```
-
-**Current/Next/Upcoming weeks (as of Nov 2, 2026):**
-| Role | Week | Dates |
-|------|------|-------|
-| Current | W45 | Nov 2–8 — Mon **“HM po?” Hindi Presyo Lang ang Sagot** has five illustrated 1080×1350 slides, PNGs, script, and platform captions as an approval draft; not confirmed posted. A separate five-part origin recut is in progress with the animated chibi: Part 1 is final as the Gemini-animated cut (`part-1-chibi-final.mp4`; the laptop-stills version `part-1-chibi-laptop.mp4` is the alternate) and Part 2 is being redone (the first Flow cut was rejected for style drift). Parts 3–5 come next via Flow (50 free credits a day), then Gemini. No release dates. Wed/Fri not yet planned. |
-| Next | W46 | Nov 9–15 — not yet planned. |
-| Completed | W44 | Oct 26–Nov 1 — Mon **Kalat ang Notes Mo?** and Wed **VA Handoff Checklist** have five-slide Canva carousels; Fri **Isang Skill, Isang Hakbang** has a voiced chibi short. All are approval assets; publication and current metrics remain unverified. |
-
-**Oct 19 Canva recovery and content pivot:** W42 Fri **Pati Pahinga, May Deadline?** is an editable five-page Canva design (`DAHYcb26WHk`); link and captions were sent to Jeff via Telegram. It remains unposted/unverified, and no voiceover or reel has been completed. W43 Mon's first boundary-setting draft was replaced at Jeff's request by **Gagawa Ka ng Post Para sa Turon?**. Keep teaching AI to regular Pinoys; add a practice-to-portfolio pathway for curious VAs, freelancers, and content creators without promising jobs or treating fictional samples as real client work. The new post quotes one observed Gemini failure and shows a human correction. See `content/strategy/2026-10-19-va-freelancer-content-pivot.md`. Do not boost without current organic engagement data.
-
-**Oct 20 small-business follower-plan correction:** Jeff confirmed the turon post is already live; `schedule.json` now records this as user-reported `posted`, without inventing platform, time, or metrics. Do not repeat the turon/product-caption challenge. Lead the next series with buyer questions turned into helpful AI-assisted posts, then show Jeff's human fact-checking using carefully reviewed seminar footage. Audience remains regular Pinoys, with small-business owners first; VA/freelance is a later application. See `content/strategy/2026-10-20-small-business-follower-plan.md`. No seminar attendee should be featured without appropriate permission; video metadata indicates Aug 22, not Oct 20.
-
-**Oct 20 chibi-host pilot:** Jeff wants an illustrated Tito AI character to stand in for him visually in new educational posts/videos. The wave, teach, and surprised transparent PNGs are in `docs/assets/avatars/`; a silent three-second vertical motion preview is in `docs/renders/tito-ai-chibi-motion-preview.mp4`. Use the chibi as an engaging presenter, but keep real tool output and accurate teaching at the center; do not present it as actual seminar or client footage. No talking/lip-synced video or finished post has been produced from it yet. See `brand/tito-ai-chibi-avatar.md`. Pilot brighter cream/marigold/coral/teal layouts with navy text in new work; leave archived artwork unchanged.
-
-**Oct 21 W43 Wed approval sample:** A bright five-slide small-business carousel uses the chibi host, Tito AI logo, and an exact Gemini Flash-Lite practice answer for a fictional print shop. Script, separate TikTok/IG/FB captions (five hashtags each), PNGs, and editable Canva design `DAHYmz_dwQQ` are ready; see `docs/W43-wed-print-captions.html`. Jeff requested a clean-shaven upper lip/chin, no hanging brown belt strap, the back of the tablet facing viewers, and a naturally fitted watch. All three poses now have transparent backgrounds; the slide logo variants also have no outer black rectangle. Slides, PNG bundle, silent motion preview, and Canva approval design were refreshed. Earlier Canva designs `DAHYhsMdmdQ`, `DAHYiw18B9I`, and `DAHYjW3w0Ag` are superseded. Jeff must approve before any native posting; no Buffer scheduling, publication, boost, or real customer outcome is claimed.
-
-**Oct 23 W43 Fri approval draft:** Friday's seminar-proof brief was changed to a chibi-led human-fact-check story because attendee permissions are unverified. The `Images/` folder contains 38 portrait MP4s and five photos; sampled clips include a solo Jeff frame (`...1814.mp4`) and clips with clearly identifiable attendees. Most video metadata indicates Aug 22; file names on four photos say Oct 20 and do not establish the event date. The new five-slide carousel quotes only the documented Oct 20 Gemini Flash-Lite fictional print-shop test, and the 28-second 1080×1920 MP4 is a silent slide cut, not a voiced Reel. Canva `DAHYzu5tuDc`, captions, script, preview, PNG bundle, and MP4 are linked from `docs/W43-fri-human-check-captions.html`. Do not use attendee footage without verified permission or present the practice case as client work. No Buffer/social action or boost.
-
-**Oct 23 W43 Fri correction and new draft:** Jeff subsequently reported that the human-fact-check piece above was already posted; platform, timing, and engagement are not independently verified. Do not duplicate it. A fresh Friday replacement/bonus is **Ayaw Mo sa Camera? Tatlong Shots, May Content Plan Ka Na**, a beginner small-business lesson on asking a free AI chat for a three-shot cellphone content plan. Its prompt is copy-ready but not tested; the shown shot list is human-written. At Jeff's request the deliverable is a five-slide carousel only, not a video. Bright chibi/logo slides, Canva `DAHYzgSoVrY`, a slide guide, and three five-hashtag captions are linked from `docs/W43-fri-no-face-captions.html`. Jeff approval and posting remain pending; no boost or social scheduling.
-
-**Oct 26 W44 Mon production:** Jeff asked to check the Claude folders for details and media files after the scheduled production run found no W44 raw folder. The project contains approved transparent chibi/logo assets, prior artwork, and seminar media; attendee permissions are unverified, so W44 Mon uses only the approved chibi/logo set, copied into the W44 raw folder. The original AI-draft-vs-human-edit brief was replaced because Jeff reported that lesson already posted. New post: **Kalat ang Notes Mo? Gawing Action List gamit AI**, a five-slide fictional bakery practice carousel with editable Canva `DAHZFR2N2Tk`, PNGs, script, and TikTok/IG/FB captions (five hashtags each) linked at `docs/W44-mon-messy-notes-captions.html`. The prompt is untested; a local Claude Code test failed due to expired OAuth, and slide 4 is explicitly human-written, not model output. The Sep 21 strategy memo relies on Sep 14 engagement measurements; no fresh organic baseline is available, so no boost is recommended. No Buffer/social action; Jeff approval and posting required.
-
-**Oct 29 W44 Fri voiced-media draft:** The former seminar/client-proof placeholder is now **Isang Skill, Isang Hakbang — AI para sa Personal Growth**, a 30-second 1080×1920 chibi-led video using a Jeff-only photo from `Images/`, transparent chibi/logo assets, and one full 29.231-second synthetic voice take (HeyGen catalog voice candidate, not a Jeff clone). The voice is a candidate, not an approved permanent identity; Jeff must listen for Taglish pronunciation and tone. No participant footage, seminar date, client outcome, or unverified metric is claimed. Final review MP4, cover, spoken script, and separate TikTok/IG/FB captions with exactly five hashtags each: `docs/W44-fri-first-skill-captions.html`. MP4 has leveled audio, no cuts to the take. No editable Canva design was created for this video. No Buffer/social scheduling, publication, or boost; approval required.
-
-**Oct 29 W44 Fri overlay revision:** Jeff explicitly requested text overlays and prompts for the voiced short, overriding the older video no-overlay default for this piece. The updated 30-second export uses a hook on the Jeff-only photo, a one-skill step, a copyable ChatGPT/Gemini prompt template, and a comment question. The full original voice take remains uncut. The updated MP4/cover use the `-with-prompts` filename and are linked from `docs/W44-fri-first-skill-captions.html`; a second follow-up prompt is on the review page. These are prompt templates, not tested AI output. The prior no-text export remains in `docs/media/` only as an older version. No posting or scheduling.
-
-**Oct 29 W44 Fri photo-removal revision:** Jeff then requested removal of his photo. The current export is avatar-only: illustrated navy/gold/teal opening, chibi host, Tito AI logo, the same hook/prompt/comment overlays, and the complete candidate voice take. Current MP4/cover use the `-avatar-only` filename and are linked from `docs/W44-fri-first-skill-captions.html`; older exports remain archival, not the current approval version. No social posting or scheduling.
-
-**Oct 29 W44 Fri Filipino-voice revision:** Jeff asked for a more Filipino accent and approved a retry after the first voice-engine mismatch. The same spoken script was generated once with HeyGen's Filipino-labeled “Kuya Chris Cruz” public voice using the required Orca engine (28.238s full take). The current avatar-only export is `docs/media/W44-fri-tito-ai-first-skill-filipino-voice.mp4`, linked from `docs/W44-fri-first-skill-captions.html`; the prior MP4 remains archival. The voice is not a Jeff clone and still needs his listening approval for natural Taglish delivery. No posting or scheduling.
-
-**Nov 3 origin-story recut:** Jeff supplied `/Users/jeff/Downloads/Tito AI 1.mp4` (2:48 old origin story) for a more entertaining repost. Five 25–30-second 1080×1920 approval clips now live in `docs/media/tito-ai-origin-recut/`, with original voice/burned-in subtitles, approved chibi, short hook labels and next-part cues. The review page is `docs/W45-origin-recut-review.html`; separate TikTok/IG/FB captions are in `content/2026-W45/bonus-origin-recut/captions.md`. The original old footage shows a Silicon Valley visit, not an employment or endorsement claim. Jeff must listen to all chapter boundaries and approve before any native upload; no release dates, Buffer scheduling, social publication, or boost are set. First test should be Part 1 only, then use actual completion and follow conversion to decide whether to release the rest.
-
-**Nov 3 origin recut, chibi version (owner: Claude Code):** Codex/ChatGPT started an animated version of the recut: a 30s Gemini chibi animation for Part 1 (`docs/media/tito-ai-origin-recut/part-1-chibi-gemini-final.mp4`, kept as-is). Claude Code reviewed it and produced the **final Part 1, `part-1-chibi-final.mp4`** (cover `part-1-chibi-cover.jpg`; on the review page). That version restores the narration subtitles (OCR'd from the original cuts and proofread, including "PAMANGKIN"), moves the hook and next-part text above the TikTok/Reels bottom UI, normalizes loudness to about -14 LUFS, and replaces two short Gemini glitches with clean hold-and-cut edits: the back of the tablet at about 20.7–21.3s, and the tablet vanishing at about 23.3–23.8s. Captions lift while the hook and next-part text are on screen. Jeff then asked for (1) a laptop on a table instead of the tablet, with the screen showing a pretend website, (2) the same chibi in every shot, and (3) correct laptop framing. New reference: `docs/assets/avatars/tito-ai-chibi-laptop-website.jpg` (clean-shaven, white tee, pretend "MY DESIGN STUDIO" site, no real brands). A Gemini Part 2 clip (`tito-ai-chibi-gemini-part-2-raw.mp4`) was **rejected** because the chibi drifted (stubble, collared shirt). The current Part 2, `part-2-chibi-laptop.mp4`, is built only from the laptop reference with camera moves, night lighting and blank chat bubbles. The laptop stays fully in frame throughout. Gemini video hit its daily limit (about 4–5 videos a day; resets Nov 4, 1:52 PM PHT). Next: Jeff will ping Claude Code after the reset to run `content/2026-W45/bonus-origin-recut/gemini-plan.md`, which regenerates Part 2 with real motion and then Parts 3–5, about one part per day. Remotion source: `w44-friday-motion-sample/src/OriginChibiGemini.tsx` (`OriginChibiGeminiP1`–`P5`), with captions in `originCaptions.ts`. Part 1 social captions for the chibi cut are in `captions.md`. Nothing is posted or scheduled.
-
-**Nov 3 Part 1 laptop alternate:** At Jeff's request a laptop version of Part 1 was made, `docs/media/tito-ai-origin-recut/part-1-chibi-laptop.mp4` (cover `part-1-chibi-laptop-cover.jpg`). **Jeff then chose to keep the Gemini-animated cut (`part-1-chibi-final.mp4`) as the final Part 1**; the laptop version is the alternate. It is built from three approved, matching stills generated in Gemini from the laptop reference: `docs/assets/avatars/tito-ai-chibi-laptop-kitchen.jpg` (household dad), `tito-ai-chibi-laptop-website.jpg` (side hustle, push-in to the site) and `tito-ai-chibi-laptop-cafe-sv.jpg` (Silicon Valley café, no logos). It uses camera moves rather than character animation. Parts 2–5 still use the laptop chibi (see `gemini-plan.md`).
-
-**Nov 3 Part 2 made in Google Flow:** `docs/media/tito-ai-origin-recut/part-2-chibi-flow.mp4` was the first Part 2 but is **REJECTED (Nov 3 evening)**: it drifted to a 3D-toy style with stubble and puppet-like elbows, unlike Part 1. A style-matched redo (Flow Frames mode from a Part 1 frame) is planned for Nov 4; see content/2026-W45/bonus-origin-recut/gemini-plan.md. Do not post the rejected cut. It used 40 of the day's 50 free Flow credits (Veo 3.1 Lite, 9:16, x1, silent videos ON), the same chibi reference and ChatGPT prompt format as Part 1, and Jeff's original Part 2 audio. The first attempt failed at Flow's audio step and was refunded; turning on "Return silent videos" fixed it. Flow project: "Nov 03 - 15:47", scene "Untitled Scene 11-03 07:57:35". Plan (Jeff, Nov 3): post Part 1 on Wed Nov 4; the five origin-recut videos are the next posts; exact count and dates to be confirmed by Jeff.
-
-**Nov 3 W34 Fri bonus video draft (paused):** At Jeff's request, a 65s 9:16 video version of the already-posted W34 Fri bonus carousel ("Ang Tanong na Palagi Kong Tinatanong sa Claude") was drafted in Remotion (`w44-friday-motion-sample/src/W34FriBonus.tsx`, render `out/w34/W34-fri-bonus-silent.mp4`). It reuses the 5 carousel images, the chibi, the logo, verbatim script captions, and the Comment YES CTA. Jeff stopped the work mid-way; it has no voiceover and no final QA.
-
-**Key live URLs:**
-| Page | URL |
-|------|-----|
-| Content Hub | `https://jeffd1130.github.io/TitoAi/` |
-| All Links | `https://jeffd1130.github.io/TitoAi/links.html` |
-| Timeline | `https://jeffd1130.github.io/TitoAi/timeline.html` |
-| Archive | `https://jeffd1130.github.io/TitoAi/archive/` |
-| Niche Plan | `https://jeffd1130.github.io/TitoAi/archive/niche-plan.html` |
+`https://jeffd1130.github.io/TitoAi/` (repo `jeffd1130/TitoAi`, branch `main`, serves `docs/`).
+- `docs/index.html` hub, `docs/timeline.html` (renders from `docs/schedule.json`; don't edit the HTML), `docs/links.html`, `docs/archive/`.
+- `docs/scripts/`, `docs/slides/`, `docs/downloads/`, `docs/media/`, `docs/renders/` hold current work. Files from before Aug 6, 2026 were cleared Nov 6, so old archive pages may show missing images.
+- **`docs/schedule.json` is the source of truth for the timeline.** When a post's status, title, date, link or boost changes, update it (schema in `docs/timeline-README.md`), set `"updated"` to today, commit and push.
 
 ---
 
 ## Content pillars
 
-**Recalibrated mix (Sep 22, 2026; Oct 20 host update):** 50% entertainment-led · 30% educational · 20% proof/services. The new human chibi Tito AI may lead educational posts/videos visually at Jeff's request; real proof, voice, and factual accountability still come from Jeff and verified material. Do not present the illustrated host as a real seminar attendee or client. Full strategy: `content/strategy/tito-ai-rebrand-2026.md`; chibi pilot: `brand/tito-ai-chibi-avatar.md`.
+Mix (Sep 22, 2026): 50% entertainment-led · 30% educational · 20% proof/services. Strategy: `content/strategy/tito-ai-rebrand-2026.md`, `content/strategy/niche-and-growth-plan.md`; chibi host: `brand/tito-ai-chibi-avatar.md`.
 
-**AI Tip (Mondays)**
-- 5-slide dark navy carousel
-- One tool, one use case, one prompt formula
-- S1: hook (photo background) · S2: problem · S3: prompt · S4: Claude output (screenshot) · S5: CTA
-- Hook template: "Alam mo ba na pwede mong [result] in less than [time]?"
+- **AI Tip (Mon):** one tool, one use case, one prompt. S1 hook · S2 problem · S3 prompt · S4 output · S5 CTA.
+- **Demo (Wed):** named persona (VA, guro, freelancer, BPO, manager, business owner), step by step, real prompt + real output.
+- **Story (Fri):** origin, struggle, win, apply-it-yourself; warm Tito-to-Pamangkin; real Filipino life.
 
-**Demo / Tutorial (Wednesdays)**
-- 5-slide dark navy carousel · named persona (VA, Guro, Freelancer, BPO)
-- Step-by-step demo: S1 hook → S2 setup → S3 prompt → S4 output → S5 CTA
-- Always free tools — never paid
-- Real prompt + real Claude output in S3/S4
-
-**Story / Inspiration (Fridays)**
-- Story-format: origin, struggle, win, apply-it-yourself
-- Emotional, warm — Tito talking to Pamangkin
-- Connects AI to real Filipino life (sari-sari, luto-laba-trabaho, paaralan, negosyo)
+Every new carousel or video uses the approved chibi host and the logo (pose fits the story) unless Jeff says otherwise. If a slot has no raw assets, make an on-brand draft from approved chibi/logo assets in that week's `raw/` folder rather than stopping. Before each post, check recent posts and the latest metrics to avoid repeats.
 
 ---
 
 ## Voice
 
-**The Tito AI Voice Formula:**
-- Language: Taglish — natural mix, never forced
-- Tone: warm older kuya/tito — never lecturing, never selling
-- Length: 60–90 sec max for TikTok/Reels. Never go over.
-- Proof: always reference real output or real tools
-- CTA: always end with follow + "Tito AI" name
-- Energy: calm confidence — hindi parang nagbebenta
-
-**Standard opener (every video):** "Kumusta, mga Pamangkin!"
-**Standard closer (every video):** "Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat."
-
-**Caption style:**
-- Short, punchy, Taglish
-- Lead with the hook or the win
-- Max 3–5 sentences in the caption body
-- One CTA max: follow, comment, or DM
-- No emoji walls — max 3 per caption
-
-**Hashtags:** 8–15 per post, always include `#TitoAIPH #MgaPamangkin #AIParaSaAtin`
+- Taglish, natural; warm older tito/kuya, never lecturing or selling; calm confidence.
+- Proof: real tool output only. Free tools (Claude, Gemini, ChatGPT free tier).
+- Hook lands in second 1 (don't open with "Kumusta"). Then "Kumusta, mga Pamangkin!"; closer "Ingat lagi, mga Pamangkin. Tito AI — AI Para Sa Ating Lahat."
+- Reels 60–90s max; ask before going longer. Text overlays only when they help (hook, prompt, next-part cue).
+- Captions: short, lead with the hook or win, 3–5 sentences, one CTA, max 3 emoji. Separate TikTok / Instagram / Facebook captions, **five hashtags each**, always including `#TitoAIPH #MgaPamangkin #AIParaSaAtin`.
+- End videos with a YES/NO or choice question. Every post gets one measurable job (follow, save, comment, share or inquiry) and a testable hook/format/CTA hypothesis.
 
 ---
 
 ## Brand system
 
-Visual identity lives in Canva — see `brand/README.md`.
-
-**Theme signature:**
-- **Dark navy background** dominant (`#0A0F1E`)
-- **Gold (#F59E0B) accent** — primary highlight color
-- **Teal (#0D9488)** — secondary accent
-- **Bebas Neue** display font (bold headlines)
-- **DM Sans** sans-serif for body text, captions, and labels
-- Logo: `docs/assets/logo-horizontal.png` (horizontal) and `docs/assets/logo-icon.png` (icon)
-- Never cartoonish, never overly tech-looking — warm, human, approachable
-
-**Content cover graphic layout (4:5 or 9:16 thumbnail):**
-- Dark navy background
-- Bold Bebas Neue headline in white, top portion
-- Hero image or video thumbnail in a framed window (center)
-- Gold accent line or blob decoration
-- "TITO AI" wordmark or logo lockup at bottom
-- Clean, editorial — never crowded
+Details in `brand/README.md`. Navy `#0A0F1E`, gold `#F59E0B`, teal `#0D9488`; Bebas Neue headlines, DM Sans body. New work uses the brighter cream/marigold/coral/teal pilot with navy text plus the chibi. Logos: `docs/assets/logo-horizontal.png`, `docs/assets/logo-icon.png`; chibi poses in `docs/assets/avatars/`. Warm, human, editorial; never crowded.
 
 ---
 
-## File conventions
+## Files
 
 ```
-content/
-  2026-W22/
-    01-mon-ai-tip/
-      raw/          ← carousel assets: S1 photo + S4 Claude screenshot (D-3)
-      drafts/       ← D-2 exports here (cover graphic + draft URL)
-      approved/     ← D-1 moves approved here
-      brief.md      ← optional context note
-    02-wed-demo/
-    03-fri-inspiration/
+content/<YYYY-W##>/<slot>/   raw/ · drafts/ (script.md, captions.md, slides/) · approved/ · brief.md
+content/_template/           copy for a new week
+content/strategy/            strategy memos
+studio/                      Tito AI Studio (server.js, public/, posts.json, data/)
+handoff/chatgpt/             ChatGPT video handoffs
+w44-friday-motion-sample/    Remotion project (src/; out/ is scratch)
+Videos/, Images/             raw footage and photos (keep)
+reports/                     weekly reports, metrics in reports/data/, history-2026.md
 ```
 
-Week folders: ISO week (`YYYY-W##`). Post slot folders numbered in posting order. Use `content/_template/` as the structure to copy when starting a new week.
-
----
-
-## Media source
-
-Primary media source: **`/Users/jeff/Documents/Claude/TItoAi/Videos/`**
-
-- `Videos/Intro/Intro_raw/` — 25 MP4 clips for the origin story (all uploaded to Canva library)
-- Organized by content type going forward: `Videos/<content-type>/`
-- Prefer MP4 over MOV. Target files under 100 MB for Canva compatibility.
-- For cover graphics: use `.jpg` still frames extracted from the video
-- Local files have no public URL — use catbox.moe to get a public URL before uploading to Canva: `curl -F "reqtype=fileupload" -F "fileToUpload=@file.mp4" https://catbox.moe/user/api.php`
+Prefer MP4 under 100 MB. Cover images are `.jpg` frames from the video.
 
 ---
 
 ## Tools
 
-- **Canva MCP** — required. Generate cover graphics, upload media assets, export previews. If not connected, stop and tell Jeff.
-- **GitHub** — repo `jeffd1130/TitoAi` (main branch). Auto-push hook in `.claude/settings.json` fires on Write/Edit when Claude Code is opened from this project directory.
-- **GitHub Pages** — approval site at `https://jeffd1130.github.io/TitoAi/`. Source: main branch `/docs` folder.
-- **Buffer** — Social scheduling for IG + FB + TikTok. Workspace: `jeffd321@live.com` at buffer.com. @TitoAIPH connected on Instagram, Facebook Page, and TikTok. Use for scheduling posts after approval.
-- **Telegram bot** — `@titoaiph_bot` (bot ID: 8960239761). Token: `8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg`. Jeff's chat ID: `8325608814` (@JeffD331). Use `parse_mode=HTML` always (never Markdown — URL underscores break). Send approval notifications to chat ID `8325608814`.
+- **Canva MCP**: covers and carousels. Import/create/merge tools only work in claude.ai web, not the CLI. Canva can't set solid fills, change fonts or export PSD; flag those as manual steps.
+- **GitHub**: auto-push hook in `.claude/settings.json` on Write/Edit from this directory. Check for files over 50 MB and never commit logs.
+- **Chrome profiles**: the Tito AI profile has TikTok Studio and Meta Business Suite "Tito Ai PH" (asset_id 1108395249032434, business_id 1496630368854152). Verify the account name each time; other profiles are Cobrinha and Golden Gate.
+- **Telegram bot** `@titoaiph_bot`, Jeff's chat ID `8325608814`. The token is in `.telegram-token` (gitignored; the Studio reads it). Always `parse_mode=HTML`. Send with Python urllib/curl or the Studio, never the Telegram MCP tool (that is the Cobrinha bot).
 
-## Carousel slide production (HTML render → Canva)
+**Carousel via Canva (claude.ai web):** one 1080×1350 HTML file per slide in `docs/renders/`, push and wait for Pages, `import-design-from-url` each slide, `create_new_design` from S1, then `modify_existing_design` once per extra slide (one operation per call). Record the design ID and edit URL in `schedule.json`.
 
-> ⚠️ **CLI limitation:** Canva import/create/merge tools (`import-design-from-url`, `create_new_design`, `modify_existing_design`) are NOT available in Claude Code CLI. They only work in **claude.ai web**. Step 3 below must be done there. Steps 1–2 can run from CLI as normal.
-
-Current pipeline: solo HTML files → GitHub Pages → Canva import → assembled carousel.
-
-**Step 1 — Build solo render HTML files**
-- One file per slide, saved to repo: `docs/renders/w##-xxx-s#.html`
-- Also build a full preview: `docs/renders/w##-xxx-slides.html`
-- Each solo file: `body{width:1080px;height:1350px;overflow:hidden}` — single `.slide` div fills the body, no stack
-- Design spec: `#0A0F1E` bg · gold `#F59E0B` · teal `#0D9488` · Bebas Neue headlines (118px) · DM Sans body
-- Footer: logo at `https://jeffd1130.github.io/TitoAi/assets/logo-horizontal.png` (height:68px) + 5 pip dots (active pip = gold matching slide number)
-- Photo zones (S1 hook bg, S4 screenshot): dashed gold border placeholder — user replaces in Canva
-
-**Step 2 — Commit + push, poll for GitHub Pages deploy**
-```bash
-git add docs/renders/ && git commit -m "add W## renders" && git push
-until curl -sf https://jeffd1130.github.io/TitoAi/renders/w##-xxx-s1.html | grep -q '0A0F1E'; do sleep 5; done
-```
-
-**Step 3 — Import into Canva**
-- `import-design-from-url` for each slide's GitHub Pages URL (NOT raw PNG or local file)
-- Each import creates a single-page Canva design — note IDs for S1–S5
-- `create_new_design` using S1 (design_type: `social_media`) → base carousel design
-- 4× `modify_existing_design` to append S2 → S3 → S4 → S5 (**one operation per API call**)
-- The final `modify_existing_design` response contains the edit URL
-
-**Step 4 — Update schedule.json + send Telegram**
-- Add Canva design ID and edit URL to the post's `note` field in `docs/schedule.json`
-- Send edit URL + GitHub Pages preview link to Telegram chat `8325608814` via Python urllib, `parse_mode=HTML`
-- **Always send immediately** after every carousel pipeline — do not wait to be asked
-
-**Step 5 — User completes in Canva**
-- Open the edit URL → replace S1 background photo + S4 screenshot zone with real images
-- Buffer schedule at the PHT drop time
-
-**Canva carousel design IDs:**
-| Week | Design ID | Notes |
-|------|-----------|-------|
-| W26 Mon | `DAHNQUaAqEQ` | "Ang Sabi Nila" · 5 slides · Updated Jun 22 |
-| W26 Wed | `DAHNc6_o6mg` | "Gemini para sa Guro" · 5 slides · Jun 24 |
-| W26 Fri | `DAHNoxGHZaQ` | "Nagbabago. Kaya Mo Pa Ba?" · 5 slides · edit: `https://www.canva.com/d/JzWEuWM_q3ybfdc` |
-| W27 Fri | `DAHNpfOSrz8` | "Ang Taong Nagsimula Kahapon" · 5 slides · edit: `https://www.canva.com/d/NQZGhE40QTzJKTn` |
-| W28 Wed | `DAHO3k_NSmo` | "Gemini — Libre sa Gmail Mo" · 5 slides · edit: `https://www.canva.com/d/uWe0RDgpBkdRRvk` |
-| W29 Mon | `DAHPQnSy4aQ` | "Email Drafting — Hayaan ang AI" · 5 slides · edit: `https://www.canva.com/d/MSAgpCJrYKHgUNo` |
-| W29 Wed | `DAHPbFUIlGo` | "Resume mo? Claude ang Gagawa — VA Demo" · 5 slides · edit: `https://www.canva.com/d/NF_8BtbZrObCg78` · all slides re-rendered with logo · no Maria |
-| W29 Fri | `DAHPvQsLPFo` | "Ang Restaurant sa Clark" · Story S1E2 · 5 slides · edit: `https://www.canva.com/d/30wpLqyopzazHLs` |
-| W30 Mon | `DAHP4nHcYXk` | "Tanungin ang AI — Mas Mabilis Pa sa Google" · 5 slides · S5 follow CTA updated · edit: `https://www.canva.com/d/13YetQMLiwYpfKS` |
-| W31 Mon | `DAHQkNgsdss` | "Isang Prompt. Sampung Email." · VA persona · 5 slides · edit: `https://www.canva.com/d/GDxs5Mk_1pvE6AF` |
-| W31 Wed | `DAHQkBdVE5E` | "Proposal sa Kliyente, Claude ang Gagawa" · Freelancer persona · 5 slides · edit: `https://www.canva.com/d/ZtQ24Mkd0S1e9O6` |
+**Video via Canva:** `copy-design` per scene, swap the clip in an editing transaction, then `merge-designs` one operation per call. Clip timing is set by hand in Canva.
 
 ---
 
-## Video production
+## Analytics
 
-**Multi-scene video assembly process (Canva MCP):**
-1. Create or identify a base 1-page design with logo placed
-2. `copy-design` once per scene — copies share the same element IDs as the source
-3. `start-editing-transaction` → `perform-editing-operations` (`update_fill`) → `commit-editing-transaction` on each copy to swap the video clip
-4. `merge-designs` to combine into one multi-page design — **one operation per call only** (API limitation); append scenes sequentially using `modify_existing_design`
-5. Send final edit URL via Telegram
+Tito Numero (`tito-analyst`) reads `reports/data/*-metrics.json` and the latest `reports/*-weekly-checkbalance.md`; results show on the board. Sources: Meta Business Suite (Tito Ai PH; IG+FB are combined for cross-posts) and TikTok Studio in the Tito AI Chrome profile. Ask for a fresh pull if data is over 7 days old.
 
-**Canva limitations:**
-- `merge-designs` supports only 1 operation per API call — loop it for multiple scenes
-- No `add_page` operation in `perform-editing-operations` — must use `merge-designs` to add pages
-- Video clip timing/duration must be set manually in Canva UI after assembly
-- No rename/title operation available via MCP — rename manually in Canva UI if needed
-
-## Intro video assets (Origin Story — Video 1)
-
-**Finished export:** `Finished/Tito Ai Intro.mp4` (255MB · 6-scene · 1080×1920 · ready to post)
-**Post design (approval draft):** `DAHKj9hQPYw` — edit: `https://www.canva.com/d/ldOIk0NrlQiKFWq`
-**Drop:** Friday May 29, 2026 · 7:00 PM PHT · **Status: Draft — pending Jeff approval**
-**Captions:** `content/2026-W22/03-fri-inspiration/drafts/captions.md` · W22 approval page: `https://jeffd1130.github.io/TitoAi/W22-captions.html`
-
-**Merged 6-scene assembly:** `DAHKkLR22UY` — edit: `https://www.canva.com/d/RE4msPrzxaRZycB`
-**Base design (Cisco/SV shot):** `DAHKkEMsz4Q`
-
-**Canva clip asset IDs (all 1080×1920 portrait clips — best for TikTok):**
-| Asset ID | File | Duration |
-|----------|------|----------|
-| VAHKkEhGlWg | 20260523_154923 | 22s |
-| VAHKkJsIpeQ | 20260523_155118 | 27s |
-| VAHKkDoPRn8 | 20260523_160038 | 6s (Cisco building) |
-| VAHKkEQX24I | 20260523_160003 | 27s |
-| VAHKkDL0DPM | 20260523_160309 | 44s |
-| VAHKkL8wtNw | 20260523_160430 | 42s |
-| VAHKkCoOz4U | 20260523_160843 | 34s |
-| VAHKkIdIItE | 20260523_160953 | 13s |
-| VAHKkCuHXAM | 20260523_161216 | 62s |
-| VAHKkCKBcb0 | 20260523_161444 | 18s |
-| VAHKkDKjLBM | 20260523_183134 | 20s |
-| VAHKkPX4kwE | 20260523_183236 | 32s |
-| VAHKkLX9OtI | 20260523_183311 | 27s |
-
-Full 25-clip asset map (including 720×1280 and landscape) in `content/2026-W21/03-fri-inspiration/drafts/draft.md`.
+Standing insights (evidence in `reports/history-2026.md`):
+- Proof-first, named-persona, step-by-step free-tool demos beat prompt recitation.
+- TikTok allows 3 pins: 2 evergreen (Clark story, VA resume) + 1 rotating slot for the best recent post. Never duplicate-post.
+- Boosted story reels converted followers best (Jul 2026). Boost only with Jeff's OK, after 12–24h of organic evidence.
+- Fix the first 2 seconds: Origin Part 1 averaged 2s play time on Meta.
+- Reply to comments in the first hour; Jeff seeds the first comment within 5 minutes.
 
 ---
 
-## June–July 2026 Content Calendar
+## Automation
 
-**Arc theme (W28+):** Real Stories · AI from Jeff's actual life and clients
+`automation/` scripts run from Mac crontab (`bash automation/setup-cron.sh`; log `/tmp/titoai-cron.log`):
 
-| Week | Dates | Mon Tip (8 PM PHT) | Wed Demo (7 PM PHT) | Fri Story (7 PM PHT) |
-|------|-------|--------------------|---------------------|----------------------|
-| W25 | Jun 15–21 | 3 libreng AI tools | Resume gamit AI | **Father's Day — Tito AI Tries: Php 2,000** (Captions ✓) |
-| W26 ⭐ | Jun 22–28 | Ang Sabi Nila: Pang-Matalino Lang Iyan | Gemini para sa Guro | 1 Buwan Kasama Tito AI — Ang Resulta |
-| W27 ⭐ | Jun 29–Jul 5 | July na! Dalawang Feature (Claude Projects + Gemini Deep Research) ✅ | **Claude Projects — I-Setup Natin ang Iyong Trabaho Space** ✅ posted Jul 1 | Ang Taong Nagsimula Kahapon — May Kalamangan Na · drops Jul 3 7 PM ✅ ready |
-| W28 | Jul 6–12 | Paano Makipag-usap sa AI nang Mas Epektibo (draft) | **Gemini sa Gmail — Libre sa Gmail Mo** · 60–75s · script + captions ready ⭐ boost | **Story S1E1** — Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. · script + captions ready · drops Jul 11 7 PM |
-| W29 | Jul 13–19 | Email Drafting — Hayaan ang AI ✅ posted Jul 14 | Resume at Cover Letter — Claude ang Gagawa · VA · carousel fixed · ✅ posted Jul 16 | **Story S1E2** — Ang Restaurant sa Clark at ang Social Media na Ginawa Namin · script + captions ready · drops Jul 18 7 PM |
-| W30 | Jul 20–26 | Tanungin ang AI — Mas Mabilis Pa sa Google ✅ posted Jul 22 | Alinman Ka Man — Hayaan ang Claude ✅ posted Jul 23 | **Story S1E3** — Tatay. Analyst. Trainer. Sa Iisang Araw. ✅ posted Jul 24 |
-| W31 | Jul 27–Aug 2 | Isang Prompt. Sampung Email. — VA Inbox Carousel ✅ posted Jul 28 (260 views) | Proposal sa Kliyente, Claude ang Gagawa — Freelancer Carousel ✅ posted Jul 30 (213 views) | **Story S1E4** — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila (Season 1 finale) ✅ posted Aug 1 (169 views) · boost placement unconfirmed |
-| W32 | Aug 3–9 | Nasa Data World Ka. May Side Hustle Nang Naghihintay. — Data Analyst · DAHRNqXlTbc ✅ posted Aug 3 | 30 Bata. 30 Reports. 3 Minuto kay Claude. — Guro · DAHRYiEjngw ✅ posted Aug 5 | S2E1 — Iba't Ibang Kliyente. Iisang AI. Kaya ng Lahat. ✅ posted Aug 7 |
-| W33 | Aug 10–16 | BPO ka? Claude ang Bagong Teammate Mo. — BPO · DAHR158OONs · ✅ posted (335 views Aug 13) | Negosyante ka? Claude ang Susulat ng Posts Mo. · DAHR5lxJ_lY · ✅ posted late Aug 13 (265 views) | S2E2 — Ang Unang Araw na Nagturo Ako ng AI sa Ibang Tao · script + captions ready · drops Aug 14 7 PM PHT |
-| W34 | Aug 17–23 | Tatlong Revision. Isang Malinaw na Reply. — Freelancer · proof-first carousel | May Parent Meeting Bukas? Gawin Muna Ito. — Guro · screen-record demo | Ano ang Nagbago Pagkatapos ng Unang AI Class? — real-footage proof story |
-
-## Friday Story Series — Season 1: "Ang Buhay na Pinabilis ng AI"
-
-Jeff's real stories used as Friday inspiration content. Each episode is a true story from Jeff's actual work — no fabrication.
-
-| Ep | Week | Title | Story |
-|----|------|-------|-------|
-| S1E1 | W28 Fri Jul 11 | Dalawang Linggo. Isang Website. At Tatay Pa Rin Ako. | Jeff builds client website in 20-min stolen moments while doing dad duties. Gemini for site outline → Claude for copy. Script + captions ready. |
-| S1E2 | W29 Fri Jul 18 | Ang Restaurant sa Clark at ang Social Media na Ginawa Namin | Clark restaurant launch — Jeff did the social media campaign with Claude (captions/tone) + Gemini (content planning). Script + captions ready. |
-| S1E3 | W30 Fri Jul 24 | Tatay. Analyst. Trainer. Sa Iisang Araw. | Jeff as household dad in Manila juggling 4 client businesses using AI tools. ✅ posted |
-| S1E4 | W31 Fri Aug 1 | Ang BJJ Champion at ang Marketing Analyst na Nasa Manila | Full Cobrinha LA story — how the remote content production system works. |
-
-**Story format:** 60–90s · emotional hook → real situation → AI as the solution → apply it yourself → Tito AI closer
-**Source material:** Real details from Jeff's work — never invent quotes, outcomes, or metrics
-**Client references:** Cobrinha = Alliance Cobrinha LA (BJJ, LA) · Pares = The Original Pares Clark (restaurant, Philippines)
-
-⭐ W26 = **boost launch week** · Php 2,000/week · TikTok only → TikTok+IG (W27) → All 3 (W28)
-
-**Boost plan deck:** `content/strategy/TitoAI-ContentBoostPlan-W26-W28.pptx` / `.pdf`
-
-**W25 Fri approval page:** `https://jeffd1130.github.io/TitoAi/W25-fri-captions.html`
-
-**CJEF Day 1 AI Training (Jul 6, 2026):** First corporate/school training conducted. ~12 participants — guro, admin, school directors. Tools: Claude + Gemini (free). Full day. Certificate ceremony. Assets in `/Users/jeff/Documents/Claude/TitoAI-Training/CJEF_Day1/` — 10 photos + 3 videos (~30s each). Special post published Jul 6 with "TRAINING" CTA for lead gen. Slides: `/Users/jeff/Documents/Claude/TitoAI-Training/slides/CJF_AllRoles_Slides.html`.
-
-**Post-level engagement audit (Jul 1, 2026):** `reports/2026-07-01-ig-tiktok-post-mapping.md` — full IG (17) + TikTok (19) post mapping. Two standing insights applied going forward:
-1. **Post once, pin immediately on TikTok — never duplicate-post.** All 3 top-viewed TikTok posts (784/761/630 views) are pinned copies, beating their unpinned duplicate 2–4x every time.
-2. **Named-persona, step-by-step free-tool demos are the top-proven format** ("Mga Guro" post: 784 TikTok / 297–304 IG). Route boost budget to posts matching this shape (e.g. W27 Wed, W28 Wed) over untested formats.
-
-**Weekly check & balance (Jul 6, 2026):** `reports/2026-07-06-weekly-checkbalance.md` — automation/repo health normal (clean git state, up to date with origin). Account-health pull (IG + TikTok follower/engagement check) could not be completed this cycle — browser control was unavailable in the automated run context. W28 Wed boost confirmed per the standing insight above; re-pull W27 post-level metrics next time account access is available to validate the boosted-Wed outcome before repeating the pattern for W29.
-
-**Routine health check (Jul 9, 2026):** `reports/2026-07-09-health-check.md` — repo/automation normal. IG: 70 followers, 90-day views 2,152. TikTok: 146 followers, last-7-days views down 37.8% WoW but profile views +200% and branded search queries appearing ("tito ai story," "claude resume"). Flag: the "Claude Projects" script was duplicate-posted 4x (Jun 30–Jul 3) despite the no-duplicate rule, and its best result was an **unpinned** copy (678 views/24 likes) — first case where pinning didn't win. Treat as a one-off until more data confirms; don't revise the pin-first rule yet. W28 Wed boost post ("Gemini sa Gmail," pinned Jul 8) at only 195 views ~1 day in — recheck after 48–72h.
-
-**Weekly check & balance (Jul 13, 2026):** `reports/2026-07-13-weekly-checkbalance.md` — repo/automation normal, W29 Mon synced into schedule.json (was still a TBD placeholder despite script+captions already existing). Account-health pull failed for a **second consecutive cycle** — no browser access in the automated run context — so W28 Wed boost outcome and W28 Fri Story S1E1 engagement remain unconfirmed. W29 Wed recommended for a conservative TikTok-only boost (matches proven named-persona demo shape) rather than repeating "All Platforms," pending that confirmation. Priority for next cycle: re-pull IG + TikTok metrics as soon as browser/account access is available — nearly two weeks of engagement data is now unverified.
-
-**Live update (Jul 14, 2026):** See §5 of `reports/2026-07-13-weekly-checkbalance.md`. IG 90-day views up to 2,348 (from 2,152). TikTok 152 followers/252 likes. Confirmed W28 Fri Story S1E1 live (541 views, pinned) and W29 Mon (185 views, pinned, posted same day). **Standing "pin wins" insight is now in question** — ranked by views, the 2 pinned posts sit at #4 and #10 of 10; the top 3 spots are all unpinned, including the W27 Wed "Claude Projects" duplicate (684 views, still growing) that Jul 9's report flagged as a one-off exception. Do not treat pin-vs-unpinned as settled — next cycle should identify the two unidentified top-viewed posts (768, 654) before revising the rule either way.
-
-**Health check (Jul 18, 2026):** `reports/2026-07-18-health-check.md` — TikTok 7-day views 3,100 (+131.1% WoW), 133 likes, 9 shares, 98% FYP traffic. **W29 Wed carousel ("Resume at Cover Letter") is now the best-performing post in channel history** — 1,016 views/63 likes in 2 days, confirming the named-persona/step-by-step demo shape as the top-proven format (3rd consecutive week: W27 Wed → W28 Wed → W29 Wed). Carousels are outperforming reels on raw views. Branded search growing ("titoserye Filipino ai," "tito ai story"). Boost objective shifted to Followers/Profile visits (98% FYP traffic isn't converting to followers). Two boosts placed same day: W29 Wed carousel ₱300 + W29 Fri S1E2 ₱200, both TikTok, 3-day duration.
-
-**Weekly check & balance (Jul 20, 2026):** `reports/2026-07-20-weekly-checkbalance.md` — automation/repo health normal (clean, pushed, no lock issues), but no commits landed Jul 19–20. Social-health pull failed again this cycle (no browser access) — Jul 18 boost outcomes (W29 Wed ₱300, W29 Fri ₱200) still unconfirmed, now one full cycle overdue. **Urgent flag: W30 Mon (drops Jul 21) and W30 Wed (drops Jul 23) have no script/captions yet** — `schedule.json` still shows both as TBD/draft with no URL; recommend running `produce-post` for W30 Mon immediately. Also found W30 Fri's `schedule.json` entry points to `W30-fri-captions.html`, which doesn't exist yet — needs to be written before the Jul 24 approval step. Standing recommendation: once W30 Wed is scripted, favor the named-persona/step-by-step demo shape that has now won 2 straight weeks.
-
-**Health check (Jul 22, 2026):** `reports/2026-07-22-health-check.md` — live pull via TikTok Studio + IG public profile (this report sat uncommitted until the Jul 27 cycle picked it up — see below). **TikTok crossed 1,000 followers.** 7-day views 4,500 (+317.5% WoW), 350 likes, 16 shares. The Jul 18 boosts are now confirmed: S1E2 (Pares Clark story, ₱200 boost) drove 365 new followers and 4,600 all-time views — over 100x the follower conversion of the W29 Wed carousel boost (₱300 → ~1,100 views). **New standing insight: boosted story reels are the strongest follower-conversion lever found to date**, ahead of carousels. IG at 73 followers, insights still login-gated. W30 Wed/Fri were on track (Wed ready, Fri script still needed at the time).
-
-**Weekly check & balance (Jul 27, 2026):** `reports/2026-07-27-weekly-checkbalance.md` — automation/repo health normal; found and committed a ~6-day-old uncommitted backlog (an exec-summary file rename + last week's own Jul 22 health-check report, which is why that report wasn't logged here until now). Social-health pull failed again (3 of the last 4 cycles) — Claude in Chrome unavailable and `web_fetch` can't render either JS-heavy profile page. `schedule.json` was stale (still showed W30 Wed/Fri as TBD and all of W31 as TBD despite scripts/captions/carousels already existing in the repo) — synced to reflect actual production status. **Applying the Jul 22 story-boost insight:** recommended this week's boost budget go to Fri S1E4 (Season 1 finale) rather than the Wed carousel, and added posting-insight banners to both `docs/W31-wed-captions.html` and `docs/W31-fri-captions.html` reflecting that. Priority for next cycle: get a live account pull (way overdue) and confirm whether W30 Wed/Fri and the S1E4 boost actually went out.
-
-**Health check (Aug 3, 2026):** `reports/2026-08-03-health-check.md` — repo/automation clean (git up to date with origin, no lock issues); no cron log present in this run environment (expected — cron runs on Jeff's Mac, not reachable from here). **Live account pull succeeded** (public profiles via Playwright) after 3 straight failed cycles. TikTok crossed 1,012 followers (+12 WoW, growth normalizing after the S1E2 boost tail) with total likes up +339 WoW to 990. All 3 W31 posts confirmed live and marked `posted` in `schedule.json`: Mon VA Inbox (260 views, pinned), Wed Freelancer Proposal (213 views), Fri S1E4 Season 1 finale (169 views/2d — boost placement still unconfirmed, needs a TikTok Promote-tab check). IG flat at 75 followers (+1). **Urgent flag caught this cycle:** `docs/W32-mon-captions.html` (script+captions+render slides all committed Jul 31) states the Data Analyst carousel drops **today, Aug 3, 8 PM PHT** — but no Canva design has been assembled yet, and `schedule.json` had no W32 entry at all before this cycle (added now, status `draft`). Also no S2 arc/Wed/Fri scripts exist yet for the new season. Priority for next cycle: confirm whether W32 Mon actually got assembled and posted on time, and whether the S1E4 boost was ever placed.
-
-**Health check (Aug 13, 2026):** `reports/2026-08-13-health-check.md` — automation log is healthy and current through Aug 12; daily summaries, weekly production reminders, D-3/D-2 checks, and Aug 10 weekly health reminder fired. Repo matched `origin/main` before this update, but five user-owned untracked items remain untouched. Live public pull: TikTok **1,017 followers / 1,025 total likes** (+5 / +35 vs. Aug 3); IG flat at **75 followers**. W33 Mon BPO is live at 335 views/8 likes/3 saves; W33 Wed Negosyante is live at 265 views/7 likes/4 saves but appears to have published ~16 hours after its Aug 12 7 PM target. `schedule.json` had a duplicate W32 block and stale W33 draft statuses; both were corrected. Priority: publish W33 Fri S2E2 on Aug 14 at 7 PM PHT, then plan W34 immediately (no files or schedule entry yet). Do not boost W33 Mon/Wed based on current evidence; test stronger save-first and comment-choice CTAs next week.
-
-**W34 plan + W33 Fri revision (Aug 13, 2026):** `content/strategy/w34-content-plan.md` — W34 is now planned around proof-first hooks, visible before/after outputs, privacy-safe fictional/anonymized inputs, and one CTA per post. Monday targets freelancer revisions (save CTA), Wednesday tests a Guro screen-record demo (choice CTA), and Friday uses real CJEF proof footage (comment `GUSTO`). `content/strategy/niche-and-growth-plan.md` was refreshed to replace automatic boosting with a 12–24-hour evidence gate and to add workplace/student data-safety rules. Tomorrow's `docs/scripts/w33-fri-script.html` was tightened to 65–75s, removes the unverified direct quote, uses verified participant framing plus real CJEF footage, and moves the companion testimonial to Aug 15 or later.
-
-**Weekly check & balance (Aug 22, 2026):** `reports/2026-08-22-weekly-checkbalance.md` — automation/repo health normal (`main` == `origin/main`, clean tree, Aug 21 auto-sync commits present as expected). Live pull via authenticated TikTok Studio + public IG profile: TikTok now displays rounded "1K" followers/likes (Studio UI change, not a data gap); last-7-days views down 31.3% WoW and likes down 57.1% WoW with 0 net new followers, driven entirely by two unpinned, prompt-recitation-style posts (W34 Wed Guro 94 views, W34 Fri bonus 210 views) — not a platform-wide issue. IG up to 77 followers (+2). **Confirmed the planned S2E3 CJEF proof story never ran** — commit `0ac73ed` shows it was swapped same-day for the lighter S2E4 "prep question" bonus tip; `schedule.json` corrected to reflect the actual post (S2E4, not S2E3) and the CJEF script (`docs/scripts/w34-fri-script.html`) is flagged as ready and unused for W35 Fri. Also corrected `schedule.json`: W34 Wed status `draft` → `posted` with live metrics (it had quietly gone live without the schedule being updated), and refreshed the W33 Wed view count (292, up from 265). **Pin effect is no longer ambiguous** — every pinned post now outperforms every unpinned post by a wide margin across three independent comparisons; pin every post going forward, no exceptions. Priority for next cycle: produce and pin the CJEF proof story for W35 Fri, verify the pin-everything rule holds for a 4th/5th data point, and reply to the real inbound comment (`jkp_7777`) on the pinned Clark story.
-
-**Weekly check & balance (Aug 31, 2026):** `reports/2026-08-31-weekly-checkbalance.md` — automation/repo health normal (`main` == `origin/main`, clean tree, Aug 31 auto-sync commits landed the W36 Mon carousel). Live pull via public TikTok + IG profiles (no authenticated TikTok Studio session available this cycle): TikTok exact followers only 1,017 → 1,019 (+2) over 18 days and total likes 1,025 → 1,053 (+28) — the slowest growth stretch on record; IG flat at 77. Both new W35 carousels performed well **unpinned** (Mon AI-safety 554 views, Wed clean-brief 527 views — 2nd/3rd-best unpinned results ever), reinforcing proof-first-beats-prompt-recitation. **The Aug 22 "pin every post, no exceptions" rule is corrected**: TikTok caps pins at 3, so the real, observed pattern is 2 fixed evergreen pins (Clark story, VA resume) + 1 rotating slot — W35 Mon/Wed didn't get the rotating slot this cycle; a different, undocumented TikTok-only post using the same CJEF footage ("Imbis na mano-mano...", CTA Comment STUDENT, posted Aug 29) got it instead and only reached 129 views/2 likes/1 comment, with **no script, caption file, or schedule.json record anywhere in the repo** and no IG cross-post. The actual scripted CJEF proof story (`docs/scripts/w34-fri-script.html`, CTA Comment GUSTO) remains unproduced for a third straight cycle. `schedule.json` corrected: W35 Mon/Wed `ready` → `posted` with live metrics; W35 Fri left `draft` with the discrepancy noted; W33/W34 view counts refreshed. Priority for next cycle: produce the real CJEF proof story, confirm with Jeff whether the Aug 29 post was an intentional off-pipeline bonus (and backfill its repo record if so), and get an authenticated TikTok Studio pull to restore trend/traffic visibility.
-
-**Weekly check & balance (Sep 7, 2026):** `reports/2026-09-07-weekly-checkbalance.md` — automation/repo health normal (`main` == `origin/main`, clean tree); the Aug 31 report's edits that were blocked by a stuck `.git/index.lock` last cycle landed safely via a later commit, so nothing was lost. W36 Wed and Fri both produced and confirmed live on schedule. **New channel record: W36 Wed's grounded-PDF-prompting carousel hit 590 views unpinned — the best unpinned result in channel history**, beating both W35 posts. Set against that: TikTok followers **declined for the first time on record** (1,019 → 1,014, -5 over 7 days) even as total likes rose (+14) — cause unconfirmed without authenticated Studio access. The rotating pin slot is still stuck on the weak Aug 29 post (133 views) instead of any of the three stronger posts produced since (590/260/212) — now a 2-cycle-running misallocation, not a one-off. The CJEF proof story is unproduced for a 4th straight cycle. **Most urgent finding: W37 had zero planning as of Monday morning** — no script, captions, or Canva design for any slot, with the Monday 8 PM PHT drop same-day. `schedule.json` corrected: W36 Mon/Wed/Fri `ready` → `posted` with live metrics; W35 Fri note updated to 4th-cycle-unproduced; added a placeholder W37 week flagging the gap. Priority for next cycle: get W37 produced (starting immediately), re-pin the actual best-performing post, resolve the CJEF story one way or the other, and investigate the follower decline once Studio access is available.
-
-**Weekly check & balance (Sep 14, 2026):** `reports/2026-09-14-weekly-checkbalance.md` — automation/repo health normal (`main` == `origin/main`, clean tree); all three W37 slots were produced on schedule, resolving last cycle's urgent flag. Live pull: TikTok followers declined for a **third straight cycle** (1,019 → 1,014 → **1,012**, -7 over 14 days) even as total likes kept climbing (1,053 → ~1,067 → **1,088**) — still unexplained without authenticated Studio access. IG up to 80 followers (+3). **W37 ("Grounded AI · Career Upgrade") was the weakest full week on record**: all three posts landed in a narrow 200–240 view band (238/230/201), well below both W36's average and even W36's weakest post — the job-seeker/career framing underperformed the proof-first student/freelancer demo shape that has repeatedly won. The rotating TikTok pin slot moved again, but to **W36 Mon (212 views, the weakest of that week)** rather than W36 Wed (593 views, still the channel's best unpinned result ever) — a **third consecutive cycle** of pin misallocation. **Correction:** the Aug 29 CJEF-footage post previously logged as "never posted to IG" is confirmed to have cross-posted (Aug 28 on IG, 10 likes, 2 comments) — `schedule.json` corrected. CJEF proof story unproduced for a 5th straight cycle. **Most urgent finding: W38 had zero planning as of Monday morning** — identical situation to W37 last week, suggesting the same-day-Monday gap is a recurring pattern, not a one-off. `schedule.json` corrected: W37 Mon/Wed/Fri `ready` → `posted` with live metrics; added a placeholder W38 week flagging the gap. No boost budget recommended this cycle — nothing performed well enough to reinforce. Priority for next cycle: get W38 produced (starting immediately), re-pin W36 Wed, resolve CJEF, and diagnose the follower-decline-vs-rising-likes divergence once Studio access is available.
-
----
-
-## Niche & Growth Strategy
-
-Full strategy doc: `content/strategy/niche-and-growth-plan.md` · HTML: `https://jeffd1130.github.io/TitoAi/niche-plan.html`
-
-**Niche:** "The warm, relatable Tito who teaches everyday Filipinos to use AI for free — before it replaces their job."
-
-**Target audience:** Class B and C first, some Class A (see the market note at the top). Freelancers (1.5M+) · Guro/Teachers (900K+) · BPO workers · Nanays/tatays · Small business owners · Office professionals and managers · Business owners and decision-makers (training leads)
-
-**Primary tools featured in all content:** Claude (claude.ai) + Gemini (gemini.google.com) — both free. Never reference paid tools.
-
-**Content pillars:**
-- Mon Tips → Quick AI win (tool demo, 30–60s)
-- Wed Demos → Freelancer / Guro Upgrade (60–90s tutorial)
-- Fri Stories → Family & Everyday Filipino Life
-- Evergreen → BPO / Workforce Survival + Negosyante series
-
-**Hook rule:** Hook must land in second 1 — never open with "Kumusta" first.
-
-**Algorithm:** End every video with a YES/NO or choice question. Reply to comments in first hour. Pin first comment within 5 min.
-
----
-
-## Content timeline
-
-`docs/schedule.json` is the single source of truth for the published timeline (`docs/timeline.html` renders from it). Whenever a post's status, title, date, link, or boost changes — or a new week/post is added — update `docs/schedule.json` to match, keeping the schema in `docs/timeline-README.md`. Set `"updated"` to today's date. Do NOT edit `timeline.html`. Commit and push so GitHub Pages republishes.
-
-**Live URL:** `https://jeffd1130.github.io/TitoAi/timeline.html`
-
----
-
-## Automation — Tito AI Daily Routine
-
-All scripts live in `automation/`. They run via Mac crontab. Jeff's Mac runs on local PHT (UTC+8) time, so cron times below are direct PHT wall-clock values — no offset conversion needed.
-
-| Script | Purpose | Fires (Manila time) |
-|--------|---------|-------------------|
-| `tito-summary.py` | Daily status: current/next/upcoming weeks + today's drops | 10:00 AM daily |
-| `tito-record.py` | D-3 asset prep reminder: gather S1 photo + S4 Claude screenshot for carousel | 9:00 AM — Fri / Sun / Tue |
-| `tito-create.py` | D-2 content creation reminder: script + captions + Canva, links to produce-post | 9:00 AM — Sat / Mon / Wed |
-| `tito-weekly.py` | Saturday production overview: shows what still needs work for next 2 weeks | 9:00 AM Saturday |
-| `tito-remind.py` | Drop-day reminder: 1hr before each post with pre-post checklist | 7:00 PM Mon / 7:00 PM Wed / 7:00 PM Fri |
-
-**Setup:**
-```bash
-bash automation/setup-cron.sh      # install all cron jobs
-```
-
-**Log:** `/tmp/titoai-cron.log`
-
-**Note:** `automation/setup-wake.sh` is deprecated — no longer needed. The Mac runs on Manila time (PHT, UTC+8), so all reminders fire during normal waking hours and no wake-scheduling is needed.
-
-**Telegram bot:** `@titoaiph_bot` (token in scripts). Always use curl or `urllib` — never the MCP Telegram tool (wired to Cobrinha bot, not Tito AI).
+| Script | Purpose | Fires (PHT) |
+|--------|---------|-------------|
+| `tito-summary.py` | Daily status | 10:00 AM daily |
+| `tito-record.py` | D-3 asset prep reminder | 9:00 AM Fri / Sun / Tue |
+| `tito-create.py` | D-2 creation reminder | 9:00 AM Sat / Mon / Wed |
+| `tito-weekly.py` | Saturday production overview | 9:00 AM Sat |
+| `tito-remind.py` | Post-day checklist | 7:00 PM Mon / Wed / Fri |
 
 ---
 
 ## Skills
 
-| Skill | Trigger phrases | Purpose |
-|-------|----------------|---------|
-| `produce-post` | "make Monday's post," "redo Wednesday's draft" | Produce ONE draft end-to-end for a specific slot |
-| `produce-week` | "produce this week," "make all posts," "run the week" | Produce ALL remaining drafts for the current week |
-| `update-approval-page` | "update the approval page," "refresh the review site" | Rebuild `docs/index.html` from current drafts, push to GitHub |
-| `weekly-status` | "weekly status," "where are we," "what's pending" | Read-only check: state of every slot in the current ISO week |
-| `caption-library` | "redo the caption," "regenerate hashtags" | Regenerate caption + hashtags for one slot only |
-
----
-
-## Working principles
-
-1. **No fabrication.** Never invent quotes, comments, metrics, follower reactions, or events. If a script element requires a real detail that isn't confirmed, keep it general or flag it to Jeff.
-2. **Brand first.** Navy + gold. Warm Tito energy. Never corporate-looking.
-2. **Taglish always.** Captions and scripts are in Taglish. No pure English unless quoting a tool.
-3. **Free tools only.** Never recommend or reference paid tools in content.
-4. **Short over long.** 60–90 seconds is the ceiling. Ask before going longer.
-5. **One question max.** If clarification is needed, ask the single most important question.
-6. **PHT first.** Every draft output should show the PHT drop time. Jeff is based in Manila, so PHT is his local time — no secondary timezone reference is needed.
-7. **Parallel agents always.** For multi-slot tasks, spin concurrent agents. `produce-week` runs all 3 slots in parallel.
-8. **No text overlays.** Videos are clean — footage + Tito AI logo only. No text, captions, or graphic overlays on the video itself.
-9. **Don't post.** You produce drafts. Posting is always Tito AI's call.
-10. **Platform-specific captions.** TikTok (short, 8 hashtags), Instagram (medium, 15 hashtags), Facebook (story-length, 6 hashtags). Never use one caption for all three.
-11. **Virality checklist (post day):** First 3 seconds = silent hook + direct eye contact. Native upload to each platform (no cross-posting). Jeff seeds first comment within 5 min of posting.
-12. **Growth beyond views:** Every post gets one measurable job—follow, comment, save, share, or qualified inquiry. Match the CTA to the post's intent, keep the full value inside the post, and review conversion signals alongside reach. Celebrity/athlete tags must be relevant, respectful, fact-checked, and never imply endorsement.
+| Skill | Trigger | Purpose |
+|-------|---------|---------|
+| `produce-post` | "make Monday's post" | One slot end to end |
+| `produce-week` | "produce this week" | All remaining slots, in parallel |
+| `update-approval-page` | "update the approval page" | Rebuild `docs/index.html` |
+| `weekly-status` | "weekly status" | Read-only state of the week |
+| `caption-library` | "redo the caption" | Captions + hashtags for one slot |
 
 ---
 
 ## When something is missing
 
-- **Raw assets missing** → create an on-brand image or video draft in the slot's `raw/` folder for Jeff's approval; use approved chibi/logo assets and label any generated illustration or practice example. Ask Jeff for real footage only when the concept requires verified real-world proof.
-- **Canva not connected** → stop, surface the connection step
-- **Brand kit not found** → check `brand/README.md`
+- **Raw assets missing:** make an on-brand draft from approved chibi/logo assets in the slot's `raw/`; ask for real footage only when the idea needs verified proof.
+- **Canva not connected:** stop and say how to connect it.
+- **Brand kit not found:** check `brand/README.md`.
+- **One question max**, and only if truly needed.

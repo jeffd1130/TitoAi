@@ -17,6 +17,7 @@
       <button class="tab" data-tab="main">💬 Tito AI</button>
       <button class="tab" data-tab="board">Agents</button>
       <button class="tab" data-tab="posting">Approve &amp; Post</button>
+      <button class="tab" data-tab="posted">Posted</button>
       <button class="tab" data-tab="video">Video</button>
     </nav>
     <div class="status" id="status"></div>
@@ -67,8 +68,13 @@
     </section>
 
     <section id="posting" class="panel">
-      <p class="muted intro">Approve each post. Then either press <b>📅 Schedule</b> and Kuya Iskedyul puts it on the Meta and TikTok calendars for the time you pick, or post it yourself: download, copy the caption, tap <b>Mark posted</b>. Nothing ever posts right away.</p>
+      <p class="muted intro">Approve each post, then post it yourself at the 📅 time: download it (or press 📨 Send to Telegram), copy the caption, and tap <b>Mark posted</b>. Once a post is marked posted on any platform it moves to the Posted tab.</p>
       <div id="posts" class="posts"></div>
+    </section>
+
+    <section id="posted" class="panel">
+      <p class="muted intro">Posts you've marked posted, newest first. Mark the remaining platforms here too.</p>
+      <div id="postedList" class="posts"></div>
     </section>
 
     <section id="video" class="panel">

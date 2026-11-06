@@ -420,7 +420,7 @@
       if ((el = g('[data-hand-done]'))) { await api(`/api/handoffs/${el.dataset.handDone}/done`, {}); return loadHandoffs(); }
       if ((el = g('[data-hand-reopen]'))) { await api(`/api/handoffs/${el.dataset.handReopen}/reopen`, {}); return loadHandoffs(); }
       if ((el = g('[data-approve-run]'))) { try { await api(`/api/runs/${el.dataset.approveRun}/approve`, {}); toast('Video approved'); } catch (err) { toast(err.message); } return; }
-      if ((el = g('[data-goto-post]'))) { switchTab('posting'); setTimeout(() => { const c = document.querySelector(`[data-post-id="${el.dataset.gotoPost}"]`) || document.querySelector('#posts'); c.scrollIntoView({behavior: 'smooth'}); }, 60); return; }
+      if ((el = g('[data-goto-post]'))) { const c = document.querySelector(`[data-post-id="${el.dataset.gotoPost}"]`); switchTab(c && c.closest('#postedList') ? 'posted' : 'posting'); setTimeout(() => (c || document.querySelector('#posts')).scrollIntoView({behavior: 'smooth'}), 60); return; }
       if ((el = g('[data-new-run]'))) return openNewRun(el.dataset.newRun);
       if (g('[data-copy-flow]')) return copyText(DEFAULT_PROMPT);
       if (g('#calPrev')) { B.month.m--; if (B.month.m < 0) { B.month.m = 11; B.month.y--; } return renderCal(); }

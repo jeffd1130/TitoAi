@@ -1,26 +1,20 @@
 # weekly-status
 
-Read-only check: state of every slot in the current ISO week.
+Read-only check of every slot in the current ISO week.
 
 ## Trigger phrases
 "weekly status", "where are we", "what's pending", "status check"
 
 ## Steps
 
-1. **Determine current ISO week.**
-
-2. **For each slot**, check:
-   - Raw assets present? (count files in `raw/`)
-   - Draft made? (`drafts/draft.md` exists?)
-   - Cover graphic generated? (`drafts/cover-preview.png` exists?)
-   - Approved? (`approved/` has files?)
-
+1. **Determine the current ISO week** (PHT).
+2. **For each slot** (`01-mon-ai-tip`, `02-wed-demo`, `03-fri-inspiration`, plus any bonus folder), check:
+   - Script + captions: `drafts/script.md`, `drafts/captions.md`
+   - Media: `drafts/slides/` or the video in `docs/media/`
+   - Approved / posted: `studio/data/posts-state.json` (`approved`, `posted` per platform), cross-checked with `docs/schedule.json`
 3. **Report as a table:**
 
-| Slot | Day | Drop (PHT) | Raw | Draft | Cover | Approved |
-|------|-----|-----------|-----|-------|-------|----------|
-| 01-mon-ai-tip | Mon | 20:00 | ✓/✗ | ✓/✗ | ✓/✗ | ✓/✗ |
-| 02-wed-demo | Wed | 19:00 | ✓/✗ | ✓/✗ | ✓/✗ | ✓/✗ |
-| 03-fri-inspiration | Fri | 19:00 | ✓/✗ | ✓/✗ | ✓/✗ | ✓/✗ |
+| Slot | Post time (PHT) | Script | Captions | Media | Approved | Posted |
+|------|-----------------|--------|----------|-------|----------|--------|
 
-4. **State next action** — one sentence: what Jeff should do next.
+4. **Next action**: one sentence on what Jeff should do next. Don't change any files.

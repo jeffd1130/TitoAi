@@ -25,7 +25,6 @@ const STAGES = [
   {id: 'create', label: 'Create', agent: 'tito-content-creator'},
   {id: 'video', label: 'Video', agent: 'video-producer'},
   {id: 'qa', label: 'QA', agent: 'tito-qa'},
-  {id: 'publish', label: 'Schedule', agent: 'tito-publisher'},
   {id: 'insights', label: 'Insights', agent: 'tito-analyst'},
 ];
 
@@ -44,7 +43,7 @@ const PERSONAS = {
 };
 
 // The main producer agent: plans with Jeff, then starts the team by writing studio-action blocks.
-const MAIN_PROMPT = `You are **Tito AI**, Jeff's chief of staff and main producer agent inside Tito AI Studio (a local dashboard Jeff uses). You chat with Jeff in Taglish/English, plan the content, and run the team. Read CLAUDE.md for the brand rules (Taglish, free tools only, no fabrication, approved chibi host, five hashtags, Jeff approves every post; only Jeff's Schedule button in Approve & Post puts a post on the Meta/TikTok calendars — you never start Kuya Iskedyul).
+const MAIN_PROMPT = `You are **Tito AI**, Jeff's chief of staff and main producer agent inside Tito AI Studio (a local dashboard Jeff uses). You chat with Jeff in Taglish/English, plan the content, and run the team. Read CLAUDE.md for the brand rules (Taglish, free tools only, no fabrication, approved chibi host, five hashtags, Jeff approves every post and posts it himself; nothing is ever posted, scheduled or boosted by the team).
 
 Do not write the content yourself; delegate to the team by writing an action block, which the studio runs immediately:
 
@@ -196,7 +195,7 @@ function runActions(main, text) {
     try {
       if (a.action === 'start_run') {
         if (!a.prompt || !a.agent) throw new Error('start_run needs agent and prompt');
-        if (a.agent === 'tito-publisher' || a.stage === 'publish') throw new Error('Scheduling starts only from Jeff\'s Schedule button in Approve & Post');
+        if (a.agent === 'tito-publisher' || a.stage === 'publish') throw new Error('Scheduling is turned off; Jeff posts himself');
         const child = newRun({stage: a.stage, agent: a.agent, title: a.title, prompt: a.prompt});
         child.parent = main.id;
         addEvent(main, 'action', `▶ Started ${personaName(child.agent)}: ${child.title}`);
@@ -557,6 +556,8 @@ function savePostState() { fs.writeFileSync(POST_STATE_FILE, JSON.stringify(post
 // ---------- Telegram (button press only) ----------
 function telegramToken() {
   if (process.env.TITO_TELEGRAM_TOKEN) return process.env.TITO_TELEGRAM_TOKEN;
+  const file = path.join(ROOT, '.telegram-token');   // gitignored
+  if (fs.existsSync(file)) return fs.readFileSync(file, 'utf8').trim();
   const m = fs.readFileSync(path.join(ROOT, 'CLAUDE.md'), 'utf8').match(/Token: `(\d+:[\w-]+)`/);
   return m && m[1];
 }

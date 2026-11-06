@@ -227,7 +227,14 @@ function renderPosts() {
   const el = $('#posts');
   if (!el) return;
   const bySlot = (a, b) => (a.slot || '9999').localeCompare(b.slot || '9999');   // calendar order, unscheduled last
-  el.innerHTML = [...state.posts].sort(bySlot).map((p) => {
+  const isPosted = (p) => Object.keys((p.state || {}).posted || {}).length > 0;
+  const toDo = state.posts.filter((p) => !isPosted(p)).sort(bySlot);
+  const done = state.posts.filter(isPosted).sort((a, b) => bySlot(b, a));
+  el.innerHTML = postCards(toDo) || '<div class="empty">Nothing left to post. 🎉</div>';
+  $('#postedList').innerHTML = postCards(done) || '<div class="empty">Nothing marked posted yet.</div>';
+}
+function postCards(list) {
+  return list.map((p) => {
     const st = p.state || {posted: {}};
     const postedCount = Object.keys(st.posted || {}).length;
     const badge = postedCount === 3 ? '<span class="badge green">Posted everywhere</span>'
@@ -275,7 +282,7 @@ function renderPosts() {
         </div>
       </div>
     </article>`;
-  }).join('') || '<div class="empty">No posts yet. Add them to studio/posts.json.</div>';
+  }).join('');
 }
 const fmtPHT = (w) => new Date(w + ':00+08:00').toLocaleString('en-US', {timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
 document.addEventListener('click', async (e) => {

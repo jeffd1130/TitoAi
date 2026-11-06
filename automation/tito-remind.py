@@ -24,7 +24,6 @@ today_str = now.strftime("%b ") + str(now.day)   # e.g. "Jun 26"
 day_name = now.strftime("%A")
 
 DROP_TIMES = {"MON": "8:00 PM", "WED": "7:00 PM", "FRI": "7:00 PM"}
-BUFFER_URL = "https://buffer.com"
 
 with open(SCHEDULE_PATH) as f:
     data = json.load(f)
@@ -73,15 +72,14 @@ for w, p in today_drops:
         "<b>Pre-post checklist:</b>",
         "  ☐ Captions copied",
         "  ☐ Video / slides exported",
-        "  ☐ TikTok scheduled in Buffer",
-        "  ☐ IG + FB queued",
+        "  ☐ Posted natively on TikTok, IG and FB (you post it yourself)",
+        "  ☐ Marked posted in Tito AI Studio",
         "  ☐ First comment ready (pin within 5 min of posting)",
         "",
     ]
 
     if p.get("url"):
         lines.append(f'📄 <a href="{BASE_URL}{p["url"]}">Captions + Canva →</a>')
-    lines.append(f'📅 <a href="{BUFFER_URL}">Open Buffer →</a>')
     lines.append("")
     lines.append(f'<a href="{BASE_URL}">Hub</a> · <a href="{BASE_URL}links.html">All Links</a>')
 

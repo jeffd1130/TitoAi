@@ -1,39 +1,35 @@
 # Tito AI — Social Media Content System
 
-Weekly content production for **@TitoAIPH** — a Filipino AI education channel by Jeff de las Armas.
+Weekly content production for **@TitoAIPH**, a Filipino AI education channel by Jeff de las Armas.
 
-> *"AI Para Sa Ating Lahat" — Kumusta mga Pamangkin!*
+> *"AI Para Sa Ating Lahat" — Kumusta, mga Pamangkin!*
 
-## What this repo does
+## How it works
 
-Automates the D-3 → D-0 content production workflow:
-1. Jeff drops video/photo assets into `content/<week>/<slot>/raw/`
-2. Jeff runs the production skills → Canva cover graphics + Taglish captions + approval page
-3. Jeff reviews at the GitHub Pages approval site
-4. Jeff publishes to TikTok, Facebook, and Instagram Reels
+1. Plan and make posts with **Tito AI Studio** (`bash studio/start.sh`, then http://localhost:4545): chat with the Tito AI chief of staff, and the agents write scripts, captions, slides and videos.
+2. Review and approve in **Approve & Post**. Each post shows its posting time (PHT) and can be sent to Telegram.
+3. Jeff posts natively on TikTok, Instagram and Facebook, then taps **Mark posted** (it moves to the **Posted** tab).
 
-## Approval site
+## Weekly schedule (PHT)
 
-**`https://jeffd1130.github.io/TitoAi/`**
+| Day | Content | Post time |
+|-----|---------|-----------|
+| Monday | AI tip carousel | 8:00 PM |
+| Wednesday | Demo carousel | 7:00 PM |
+| Friday | Story / reel | 7:00 PM |
 
-## Weekly schedule
-
-| Day (PHT) | Content | Drop Time |
-|-----------|---------|-----------|
-| Monday | AI Tip Reel | 8:00 PM PHT |
-| Wednesday | Demo / Tutorial | 7:00 PM PHT |
-| Friday | Story / Inspiration | 7:00 PM PHT |
-
-## Directory structure
+## Where things live
 
 ```
-brand/           ← Brand reference: colors, fonts, logos, captions
-content/         ← Weekly production folders (YYYY-W##)
-docs/            ← GitHub Pages approval site
-files/           ← Platform profile images (v1)
-files2/          ← Brand assets: logos, cover, manifesto, scripts
-Videos/          ← Local media source
-  Intro/         ← Launch video assets
+CLAUDE.md        project rules and current status (source of truth)
+AGENTS.md        notes for Codex / ChatGPT
+studio/          Tito AI Studio
+content/         weekly folders (YYYY-W##) and strategy/
+docs/            GitHub Pages hub: https://jeffd1130.github.io/TitoAi/
+brand/           colors, fonts, logos, chibi host
+reports/         weekly reports, metrics, history-2026.md
+automation/      cron reminders (Telegram)
+Videos/, Images/ raw footage
 ```
 
 ## Open this project
@@ -42,8 +38,4 @@ Videos/          ← Local media source
 cd ~/Documents/Claude/TItoAi && claude
 ```
 
-Then say: **"produce this week"** or **"weekly status"**
-
----
-
-*Tito AI · @TitoAIPH · San Jose, CA · AI Para Sa Ating Lahat*
+Then say **"produce this week"** or **"weekly status"**.
