@@ -54,6 +54,32 @@ Mga Pamangkin, ito ang Part 2. Kailangan ng side hustle ko ng website, at siguro
 
 Tama ba hula mo? "How do I make a website?" 😄 Ikaw, ano ang una mong tinanong sa AI? 👇
 
+## Part 3 — animated chibi version (CANDIDATE, pending Jeff approval: handoff/chatgpt/origin-part-3-matched-review.mp4)
+
+For the animated chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow). Hold behind Part 2.
+
+**TikTok**
+
+Wala akong web-dev background. Tapos may humingi ng tulong sa social media management, at wala rin akong background doon. Sumubok pa rin ako, at tinulungan ako nina Claude at Gemini mag-aral. Part 3: animated si Tito AI, pero boses at kuwento ko 'yan. Follow Tito AI para sa Part 4: Trial and error? Oo naman.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #LearnByDoing #TitoAIStory
+
+**Instagram**
+
+Walang web-dev background, tapos may dumating na opportunity na tumulong sa social media management. Wala rin akong background doon. Sinubukan ko pa rin, at tinulungan ako nina Claude at Gemini habang nag-aaral ako. Ako pa rin ang gumawa ng trabaho. Animated ang Tito AI dito, pero totoo ang boses at kuwento. Follow Tito AI para sa Part 4. 💡
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #SkillsJourney #TitoAIStory
+
+**Facebook**
+
+Mga Pamangkin, ito ang Part 3. Wala akong background sa web development, at may dumating na pagkakataong tumulong sa social media management na wala rin akong background. Sinubukan ko pa rin. Tinulungan ako nina Claude at Gemini mag-aral, pero ako pa rin ang gumawa ng trabaho. Animated na Tito AI ang kasama natin, pero boses at kuwento ko 'yan. Follow Tito AI para sa Part 4: Trial and error? Oo naman.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #PinoyLearning #FreelanceJourney
+
+**Seed comment (pin within 5 min)**
+
+Kung may dumating na opportunity na wala kang background, susubukan mo ba o hindi muna? Comment mo: SUBOK o HINTAY 👇
+
 ## Part 1 — original footage version (archival)
 
 **TikTok**
