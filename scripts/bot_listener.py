@@ -4,6 +4,7 @@ Tito AI — Telegram Bot Listener
 Polls for commands and responds. Runs as a launchd daemon.
 """
 
+import os
 import json
 import logging
 import subprocess
@@ -17,7 +18,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 # ── Config ─────────────────────────────────────────────────────────────────────
-BOT_TOKEN     = "8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg"
+BOT_TOKEN     = os.environ.get("TITO_TELEGRAM_TOKEN") or open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".telegram-token")).read().strip()   # gitignored
 CHAT_ID       = 8325608814
 SCHEDULE_FILE = Path("/Users/jeff/Documents/Claude/TItoAi/docs/schedule.json")
 DAILY_SCRIPT  = Path("/Users/jeff/Documents/Claude/TItoAi/scripts/daily_update.py")

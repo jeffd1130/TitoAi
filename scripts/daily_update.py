@@ -5,6 +5,7 @@ Runs at 10 AM Manila time every day.
 Reads docs/schedule.json, updates "updated" date, commits + pushes, sends Telegram digest.
 """
 
+import os
 import json, subprocess, sys, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -12,7 +13,7 @@ from pathlib import Path
 # ── Config ────────────────────────────────────────────────────────────────────
 REPO_DIR    = Path("/Users/jeff/Documents/Claude/TItoAi")
 SCHEDULE    = REPO_DIR / "docs/schedule.json"
-BOT_TOKEN   = "8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg"
+BOT_TOKEN   = os.environ.get("TITO_TELEGRAM_TOKEN") or open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".telegram-token")).read().strip()   # gitignored
 CHAT_ID     = "8325608814"
 TIMELINE_URL = "https://jeffd1130.github.io/TitoAi/timeline.html"
 

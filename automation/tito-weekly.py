@@ -10,7 +10,7 @@ Cron: 0 9 * * 6   (9:00 AM PHT Saturday — Mac runs on local PHT time)
 import json, os, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 
-BOT_TOKEN = "8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg"
+BOT_TOKEN = os.environ.get("TITO_TELEGRAM_TOKEN") or open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".telegram-token")).read().strip()   # gitignored
 CHAT_ID = "8325608814"
 BASE_URL = "https://jeffd1130.github.io/TitoAi/"
 

@@ -49,7 +49,8 @@ Jeff's Mac runs on PHT, so cron and post times need no conversion.
 
 **Current (Nov 6, 2026):**
 - W45 (Nov 2–8): Mon "HM po?" posted; origin recut Part 1 posted Wed Nov 4; Part 2 (`docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4`, approved) posts Fri Nov 6, 7 PM. Parts 3–5 wait until Jeff says go. Plan and captions: `content/2026-W45/bonus-origin-recut/` (`captions.md`, `gemini-plan.md`). Remotion source: `w44-friday-motion-sample/src/OriginChibiGemini.tsx`.
-- W46–W48: Mon/Wed/Fri drafts are in `content/2026-W46`–`W48` and in the Studio.
+- W46 (Jeff, Nov 6): Mon Nov 9 Origin Part 3 (approved, `handoff/chatgpt/origin-part-3-matched-review.mp4`), Wed Nov 11 Part 4, Fri Nov 13 Part 5. Parts 4–5 still need to be made (Flow → ChatGPT handoff → Claude Code finish).
+- Carousels are held until after Part 5: W47 Mon "Buy 1 Take 1" (moved from W46), W47 Wed/Fri, then W48 Mon/Wed/Fri. Drafts are in `content/2026-W46`–`W48` and in the Studio.
 - Post status lives in the Studio (`studio/data/posts-state.json`) and `docs/schedule.json`.
 
 ---
@@ -137,7 +138,7 @@ Standing insights (evidence in `reports/history-2026.md`):
 
 ## Automation
 
-`automation/` scripts run from Mac crontab (`bash automation/setup-cron.sh`; log `/tmp/titoai-cron.log`):
+`automation/` scripts run from Mac crontab (log `/tmp/titoai-cron.log`). **Only `tito-remind.py` is on** (Jeff, Nov 6): an hour before each post it sends a reminder, then the post's media + captions through the Studio (text only if the Studio isn't running). The others are commented out in crontab. Scripts read the bot token from `.telegram-token`.
 
 | Script | Purpose | Fires (PHT) |
 |--------|---------|-------------|

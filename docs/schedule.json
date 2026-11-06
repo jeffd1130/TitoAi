@@ -943,19 +943,9 @@
           "day": "MON",
           "title": "Origin Recut Part 3",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 3 of 5",
-          "note": "Planned, not started. Locked plan (Jeff, Nov 3); follows Gemini/Flow plan in content/2026-W45/bonus-origin-recut/gemini-plan.md. Drop: Mon Nov 9, 8:00 PM PHT. Takes the slot the Buy 1 Take 1 carousel had. Jeff posts everything himself; nothing is scheduled or posted. Candidate matched review cut received Nov 6 (handoff/chatgpt/origin-part-3-matched-review.mp4). Claude Code frame-strip review done; full-motion check and Jeff approval pending. Hold behind Part 2: Part 2 must be approved and posted first. Jeff posts it himself; nothing scheduled. Jeff approved the Part 3 video and captions (Nov 6, 2026). Not posted or scheduled. Post after Part 2 is posted. File (local): handoff/chatgpt/origin-part-3-matched-review.mp4.",
+          "note": "Planned, not started. Locked plan (Jeff, Nov 3); follows Gemini/Flow plan in content/2026-W45/bonus-origin-recut/gemini-plan.md. Drop: Mon Nov 9, 8:00 PM PHT. Takes the slot the Buy 1 Take 1 carousel had. Jeff posts everything himself; nothing is scheduled or posted. Candidate matched review cut received Nov 6 (handoff/chatgpt/origin-part-3-matched-review.mp4). Claude Code frame-strip review done; full-motion check and Jeff approval pending. Hold behind Part 2: Part 2 must be approved and posted first. Jeff posts it himself; nothing scheduled. Jeff approved the Part 3 video and captions (Nov 6, 2026). Not posted or scheduled. Post after Part 2 is posted. File (local): handoff/chatgpt/origin-part-3-matched-review.mp4. Approved by Jeff in Tito AI Studio (Nov 6). He posts it himself Mon Nov 9, 8 PM PHT. User-reported posted by Jeff (Nov 6, 2026) ahead of the Nov 9 slot; platform(s), exact time and metrics not independently verified. Check 3-second retention at 48h against Part 1 (15.4% on Meta) and Part 2.",
           "date": "Nov 9",
-          "status": "ready",
-          "url": null,
-          "boost": null
-        },
-        {
-          "day": "TUE",
-          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
-          "tag": "AI Tip Carousel · Small Business · Promo Math",
-          "note": "Moved to Tue/Thu/Sat (Jeff, Nov 5); test posting time, not verified best time; Jeff posts or schedules it himself. Content approved by Jeff (Nov 5); not posted or scheduled. Moved from Mon Nov 16 (originally Nov 9, which origin Part 3 took). Five 1080×1350 slides (Studio carousel render) with the approved Tito AI chibi and logo. Fictional dried-mango example: price ₱120, cost ₱70; Buy 1 Take 1 = −₱20 per set. S3 prompt is UNTESTED and S4 is a human-written illustrative example, not AI output (both labeled on the slides). Growth job: SAVE; hypothesis: a loss-visible hook plus one reusable prompt earns more saves per 1,000 views than W44/W45 Mon. Files: content/2026-W46/01-mon-ai-tip/ (brief.md, drafts/script.md, drafts/captions.md, drafts/slides/). Review in Studio Approve & Post. Drop: Tue Nov 10, 7:30 PM PHT (time-of-day test). No Buffer scheduling, posting or boost.",
-          "date": "Nov 10",
-          "status": "ready",
+          "status": "posted",
           "url": null,
           "boost": null
         },
@@ -1009,11 +999,11 @@
       "posts": [
         {
           "day": "MON",
-          "title": "OPEN — Studio series or new content (Jeff to decide)",
-          "tag": "New content slot",
-          "note": "Open slot (Buy 1 Take 1 moved to Tue Nov 10, Jeff, Nov 5). Former drop: Mon Nov 16, 8:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
+          "tag": "AI Tip Carousel · Small Business · Promo Math",
+          "note": "Studio post 2026-w46-01-mon-ai-tip. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6). Moved from W46 Tue Nov 10.",
           "date": "Nov 16",
-          "status": "planned",
+          "status": "ready",
           "url": null,
           "boost": null
         },
@@ -1029,11 +1019,11 @@
         },
         {
           "day": "WED",
-          "title": "OPEN — Studio series or new content (Jeff to decide)",
+          "title": "Gemini ang Gagawa ng Quiz",
           "tag": "New content slot",
-          "note": "Open slot (Guro quiz handout moved to Thu Nov 12, Jeff, Nov 5). Former drop: Wed Nov 18, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Studio post 2026-w47-02-wed-demo. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
           "date": "Nov 18",
-          "status": "planned",
+          "status": "ready",
           "url": null,
           "boost": null
         },
@@ -1049,11 +1039,11 @@
         },
         {
           "day": "FRI",
-          "title": "OPEN — Studio series or new content (Jeff to decide)",
+          "title": "Ginamit ng Anak Ko ang AI sa Assignment",
           "tag": "New content slot",
-          "note": "Open slot (parent/child AI assignment story moved to Sat Nov 14, Jeff, Nov 5). Former drop: Fri Nov 20, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Studio post 2026-w47-03-fri-inspiration. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
           "date": "Nov 20",
-          "status": "planned",
+          "status": "ready",
           "url": null,
           "boost": null
         },
@@ -1077,31 +1067,31 @@
       "posts": [
         {
           "day": "MON",
-          "title": "OPEN — Studio series or new content (Jeff to decide)",
+          "title": "Na-lock Daw ang Account Mo?",
           "tag": "New content slot",
-          "note": "Open slot (suspicious-text/OTP tip moved to Tue Nov 17, Jeff, Nov 5). Former drop: Mon Nov 23, 8:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Studio post 2026-w48-01-mon-ai-tip. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
           "date": "Nov 23",
-          "status": "planned",
+          "status": "ready",
           "url": null,
           "boost": null
         },
         {
           "day": "WED",
-          "title": "OPEN — Studio series or new content (Jeff to decide)",
+          "title": "Galit ang Customer, Mag-practice Muna",
           "tag": "New content slot",
-          "note": "Open slot (BPO angry-customer practice moved to Thu Nov 19, Jeff, Nov 5). Former drop: Wed Nov 25, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Studio post 2026-w48-02-wed-demo. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
           "date": "Nov 25",
-          "status": "planned",
+          "status": "ready",
           "url": null,
           "boost": null
         },
         {
           "day": "FRI",
-          "title": "OPEN — Studio series or new content (Jeff to decide)",
+          "title": "Saan Mapupunta ang 13th Month?",
           "tag": "New content slot",
-          "note": "Open slot (13th-month pay plan moved to Sat Nov 21, Jeff, Nov 5). Former drop: Fri Nov 27, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Studio post 2026-w48-03-fri-inspiration. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
           "date": "Nov 27",
-          "status": "planned",
+          "status": "ready",
           "url": null,
           "boost": null
         }

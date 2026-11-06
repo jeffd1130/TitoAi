@@ -7,7 +7,7 @@ Cron: 0 8 * * 1  (Mac on PHT — direct hour, no offset needed)
 import urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 
-BOT_TOKEN = "8960239761:AAFKehuxbPQTkB81CnGY3QtSf1JMFUe2qIg"
+BOT_TOKEN = os.environ.get("TITO_TELEGRAM_TOKEN") or open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".telegram-token")).read().strip()   # gitignored
 CHAT_ID = "8325608814"
 PHT = timezone(timedelta(hours=8))
 now = datetime.now(PHT)
