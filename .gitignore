@@ -56,3 +56,4 @@ handoff/chatgpt/*.mp4
 handoff/chatgpt/*.mov
 .telegram-token
 __pycache__/
+studio/artifacts/out/

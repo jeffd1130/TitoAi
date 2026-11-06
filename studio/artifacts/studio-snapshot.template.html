@@ -1,0 +1,240 @@
+<title>Tito AI Studio Snapshot</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<style>
+/* Layout: sticky studio bar with tabs; board = two working columns over a results band and the calendar; post lists are stacked cards. */
+:root {
+  --bg: #FBF8F1; --surface: #FFFFFF; --ink: #0A0F1E; --muted: #5B6275; --line: #E6E1D6;
+  --gold: #B97706; --gold-soft: #FDF0D3; --teal: #0D9488; --teal-soft: #DDF3F0; --coral: #C2462B; --coral-soft: #FBE4DD;
+  --bar: #0A0F1E; --bar-ink: #F7F3EA;
+  --display: "Bebas Neue", "Oswald", Impact, sans-serif; --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0A0F1E; --surface: #121A2E; --ink: #F2EEE4; --muted: #9AA3B8; --line: #22304D;
+  --gold: #FBBF24; --gold-soft: #3A2C0B; --teal: #2DD4BF; --teal-soft: #0E2F2D; --coral: #F08A70; --coral-soft: #3A1D16;
+  --bar: #05080F; --bar-ink: #F7F3EA; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0A0F1E; --surface: #121A2E; --ink: #F2EEE4; --muted: #9AA3B8; --line: #22304D;
+  --gold: #FBBF24; --gold-soft: #3A2C0B; --teal: #2DD4BF; --teal-soft: #0E2F2D; --coral: #F08A70; --coral-soft: #3A1D16;
+  --bar: #05080F; --bar-ink: #F7F3EA; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bar); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bar); color: var(--bar-ink); }
+header .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding-block: 10px; }
+.brand { font-family: var(--display); font-size: 28px; letter-spacing: .04em; line-height: 1; }
+.brand span { color: #F59E0B; }
+nav { display: flex; gap: 4px; flex-wrap: wrap; }
+nav a { color: var(--bar-ink); opacity: .72; text-decoration: none; padding: 6px 12px; border-radius: 999px; font-weight: 500; font-size: 14px; }
+nav a[aria-current="page"] { opacity: 1; background: #F59E0B; color: #0A0F1E; }
+nav a:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.stamp { margin-left: auto; font-size: 12px; opacity: .7; }
+main { padding-block: 24px 48px; }
+h2 { font-family: var(--display); font-weight: 400; font-size: 30px; letter-spacing: .03em; margin: 0 0 4px; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0 0 20px; max-width: 65ch; }
+.label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 20px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
+.panel h3 { margin: 0 0 12px; font-size: 15px; display: flex; gap: 8px; align-items: center; }
+.item { display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); }
+.item:first-of-type { border-top: 0; }
+.item b { font-weight: 600; display: block; }
+.item em { font-style: normal; color: var(--muted); font-size: 13px; }
+.empty { color: var(--muted); padding: 10px 0; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 14px 0; }
+.kpi { border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+.kpi .v { font-family: var(--display); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.kpi .d { font-size: 12px; font-weight: 700; }
+.down { color: var(--coral); } .up { color: var(--teal); }
+.topline { margin: 0; padding-left: 18px; display: grid; gap: 6px; max-width: 80ch; }
+.boost { margin-top: 12px; padding: 12px 14px; background: var(--gold-soft); border-radius: 10px; max-width: 80ch; }
+.cal { display: grid; gap: 16px; }
+.week { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: start; }
+.week .wk { font-family: var(--display); font-size: 26px; line-height: 1; }
+.week .wk small { display: block; font-family: var(--body); font-size: 12px; color: var(--muted); margin-top: 4px; }
+.days { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.day { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.day .when { font-size: 12px; color: var(--muted); font-weight: 600; }
+.day .t { font-weight: 600; margin: 2px 0 6px; overflow-wrap: anywhere; }
+.pill { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--line); color: var(--muted); }
+.pill.posted { background: var(--teal-soft); color: var(--teal); }
+.pill.ready, .pill.approved { background: var(--gold-soft); color: var(--gold); }
+.pill.warn { background: var(--coral-soft); color: var(--coral); }
+.posts { display: grid; gap: 16px; }
+.post { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.post .thumb { width: 150px; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 10px; object-fit: cover; background: var(--line); display: block; }
+.post .thumb.vid { aspect-ratio: 9 / 16; }
+.post h4 { margin: 0; font-size: 17px; text-wrap: balance; }
+.meta { color: var(--muted); font-size: 13px; margin: 2px 0 8px; }
+.row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+pre.cap { white-space: pre-wrap; font-family: var(--body); font-size: 14px; margin: 8px 0 0; padding: 10px 12px; background: var(--bg); border-radius: 8px; overflow-wrap: anywhere; }
+button.copy { font: inherit; font-size: 12px; font-weight: 700; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+a.link { color: var(--teal); font-weight: 600; }
+.note { color: var(--muted); font-size: 13px; margin-top: 24px; }
+.mt { margin-top: 20px; }
+.lane { padding: 10px 0; border-top: 1px solid var(--line); }
+.lane:first-of-type { border-top: 0; }
+.lane .label { margin-bottom: 8px; }
+.nodes { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }
+.node { flex: 1 1 170px; max-width: 240px; min-width: 0; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--bg); }
+.node.live { border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal-soft); }
+.node .nh { display: flex; gap: 6px; align-items: center; }
+.node .nr { font-size: 12px; color: var(--muted); margin: 2px 0 6px; }
+.node .nl { font-size: 12px; overflow-wrap: anywhere; }
+.node .nl em { font-style: normal; color: var(--muted); }
+.arrow { align-self: center; color: var(--muted); font-weight: 700; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); margin-right: 6px; }
+.dot.running { background: var(--teal); } .dot.failed { background: var(--coral); } .dot.done, .dot.approved { background: var(--gold); }
+.ask textarea { font: inherit; width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: var(--bg); color: var(--ink); resize: vertical; margin: 8px 0; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+.send-ask { display: inline-block; text-decoration: none; font-weight: 700; border-radius: 10px; padding: 9px 16px; background: #2AABEE; color: #FFFFFF; }
+a.mob { color: var(--bar-ink); font-weight: 700; text-decoration: none; font-size: 14px; }
+@media (max-width: 640px) { .arrow { display: none; } .node { max-width: none; } }
+@media (max-width: 640px) {
+  .week { grid-template-columns: 1fr; }
+  .days { grid-template-columns: 1fr; }
+  .post { grid-template-columns: 1fr; }
+  .post .thumb { width: 120px; }
+  .stamp { margin-left: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) { nav a { transition: background .15s; } }
+</style>
+
+<header><div class="wrap">
+  <div class="brand">TITO <span>AI</span> STUDIO</div>
+  <nav id="tabs">
+    <a href="#board">Board</a><a href="#approve">Approve &amp; Post</a><a href="#posted">Posted</a><a href="#calendar">Calendar</a>
+  </nav>
+  <a class="mob" id="mob" href="#" target="_blank" rel="noopener">📱 Mobile hub</a>
+  <div class="stamp" id="stamp"></div>
+</div></header>
+
+<main class="wrap">
+  <section id="v-board"></section>
+  <section id="v-approve" hidden></section>
+  <section id="v-posted" hidden></section>
+  <section id="v-calendar" hidden></section>
+  <p class="note">Read-only snapshot of Tito AI Studio. Approve, Mark posted and the agents work only in the Studio on Jeff's Mac (localhost:4545). Captions can be copied here.</p>
+</main>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const esc = (t) => String(t ?? '').replace(/[&<>"]/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function fmtSlot(s) {
+  if (!s) return 'No date yet';
+  const [d, t] = s.split('T'); const [y, m, dd] = d.split('-').map(Number); const [h, mi] = t.split(':').map(Number);
+  const wd = DAYS[new Date(Date.UTC(y, m - 1, dd)).getUTCDay()];
+  return `${wd}, ${MON[m - 1]} ${dd} · ${(h % 12) || 12}:${String(mi).padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'} PHT`;
+}
+const fmtAt = (ms) => new Date(ms).toLocaleString('en-US', {timeZone: 'Asia/Manila', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
+const PLAT = {tiktok: 'TikTok', instagram: 'Instagram', facebook: 'Facebook', seed: 'Seed comment'};
+const isPosted = (p) => Object.keys(p.posted).length > 0;
+const STATUS = {running: '🟢', failed: '🔴', review: '🟡'};
+
+function copyBtn(text) { return `<button class="copy" type="button" data-copy="${esc(text)}">Copy</button>`; }
+function postCard(p) {
+  const pills = [p.approved ? '<span class="pill approved">Approved</span>' : '<span class="pill warn">Needs approval</span>',
+    ...Object.keys(p.posted).map((k) => `<span class="pill posted">${PLAT[k] || k} ✓</span>`)].join('');
+  const caps = Object.entries(p.captions).map(([k, v]) => `<details><summary>${PLAT[k] || k} ${copyBtn(v)}</summary><pre class="cap">${esc(v)}</pre></details>`).join('');
+  const links = Object.entries(p.posted).filter(([, l]) => l).map(([k, l]) => `<a class="link" href="${esc(/^https?:/.test(l) ? l : 'https://' + l)}" target="_blank" rel="noopener">${PLAT[k]} post</a>`).join(' · ');
+  return `<article class="post">
+    ${p.thumb ? `<img class="thumb ${p.type === 'video' ? 'vid' : ''}" src="${p.thumb}" alt="${esc(p.title)} cover">` : `<div class="thumb ${p.type === 'video' ? 'vid' : ''}"></div>`}
+    <div style="min-width:0">
+      <h4>${esc(p.title)}</h4>
+      <div class="meta">📅 ${fmtSlot(p.slot)} · ${p.type === 'video' ? 'Video' : `${p.slides}-slide carousel`}</div>
+      <div class="row">${pills}</div>
+      ${p.mediaUrl ? `<p class="meta"><a class="link" href="${esc(p.mediaUrl)}" target="_blank" rel="noopener">Open ${p.type === 'video' ? 'video' : 'slide 1'}</a></p>` : ''}
+      ${links ? `<p class="meta">${links}</p>` : ''}
+      <p class="meta"><a class="link tglink" href="${D.links.bot}?start=send_${encodeURIComponent(p.id)}" target="_blank" rel="noopener">📨 Send to Telegram</a> <span>(tap Start in Telegram; media + captions arrive there to save or copy)</span></p>
+      ${caps || '<p class="meta">No captions file yet.</p>'}
+    </div></article>`;
+}
+
+function board() {
+  const now = D.generatedIso, soon = (() => { const d = new Date(now + ':00+08:00'); d.setDate(d.getDate() + 7); return d.toISOString(); })();
+  const due = (p) => p.slot && new Date(p.slot + ':00+08:00').toISOString() <= soon;
+  const T = D.tasks || {toMake: [], agents: [], handoffs: []};
+  const items = [
+    ...D.posts.filter((p) => !p.approved).map((p) => ['📝', `Approve: ${p.title}`, p.slot ? `Post ${fmtSlot(p.slot)}` : p.series]),
+    ...D.posts.filter((p) => p.approved && due(p) && Object.keys(p.posted).length < 3).sort((a, b) => a.slot.localeCompare(b.slot))
+      .map((p) => [p.slot < now ? '⚠️' : '📅', `Post it yourself: ${p.title}`, (p.slot < now ? 'Overdue · ' : '') + fmtSlot(p.slot)]),
+    ...T.toMake.map((m) => ['🎬', `Make: ${m.title}`, `Due ${fmtSlot(m.date + (m.day === 'MON' ? 'T20:00' : 'T19:00'))}`]),
+    ...T.handoffs.map((h) => ['🤝', `ChatGPT clip waiting: ${h}`, 'Hand to Claude in the Studio']),
+    ...D.runs.filter((r) => r.status === 'failed').slice(0, 3).map((r) => ['❗', `Failed: ${r.title}`, `${r.who} · ${fmtAt(r.at)}`]),
+  ];
+  const it = ([i, t, s]) => `<div class="item"><span>${i}</span><div><b>${esc(t)}</b><em>${esc(s)}</em></div></div>`;
+  const R = D.results;
+  const kpi = (k) => { const d = String(k.delta || ''); return `<div class="kpi"><div class="label">${esc(k.label)} · ${esc(k.window)}</div><div class="v">${esc(k.value ?? '–')}</div>${d ? `<div class="d ${d.startsWith('-') ? 'down' : 'up'}">${esc(d)}</div>` : ''}</div>`; };
+  const node = (n) => `<div class="node ${n.last && n.last.status === 'running' ? 'live' : ''}"><div class="nh"><span>${n.emoji}</span><b>${esc(n.name)}</b></div><div class="nr">${esc(n.role)}</div>` +
+    (n.last ? `<div class="nl"><span class="dot ${esc(n.last.status)}"></span>${esc(n.last.status)} · ${fmtAt(n.last.at)}<br><em>${esc(n.last.title)}</em></div>` : '') + '</div>';
+  const lane = (id, label) => `<div class="lane"><div class="label">${label}</div><div class="nodes">${D.workflow.filter((n) => n.lane === id).map(node).join('<span class="arrow" aria-hidden="true">→</span>')}</div></div>`;
+  const approvals = D.posts.filter((p) => !p.approved);
+  $('#v-board').innerHTML = `<h2>Board</h2><p class="lede">What's waiting on you, what the agents did, the workflow, handoffs, the calendar and the latest results.</p>
+    <div class="cols">
+      <div class="panel"><h3>⏳ Waiting on you</h3>${items.map(it).join('') || '<div class="empty">Nothing waiting on you.</div>'}</div>
+      <div class="panel"><h3>🤖 Agent activity</h3>${D.runs.slice(0, 10).map((r) => it([STATUS[r.status] || '⚪', `${r.who} · ${r.title}`, `${r.status} · ${fmtAt(r.at)}`])).join('') || '<div class="empty">No activity yet.</div>'}</div>
+    </div>
+    ${askBox()}
+    <div class="panel mt"><h3>🔀 Workflow</h3>${lane('plan', 'Plan')}${lane('video', 'Video lane · Flow first, Gemini after credits')}${lane('carousel', 'Carousel fallback · no video credits')}${lane('finish', 'Finish')}</div>
+    <div class="cols mt">
+      <div class="panel"><h3>🤝 ChatGPT → Claude handoff</h3>${D.handoffs.map((h) => it([h.status === 'new' ? '🆕' : h.status === 'done' ? '✅' : '🛠️', h.id, `${h.status}${h.note ? ' · ' + h.note.split('\n').find((l) => l.trim() && !l.startsWith('#')) : ''}`])).join('') || '<div class="empty">No handoffs.</div>'}</div>
+      <div class="panel"><h3>✅ Your approvals · final only</h3>${approvals.map((p) => it(['📝', p.title, p.slot ? fmtSlot(p.slot) : p.series])).join('') || '<div class="empty">Nothing to approve. Research and scripts flow on; only final videos and posts land here.</div>'}</div>
+    </div>
+    <div class="panel mt"><h3>🗓️ Content calendar</h3>${calendarHtml()}</div>
+    <div class="panel mt"><h3>📊 Results · Tito Numero <span class="pill">Pulled ${esc(R.pulled || '–')}</span></h3>
+      <div class="kpis">${R.kpis.map(kpi).join('')}</div>
+      <ul class="topline">${R.topline.map((t) => `<li>${t}</li>`).join('')}</ul>
+      ${R.boost ? `<div class="boost"><span class="label">Boost call</span><div>${R.boost}</div></div>` : ''}
+    </div>`;
+}
+function askBox() {
+  return `<div class="panel mt ask"><h3>💬 Message Tito AI</h3>
+    <div class="chips">${['Ano ang status ngayon?', 'Simulan ang plan para sa Part 4', 'Ano ang naghihintay sa approval ko?', '/send', '/posts'].map((c) => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+    <textarea id="ask-text" rows="2" placeholder="Hal. Gawin na natin ang plan para sa Part 4 (Wed Nov 11)."></textarea>
+    <div class="row"><a class="send-ask" id="ask-send" href="${D.links.bot}" target="_blank" rel="noopener">Send to Tito AI</a><span class="meta" id="ask-note">Copies your message and opens @titoaiph_bot; paste and send. The reply comes back in Telegram. Needs the Studio running on your Mac.</span></div></div>`;
+}
+function calendarHtml() {
+  return '<div class="cal">' + D.weeks.map((w) => `<div class="week"><div class="wk">${esc(w.week)}<small>${esc(w.range || '')}</small></div><div class="days">` +
+    w.posts.map((p) => `<div class="day"><div class="when">${esc(p.day)} · ${esc(p.date || '')}</div><div class="t">${esc(p.title)}</div><span class="pill ${esc(p.status)}">${esc(p.status)}</span></div>`).join('') +
+    '</div></div>').join('') + '</div>';
+}
+function calendar() {
+  $('#v-calendar').innerHTML = '<h2>Calendar</h2><p class="lede">Mon 8 PM, Wed 7 PM and Fri 7 PM PHT. You post each one yourself.</p>' + calendarHtml();
+}
+function lists() {
+  const bySlot = (a, b) => (a.slot || '9').localeCompare(b.slot || '9');
+  const todo = D.posts.filter((p) => !isPosted(p)).sort(bySlot), done = D.posts.filter(isPosted).sort((a, b) => bySlot(b, a));
+  $('#v-approve').innerHTML = `<h2>Approve &amp; Post</h2><p class="lede">Unposted posts in calendar order.</p><div class="posts">${todo.map(postCard).join('') || '<p class="empty">Nothing left to post.</p>'}</div>`;
+  $('#v-posted').innerHTML = `<h2>Posted</h2><p class="lede">Marked posted, newest first.</p><div class="posts">${done.map(postCard).join('') || '<p class="empty">Nothing posted yet.</p>'}</div>`;
+}
+function route() {
+  const v = ['board', 'approve', 'posted', 'calendar'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'board';
+  document.querySelectorAll('main > section').forEach((s) => { s.hidden = s.id !== 'v-' + v; });
+  document.querySelectorAll('#tabs a').forEach((a) => { if (a.getAttribute('href') === '#' + v) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+}
+document.addEventListener('click', (e) => {
+  const c = e.target.closest('[data-chip]'); if (c) { $('#ask-text').value = c.dataset.chip; $('#ask-text').focus(); return; }
+  const a = e.target.closest('#ask-send'); if (!a) return;
+  const text = $('#ask-text').value.trim(), note = $('#ask-note');
+  if (!text) { e.preventDefault(); note.textContent = 'Type a message first.'; $('#ask-text').focus(); return; }
+  navigator.clipboard.writeText(text).then(() => { note.textContent = 'Copied. In Telegram, paste it and tap send.'; })
+    .catch(() => { $('#ask-text').select(); note.textContent = 'Copy your message, then paste it in Telegram and send.'; });
+});
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-copy]'); if (!b) return;
+  e.preventDefault();
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+  catch { const pre = b.closest('details')?.querySelector('pre'); if (pre) { b.closest('details').open = true; const r = document.createRange(); r.selectNodeContents(pre); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = 'Selected'; } }
+  setTimeout(() => { b.textContent = 'Copy'; }, 1500);
+});
+$('#stamp').innerHTML = D.live ? 'Live · updated ' + esc(D.generated) : `Snapshot · ${esc(D.generated)} · <a href="${D.links.liveStudio}" target="_blank" rel="noopener" style="color:#F59E0B">Open live hub</a>`;
+$('#mob').href = D.links.mobile;
+board(); calendar(); lists(); route();
+addEventListener('hashchange', route);
+</script>

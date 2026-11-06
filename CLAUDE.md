@@ -33,6 +33,8 @@ Local dashboard: `bash studio/start.sh`, then http://localhost:4545. It runs the
 - **Approve & Post**: unposted posts in calendar order, with captions, Copy, Approve, Mark posted, a 📅 posting-time guide and 📨 Send to Telegram (media + one message per caption).
 - **Posted**: anything marked posted, newest first.
 - **ChatGPT handoff**: ChatGPT saves a video + same-name `.md` note in `handoff/chatgpt/`; Claude Code reviews the frames and finishes it. Jeff approves only the final video and post.
+- **Live hub** (Nov 6): `https://jeffd1130.github.io/TitoAi/hub/` (laptop) and `/hub/m.html` (phone). The Studio re-exports `docs/hub/data.json` with `studio/artifacts/export.py --pages --push` after changes (at most every 5 min; `TITO_HUB_SYNC=0` turns it off). Public, `noindex`. The claude.ai artifacts are snapshots that link to it.
+- **Phone via Telegram**: `scripts/bot_listener.py` (launchd `com.titoai.bot`) handles `/send [post-id]`, `/posts`, and passes any other text to Tito AI in the Studio, replying when done.
 - **Carousel fallback** (no video credits): Ate Disenyo writes `drafts/carousel.json` (`studio/carousel-schema.md`), rendered to 1080×1350 slides with Remotion (`TitoCarousel`).
 
 ---

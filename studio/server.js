@@ -120,7 +120,26 @@ const clients = new Set();
 function broadcast(msg) {
   const line = `data: ${JSON.stringify(msg)}\n\n`;
   for (const res of clients) res.write(line);
+  if (msg.type !== 'board' && msg.type !== 'status') hubSync();
 }
+
+// ---------- live hub on GitHub Pages (docs/hub, public) ----------
+// After changes, re-export docs/hub/data.json and push it (at most every 5 min) so the laptop and
+// phone hubs stay in sync. Set TITO_HUB_SYNC=0 to turn it off.
+let hubTimer = null, hubBusy = false, hubLast = 0;
+function hubSync() {
+  if (process.env.TITO_HUB_SYNC === '0' || hubTimer) return;
+  hubTimer = setTimeout(() => {
+    hubTimer = null;
+    if (hubBusy) return hubSync();
+    hubBusy = true; hubLast = Date.now();
+    const child = spawn('python3', [path.join(ROOT, 'studio', 'artifacts', 'export.py'), '--pages', '--push'], {cwd: ROOT, env: process.env});
+    let out = '';
+    child.stdout.on('data', (d) => (out += d)); child.stderr.on('data', (d) => (out += d));
+    child.on('close', () => { hubBusy = false; console.log('[hub]', out.trim().split('\n').pop() || 'done'); });
+  }, Math.max(90e3, hubLast + 300e3 - Date.now()));
+}
+setInterval(hubSync, 15 * 60e3);   // also catches schedule.json and report edits made outside the Studio
 const pending = new Map();
 function pushRun(run) {                                     // throttle full-run broadcasts per card
   if (pending.has(run.id)) return;
