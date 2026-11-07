@@ -15,9 +15,9 @@ Older production notes, audits and health checks (May–Nov 3, 2026) are in `rep
 ## Ground rules (current)
 
 - **Language (Nov 6):** Taglish is only for content (scripts, captions, slides, voiceover). Everything else is English: the Studio board, hub, chat replies, Telegram messages, docs and reports. Agent names stay as they are (Tita Saliksik, Kuya Sulat, Ate Disenyo, Kuya Kamera, Lola Suri).
-- **Claude Code owns all production tasks** (Nov 3): scripts, captions, carousels, videos, `docs/schedule.json`, review pages, these `.md` files. ChatGPT/Codex and Gemini may draft; Claude Code reviews and finishes.
+- **Claude Code owns all production tasks** (Nov 3): scripts, captions, carousels, videos, `docs/schedule.json`, review pages, these `.md` files. Claude Code also makes the video clips itself (Nov 7, see Video order); ChatGPT is no longer in the video lane.
 - **Jeff approves and posts everything himself.** Never post, schedule or boost. Calendar uploading (Kuya Iskedyul) was turned off Nov 5; the schedule is only a posting guide.
-- **Video order:** Google Flow first (Veo 3.1 Lite, 9:16, x1, "Return silent videos" ON, chibi as Ingredient; 50 free credits a day, 10 per 8s clip, often blocked about 10 PM–1 AM PHT). Gemini Videos only after Flow credits run out. Keep Jeff's original audio. Don't pay for HeyGen or other tools without his OK.
+- **Video order:** Claude Code drives Google Flow itself in Jeff's Tito AI Chrome profile (Nov 7): Flow first (Veo 3.1 Lite, 9:16, x1, "Return silent videos" ON, chibi as Ingredient; 50 free credits a day, 10 per 8s clip, often blocked about 10 PM–1 AM PHT). Gemini Videos only after Flow credits run out. Save each clip with a same-name `.md` note (purpose, model, exact prompt) in `handoff/flow/`, check frames, reject drift. If a login or CAPTCHA appears, stop and ask Jeff. Keep Jeff's original audio. Don't pay for HeyGen or other tools without his OK.
 - **Same chibi every shot** (clean-shaven, white tee, laptop fully in frame). Reject drifted clips.
 - **No fabrication.** Never invent quotes, metrics, comments or events. Label illustrations and fictional practice examples. No identifiable seminar attendees or client material without verified permission.
 - **Telegram only when asked** (or when Jeff presses a Studio button).
@@ -28,12 +28,12 @@ Older production notes, audits and health checks (May–Nov 3, 2026) are in `rep
 
 Local dashboard at http://localhost:4545. It starts at login and restarts itself if it stops (launchd `com.titoai.studio`, log `~/Library/Logs/titoai-studio.log`); after code changes restart it with `launchctl kickstart -k gui/$(id -u)/com.titoai.studio`. `bash studio/start.sh` just opens it. It runs the agents through Claude Code on Jeff's plan (no API). See `studio/README.md`.
 
-- **🗺️ Board**: Updates (waiting on Jeff + agent activity), live workflow, ChatGPT → Claude handoff inbox, final approvals, content calendar, Results (Tito Numero).
+- **🗺️ Board**: Updates (waiting on Jeff + agent activity), live workflow, Flow clip inbox, final approvals, content calendar, Results (Tito Numero).
 - **💬 Tito AI**: chief-of-staff chat (`tito-main`). It plans and starts the team (up to 8 steps per message).
 - **Agents**: 🔎 Tita Saliksik (research, short summary only), ✍️ Kuya Sulat (script + captions), 🎨 Ate Disenyo (carousel fallback), 🎬 Kuya Kamera (render), 🧐 Lola Suri (QA), 📊 Tito Numero (analyst).
 - **Approve & Post**: unposted posts in calendar order, with captions, Copy, Approve, Mark posted, a 📅 posting-time guide and 📨 Send to Telegram (media + one message per caption).
 - **Posted**: anything marked posted, newest first.
-- **ChatGPT handoff**: ChatGPT saves a video + same-name `.md` note in `handoff/chatgpt/`; Claude Code reviews the frames and finishes it. Jeff approves only the final video and post.
+- **Flow clips**: Claude Code saves each clip + same-name `.md` note in `handoff/flow/`; **Hand to Claude** sends it to Tito AI, which checks the frames and finishes it. Jeff approves only the final video and post.
 - **Live hub** (Nov 6): `https://jeffd1130.github.io/TitoAi/hub/` (laptop) and `/hub/m.html` (phone). The Studio re-exports `docs/hub/data.json` with `studio/artifacts/export.py --pages --push` after changes (at most every 5 min; `TITO_HUB_SYNC=0` turns it off). Public, `noindex`. The claude.ai artifacts are snapshots that link to it.
 - **Phone via Telegram**: `scripts/bot_listener.py` (launchd `com.titoai.bot`) handles `/send [post-id]`, `/posts`, and passes any other text to Tito AI in the Studio, replying when done.
 - **Carousel fallback** (no video credits): Ate Disenyo writes `drafts/carousel.json` (`studio/carousel-schema.md`), rendered to 1080×1350 slides with Remotion (`TitoCarousel`).
@@ -52,7 +52,7 @@ Jeff's Mac runs on PHT, so cron and post times need no conversion.
 
 **Current (Nov 6, 2026):**
 - W45 (Nov 2–8): Mon "HM po?" posted; origin recut Part 1 posted Wed Nov 4; Part 2 (`docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4`, approved) posts Fri Nov 6, 7 PM. Parts 3–5 wait until Jeff says go. Plan and captions: `content/2026-W45/bonus-origin-recut/` (`captions.md`, `gemini-plan.md`). Remotion source: `w44-friday-motion-sample/src/OriginChibiGemini.tsx`.
-- W46 (Jeff, Nov 6): Mon Nov 9 Origin Part 3 (approved, `handoff/chatgpt/origin-part-3-matched-review.mp4`), Wed Nov 11 Part 4, Fri Nov 13 Part 5. Parts 4–5 still need to be made (Flow → ChatGPT handoff → Claude Code finish).
+- W46 (Jeff, Nov 6): Mon Nov 9 Origin Part 3 (approved, `handoff/flow/origin-part-3-matched-review.mp4`), Wed Nov 11 Part 4 (made Nov 7 by Claude Code in Flow: `docs/media/tito-ai-origin-recut/part-4-chibi-final.mp4`, waiting on Jeff's approval), Fri Nov 13 Part 5 (still to make; Flow credits reset daily; start frame `docs/media/tito-ai-origin-recut/flow-part-4/part-4-last-frame-for-part-5.png`).
 - Carousels are held until after Part 5: W47 Mon "Buy 1 Take 1" (moved from W46), W47 Wed/Fri, then W48 Mon/Wed/Fri. Drafts are in `content/2026-W46`–`W48` and in the Studio.
 - Post status lives in the Studio (`studio/data/posts-state.json`) and `docs/schedule.json`.
 
@@ -103,7 +103,7 @@ content/<YYYY-W##>/<slot>/   raw/ · drafts/ (script.md, captions.md, slides/) �
 content/_template/           copy for a new week
 content/strategy/            strategy memos
 studio/                      Tito AI Studio (server.js, public/, posts.json, data/)
-handoff/chatgpt/             ChatGPT video handoffs
+handoff/flow/                Flow/Gemini clips made by Claude Code (+ .md notes)
 w44-friday-motion-sample/    Remotion project (src/; out/ is scratch)
 Videos/, Images/             raw footage and photos (keep)
 reports/                     weekly reports, metrics in reports/data/, history-2026.md

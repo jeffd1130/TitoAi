@@ -54,7 +54,7 @@ Mga Pamangkin, ito ang Part 2. Kailangan ng side hustle ko ng website, at siguro
 
 Tama ba hula mo? "How do I make a website?" 😄 Ikaw, ano ang una mong tinanong sa AI? 👇
 
-## Part 3 — animated chibi version (APPROVED by Jeff Nov 6 (not yet posted): handoff/chatgpt/origin-part-3-matched-review.mp4)
+## Part 3 — animated chibi version (APPROVED by Jeff Nov 6 (not yet posted): handoff/flow/origin-part-3-matched-review.mp4)
 
 For the animated chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow). Hold behind Part 2.
 
@@ -79,6 +79,32 @@ Mga Pamangkin, ito ang Part 3. Wala akong background sa web development, at may 
 **Seed comment (pin within 5 min)**
 
 Kung may dumating na opportunity na wala kang background, susubukan mo ba o hindi muna? Comment mo: SUBOK o HINTAY 👇
+
+## Part 4 — animated chibi version (CANDIDATE, pending Jeff approval: docs/media/tito-ai-origin-recut/part-4-chibi-final.mp4)
+
+For the animated chibi cut made in Google Flow by Claude Code (Nov 7). The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow). Posts Wed Nov 11, 7:00 PM PHT, after Part 3.
+
+**TikTok**
+
+Trial and error? Oo naman. Natututo ka habang nag-e-experiment, lalo na kapag tama ang tanong mo at naiintindihan mo ang AI. Ngayon, andito ako sa Silicon Valley, kung saan nagsimula ang AI. Part 4: animated si Tito AI, pero boses at kuwento ko 'yan. Follow Tito AI para sa Part 5.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #TrialAndError #TitoAIStory
+
+**Instagram**
+
+Hindi perpekto ang unang try, at okay lang 'yon. Nag-experiment ako, nagkamali, nagtanong ulit nang mas malinaw, at natuto. Doon nagsimulang gumalaw ang lahat, hanggang dito sa Silicon Valley. Animated ang Tito AI dito, pero totoo ang boses at kuwento. Follow Tito AI para sa huling parte. 💡
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #LearnWithAI #TitoAIStory
+
+**Facebook**
+
+Mga Pamangkin, ito ang Part 4. Trial and error talaga ang pag-aaral ng AI: mag-experiment, magtanong nang tama, at intindihin ang sagot bago gamitin. Malayo ang mararating mo kapag ganoon. Ako, andito na ngayon sa Silicon Valley, kung saan nagsimula ang AI. Animated na Tito AI ang kasama natin, pero boses at kuwento ko 'yan. Follow Tito AI para sa Part 5: AI ang tulong, tao ang galaw.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #PinoyLearning #GrowthMindsetPH
+
+**Seed comment (pin within 5 min)**
+
+Ano ang unang bagay na sinubukan mo sa AI na hindi gumana agad? Comment mo 👇
 
 ## Part 1 — original footage version (archival)
 

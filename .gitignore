@@ -52,8 +52,8 @@ titoai.png
 studio/data/
 
 # ChatGPT handoff videos (large binaries; Claude places finals in docs/media)
-handoff/chatgpt/*.mp4
-handoff/chatgpt/*.mov
+handoff/flow/*.mp4
+handoff/flow/*.mov
 .telegram-token
 __pycache__/
 studio/artifacts/out/

@@ -129,11 +129,25 @@
     "series": "W46 · Monday 8:00 PM PHT · Origin recut Part 3",
     "type": "video",
     "media": [
-      "handoff/chatgpt/origin-part-3-matched-review.mp4"
+      "handoff/flow/origin-part-3-matched-review.mp4"
     ],
     "captions": {
       "file": "content/2026-W45/bonus-origin-recut/captions.md",
       "section": "Part 3 — animated chibi version"
+    }
+  },
+  {
+    "id": "origin-p4",
+    "title": "Origin story · Part 4 — Trial and error? Oo naman.",
+    "series": "W46 · Wednesday 7:00 PM PHT · Origin recut Part 4",
+    "type": "video",
+    "media": [
+      "docs/media/tito-ai-origin-recut/part-4-chibi-final.mp4"
+    ],
+    "cover": "docs/media/tito-ai-origin-recut/part-4-chibi-cover.jpg",
+    "captions": {
+      "file": "content/2026-W45/bonus-origin-recut/captions.md",
+      "section": "Part 4 — animated chibi version"
     }
   },
   {
