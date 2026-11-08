@@ -973,9 +973,9 @@
           "day": "FRI",
           "title": "Origin Recut Part 5",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 5 of 5",
-          "note": "Planned, not started. Drop: Fri Nov 13, 7:00 PM PHT. Jeff posts everything himself; nothing is scheduled or posted.",
+          "note": "Drop: Fri Nov 13, 7:00 PM PHT. Video made Nov 9: Claude Code generated the clips in Google Flow (Veo 3.1 Lite) and rendered OriginChibiGeminiP5 with Jeff's original voice. File: docs/media/tito-ai-origin-recut/part-5-chibi-final.mp4. Waiting on Jeff's approval in Approve & Post. Jeff posts it himself; nothing is scheduled or posted.",
           "date": "Nov 13",
-          "status": "planned",
+          "status": "draft",
           "url": null,
           "boost": null
         },

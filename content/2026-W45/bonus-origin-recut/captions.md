@@ -106,6 +106,32 @@ Mga Pamangkin, ito ang Part 4. Trial and error talaga ang pag-aaral ng AI: mag-e
 
 Ano ang unang bagay na sinubukan mo sa AI na hindi gumana agad? Comment mo 👇
 
+## Part 5 — animated chibi version (CANDIDATE, pending Jeff approval: docs/media/tito-ai-origin-recut/part-5-chibi-final.mp4)
+
+For the animated chibi cut made in Google Flow by Claude Code (Nov 9). The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow). Final part of the origin story. Posts Fri Nov 13, 7:00 PM PHT, after Part 4.
+
+**TikTok**
+
+AI ang tulong, tao ang galaw. Journey talaga ito, at sa tulong ng AI, kinaya ko. Ngayon gumagawa na ako ng social media plans kasama sina Claude at Gemini. Part 5, ang huling parte: animated si Tito AI, pero boses at kuwento ko 'yan. Follow Tito AI, araw-araw may matututunan tayo.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAIStory #LearnWithAI
+
+**Instagram**
+
+Ito na ang huling parte ng kuwento. Mula walang background hanggang gumagawa na ng social media plans kasama sina Claude at Gemini. Tumulong ang AI, pero ako pa rin ang kumilos. Animated ang Tito AI dito, pero totoo ang boses at kuwento. Follow Tito AI at samahan mo ako sa pag-aaral ng AI araw-araw. 💡
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #TitoAIStory #AIForBeginnersPH
+
+**Facebook**
+
+Mga Pamangkin, ito ang Part 5, ang huling parte ng origin story. Naging journey talaga ito, at sa tulong ng AI, nakaya ko. Ngayon gumagawa na ako ng social media plans kasama sina Claude at Gemini. Pero tandaan: AI ang tulong, tao ang galaw. Animated na Tito AI ang kasama natin, pero boses at kuwento ko 'yan. Follow Tito AI, araw-araw may matututunan tayo. AI para sa 'ting lahat.
+
+#TitoAIPH #MgaPamangkin #AIParaSaAtin #PinoyLearning #TitoAIStory
+
+**Seed comment (pin within 5 min)**
+
+Kung gagamit ka ng AI bukas para sa isang bagay, ano ang uunahin mo? Comment mo 👇
+
 ## Part 1 — original footage version (archival)
 
 **TikTok**
