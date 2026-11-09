@@ -29,7 +29,7 @@ Fill **Google Meet Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Traba
 | Mon Dec 7, 8 PM | W50 Mon | What you'll learn in Class #1 (agenda + exercise preview) | Carousel | C/B | Reserve seat | To brief (Tito Benta + Kuya Sulat) |
 | Wed Dec 9, 7 PM | W50 Wed | Seminar Diary — CJEF hands-on seminar (existing footage, no identifiable attendees) | Reel | A | Comment `TRAINING` | To brief |
 | Fri Dec 11, 7 PM | W50 Fri | Last call — Tito explains who the class is for | Reel | All | Reserve seat | To brief |
-| Sat Dec 12, 2 PM | Class | **Zoom Class #1** | Zoom | — | — | Script: `content/business/live-classes/class-01-libre-muna.md` |
+| Sat Dec 12, 2 PM | Class | **Google Meet Class #1** | Google Meet | — | — | Script: `content/business/live-classes/class-01-libre-muna.md` |
 
 Origin Parts 3–5 stay as planned in W46 (Nov 9, 11, 13).
 
