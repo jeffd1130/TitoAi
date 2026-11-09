@@ -1,7 +1,7 @@
 [
   {
     "id": "2026-w47-02-wed-demo",
-    "title": "W47 Wed · Gemini ang Gagawa ng Quiz",
+    "title": "W47 Wed · Libre Muna #2: Gemini ang Gagawa ng Quiz",
     "series": "W47 · Wednesday 7:00 PM PHT",
     "type": "carousel",
     "media": [
@@ -49,7 +49,7 @@
   },
   {
     "id": "2026-w47-03-fri-inspiration",
-    "title": "W47 Fri · Ginamit ng Anak Ko ang AI sa Assignment",
+    "title": "W49 Fri · Ginamit ng Anak Ko ang AI sa Assignment",
     "series": "W47 · Friday 7:00 PM PHT",
     "type": "carousel",
     "media": [
@@ -81,7 +81,7 @@
   },
   {
     "id": "2026-w46-01-mon-ai-tip",
-    "title": "W47 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
+    "title": "W49 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
     "series": "W47 · Monday 8:00 PM PHT",
     "type": "carousel",
     "media": [
@@ -129,12 +129,13 @@
     "series": "W46 · Monday 8:00 PM PHT · Origin recut Part 3",
     "type": "video",
     "media": [
-      "handoff/flow/origin-part-3-matched-review.mp4"
+      "docs/media/tito-ai-origin-recut/part-3-chibi-final-v2.mp4"
     ],
     "captions": {
       "file": "content/2026-W45/bonus-origin-recut/captions.md",
       "section": "Part 3 — animated chibi version"
-    }
+    },
+    "cover": "docs/media/tito-ai-origin-recut/part-3-chibi-cover-v2.jpg"
   },
   {
     "id": "origin-p4",
@@ -142,9 +143,9 @@
     "series": "W46 · Wednesday 7:00 PM PHT · Origin recut Part 4",
     "type": "video",
     "media": [
-      "docs/media/tito-ai-origin-recut/part-4-chibi-final.mp4"
+      "docs/media/tito-ai-origin-recut/part-4-chibi-final-v2.mp4"
     ],
-    "cover": "docs/media/tito-ai-origin-recut/part-4-chibi-cover.jpg",
+    "cover": "docs/media/tito-ai-origin-recut/part-4-chibi-cover-v2.jpg",
     "captions": {
       "file": "content/2026-W45/bonus-origin-recut/captions.md",
       "section": "Part 4 — animated chibi version"
@@ -156,9 +157,9 @@
     "series": "W46 · Friday 7:00 PM PHT · Origin recut Part 5",
     "type": "video",
     "media": [
-      "docs/media/tito-ai-origin-recut/part-5-chibi-final.mp4"
+      "docs/media/tito-ai-origin-recut/part-5-chibi-final-v2.mp4"
     ],
-    "cover": "docs/media/tito-ai-origin-recut/part-5-chibi-cover.jpg",
+    "cover": "docs/media/tito-ai-origin-recut/part-5-chibi-cover-v2.jpg",
     "captions": {
       "file": "content/2026-W45/bonus-origin-recut/captions.md",
       "section": "Part 5 — animated chibi version"

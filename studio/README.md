@@ -19,11 +19,11 @@ The terminal prints a **private phone link** (`http://<your-Mac-IP>:4545/?key=�
 
 Stop it with Ctrl+C in that terminal.
 
-**Double-click apps:** **Tito AI Studio** and **Tito AI Studio (Phone)** are on your Desktop. Each opens Terminal and starts the studio. (On a Mac this replaces a Windows `.exe`; macOS can't run `.exe` files.)
+**Desktop shortcuts (updated Nov 7, all with the Tito AI logo):** **Tito AI Board** opens the Studio straight on the Board (`studio/open-studio.sh board`; links like `/#board`, `/#chat`, `/#approve`, `/#posted` open that tab). **Tito AI Studio** opens the Studio in your browser. The Studio runs on its own in the background (it starts at login), so no Terminal window opens; if it is asleep, the shortcut wakes it first (`studio/open-studio.sh`). **Tito AI Hub** opens the live hub (https://jeffd1130.github.io/TitoAi/hub/), the same page your phone uses. It replaces the old "Tito AI Studio (Phone)" shortcut, which restarted the Studio in Wi-Fi mode and clashed with the background service.
 
 ## 💬 Start with Tito AI (the main producer)
 
-Open the **💬 Tito AI** tab (the home screen) and just say what you want, e.g. *"Gawin natin ang W46 Monday post. Walang Flow credits, carousel na lang."*
+Open the **💬 Tito AI** tab (the home screen) and just say what you want, e.g. *"Make the W46 Monday post. No Flow credits, so make it a carousel."*
 
 1. **Tito AI** (🎙️) makes a short plan (week, slot, topic, format, growth job), asking at most one question.
 2. It **starts the team one by one**. Each agent shows up under **Team at work** and as a live card in **Agents**.
@@ -31,7 +31,7 @@ Open the **💬 Tito AI** tab (the home screen) and just say what you want, e.g.
 4. You can talk to Tito AI at any time, or tap a team member to open its card and talk to that agent directly.
 5. Finished posts land in **Approve & Post**.
 
-**Video or carousel?** Reels need chibi motion clips you make by hand in Google Flow, then Gemini. If you have no credits (or no time), tell Tito AI and it switches to the **carousel fallback**: Kuya Sulat writes the script and captions, Ate Disenyo writes `carousel.json` (`studio/carousel-schema.md`), the studio **renders branded 1080×1350 slides itself** (chibi, logo, page dots), Lola Suri runs QA, and the post appears in Approve & Post.
+**Video or carousel?** Reels need chibi motion clips. Claude Code makes them in Google Flow (then Gemini) by driving your Tito AI Chrome profile; ask it "Make the Flow clips for <slot>". If you have no credits (or no time), tell Tito AI and it switches to the **carousel fallback**: Kuya Sulat writes the script and captions, Ate Disenyo writes `carousel.json` (`studio/carousel-schema.md`), the studio **renders branded 1080×1350 slides itself** (chibi, logo, page dots), Lola Suri runs QA, and the post appears in Approve & Post.
 
 ## The team
 
@@ -39,7 +39,7 @@ Open the **💬 Tito AI** tab (the home screen) and just say what you want, e.g.
 |---|---|---|---|
 | Research | 🔎 **Tita Saliksik** | `tito-researcher` | Plans weeks and writes `brief.md` |
 | Script | ✍️ **Kuya Sulat** | `tito-scriptwriter` | Writes the script and TikTok/IG/FB captions |
-| Create | 🎨 **Ate Disenyo** | `tito-content-creator` | Writes the ChatGPT slide pack |
+| Create | 🎨 **Ate Disenyo** | `tito-content-creator` | Writes `carousel.json` (carousel fallback) |
 | Video | 🎬 **Kuya Kamera** | `video-producer` (built-in) | Renders a Remotion video and levels the audio |
 | QA | 🧐 **Lola Suri** | `tito-qa` | Checks brand, accuracy and captions, then gives a VERDICT |
 | Insights | 📊 **Tito Numero** | `tito-analyst` | Reads metrics and writes the weekly check & balance |
@@ -69,7 +69,7 @@ The names are only for the studio. The agent files in `.claude/agents/` keep the
 
 ## Good to know
 
-- **Video generation is still manual.** Google Flow/Gemini have no free API. Use the Flow prompt helper (Flow first, Gemini after). The status bar keeps today's Flow credits as you type them.
+- **Video clips come from Claude Code driving Google Flow in Chrome** (no free API). Flow first, Gemini after. The status bar keeps today's Flow credits as you type them.
 - **Auto-push:** the project's existing hook commits and pushes to GitHub whenever an agent writes a file. Studio state (`studio/data/`) is git-ignored.
 - Agents run with `--permission-mode acceptEdits` and only the tools listed in their agent file.
 - Cards and history survive a restart. A run that was working when the server stopped shows as **Stopped**; chat to it again to continue.
@@ -78,8 +78,8 @@ The names are only for the studio. The agent files in `.claude/agents/` keep the
 ## Main board (🗺️ Board tab, default)
 A Figma-style canvas: drag the background or scroll to move, ⌘/Ctrl + scroll or pinch to zoom, **Fit** (or `1`) to see everything, double-click to add a sticky note (saved in `studio/data/board.json`). Frames:
 - **Chief of Staff · Tito AI**: every conversation with the main agent, with a composer. Same agent as the 💬 Tito AI tab.
-- **Workflow · live**: Jeff → Tito AI → Tita Saliksik (task summary only) → Kuya Sulat → video lane (ChatGPT makes the clip in Flow, then Gemini → Claude Code handoff review → Kuya Kamera) or carousel fallback (Ate Disenyo → slide render) → Lola Suri → your approval. Working agents pulse and show Figma-style cursors.
-- **ChatGPT → Claude handoff**: lists files in `handoff/chatgpt/` (video plus same-name `.md` note; see its README). **Hand to Claude** sends it to the chief of staff with a frame strip, who checks the chibi and finishes it (the `place_file` action copies it into `w44-friday-motion-sample/public/` or `docs/media/`).
+- **Workflow · live**: Jeff → Tito AI → Tita Saliksik (task summary only) → Kuya Sulat → video lane (Claude Code makes the clip in Flow, then Gemini → frame check + finish → Kuya Kamera) or carousel fallback (Ate Disenyo → slide render) → Lola Suri → your approval. Working agents pulse and show Figma-style cursors.
+- **Flow clip inbox**: lists files in `handoff/flow/` (video plus same-name `.md` note; see its README). **Hand to Claude** sends it to the chief of staff with a frame strip, who checks the chibi and finishes it (the `place_file` action copies it into `w44-friday-motion-sample/public/` or `docs/media/`).
 - **Your approvals · final only**: final videos and unapproved posts. Research, scripts and other steps finish as **Done** and flow on without your approval.
 - **Content calendar**: month view of `docs/schedule.json`, colored by status. Click a post for its notes or to ask the chief of staff about it.
 

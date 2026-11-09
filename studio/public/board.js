@@ -1,5 +1,5 @@
 // Tito AI Studio main board: a Figma-style canvas with updates (agent activity + what's waiting on Jeff), the live workflow,
-// the ChatGPT → Claude handoff inbox, the final-approval queue, the content calendar and sticky notes.
+// the Flow clip inbox, the final-approval queue, the content calendar and sticky notes.
 // Uses globals from app.js (state, api, esc, who, toast, openFile, openNewRun, switchTab, copyText, STATUS_LABEL, ago).
 (() => {
   const B = {view: {x: 40, y: 70, z: 0.62}, tool: 'move', notes: [], handoffs: [], schedule: [], chat: null, newChat: false,
@@ -10,11 +10,12 @@
   // ---------- frames (world coordinates) ----------
   const FRAMES = [
     {id: 'updates', name: 'Updates · agents + waiting on you', x: 0, y: 0, w: 1720, h: 360},
-    {id: 'flow', name: 'Workflow · live', x: 0, y: 420, w: 1720, h: 540},
-    {id: 'handoff', name: 'ChatGPT → Claude handoff', x: 0, y: 1020, w: 840, h: 280},
-    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 1020, w: 840, h: 280},
-    {id: 'cal', name: 'Content calendar', x: 0, y: 1360, w: 1720, h: 800},
-    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 2220, w: 1720, h: 440},
+    {id: 'biz', name: 'Business launch · Class #1 + 1:1 coaching', x: 0, y: 420, w: 1720, h: 440},
+    {id: 'flow', name: 'Workflow · live', x: 0, y: 920, w: 1720, h: 720},
+    {id: 'handoff', name: 'Flow clip inbox', x: 0, y: 1700, w: 840, h: 280},
+    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 1700, w: 840, h: 280},
+    {id: 'cal', name: 'Content calendar', x: 0, y: 2040, w: 1720, h: 800},
+    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 2900, w: 1720, h: 440},
   ];
 
   // ---------- workflow nodes (inside the Workflow frame) ----------
@@ -23,20 +24,25 @@
     {id: 'tito-main', x: 240, y: 210, emoji: '🎙️', name: 'Tito AI', role: 'Chief of Staff · plans + runs team', color: 'navy', agent: 'tito-main'},
     {id: 'tito-researcher', x: 450, y: 210, emoji: '🔎', name: 'Tita Saliksik', role: 'Research · task summary only', color: 'teal', agent: 'tito-researcher', stage: 'research'},
     {id: 'tito-scriptwriter', x: 660, y: 210, emoji: '✍️', name: 'Kuya Sulat', role: 'Script + captions', color: 'teal', agent: 'tito-scriptwriter', stage: 'script'},
-    {id: 'chatgpt', x: 870, y: 50, emoji: '🟢', name: 'ChatGPT', role: 'Makes video · Flow → Gemini', color: 'green'},
-    {id: 'claude', x: 1080, y: 50, emoji: '🤝', name: 'Claude Code', role: 'Handoff review + finish', color: 'coral'},
+    {id: 'flow', x: 870, y: 50, emoji: '🎥', name: 'Google Flow', role: 'Claude Code drives it · Gemini after', color: 'green'},
+    {id: 'claude', x: 1080, y: 50, emoji: '🤝', name: 'Claude Code', role: 'Checks frames + finishes', color: 'coral'},
     {id: 'video-producer', x: 1080, y: 210, emoji: '🎬', name: 'Kuya Kamera', role: 'Render + audio level', color: 'teal', agent: 'video-producer', stage: 'video'},
     {id: 'tito-content-creator', x: 870, y: 370, emoji: '🎨', name: 'Ate Disenyo', role: 'carousel.json (fallback)', color: 'teal', agent: 'tito-content-creator', stage: 'create'},
     {id: 'carousel-render', x: 1080, y: 370, emoji: '🖼️', name: 'Slide render', role: 'Branded PNG slides', color: 'teal', agent: 'carousel-render'},
     {id: 'tito-qa', x: 1290, y: 210, emoji: '🧐', name: 'Lola Suri', role: 'QA · verdict', color: 'teal', agent: 'tito-qa', stage: 'qa'},
     {id: 'final', x: 1500, y: 210, emoji: '✅', name: 'Your approval', role: 'Final video + post only', color: 'gold'},
+    {id: 'tito-sales', x: 240, y: 560, emoji: '💼', name: 'Tito Benta', role: 'Sales · classes + 1:1 coaching', color: 'navy', agent: 'tito-sales', stage: 'sales'},
+    {id: 'tito-bizdev', x: 450, y: 560, emoji: '🤝', name: 'Ate Kasosyo', role: 'BizDev · schools, SMEs, partners', color: 'navy', agent: 'tito-bizdev', stage: 'sales'},
+    {id: 'tito-analyst', x: 660, y: 560, emoji: '📊', name: 'Tito Numero', role: 'CLASS / COACH comments + results', color: 'teal', agent: 'tito-analyst', stage: 'insights'},
+    {id: 'jeff-sends', x: 1500, y: 560, emoji: '📨', name: 'Jeff sends', role: 'Replies, invoices, proposals', color: 'gold'},
   ];
   const NW = 180, NH = 100;
   const EDGES = [
     ['jeff', 'tito-main'], ['tito-main', 'tito-researcher'], ['tito-researcher', 'tito-scriptwriter'],
-    ['tito-scriptwriter', 'chatgpt', 'script + Flow prompt'], ['chatgpt', 'claude'], ['claude', 'video-producer'],
+    ['tito-scriptwriter', 'flow', 'script + Flow prompts'], ['flow', 'claude'], ['claude', 'video-producer'],
     ['tito-scriptwriter', 'tito-content-creator', 'no credits → carousel'], ['tito-content-creator', 'carousel-render'],
     ['video-producer', 'tito-qa'], ['carousel-render', 'tito-qa'], ['tito-qa', 'final'],
+    ['tito-main', 'tito-sales'], ['tito-sales', 'tito-bizdev'], ['tito-bizdev', 'tito-analyst'], ['tito-analyst', 'jeff-sends', 'drafts only'],
   ];
 
   // ---------- helpers ----------
@@ -58,11 +64,13 @@
     $('#fb-updates').innerHTML = `<div class="ins upd"><div class="ins-col fg-scroll"><div class="fg-ph">⏳ Waiting on you</div><div id="updPending"></div></div>
       <div class="ins-col fg-scroll"><div class="fg-ph">🤖 Agent activity</div><div id="updActivity"></div></div></div>`;
     // Workflow frame
-    $('#fb-flow').innerHTML = `<svg class="fg-edges" id="fgEdges" width="1720" height="500"></svg>
+    $('#fb-flow').innerHTML = `<svg class="fg-edges" id="fgEdges" width="1720" height="660"></svg>
       <div class="lane-label" style="left:870px;top:18px">VIDEO LANE · Flow first, Gemini after credits</div>
       <div class="lane-label" style="left:870px;top:478px">CAROUSEL FALLBACK · no video credits</div>
+      <div class="lane-label" style="left:240px;top:528px">BUSINESS LANE · drafts only, Jeff sends · billed under Alameda</div>
       <div id="fgNodes"></div>`;
     $('#fb-handoff').innerHTML = '<div class="fg-scroll hand-list" id="handList"></div>';
+    $('#fb-biz').innerHTML = '<div class="ins" id="bizBody"><div class="hand-empty">Loading business launch…</div></div>';
     $('#fb-insights').innerHTML = '<div class="ins" id="insBody"><div class="hand-empty">Loading results…</div></div>';
     $('#fb-approve').innerHTML = '<div class="fg-scroll appr-list" id="apprList"></div>';
     $('#fb-cal').innerHTML = `<div class="cal-head"><button class="fg-btn" id="calPrev">‹</button><h3 id="calTitle"></h3><button class="fg-btn" id="calNext">›</button>
@@ -89,8 +97,13 @@
   }
   function nodeState(n) {
     if (n.id === 'jeff') return {live: false, line: 'Send a message to start'};
-    if (n.id === 'chatgpt') { const k = B.handoffs.filter((h) => h.state.status === 'new').length; return {live: false, badge: k, line: k ? `${k} waiting in handoff` : 'Drops clips in handoff/chatgpt/'}; }
-    if (n.id === 'claude') { const k = B.handoffs.filter((h) => h.state.status === 'with-claude').length; return {live: k > 0, badge: k, line: k ? `${k} being finished` : 'Ready for the next handoff'}; }
+    if (n.id === 'jeff-sends') { const k = ((B.biz || {}).open || []).length; return {live: false, badge: k, line: k ? `${k} business decision${k > 1 ? 's' : ''} open` : 'Nothing to send', warn: k > 0}; }
+    const ext = (B.activity || []).find((a) => a.node === n.id);
+    if (n.id === 'flow' && !B.handoffs.some((h) => h.state.status === 'new') && ext) return {live: false, line: `Done · ${ext.title}`};
+    if (n.id === 'claude' && !B.handoffs.some((h) => h.state.status === 'with-claude') && ext) return {live: false, line: `Done · ${ext.title}`};
+    if (n.agent && ext && !runsOf(n.agent).some((r) => r.status === 'running') && ext.at > ((runsOf(n.agent)[0] || {}).updatedAt || 0)) return {live: false, line: `Done · ${ext.title}`};
+    if (n.id === 'flow') { const k = B.handoffs.filter((h) => h.state.status === 'new').length; return {live: false, badge: k, line: k ? `${k} new clip${k > 1 ? 's' : ''} to check` : 'Clips land in handoff/flow/'}; }
+    if (n.id === 'claude') { const k = B.handoffs.filter((h) => h.state.status === 'with-claude').length; return {live: k > 0, badge: k, line: k ? `${k} being finished` : 'Ready for the next clip'}; }
     if (n.id === 'final') { const k = pendingPosts().length + pendingVideos().length; return {live: false, badge: k, line: k ? `${k} waiting on you` : 'Nothing to approve', warn: k > 0}; }
     const rs = runsOf(n.agent);
     const running = rs.filter((r) => r.status === 'running');
@@ -128,18 +141,18 @@
   // ---------- handoff ----------
   async function loadHandoffs() { B.handoffs = await api('/api/handoffs'); renderHandoffs(); renderNodes(); renderUpdates(); }
   function renderHandoffs() {
-    const LBL = {new: 'New from ChatGPT', 'with-claude': 'With Claude', done: 'Done'};
+    const LBL = {new: 'New clip', 'with-claude': 'With Claude', done: 'Done'};
     $('#handList').innerHTML = B.handoffs.map((h) => {
       const st = h.state.status || 'new';
       const thumb = !h.media ? '<div class="thumb doc">📝</div>' : /\.(mp4|mov)$/i.test(h.media)
         ? `<video class="thumb" src="${fileUrl(h.media)}#t=1" preload="metadata" muted></video>` : `<img class="thumb" src="${fileUrl(h.media)}">`;
       return `<div class="hand ${st}">${thumb}<div class="hb"><b>${esc(h.id)}</b><span class="pill st-${st}">${LBL[st]}</span>
-        <p>${esc((h.noteText || 'No note from ChatGPT.').replace(/^#.*\n/, '').slice(0, 160))}</p>
+        <p>${esc((h.noteText || 'No note.').replace(/^#.*\n/, '').slice(0, 160))}</p>
         <div class="row">${h.media ? `<button class="fg-btn" data-open-file="${esc(h.media)}">Preview</button>` : ''}
         ${st === 'new' ? `<button class="fg-btn primary" data-hand="${esc(h.id)}">Hand to Claude</button>` : ''}
         ${st === 'with-claude' ? `<button class="fg-btn" data-chat-id="${h.state.chatId}">Open conversation</button><button class="fg-btn" data-hand-done="${esc(h.id)}">Mark done</button>` : ''}
         ${st === 'done' ? `<button class="fg-btn" data-hand-reopen="${esc(h.id)}">Reopen</button>` : ''}</div></div></div>`;
-    }).join('') || `<div class="hand-empty"><b>No handoffs yet.</b> ChatGPT saves a video plus a same-name <code>.md</code> note in <code>handoff/chatgpt/</code> (rules in its README). It shows up here, and <b>Hand to Claude</b> sends it to your chief of staff to review frames for chibi consistency, then finish it.</div>`;
+    }).join('') || `<div class="hand-empty"><b>No new clips.</b> Claude Code makes clips in Google Flow (Gemini after credits run out) and saves each with a same-name <code>.md</code> note in <code>handoff/flow/</code>. It shows up here, and <b>Hand to Claude</b> sends it to your chief of staff to check the chibi frames, then finish it.</div>`;
   }
 
   // ---------- updates: what's waiting on Jeff + recent agent activity ----------
@@ -153,15 +166,22 @@
     const pending = [
       ...pendingVideos().map((r) => item('🎬', `Approve video: ${r.title}`, `${who(r.agent)} · ${ago(r.updatedAt)}`, `data-zoom="approve"`)),
       ...pendingPosts().map((p) => item('📝', `Approve post: ${p.title}`, p.slot ? `Post on ${fmtPHT(p.slot)} PHT` : (p.series || ''), `data-goto-post="${esc(p.id)}"`)),
-      ...B.handoffs.filter((h) => (h.state.status || 'new') === 'new').map((h) => item('🤝', `ChatGPT clip waiting: ${h.id}`, 'Press Hand to Claude', 'data-zoom="handoff"')),
+      ...B.handoffs.filter((h) => (h.state.status || 'new') === 'new').map((h) => item('🎥', `New Flow clip: ${h.id}`, 'Press Hand to Claude', 'data-zoom="handoff"')),
+      ...(B.schedule || []).filter((p) => p.status === 'planned' && p.date >= today && p.date <= soon.slice(0, 10) && !/^TBD/.test(p.title))
+        .map((p) => item('🛠️', `Not made yet: ${p.title}`, `Posts ${p.date.slice(5)} · say "make ${p.title}" to Claude Code or Tito AI`, 'data-zoom="cal"')),
       ...toPost.map((p) => item(p.slot.slice(0, 10) < today ? '⚠️' : '📅', `Post it yourself: ${p.title}`, `${p.slot.slice(0, 10) < today ? 'Overdue · was ' : ''}${fmtPHT(p.slot)} PHT`, `data-goto-post="${esc(p.id)}"`)),
+      ...((B.biz || {}).open || []).map((t) => item('💼', `Decide: ${t}`, 'Business launch · tell Tito AI or Claude Code', 'data-zoom="biz"')),
       ...Object.values(state.runs).filter((r) => r.status === 'failed' && Date.now() - r.updatedAt < 2 * 86400e3)
         .map((r) => item('❗', `Failed: ${r.title}`, `${who(r.agent)} · ${ago(r.updatedAt)} · retry or ask Tito AI`, `data-goto="${r.id}"`)),
     ];
     $('#updPending').innerHTML = pending.join('') || '<div class="hand-empty">Nothing waiting on you. 🎉</div>';
-    const runs = Object.values(state.runs).sort((a, b) => b.updatedAt - a.updatedAt).slice(0, 10);
-    $('#updActivity').innerHTML = runs.map((r) => item(r.status === 'running' ? '🟢' : r.status === 'failed' ? '🔴' : '⚪', `${who(r.agent)} · ${r.title.replace(/^\[[^\]]*\]\s*/, '')}`,
-      `${STATUS_LABEL[r.status] || r.status} · ${ago(r.updatedAt)}`, r.agent === 'tito-main' ? 'data-goto-main' : `data-goto="${r.id}"`)).join('') || '<div class="hand-empty">No agent activity yet.</div>';
+    const RETIRED = ['tito-publisher'];
+    const feed = [
+      ...Object.values(state.runs).filter((r) => !RETIRED.includes(r.agent)).map((r) => ({at: r.updatedAt, html: item(r.status === 'running' ? '🟢' : r.status === 'failed' ? '🔴' : '⚪', `${who(r.agent)} · ${r.title.replace(/^\[[^\]]*\]\s*/, '')}`,
+        `${STATUS_LABEL[r.status] || r.status} · ${ago(r.updatedAt)}`, r.agent === 'tito-main' ? 'data-goto-main' : `data-goto="${r.id}"`)})),
+      ...(B.activity || []).map((a) => ({at: a.at, html: item('⚪', `${a.emoji} ${a.who} · ${a.title}`, `${a.status === 'done' ? 'Done' : a.status} · ${ago(a.at)}`, a.files[0] ? `data-open-file="${esc(a.files[0])}"` : `data-zoom="flow"`)})),
+    ].sort((a, b) => b.at - a.at).slice(0, 12);
+    $('#updActivity').innerHTML = feed.map((f) => f.html).join('') || '<div class="hand-empty">No agent activity yet.</div>';
   }
 
   // ---------- approvals (final only) ----------
@@ -182,6 +202,42 @@
   }
 
   // ---------- results (Tito Numero) ----------
+  // ---------- business launch (content/business/sales/launch-status.json) ----------
+  async function loadBiz() { try { B.biz = await api('/api/business'); renderBiz(); renderNodes(); renderUpdates(); } catch {} }
+  function renderBiz() {
+    const Z = B.biz, el = $('#bizBody');
+    if (!el) return;
+    if (!Z || !Z.class) { el.innerHTML = '<div class="hand-empty">No tracker yet. Ask Tito Benta to create content/business/sales/launch-status.json.</div>'; return; }
+    const peso = (v) => '₱' + Number(v || 0).toLocaleString();
+    const days = (iso) => Math.ceil((new Date(iso) - Date.now()) / 864e5);
+    const when = (iso) => new Date(iso).toLocaleString('en', {timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
+    const tile = (label, v, sub) => `<div class="kpi"><span>${esc(label)}</span><b>${esc(String(v))}</b>${sub ? `<em>${esc(sub)}</em>` : ''}</div>`;
+    const c = Z.class, L = Z.leads || {}, bo = Z.boost || {}, fl = Z.free_live || {};
+    const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+    const bizPosts = (B.schedule || []).filter((p) => p.date >= today && /class|coach|CLASS|COACH|Libre Muna|Sulit|TRAINING|Zoom|LIVE/i.test(`${p.title} ${p.tag || ''} ${p.note || ''}`)).slice(0, 7);
+    el.innerHTML = `
+      <div class="fg-scroll ins-col ins-top">
+        <h4>🎓 ${esc(c.name)}</h4>
+        <div class="ins-meta">${esc(when(c.date))} PHT · <b>${days(c.date)} days</b> left · ${c.confirmed ? 'confirmed' : '<span class="stale">date not confirmed</span>'}
+          · <a href="#" data-open-file="${esc(c.script || '')}">Class script</a></div>
+        <div class="kpi-row">${tile('Seats sold', `${c.sold}/${c.seats}`, `${peso(c.early_bird)} early · ${peso(c.price)}`)}${tile('Waitlist', c.waitlist)}${tile('Revenue', peso((c.sold || 0) * (c.price || 0)), 'at full price')}</div>
+        <div class="ins-meta">📺 ${esc(fl.name || '')} · ${fl.date ? esc(when(fl.date)) + ' PHT · ' + days(fl.date) + ' days' : ''} ${fl.confirmed ? '' : '· <span class="stale">not confirmed</span>'}</div>
+        <div class="kpi-row">${tile('CLASS comments', L.CLASS || 0)}${tile('COACH comments', L.COACH || 0)}${tile('1:1 hours booked', (Z.coaching || {}).booked_hours || 0, peso((Z.coaching || {}).price) + '/h')}${tile('Partners invited', `${L.partners_invited || 0}/${L.partners_target || 0}`)}</div>
+        <div class="ins-meta">💸 Boost ${esc(bo.month || '')}: ${peso(bo.spent)} of ${peso(bo.budget)} · Jeff boosts, only after 12–24 h organic proof · Updated ${esc(Z.updated || '')}
+          · <a href="#" data-open-file="${esc(Z.business_plan || '')}">Business plan</a> · <a href="${esc(Z.live_doc || '#')}" target="_blank" rel="noopener">Live doc</a></div>
+      </div>
+      <div class="fg-scroll ins-col ins-kpis">
+        <h4>⏳ Open for Jeff</h4>
+        <ul>${(Z.open || []).map((t) => `<li>${md(t)}</li>`).join('') || '<li>Nothing open 🎉</li>'}</ul>
+        <h4>🗓️ Launch posts · <a href="#" data-open-file="${esc(Z.plan || '')}">plan</a></h4>
+        <ul>${bizPosts.map((p) => `<li><b>${esc(p.date)}</b> ${esc(p.title)} <small>· ${esc(p.status)}</small></li>`).join('') || '<li>No launch posts in the calendar</li>'}</ul>
+      </div>
+      <div class="fg-scroll ins-col ins-posts">
+        <h4>Offer ladder · billed under ${esc(Z.company || '')}</h4>
+        <table><thead><tr><th>Offer</th><th>Price</th><th>Phase</th></tr></thead>
+        <tbody>${(Z.offers || []).map((o) => `<tr><td>${esc(o.name)}</td><td>${esc(o.price)}</td><td>${o.phase === 'Launch' ? '<b>Launch</b>' : esc(o.phase)}</td></tr>`).join('')}</tbody></table>
+      </div>`;
+  }
   async function loadInsights() { try { B.insights = await api('/api/insights'); renderInsights(); } catch {} }
   function renderInsights() {
     const I = B.insights, el = $('#insBody');
@@ -217,7 +273,7 @@
   }
 
   // ---------- calendar ----------
-  async function loadSchedule() { B.schedule = await api('/api/schedule'); renderCal(); }
+  async function loadSchedule() { B.schedule = await api('/api/schedule'); renderCal(); renderUpdates(); }
   function renderCal() {
     const now = new Date();
     if (!B.month) B.month = {y: now.getFullYear(), m: now.getMonth()};
@@ -252,8 +308,8 @@
         if (n.stage) html += `<button class="fg-btn primary mt" data-new-run="${n.stage}">+ New run</button>`;
       }
       if (id === 'tito-main') html += '<button class="fg-btn primary mt" data-goto-main>Open Tito AI chat</button>';
-      if (id === 'chatgpt') html += `<div class="fg-ph mt">How ChatGPT hands off</div><ol class="ins-ol"><li>Make the clip in Google Flow (Veo 3.1 Lite, 9:16, x1, silent ON). Use Gemini only after Flow credits run out.</li><li>Save it to <code>handoff/chatgpt/</code> with a same-name <code>.md</code> note (what it's for, the prompt).</li><li>Press <b>Hand to Claude</b> in the handoff frame.</li></ol><button class="fg-btn mt" data-copy-flow>Copy Flow prompt</button>`;
-      if (id === 'claude') html += '<p class="fg-muted">Claude Code owns the finish: checks the chibi frames, places the file, writes captions, renders and sends it to Lola Suri.</p><button class="fg-btn primary mt" data-zoom="handoff">Open handoff inbox</button>';
+      if (id === 'flow') html += `<div class="fg-ph mt">How Claude Code makes clips</div><ol class="ins-ol"><li>Kuya Sulat writes <code>drafts/flow-prompts.md</code> (one 8s shot per prompt).</li><li>In Claude Code, ask: <i>Make the Flow clips for &lt;slot&gt;</i>. It drives Google Flow in your Tito AI Chrome profile (Veo 3.1 Lite, 9:16, x1, silent ON, approved chibi as Ingredient), then Gemini only after Flow credits run out.</li><li>Each clip lands in <code>handoff/flow/</code> with a same-name <code>.md</code> note. Drifted clips are rejected and regenerated.</li></ol><button class="fg-btn mt" data-copy-flow>Copy Flow prompt</button>`;
+      if (id === 'claude') html += '<p class="fg-muted">Claude Code owns the finish: checks the chibi frames, places the file, writes captions, renders and sends it to Lola Suri.</p><button class="fg-btn primary mt" data-zoom="handoff">Open clip inbox</button>';
       if (id === 'final') html += '<p class="fg-muted">You approve only finished videos and posts. Everything before that flows on automatically.</p><button class="fg-btn primary mt" data-zoom="approve">Open approvals</button>';
       if (id === 'tito-researcher') html += '<p class="fg-muted">Returns a short task summary, not a long report. No approval needed.</p>';
     } else if (kind === 'post') {
@@ -448,8 +504,8 @@
     B.ready = true;
     renderAll(); inspect(null);
     if (saved && saved.z) { B.view = saved; apply(); } else setTimeout(() => fit(['updates', 'flow']), 120);
-    try { B.notes = (await api('/api/board')).notes || []; renderNotes(); } catch {}
-    loadHandoffs(); loadSchedule(); loadInsights();
+    try { const bd = await api('/api/board'); B.notes = bd.notes || []; B.activity = bd.activity || []; renderNotes(); renderAll(); } catch {}
+    loadHandoffs(); loadSchedule(); loadInsights(); loadBiz();
     setInterval(loadInsights, 300000);
     setInterval(loadSchedule, 60000);
     const firstShow = !saved;
@@ -458,7 +514,7 @@
   let t = null;
   window.boardUpdate = (msg) => {
     if (msg.type === 'handoffs') return loadHandoffs();
-    if (msg.type === 'board') { if (!document.activeElement || !document.activeElement.closest('.sticky')) { B.notes = msg.board.notes; renderNotes(); } return; }
+    if (msg.type === 'board') { B.activity = msg.board.activity || []; if (!document.activeElement || !document.activeElement.closest('.sticky')) { B.notes = msg.board.notes; renderNotes(); } renderUpdates(); renderNodes(); return; }
     clearTimeout(t); t = setTimeout(renderAll, 120);
   };
   const origRenderPosts = renderPosts;

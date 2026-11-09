@@ -26,6 +26,7 @@ const STAGES = [
   {id: 'video', label: 'Video', agent: 'video-producer'},
   {id: 'qa', label: 'QA', agent: 'tito-qa'},
   {id: 'insights', label: 'Insights', agent: 'tito-analyst'},
+  {id: 'sales', label: 'Sales & BD', agent: 'tito-sales'},
 ];
 
 // Tito AI family names shown in the studio (agent file IDs stay the same for Claude Code).
@@ -37,6 +38,8 @@ const PERSONAS = {
   'tito-qa': {display: 'Lola Suri', emoji: '🧐', role: 'QA reviewer'},
   'tito-publisher': {display: 'Kuya Iskedyul', emoji: '📅', role: 'Scheduler — Meta + TikTok calendars'},
   'tito-analyst': {display: 'Tito Numero', emoji: '📊', role: 'Analyst'},
+  'tito-sales': {display: 'Tito Benta', emoji: '💼', role: 'Sales Head — Zoom classes, 1:1 coaching, pipeline'},
+  'tito-bizdev': {display: 'Ate Kasosyo', emoji: '🤝', role: 'Business Development — schools, SMEs, partners'},
   'general': {display: 'Tito Helper', emoji: '🤖', role: 'General helper'},
   'tito-main': {display: 'Tito AI', emoji: '🎙️', role: 'Chief of Staff — plans the post and runs the team'},
   'carousel-render': {display: 'Ate Disenyo', emoji: '🖼️', role: 'Carousel render'},
@@ -48,7 +51,7 @@ const MAIN_PROMPT = `You are **Tito AI**, Jeff's chief of staff and main produce
 Do not write the content yourself; delegate to the team by writing an action block, which the studio runs immediately:
 
 \`\`\`studio-action
-{"action": "start_run", "stage": "research|script|create|qa|insights", "agent": "<agent id>", "title": "short card title", "prompt": "complete instructions incl. exact file paths"}
+{"action": "start_run", "stage": "research|script|create|qa|insights|sales", "agent": "<agent id>", "title": "short card title", "prompt": "complete instructions incl. exact file paths"}
 \`\`\`
 
 Team (agent ids):
@@ -57,6 +60,8 @@ Team (agent ids):
 - tito-content-creator (Ate Disenyo): slide content. For a carousel, she writes drafts/carousel.json following studio/carousel-schema.md (read it), plus captions.md if missing
 - tito-qa (Lola Suri): read-only review, gives a VERDICT
 - tito-analyst (Tito Numero): metrics and reports
+- tito-sales (Tito Benta, stage "sales"): Sales Head. Zoom class and 1:1 coaching offer copy, inquiry reply drafts, invoice drafts, content/business/sales/pipeline.md and weekly sales numbers
+- tito-bizdev (Ate Kasosyo, stage "sales"): Business Development. Target lists, outreach and seminar proposals for schools, SMEs, BPO teams and partners; content/business/bizdev/partners.md
 - general (Tito Helper): small housekeeping edits, e.g. adding the post to docs/schedule.json as a draft
 
 You can read files but not edit them. Every change goes through a team member.
@@ -64,11 +69,13 @@ You can read files but not edit them. Every change goes through a team member.
 Other actions:
 - {"action": "render_carousel", "spec": "content/.../drafts/carousel.json"}: the studio renders branded PNG slides and adds the post to Approve & Post.
 - {"action": "render_video", "composition": "<Remotion id>"}: only when the Flow/Gemini clip already exists.
-- {"action": "place_file", "from": "handoff/chatgpt/<file>", "to": "w44-friday-motion-sample/public/<file>" or "docs/media/<folder>/<file>"}: copies a handed-off video or image into place (the team can't copy binary files).
+- {"action": "place_file", "from": "handoff/flow/<file>", "to": "w44-friday-motion-sample/public/<file>" or "docs/media/<folder>/<file>"}: copies a Flow/Gemini clip or image into place (the team can't copy binary files).
 
-ChatGPT → Claude handoff: ChatGPT (Codex) may generate a video in Flow/Gemini and drop it in handoff/chatgpt/ with a same-name .md note. When you get a "[Handoff from ChatGPT]" message, you own the finish: Read the frame strip image it gives you and check the chibi against the rules (same clean-shaven chibi, soft 2D style, rounded elbows, no puppet/3D look, screen facing the viewer, nothing cut off). If it fails, tell Jeff exactly what to regenerate. If it passes, place_file it, have the team write or update captions and docs, render if a Remotion composition uses it, then send it to Lola Suri.
+Video clips (Nov 7): ChatGPT is out of the video lane. **Claude Code drives Google Flow (then Gemini) itself in Jeff's Tito AI Chrome profile** and saves each clip in handoff/flow/ with a same-name .md note (purpose, tool/model, exact prompt). You (the Studio) can't open Chrome, so when a post needs new clips, have Kuya Sulat write content/<week>/<slot>/drafts/flow-prompts.md (one 8s shot per prompt, same approved chibi as Ingredient, Veo 3.1 Lite, 9:16, x1, silent) and tell Jeff: "Ask Claude Code to make the Flow clips for <slot>." When you get a "[New Flow clip]" message, you own the finish: Read the frame strip image it gives you and check the chibi against the rules (same clean-shaven chibi, soft 2D style, rounded elbows, no puppet/3D look, screen facing the viewer, laptop fully in frame, nothing cut off). If it fails, say exactly which shot to regenerate. If it passes, place_file it, have the team write or update captions and docs, render if a Remotion composition uses it, then send it to Lola Suri.
 
-Video vs carousel: Reels need chibi motion clips that Jeff generates by hand in Google Flow (Veo 3.1 Lite, about 50 free credits a day, 10 per 8s clip) first, then Gemini. If Jeff says there are no credits, there's no time, or video isn't possible, **switch to the carousel fallback**: Kuya Sulat (script + captions) → Ate Disenyo (carousel.json) → render_carousel → Lola Suri QA.
+Video vs carousel: Reels need chibi motion clips that Claude Code generates in Google Flow (Veo 3.1 Lite, about 50 free credits a day, 10 per 8s clip) first, then Gemini. If Jeff says there are no credits, there's no time, or video isn't possible, **switch to the carousel fallback**: Kuya Sulat (script + captions) → Ate Disenyo (carousel.json) → render_carousel → Lola Suri QA.
+
+Business goal (Jeff, Nov 9, 2026): Tito AI is now a business under the company Alameda. Launch order: paid Zoom classes (₱999/seat, 3 hours, max 30) and 1:1 coaching (₱2,500/hour, 4 for ₱8,000) first. Teach free tiers of Claude, ChatGPT and Gemini first, then show why paid plans are worth it for Class B and A. Every post carries one business CTA (free live, class waitlist or 1:1 booking) chosen with Tito Benta. Plan: content/business/business-plan.md and content/strategy/2026-11-09-business-launch-content-plan.md. Paid boosts are capped at ₱3,000 a month and only Jeff boosts.
 
 How to work:
 - Start with one short plan (week, slot, topic, format, growth job). Ask at most one question, and only if you truly need it; otherwise pick sensible defaults and go.
@@ -454,9 +461,15 @@ function talkToMain(text, {newChat = false, chatId = null} = {}) {
   return {run: main};
 }
 
-// ---------- main board: calendar, ChatGPT handoff inbox, sticky notes ----------
+// ---------- main board: calendar, Flow clip inbox, sticky notes ----------
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 // Latest analyst results for the board: newest metrics pull + top line of the newest report.
+// Business launch tracker (Nov 9 business plan). Tito Benta keeps content/business/sales/launch-status.json current.
+const BUSINESS_FILE = path.join(ROOT, 'content', 'business', 'sales', 'launch-status.json');
+function businessInfo() {
+  try { return JSON.parse(fs.readFileSync(BUSINESS_FILE, 'utf8')); } catch { return null; }
+}
+
 function listInsights() {
   const newest = (dir, re) => { try { return fs.readdirSync(dir).filter((f) => re.test(f)).sort().pop() || null; } catch { return null; } };
   const dataFile = newest(path.join(ROOT, 'reports', 'data'), /^\d{4}-\d{2}-\d{2}-metrics\.json$/);
@@ -487,7 +500,7 @@ function listSchedule() {
   return out;
 }
 
-const HANDOFF_DIR = path.join(ROOT, 'handoff', 'chatgpt');
+const HANDOFF_DIR = path.join(ROOT, 'handoff', 'flow');
 const HANDOFF_STATE_FILE = path.join(DATA, 'handoffs-state.json');
 const handoffState = loadJSON(HANDOFF_STATE_FILE, {});
 fs.mkdirSync(HANDOFF_DIR, {recursive: true});
@@ -511,8 +524,8 @@ fs.watch(HANDOFF_DIR, () => { clearTimeout(handoffTimer); handoffTimer = setTime
 
 function handToClaude(h, cb) {
   const send = (stripAbs) => {
-    const text = `[Handoff from ChatGPT] ChatGPT made ${h.media ? `\`${h.media}\`` : 'a draft'} and handed it to Claude Code for the finish.` +
-      (h.note ? `\nChatGPT's note (\`${h.note}\`):\n${h.noteText}` : '\nNo note was left; ask Jeff what it is for if unclear.') +
+    const text = `[New Flow clip] Claude Code made ${h.media ? `\`${h.media}\`` : 'a draft'} in Google Flow/Gemini. Finish it.` +
+      (h.note ? `\nClip note (\`${h.note}\`):\n${h.noteText}` : '\nNo note was left; ask Jeff what it is for if unclear.') +
       (stripAbs ? `\nFrame strip (one frame every 2s): ${stripAbs} . Read it to check the chibi.` : '') +
       '\nReview it, then finish it with the team or tell Jeff what to regenerate.';
     const r = talkToMain(text, {});
@@ -710,6 +723,7 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'GET' && p === '/api/media') return json(res, 200, listMedia());
   if (req.method === 'GET' && p === '/api/insights') return json(res, 200, listInsights());
+  if (req.method === 'GET' && p === '/api/business') return json(res, 200, businessInfo() || {});
   if (req.method === 'GET' && p === '/api/schedule') return json(res, 200, listSchedule());
   if (req.method === 'GET' && p === '/api/handoffs') return json(res, 200, listHandoffs());
   if (req.method === 'GET' && p === '/api/board') return json(res, 200, board);
@@ -751,6 +765,17 @@ const server = http.createServer((req, res) => {
           Object.assign(st, {status: 'with-claude', chatId: run.id, at: Date.now()}); saveHandoffs();
           json(res, 200, run);
         });
+      }
+      // Work done outside the Studio (e.g. Claude Code driving Google Flow, rendering) so the board shows it.
+      if (p === '/api/activity') {
+        board.activity = Array.isArray(board.activity) ? board.activity : [];
+        const e = {id: Math.random().toString(36).slice(2, 10), at: +b.at || Date.now(), who: String(b.who || 'Claude Code').slice(0, 40),
+          emoji: String(b.emoji || '🤝').slice(0, 4), node: String(b.node || 'claude').slice(0, 30), title: String(b.title || '').slice(0, 200),
+          status: String(b.status || 'done').slice(0, 20), files: (Array.isArray(b.files) ? b.files : []).slice(0, 5).map((f) => String(f).slice(0, 300))};
+        if (!e.title) return json(res, 400, {error: 'title required'});
+        board.activity = [e, ...board.activity].sort((x, y) => y.at - x.at).slice(0, 60);
+        fs.writeFileSync(BOARD_FILE, JSON.stringify(board, null, 1)); broadcast({type: 'board', board});
+        return json(res, 200, e);
       }
       if (p === '/api/board') {
         board.notes = (Array.isArray(b.notes) ? b.notes : []).slice(0, 200).map((n) => ({id: String(n.id).slice(0, 20), x: +n.x || 0, y: +n.y || 0,

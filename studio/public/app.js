@@ -9,10 +9,11 @@ const STATUS_LABEL = {queued: 'Queued', running: 'Working…', review: 'Needs yo
 const TEMPLATES = {
   research: ['Plan next week (W46): write brief.md for Mon, Wed and Fri slots.', 'Write the brief for <week> <slot> on: <topic>.'],
   script: ['Write script.md and captions.md from content/<week>/<slot>/brief.md.'],
-  create: ['Make the ChatGPT slide pack from content/<week>/<slot>/drafts/script.md.'],
+  create: ['Write drafts/carousel.json from content/<week>/<slot>/drafts/script.md.'],
   video: [],
   qa: ['Review content/<week>/<slot>/drafts/ (script, captions, slide pack) and give a VERDICT.', 'Review content/2026-W45/bonus-origin-recut/captions.md for Parts 1–2.'],
   insights: ['Here are this week\'s numbers: <paste metrics>. Write the weekly check & balance.'],
+  sales: ['Write the sales page copy and Messenger replies for Zoom Class #1 and 1:1 coaching.', 'Draft a reply to this inquiry: <paste message>', 'Find 10 Clark/Pampanga schools or SMEs for a team seminar and draft outreach.'],
 };
 const DEFAULT_PROMPT = `Create an 8-second vertical 9:16 animated video that starts exactly from this frame and keeps the EXACT same Tito AI chibi and the same soft, painterly 2D-illustrated style, colors and beige room. <ACTION FOR THIS SHOT>. Smooth, soft, rounded arms and elbows with natural bends; not a puppet, toy, action figure or 3D render, no visible joints or hard corners. The tablet's bright FRONT SCREEN must face the viewer in every frame; do not reveal or flip to its back. Preserve his clean-shaven face, hair, white shirt, jeans, shoes, watch and bracelet. Real articulated movement of shoulders, arm, hand, eyebrows and mouth, not a floating or zooming still. Keep one tablet and anatomically correct hands. No new voice, dialogue, text, logos or music; silent motion clip for later editing with my original voice.`;
 
@@ -89,7 +90,7 @@ function runCard(r) {
 function nextButton(r) {
   const i = state.stages.findIndex((s) => s.id === r.stage);
   const next = state.stages[i + 1];
-  if (!next || next.id === 'insights' || next.id === 'publish') return '';   // scheduling starts only from Approve & Post
+  if (!next || next.id === 'insights' || next.id === 'sales' || next.id === 'publish') return '';   // scheduling starts only from Approve & Post
   return `<button class="btn small gold" data-next="${r.id}">→ ${esc(next.label)}</button>`;
 }
 
@@ -166,6 +167,11 @@ function switchTab(id) {
   document.querySelectorAll('.tab').forEach((b) => b.classList.toggle('active', b.dataset.tab === id));
   document.querySelectorAll('.panel').forEach((p) => p.classList.toggle('active', p.id === id));
 }
+// Links like /#board, /#chat, /#approve open that tab (used by the Desktop shortcuts).
+const HASH_TABS = {board: 'canvas', canvas: 'canvas', chat: 'main', main: 'main', agents: 'board', approve: 'posting', posting: 'posting', posted: 'posted', video: 'video'};
+function routeHash() { const t = HASH_TABS[location.hash.slice(1)]; if (t) switchTab(t); }
+window.addEventListener('hashchange', routeHash);
+window.addEventListener('load', routeHash);
 
 // ---------- status bar ----------
 function renderStatus() {

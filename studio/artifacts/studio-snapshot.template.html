@@ -165,7 +165,7 @@ function board() {
     ...D.posts.filter((p) => p.approved && due(p) && Object.keys(p.posted).length < 3).sort((a, b) => a.slot.localeCompare(b.slot))
       .map((p) => [p.slot < now ? '⚠️' : '📅', `Post it yourself: ${p.title}`, (p.slot < now ? 'Overdue · ' : '') + fmtSlot(p.slot)]),
     ...T.toMake.map((m) => ['🎬', `Make: ${m.title}`, `Due ${fmtSlot(m.date + (m.day === 'MON' ? 'T20:00' : 'T19:00'))}`]),
-    ...T.handoffs.map((h) => ['🤝', `ChatGPT clip waiting: ${h}`, 'Hand to Claude in the Studio']),
+    ...T.handoffs.map((h) => ['🤝', `New Flow clip: ${h}`, 'Hand to Claude in the Studio']),
     ...D.runs.filter((r) => r.status === 'failed').slice(0, 3).map((r) => ['❗', `Failed: ${r.title}`, `${r.who} · ${fmtAt(r.at)}`]),
   ];
   const it = ([i, t, s]) => `<div class="item"><span>${i}</span><div><b>${esc(t)}</b><em>${esc(s)}</em></div></div>`;
@@ -181,9 +181,9 @@ function board() {
       <div class="panel"><h3>🤖 Agent activity</h3>${D.runs.slice(0, 10).map((r) => it([STATUS[r.status] || '⚪', `${r.who} · ${r.title}`, `${r.status} · ${fmtAt(r.at)}`])).join('') || '<div class="empty">No activity yet.</div>'}</div>
     </div>
     ${askBox()}
-    <div class="panel mt"><h3>🔀 Workflow</h3>${lane('plan', 'Plan')}${lane('video', 'Video lane · Flow first, Gemini after credits')}${lane('carousel', 'Carousel fallback · no video credits')}${lane('finish', 'Finish')}</div>
+    <div class="panel mt"><h3>🔀 Workflow</h3>${lane('plan', 'Plan')}${lane('video', 'Video lane · Flow first, Gemini after credits')}${lane('carousel', 'Carousel fallback · no video credits')}${lane('finish', 'Finish')}${lane('sales', 'Sales &amp; BD')}</div>
     <div class="cols mt">
-      <div class="panel"><h3>🤝 ChatGPT → Claude handoff</h3>${D.handoffs.map((h) => it([h.status === 'new' ? '🆕' : h.status === 'done' ? '✅' : '🛠️', h.id, `${h.status}${h.note ? ' · ' + h.note.split('\n').find((l) => l.trim() && !l.startsWith('#')) : ''}`])).join('') || '<div class="empty">No handoffs.</div>'}</div>
+      <div class="panel"><h3>🎥 Flow clip inbox</h3>${D.handoffs.map((h) => it([h.status === 'new' ? '🆕' : h.status === 'done' ? '✅' : '🛠️', h.id, `${h.status}${h.note ? ' · ' + h.note.split('\n').find((l) => l.trim() && !l.startsWith('#')) : ''}`])).join('') || '<div class="empty">No handoffs.</div>'}</div>
       <div class="panel"><h3>✅ Your approvals · final only</h3>${approvals.map((p) => it(['📝', p.title, p.slot ? fmtSlot(p.slot) : p.series])).join('') || '<div class="empty">Nothing to approve. Research and scripts flow on; only final videos and posts land here.</div>'}</div>
     </div>
     <div class="panel mt"><h3>🗓️ Content calendar</h3>${calendarHtml()}</div>

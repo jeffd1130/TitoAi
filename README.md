@@ -22,7 +22,7 @@ Weekly content production for **@TitoAIPH**, a Filipino AI education channel by 
 
 ```
 CLAUDE.md        project rules and current status (source of truth)
-AGENTS.md        notes for Codex / ChatGPT
+AGENTS.md        notes for other AI tools (Codex / ChatGPT)
 studio/          Tito AI Studio
 content/         weekly folders (YYYY-W##) and strategy/
 docs/            GitHub Pages hub: https://jeffd1130.github.io/TitoAi/

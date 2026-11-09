@@ -11,7 +11,7 @@ const gold = '#F59E0B';
 const cream = '#FFF8E7';
 const FPS = 30;
 
-type Part = {n: number; seconds: number; hook: [string, string]; next: [string, string]; laptopAlt?: boolean};
+type Part = {n: number; seconds: number; hook: [string, string]; next: [string, string]; laptopAlt?: boolean; openFix?: boolean};
 
 const PARTS: Part[] = [
   {n: 1, seconds: 30, hook: ['TATAY AKO.', 'NASA SILICON VALLEY?'], next: ['SUNOD:', 'WEBSITE? AI ANG TINANONG KO.']},
@@ -20,6 +20,14 @@ const PARTS: Part[] = [
   {n: 4, seconds: 25.5, hook: ['TRIAL AND ERROR?', 'OO NAMAN.'], next: ['SUNOD:', 'AI ANG TULONG, TAO ANG GALAW.']},
   {n: 5, seconds: 29.5, hook: ['AI ANG TULONG,', 'TAO ANG GALAW.'], next: ['FOLLOW', 'TITO AI PARA SA DAGDAG.']},
 ];
+
+// Nov 9 re-cut (data: most viewers left at 0:01 on Parts 1-2). The opening hook speaks to the viewer, not the series,
+// and the PART n / 5 badge waits until 2 s so the first frame doesn't read as a title card for a story they missed.
+const OPEN_FIX_HOOKS: Record<number, [string, string]> = {
+  3: ['WALANG BACKGROUND?', 'ITO ANG GINAWA KO.'],
+  4: ['PALPAK ANG UNANG TRY?', "NORMAL LANG 'YAN."],
+  5: ['PAANO MAGSIMULA SA AI?', 'ITO ANG NATUTUNAN KO.'],
+};
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
@@ -106,7 +114,8 @@ const Part1Visual = () => {
 const STILL_PARTS: Record<number, () => React.ReactElement> = {};
 export const LAPTOP_FALLBACKS = {Part2Visual};
 
-const OriginChibiGeminiVideo = ({n, seconds, hook, next, laptopAlt}: Part) => {
+const OriginChibiGeminiVideo = ({n, seconds, hook: baseHook, next, laptopAlt, openFix}: Part) => {
+  const hook = openFix && OPEN_FIX_HOOKS[n] ? OPEN_FIX_HOOKS[n] : baseHook;
   const Still = laptopAlt ? Part1Visual : STILL_PARTS[n];
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
@@ -124,7 +133,8 @@ const OriginChibiGeminiVideo = ({n, seconds, hook, next, laptopAlt}: Part) => {
 
     <div style={{position: 'absolute', top: 58, left: 58, right: 58, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start'}}>
       <Img src={staticFile('tito-logo-on-dark.png')} style={{width: 245, objectFit: 'contain'}} />
-      <div style={{backgroundColor: navy, border: `2px solid ${gold}`, color: gold, borderRadius: 16, padding: '12px 18px', font: 'bold 30px Arial, sans-serif'}}>PART {n} / 5</div>
+      <div style={{backgroundColor: navy, border: `2px solid ${gold}`, color: gold, borderRadius: 16, padding: '12px 18px', font: 'bold 30px Arial, sans-serif',
+        opacity: openFix ? interpolate(frame, [2 * fps, 2.5 * fps], [0, 1], clamp) : 1}}>PART {n} / 5</div>
     </div>
 
     <div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: 900, background: 'linear-gradient(transparent, #0A0F1Ecc)', pointerEvents: 'none'}} />
@@ -139,4 +149,6 @@ export const OriginChibiGeminiParts = () => <>
     durationInFrames={Math.round(PARTS[0].seconds * FPS)} fps={FPS} width={1080} height={1920} />
   {PARTS.map((p) => <Composition key={p.n} id={`OriginChibiGeminiP${p.n}`} component={OriginChibiGeminiVideo}
     defaultProps={p} durationInFrames={Math.round(p.seconds * FPS)} fps={FPS} width={1080} height={1920} />)}
+  {PARTS.filter((p) => OPEN_FIX_HOOKS[p.n]).map((p) => <Composition key={`v2-${p.n}`} id={`OriginChibiGeminiP${p.n}v2`} component={OriginChibiGeminiVideo}
+    defaultProps={{...p, openFix: true}} durationInFrames={Math.round(p.seconds * FPS)} fps={FPS} width={1080} height={1920} />)}
 </>;

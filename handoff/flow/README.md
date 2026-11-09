@@ -8,5 +8,6 @@ Claude Code makes Tito AI video clips itself (since Nov 7, 2026). ChatGPT is no 
 3. Check frames from every clip. Reject drift (different chibi, laptop cut off, 3D or puppet look) and regenerate that shot.
 4. Save the video here with a clear name, e.g. `origin-part-4-flow.mp4`, plus a note with the **same name** and `.md`: what it's for, tool and model, the exact prompt, anything to check.
 5. If Flow or Gemini asks for a login or a CAPTCHA, stop and ask Jeff. Never pay for credits.
+6. Log the work on the Studio board so Jeff sees it: `bash studio/log-activity.sh flow "🎥" "Google Flow" "<what was made>" <file>` (use node `claude` for finishing work, `video-producer` for renders).
 
 Tito AI Studio shows new files on the **Board** (frame "Flow clip inbox"). **Hand to Claude** sends it to Tito AI (chief of staff), which checks the frames, then places, captions, renders and sends it to QA. Jeff approves only the final video and post.

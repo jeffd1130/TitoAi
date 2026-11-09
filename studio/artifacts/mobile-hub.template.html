@@ -173,8 +173,8 @@ function tasks() {
   const groups = [
     ['Post it yourself', post.map((p) => t(at(p.slot) < now ? '⚠️' : '📅', p.title, (at(p.slot) < now ? 'Overdue · ' : '') + fmtSlot(p.slot), at(p.slot) < now))],
     ['Approve in the Studio', approve.map((p) => t('📝', p.title, p.slot ? 'Post ' + fmtSlot(p.slot, true) : p.series))],
-    ['Still to make', make.map((m) => t('🎬', m.title, `Due ${dLabel(m.date)} · ${m.when} PHT · Flow → ChatGPT handoff → Claude finish`))],
-    ['ChatGPT clips waiting', T.handoffs.map((h) => t('🤝', h, 'Hand to Claude in the Studio'))],
+    ['Still to make', make.map((m) => t('🎬', m.title, `Due ${dLabel(m.date)} · ${m.when} PHT · Claude Code makes it in Flow → finish`))],
+    ['New Flow clips', T.handoffs.map((h) => t('🤝', h, 'Hand to Claude in the Studio'))],
     ['Agents working', T.agents.map((a) => t(a.status === 'review' ? '🟡' : '🟢', `${a.who} · ${a.title}`, a.status))],
   ].filter(([, rows]) => rows.length);
   const recent = D.runs.filter((r) => ['done', 'approved'].includes(r.status)).slice(0, 3)

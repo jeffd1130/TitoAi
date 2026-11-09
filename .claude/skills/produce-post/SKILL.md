@@ -17,7 +17,7 @@ Produce one complete draft for one content slot: script, captions, slides or vid
 
 5. **Visuals.**
    - Carousel: write `drafts/carousel.json` (`studio/carousel-schema.md`) and render 1080×1350 slides to `drafts/slides/` (Remotion `TitoCarousel`), or build Canva slides in claude.ai web if Jeff wants Canva.
-   - Video: Google Flow first, Gemini after credits run out; same clean-shaven chibi every shot; keep Jeff's original audio. Render in `w44-friday-motion-sample/` and copy the final to `docs/media/`.
+   - Video: Claude Code drives Google Flow in the Tito AI Chrome profile (Veo 3.1 Lite, 9:16, x1, silent ON, approved chibi as Ingredient), Gemini after credits run out; save clips + same-name `.md` notes to `handoff/flow/`, check frames and regenerate drifted shots; same clean-shaven chibi every shot; keep Jeff's original audio. Render in `w44-friday-motion-sample/` and copy the final to `docs/media/`.
 
 6. **QA**: run Lola Suri's checks (brand, captions, hashtags, claims, chibi consistency) and fix what fails.
 

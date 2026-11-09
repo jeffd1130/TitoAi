@@ -8,6 +8,8 @@ You help Jeff (Senior Marketing Analyst, Manila, UTC+8) run weekly content for *
 - A (some): business owners, executives, school/company decision-makers who could book a Tito AI training.
 - Each week include at least one B/A topic (time saved, team or business results). Keep visuals polished and Taglish natural (a bit more English is fine for B/A). Free tools first. Never talk down to C or show off to A.
 
+**Business (Jeff, Nov 9, 2026):** Tito AI is now a business under the company **Alameda**. Launch paid **Zoom classes** (₱999/seat) and **1:1 coaching** (₱2,500/hour) first. Teach free tiers of Claude, ChatGPT and Gemini first, then why paid is worth it for B and A. Every post carries one business CTA (free live, `CLASS` waitlist or `COACH`). Paid boosts capped at ₱3,000/month (Jeff boosts). Jeff may name clients live in seminars; public posts still need approval. Plan: `content/business/business-plan.md` (live doc https://claude.ai/artifact/5VdxbM1EHLhcyK4jT5uZcD); calendar: `content/strategy/2026-11-09-business-launch-content-plan.md`; class scripts `content/business/live-classes/`; invoices and finance `content/business/finance/`.
+
 Older production notes, audits and health checks (May–Nov 3, 2026) are in `reports/history-2026.md`. Read it only when you need past detail.
 
 ---
@@ -30,7 +32,7 @@ Local dashboard at http://localhost:4545. It starts at login and restarts itself
 
 - **🗺️ Board**: Updates (waiting on Jeff + agent activity), live workflow, Flow clip inbox, final approvals, content calendar, Results (Tito Numero).
 - **💬 Tito AI**: chief-of-staff chat (`tito-main`). It plans and starts the team (up to 8 steps per message).
-- **Agents**: 🔎 Tita Saliksik (research, short summary only), ✍️ Kuya Sulat (script + captions), 🎨 Ate Disenyo (carousel fallback), 🎬 Kuya Kamera (render), 🧐 Lola Suri (QA), 📊 Tito Numero (analyst).
+- **Agents**: 🔎 Tita Saliksik (research, short summary only), ✍️ Kuya Sulat (script + captions), 🎨 Ate Disenyo (carousel fallback), 🎬 Kuya Kamera (render), 🧐 Lola Suri (QA), 📊 Tito Numero (analyst), 💼 Tito Benta (Sales Head, `tito-sales`), 🤝 Ate Kasosyo (Business Development, `tito-bizdev`) in the **Sales & BD** column.
 - **Approve & Post**: unposted posts in calendar order, with captions, Copy, Approve, Mark posted, a 📅 posting-time guide and 📨 Send to Telegram (media + one message per caption).
 - **Posted**: anything marked posted, newest first.
 - **Flow clips**: Claude Code saves each clip + same-name `.md` note in `handoff/flow/`; **Hand to Claude** sends it to Tito AI, which checks the frames and finishes it. Jeff approves only the final video and post.
@@ -52,8 +54,9 @@ Jeff's Mac runs on PHT, so cron and post times need no conversion.
 
 **Current (Nov 6, 2026):**
 - W45 (Nov 2–8): Mon "HM po?" posted; origin recut Part 1 posted Wed Nov 4; Part 2 (`docs/media/tito-ai-origin-recut/flow-part-2/part-2-chibi-codex-review.mp4`, approved) posts Fri Nov 6, 7 PM. Parts 3–5 wait until Jeff says go. Plan and captions: `content/2026-W45/bonus-origin-recut/` (`captions.md`, `gemini-plan.md`). Remotion source: `w44-friday-motion-sample/src/OriginChibiGemini.tsx`.
-- W46 (Jeff, Nov 6): Mon Nov 9 Origin Part 3 (approved, `handoff/flow/origin-part-3-matched-review.mp4`), Wed Nov 11 Part 4 (made Nov 7 by Claude Code in Flow: `docs/media/tito-ai-origin-recut/part-4-chibi-final.mp4`, waiting on Jeff's approval), Fri Nov 13 Part 5 (made Nov 9 by Claude Code in Flow: `docs/media/tito-ai-origin-recut/part-5-chibi-final.mp4`, waiting on Jeff's approval).
-- Carousels are held until after Part 5: W47 Mon "Buy 1 Take 1" (moved from W46), W47 Wed/Fri, then W48 Mon/Wed/Fri. Drafts are in `content/2026-W46`–`W48` and in the Studio.
+- **Video openings (Nov 9 data):** viewers left at 0:01 on Parts 1–2. Open with a viewer-facing hook (not the series), voice from frame 1, PART badge only after 2 s (`openFix` / `OriginChibiGeminiP{n}v2`). Report: `reports/2026-11-09-weekly-checkbalance.md`.
+- W46 (Jeff, Nov 6): Mon Nov 9 Origin Part 3 (approved; Nov 9 re-cut opening `docs/media/tito-ai-origin-recut/part-3-chibi-final-v2.mp4`), Wed Nov 11 Part 4 (made Nov 7 by Claude Code in Flow: `docs/media/tito-ai-origin-recut/part-4-chibi-final-v2.mp4`, waiting on Jeff's approval), Fri Nov 13 Part 5 (made Nov 9 by Claude Code in Flow: `docs/media/tito-ai-origin-recut/part-5-chibi-final-v2.mp4`, waiting on Jeff's approval).
+- **W47–W50 (Nov 9 re-plan for the business launch):** W47 = "Libre Muna" series (Mon ChatGPT NEW, Wed Gemini quiz, Fri Claude/Tito AI story NEW); W48 as drafted; free live Sat Nov 28; W49 Mon "Buy 1 Take 1" (folder `content/2026-W46/01-mon-ai-tip`), Wed "Sulit ba ang Paid AI?" reel NEW, Fri anak/assignment story (folder `content/2026-W47/03-fri-inspiration`); W50 Class #1 push; Zoom Class #1 proposed Sat Dec 12. Full table in the business launch content plan.
 - Post status lives in the Studio (`studio/data/posts-state.json`) and `docs/schedule.json`.
 
 ---

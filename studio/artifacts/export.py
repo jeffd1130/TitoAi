@@ -91,11 +91,12 @@ for p in get("/api/posts"):
 sched = get("/api/schedule")
 weeks = {}
 for e in sched:
-    if e["week"] in ("W45", "W46", "W47", "W48") and e["day"] in ("MON", "WED", "FRI"):
+    if e["week"] in ("W45", "W46", "W47", "W48", "W49", "W50") and (e["day"] in ("MON", "WED", "FRI")
+                                                             or "LIVE" in str(e.get("title")) or "Zoom Class" in str(e.get("title"))):
         weeks.setdefault(e["week"], {"week": e["week"], "range": e.get("range"), "theme": e.get("theme"), "posts": []})["posts"].append(
             {"day": e["day"], "date": e.get("date"), "title": e.get("title"), "status": e.get("status")})
 
-# Active tasks: agents still working, slots on the calendar with no Studio post yet, ChatGPT clips not yet handed over.
+# Active tasks: agents still working, slots on the calendar with no Studio post yet, Flow clips not yet handed over.
 post_dates = {(p.get("slot") or "")[:10] for p in posts}
 today = datetime.now(PHT).strftime("%Y-%m-%d")
 tasks = {
@@ -117,10 +118,11 @@ def last_run(agent):
 NODES = [
     ("plan", "💡", "Jeff", "Idea / request", None), ("plan", "🎙️", "Tito AI", "Chief of staff · plans + runs the team", "tito-main"),
     ("plan", "🔎", "Tita Saliksik", "Research · short summary", "tito-researcher"), ("plan", "✍️", "Kuya Sulat", "Script + captions", "tito-scriptwriter"),
-    ("video", "🟢", "ChatGPT", "Makes video · Flow first, Gemini after", None), ("video", "🤝", "Claude Code", "Reviews the handoff, finishes it", None),
+    ("video", "🎥", "Google Flow", "Claude Code drives it · Gemini after", None), ("video", "🤝", "Claude Code", "Checks frames, finishes it", None),
     ("video", "🎬", "Kuya Kamera", "Render + audio level", "video-producer"),
     ("carousel", "🎨", "Ate Disenyo", "carousel.json when there are no video credits", "tito-content-creator"), ("carousel", "🖼️", "Slide render", "Branded 1080×1350 slides", "carousel-render"),
     ("finish", "🧐", "Lola Suri", "QA verdict", "tito-qa"), ("finish", "✅", "Your approval", "Final video + post only", None),
+    ("sales", "💼", "Tito Benta", "Sales Head · Zoom classes + 1:1", "tito-sales"), ("sales", "🤝", "Ate Kasosyo", "Business Dev · schools, SMEs, partners", "tito-bizdev"),
 ]
 workflow = [{"lane": lane, "emoji": e, "name": n, "role": role, "last": last_run(a) if a else None} for lane, e, n, role, a in NODES]
 hand = [{"id": h["id"], "status": (h.get("state") or {}).get("status", "new"), "note": (h.get("noteText") or "")[:240],
