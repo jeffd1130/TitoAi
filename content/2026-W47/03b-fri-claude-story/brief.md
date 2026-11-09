@@ -8,7 +8,7 @@
 **Status:** Brief only. Jeff approves and posts.
 
 ## Topic
-Tito AI as the base example: Jeff shows how he plans a week of Tito AI posts with the **free** Claude tier — one prompt that turns a goal ("3 posts para sa guro at BPO") into a weekly plan with hooks and CTAs. Then: "Ganito rin ang ituturo ko sa Zoom class."
+Tito AI as the base example: Jeff shows how he plans a week of Tito AI posts with the **free** Claude tier — one prompt that turns a goal ("3 posts para sa guro at BPO") into a weekly plan with hooks and CTAs. Then: "Ganito rin ang ituturo ko sa Google Meet class."
 
 ## Hook (first second, voice from frame 1)
 "Ang buong Tito AI page na 'to? May AI na katulong. Libre pa."
