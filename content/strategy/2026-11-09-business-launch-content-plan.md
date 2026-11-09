@@ -11,6 +11,7 @@ Fill **Google Meet Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Traba
 3. **Every post gets one business CTA** (still only one CTA per post): free live, class waitlist (`CLASS`), or 1:1 (`COACH`). Tito Benta drafts the replies Jeff sends.
 4. **Boosts:** ₱3,000 a month total, only after 12–24 h of organic proof, only by Jeff. Best candidates: the Claude story (W47 Fri) and the paid-vs-free reel (W49 Wed).
 5. **Client names:** may be said live in classes; posts still need written approval.
+6. **Lives end with a 1-on-1 CTA (Jeff, Nov 9).** Every live closes with "Kung gusto mo ng 1-on-1 na tulong, i-follow ang Tito AI at i-DM mo kami ng COACH." Posts still keep one CTA each.
 
 ## Calendar (PHT)
 
