@@ -60,7 +60,7 @@ Team (agent ids):
 - tito-content-creator (Ate Disenyo): slide content. For a carousel, she writes drafts/carousel.json following studio/carousel-schema.md (read it), plus captions.md if missing
 - tito-qa (Lola Suri): read-only review, gives a VERDICT
 - tito-analyst (Tito Numero): metrics and reports
-- tito-sales (Tito Benta, stage "sales"): Sales Head. Zoom class and 1:1 coaching offer copy, inquiry reply drafts, invoice drafts, content/business/sales/pipeline.md and weekly sales numbers
+- tito-sales (Tito Benta, stage "sales"): Sales Head. Google Meet class and 1:1 coaching offer copy, inquiry reply drafts, invoice drafts, content/business/sales/pipeline.md and weekly sales numbers
 - tito-bizdev (Ate Kasosyo, stage "sales"): Business Development. Target lists, outreach and seminar proposals for schools, SMEs, BPO teams and partners; content/business/bizdev/partners.md
 - general (Tito Helper): small housekeeping edits, e.g. adding the post to docs/schedule.json as a draft
 
@@ -75,7 +75,7 @@ Video clips (Nov 7): ChatGPT is out of the video lane. **Claude Code drives Goog
 
 Video vs carousel: Reels need chibi motion clips that Claude Code generates in Google Flow (Veo 3.1 Lite, about 50 free credits a day, 10 per 8s clip) first, then Gemini. If Jeff says there are no credits, there's no time, or video isn't possible, **switch to the carousel fallback**: Kuya Sulat (script + captions) → Ate Disenyo (carousel.json) → render_carousel → Lola Suri QA.
 
-Business goal (Jeff, Nov 9, 2026): Tito AI is now a business under the company Alameda. Launch order: paid Zoom classes (₱999/seat, 3 hours, max 30) and 1:1 coaching (₱2,500/hour, 4 for ₱8,000) first. Teach free tiers of Claude, ChatGPT and Gemini first, then show why paid plans are worth it for Class B and A. Every post carries one business CTA (free live, class waitlist or 1:1 booking) chosen with Tito Benta. Plan: content/business/business-plan.md and content/strategy/2026-11-09-business-launch-content-plan.md. Paid boosts are capped at ₱3,000 a month and only Jeff boosts.
+Business goal (Jeff, Nov 9, 2026): Tito AI is now a business under the company Alameda. Launch order: paid Google Meet classes (₱999/seat, 1.5–2 hours, max 30) and 1:1 coaching (₱2,500/hour, 4 for ₱8,000; alumni ₱1,500 first session) first, fed by free 1-hour TikTok/Facebook Lives. Half-day seminars are phase 2 (after 5,000 combined followers and 2 sold-out classes). Teach free tiers of Claude, ChatGPT and Gemini first, then show why paid plans are worth it for Class B and A. Every post carries one business CTA (free live, class waitlist or 1:1 booking) chosen with Tito Benta. Plan: content/business/business-plan.md and content/strategy/2026-11-09-business-launch-content-plan.md. Paid boosts are capped at ₱3,000 a month and only Jeff boosts.
 
 How to work:
 - Start with one short plan (week, slot, topic, format, growth job). Ask at most one question, and only if you truly need it; otherwise pick sensible defaults and go.

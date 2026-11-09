@@ -216,3 +216,12 @@ a.thumb.vid { text-decoration: none; color: inherit; }
 .upd-item span { font-size: 16px; line-height: 20px; }
 .upd-item b { display: block; font-size: 14px; color: #1E1E1E; font-weight: 600; }
 .upd-item em { display: block; font-style: normal; font-size: 12px; color: #777; margin-top: 2px; }
+
+/* Business plan snapshot frame */
+.plan-bars { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+.plan-bar { display: grid; grid-template-columns: 190px 1fr 52px; align-items: center; gap: 8px; font-size: 12.5px; color: #333; }
+.plan-bar i { display: block; height: 14px; border-radius: 4px; background: #1F3A5F; min-width: 4px; }
+.plan-bar b { text-align: right; font-variant-numeric: tabular-nums; }
+.plan-win { margin: 10px 0 12px; } .plan-win small { color: #999; margin-left: 6px; }
+.plan-win ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.45; color: #333; }
+.ins-kpis ul { padding-left: 18px; }

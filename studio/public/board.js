@@ -11,11 +11,12 @@
   const FRAMES = [
     {id: 'updates', name: 'Updates · agents + waiting on you', x: 0, y: 0, w: 1720, h: 360},
     {id: 'biz', name: 'Business launch · Class #1 + 1:1 coaching', x: 0, y: 420, w: 1720, h: 440},
-    {id: 'flow', name: 'Workflow · live', x: 0, y: 920, w: 1720, h: 720},
-    {id: 'handoff', name: 'Flow clip inbox', x: 0, y: 1700, w: 840, h: 280},
-    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 1700, w: 840, h: 280},
-    {id: 'cal', name: 'Content calendar', x: 0, y: 2040, w: 1720, h: 800},
-    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 2900, w: 1720, h: 440},
+    {id: 'plan', name: 'Business plan 2027 · snapshot', x: 0, y: 920, w: 1720, h: 460},
+    {id: 'flow', name: 'Workflow · live', x: 0, y: 1440, w: 1720, h: 720},
+    {id: 'handoff', name: 'Flow clip inbox', x: 0, y: 2220, w: 840, h: 280},
+    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 2220, w: 840, h: 280},
+    {id: 'cal', name: 'Content calendar', x: 0, y: 2560, w: 1720, h: 800},
+    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 3420, w: 1720, h: 440},
   ];
 
   // ---------- workflow nodes (inside the Workflow frame) ----------
@@ -71,6 +72,7 @@
       <div id="fgNodes"></div>`;
     $('#fb-handoff').innerHTML = '<div class="fg-scroll hand-list" id="handList"></div>';
     $('#fb-biz').innerHTML = '<div class="ins" id="bizBody"><div class="hand-empty">Loading business launch…</div></div>';
+    $('#fb-plan').innerHTML = '<div class="ins" id="planBody"><div class="hand-empty">Loading business plan…</div></div>';
     $('#fb-insights').innerHTML = '<div class="ins" id="insBody"><div class="hand-empty">Loading results…</div></div>';
     $('#fb-approve').innerHTML = '<div class="fg-scroll appr-list" id="apprList"></div>';
     $('#fb-cal').innerHTML = `<div class="cal-head"><button class="fg-btn" id="calPrev">‹</button><h3 id="calTitle"></h3><button class="fg-btn" id="calNext">›</button>
@@ -203,7 +205,35 @@
 
   // ---------- results (Tito Numero) ----------
   // ---------- business launch (content/business/sales/launch-status.json) ----------
-  async function loadBiz() { try { B.biz = await api('/api/business'); renderBiz(); renderNodes(); renderUpdates(); } catch {} }
+  async function loadBiz() { try { B.biz = await api('/api/business'); renderBiz(); renderPlan(); renderNodes(); renderUpdates(); } catch {} }
+  function renderPlan() {
+    const el = $('#planBody'), S = (B.biz || {}).plan_snapshot;
+    if (!el) return;
+    if (!S) { el.innerHTML = '<div class="hand-empty">No plan snapshot yet (plan_snapshot in content/business/sales/launch-status.json).</div>'; return; }
+    const k = (v) => '₱' + (v >= 1e6 ? (v / 1e6).toFixed(1).replace(/\.0$/, '') + 'M' : Math.round(v / 1e3) + 'k');
+    const max = Math.max(...S.streams.map((x) => x.value));
+    const tile = (label, v, sub) => `<div class="kpi"><span>${esc(label)}</span><b>${esc(v)}</b>${sub ? `<em>${esc(sub)}</em>` : ''}</div>`;
+    el.innerHTML = `
+      <div class="fg-scroll ins-col ins-top">
+        <h4>📘 Tito AI Business Plan 2027 <small>as of ${esc(S.as_of)}</small></h4>
+        <div class="ins-meta">${esc(S.headline)}</div>
+        <div class="kpi-row">${tile('2027 base', k(S.base), 'revenue')}${tile('Conservative', k(S.conservative))}${tile('Stretch', k(S.stretch))}${tile('Costs', k(S.costs_year), S.costs_note)}</div>
+        <h4>Phases</h4>
+        <ul>${S.phases.map((x) => `<li><b>${esc(x.name)}:</b> ${esc(x.what)}</li>`).join('')}</ul>
+        <div class="ins-meta">${esc(S.market)} · <a href="#" data-open-file="${esc(S.pdf || '')}">PDF</a> · <a href="${esc((B.biz || {}).live_doc || '#')}" target="_blank" rel="noopener">Live doc</a></div>
+      </div>
+      <div class="fg-scroll ins-col ins-kpis">
+        <h4>💰 2027 base case by stream · ${k(S.base)}</h4>
+        <div class="plan-bars">${S.streams.map((x) => `<div class="plan-bar"><span>${esc(x.name)}</span><i style="width:${(x.value / max * 100).toFixed(1)}%"></i><b>${k(x.value)}</b></div>`).join('')}</div>
+        <h4>⚠️ Risks → fallback</h4>
+        <ul>${S.risks.map((r) => `<li>${esc(r)}</li>`).join('')}</ul>
+      </div>
+      <div class="fg-scroll ins-col ins-top">
+        <h4>🗓️ 90-day plan</h4>
+        <div class="ins-meta">${esc(S.ninety_day_goal)}</div>
+        ${S.ninety_day.map((w) => `<div class="plan-win"><b>${esc(w.label)}</b> <small>${esc(w.window)}</small><ul>${w.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div>`).join('')}
+      </div>`;
+  }
   function renderBiz() {
     const Z = B.biz, el = $('#bizBody');
     if (!el) return;
