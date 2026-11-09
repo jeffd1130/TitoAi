@@ -3,7 +3,7 @@
 **Owner:** Tito AI content team + Tito Benta (sales). **Approved by:** Jeff (pending). **Business plan:** `content/business/business-plan.md`.
 
 ## Goal
-Fill **Zoom Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Trabaho"** (proposed Sat Dec 12, 2–5 PM PHT, 30 seats, ₱999 / ₱799 early bird) and book the first **1:1 coaching** sessions (₱2,500/hour, 4 for ₱8,000).
+Fill **Google Meet Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Trabaho"** (proposed Sat Dec 12, 2–5 PM PHT, 30 seats, ₱999 / ₱799 early bird) and book the first **1:1 coaching** sessions (₱2,500/hour, 4 for ₱8,000).
 
 ## What changes
 1. **"Libre Muna" series first.** One free-tier post per tool: ChatGPT, Gemini, Claude. What the free tier does well, one real task, its honest limit. Tito AI itself is the worked example wherever possible.
