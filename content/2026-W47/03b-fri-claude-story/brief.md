@@ -4,7 +4,7 @@
 **Drop:** Fri Nov 20, 2026, 7:00 PM PHT
 **Format:** 60–90 s story reel with Jeff's voice (screen recording + chibi), or 5-slide story carousel if no recording
 **Series:** Libre Muna (3 of 3). **Segment:** Class B (office staff, managers, small-business owners)
-**Growth job:** inquiry. **Business CTA:** comment `CLASS` to get on the Zoom Class #1 waitlist.
+**Growth job:** inquiry. **Business CTA:** comment `CLASS` to get on the Google Meet Class #1 waitlist.
 **Status:** Brief only. Jeff approves and posts.
 
 ## Topic
