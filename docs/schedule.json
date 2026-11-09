@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -943,7 +943,7 @@
           "day": "MON",
           "title": "Origin Recut Part 3",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 3 of 5",
-          "note": "Planned, not started. Locked plan (Jeff, Nov 3); follows Gemini/Flow plan in content/2026-W45/bonus-origin-recut/gemini-plan.md. Drop: Mon Nov 9, 8:00 PM PHT. Takes the slot the Buy 1 Take 1 carousel had. Jeff posts everything himself; nothing is scheduled or posted. Candidate matched review cut received Nov 6 (handoff/flow/origin-part-3-matched-review.mp4). Claude Code frame-strip review done; full-motion check and Jeff approval pending. Hold behind Part 2: Part 2 must be approved and posted first. Jeff posts it himself; nothing scheduled. Jeff approved the Part 3 video and captions (Nov 6, 2026). Not posted or scheduled. Part 2 is now posted (user-reported, Nov 6), so Part 3 is clear to post. File (local): handoff/flow/origin-part-3-matched-review.mp4. Approved by Jeff in Tito AI Studio (Nov 6). He posts it himself Mon Nov 9, 8 PM PHT.",
+          "note": "Planned, not started. Locked plan (Jeff, Nov 3); follows Gemini/Flow plan in content/2026-W45/bonus-origin-recut/gemini-plan.md. Drop: Mon Nov 9, 8:00 PM PHT. Takes the slot the Buy 1 Take 1 carousel had. Jeff posts everything himself; nothing is scheduled or posted. Candidate matched review cut received Nov 6 (handoff/flow/origin-part-3-matched-review.mp4). Claude Code frame-strip review done; full-motion check and Jeff approval pending. Hold behind Part 2: Part 2 must be approved and posted first. Jeff posts it himself; nothing scheduled. Jeff approved the Part 3 video and captions (Nov 6, 2026). Not posted or scheduled. Part 2 is now posted (user-reported, Nov 6), so Part 3 is clear to post. File (local): docs/media/tito-ai-origin-recut/part-3-chibi-final-v2.mp4 (Nov 9 re-cut opening; replaces handoff/flow/origin-part-3-matched-review.mp4). Approved by Jeff in Tito AI Studio (Nov 6). He posts it himself Mon Nov 9, 8 PM PHT.",
           "date": "Nov 9",
           "status": "ready",
           "url": null,
@@ -953,7 +953,7 @@
           "day": "WED",
           "title": "Origin Recut Part 4",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 4 of 5",
-          "note": "Drop: Wed Nov 11, 7:00 PM PHT. Video made Nov 7: Claude Code generated the clips in Google Flow (Veo 3.1 Lite) and rendered OriginChibiGeminiP4 with Jeff's original voice. File: docs/media/tito-ai-origin-recut/part-4-chibi-final.mp4. Waiting on Jeff's approval in Approve & Post. Jeff posts it himself; nothing is scheduled or posted.",
+          "note": "Drop: Wed Nov 11, 7:00 PM PHT. Video made Nov 7: Claude Code generated the clips in Google Flow (Veo 3.1 Lite) and rendered OriginChibiGeminiP4 with Jeff's original voice. File: docs/media/tito-ai-origin-recut/part-4-chibi-final-v2.mp4 (Nov 9 re-cut opening). Waiting on Jeff's approval in Approve & Post. Jeff posts it himself; nothing is scheduled or posted.",
           "date": "Nov 11",
           "status": "draft",
           "url": null,
@@ -973,7 +973,7 @@
           "day": "FRI",
           "title": "Origin Recut Part 5",
           "tag": "Origin Story Recut · Video 1080×1920 · Part 5 of 5",
-          "note": "Drop: Fri Nov 13, 7:00 PM PHT. Video made Nov 9: Claude Code generated the clips in Google Flow (Veo 3.1 Lite) and rendered OriginChibiGeminiP5 with Jeff's original voice. File: docs/media/tito-ai-origin-recut/part-5-chibi-final.mp4. Waiting on Jeff's approval in Approve & Post. Jeff posts it himself; nothing is scheduled or posted.",
+          "note": "Drop: Fri Nov 13, 7:00 PM PHT. Video made Nov 9: Claude Code generated the clips in Google Flow (Veo 3.1 Lite) and rendered OriginChibiGeminiP5 with Jeff's original voice. File: docs/media/tito-ai-origin-recut/part-5-chibi-final-v2.mp4 (Nov 9 re-cut opening). Waiting on Jeff's approval in Approve & Post. Jeff posts it himself; nothing is scheduled or posted.",
           "date": "Nov 13",
           "status": "draft",
           "url": null,
@@ -994,16 +994,16 @@
     {
       "id": "W47",
       "range": "Nov 16–22",
-      "theme": "AI para sa Small Business · Promo Profit Check + New Content",
+      "theme": "Libre Muna · Free tiers of ChatGPT, Gemini, Claude",
       "boost": null,
       "posts": [
         {
           "day": "MON",
-          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
-          "tag": "AI Tip Carousel · Small Business · Promo Math",
-          "note": "Studio post 2026-w46-01-mon-ai-tip. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6). Moved from W46 Tue Nov 10.",
+          "title": "Libre Muna #1 — Libre Lang ang ChatGPT. Ito ang Kaya Niya.",
+          "tag": "AI Tip Carousel · ChatGPT free · Sellers",
+          "note": "Brief: content/2026-W47/01-mon-ai-tip/brief.md. Buy 1 Take 1 moved to W49 Mon. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
           "date": "Nov 16",
-          "status": "ready",
+          "status": "draft",
           "url": null,
           "boost": null
         },
@@ -1019,9 +1019,9 @@
         },
         {
           "day": "WED",
-          "title": "Gemini ang Gagawa ng Quiz",
+          "title": "Libre Muna #2 — Gemini ang Gagawa ng Quiz",
           "tag": "New content slot",
-          "note": "Studio post 2026-w47-02-wed-demo. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
+          "note": "Studio post 2026-w47-02-wed-demo. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6). Reframed as Libre Muna #2. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
           "date": "Nov 18",
           "status": "ready",
           "url": null,
@@ -1039,11 +1039,11 @@
         },
         {
           "day": "FRI",
-          "title": "Ginamit ng Anak Ko ang AI sa Assignment",
-          "tag": "New content slot",
-          "note": "Studio post 2026-w47-03-fri-inspiration. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
+          "title": "Libre Muna #3 — Paano Pinapatakbo ang Tito AI? (Claude free)",
+          "tag": "Story reel · Claude free · Tito AI as example",
+          "note": "Brief: content/2026-W47/03b-fri-claude-story/brief.md. CTA: comment CLASS. Anak/assignment story moved to W49 Fri. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
           "date": "Nov 20",
-          "status": "ready",
+          "status": "draft",
           "url": null,
           "boost": null
         },
@@ -1062,7 +1062,7 @@
     {
       "id": "W48",
       "range": "Nov 23–29",
-      "theme": "New Content · Trend Research",
+      "theme": "Practice + Planning · Free AI Tambayan LIVE",
       "boost": null,
       "posts": [
         {
@@ -1092,6 +1092,102 @@
           "note": "Studio post 2026-w48-03-fri-inspiration. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
           "date": "Nov 27",
           "status": "ready",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "SAT",
+          "title": "AI Tambayan LIVE (free) — Class #1 seats open",
+          "tag": "Free live · 45 min · FB/TikTok",
+          "note": "Proposed 8 PM PHT; Jeff to confirm. Script in the private business folder. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Nov 28",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W49",
+      "range": "Nov 30–Dec 6",
+      "theme": "Sulit ba ang Paid AI? · For B and A",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
+          "tag": "AI Tip Carousel · Small Business · Promo Math",
+          "note": "Studio post 2026-w46-01-mon-ai-tip (moved from W47 Mon). CTA: comment COACH. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Nov 30",
+          "status": "ready",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "Sulit Ba ang Paid AI? Ganito Mo Malalaman.",
+          "tag": "Reel 60–90 s · B/A",
+          "note": "Brief: content/2026-W49/02-wed-demo/brief.md. Needs Flow clips. CTA: comment COACH. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Dec 2",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Ginamit ng Anak Ko ang AI sa Assignment",
+          "tag": "Story carousel",
+          "note": "Studio post 2026-w47-03-fri-inspiration (moved from W47 Fri). CTA: share. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Dec 4",
+          "status": "ready",
+          "url": null,
+          "boost": null
+        }
+      ]
+    },
+    {
+      "id": "W50",
+      "range": "Dec 7–13",
+      "theme": "Zoom Class #1 week",
+      "boost": null,
+      "posts": [
+        {
+          "day": "MON",
+          "title": "Ano'ng Matututunan Mo sa Libre Muna Class",
+          "tag": "Carousel · class agenda",
+          "note": "To brief (Tito Benta + Kuya Sulat). CTA: reserve a seat. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Dec 7",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "WED",
+          "title": "Seminar Diary — CJEF Hands-on AI Seminar",
+          "tag": "Reel · proof · A",
+          "note": "To brief. Existing footage, no identifiable attendees. CTA: comment TRAINING. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Dec 9",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "FRI",
+          "title": "Last Call — Para Kanino ang Class?",
+          "tag": "Reel",
+          "note": "To brief. CTA: reserve a seat. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Dec 11",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "SAT",
+          "title": "Zoom Class #1 — Libre Muna: Claude, ChatGPT at Gemini para sa Trabaho",
+          "tag": "Paid Zoom class · 3 h",
+          "note": "Proposed 2–5 PM PHT; Jeff to confirm. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "date": "Dec 12",
+          "status": "draft",
           "url": null,
           "boost": null
         }
