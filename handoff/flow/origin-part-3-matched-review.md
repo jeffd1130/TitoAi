@@ -7,3 +7,5 @@
 - **Exact Flow prompts:** A–D are recorded verbatim in the companion `origin-part-3-flow.md` handoff note; the source motion is `origin-part-3-flow.mp4`. The D prompt was simplified to a nod and thumbs-up to avoid angular elbows. C was sped 1.2× to fit the original 27.5-second narration.
 - **Review points:** Check subtitle words and timing against Jeff's narration, logo/hook/caption safe areas, chibi face/hands/watch/tablet continuity, and the C→D posture cut around 21.5s. The source project has a general no-text-overlay rule, but Jeff's latest explicit request was to match the first two videos, so this cut includes their established captions and hooks. Resolve any remaining format conflict with Jeff during approval.
 - **Status:** Ready for Claude Code/Tito AI Studio review, then Jeff's approval. Do not publish, schedule, boost, or mark final without that review.
+
+> **Nov 9, 2026:** this draft mp4 was moved to the Trash (TitoAi-cleanup-2026-11-09). Use `docs/media/tito-ai-origin-recut/part-3-chibi-final-v2.mp4`.

@@ -54,7 +54,7 @@ Mga Pamangkin, ito ang Part 2. Kailangan ng side hustle ko ng website, at siguro
 
 Tama ba hula mo? "How do I make a website?" 😄 Ikaw, ano ang una mong tinanong sa AI? 👇
 
-## Part 3 — animated chibi version (APPROVED by Jeff Nov 6 (not yet posted): handoff/flow/origin-part-3-matched-review.mp4)
+## Part 3 — animated chibi version (APPROVED by Jeff Nov 6 (not yet posted): docs/media/tito-ai-origin-recut/part-3-chibi-final-v2.mp4 — Nov 9 re-cut)
 
 For the animated chibi cut. The chibi is an illustrated host; the voice and story are Jeff's own. Five hashtags each, one CTA (follow). Hold behind Part 2.
 

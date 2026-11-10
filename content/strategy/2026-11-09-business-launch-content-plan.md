@@ -3,7 +3,7 @@
 **Owner:** Tito AI content team + Tito Benta (sales). **Approved by:** Jeff (pending). **Business plan:** `content/business/business-plan.md`.
 
 ## Goal
-Fill **Google Meet Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Trabaho"** (proposed Sat Dec 12, 2–5 PM PHT, 30 seats, ₱999 / ₱799 early bird) and book the first **1:1 coaching** sessions (₱2,500/hour, 4 for ₱8,000).
+Fill **Google Meet Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Trabaho"** (proposed Sat Dec 12, 2–4 PM PHT, 1.5–2 hours, 30 seats, ₱999 / ₱799 early bird) and book the first **1:1 coaching** sessions (₱2,500/hour, 4 for ₱8,000).
 
 ## What changes
 1. **"Libre Muna" series first.** One free-tier post per tool: ChatGPT, Gemini, Claude. What the free tier does well, one real task, its honest limit. Tito AI itself is the worked example wherever possible.
@@ -23,12 +23,12 @@ Fill **Google Meet Class #1 "Libre Muna: Claude, ChatGPT at Gemini para sa Traba
 | Mon Nov 23, 8 PM | W48 Mon | Scam text second opinion (existing) | Carousel | C | Free live reminder | Draft ready |
 | Wed Nov 25, 7 PM | W48 Wed | BPO angry-customer practice (existing) | Carousel | C/B | Comment `COACH` (1:1) | Draft ready |
 | Fri Nov 27, 7 PM | W48 Fri | 13th month plan (existing) | Story carousel | C/B | Comment `CLASS` | Draft ready |
-| Sat Nov 28, 8 PM | Live | **AI Tambayan LIVE (free, 45 min)** — announce Class #1 seats | FB/TikTok Live | All | Join Class #1; closing line: "Kung gusto mo ng 1-on-1 na tulong, i-follow ang Tito AI at i-DM mo kami ng COACH." | Script: `content/business/live-classes/ai-tambayan-live-script.md` |
+| Sat Nov 28, 8 PM | Live | **AI Tambayan LIVE (free, 1 hour)** — announce Class #1 seats | FB/TikTok Live | All | Join Class #1; closing line: "Kung gusto mo ng 1-on-1 na tulong, i-follow ang Tito AI at i-DM mo kami ng COACH." | Script: `content/business/live-classes/ai-tambayan-live-script.md` |
 | Mon Nov 30, 8 PM | W49 Mon | Buy 1 Take 1 promo check (existing, moved from W47) | Carousel | B | Comment `COACH` | Draft ready (folder stays `content/2026-W46/01-mon-ai-tip/`) |
 | Wed Dec 2, 7 PM | W49 Wed | **NEW** Sulit ba ang Paid AI? (for B and A) | Reel 60–90 s | B/A | Book 1:1 / `CLASS` | Brief: `content/2026-W49/02-wed-demo/brief.md` |
 | Fri Dec 4, 7 PM | W49 Fri | Anak used AI for assignment (existing, moved from W47) | Story carousel | B | Share | Draft ready (folder stays `content/2026-W47/03-fri-inspiration/`) |
 | Mon Dec 7, 8 PM | W50 Mon | What you'll learn in Class #1 (agenda + exercise preview) | Carousel | C/B | Reserve seat | To brief (Tito Benta + Kuya Sulat) |
-| Wed Dec 9, 7 PM | W50 Wed | Seminar Diary — CJEF hands-on seminar (existing footage, no identifiable attendees) | Reel | A | Comment `TRAINING` | To brief |
+| Wed Dec 9, 7 PM | W50 Wed | Seminar Diary — CJEF hands-on seminar (existing footage, no identifiable attendees) | Reel | B | Comment `CLASS` (seminars are phase 2) | To brief |
 | Fri Dec 11, 7 PM | W50 Fri | Last call — Tito explains who the class is for | Reel | All | Reserve seat | To brief |
 | Sat Dec 12, 2 PM | Class | **Google Meet Class #1** | Google Meet | — | — | Script: `content/business/live-classes/class-01-libre-muna.md` |
 

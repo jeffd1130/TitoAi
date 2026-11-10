@@ -9,3 +9,5 @@
 ## Claude Code / Tito AI Studio review
 
 Please review the full video with audio before sending to Jeff for approval. Check chibi continuity, hands/watch, tablet screen orientation, audio synchronization, logo safe area, and the visible posture change at the C→D cut around 21.5s. If final subtitles or other overlays are desired, resolve that against the current `AGENTS.md` no-text-overlays rule with Jeff rather than assuming permission. Claude Code owns any correction, final status, and approval flow. Nothing should be published, scheduled, or boosted from this handoff.
+
+> **Nov 9, 2026:** this draft mp4 was moved to the Trash (TitoAi-cleanup-2026-11-09). Use `docs/media/tito-ai-origin-recut/part-3-chibi-final-v2.mp4`.
