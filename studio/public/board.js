@@ -218,6 +218,7 @@
         <h4>📘 Tito AI Business Plan 2027 <small>as of ${esc(S.as_of)}</small></h4>
         <div class="ins-meta">${esc(S.headline)}</div>
         <div class="kpi-row">${tile('2027 base', k(S.base), 'revenue')}${tile('Conservative', k(S.conservative))}${tile('Stretch', k(S.stretch))}${tile('Costs', k(S.costs_year), S.costs_note)}</div>
+        ${S.research ? `<h4>🔎 Market research (first)</h4><ul>${S.research.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
         <h4>Phases</h4>
         <ul>${S.phases.map((x) => `<li><b>${esc(x.name)}:</b> ${esc(x.what)}</li>`).join('')}</ul>
         <div class="ins-meta">${esc(S.market)} · <a href="#" data-open-file="${esc(S.pdf || '')}">PDF</a> · <a href="${esc((B.biz || {}).live_doc || '#')}" target="_blank" rel="noopener">Live doc</a></div>
