@@ -210,10 +210,8 @@ function board() {
       <div class="panel"><h3>✅ Your approvals · final only</h3>${approvals.map((p) => it(['📝', p.title, p.slot ? fmtSlot(p.slot) : p.series])).join('') || '<div class="empty">Nothing to approve. Research and scripts flow on; only final videos and posts land here.</div>'}</div>
     </div>
     <div class="panel mt"><h3>🗓️ Content calendar</h3>${calendarHtml()}</div>
-    <div class="panel mt"><h3>📊 Results · Tito Numero <span class="pill">Pulled ${esc(R.pulled || '–')}</span></h3>
-      <div class="kpis">${R.kpis.map(kpi).join('')}</div>
-      <ul class="topline">${R.topline.map((t) => `<li>${t}</li>`).join('')}</ul>
-      ${R.boost ? `<div class="boost"><span class="label">Boost call</span><div>${R.boost}</div></div>` : ''}
+    <div class="panel mt"><h3>📊 Numbers <span class="pill">As of ${esc(R.pulled || '–')}</span></h3>
+      <div class="kpis">${R.kpis.filter((k) => k.value !== null && k.value !== undefined).map(kpi).join('')}</div>
     </div>
     <div class="panel mt"><h3>📁 Reports <span class="pill">${(D.reports || []).length}</span></h3>
       ${(D.reports || []).map((r) => `<div class="item"><span>${/stats|numbers/i.test(r.title) ? '📊' : '📄'}</span><div><b><a href="${esc((D.live ? '' : D.links.liveStudio) + r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></b><em>${esc(r.date)}</em></div></div>`).join('') || '<div class="empty">No reports yet.</div>'}
