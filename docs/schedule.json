@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-23",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -999,13 +999,14 @@
       "posts": [
         {
           "day": "MON",
-          "title": "Libre Muna #1 — Libre Lang ang ChatGPT. Ito ang Kaya Niya.",
+          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
           "tag": "AI Tip Carousel · ChatGPT free · Sellers",
           "note": "Brief: content/2026-W47/01-mon-ai-tip/brief.md. Buy 1 Take 1 moved to W49 Mon. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
           "date": "Nov 16",
-          "status": "draft",
+          "status": "posted",
           "url": null,
-          "boost": null
+          "boost": null,
+          "posted": "TikTok 8:40 PM · IG/FB 8:42 PM"
         },
         {
           "day": "TUE",
@@ -1019,13 +1020,14 @@
         },
         {
           "day": "WED",
-          "title": "Libre Muna #2 — Gemini ang Gagawa ng Quiz",
-          "tag": "New content slot",
-          "note": "Studio post 2026-w47-02-wed-demo. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6). Reframed as Libre Muna #2. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "title": "Takip o Ayos? (ASEAN Summit satire)",
+          "tag": "Reel 30 s · satire · B/C",
+          "note": "Replaces Libre Muna #2 (Gemini quiz moves to the series). Script/captions: content/2026-W47/02b-wed-asean-satire/drafts/. CTA: comment TAKIP o AYOS. Needs Jeff's voice + Flow clips.",
           "date": "Nov 18",
-          "status": "ready",
+          "status": "posted",
           "url": null,
-          "boost": null
+          "boost": null,
+          "posted": "TikTok 7:29 PM · IG/FB 7:32 PM"
         },
         {
           "day": "THU",
@@ -1039,11 +1041,11 @@
         },
         {
           "day": "FRI",
-          "title": "Libre Muna #3 — Paano Pinapatakbo ang Tito AI? (Claude free)",
+          "title": "Isang Prompt, Isang Linggong Plano (Claude) · comment PROMPT",
           "tag": "Story reel · Claude free · Tito AI as example",
           "note": "Brief: content/2026-W47/03b-fri-claude-story/brief.md. CTA: comment CLASS. Anak/assignment story moved to W49 Fri. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
           "date": "Nov 20",
-          "status": "draft",
+          "status": "ready",
           "url": null,
           "boost": null
         },
@@ -1062,24 +1064,24 @@
     {
       "id": "W48",
       "range": "Nov 23–29",
-      "theme": "Practice + Planning · Free AI Tambayan LIVE",
+      "theme": "Libre AI, Totoong Trabaho · comment PROMPT · Free AI Tambayan LIVE",
       "boost": null,
       "posts": [
         {
           "day": "MON",
-          "title": "Na-lock Daw ang Account Mo?",
-          "tag": "New content slot",
-          "note": "Studio post 2026-w48-01-mon-ai-tip. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
+          "title": "EP1 · Resume sa 5 Minuto",
+          "tag": "Reel 30–45 s · job seekers · ChatGPT (paid recording)",
+          "note": "v3 (Nov 23): Jeff's paid ChatGPT recording, so every \"libre\" claim was removed (headline now GAMIT ANG AI, voice cut, captions say paid + try free tiers): docs/media/w48-mon-ep1-resume/resume-reel-v3.mp4 (37.5 s). Needs Jeff's re-approval. Post Mon Nov 23, 8:00 PM PHT (4:00 AM PST).",
           "date": "Nov 23",
-          "status": "ready",
+          "status": "draft",
           "url": null,
           "boost": null
         },
         {
           "day": "WED",
-          "title": "Galit ang Customer, Mag-practice Muna",
-          "tag": "New content slot",
-          "note": "Studio post 2026-w48-02-wed-demo. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
+          "title": "EP3 · Guro? Quiz sa 1 Minuto",
+          "tag": "Reel 30–45 s · teachers · Gemini free",
+          "note": "Reel built from Jeff's Gemini screen recordings (Snagit Nov 21, work Google account, so no libre claim about this run; voice re-done without it) + Finn AI voice + moving chibi: docs/media/w48-wed-ep3-guro-quiz/quiz-reel-v1.mp4 (43.1 s). In Studio for Jeff's approval. Post Wed Nov 25, 7:00 PM PHT (3:00 AM PST).",
           "date": "Nov 25",
           "status": "ready",
           "url": null,
@@ -1087,11 +1089,11 @@
         },
         {
           "day": "FRI",
-          "title": "Saan Mapupunta ang 13th Month?",
-          "tag": "New content slot",
-          "note": "Studio post 2026-w48-03-fri-inspiration. Carousels resume after Origin Parts 3–5 (Jeff, Nov 6).",
+          "title": "EP6 · Galit si Customer? Kalmado Ka",
+          "tag": "Reel 30–45 s · BPO/team leads · ChatGPT free",
+          "note": "Voice + captions ready (content/2026-W48/03-fri-ep6-galit-customer). Waiting on Jeff's free-ChatGPT screen recording.",
           "date": "Nov 27",
-          "status": "ready",
+          "status": "draft",
           "url": null,
           "boost": null
         },
@@ -1110,24 +1112,24 @@
     {
       "id": "W49",
       "range": "Nov 30–Dec 6",
-      "theme": "Sulit ba ang Paid AI? · For B and A",
+      "theme": "Libre AI, Totoong Trabaho · comment PROMPT",
       "boost": null,
       "posts": [
         {
           "day": "MON",
-          "title": "Buy 1 Take 1 Mo… Lugi Pala?",
-          "tag": "AI Tip Carousel · Small Business · Promo Math",
-          "note": "Studio post 2026-w46-01-mon-ai-tip (moved from W47 Mon). CTA: comment COACH. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "title": "EP4 · 3 Caption para sa Paninda",
+          "tag": "Reel 30–45 s · sellers · ChatGPT free",
+          "note": "Series: content/series/libre-ai-totoong-trabaho/episodes.md. CTA: comment PROMPT (free prompt pack + waitlist form). Replaces 'Buy 1 Take 1 Mo… Lugi Pala?' (draft kept in its folder). Jeff screen-records the real free-tool run + voice.",
           "date": "Nov 30",
-          "status": "ready",
+          "status": "draft",
           "url": null,
           "boost": null
         },
         {
           "day": "WED",
-          "title": "Sulit Ba ang Paid AI? Ganito Mo Malalaman.",
-          "tag": "Reel 60–90 s · B/A",
-          "note": "Brief: content/2026-W49/02-wed-demo/brief.md. Needs Flow clips. CTA: comment COACH. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "title": "EP5 · 13th Month? Huwag Muna Gastusin",
+          "tag": "Reel 30–45 s · employees (B) · Claude free",
+          "note": "Series: content/series/libre-ai-totoong-trabaho/episodes.md. CTA: comment PROMPT (free prompt pack + waitlist form). Replaces 'Sulit Ba ang Paid AI? Ganito Mo Malalaman.' (draft kept in its folder). Jeff screen-records the real free-tool run + voice.",
           "date": "Dec 2",
           "status": "draft",
           "url": null,
@@ -1135,11 +1137,11 @@
         },
         {
           "day": "FRI",
-          "title": "Ginamit ng Anak Ko ang AI sa Assignment",
-          "tag": "Story carousel",
-          "note": "Studio post 2026-w47-03-fri-inspiration (moved from W47 Fri). CTA: share. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "title": "EP2 · Cover Letter para sa BPO",
+          "tag": "Reel 30–45 s · job seekers · Gemini free",
+          "note": "Series: content/series/libre-ai-totoong-trabaho/episodes.md. CTA: comment PROMPT (free prompt pack + waitlist form). Replaces 'Ginamit ng Anak Ko ang AI sa Assignment' (draft kept in its folder). Jeff screen-records the real free-tool run + voice.",
           "date": "Dec 4",
-          "status": "ready",
+          "status": "draft",
           "url": null,
           "boost": null
         }
