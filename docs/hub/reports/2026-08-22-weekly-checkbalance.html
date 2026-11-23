@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Weekly Check &amp; Balance · Aug 22, 2026</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Weekly Check &amp; Balance · Aug 22, 2026</h1>
+<p>*Automated run. Live pull via authenticated TikTok Studio + public Instagram profile. IG post-level insights remain login-gated.*</p>
+<h2>Executive summary</h2>
+<p>Automation and repo health are normal — <code>main</code> matches <code>origin/main</code>, working tree clean, five auto-sync commits landed Aug 21 (14:23–16:46 PHT) alongside expected daily/weekly cron activity. The <b>W34 Friday slot did not run as planned</b>: the scripted CJEF proof story (S2E3) was swapped same-day for a simpler "prep question" bonus tip (S2E4) — a real, documented decision (commit <code>0ac73ed</code>, Aug 21 14:23), but <code>schedule.json</code> and <code>CLAUDE.md</code> still describe S2E3 as what posted. That's corrected in this run. TikTok engagement is down sharply this week (views ‑31.3%, likes ‑57.1% WoW, 0 net new followers vs. +3 the prior week) — driven by two unpinned, prompt-recitation-style posts (W34 Wed Guro, W34 Fri S2E4) landing well below the proof-first carousel baseline. IG ticked up to 77 followers (+2).</p>
+<h2>Automation and repo health</h2>
+<table>
+<tr><td>Check</td><td>Result</td></tr>
+<tr><td>Git state</td><td><code>main</code> == <code>origin/main</code>, working tree clean. Last commit <code>68b08fa</code>, Aug 21 16:46 PHT.</td></tr>
+<tr><td>Recent commits</td><td><code>0ac73ed</code> (14:23) added the W34 Fri bonus script; four "Auto-sync" commits (16:35–16:46) added CJEF-adjacent slide renders, the bonus carousel render, and Canva import assets.</td></tr>
+<tr><td>Stray lock file</td><td><code>.git/index.lock</code> present (0 bytes, harmless — <code>git status</code>/<code>git log</code> ran fine around it; matches the documented sandbox quirk). No action needed unless a future commit is blocked.</td></tr>
+<tr><td>Cron log</td><td><code>/tmp/titoai-cron.log</code> not present in this sandbox — expected; cron runs on Jeff's Mac, unreachable from here.</td></tr>
+</table>
+<h2>Account health</h2>
+<table>
+<tr><td>Metric</td><td>Aug 22</td><td>Aug 13</td><td>Change</td></tr>
+<tr><td>TikTok followers</td><td><b>~1K</b> (net +0 last 7d, vs. +3 prior 7d)</td><td>1,017</td><td>Growth stalled this week</td></tr>
+<tr><td>TikTok total likes</td><td><b>~1K</b></td><td>1,025</td><td>Marginal</td></tr>
+<tr><td>TikTok following</td><td>149</td><td>—</td><td>—</td></tr>
+<tr><td>Instagram followers</td><td><b>77</b></td><td>75</td><td><b>+2</b></td></tr>
+<tr><td>Instagram following</td><td>112</td><td>112</td><td>Flat</td></tr>
+</table>
+<p>TikTok Studio's dashboard now rounds both followers and likes to "1K" rather than showing exact counts — this is a Studio display change, not a data gap. Last-7-days key metrics: video views 675 (<b>‑31.3%</b> WoW), profile views 6 (‑14.3%), likes 12 (<b>‑57.1%</b> WoW), comments 0, shares 1. Traffic remains 91.9% For You / 7.3% Search. Search queries: "tito ai" (11.4%), "ai tito" (8.6%), "tito ai story" (5.7%), and a new one worth noting — <b>"safety ba ang ai"</b> (2.9%), the first AI-trust/myth-busting search query seen in any report to date.</p>
+<h2>Posts since the previous check — corrected against live data</h2>
+<table>
+<tr><td>Post</td><td>Pinned</td><td>Views</td><td>Likes</td><td>Comments</td><td>Notes</td></tr>
+<tr><td>W33 Fri — S2E2 CJEF training story (Aug 14)</td><td>Yes</td><td>213</td><td>3</td><td>0</td><td>Confirmed live, on schedule.</td></tr>
+<tr><td>W34 Mon — Freelancer feedback carousel (Aug 17)</td><td>No</td><td>279</td><td>7</td><td>0</td><td>Confirmed posted.</td></tr>
+<tr><td>W34 Wed — Guro parent-meeting demo (Aug 19)</td><td>No</td><td><b>94</b></td><td><b>1</b></td><td>0</td><td><b>Weakest post since at least W31.</b> <code>schedule.json</code> still had this marked <code>draft</code> — it is live; corrected to <code>posted</code>.</td></tr>
+<tr><td>W34 Fri — planned S2E3 CJEF proof story</td><td>—</td><td>—</td><td>—</td><td>—</td><td><b>Never produced.</b> Commit history shows it was replaced same-day by the bonus script below.</td></tr>
+<tr><td>W34 Fri (actual) — S2E4 "prep question" bonus tip (Aug 21, 6:59 PM)</td><td>No</td><td><b>210</b></td><td>4</td><td>0</td><td>This is what's actually live in the W34 Friday slot. Talking-head + 5-slide carousel adaptation exists (Canva <code>DAHS6AdAdTg</code>), but only the talking-head video was posted.</td></tr>
+<tr><td>W33 Wed — Negosyante carousel (re-check)</td><td>No</td><td>292 (was 265 Aug 13)</td><td>7</td><td>0</td><td>+27 views since last check, normal organic tail.</td></tr>
+<tr><td>W33 Mon — BPO carousel</td><td>—</td><td>335 (Aug 13 figure, not re-verified this cycle)</td><td>8</td><td>0</td><td>Not re-pulled this run; carried forward from Aug 13 report rather than guessed.</td></tr>
+</table>
+<p><b>W34 Fri resolution:</b> the CJEF proof story (real training footage, <code>docs/scripts/w34-fri-script.html</code>, CTA "Comment GUSTO") was written but a same-day judgment call swapped it for a lighter, faster-to-produce tip video (<code>docs/scripts/w34-fri-bonus-script.html</code>, CTA "Comment YES"). That's a reasonable call under time pressure, but it means <b>the CJEF proof story — the strongest proof-format asset currently sitting unused — has not run yet.</b> <code>schedule.json</code> is corrected below to reflect reality and flag the CJEF script as available for W35.</p>
+<h2>Engagement findings</h2>
+<ol>
+<li><b>Pin effect is no longer ambiguous.</b> Every post at the top of the TikTok Studio content list is pinned and outperforms every unpinned post by a wide margin: Jul 17 Clark story (pinned, 4,679 views) · Jul 16 VA resume (pinned, 1,117) · Aug 14 CJEF story (pinned, 213) vs. the four most recent unpinned posts, all in the 94–292 range. Combined with the earlier Jul 15/16 same-content duplicate pair (356 unpinned vs. 1,117 pinned, ~3.1x), this resolves the "is pinning decisive" question the Aug 13 report left open: <b>pin every post going forward, no exceptions.</b></li>
+<li><b>Prompt-recitation tip formats underperform proof-first formats.</b> The two lowest-viewed recent posts (W34 Wed Guro, 94 views; W34 Fri S2E4 bonus, 210 views) both follow the same shape — read a prompt aloud, no visible before/after or footage. The two carousels that show real inputs/outputs (W34 Mon Freelancer 279, W33 Wed Negosyante 292) outperform them despite being unpinned.</li>
+<li><b>Comments are still at zero on every organic post this cycle</b>, but the pinned Clark story has one real inbound comment worth a personal reply — a viewer (<code>jkp_7777</code>) asking about starting an AI side hustle. Replying is a low-cost way to model the exact behavior the CTAs are asking for.</li>
+<li><b>This week's dip is explained by content mix, not a platform-wide problem.</b> Views/likes fell WoW because the week's two new posts were both unpinned tip-format videos; profile views and shares are flat-to-up. No red flag beyond format choice.</li>
+<li><b>New branded-search signal:</b> "safety ba ang ai" appearing in search queries suggests some viewers are looking for reassurance/myth-busting content — a possible new content angle, distinct from the existing tool-tip and persona-demo pillars.</li>
+</ol>
+<h2>Recommendations for W35 (Aug 24–30)</h2>
+<table>
+<tr><td>Priority</td><td>Action</td><td>Why</td></tr>
+<tr><td>Immediate</td><td>Pin every new post immediately on posting — no more unpinned drops.</td><td>Now the best-evidenced lever in the channel's history (3.1x–5x range across two independent comparisons).</td></tr>
+<tr><td>Immediate</td><td>Revisit and produce the CJEF proof story (<code>docs/scripts/w34-fri-script.html</code>) for W35 Friday — real footage is ready and unused.</td><td>It's the strongest proof-format asset on hand and matches the top-performing content shape (named/verified proof + real output).</td></tr>
+<tr><td>Next week</td><td>For Monday/Wednesday, keep the before/after proof shape (persona + visible input/output) over prompt-recitation-only tips.</td><td>Prompt-recitation posts this cycle (94, 210 views) underperformed proof carousels (279, 292 views) despite being more recent.</td></tr>
+<tr><td>Next week</td><td>Reply personally to the <code>jkp_7777</code> comment on the Clark story.</td><td>Real inbound engagement — reinforces the "comment and I'll respond" pattern the CTAs are trying to build.</td></tr>
+<tr><td>Process</td><td>Hold all boosts.</td><td>No post this cycle clears the 12–24h evidence gate in <code>content/strategy/niche-and-growth-plan.md</code>.</td></tr>
+<tr><td>Optional test</td><td>Try one myth-busting/trust-themed hook (e.g., "Ligtas ba ang AI?") in a future week.</td><td>New "safety ba ang ai" search query — first sign of this angle in any report.</td></tr>
+</table>
+<h2>Repo corrections made this run</h2>
+<ul>
+<li><code>docs/schedule.json</code>: <code>updated</code> bumped to <code>2026-08-22</code>; W34 Wed status corrected <code>draft</code> → <code>posted</code> with live metrics; W34 Fri entry corrected to reflect the actual S2E4 bonus post (not the unproduced S2E3 story), with the CJEF script flagged as available for reuse; W33 Wed view count refreshed.</li>
+<li><code>CLAUDE.md</code>: new dated log entry appended; Current/Next/Upcoming week table refreshed.</li>
+</ul>
+<h2>Next-period focus</h2>
+<ul>
+<li>Produce and pin the CJEF proof story for W35 Friday.</li>
+<li>Pin every post at time of posting, without exception, and track whether the pattern holds for a 4th and 5th data point.</li>
+<li>Watch whether the "safety ba ang ai" search query recurs before building content around it.</li>
+</ul>
+<p>*Previous: reports/2026-08-13-health-check.md*</p>
+<p>*Data pulled: Aug 22, 2026, via authenticated TikTok Studio (Overview/Content/Followers) and public Instagram profile.*</p></main></body></html>

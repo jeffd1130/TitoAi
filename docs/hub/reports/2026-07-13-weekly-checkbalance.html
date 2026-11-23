@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Weekly Check &amp; Balance (Jul 13, 2026)</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Weekly Check &amp; Balance (Jul 13, 2026)</h1>
+<p>Automated routine run. Covers automation health, social account health, and engagement-driven recommendations for W29.</p>
+<h2>1. Automation / Claude Code health</h2>
+<table>
+<tr><td>Check</td><td>Result</td></tr>
+<tr><td>Git log</td><td>Last commit <code>3c1a8d8</code> — Jul 13, 07:42, "Add W29 Mon script + captions — email drafting with AI." Commits landing steadily through Jul 9–13 (W28 Fri script iterations, W28 Wed carousel ID, W29 Mon).</td></tr>
+<tr><td>Git status</td><td>Clean. Branch up to date with <code>origin/main</code>. One untracked local file (<code>.claude/settings.local.json</code>) — machine-local, not a concern.</td></tr>
+<tr><td>Push state</td><td>Local <code>main</code> matches <code>origin/main</code> — nothing stuck unpushed. No index.lock present.</td></tr>
+<tr><td>Cron log (<code>/tmp/titoai-cron.log</code>)</td><td><b>Not present in this sandboxed run</b> — same limitation as prior cycles: this automated environment only mounts the <code>TItoAi</code> repo folder, not Jeff's actual Mac <code>/tmp</code> or crontab. Cron firing itself can't be confirmed from here; would need to be checked directly on the Mac.</td></tr>
+</table>
+<p><b>Verdict:</b> repo/automation-output health normal — no stuck commits, no conflicts, push current.</p>
+<h2>2. Social media account health (Instagram + TikTok)</h2>
+<p><b>Could not complete this cycle — second cycle in a row.</b> Two access paths attempted:</p>
+<ol>
+<li><b>Claude in Chrome</b> — no browser connected (<code>list_connected_browsers</code> returned empty, <code>tabs_context_mcp</code> reported "Claude in Chrome is not connected"). Consistent with browser control being unavailable during unattended/scheduled runs.</li>
+<li><b>Direct web fetch</b> of <code>instagram.com/tito.aiph</code> and <code>tiktok.com/@tito.aiph</code> — both returned empty content (JS-rendered pages, static fetch can't see follower counts or post data).</li>
+</ol>
+<p>No follower counts, post-timing confirmation, or new post-level engagement numbers were pulled. Per the no-fabrication rule, nothing is reported here in place of real data. The last confirmed pull remains <code>reports/2026-07-09-health-check.md</code> (Jul 9: IG 70 followers/2,152 90-day views; TikTok 146 followers/2.2K 7-day views, -37.8% WoW).</p>
+<p><b>Open items carried forward, still unconfirmed:</b></p>
+<ul>
+<li>W28 Wed boost post ("Gemini sa Gmail," pinned Jul 8) — was at 195 views ~1 day in as of Jul 9. Outcome still not confirmed.</li>
+<li>W28 Fri Story S1E1 ("Dalawang Linggo...") dropped Jul 11, 7 PM PHT — no engagement data pulled yet since it went live.</li>
+<li>The Jul 9 report noted an unpinned TikTok copy outperforming a pinned one for the first time (one-off, not yet a rule change) — still needs more data to confirm or dismiss.</li>
+</ul>
+<p><b>Recommendation:</b> run the social-health portion of this routine while Jeff is at his Mac with Chrome open and the extension signed in, or have Jeff paste current follower counts / screenshots for the next cycle.</p>
+<h2>3. Engagement analysis (carried forward — no fresh data this cycle)</h2>
+<p>No new metrics were available, so this section reaffirms the standing insights from <code>reports/2026-07-01-ig-tiktok-post-mapping.md</code> and <code>reports/2026-07-09-health-check.md</code>, applied to W29:</p>
+<ol>
+<li><b>Post once, pin immediately on TikTok</b> — still the baseline rule, with one unconfirmed counterexample from Jul 3 (unpinned copy outperformed). Not enough data yet to revise.</li>
+<li><b>Named-persona, step-by-step free-tool demos are the top-proven organic format</b> ("Mga Guro" post remains the highest-performing organic post on record).</li>
+</ol>
+<p><b>Recommendation for W29:</b></p>
+<ul>
+<li><b>W29 Wed — "Resume at Cover Letter — Claude ang Gagawa"</b> matches the proven named-persona/step-by-step demo shape (same structure as "Mga Guro," W27 Wed, and W28 Wed). It's the strongest data-grounded boost candidate this week. However, since the W28 Wed boost outcome is still unconfirmed, recommend a <b>conservative TikTok-only boost</b> rather than repeating "All Platforms" — scale up only once W28 Wed's result is verified.</li>
+<li><b>W29 Mon ("Email Drafting — Hayaan ang AI")</b> and <b>W29 Fri (Story S1E2 — Pares Clark)</b> — keep organic-only, consistent with how W27/W28 handled non-demo slots.</li>
+<li><b>Pin-once discipline</b> applies to all three W29 posts on TikTok — post once, pin within 5 minutes, no duplicate posting.</li>
+<li><b>Priority for next cycle:</b> re-pull IG + TikTok post-level metrics as soon as browser access is available — two full weeks (W28, part of W29) of engagement data is now unverified, which is starting to limit how confidently boost decisions can be made.</li>
+</ul>
+<h2>4. What changed in the repo this cycle</h2>
+<ul>
+<li><code>docs/schedule.json</code>: <code>updated</code> bumped to 2026-07-13. W29 Mon entry updated from placeholder ("TBD — AI Tip", <code>status: draft</code>, <code>url: null</code>) to actual finalized title/link ("Email Drafting — Hayaan ang AI", <code>status: ready</code>, <code>url: W29-mon-captions.html</code>) — script + captions already existed in <code>docs/</code> but schedule.json hadn't been synced. W29 Wed <code>boost</code> note updated to reflect the conservative TikTok-only recommendation above (no dollar commitment made — actual boost spend remains Jeff's call).</li>
+<li><code>CLAUDE.md</code>: content calendar row for W29 Mon updated to match the finalized title; added a note under the engagement-audit section flagging that account-health pull failed for a second consecutive cycle.</li>
+<li>No caption HTML files were changed — no new insight emerged this cycle to justify updating banners, and the Jul 6 report's claim that insight banners were added to <code>W28-wed-captions.html</code> doesn't match the file's current content (no banner present). Flagging this discrepancy rather than assuming it was done.</li>
+</ul>
+<p>No metrics were invented anywhere in this report or in the updated files — every number traces back to <code>reports/2026-07-09-health-check.md</code> or earlier.</p>
+<h2>5. Live update — confirmed Jul 14, 2026</h2>
+<p>Browser access came back this cycle. Pulled live IG Insights (30-day + 90-day) and TikTok profile/video data directly.</p>
+<p><b>Instagram:</b> 70 followers (flat). 90-day views 2,348 (up from 2,152 on Jul 9). Profile visits 243 (~flat vs 240).</p>
+<p><b>TikTok:</b> 152 followers (+6 from 146), 252 likes (+21), 127 following.</p>
+<p><b>TikTok video grid (Latest sort, views):</b> 768 · 684 · 654 · 541 (Pinned) · 539 · 238 · 197 · 161 · 115 · 185 (Pinned)</p>
+<p>Three posts identified and matched to the content calendar:</p>
+<table>
+<tr><td>Post</td><td>Pin status</td><td>Views</td><td>Likes</td><td>Shares</td><td>Posted</td></tr>
+<tr><td>W29 Mon "Email Drafting — Hayaan ang AI"</td><td>Pinned</td><td>185</td><td>5</td><td>1</td><td>17h ago (Jul 14)</td></tr>
+<tr><td>W28 Fri Story S1E1 "Dalawang Linggo. Isang Website."</td><td>Pinned</td><td>541</td><td>13</td><td>5</td><td>3d ago (Jul 11)</td></tr>
+<tr><td>W27 Wed "Claude Projects — I-Setup Natin" (unpinned duplicate copy)</td><td><b>Not pinned</b></td><td>684</td><td>25</td><td>8</td><td>Jul 3</td></tr>
+</table>
+<p><b>This meaningfully updates the standing "pin wins" insight.</b> Ranked by views, the two Pinned posts sit at #4 (541) and #10/last (185) out of 10 videos in the grid — the top 3 spots (768, 684, 654) and #5 (539) are all unpinned. The Jul 9 report flagged the Claude Projects unpinned copy (678 views then) as a single counterexample to "pin wins," treating it as a one-off. With two more weeks of data, that post has only grown (684 now) and is still outperformed by two other unpinned posts (768, 654) that haven't been identified/matched to specific calendar entries yet. <b>Recommendation: stop treating pin-vs-unpinned as a settled rule.</b> The pattern from the original Jul 1 audit (pinned posts sweeping the top 3) no longer holds in this snapshot — worth a deeper pass next cycle to identify what 768 and 654 are and whether something else (posting time, hook, topic) explains the spread better than pin status.</p>
+<p>W28 Wed boost post ("Gemini sa Gmail") could not be re-confirmed this pass — did not appear distinctly in the time available; carry forward to next cycle.</p>
+<p>No metrics invented — all figures above pulled live from IG Professional Dashboard Insights and TikTok's profile/video pages during this session.</p></main></body></html>

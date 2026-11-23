@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Weekly Check &amp; Balance · Sep 7, 2026</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Weekly Check &amp; Balance · Sep 7, 2026</h1>
+<p>*Automated run. Live pull via public TikTok profile/video grid and public Instagram profile (no authenticated TikTok Studio session available this cycle — same limitation as Aug 31).*</p>
+<h2>Executive summary</h2>
+<p>Automation and repo health are normal — <code>main</code> matches <code>origin/main</code>, working tree clean, with W36 Wed and W36 Fri both produced and confirmed live on schedule (Sep 2, Sep 4). The Aug 31 report's uncommitted changes did land safely (folded into a later commit), so nothing was lost. The big story this cycle is a genuine content win buried under a growth warning sign: <b>W36 Wed's grounded-PDF-prompting carousel hit 590 views unpinned — the best unpinned result in the channel's history</b> — while account-wide growth turned negative for the first time on record (TikTok followers 1,019 → 1,014, <b>-5</b> over 7 days). The rotating pin slot is still occupied by the weak, undocumented Aug 29 post (133 views) instead of any of the three much stronger posts produced since (590, 260, 212 views) — the same misallocation flagged last cycle, now with three more data points making it clearer. Most urgently: <b>W37 has no plan at all</b> — no content, no script, no <code>schedule.json</code> entry — and Monday's 8 PM PHT drop is about 12 hours away as of this report. The CJEF proof story (<code>docs/scripts/w34-fri-script.html</code>) is now unproduced for a 4th straight cycle.</p>
+<h2>Automation and repo health</h2>
+<table>
+<tr><td>Check</td><td>Result</td></tr>
+<tr><td>Git state</td><td><code>main</code> == <code>origin/main</code>, working tree clean. Last commit <code>c7ff91e</code>, Sep 4 18:40 PHT.</td></tr>
+<tr><td>Recent commits</td><td><code>151681a</code> (Sep 2, W36 Wed production — also picked up the Aug 31 report file that was blocked from committing last cycle); three Sep 4 auto-syncs (W36 Fri production: draft, captions, renders, schedule.json).</td></tr>
+<tr><td>Last cycle's blocked commit</td><td>Resolved on its own — the Aug 31 <code>CLAUDE.md</code>/<code>docs/schedule.json</code>/report edits that couldn't commit due to a stuck <code>.git/index.lock</code> are now present in the repo (via <code>151681a</code>). No data was lost.</td></tr>
+<tr><td>Stray lock file</td><td><code>.git/index.lock</code> was present again at the start of this run (0 bytes) but cleared on its own before the commit step — see below.</td></tr>
+<tr><td>Cron log</td><td><code>/tmp/titoai-cron.log</code> not present in this sandbox — expected; cron runs on Jeff's Mac.</td></tr>
+<tr><td>Gap flagged</td><td><b>No commits at all between Sep 4 18:40 and Sep 7</b> (this run) — three full days with no production activity, spanning the entire weekend into Monday morning. <code>content/2026-W37/</code> does not exist; <code>docs/schedule.json</code> has no W37 entry.</td></tr>
+</table>
+<h2>Account health</h2>
+<table>
+<tr><td>Metric</td><td>Sep 7</td><td>Aug 31</td><td>Change</td></tr>
+<tr><td>TikTok followers</td><td><b>1,014</b></td><td>1,019</td><td><b>-5</b> (first recorded decline)</td></tr>
+<tr><td>TikTok total likes</td><td><b>1,067</b></td><td>1,053</td><td>+14</td></tr>
+<tr><td>TikTok following</td><td>153</td><td>152</td><td>+1</td></tr>
+<tr><td>Instagram followers</td><td><b>77</b></td><td>77</td><td>Flat</td></tr>
+<tr><td>Instagram following</td><td>113</td><td>112</td><td>+1</td></tr>
+</table>
+<p>This is the first week-over-week follower loss seen in any check-and-balance cycle to date. Total likes still grew, so it isn't that content stopped landing — it's a net unfollow signal. No authenticated TikTok Studio session was available to see the "unfollow reasons" or traffic-source breakdown that would normally help diagnose this.</p>
+<h2>Posts since the previous check (Aug 31) — from the public video grid</h2>
+<table>
+<tr><td>Post</td><td>Pinned</td><td>Views</td><td>Notes</td></tr>
+<tr><td>W36 Mon — "Mahabang Notes? Gawing Reviewer sa Gemini" (Aug 31)</td><td>No</td><td>212</td><td>Confirmed live on TikTok. Weakest of the three new W36 posts.</td></tr>
+<tr><td>W36 Wed — "May Lecture PDF Ka? Huwag Basahin Lang." (grounded Gemini PDF demo, Sep 2)</td><td>No</td><td><b>590</b></td><td><b>Best unpinned result in channel history</b>, beating W35 Mon's 556 and W35 Wed's 531. Confirmed live on TikTok + Instagram.</td></tr>
+<tr><td>W36 Fri — "Pagkatapos ng AI Seminar, Ito ang Narinig Namin" (real seminar testimony, Sep 4)</td><td>No</td><td>260</td><td>Confirmed live on TikTok + Instagram.</td></tr>
+<tr><td>Undocumented Aug 29 post — CJEF/schoolwork tip (re-check)</td><td><b>Yes</b> (rotating slot, unchanged)</td><td>133 (was 129)</td><td>Still the weakest pinned post in the account, still holding the rotating pin slot over three stronger candidates produced since. Still no script/caption file/schedule.json record.</td></tr>
+<tr><td>Evergreen pinned — Clark restaurant story</td><td>Yes</td><td>4,714 (was 4,687)</td><td>+27, tail continuing very slowly.</td></tr>
+<tr><td>Evergreen pinned — VA resume carousel</td><td>Yes</td><td>1,117 (unchanged)</td><td>No organic growth this cycle either.</td></tr>
+<tr><td>W35 Mon (re-check)</td><td>No</td><td>556 (was 554)</td><td>+2.</td></tr>
+<tr><td>W35 Wed (re-check)</td><td>No</td><td>531 (was 527)</td><td>+4.</td></tr>
+</table>
+<p>Instagram: W36 Wed and W36 Fri are both confirmed in the public grid (matching TikTok). W36 Mon was not visible in the logged-out 3-tile preview, so its IG status could not be confirmed this cycle. Post-level IG likes/comments remain login-gated, as in every prior cycle.</p>
+<h2>Engagement findings</h2>
+<ol>
+<li><b>Grounded-document-prompting is the new strongest format.</b> W36 Wed ("upload the PDF, answer only from the file, verify against source") beat every unpinned post the channel has ever put out, including both W35 AI-safety/privacy posts. This is a third format now proven to work well unpinned: proof-first carousels, privacy/safety carousels, and now grounded-document demos — all share "show the actual constraint or actual output," not prompt recitation.</li>
+<li><b>The rotating pin slot has now missed the better post for two consecutive cycles.</b> Last cycle it was W35 Mon/Wed (554/527) losing out to a 129-view post; this cycle three more posts (590, 260, 212) all outperform or are close to the pinned 133-view post, and none got the slot. This is no longer a one-off — it's a standing gap between "what's pinned" and "what's actually performing," worth fixing deliberately rather than waiting for the next production cycle to notice.</li>
+<li><b>Follower count declined for the first time.</b> -5 net over 7 days, despite total likes rising. Without authenticated analytics this cycle, it's not possible to tell whether this is unrelated account churn, a reaction to the weak pinned post being someone's first impression, or normal noise at this follower count. Worth a closer look with Studio access next cycle before drawing conclusions.</li>
+<li><b>W37 has zero planning as of Monday morning, ~12 hours before the Monday 8 PM PHT drop.</b> This is more urgent than any single post's performance this cycle.</li>
+<li><b>The CJEF proof story is now unproduced for a 4th cycle</b> (<code>docs/scripts/w34-fri-script.html</code>, CTA "Comment GUSTO"). It has been carried over in every report since Aug 22.</li>
+</ol>
+<h2>Recommendations for W37 (Sep 7–13)</h2>
+<table>
+<tr><td>Priority</td><td>Action</td><td>Why</td></tr>
+<tr><td>Immediate</td><td>Plan and produce W37 Monday today — nothing exists yet and the 8 PM PHT drop is hours away.</td><td>No content, script, or schedule.json entry currently exists for this week at all.</td></tr>
+<tr><td>Immediate</td><td>Swap the rotating TikTok pin from the Aug 29 post (133 views) to W36 Wed (590 views, the account's best-ever unpinned post).</td><td>Two straight cycles of evidence that the rotating pin slot is going to the weaker post, not the stronger one.</td></tr>
+<tr><td>This week</td><td>Lean into grounded-document-prompting as a content angle (upload a file, answer only from it, verify against source) — it just set the channel's unpinned record.</td><td>Directly evidenced by this cycle's data, consistent with the "proof-first beats prompt-recitation" pattern from prior cycles.</td></tr>
+<tr><td>This week</td><td>Finally produce the CJEF proof story or formally retire it — 4 cycles carried over is long enough to force a decision either way.</td><td>Sitting unused ties up a real, ready asset and keeps showing up as an open item every report.</td></tr>
+<tr><td>Next cycle</td><td>Get an authenticated TikTok Studio pull to investigate the follower decline (traffic source, unfollow context) before it repeats.</td><td>First-ever recorded follower loss; public profile data can't explain why.</td></tr>
+<tr><td>Process</td><td>Hold all boosts.</td><td>No post this cycle has been evaluated against the 12–24h evidence gate, and the follower dip argues for understanding the cause before spending on amplification.</td></tr>
+</table>
+<h2>Repo corrections made this run</h2>
+<ul>
+<li><code>docs/schedule.json</code>: <code>updated</code> bumped to <code>2026-09-07</code>; W36 Mon/Wed/Fri statuses corrected <code>ready</code> → <code>posted</code> with live view counts (212, 590, 260); W35 Mon/Wed/evergreen-pin view counts refreshed; W35 Fri note updated to reflect a 4th unproduced cycle; added a placeholder W37 week so the timeline reflects that nothing is planned yet.</li>
+<li><code>CLAUDE.md</code>: new dated log entry appended; Current/Next/Upcoming week table refreshed to show W36 as current-shipped, W37 as next-and-unplanned.</li>
+</ul>
+<h2>Next-period focus</h2>
+<ul>
+<li>Get W37 Monday produced today.</li>
+<li>Re-pin the best-performing recent post instead of leaving the rotating slot on autopilot.</li>
+<li>Resolve the CJEF proof story one way or the other.</li>
+<li>Investigate the follower decline once authenticated analytics are available.</li>
+</ul>
+<p>*Previous: reports/2026-08-31-weekly-checkbalance.md*</p>
+<p>*Data pulled: Sep 7, 2026, via public TikTok profile/video grid and public Instagram profile (no authenticated TikTok Studio session available this cycle).*</p></main></body></html>

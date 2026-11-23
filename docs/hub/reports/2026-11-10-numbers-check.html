@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Numbers Check (Origin Parts 1–3)</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Numbers Check (Origin Parts 1–3)</h1>
+<p><b>Date:</b> Tue Nov 10, 2026 (PHT) · <b>Status: BASED ON PULLED DATA WITH UNVERIFIED INPUTS.</b></p>
+<p>Nothing here posts, boosts, schedules or messages anyone. Jeff does all of that.</p>
+<p><b>Sources read.</b> Every figure below is quoted from one of these files, or marked *derived* (my arithmetic on those figures).</p>
+<ul>
+<li><code>reports/data/2026-11-09-metrics.json</code> (pulled Nov 9 about 7:30 AM PHT). Called <b>M9</b> below.</li>
+<li><code>reports/data/2026-11-05-metrics.json</code> (pulled Nov 5, time of day not recorded). Called <b>M5</b>.</li>
+<li><code>reports/2026-11-09-weekly-checkbalance.md</code> (<b>R9</b>) and <code>reports/2026-11-05-weekly-checkbalance.md</code> (<b>R5</b>).</li>
+<li><code>reports/2026-11-05-part1-push-plan.md</code> (<b>Plan</b>).</li>
+<li><code>CLAUDE.md</code> (Analytics section; Nov 9 video-openings note).</li>
+<li><code>docs/schedule.json</code>, updated Nov 9. Called <b>SCH</b>.</li>
+</ul>
+<p><b>Data age.</b> M9 is about 1 day old, so it is under the 7-day limit and usable. It was pulled <b>before Part 3's 8:00 PM Nov 9 slot</b>. It cannot contain Part 3 or any business-CTA activity.</p>
+<h2>1. NUMBER CHECK</h2>
+<h3>1a. Mismatches between the Nov 9 report (R9) and the data</h3>
+<table>
+<tr><td>#</td><td>Item</td><td>What the files say</td><td>Verdict</td></tr>
+<tr><td>1</td><td>R9: "IG reached only <b>79 accounts in 28 days</b>, so Reels depend almost entirely on strangers."</td><td>The 79 comes from <b>M5</b> (Oct 7–Nov 3). M9 says IG was "not pulled this time". M5 also says IG views came <b>72.9% from followers</b>.</td><td><b>Stale and contradictory.</b> The figure is 6 days old and a different window. The "strangers" conclusion conflicts with M5's 72.9% from followers. Treat the IG conclusion as unsupported.</td></tr>
+<tr><td>2</td><td>R9: "94% non-followers on FB".</td><td>From <b>M5</b> (<code>from_non_followers</code> 94.0%, window Oct 7–Nov 3). Not in M9.</td><td>Stale. Source is the Nov 5 pull, not Nov 9.</td></tr>
+<tr><td>3</td><td>R9 and CLAUDE.md say "TikTok shows a new video to about 100–200 strangers first … with 1–3% completion, it isn't pushed further."</td><td>No file holds this. The data shows only 119 and 85 views and 3.1% and 1.1% completion.</td><td><b>Unverified general belief.</b> It is a hypothesis about TikTok's ranking, not a measured fact.</td></tr>
+<tr><td>3b</td><td>R9: "<b>the apps stop showing it</b>" and the opening-frame explanations (title card, series label).</td><td>The data shows *where* viewers leave (drop-off at 0:01 on both parts). It cannot show *why*.</td><td><b>Hypothesis.</b> The causes in R9 §3 are not tested yet.</td></tr>
+<tr><td>4</td><td>Meta Part 1 <b>3-second rate</b>. Part 1 baseline "15.4%" in SCH and Plan.</td><td>41/266 = 15.4% on <b>Nov 5</b>. On Nov 9 it is 41/284 = <b>14.4%</b> (*derived*). The 3-second count did not change (41 on both dates) while views went 266 → 284.</td><td>Baseline is dated. Comparing to "15.4%" mixes dates. 3-second views frozen at 41 while views rose by 18 is unusual. I can't tell whether it is a real result or a refresh lag. <b>Unverified.</b></td></tr>
+<tr><td>5</td><td>Part 1 Meta <b>interactions</b> vs parts.</td><td>M9: interactions 9, likes 6, comments 2, shares 0, saves 0 → parts sum to <b>8</b>. M5: interactions 8, likes 5, comments 2 → parts sum to <b>7</b>.</td><td>Interactions exceed the listed parts by 1 on both dates. The extra one is unexplained (another reaction type, or a link click?). Part 2 reconciles (1 share = 1 interaction).</td></tr>
+<tr><td>6</td><td>R5 table: Part 1 IG+FB <b>Follows = 0</b>; HM po Saves/Shares "0 / 0".</td><td>M5 has <b>no per-post follows field</b> and no shares or saves fields for HM po. The only follows figure is account-level FB: 1 in 28 days.</td><td><b>Not in the data.</b> Those zeros in R5 were assumed, not read.</td></tr>
+<tr><td>7</td><td><b>TikTok pins.</b> Plan rule: "Don't unpin Clark or the VA resume." Standing insight: 2 evergreen + 1 rotating.</td><td>M5 pinned: Clark, VA resume, Part 1. M9 pinned: <b>Part 2, Part 1, VA resume</b>. M9 <code>not_found</code>: "Clark restaurant story (4,747 views) is no longer pinned."</td><td>Pin state now breaks the 2-evergreen rule. Two of three pins are Origin parts, and one evergreen is gone. Why Clark was unpinned is unknown.</td></tr>
+<tr><td>8</td><td><b>Post times.</b> CLAUDE.md and SCH say Parts 1 and 2 drop at <b>7:00 PM</b>.</td><td>M9 actual: Part 1 TikTok 12:09, Meta 12:10 (Nov 4). Part 2 TikTok 16:19, Meta 16:25 (Nov 6).</td><td>Actual times differ from plan. SCH and CLAUDE.md were not updated with actual times. R9 does state the actual times.</td></tr>
+<tr><td>9</td><td>SCH Part 1 and Part 2 notes: "user-reported posted … platform(s), exact time and metrics not independently verified."</td><td>M9 now shows both on <b>TikTok and Meta</b> with timestamps.</td><td>Posting is now confirmed from the data for TikTok and Meta combined. <b>IG vs FB is still unconfirmed.</b> SCH notes should be updated (not done here).</td></tr>
+<tr><td>10</td><td><b>Account profile views = 0</b> (M5 and M9) vs traffic "profile <b>1.7%</b>" (M9).</td><td>Profile-sourced views are 1.7% of 497 ≈ 8 views (*derived*) while profile views are 0.</td><td>Internally inconsistent. Treat TikTok profile views as <b>unreliable or not captured</b>.</td></tr>
+<tr><td>11</td><td>TikTok <code>net_followers</code> 0 vs Part 1 <code>new_followers</code> 1 (M9).</td><td>Both are in M9; the windows differ (7-day account vs per-post lifetime).</td><td>Not necessarily a conflict (an unfollow or the window). <b>Unverified.</b></td></tr>
+<tr><td>12</td><td>TikTok account <b>comments 3</b> (7d) vs post comments in the window: Part 2 1 + Part 1 1 + HM po 0 = 2.</td><td>Likes reconcile (3 = 1 + 2 + 0). Comments are off by 1.</td><td>One comment is unaccounted for (older post or another source).</td></tr>
+<tr><td>13</td><td><b>Meta 28-day FB</b> window and change.</td><td>M5: Oct 7–Nov 3, views 952 (−13.9%), viewers 825. M9: Oct 11–Nov 7, views "1.2K" (+15.4%), viewers "1.0K".</td><td>Different windows and <b>rounded</b> values in M9. Not comparable exactly. Direction up, but only roughly: 952 → ~1.2K.</td></tr>
+<tr><td>14</td><td><b>TikTok 7-day</b> account totals.</td><td>M5: Oct 28–Nov 3, 425 views (−60.8%). M9: "last 7 days to Nov 8", 497 views (−9.1%).</td><td>Overlapping windows, so the change figures are not comparable.</td></tr>
+<tr><td>15</td><td><b>Provenance.</b></td><td>M5: "Browser 4 profile, logged in as Tito AI". M9: "Browser 1, logged in to TikTok Studio @tito.aiph and Meta Business Suite Tito Ai PH".</td><td>Different browser sessions. Both claim the right accounts. I can't confirm it from the files.</td></tr>
+</table>
+<p>Items that <b>did reconcile</b>: R9's TikTok figures (119 / 85 / 216 / 306 / 1,122; 3.54 s / 3.67 s; 3.1% / 1.1%; For You 91.6%), Meta views, viewers, 3-second counts and Part 1/2 post times, plus the R5 engagement rates (e.g. 4/14 = 28.6%, 6/302 = 2.0%). The 3 likes in the 7-day total match the posts.</p>
+<h3>1b. Missing fields (not in M9)</h3>
+<ul>
+<li><b>Part 3</b>: everything. It posts after the pull.</li>
+<li><b>Per post on TikTok</b>: shares, saves, total watch time, per-post profile visits, per-post follows for HM po and older posts, retention curve (only a single "drop_off" value: 0:01), and a 3-second rate (TikTok Studio may not report one; <b>unverified</b>).</li>
+<li><b>Per post on Meta</b>: new follows, profile visits, link clicks, average play to a decimal (only whole seconds), and the 3-second count for older posts.</li>
+<li><b>IG-only and FB-only</b> values for any post.</li>
+<li><b>IG</b>: 28-day totals and follower count (M9 <code>not_found</code>).</li>
+<li><b>Exact followers</b>: TikTok shows "1K (rounded by Studio)" in M5 and M9. The last exact numbers are TikTok 1,012 and IG 80 on <b>Sep 14</b> (Plan citing <code>2026-09-14-weekly-checkbalance.md</code>). Both are stale.</li>
+<li><b>Native upload vs Meta cross-post, seed-comment timing, whether Jeff's own comment is counted</b> (Plan asked; still unanswered in the files).</li>
+<li><b>Meta pinned state.</b></li>
+<li><b>M5 pull time of day</b>, so Part 1's age at the Nov 5 snapshot is unknown (about 12–36 h, *derived* from the post time).</li>
+</ul>
+<h3>1c. Rounded or unverified values</h3>
+<ul>
+<li>TikTok followers "1K" is rounded. "No net growth" can't be tested at that resolution (0 net followers is reported separately).</li>
+<li>Meta FB "1.2K" and "1.0K" are rounded.</li>
+<li><code>watch_time_s</code> on Meta is assumed to be seconds from the field name. <b>Unverified.</b></li>
+<li>Meta per-post numbers are <b>IG + FB combined</b>. The split is unavailable.</li>
+<li>Whole-second averages (Meta "2s", "3s") hide a lot (see 2b).</li>
+</ul>
+<h2>2. ORIGIN SERIES TABLE</h2>
+<p><b>Age at the Nov 9 pull (*derived*):</b> Part 1 about 115 h (Nov 4 12:09 → Nov 9 about 7:30). Part 2 about 63 h (Nov 6 16:19 → Nov 9 about 7:30). <b>Part 3: no data.</b> SCH (updated Nov 9) lists it as "ready … not posted or scheduled", due Mon Nov 9, 8:00 PM. I can't confirm from the files that it posted.</p>
+<h3>2a. TikTok (source M9)</h3>
+<table>
+<tr><td>Metric</td><td>Part 1</td><td>Part 2</td><td>Part 3</td></tr>
+<tr><td>Post time (PHT)</td><td>Nov 4, 12:09</td><td>Nov 6, 16:19</td><td>not available (planned Nov 9, 8 PM)</td></tr>
+<tr><td>Pinned</td><td>Yes</td><td>Yes</td><td>not available</td></tr>
+<tr><td>Views</td><td>119 (111 on Nov 5 per M5)</td><td>85</td><td>not available</td></tr>
+<tr><td>3-second views / rate</td><td>not available</td><td>not available</td><td>not available</td></tr>
+<tr><td>Average watch</td><td>3.54 s of 30 s</td><td>3.67 s of 30 s</td><td>not available</td></tr>
+<tr><td>Total watch time</td><td>not available (avg × views ≈ 421 s, *derived*)</td><td>not available (≈ 312 s, *derived*)</td><td>not available</td></tr>
+<tr><td>Watched full</td><td>3.1%</td><td>1.1%</td><td>not available</td></tr>
+<tr><td>Drop-off point</td><td>0:01</td><td>0:01</td><td>not available</td></tr>
+<tr><td>Likes</td><td>2</td><td>1</td><td>not available</td></tr>
+<tr><td>Comments</td><td>1</td><td>1</td><td>not available</td></tr>
+<tr><td>Shares / saves</td><td>not available</td><td>not available</td><td>not available</td></tr>
+<tr><td>New followers</td><td>1</td><td>0</td><td>not available</td></tr>
+<tr><td>For You share</td><td>91.6%</td><td>not available</td><td>not available</td></tr>
+</table>
+<h3>2b. Meta (IG + FB combined; source M9)</h3>
+<table>
+<tr><td>Metric</td><td>Part 1</td><td>Part 2</td><td>Part 3</td></tr>
+<tr><td>Post time (PHT)</td><td>Nov 4, 12:10</td><td>Nov 6, 16:25</td><td>not available</td></tr>
+<tr><td>Pinned</td><td>not captured</td><td>not captured</td><td>not available</td></tr>
+<tr><td>Views</td><td>284 (266 on Nov 5)</td><td>287</td><td>not available</td></tr>
+<tr><td>Viewers</td><td>207</td><td>208</td><td>not available</td></tr>
+<tr><td>3-second views</td><td>41</td><td>42</td><td>not available</td></tr>
+<tr><td><b>3-second rate</b> (*derived*)</td><td><b>14.4%</b> (15.4% on Nov 5)</td><td><b>14.6%</b></td><td>not available</td></tr>
+<tr><td>Average play (as reported)</td><td>2 s</td><td>3 s</td><td>not available</td></tr>
+<tr><td>Watch time</td><td>493 s</td><td>731 s</td><td>not available</td></tr>
+<tr><td>Average play (*derived*: watch time ÷ views)</td><td>≈ 1.74 s</td><td>≈ 2.55 s</td><td>not available</td></tr>
+<tr><td>Likes</td><td>6</td><td>0</td><td>not available</td></tr>
+<tr><td>Comments</td><td>2</td><td>0</td><td>not available</td></tr>
+<tr><td>Shares</td><td>0</td><td>1</td><td>not available</td></tr>
+<tr><td>Saves</td><td>0</td><td>0</td><td>not available</td></tr>
+<tr><td>Interactions</td><td>9</td><td>1</td><td>not available</td></tr>
+<tr><td>Follows</td><td>not available per post</td><td>not available per post</td><td>not available</td></tr>
+</table>
+<h3>2c. Pass / fail</h3>
+<table>
+<tr><td>Test</td><td>Part 1</td><td>Part 2</td><td>Part 3</td></tr>
+<tr><td><b>Meta 3-second rate ≥ 25%</b> (the line set for Part 2, in SCH and Plan G4)</td><td>Baseline; would <b>fail</b> at 14.4%</td><td><b>FAIL</b>: 14.6% vs 25% (about 10 points short)</td><td><b>Not available</b></td></tr>
+<tr><td>Meta 3-second rate vs Part 1 baseline 15.4%</td><td>n/a</td><td><b>Flat or slightly below</b>: 14.6% vs 15.4% (Part 1 on Nov 9 is 14.4%). A 1-view difference, so within noise.</td><td>Not available</td></tr>
+<tr><td>Meta average play vs Part 1 (2 s)</td><td>n/a</td><td><b>Higher by reported whole seconds</b> (3 s vs 2 s). *Derived* ≈ 2.55 s vs ≈ 1.74 s. This is the only sign of improvement. It is small, rests on rounded and unverified values, and the 3-second rate did not move.</td><td>Not available</td></tr>
+<tr><td>R5's earlier test: avg play &gt; 2 s <b>and</b> 3-second &gt; 15%</td><td>n/a</td><td><b>Mixed</b>: avg play 3 s passes; 14.6% fails.</td><td>Not available</td></tr>
+<tr><td>TikTok average watch &gt; 6 s (R9's success line for the next pull)</td><td><b>FAIL</b>: 3.54 s</td><td><b>FAIL</b>: 3.67 s</td><td><b>Not available</b></td></tr>
+</table>
+<p><b>Reading.</b> The Part 2 opening change did not clear the 25% line. The 3-second rate is unchanged against Part 1. On TikTok, both parts lost most viewers at 0:01 and finished at 1–3%. Neither part is near older posts' retention (Kalat 6.54 s / 10.7%, VA resume 6.81 s / 13.2%, both M9).</p>
+<p>Part 2 was also posted at a different time (4:19 PM vs 12:09 PM) and has a different clip, so the comparison is not clean. Part 3 is the first re-cut opening (<code>part-3-chibi-final-v2.mp4</code>, per SCH). <b>It is the first real test of the v2 opening</b>, and it has no data yet.</p>
+<h2>3. WHY TIKTOK IS LOW VS META</h2>
+<p><b>First, the premise.</b> "IG 200+" is not IG alone. M9 gives <b>284 / 287 views</b> for Parts 1/2 as <b>IG + FB combined</b>. Viewers are 207 / 208 (*derived* views per viewer ≈ 1.37 and 1.38). An IG-only figure is not available. So I can't say IG alone exceeded 200.</p>
+<p><b>What the data shows</b></p>
+<ol>
+<li><b>The gap is specific to the Origin videos.</b> Meta ÷ TikTok views (*derived*): Part 1 284 / 119 ≈ 2.4×; Part 2 287 / 85 ≈ 3.4×.</li>
+</ol>
+<ul>
+<li>On other posts TikTok is higher. HM po: TikTok 216 vs Meta 46 (M9). Isang Skill (a video): TikTok 136 vs Meta 51 (both M5, same date).</li>
+<li>So Meta is not generally stronger; it is stronger on these two Origin videos only. Two posts are a small sample.</li>
+</ul>
+<ol>
+<li><b>TikTok views for the new parts are the lowest of its recent posts.</b> Part 1 119 and Part 2 85, vs HM po 216, Isang Skill 149, Kalat 306, Three phone shots 378 (M9).</li>
+<li><b>TikTok traffic is almost all For You (90.5% account, 91.6% Part 1).</b> Followers are about "1K" with 0 net follows, so TikTok views are mostly test impressions to strangers. When retention is poor, there is little other traffic to fall back on.</li>
+<li><b>Retention on TikTok is poor and consistent</b>: drop-off at 0:01, 3.54 s and 3.67 s average, 3.1% and 1.1% finished.</li>
+<li><b>Attention in seconds is closer than views suggest</b> (*derived, rough*). Part 1: TikTok ≈ 421 s total vs Meta 493 s. Part 2: TikTok ≈ 312 s vs Meta 731 s. TikTok shows fewer views, but not a proportionally smaller total of attention for Part 1. This is only an estimate from average × views.</li>
+<li><b>Meta views are mostly short.</b> Only about 14–15% of Meta views reach 3 seconds. About 85% are shorter, so many Meta views may be brief autoplays (a hypothesis).</li>
+</ol>
+<p><b>Hypotheses (not shown by the data)</b></p>
+<ul>
+<li><b>How "views" are defined.</b> Meta may count shorter or auto-played impressions, and replays, as views. TikTok may count differently. I <b>cannot confirm either definition from the files</b>, so treat view-to-view comparisons across platforms as <b>unverified</b>. The like-for-like checks are the 3-second count and average play, but those also differ by platform.</li>
+<li><b>Two surfaces on Meta.</b> Because Meta combines IG and FB, a post on both gets two sets of distribution. Facebook shows 94% non-follower views (M5, stale), so Facebook may be pushing to strangers generously. That would be a FB effect, not IG.</li>
+<li><b>IG numbers look odd.</b> M5 shows IG 1.4K views against 79 reach (72.9% from followers). Roughly 18 views per account (*derived*) suggests loops or replays. <b>Unverified.</b> IG was not pulled on Nov 9.</li>
+<li><b>TikTok ranking.</b> The idea that low early retention stops TikTok from expanding distribution is plausible, but the files don't show it.</li>
+<li><b>Post time.</b> Part 1 posted at 12:09 and Part 2 at 16:19, off the 7 PM slot. TikTok views by post time don't show a pattern: 12:09 → 119, 14:48 → 216, 16:19 → 85, 18:13 → 306, 20:03 → 149, 20:31 → 378. Format, age and content are mixed in. <b>The data does not support a time-of-day explanation.</b></li>
+<li><b>Part 2 is younger</b> (about 63 h vs about 115 h), but Part 1 was only 111 views at its Nov 5 snapshot, and Part 2's 85 is already below that.</li>
+</ul>
+<p><b>Best-supported summary:</b> the Origin videos hold TikTok viewers poorly, and TikTok has no follower base to cushion that. The Meta lead on these two videos comes from two surfaces and a view definition that probably counts shorter views. IG alone is unknown.</p>
+<h2>4. FOLLOWS / DMs / BUSINESS SIGNALS</h2>
+<p><b>Evidence of follows</b></p>
+<ul>
+<li><b>TikTok</b> 7-day (to Nov 8): <b>net_followers 0</b>, profile views 0 (flagged unreliable in 1a #10). Part 1: 1 new follower. Part 2: 0. (M9)</li>
+<li><b>Facebook</b> 28-day (M5, Oct 7–Nov 3): <b>follows 1</b>, unfollows 0, page visits 6, conversations 0. Not re-pulled on Nov 9.</li>
+<li><b>IG:</b> no follower count in either pull. Last exact value is 80 on Sep 14 (Plan, stale).</li>
+<li><b>TikTok search</b> (M9): "Tito Ai" 28.1%, "tito ai" 12.5%, "Tite AI" 6.3%, "ai in pampanga" 6.3%. Search is 7.2% of views. This suggests some people look for the brand by name, but it can't be tied to a follow or inquiry.</li>
+</ul>
+<p><b>DMs and CLASS / COACH inquiries: not measurable from the data</b></p>
+<ul>
+<li>The business CTAs launched Nov 9. M9 was pulled at about 7:30 AM that day, so it cannot show any response.</li>
+<li>Neither pull has a DM, message-count or keyword-comment field. Meta <code>conversations</code> was 0 (M5, FB, 28 days, before launch).</li>
+<li>Comment text isn't captured, so I can't tell if any of the 3 TikTok / 2 Meta comments were CLASS or COACH.</li>
+<li>I did not check whether the Part 1–3 captions carry a business CTA. I did not open <code>captions.md</code>.</li>
+<li>Nothing in the files lets me attribute any follow, visit or inquiry to a specific post. The only per-post follow is TikTok Part 1 = 1.</li>
+</ul>
+<h2>5. RECOMMENDATIONS</h2>
+<p><b>1. Part 3 is the test for the v2 opening. Read it before approving Part 4.</b></p>
+<ul>
+<li>Part 4 (Wed Nov 11, 7 PM) is waiting on Jeff's approval. A first read of Part 3 at about 24 h (Tue Nov 10, about 8 PM, if it posted at 8 PM Nov 9) is the earliest evidence. Pull Meta <b>3-second views, average play, watch time</b> and TikTok <b>average watch, finished %, drop-off point</b>.</li>
+<li><b>Proposed decision rule (editable, mine, not from a file):</b> if Part 3's Meta 3-second rate is still at or below Part 1's 15.4%, the v2 opening (viewer hook, voice from frame 1, badge after 2 s) has not moved the metric. Don't treat it as a pass. Hold Part 4/5's openings for another variant before posting. If it is near or above 25%, keep the v2 pattern. Sample sizes are about 250 views, so call it directional.</li>
+<li><b>Confound:</b> the v2 opening changes three things at once (hook, voice from frame 1, badge timing). A win would not show which change worked.</li>
+</ul>
+<p><b>2. Part 4 and Part 5 openings.</b> Both v2 files (<code>part-4-chibi-final-v2.mp4</code>, <code>part-5-chibi-final-v2.mp4</code>, per SCH) are waiting on Jeff's approval. <b>I haven't viewed them.</b> On approval, check:</p>
+<ul>
+<li>The first spoken line tells the *viewer* what they gain, not what the series is.</li>
+<li>Voice starts on frame 1 (Jeff's original audio).</li>
+<li>The PART n / 5 badge appears only after about 2 s. "Part n of 5" goes in the caption.</li>
+<li>One sentence of context makes each part stand alone (over 90% of views come from strangers).</li>
+<li>Visible motion in the first second.</li>
+<li>One business CTA (free live, <code>CLASS</code> or <code>COACH</code>) in the caption and at the close, <b>not</b> in the first 2 s. Part 5 is the series finale and a natural place for it (hypothesis). Whether Part 4/5 captions already carry the CTA is <b>unknown</b>.</li>
+</ul>
+<p><b>3. TikTok pin choice (cap 3: 2 evergreen + 1 rotating).</b></p>
+<ul>
+<li><b>Re-pin Clark</b> (4,747 views, 579 likes on Nov 5; M9 did not list it, so the figure is stale). Note that Clark's numbers came with a paid boost per Plan, so "evergreen" is a judgment on a boosted post.</li>
+<li><b>Keep VA resume</b> (1,122 views, 65 likes; unchanged between pulls).</li>
+<li><b>Rotating slot:</b> best retention among recent posts is <b>Kalat ang Notes</b> (6.54 s, 10.7% finished, 6 likes). Three phone shots has more views (378) but 4 likes and no retention data.</li>
+<li>Part 1 and Part 2 have 3.1% and 1.1% finished and the old openings. Putting two of them on the profile is the weakest use of the pins. <b>Unpin Part 2 first.</b> Pin Part 1 or Part 3 only if its retention beats Kalat's.</li>
+<li>Counter-point: Part 1 is the series entry point, so unpinning it may cost series discovery (a hypothesis). Jeff makes this call.</li>
+</ul>
+<p><b>4. Posting time.</b></p>
+<ul>
+<li>The data supports <b>no</b> time-of-day conclusion (Section 3).</li>
+<li>M9 shows followers most active <b>Nov 8, 7 AM</b>. That is a single data point, with about 1K followers and 90%+ of views from strangers, so it has little leverage (a hypothesis).</li>
+<li><b>Post Parts 4 and 5 at the planned slots (Wed Nov 11 7 PM, Fri Nov 13 7 PM).</b> Parts 1–2 drifted to 12:09 and 16:19, which muddied the comparison. Log the actual time of each post.</li>
+<li>SCH already assigns time tests (Thu Nov 12 12:15 PM; Sat Nov 14 10:00 AM; Tue Nov 17 7:30 PM), marked "test, not verified best time". Don't read them before each has about 48 h of data and compare like formats only.</li>
+</ul>
+<p><b>5. Boost decision: NOT YET.</b></p>
+<ul>
+<li><b>Evidence gate:</b> 12–24 h of organic data and Jeff's OK (CLAUDE.md). Parts 1 and 2 have it, and they fail:</li>
+</ul>
+<table>
+<tr><td>Plan gate</td><td>Part 2 now</td><td>Result</td></tr>
+<tr><td>G2: TikTok views at 48 h ≥ 400</td><td>85</td><td>Fail</td></tr>
+<tr><td>G4: Meta 3-second rate ≥ 25%</td><td>14.6%</td><td>Fail</td></tr>
+<tr><td>G5: ≥ 5 shares + saves, or ≥ 3 non-seed comments</td><td>1 share, 0 saves, 1 TikTok comment, 0 Meta</td><td>Fail</td></tr>
+<tr><td>G6: ≥ 3 organic follows</td><td>TikTok 0 (Part 1: 1)</td><td>Fail</td></tr>
+<tr><td>G3: TikTok completion ≥ 20%</td><td>1.1%</td><td>Fail</td></tr>
+</table>
+<ul>
+<li>Paid views would meet the same 0:01 drop-off. The Plan also says not to boost to rescue a weak post.</li>
+<li><b>Candidate:</b> none now. <b>The next candidate is Part 3 (or Part 4), if it reads at 24–48 h.</b> It needs the 25% Meta 3-second rate, <b>and</b> a TikTok average watch above 6 s (R9), <b>and</b> at least 4 of G2–G6 including G3 or G4 (Plan).</li>
+<li><b>Budget:</b> cap is <b>₱3,000/month</b> (CLAUDE.md Nov 9, Jeff boosts). The Plan's tighter per-post tiers (T1 ₱200, T2 ₱300, "₱500 for the origin series", all marked editable) can stay as sub-caps.</li>
+<li><b>Spend to date is unknown.</b> SCH shows no boost on any November post, but I did not read the finance folder (<code>content/business/finance/</code>). Confirm month-to-date spend before any boost.</li>
+</ul>
+<h2>6. NEXT PULL</h2>
+<p><b>Timing: 48 h after each post</b> (PHT; assumes Jeff posts at plan time and confirms actual time). Add a 24 h read for Part 3 now.</p>
+<table>
+<tr><td>Post</td><td>24 h read</td><td>48 h read</td></tr>
+<tr><td>Part 3 (planned Mon Nov 9, 8 PM; posting unconfirmed)</td><td>Tue Nov 10, about 8 PM</td><td><b>Wed Nov 11, about 8 PM</b></td></tr>
+<tr><td>Part 4 (Wed Nov 11, 7 PM)</td><td>Thu Nov 12, 7 PM</td><td><b>Fri Nov 13, 7 PM</b></td></tr>
+<tr><td>Thu Nov 12 12:15 PM slot</td><td>Fri Nov 13, 12:15 PM</td><td>Sat Nov 14, 12:15 PM</td></tr>
+<tr><td>Part 5 (Fri Nov 13, 7 PM)</td><td>Sat Nov 14, 7 PM</td><td><b>Sun Nov 15, 7 PM</b></td></tr>
+<tr><td>Sat Nov 14 10:00 AM slot</td><td>Sun Nov 15, 10:00 AM</td><td>Mon Nov 16, 10:00 AM</td></tr>
+<tr><td>Part 2 final read</td><td></td><td>about Nov 13 (7 days)</td></tr>
+</table>
+<p>Note: Part 4 posts at 7 PM on Nov 11, about 1 h before Part 3's 48 h mark. Pull Part 3 before approving Part 4.</p>
+<p><b>Fields still missing (get these every pull):</b></p>
+<ul>
+<li><b>Part 3, every platform:</b> views, viewers/reach, 3-second views, average play, watch time, finished %, drop-off point, likes, comments, shares, saves, follows, post time, pinned, native upload or cross-post.</li>
+<li><b>Meta export with the platform column</b> (IG vs FB split), including IG-only views for Parts 1–3. Add IG 28-day totals and exact IG follower count.</li>
+<li><b>TikTok per post:</b> shares, saves, total watch time, new followers for each Origin part, retention curve, traffic source for Parts 2–3.</li>
+<li><b>Exact followers:</b> TikTok (public profile), IG, FB Page. Before and after each post if possible.</li>
+<li><b>Business signals:</b> count of DMs and comments containing <code>CLASS</code> or <code>COACH</code> (by platform, with date), plus waitlist or live sign-up count. I don't know where the waitlist lives. Note whether Jeff's own seed comment is included in the comment counts.</li>
+<li><b>Pin state:</b> order and which 3 TikTok posts are pinned now; Meta pinned posts.</li>
+<li><b>Pull metadata:</b> time of day on each pull and which browser profile and account it used.</li>
+<li><b>Spend:</b> month-to-date boost spend against the ₱3,000 cap.</li>
+<li><b>Housekeeping (not done here):</b> update SCH Part 1/2 notes with the confirmed TikTok + Meta posting and actual times.</li>
+</ul>
+<p>*Based on pulled data (Nov 9, about 7:30 AM PHT) with unverified inputs. No post, boost, schedule or message was made.*</p></main></body></html>

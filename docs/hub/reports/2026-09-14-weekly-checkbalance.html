@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Weekly Check &amp; Balance</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Weekly Check &amp; Balance</h1>
+<p><b>Date:</b> September 14, 2026 (Monday, PHT) · <b>Prior report:</b> <code>2026-09-07-weekly-checkbalance.md</code></p>
+<h2>1. Automation / repo health</h2>
+<ul>
+<li><code>main</code> == <code>origin/main</code>, working tree clean. No stuck lock files, no uncommitted backlog.</li>
+<li>Recent commits: <code>a7d3a81</code>/<code>c7a6e3f</code> (Sep 11, W37 Fri captions), <code>179f956</code>/<code>9db3bcb</code> (Sep 9, W37 Wed captions), <code>5e1f916</code> (Sep 7, W37 Mon carousel). All three W37 slots landed on schedule — <b>last cycle's urgent flag (W37 unplanned) was resolved.</b></li>
+<li><b>No cron log at <code>/tmp/titoai-cron.log</code></b> in this run environment — expected, cron runs on Jeff's Mac, not reachable from this automated context (consistent with every prior cycle's note).</li>
+<li><b>Repeat pattern, not a new problem:</b> as of this Monday-morning check, <b>W38 (Sep 14–20) has zero planning</b> — no script, captions, or Canva design for any slot, and today's 8 PM PHT Monday drop is same-day. This is the identical situation flagged for W37 exactly one week ago. The W37 fire-drill got resolved in time, but the recurring same-day-Monday gap suggests the D-2/D-3 lead time isn't being used consistently. <b>Recommend producing W38 now</b>, and consider whether the Saturday <code>tito-weekly.py</code> reminder needs a harder escalation (or an earlier D-4 check) if a week reaches Monday morning still fully blank two cycles in a row.</li>
+</ul>
+<h2>2. Account health (live pull, public profiles)</h2>
+<table>
+<tr><td>Metric</td><td>Aug 31</td><td>Sep 7</td><td><b>Sep 14 (now)</b></td></tr>
+<tr><td>TikTok followers</td><td>1,019</td><td>1,014</td><td><b>1,012</b></td></tr>
+<tr><td>TikTok total likes</td><td>1,053</td><td>~1,067 (+14)</td><td><b>1,088</b> (+21)</td></tr>
+<tr><td>IG followers</td><td>77</td><td>(not re-pulled)</td><td><b>80</b> (+3)</td></tr>
+</table>
+<p><b>TikTok followers have now declined for a third straight cycle</b> (-7 over 14 days), while total likes keep climbing. That divergence (more likes, fewer followers) remains unexplained — still no authenticated TikTok Studio session available in this run to see traffic-source or unfollow data. Flag again for whenever Studio access is available.</p>
+<p><b>Pinned posts (3 total, confirmed):</b></p>
+<ol>
+<li>Evergreen — S1E2 "Ang Restaurant sa Clark" (Jul 17) — <b>4,719 views</b>, 579 likes</li>
+<li>Evergreen — "Resume + Cover Letter — 5 Minuto" VA post (Jul 16) — <b>1,118 views</b>, 65 likes</li>
+<li>Rotating slot — currently <b>W36 Mon</b> "Mahabang Notes? Gawing Reviewer sa Gemini" (Aug 31) — <b>212 views</b>, 5 likes</li>
+</ol>
+<p><b>The rotating pin slot is still misallocated.</b> W36 Mon was the *weakest* of the three W36 posts. W36 Wed ("May Lecture PDF Ka?") sits at <b>593 views unpinned — still the best unpinned result in channel history</b> — and has now gone three full cycles without ever getting the rotating slot, despite being flagged in both the Aug 31 and Sep 7 reports.</p>
+<p><b>W37 ("Grounded AI · Career Upgrade") results — all three posts, unpinned:</b></p>
+<table>
+<tr><td>Post</td><td>Date</td><td>Views</td><td>Likes</td><td>Shares</td></tr>
+<tr><td>Mon — "Interview Reviewer"</td><td>Sep 7</td><td>238</td><td>2</td><td>3</td></tr>
+<tr><td>Wed — "Resume Mo vs. Job Post"</td><td>Sep 9</td><td>230</td><td>12</td><td>3</td></tr>
+<tr><td>Fri — "AI Can Polish Your Resume"</td><td>Sep 11</td><td>201</td><td>8</td><td>3</td></tr>
+</table>
+<p>This is the <b>weakest full week on record</b> in the data this report has tracked — all three posts landed in a narrow 200–240 view band, well below even W36's weakest post (212, now pinned) and far below W36's best (593). Comment CTAs (INTERVIEW / MATCH / TOTOO) drew single-digit engagement each. IG mirrored the same softness: the Sep 11 Fri carousel got 2 likes, and the Sep 7/Sep 9 reels showed no visible likes at all on the public profile.</p>
+<p><b>Correction to the repo record:</b> the Aug 29 "undocumented" CJEF-footage post ("Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?") was previously logged as having "never posted to IG." Live IG pull confirms <b>it did cross-post</b>, dated Aug 28 on IG, with 10 likes and 2 comments. <code>schedule.json</code> has been corrected below.</p>
+<p><b>CJEF proof story</b> (<code>docs/scripts/w34-fri-script.html</code>, CTA Comment GUSTO) remains <b>unproduced for a 5th straight cycle</b>.</p>
+<h2>3. Analysis &amp; recommendations for the upcoming week</h2>
+<ol>
+<li><b>Produce W38 immediately</b> — no slot has a script, caption, or Canva design yet, and Monday's drop is same-day. This is the priority above everything else in this report.</li>
+<li><b>Re-pin W36 Wed</b> ("May Lecture PDF Ka?", 593 views) into the rotating slot, replacing W36 Mon. It's the strongest unpinned post in the channel's history and has been recommended for the pin slot for three consecutive cycles without action.</li>
+<li><b>No boost budget this week.</b> W37's across-the-board weak performance (200–240 views on every post) doesn't clear the bar for a boost — nothing to reinforce yet. Hold budget until a post shows organic traction the way W36 Wed did.</li>
+<li><b>Format/theme signal:</b> the "AI para sa Students" theme (W36) clearly outperformed the "Grounded AI / Career Upgrade" theme (W37) — 590/260/212 avg ~354 views vs. 238/230/201 avg ~223 views. If W38 has a choice of angle, lean back toward the proof-first, named-persona, step-by-step demo shape that has repeatedly won (students, freelancers, VA), rather than the job-seeker/interview framing, which is untested and now has one full week of soft data against it.</li>
+<li><b>Resolve CJEF once and for all.</b> Five cycles carried over is long enough — either produce the real scripted version this week (footage + script already sitting ready) or formally retire it and free up the Friday slot's mental overhead.</li>
+<li><b>Follower decline vs. rising likes</b> is still unexplained after three cycles — needs an authenticated TikTok Studio pull to diagnose (traffic source, unfollow spikes) whenever that access is available.</li>
+</ol>
+<h2>4. What was updated in the repo</h2>
+<ul>
+<li><code>docs/schedule.json</code>: <code>updated</code> bumped to 2026-09-14; W37 Mon/Wed/Fri <code>status</code> corrected <code>ready</code> → <code>posted</code> with live view/like/share counts; pin-slot note corrected (rotating slot now on W36 Mon, not the Aug 29 post); Aug 29 post's IG cross-post claim corrected; added W38 placeholder flagging the zero-planning gap.</li>
+<li><code>CLAUDE.md</code>: Current/Next/Upcoming table rolled forward (W37 current → posted, W38 next → urgent/unplanned, W39 upcoming); this report's summary appended to the weekly check-and-balance log.</li>
+</ul></main></body></html>

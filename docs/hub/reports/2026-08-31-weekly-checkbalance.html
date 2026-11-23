@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Weekly Check &amp; Balance · Aug 31, 2026</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Weekly Check &amp; Balance · Aug 31, 2026</h1>
+<p>*Automated run. Live pull via public TikTok profile (session not authenticated to TikTok Studio this cycle) and public Instagram profile. IG post-level insights remain login-gated; TikTok comment text remains login-gated.*</p>
+<h2>Executive summary</h2>
+<p>Automation and repo health are normal — <code>main</code> matches <code>origin/main</code>, working tree clean, with active auto-sync commits through this morning (W36 Mon carousel assets landed 08:24–08:42 PHT). TikTok growth has stalled hard: exact followers moved only 1,017 → 1,019 (+2) over 18 days, and total likes 1,025 → 1,053 (+28) — the slowest stretch since tracking began. IG is flat at 77 followers. The good news is content quality: <b>both new W35 carousels (AI-safety and clean-brief) landed 527–554 views while sitting unpinned</b> — the second- and third-best unpinned results in the account's history — reinforcing last cycle's proof-first-beats-prompt-recitation finding. The bad news is a process gap: a TikTok-only post ("Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?", CTA "Comment STUDENT") went live Aug 29 using the CJEF training footage, got the account's rotating pin slot, but only pulled 129 views/2 likes/1 comment — and <b>it doesn't exist anywhere in the repo</b> (no script, no <code>docs/W35-fri-captions.html</code>, no <code>content/2026-W35/03-fri-inspiration/</code> folder, no <code>schedule.json</code> entry). It also never posted to Instagram. This also finally resolves last cycle's open question about "pin everything": <b>TikTok caps pins at 3</b>, so the real, observed practice is a fixed 2-slot core (Clark story, VA resume carousel) plus 1 rotating slot for the newest featured post — not literal every-post pinning.</p>
+<h2>Automation and repo health</h2>
+<table>
+<tr><td>Check</td><td>Result</td></tr>
+<tr><td>Git state</td><td><code>main</code> == <code>origin/main</code>, working tree clean. Last commit <code>eb8d018</code>, Aug 31 08:42 PHT.</td></tr>
+<tr><td>Recent commits</td><td>Active this week: <code>d3e04b8</code> (Aug 24, W35 Mon production), two Aug 26 auto-syncs (W35 Wed), two Aug 21→26 gaps aside, three Aug 31 commits landing the W36 Mon carousel (script, captions, renders, <code>schedule.json</code>) and cleaning up a temporary test image.</td></tr>
+<tr><td>Stray lock file</td><td><code>.git/index.lock</code> present (0 bytes) again — same harmless sandbox quirk noted in prior cycles; <code>git status</code>/<code>git log</code>/<code>git fetch</code> all ran fine around it. Flagged for the commit step below in case it blocks.</td></tr>
+<tr><td>Cron log</td><td><code>/tmp/titoai-cron.log</code> not present in this sandbox — expected; cron runs on Jeff's Mac, unreachable from here.</td></tr>
+<tr><td>Process gap (new)</td><td>A real post shipped to TikTok (Aug 29, CJEF/schoolwork tip) with <b>no corresponding script, caption file, or schedule.json entry anywhere in the repo</b>, and did not cross-post to Instagram. This is the first time content has gone live with zero repo footprint — worth a quick check with Jeff on whether it was posted directly from Buffer/TikTok outside the normal D-2 pipeline.</td></tr>
+</table>
+<h2>Account health</h2>
+<table>
+<tr><td>Metric</td><td>Aug 31</td><td>Aug 22 (Studio, rounded)</td><td>Aug 13 (exact)</td><td>Change vs Aug 13</td></tr>
+<tr><td>TikTok followers</td><td><b>1,019</b></td><td>~1K</td><td>1,017</td><td><b>+2 in 18 days</b></td></tr>
+<tr><td>TikTok total likes</td><td><b>1,053</b></td><td>~1K</td><td>1,025</td><td>+28</td></tr>
+<tr><td>TikTok following</td><td>152</td><td>149</td><td>—</td><td>+3</td></tr>
+<tr><td>Instagram followers</td><td><b>77</b></td><td>77</td><td>75</td><td>+2 (all in the Aug 13→22 window; flat since)</td></tr>
+<tr><td>Instagram following</td><td>112</td><td>112</td><td>112</td><td>Flat</td></tr>
+</table>
+<p>TikTok Studio (authenticated analytics — views, likes-this-week, traffic source, search queries) was not reachable this cycle; the browser session had no saved TikTok login, so this report uses the public profile and public video grid only. Follower/like growth has been essentially flat since Aug 13 — the slowest 18-day stretch on record for this channel, spanning the entire W34 and W35 production cycles.</p>
+<h2>Posts since the previous check (Aug 22) — from the public video grid</h2>
+<table>
+<tr><td>Post</td><td>Pinned</td><td>Views</td><td>Likes</td><td>Comments</td><td>Notes</td></tr>
+<tr><td>W35 Mon — "Ligtas Ba ang AI? Huwag Ilagay Ito." (AI-safety carousel, Aug 24)</td><td>No</td><td><b>554</b></td><td>— (gated)</td><td>— (gated)</td><td>2nd-best unpinned result in channel history.</td></tr>
+<tr><td>W35 Wed — "May Client Brief Ka? Huwag I-paste Agad." (redact-info carousel, Aug 26)</td><td>No</td><td><b>527</b></td><td>— (gated)</td><td>— (gated)</td><td>3rd-best unpinned result in channel history.</td></tr>
+<tr><td>Undocumented — "Imbis na mano-mano, paano kung AI ang tumulong sa schoolwork mo?" (Aug 29, CTA "Comment STUDENT," #AIForStudents)</td><td><b>Yes</b> (rotating slot)</td><td>129</td><td>2</td><td>1</td><td>Real CJEF classroom footage, but weak numbers for a pinned post — 2 days old and still the lowest-viewed pinned post the channel has had. Not the CJEF proof story that was planned/reused (<code>docs/scripts/w34-fri-script.html</code>, CTA "Comment GUSTO") — different script, different CTA, no repo record.</td></tr>
+<tr><td>W34 Mon — Freelancer feedback carousel (re-check)</td><td>No</td><td>282 (was 279)</td><td>—</td><td>—</td><td>+3, normal organic tail.</td></tr>
+<tr><td>W34 Wed — Guro parent-meeting demo (re-check)</td><td>No</td><td>96 (was 94)</td><td>—</td><td>—</td><td>+2, still the weakest tip-format post.</td></tr>
+<tr><td>W34 Fri actual — S2E4 bonus tip (re-check)</td><td>No</td><td>223 (was 210)</td><td>—</td><td>—</td><td>+13.</td></tr>
+<tr><td>W33 Wed — Negosyante carousel (re-check)</td><td>No</td><td>295 (was 292)</td><td>—</td><td>—</td><td>+3.</td></tr>
+<tr><td>W33 Mon — BPO carousel (re-check, first re-pull since Aug 13)</td><td>No</td><td>345</td><td>—</td><td>—</td><td>+10 vs. the Aug 13 figure of 335.</td></tr>
+<tr><td>W33 Fri — S2E2 CJEF training story (re-check)</td><td><b>No (un-pinned this cycle)</b></td><td>214 (was 213)</td><td>—</td><td>—</td><td>Lost its pin slot to the Aug 29 CJEF/schoolwork post.</td></tr>
+<tr><td>Evergreen pinned — Clark restaurant story (S1E2)</td><td>Yes</td><td>4,687 (was 4,679)</td><td>579</td><td>3</td><td>Still the all-time top post; +8 views, tail essentially over.</td></tr>
+<tr><td>Evergreen pinned — VA resume/cover-letter carousel</td><td>Yes</td><td>1,117 (unchanged)</td><td>—</td><td>—</td><td>No further organic growth this cycle.</td></tr>
+</table>
+<p>Instagram: only the 3 most recent grid tiles are visible without login. W35 Wed and W35 Mon are both confirmed live on IG (matching TikTok). The Aug 29 CJEF/schoolwork post is <b>not</b> in the IG grid — it appears to be TikTok-only. Post-level IG likes/comments remain login-gated, as in every prior cycle.</p>
+<h2>Engagement findings</h2>
+<ol>
+<li><b>The "pin every post" rule from Aug 22 was impossible to fully apply — TikTok hard-caps pins at 3.</b> What actually happened this cycle: the two long-term evergreen top performers (Clark story, VA resume) stayed pinned, and the single rotating third slot went to the newest CJEF-themed post instead of to W35 Mon or Wed. The corrected, practicable rule: <b>maintain 2 fixed evergreen pins + 1 rotating pin for the current week's strongest/most strategic post</b> — not literal pin-everything.</li>
+<li><b>Content quality is holding up without pinning.</b> W35 Mon (554) and W35 Wed (527) are the 2nd- and 3rd-best unpinned results ever, both proof-first carousels (visible before/after, redaction demo, safety checklist) — consistent with the standing finding that proof-first beats prompt-recitation, independent of pin status.</li>
+<li><b>The rotating pin slot went to the weaker post this cycle.</b> The Aug 29 CJEF/schoolwork video got the pin and still only reached 129 views/2 likes — worse than both unpinned W35 posts. If rotating-pin choice had gone to W35 Mon or Wed instead, the evidence suggests it likely would have outperformed 129 views by a wide margin. Pin allocation, not just pinning itself, is a lever worth being deliberate about.</li>
+<li><b>Undocumented, off-pipeline post.</b> The Aug 29 video has no script, caption file, or <code>schedule.json</code> record, and didn't cross-post to IG. Whatever the reason (same-day judgment call, direct Buffer post, etc.), it breaks the "every post traceable in the repo" pattern this project depends on for reporting. Flagging for Jeff to confirm intent — not correcting it into <code>schedule.json</code> as a phantom W35 Friday post, since the actual planned W35 Friday content (CJEF proof story, CTA "Comment GUSTO") was never produced.</li>
+<li><b>Growth has stalled account-wide, not just per-post.</b> +2 TikTok followers and 0 net IG followers over 18 days is a bigger flag than any single post's performance — worth investigating whether this is a seasonal dip, an algorithm/reach change, or simply fewer posts going out with real reach (no boosts placed since the 12–24h evidence gate went into effect).</li>
+<li><b>No inbound comments were checked this cycle</b> (TikTok comment threads are login-gated on the public profile; the Jul 17 Clark-story reply-to-<code>jkp_7777</code> recommendation from Aug 22 could not be verified or acted on without an authenticated session).</li>
+</ol>
+<h2>Recommendations for W36 (Aug 31–Sep 6)</h2>
+<table>
+<tr><td>Priority</td><td>Action</td><td>Why</td></tr>
+<tr><td>Immediate</td><td>Produce and post the actual CJEF proof story (<code>docs/scripts/w34-fri-script.html</code>, CTA "Comment GUSTO") — it is still unused after being carried over from W34 and W35.</td><td>The strongest proof-format asset on hand has now been flagged three cycles running without being produced as scripted.</td></tr>
+<tr><td>Immediate</td><td>Confirm with Jeff whether the Aug 29 "Comment STUDENT" post was an intentional off-pipeline bonus post; if it should count as content, backfill a script/caption file and a <code>schedule.json</code> entry so it's traceable.</td><td>Repo traceability broke for the first time this cycle.</td></tr>
+<tr><td>This week</td><td>Keep W36 Mon's carousel ("Mahabang Notes? Gawing Reviewer sa Gemini," drops tonight 8 PM PHT) in the rotating pin slot once it's live, given the proof-first format's track record — but weigh it against how W35 Mon/Wed did unpinned.</td><td>Rotating-pin choice mattered more than pin status alone this cycle.</td></tr>
+<tr><td>Next week</td><td>Get a TikTok Studio (authenticated) pull done at least once before the next cycle — public-profile-only data has no likes/comments for most posts and no view-trend/traffic-source context.</td><td>Two of the last four cycles have lacked authenticated data; trend visibility is degrading.</td></tr>
+<tr><td>Process</td><td>Hold all boosts.</td><td>Account-wide growth is flat; no post this cycle clearly clears a re-evaluated evidence bar, and the boost budget is better spent once a stronger, correctly-pinned post is confirmed.</td></tr>
+<tr><td>Optional</td><td>Cross-post the Aug 29 CJEF/schoolwork content to Instagram if Jeff wants it counted as a real post, since it currently only exists on TikTok.</td><td>Matches the standing "same content, platform-specific caption" practice used everywhere else.</td></tr>
+</table>
+<h2>Repo corrections made this run</h2>
+<ul>
+<li><code>docs/schedule.json</code>: <code>updated</code> bumped to <code>2026-08-31</code>; W35 Mon and W35 Wed statuses corrected <code>ready</code> → <code>posted</code> with live view counts (554 and 527); W35 Fri left as <code>draft</code> with a note explaining the CJEF proof story is still unproduced and that an unrelated, undocumented post ran in its place; W33 Fri note updated to reflect it lost its pin slot; W33 Mon view count refreshed to 345.</li>
+<li><code>CLAUDE.md</code>: new dated log entry appended below the Aug 22 entry with this cycle's findings and the corrected pin-rotation rule.</li>
+</ul>
+<h2>Next-period focus</h2>
+<ul>
+<li>Produce the CJEF proof story for real — three cycles running unproduced.</li>
+<li>Get one authenticated TikTok Studio pull to restore trend/traffic visibility.</li>
+<li>Track whether the 2-fixed + 1-rotating pin model holds up as a repeatable pattern, and whether rotating-pin choice (not just pin/unpin) correlates with performance over more data points.</li>
+<li>Resolve the Aug 29 undocumented post with Jeff before the next cycle.</li>
+</ul>
+<p>*Previous: reports/2026-08-22-weekly-checkbalance.md*</p>
+<p>*Data pulled: Aug 31, 2026, via public TikTok profile/video grid and public Instagram profile (no authenticated TikTok Studio session available this cycle).*</p></main></body></html>

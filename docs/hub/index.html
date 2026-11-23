@@ -214,6 +214,9 @@ function board() {
       <div class="kpis">${R.kpis.map(kpi).join('')}</div>
       <ul class="topline">${R.topline.map((t) => `<li>${t}</li>`).join('')}</ul>
       ${R.boost ? `<div class="boost"><span class="label">Boost call</span><div>${R.boost}</div></div>` : ''}
+    </div>
+    <div class="panel mt"><h3>📁 Reports <span class="pill">${(D.reports || []).length}</span></h3>
+      ${(D.reports || []).map((r) => `<div class="item"><span>${/stats|numbers/i.test(r.title) ? '📊' : '📄'}</span><div><b><a href="${esc((D.live ? '' : D.links.liveStudio) + r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></b><em>${esc(r.date)}</em></div></div>`).join('') || '<div class="empty">No reports yet.</div>'}
     </div>`;
 }
 function askBox() {

@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Weekly Check &amp; Balance (Jul 27, 2026)</title><style>:root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main><p><a href="../index.html">← Hub</a></p><h1>Tito AI — Weekly Check &amp; Balance (Jul 27, 2026)</h1>
+<p>Automated routine run. Covers automation health, social account health, and engagement-driven recommendations for W31.</p>
+<h2>1. Automation / Claude Code health</h2>
+<table>
+<tr><td>Check</td><td>Result</td></tr>
+<tr><td>Git log</td><td>Active and current. Last commit <code>a95ac8b</code> — today, Jul 27, 08:30 ("Add data-document-role annotations for Canva HTML import"). 4 commits landed today alone, building out all of W31 (Mon VA / Wed Freelancer / Fri S1E4 scripts + captions + carousel slide renders).</td></tr>
+<tr><td>Git status (before this run)</td><td><b>Not clean</b> — found a backlog that had been sitting uncommitted since ~Jul 21: <code>docs/exec-summary-jul22.html</code> deleted, <code>docs/exec-summary-jul22.pdf</code> regenerated, a renamed replacement <code>docs/Tito Ai Social Media EXEC SUMMARY.html</code> left untracked, and <b>last week's own health-check report</b> (<code>reports/2026-07-22-health-check.md</code>) was never committed. None of this is destructive — it's just been unstaged for ~6 days. Picked up and committed as part of this run (see §4).</td></tr>
+<tr><td>Push state</td><td>Local <code>main</code> was up to date with <code>origin/main</code> before this run.</td></tr>
+<tr><td>Cron log (<code>/tmp/titoai-cron.log</code>)</td><td>Not present in this sandboxed run — same limitation as every prior cycle (this automated environment only mounts the <code>TItoAi</code> repo folder, not Jeff's actual Mac <code>/tmp</code> or crontab). Reminder firing for <code>tito-summary</code> / <code>tito-record</code> / <code>tito-create</code> / <code>tito-weekly</code> / <code>tito-remind</code> can't be confirmed from here — would need to be checked directly on Jeff's Mac.</td></tr>
+</table>
+<p><b>Verdict:</b> Repo/automation output is healthy — content is being produced and committed on schedule (W31 fully scripted a day ahead of its Mon Jul 28 drop). The one real finding is a <b>process gap</b>: files (including a prior week's own report) can sit uncommitted for close to a week before an automated run notices and sweeps them up. Worth a habit check on Jeff's end — commit right after generating a report/exec summary rather than leaving it for the next cycle to catch.</p>
+<h2>2. Social media account health (Instagram + TikTok)</h2>
+<p><b>Could not complete this cycle.</b> Claude in Chrome reported "not connected" on three retries, and a direct <code>web_fetch</code> of both profile URLs returned empty content (both are JS-rendered pages that don't serve meaningful HTML to a static fetch). Per the no-fabrication rule, no new follower counts or engagement numbers are reported here — this is now the <b>third of the last four scheduled cycles</b> (Jul 13, Jul 20, and now Jul 27) where this automated run had no browser access. The one live pull that succeeded in that window (Jul 22) appears to have been run manually/out-of-band with Chrome open, not from this scheduled context.</p>
+<p><b>Last confirmed data</b>, from <code>reports/2026-07-22-health-check.md</code> (pulled Jul 22, via TikTok Studio + IG public profile):</p>
+<ul>
+<li><b>TikTok:</b> crossed <b>1,000 followers</b> (milestone). 7-day (Jul 13–19) views 4,500 (+317.5% WoW), 350 likes, 16 shares, 2 comments, 33 profile views. Traffic 93.7% FYP. Top post: S1E2 "Pares Clark" story reel — 4,600 all-time views, boosted (₱200, Jul 18), drove 365 new followers in 7 days. W29 Wed carousel (Resume/Cover Letter) — 1,100 all-time views.</li>
+<li><b>Instagram:</b> 73 followers. Insights unavailable (login-gated); last known baseline ~230 avg reel views, 8.6% engagement rate (from Jul 14 data).</li>
+<li>Both Jul 18 boosts (W29 Wed ₱300, W29 Fri ₱200) are now <b>confirmed</b> via the Jul 22 pull — the Fri boost (S1E2) clearly drove the 365-follower/4,600-view spike; the Wed boost (carousel) landed a more modest 1,100 views. This closes out the "unconfirmed boost outcome" item that had been open since Jul 18.</li>
+</ul>
+<p><b>Recommendation, again:</b> run this section while Jeff has Chrome open with the extension signed in, or have Jeff paste current follower counts/a screenshot next cycle. Given this has now failed 3 of 4 scheduled runs, worth considering whether the scheduled task should just skip the live pull and explicitly ask Jeff to supply numbers, rather than retrying silently each week.</p>
+<h2>3. Engagement analysis (carried forward from Jul 22 — no fresh data this cycle)</h2>
+<p>Standing insights, reaffirmed:</p>
+<ol>
+<li><b>Story reels are the strongest follower-conversion lever, when boosted.</b> S1E2 (Pares Clark) drove 365 new followers off a ₱200 boost — over 100x the organic follower rate of any other post. This is now the single best-proven boost target.</li>
+<li><b>Carousels remain the strongest organic-views driver.</b> Three straight weeks (W27 Wed → W28 Wed → W29 Wed) of carousel demos topping the views chart; W29 Wed hit 1,016 views organically without a boost, more than most boosted posts.</li>
+<li><b>Split by content type, not by feed:</b> Reels = emotional/story content (Fri slot). Carousels = educational/step-by-step (Mon/Wed slots). This split has now been in place since W30 and both formats are outperforming their old counterparts.</li>
+<li><b>Post once, pin immediately — no duplicates.</b> Standing rule since the Jul 1 audit; nothing since has contradicted it enough to drop it, though the earlier pin-vs-unpinned ranking question (Jul 14 finding) was never fully re-litigated with fresh data this cycle — treat as still open, low-priority given the story-format finding now dominates.</li>
+<li><b>Branded/franchise search is compounding</b> — "titoserye Filipino ai" and "tito ai story" queries were already appearing as of Jul 21; TikTok 1K-follower milestone also unlocks TikTok Live, floated but not yet scheduled.</li>
+</ol>
+<h3>W31 status (Jul 27–Aug 2 · Season 1 finale week)</h3>
+<p>All three slots are scripted, captioned, and have carousel slide renders as of this morning (Jul 27) — a full day ahead of the Jul 28 Mon drop, no repeat of the W30-style late scramble:</p>
+<table>
+<tr><td>Slot</td><td>Title</td><td>Format</td><td>Drop (PHT)</td><td>Status</td></tr>
+<tr><td>Mon</td><td>VA Inbox</td><td>Carousel + Reel</td><td>Jul 28, 8:00 PM</td><td>Ready</td></tr>
+<tr><td>Wed</td><td>Freelancer Proposal</td><td>Carousel + Reel</td><td>Jul 30, 7:00 PM</td><td>Ready</td></tr>
+<tr><td>Fri</td><td>Story S1E4 — Ang BJJ Champion at ang Marketing Analyst na Nasa Manila</td><td>Reel</td><td>Aug 1, 7:00 PM</td><td>Ready — <b>Season 1 finale</b></td></tr>
+</table>
+<h3>Recommendations for W31</h3>
+<ul>
+<li><b>Boost budget → Fri S1E4 (Season 1 finale), not Wed.</b> Data-grounded: the one story-format boost we've run (S1E2) outperformed every carousel boost by more than 100x on follower conversion. S1E4 closes out the whole Season 1 arc, which makes it the highest-leverage single post to put spend behind this cycle. Recommend the same shape as the Jul 18 S1E2 boost: TikTok, Followers/Profile-visits objective, concentrated (not split with the Wed post).</li>
+<li><b>Keep Wed (Freelancer carousel) organic.</b> It's the same proven named-persona/step-by-step shape that's carried the last 3 weeks organically — no boost needed to perform.</li>
+<li><b>Hook check on S1E4.</b> Per the Jul 21 growth plan, open with the most dramatic line first (not "Kumusta") — confirm the S1E4 script follows this before recording, same as S1E3 did.</li>
+<li><b>Pin once, don't duplicate</b> on whichever post gets the boost.</li>
+<li><b>Priority for next cycle:</b> (1) get a live browser/account pull — this is now overdue for 3 of 4 cycles; (2) confirm whether W30 Wed ("Alinman Ka Man") and W30 Fri (S1E3) actually posted on their Jul 23/Jul 25 drop dates — content was ready on time per the repo, but posting itself is Tito AI's manual step and isn't confirmable without account access; (3) confirm S1E4 boost outcome once placed.</li>
+</ul>
+<h2>4. What changed in the repo this cycle</h2>
+<ul>
+<li>Picked up and committed the ~6-day-old uncommitted backlog: <code>docs/exec-summary-jul22.html</code> removal, <code>docs/exec-summary-jul22.pdf</code> refresh, <code>docs/Tito Ai Social Media EXEC SUMMARY.html</code> addition, and <code>reports/2026-07-22-health-check.md</code>.</li>
+<li><code>docs/schedule.json</code>: <code>updated</code> bumped to 2026-07-27. W30 Wed/Fri entries updated from stale <code>draft</code>/<code>TBD</code> to reflect that scripts, captions, and carousel slides were actually produced on time (Jul 23–24) — status set to <code>ready</code> rather than <code>posted</code> since live posting can't be confirmed this cycle. W31 entries filled in with real titles/personas/drop times (previously all <code>TBD</code>), status <code>ready</code>, with a note recommending boost on Fri S1E4 over Wed.</li>
+<li><code>docs/W31-fri-captions.html</code>: added a posting-insight banner (S1E4 = highest-leverage boost target this week, per the S1E2 precedent; hook-fix reminder).</li>
+<li><code>docs/W31-wed-captions.html</code>: added a posting-insight banner (proven organic shape, no boost needed, pin-once reminder).</li>
+<li><code>CLAUDE.md</code>: appended a dated entry under the content-calendar/insights section summarizing this cycle.</li>
+</ul>
+<p>No metrics were invented anywhere in this report or the updated files — every number traces back to <code>reports/2026-07-22-health-check.md</code> or earlier confirmed reports.</p>
+<p>*Previous: reports/2026-07-22-health-check.md*</p></main></body></html>
