@@ -19,9 +19,13 @@ Read `CLAUDE.md` (Voice, Content pillars, Brand system, and every dated note —
 - Paid tool presented as the main solution
 - Wrong slot, date, or drop time
 
+- "Libre/free" claimed while the screen recording shows a paid plan (e.g. Claude app with Opus, Pro badge)
+- AI voice used but not disclosed in captions ("AI voice ang gamit dito.") or presented as Jeff's own voice
+
 **Fixes (should fix)**
 - Voice: forced Taglish, lecturing or salesy tone, missing opener/closer on videos, reel over 90s
 - Captions: not split per platform, wrong hashtag count, missing `#TitoAIPH #MgaPamangkin #AIParaSaAtin`, more than one CTA, more than 3 emoji
+- Screen-demo reels: screen recording cropped/zoomed so content is cut, still PNG chibi instead of moving Flow chibi, captions out of sync with the voice
 - Slides: not 5 slides, on-slide text differs from script, typos, off-palette colors, chibi drift (facial hair, belt strap, tablet facing wrong way)
 
 **Polish (optional)**

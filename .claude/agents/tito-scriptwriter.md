@@ -21,6 +21,11 @@ Market: Class B and C first, some Class A. Write so a BPO worker and a business 
 - Model output shown on a slide must be the real tested output, quoted exactly. If the prompt is untested, mark that slide `[PLACEHOLDER — paste real output]` and say so. Never write fake AI output.
 - Fictional businesses are labeled as practice examples.
 
+## Video voice lines (Nov 19)
+- Videos use the AI voiceover (Gemini TTS, voice Finn) unless Jeff records his own. Write the voice lines as one clean block Claude Code can paste into the TTS tool: no stage directions inside it, all-caps words written in lowercase (the TTS spells caps letter by letter, e.g. "comment prompt").
+- Screen-demo reels follow the recipe in `CLAUDE.md`. Only say "libre/free" when the recording is a free account; if it's Jeff's paid app, say "kasama si Claude" and suggest trying the prompt on free tiers.
+- Add "(AI voice ang gamit dito.)" to each caption when the AI voice is used.
+
 ## Captions
 Write separate TikTok, Instagram, and Facebook captions. Follow the hashtag count in the most recent dated note in `CLAUDE.md` (recent posts use five per platform) and always include `#TitoAIPH #MgaPamangkin #AIParaSaAtin`. One CTA each.
 

@@ -71,6 +71,8 @@ Other actions:
 - {"action": "render_video", "composition": "<Remotion id>"}: only when the Flow/Gemini clip already exists.
 - {"action": "place_file", "from": "handoff/flow/<file>", "to": "w44-friday-motion-sample/public/<file>" or "docs/media/<folder>/<file>"}: copies a Flow/Gemini clip or image into place (the team can't copy binary files).
 
+Voice + screen-demo reels (Nov 19): every new video gets an AI voiceover (Gemini TTS, voice Finn) made by Claude Code unless Jeff records his own; captions say "(AI voice ang gamit dito.)". Screen-demo reels: Jeff sends a screen recording, Claude Code adds moving Flow chibi clips and edits from the Remotion template ClaudePlanReel2 (full uncropped window, captions timed to the voice). Ask Kuya Sulat for voice lines in one clean block (all-caps words in lowercase). You can't open Chrome, so tell Jeff: "Ask Claude Code: make the voice and edit for <slot>".
+
 Video clips (Nov 7): ChatGPT is out of the video lane. **Claude Code drives Google Flow (then Gemini) itself in Jeff's Tito AI Chrome profile** and saves each clip in handoff/flow/ with a same-name .md note (purpose, tool/model, exact prompt). You (the Studio) can't open Chrome, so when a post needs new clips, have Kuya Sulat write content/<week>/<slot>/drafts/flow-prompts.md (one 8s shot per prompt, same approved chibi as Ingredient, Veo 3.1 Lite, 9:16, x1, silent) and tell Jeff: "Ask Claude Code to make the Flow clips for <slot>." When you get a "[New Flow clip]" message, you own the finish: Read the frame strip image it gives you and check the chibi against the rules (same clean-shaven chibi, soft 2D style, rounded elbows, no puppet/3D look, screen facing the viewer, laptop fully in frame, nothing cut off). If it fails, say exactly which shot to regenerate. If it passes, place_file it, have the team write or update captions and docs, render if a Remotion composition uses it, then send it to Lola Suri.
 
 Video vs carousel: Reels need chibi motion clips that Claude Code generates in Google Flow (Veo 3.1 Lite, about 50 free credits a day, 10 per 8s clip) first, then Gemini. If Jeff says there are no credits, there's no time, or video isn't possible, **switch to the carousel fallback**: Kuya Sulat (script + captions) → Ate Disenyo (carousel.json) → render_carousel → Lola Suri QA.
@@ -482,7 +484,15 @@ function listInsights() {
     topline = sec('1\\.').split('\n').filter((l) => l.startsWith('- ')).map((l) => l.slice(2));
     boost = sec('4\\.').split('\n\n')[0];
   }
-  return {dataFile: dataFile && `reports/data/${dataFile}`, report: repFile && `reports/${repFile}`, date: dataFile && dataFile.slice(0, 10), metrics, topline, boost};
+  let reports = [];
+  try {
+    reports = fs.readdirSync(path.join(ROOT, 'reports')).filter((f) => /^\d{4}-\d{2}-\d{2}-.+\.md$/.test(f)).sort().reverse().map((f) => {
+      let title = f.slice(11, -3).replace(/-/g, ' ');
+      try { const h = fs.readFileSync(path.join(ROOT, 'reports', f), 'utf8').match(/^#\s+(.+)$/m); if (h) title = h[1].replace(/^Tito AI\s*[—-]\s*/i, ''); title = title.charAt(0).toUpperCase() + title.slice(1); } catch {}
+      return {date: f.slice(0, 10), file: `reports/${f}`, title};
+    });
+  } catch {}
+  return {dataFile: dataFile && `reports/data/${dataFile}`, report: repFile && `reports/${repFile}`, date: dataFile && dataFile.slice(0, 10), metrics, topline, boost, reports};
 }
 
 function listSchedule() {

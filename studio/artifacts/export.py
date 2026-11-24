@@ -149,14 +149,18 @@ data = {
         "boost": md_inline(ins.get("boost") or ""),
         "kpis": [
             {"label": "TikTok views", "window": "7 days", "value": tt.get("video_views"), "delta": tt.get("video_views_change")},
-            {"label": "TikTok likes", "window": "7 days", "value": tt.get("likes"), "delta": tt.get("likes_change")},
+            {"label": "TikTok likes", "window": "7 days", "value": tt.get("likes")},
+            {"label": "TikTok shares", "window": "7 days", "value": tt.get("shares")},
+            {"label": "Instagram views", "window": "28 days", "value": ig.get("views"), "delta": ig.get("views_change")},
+            {"label": "Instagram reach", "window": "28 days", "value": ig.get("reach"), "delta": ig.get("reach_change")},
+            {"label": "Instagram interactions", "window": "28 days", "value": ig.get("interactions")},
             {"label": "Facebook views", "window": "28 days", "value": fb.get("views"), "delta": fb.get("views_change")},
             {"label": "Facebook interactions", "window": "28 days", "value": fb.get("interactions")},
-            {"label": "Instagram views", "window": "28 days", "value": ig.get("views")},
-            {"label": "Instagram reach", "window": "28 days", "value": ig.get("reach")},
+            {"label": "Facebook follows", "window": "28 days", "value": fb.get("follows")},
         ],
     },
-    "links": {"bot": "https://t.me/titoaiph_bot", "hub": PAGES, "liveStudio": PAGES + "hub/", "liveMobile": PAGES + "hub/m.html",
+    "reports": [{"date": r["date"], "title": r["title"], "url": "reports/" + os.path.basename(r["file"])[:-3] + ".html"} for r in (ins.get("reports") or [])],
+    "links": {"bot": "https://t.me/titoai_ph_bot", "hub": PAGES, "liveStudio": PAGES + "hub/", "liveMobile": PAGES + "hub/m.html",
               "studio": PAGES + "hub/" if PAGES_MODE else "https://claude.ai/artifact/3KfBLeRZ6PbRc4Tmd8Y5NF",
               "mobile": PAGES + "hub/m.html" if PAGES_MODE else "https://claude.ai/artifact/BK5LEUUtSkPdEnGdbXJXJn", "instagram": "https://www.instagram.com/tito.aiph/", "tiktok": "https://www.tiktok.com/@tito.aiph"},
 }
@@ -171,6 +175,40 @@ PAGES_LOADER = """(() => {
   return d;
 })()"""
 PAGE_HEAD = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="robots" content="noindex">\n<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">\n<link rel="apple-touch-icon" href="apple-touch-icon.png">\n<link rel="manifest" href="manifest.webmanifest">\n<meta name="apple-mobile-web-app-title" content="Tito AI">\n<meta name="theme-color" content="#0A0F1E">\n<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
+
+
+def md_page(md, title):
+    """Small markdown -> HTML for the hub's report pages (headings, lists, tables, bold, code, paragraphs)."""
+    esc = lambda t: t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    inl = lambda t: re.sub(r"`([^`]+)`", r"<code>\1</code>", re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(t)))
+    out, lst, tbl = [], None, False
+    def close():
+        nonlocal lst, tbl
+        if lst: out.append(f"</{lst}>"); lst = None
+        if tbl: out.append("</table>"); tbl = False
+    for line in md.splitlines():
+        l = line.rstrip()
+        if re.match(r"^\|.*\|$", l):
+            if re.match(r"^\|[\s:|-]+\|$", l): continue
+            if not tbl: close(); out.append("<table>"); tbl = True
+            out.append("<tr>" + "".join(f"<td>{inl(c.strip())}</td>" for c in l.strip("|").split("|")) + "</tr>"); continue
+        m = re.match(r"^(#{1,4})\s+(.*)", l)
+        if m: close(); n = len(m.group(1)); out.append(f"<h{n}>{inl(m.group(2))}</h{n}>"); continue
+        m = re.match(r"^\s*([-*]|\d+\.)\s+(.*)", l)
+        if m:
+            kind = "ol" if m.group(1)[0].isdigit() else "ul"
+            if lst != kind: close(); out.append(f"<{kind}>"); lst = kind
+            out.append(f"<li>{inl(m.group(2))}</li>"); continue
+        if not l.strip() or l.strip() == "---": close(); continue
+        close(); out.append(f"<p>{inl(l)}</p>")
+    close()
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+            f'<meta name="robots" content="noindex"><title>{esc(title)}</title><style>'
+            ':root{color-scheme:light}body{margin:0;background:#F6F5F1;color:#1A1A1A;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}'
+            'main{max-width:760px;margin:0 auto;padding:20px 16px 48px}a{color:#1F3A5F}h1{font-size:22px;line-height:1.3}h2{font-size:17px;margin-top:26px}'
+            'li{margin:4px 0}code{background:#ECEAE3;padding:1px 4px;border-radius:4px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px;display:block;overflow-x:auto}'
+            'td{border:1px solid #DDD;padding:5px 8px}tr:first-child td{font-weight:600;background:#ECEAE3}</style></head><body><main>'
+            '<p><a href="../index.html">← Hub</a></p>' + "\n".join(out) + "</main></body></html>\n")
 
 
 def page(tpl, data_expr):
@@ -194,6 +232,17 @@ if PAGES_MODE:
         f = os.path.join(HUB, out)
         if not os.path.exists(f) or open(f).read() != html:
             open(f, "w").write(html); changed = True
+    rdir = os.path.join(HUB, "reports")
+    os.makedirs(rdir, exist_ok=True)
+    keep = set()
+    for r in ins.get("reports") or []:
+        name = os.path.basename(r["file"])[:-3] + ".html"; keep.add(name)
+        html = md_page(open(os.path.join(ROOT, r["file"])).read(), r["title"])
+        f = os.path.join(rdir, name)
+        if not os.path.exists(f) or open(f).read() != html:
+            open(f, "w").write(html); changed = True
+    for f in os.listdir(rdir):
+        if f not in keep: os.remove(os.path.join(rdir, f)); changed = True
     os.makedirs(os.path.join(HUB, "thumbs"), exist_ok=True)
     for f in os.listdir(os.path.join(HUB, "thumbs")):   # drop covers no post uses any more
         if "thumbs/" + f not in {p["thumb"] for p in posts}:

@@ -10,40 +10,36 @@
   // ---------- frames (world coordinates) ----------
   const FRAMES = [
     {id: 'updates', name: 'Updates · agents + waiting on you', x: 0, y: 0, w: 1720, h: 360},
-    {id: 'biz', name: 'Business launch · Class #1 + 1:1 coaching', x: 0, y: 420, w: 1720, h: 440},
-    {id: 'plan', name: 'Business plan 2027 · snapshot', x: 0, y: 920, w: 1720, h: 460},
-    {id: 'flow', name: 'Workflow · live', x: 0, y: 1440, w: 1720, h: 720},
-    {id: 'handoff', name: 'Flow clip inbox', x: 0, y: 2220, w: 840, h: 280},
-    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 2220, w: 840, h: 280},
-    {id: 'cal', name: 'Content calendar', x: 0, y: 2560, w: 1720, h: 800},
-    {id: 'insights', name: 'Results · Tito Numero', x: 0, y: 3420, w: 1720, h: 440},
+    {id: 'insights', name: 'Numbers', x: 0, y: 420, w: 1720, h: 540},
+    {id: 'flow', name: 'Workflow · live', x: 0, y: 1040, w: 1720, h: 720},
+    {id: 'handoff', name: 'Flow clip inbox', x: 0, y: 1820, w: 840, h: 280},
+    {id: 'approve', name: 'Your approvals · final only', x: 880, y: 1820, w: 840, h: 280},
+    {id: 'cal', name: 'Content calendar', x: 0, y: 2160, w: 1720, h: 800},
   ];
 
   // ---------- workflow nodes (inside the Workflow frame) ----------
+  // Business lane (Tito Benta, Ate Kasosyo, Tito Numero) removed from the board Nov 24 (Jeff): they run in the background (automation/tito-background.py); their runs still show under Agent activity.
   const NODES = [
     {id: 'jeff', x: 30, y: 210, emoji: '💡', name: 'Jeff', role: 'Idea / request', color: 'gray'},
     {id: 'tito-main', x: 240, y: 210, emoji: '🎙️', name: 'Tito AI', role: 'Chief of Staff · plans + runs team', color: 'navy', agent: 'tito-main'},
     {id: 'tito-researcher', x: 450, y: 210, emoji: '🔎', name: 'Tita Saliksik', role: 'Research · task summary only', color: 'teal', agent: 'tito-researcher', stage: 'research'},
     {id: 'tito-scriptwriter', x: 660, y: 210, emoji: '✍️', name: 'Kuya Sulat', role: 'Script + captions', color: 'teal', agent: 'tito-scriptwriter', stage: 'script'},
     {id: 'flow', x: 870, y: 50, emoji: '🎥', name: 'Google Flow', role: 'Claude Code drives it · Gemini after', color: 'green'},
+    {id: 'screen-rec', x: 450, y: 50, emoji: '📱', name: 'Jeff records', role: 'Real screen recording', color: 'gray'},
+    {id: 'voice', x: 660, y: 50, emoji: '🗣️', name: 'AI voice · Finn', role: 'Gemini TTS · Claude Code makes it', color: 'green'},
     {id: 'claude', x: 1080, y: 50, emoji: '🤝', name: 'Claude Code', role: 'Checks frames + finishes', color: 'coral'},
     {id: 'video-producer', x: 1080, y: 210, emoji: '🎬', name: 'Kuya Kamera', role: 'Render + audio level', color: 'teal', agent: 'video-producer', stage: 'video'},
     {id: 'tito-content-creator', x: 870, y: 370, emoji: '🎨', name: 'Ate Disenyo', role: 'carousel.json (fallback)', color: 'teal', agent: 'tito-content-creator', stage: 'create'},
     {id: 'carousel-render', x: 1080, y: 370, emoji: '🖼️', name: 'Slide render', role: 'Branded PNG slides', color: 'teal', agent: 'carousel-render'},
     {id: 'tito-qa', x: 1290, y: 210, emoji: '🧐', name: 'Lola Suri', role: 'QA · verdict', color: 'teal', agent: 'tito-qa', stage: 'qa'},
     {id: 'final', x: 1500, y: 210, emoji: '✅', name: 'Your approval', role: 'Final video + post only', color: 'gold'},
-    {id: 'tito-sales', x: 240, y: 560, emoji: '💼', name: 'Tito Benta', role: 'Sales · classes + 1:1 coaching', color: 'navy', agent: 'tito-sales', stage: 'sales'},
-    {id: 'tito-bizdev', x: 450, y: 560, emoji: '🤝', name: 'Ate Kasosyo', role: 'BizDev · schools, SMEs, partners', color: 'navy', agent: 'tito-bizdev', stage: 'sales'},
-    {id: 'tito-analyst', x: 660, y: 560, emoji: '📊', name: 'Tito Numero', role: 'CLASS / COACH comments + results', color: 'teal', agent: 'tito-analyst', stage: 'insights'},
-    {id: 'jeff-sends', x: 1500, y: 560, emoji: '📨', name: 'Jeff sends', role: 'Replies, invoices, proposals', color: 'gold'},
   ];
   const NW = 180, NH = 100;
   const EDGES = [
     ['jeff', 'tito-main'], ['tito-main', 'tito-researcher'], ['tito-researcher', 'tito-scriptwriter'],
-    ['tito-scriptwriter', 'flow', 'script + Flow prompts'], ['flow', 'claude'], ['claude', 'video-producer'],
+    ['tito-scriptwriter', 'flow', 'script + Flow prompts'], ['flow', 'claude', 'moving chibi'], ['tito-scriptwriter', 'voice', 'voice lines'], ['voice', 'claude'], ['screen-rec', 'claude', 'screen demo'], ['claude', 'video-producer'],
     ['tito-scriptwriter', 'tito-content-creator', 'no credits → carousel'], ['tito-content-creator', 'carousel-render'],
     ['video-producer', 'tito-qa'], ['carousel-render', 'tito-qa'], ['tito-qa', 'final'],
-    ['tito-main', 'tito-sales'], ['tito-sales', 'tito-bizdev'], ['tito-bizdev', 'tito-analyst'], ['tito-analyst', 'jeff-sends', 'drafts only'],
   ];
 
   // ---------- helpers ----------
@@ -68,11 +64,8 @@
     $('#fb-flow').innerHTML = `<svg class="fg-edges" id="fgEdges" width="1720" height="660"></svg>
       <div class="lane-label" style="left:870px;top:18px">VIDEO LANE · Flow first, Gemini after credits</div>
       <div class="lane-label" style="left:870px;top:478px">CAROUSEL FALLBACK · no video credits</div>
-      <div class="lane-label" style="left:240px;top:528px">BUSINESS LANE · drafts only, Jeff sends · billed under Alameda</div>
       <div id="fgNodes"></div>`;
     $('#fb-handoff').innerHTML = '<div class="fg-scroll hand-list" id="handList"></div>';
-    $('#fb-biz').innerHTML = '<div class="ins" id="bizBody"><div class="hand-empty">Loading business launch…</div></div>';
-    $('#fb-plan').innerHTML = '<div class="ins" id="planBody"><div class="hand-empty">Loading business plan…</div></div>';
     $('#fb-insights').innerHTML = '<div class="ins" id="insBody"><div class="hand-empty">Loading results…</div></div>';
     $('#fb-approve').innerHTML = '<div class="fg-scroll appr-list" id="apprList"></div>';
     $('#fb-cal').innerHTML = `<div class="cal-head"><button class="fg-btn" id="calPrev">‹</button><h3 id="calTitle"></h3><button class="fg-btn" id="calNext">›</button>
@@ -99,7 +92,7 @@
   }
   function nodeState(n) {
     if (n.id === 'jeff') return {live: false, line: 'Send a message to start'};
-    if (n.id === 'jeff-sends') { const k = ((B.biz || {}).open || []).length; return {live: false, badge: k, line: k ? `${k} business decision${k > 1 ? 's' : ''} open` : 'Nothing to send', warn: k > 0}; }
+    if (n.id === 'jeff-sends') return {live: false, line: 'Drafts from the business lane'};
     const ext = (B.activity || []).find((a) => a.node === n.id);
     if (n.id === 'flow' && !B.handoffs.some((h) => h.state.status === 'new') && ext) return {live: false, line: `Done · ${ext.title}`};
     if (n.id === 'claude' && !B.handoffs.some((h) => h.state.status === 'with-claude') && ext) return {live: false, line: `Done · ${ext.title}`};
@@ -172,7 +165,6 @@
       ...(B.schedule || []).filter((p) => p.status === 'planned' && p.date >= today && p.date <= soon.slice(0, 10) && !/^TBD/.test(p.title))
         .map((p) => item('🛠️', `Not made yet: ${p.title}`, `Posts ${p.date.slice(5)} · say "make ${p.title}" to Claude Code or Tito AI`, 'data-zoom="cal"')),
       ...toPost.map((p) => item(p.slot.slice(0, 10) < today ? '⚠️' : '📅', `Post it yourself: ${p.title}`, `${p.slot.slice(0, 10) < today ? 'Overdue · was ' : ''}${fmtPHT(p.slot)} PHT`, `data-goto-post="${esc(p.id)}"`)),
-      ...((B.biz || {}).open || []).map((t) => item('💼', `Decide: ${t}`, 'Business launch · tell Tito AI or Claude Code', 'data-zoom="biz"')),
       ...Object.values(state.runs).filter((r) => r.status === 'failed' && Date.now() - r.updatedAt < 2 * 86400e3)
         .map((r) => item('❗', `Failed: ${r.title}`, `${who(r.agent)} · ${ago(r.updatedAt)} · retry or ask Tito AI`, `data-goto="${r.id}"`)),
     ];
@@ -205,101 +197,33 @@
 
   // ---------- results (Tito Numero) ----------
   // ---------- business launch (content/business/sales/launch-status.json) ----------
-  async function loadBiz() { try { B.biz = await api('/api/business'); renderBiz(); renderPlan(); renderNodes(); renderUpdates(); } catch {} }
-  function renderPlan() {
-    const el = $('#planBody'), S = (B.biz || {}).plan_snapshot;
-    if (!el) return;
-    if (!S) { el.innerHTML = '<div class="hand-empty">No plan snapshot yet (plan_snapshot in content/business/sales/launch-status.json).</div>'; return; }
-    const k = (v) => '₱' + (v >= 1e6 ? (v / 1e6).toFixed(1).replace(/\.0$/, '') + 'M' : Math.round(v / 1e3) + 'k');
-    const max = Math.max(...S.streams.map((x) => x.value));
-    const tile = (label, v, sub) => `<div class="kpi"><span>${esc(label)}</span><b>${esc(v)}</b>${sub ? `<em>${esc(sub)}</em>` : ''}</div>`;
-    el.innerHTML = `
-      <div class="fg-scroll ins-col ins-top">
-        <h4>📘 Tito AI Business Plan 2027 <small>as of ${esc(S.as_of)}</small></h4>
-        <div class="ins-meta">${esc(S.headline)}</div>
-        <div class="kpi-row">${tile('2027 base', k(S.base), 'revenue')}${tile('Conservative', k(S.conservative))}${tile('Stretch', k(S.stretch))}${tile('Costs', k(S.costs_year), S.costs_note)}</div>
-        ${S.research ? `<h4>🔎 Market research (first)</h4><ul>${S.research.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
-        <h4>Phases</h4>
-        <ul>${S.phases.map((x) => `<li><b>${esc(x.name)}:</b> ${esc(x.what)}</li>`).join('')}</ul>
-        <div class="ins-meta">${esc(S.market)} · <a href="#" data-open-file="${esc(S.pdf || '')}">PDF</a> · <a href="${esc((B.biz || {}).live_doc || '#')}" target="_blank" rel="noopener">Live doc</a></div>
-      </div>
-      <div class="fg-scroll ins-col ins-kpis">
-        <h4>💰 2027 base case by stream · ${k(S.base)}</h4>
-        <div class="plan-bars">${S.streams.map((x) => `<div class="plan-bar"><span>${esc(x.name)}</span><i style="width:${(x.value / max * 100).toFixed(1)}%"></i><b>${k(x.value)}</b></div>`).join('')}</div>
-        <h4>⚠️ Risks → fallback</h4>
-        <ul>${S.risks.map((r) => `<li>${esc(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="fg-scroll ins-col ins-top">
-        <h4>🗓️ 90-day plan</h4>
-        <div class="ins-meta">${esc(S.ninety_day_goal)}</div>
-        ${S.ninety_day.map((w) => `<div class="plan-win"><b>${esc(w.label)}</b> <small>${esc(w.window)}</small><ul>${w.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div>`).join('')}
-      </div>`;
-  }
-  function renderBiz() {
-    const Z = B.biz, el = $('#bizBody');
-    if (!el) return;
-    if (!Z || !Z.class) { el.innerHTML = '<div class="hand-empty">No tracker yet. Ask Tito Benta to create content/business/sales/launch-status.json.</div>'; return; }
-    const peso = (v) => '₱' + Number(v || 0).toLocaleString();
-    const days = (iso) => Math.ceil((new Date(iso) - Date.now()) / 864e5);
-    const when = (iso) => new Date(iso).toLocaleString('en', {timeZone: 'Asia/Manila', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
-    const tile = (label, v, sub) => `<div class="kpi"><span>${esc(label)}</span><b>${esc(String(v))}</b>${sub ? `<em>${esc(sub)}</em>` : ''}</div>`;
-    const c = Z.class, L = Z.leads || {}, bo = Z.boost || {}, fl = Z.free_live || {};
-    const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
-    const bizPosts = (B.schedule || []).filter((p) => p.date >= today && /class|coach|CLASS|COACH|Libre Muna|Sulit|TRAINING|Zoom|LIVE/i.test(`${p.title} ${p.tag || ''} ${p.note || ''}`)).slice(0, 7);
-    el.innerHTML = `
-      <div class="fg-scroll ins-col ins-top">
-        <h4>🎓 ${esc(c.name)}</h4>
-        <div class="ins-meta">${esc(when(c.date))} PHT · <b>${days(c.date)} days</b> left · ${c.confirmed ? 'confirmed' : '<span class="stale">date not confirmed</span>'}
-          · <a href="#" data-open-file="${esc(c.script || '')}">Class script</a></div>
-        <div class="kpi-row">${tile('Seats sold', `${c.sold}/${c.seats}`, `${peso(c.early_bird)} early · ${peso(c.price)}`)}${tile('Waitlist', c.waitlist)}${tile('Revenue', peso((c.sold || 0) * (c.price || 0)), 'at full price')}</div>
-        <div class="ins-meta">📺 ${esc(fl.name || '')} · ${fl.date ? esc(when(fl.date)) + ' PHT · ' + days(fl.date) + ' days' : ''} ${fl.confirmed ? '' : '· <span class="stale">not confirmed</span>'}</div>
-        <div class="kpi-row">${tile('CLASS comments', L.CLASS || 0)}${tile('COACH comments', L.COACH || 0)}${tile('1:1 hours booked', (Z.coaching || {}).booked_hours || 0, peso((Z.coaching || {}).price) + '/h')}${tile('Partners invited', `${L.partners_invited || 0}/${L.partners_target || 0}`)}</div>
-        <div class="ins-meta">💸 Boost ${esc(bo.month || '')}: ${peso(bo.spent)} of ${peso(bo.budget)} · Jeff boosts, only after 12–24 h organic proof · Updated ${esc(Z.updated || '')}
-          · <a href="#" data-open-file="${esc(Z.business_plan || '')}">Business plan</a> · <a href="${esc(Z.live_doc || '#')}" target="_blank" rel="noopener">Live doc</a></div>
-      </div>
-      <div class="fg-scroll ins-col ins-kpis">
-        <h4>⏳ Open for Jeff</h4>
-        <ul>${(Z.open || []).map((t) => `<li>${md(t)}</li>`).join('') || '<li>Nothing open 🎉</li>'}</ul>
-        <h4>🗓️ Launch posts · <a href="#" data-open-file="${esc(Z.plan || '')}">plan</a></h4>
-        <ul>${bizPosts.map((p) => `<li><b>${esc(p.date)}</b> ${esc(p.title)} <small>· ${esc(p.status)}</small></li>`).join('') || '<li>No launch posts in the calendar</li>'}</ul>
-      </div>
-      <div class="fg-scroll ins-col ins-posts">
-        <h4>Offer ladder · billed under ${esc(Z.company || '')}</h4>
-        <table><thead><tr><th>Offer</th><th>Price</th><th>Phase</th></tr></thead>
-        <tbody>${(Z.offers || []).map((o) => `<tr><td>${esc(o.name)}</td><td>${esc(o.price)}</td><td>${o.phase === 'Launch' ? '<b>Launch</b>' : esc(o.phase)}</td></tr>`).join('')}</tbody></table>
-      </div>`;
-  }
   async function loadInsights() { try { B.insights = await api('/api/insights'); renderInsights(); } catch {} }
   function renderInsights() {
     const I = B.insights, el = $('#insBody');
     if (!el || !I) return;
-    if (!I.metrics) { el.innerHTML = '<div class="hand-empty">No results yet. Ask Claude Code to pull Meta Business Suite + TikTok Studio into reports/data/.</div>'; return; }
-    const m = I.metrics, n = (v) => (v === undefined || v === null ? '–' : typeof v === 'number' ? v.toLocaleString() : esc(v));
-    const md = (t) => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`(.+?)`/g, '<code>$1</code>');
+    if (!I.metrics) { el.innerHTML = '<div class="hand-empty">No numbers yet. Ask Claude Code for a stats pull.</div>'; return; }
+    const m = I.metrics, has = (v) => v !== undefined && v !== null && v !== '';
+    const n = (v) => (!has(v) ? '–' : typeof v === 'number' ? v.toLocaleString() : esc(v));
     const age = Math.floor((Date.now() - new Date(I.date + 'T12:00:00+08:00')) / 864e5);
-    const tile = (label, v, d) => `<div class="kpi"><span>${label}</span><b>${n(v)}</b>${d ? `<em class="${String(d).startsWith('-') ? 'down' : 'up'}">${esc(d)}</em>` : ''}</div>`;
     const tt = m.tiktok_account_7d || {}, fb = m.meta_facebook_28d || {}, ig = m.meta_instagram_28d || {};
+    const tile = (label, v, d) => has(v) ? `<div class="kpi"><span>${label}</span><b>${n(v)}</b>${d ? `<em class="${String(d).startsWith('-') ? 'down' : 'up'}">${esc(d)}</em>` : ''}</div>` : '';
     const metaBy = Object.fromEntries((m.meta_posts_ig_fb_crossposted || []).map((p) => [p.post, p]));
-    const posts = (m.tiktok_posts || []).filter((p) => !p.pinned || metaBy[p.post]).slice(0, 6);
+    const posts = (m.tiktok_posts || []).filter((p) => !p.pinned).slice(0, 6);
     el.innerHTML = `
-      <div class="fg-scroll ins-col ins-top">
-        <div class="ins-meta">Pulled ${esc(I.date)}${age > 7 ? ` · <span class="stale">${age} days old, ask for a fresh pull</span>` : ''}
-          · <a href="#" data-open-file="${esc(I.report || '')}">Open report</a></div>
-        <ul>${I.topline.map((t) => `<li>${md(t)}</li>`).join('')}</ul>
-        ${I.boost ? `<p class="ins-boost"><span>Boost call</span> ${md(I.boost)}</p>` : ''}
-      </div>
       <div class="fg-scroll ins-col ins-kpis">
-        <h4>TikTok · 7 days <small>${esc(tt.window || '')}</small></h4>
-        <div class="kpi-row">${tile('Views', tt.video_views, tt.video_views_change)}${tile('Likes', tt.likes, tt.likes_change)}${tile('Shares', tt.shares)}${tile('New followers', tt.net_followers)}</div>
-        <h4>Facebook · 28 days <small>${esc(fb.window || '')}</small></h4>
-        <div class="kpi-row">${tile('Views', fb.views, fb.views_change)}${tile('Viewers', fb.viewers)}${tile('Interactions', fb.interactions)}${tile('New follows', fb.follows)}</div>
-        <h4>Instagram · 28 days</h4>
-        <div class="kpi-row">${tile('Views', ig.views)}${tile('Reach', ig.reach)}</div>
+        <div class="ins-meta">As of ${esc(I.date)}${age > 7 ? ` · <span class="stale">${age} days old</span>` : ''}</div>
+        <h4>TikTok · last 7 days</h4>
+        <div class="kpi-row">${tile('Views', tt.video_views, tt.video_views_change)}${tile('Likes', tt.likes)}${tile('Comments', tt.comments)}${tile('Shares', tt.shares)}${tile('New followers', tt.net_followers)}</div>
+        <h4>Instagram · last 28 days</h4>
+        <div class="kpi-row">${tile('Views', ig.views, ig.views_change)}${tile('Reach', ig.reach, ig.reach_change)}${tile('Interactions', ig.interactions, ig.interactions_change)}${tile('Profile visits', ig.visits)}</div>
+        <h4>Facebook · last 28 days</h4>
+        <div class="kpi-row">${tile('Views', fb.views, fb.views_change)}${tile('Viewers', fb.viewers)}${tile('Interactions', fb.interactions, fb.interactions_change)}${tile('New follows', fb.follows)}</div>
+        <div class="kpi-row">${tile('Leads', (m.business || {}).leads)}${tile('Seats sold', (m.business || {}).class_seats_sold)}</div>
       </div>
-      <div class="fg-scroll ins-col ins-posts">
-        <h4>Recent posts</h4>
-        <table><thead><tr><th>Post</th><th>TikTok views</th><th>TikTok likes</th><th>IG+FB views</th><th>IG+FB interactions</th></tr></thead>
-        <tbody>${posts.map((p) => { const mp = metaBy[p.post] || {}; return `<tr><td>${esc(p.post)}<small>${esc((p.date || '').slice(5, 10))}${p.pinned ? ' · pinned' : ''}</small></td><td>${n(p.views)}</td><td>${n(p.likes)}</td><td>${n(mp.views)}</td><td>${n(mp.interactions)}</td></tr>`; }).join('')}</tbody></table>
+      <div class="fg-scroll ins-col ins-posts" style="flex:2">
+        <h4>Per post</h4>
+        <table><thead><tr><th>Post</th><th>TikTok views</th><th>TikTok likes</th><th>IG+FB views</th><th>IG+FB comments</th><th>Avg watch</th></tr></thead>
+        <tbody>${posts.map((p) => { const mp = metaBy[p.post] || {}; return `<tr><td>${esc(p.post)}<small>${esc((p.date || '').slice(5, 10))}</small></td><td>${n(p.views)}</td><td>${n(p.likes)}</td><td>${n(mp.views)}</td><td>${n(mp.comments)}</td><td>${has(mp.avg_play_s) ? mp.avg_play_s + ' s' : '–'}</td></tr>`; }).join('')}</tbody></table>
       </div>`;
   }
 
@@ -340,6 +264,8 @@
       }
       if (id === 'tito-main') html += '<button class="fg-btn primary mt" data-goto-main>Open Tito AI chat</button>';
       if (id === 'flow') html += `<div class="fg-ph mt">How Claude Code makes clips</div><ol class="ins-ol"><li>Kuya Sulat writes <code>drafts/flow-prompts.md</code> (one 8s shot per prompt).</li><li>In Claude Code, ask: <i>Make the Flow clips for &lt;slot&gt;</i>. It drives Google Flow in your Tito AI Chrome profile (Veo 3.1 Lite, 9:16, x1, silent ON, approved chibi as Ingredient), then Gemini only after Flow credits run out.</li><li>Each clip lands in <code>handoff/flow/</code> with a same-name <code>.md</code> note. Drifted clips are rejected and regenerated.</li></ol><button class="fg-btn mt" data-copy-flow>Copy Flow prompt</button>`;
+      if (id === 'voice') html += '<p class="fg-muted">Claude Code makes the voiceover in Google AI Studio (free Gemini TTS, voice Finn, warm Filipino tito Taglish), checks every word, levels it to -14 LUFS and times the captions. Captions say "AI voice ang gamit dito." Your own recording replaces it whenever you send one.</p>';
+      if (id === 'screen-rec') html += '<p class="fg-muted">You record the real AI run (phone or Snagit) and send the file. Claude Code shows the whole window, uncropped, between moving chibi clips. Say "libre" only if it was a free account.</p>';
       if (id === 'claude') html += '<p class="fg-muted">Claude Code owns the finish: checks the chibi frames, places the file, writes captions, renders and sends it to Lola Suri.</p><button class="fg-btn primary mt" data-zoom="handoff">Open clip inbox</button>';
       if (id === 'final') html += '<p class="fg-muted">You approve only finished videos and posts. Everything before that flows on automatically.</p><button class="fg-btn primary mt" data-zoom="approve">Open approvals</button>';
       if (id === 'tito-researcher') html += '<p class="fg-muted">Returns a short task summary, not a long report. No approval needed.</p>';
@@ -536,7 +462,7 @@
     renderAll(); inspect(null);
     if (saved && saved.z) { B.view = saved; apply(); } else setTimeout(() => fit(['updates', 'flow']), 120);
     try { const bd = await api('/api/board'); B.notes = bd.notes || []; B.activity = bd.activity || []; renderNotes(); renderAll(); } catch {}
-    loadHandoffs(); loadSchedule(); loadInsights(); loadBiz();
+    loadHandoffs(); loadSchedule(); loadInsights();
     setInterval(loadInsights, 300000);
     setInterval(loadSchedule, 60000);
     const firstShow = !saved;

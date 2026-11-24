@@ -187,17 +187,18 @@ function board() {
       <div class="panel"><h3>✅ Your approvals · final only</h3>${approvals.map((p) => it(['📝', p.title, p.slot ? fmtSlot(p.slot) : p.series])).join('') || '<div class="empty">Nothing to approve. Research and scripts flow on; only final videos and posts land here.</div>'}</div>
     </div>
     <div class="panel mt"><h3>🗓️ Content calendar</h3>${calendarHtml()}</div>
-    <div class="panel mt"><h3>📊 Results · Tito Numero <span class="pill">Pulled ${esc(R.pulled || '–')}</span></h3>
-      <div class="kpis">${R.kpis.map(kpi).join('')}</div>
-      <ul class="topline">${R.topline.map((t) => `<li>${t}</li>`).join('')}</ul>
-      ${R.boost ? `<div class="boost"><span class="label">Boost call</span><div>${R.boost}</div></div>` : ''}
+    <div class="panel mt"><h3>📊 Numbers <span class="pill">As of ${esc(R.pulled || '–')}</span></h3>
+      <div class="kpis">${R.kpis.filter((k) => k.value !== null && k.value !== undefined).map(kpi).join('')}</div>
+    </div>
+    <div class="panel mt"><h3>📁 Reports <span class="pill">${(D.reports || []).length}</span></h3>
+      ${(D.reports || []).map((r) => `<div class="item"><span>${/stats|numbers/i.test(r.title) ? '📊' : '📄'}</span><div><b><a href="${esc((D.live ? '' : D.links.liveStudio) + r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></b><em>${esc(r.date)}</em></div></div>`).join('') || '<div class="empty">No reports yet.</div>'}
     </div>`;
 }
 function askBox() {
   return `<div class="panel mt ask"><h3>💬 Message Tito AI</h3>
     <div class="chips">${['What is the status now?', 'Start the plan for Part 4', 'What is waiting on my approval?', '/send', '/posts'].map((c) => `<button type="button" data-chip="${esc(c)}">${esc(c)}</button>`).join('')}</div>
     <textarea id="ask-text" rows="2" placeholder="e.g. Start the plan for Part 4 (Wed Nov 11)."></textarea>
-    <div class="row"><a class="send-ask" id="ask-send" href="${D.links.bot}" target="_blank" rel="noopener">Send to Tito AI</a><span class="meta" id="ask-note">Copies your message and opens @titoaiph_bot; paste and send. The reply comes back in Telegram. Needs the Studio running on your Mac.</span></div></div>`;
+    <div class="row"><a class="send-ask" id="ask-send" href="${D.links.bot}" target="_blank" rel="noopener">Send to Tito AI</a><span class="meta" id="ask-note">Copies your message and opens @titoai_ph_bot; paste and send. The reply comes back in Telegram. Needs the Studio running on your Mac.</span></div></div>`;
 }
 function calendarHtml() {
   return '<div class="cal">' + D.weeks.map((w) => `<div class="week"><div class="wk">${esc(w.week)}<small>${esc(w.range || '')}</small></div><div class="days">` +

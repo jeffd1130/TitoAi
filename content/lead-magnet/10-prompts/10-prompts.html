@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="fil">
+<head>
+<meta charset="utf-8">
+<title>10 Prompts: Plano ng Linggo · Tito AI</title>
+<style>
+@font-face { font-family: 'Bebas Neue'; src: url('BebasNeue-Regular.ttf'); }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+:root { --navy:#0A0F1E; --navy2:#16203A; --gold:#F59E0B; --teal:#0D9488; --coral:#F2545B; --ink:#1B2233; --muted:#5B6478; --paper:#FFFBF2; }
+html, body { margin:0; padding:0; background:#fff; color:var(--ink); font: 11.5pt/1.45 Arial, Helvetica, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width:210mm; height:297mm; position:relative; overflow:hidden; page-break-after:always; padding:16mm 16mm 14mm; }
+.page:last-child { page-break-after:auto; }
+h1,h2,.bebas { font-family:'Bebas Neue', Impact, sans-serif; font-weight:400; letter-spacing:.5px; margin:0; }
+
+/* cover */
+.cover { background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%); color:#fff; padding:18mm 16mm; }
+.cover .logo { height:16mm; }
+.cover h1 { font-size:76pt; line-height:.92; margin-top:20mm; }
+.cover h1 .g { color:var(--gold); }
+.cover .sub { font-size:15pt; margin-top:6mm; max-width:120mm; color:#E6E9F2; }
+.cover .chibi { position:absolute; right:8mm; bottom:28mm; height:120mm; }
+.cover .tools { position:absolute; left:16mm; bottom:44mm; display:flex; gap:3mm; flex-wrap:wrap; max-width:110mm; }
+.pill { font-family:'Bebas Neue', Impact, sans-serif; font-size:17pt; padding:1.5mm 5mm .5mm; border-radius:99px; color:#fff; }
+.cover .foot { position:absolute; left:16mm; bottom:16mm; font-size:10pt; color:#B8C0D6; }
+
+/* how-to */
+.how h2 { font-size:34pt; color:var(--navy); }
+.how ol { padding-left:6mm; margin:4mm 0 0; }
+.how li { margin:0 0 3mm; }
+.note { background:var(--paper); border-left:2mm solid var(--gold); border-radius:3mm; padding:4mm 5mm; margin-top:6mm; }
+.toc { margin-top:8mm; display:grid; grid-template-columns:1fr 1fr; gap:2.5mm 8mm; }
+.toc div { border-bottom:.3mm dotted #C9CEDA; padding-bottom:1.5mm; }
+.toc b { font-family:'Bebas Neue', Impact, sans-serif; font-weight:400; font-size:15pt; color:var(--gold); margin-right:2mm; }
+
+/* prompt cards */
+.hdr { display:flex; justify-content:space-between; align-items:center; border-bottom:.6mm solid var(--navy); padding-bottom:2.5mm; margin-bottom:5mm; }
+.hdr .bebas { font-size:15pt; color:var(--navy); }
+.hdr span { font-size:9pt; color:var(--muted); }
+.card { border:.4mm solid #E3E6EE; border-radius:4mm; padding:5mm 6mm; margin-bottom:5mm; break-inside:avoid; }
+.card .top { display:flex; align-items:baseline; gap:4mm; }
+.card .num { font-family:'Bebas Neue', Impact, sans-serif; font-size:40pt; line-height:.8; color:var(--gold); }
+.card h2 { font-size:24pt; color:var(--navy); line-height:1; }
+.who { font-size:9.5pt; color:#fff; display:inline-block; border-radius:99px; padding:.6mm 3mm; margin-top:1.5mm; }
+.prompt { background:var(--navy); color:#F3F5FA; border-radius:3mm; padding:4mm 5mm; margin:3.5mm 0 3mm; font: 10.8pt/1.5 'Courier New', Courier, monospace; white-space:pre-wrap; }
+.prompt .b { color:var(--gold); font-weight:700; }
+.tip { font-size:10pt; color:var(--muted); }
+.tip b { color:var(--ink); }
+.feat { font-size:9pt; color:var(--teal); font-weight:700; margin-left:auto; text-transform:uppercase; letter-spacing:.5px; }
+.pagefoot { position:absolute; left:16mm; right:16mm; bottom:9mm; display:flex; justify-content:space-between; font-size:8.5pt; color:var(--muted); }
+
+/* back */
+.back { background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%); color:#fff; }
+.back h2 { font-size:48pt; line-height:.95; margin-top:14mm; }
+.back h2 .g { color:var(--gold); }
+.back ul { font-size:12.5pt; padding-left:6mm; margin-top:6mm; max-width:120mm; }
+.back li { margin-bottom:3mm; }
+.back .chibi { position:absolute; right:6mm; bottom:20mm; height:110mm; }
+.back .cta { position:absolute; left:16mm; bottom:30mm; max-width:115mm; }
+.back .cta .bebas { font-size:28pt; color:var(--gold); }
+.back .small { font-size:9pt; color:#B8C0D6; margin-top:3mm; }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="page cover">
+  <img class="logo" src="w45-on-dark-logo.png" alt="Tito AI">
+  <h1>10 PROMPTS<br><span class="g">PLANO NG LINGGO</span></h1>
+  <div class="sub">Isang prompt, isang linggong plano. Para sa guro, BPO, may maliit na negosyo at pamilya.</div>
+  <div class="tools">
+    <span class="pill" style="background:var(--teal)">CHATGPT</span>
+    <span class="pill" style="background:var(--coral)">GEMINI</span>
+    <span class="pill" style="background:#5B3FD9">CLAUDE</span>
+  </div>
+  <img class="chibi" src="tito-ai-chibi-wave.png" alt="">
+  <div class="foot">Libreng gabay mula sa Tito AI · @tito.aiph · Gumagana sa libreng version ng ChatGPT, Gemini o Claude.</div>
+</section>
+
+<!-- 2 · HOW TO -->
+<section class="page how">
+  <div class="hdr"><div class="bebas">PAANO GAMITIN</div><span>Tito AI · 10 Prompts: Plano ng Linggo</span></div>
+  <h2>3 HAKBANG LANG, MGA PAMANGKIN</h2>
+  <ol>
+    <li><b>Copy</b> ang prompt.</li>
+    <li><b>Palitan</b> ang lahat ng nasa <span style="background:var(--navy);color:var(--gold);padding:0 1.5mm;border-radius:1mm;font-family:'Courier New',monospace;font-weight:700">[bracket]</span> ng sarili mong detalye. Mas malinaw ang input, mas maganda ang sagot.</li>
+    <li><b>Paste</b> sa ChatGPT, Gemini o Claude (libreng version ay pwede). Kung hindi pa tama, sabihin lang: "Paikliin mo," "Gawing mas pormal," o "Ulitin, mas simple."</li>
+  </ol>
+  <div class="note">
+    <b>Tatlong paalala:</b><br>
+    1. <b>Ikaw pa rin ang huling check.</b> Basahin bago i-send, i-print o i-post. Pwedeng magkamali ang AI.<br>
+    2. <b>Huwag maglagay ng private info</b>: password, buong account number, ID number, o pangalan at detalye ng customer o estudyante.<br>
+    3. <b>"Gamitin lang ang binigay ko, huwag mag-imbento."</b> Idagdag ito kapag ayaw mong may dagdag na impormasyon na hindi totoo.
+  </div>
+  <div class="toc">
+    <div><b>01</b>Ang prompt sa video</div>
+    <div><b>06</b>Weekly report sa boss</div>
+    <div><b>02</b>Gamitin sa kahit ano</div>
+    <div><b>07</b>Posts ng linggo (negosyo)</div>
+    <div><b>03</b>Lessons ng linggo (guro)</div>
+    <div><b>08</b>Promo ng linggo (negosyo)</div>
+    <div><b>04</b>Paperwork ng linggo (guro)</div>
+    <div><b>09</b>Apply ngayong linggo</div>
+    <div><b>05</b>Linggo sa trabaho (BPO)</div>
+    <div><b>10</b>Budget sa ulam</div>
+  </div>
+  <div class="pagefoot"><span>@tito.aiph</span><span>2</span></div>
+</section>
+
+<!-- 3 · 01–02 -->
+<section class="page">
+  <div class="hdr"><div class="bebas">PARA SA LAHAT</div><span>Tito AI · 10 Prompts: Plano ng Linggo</span></div>
+
+  <div class="card">
+    <div class="top"><div class="num">01</div><div><h2>ANG PROMPT SA VIDEO</h2><span class="who" style="background:var(--navy)">Ito ang ginamit ni Tito AI</span></div><div class="feat">Isang prompt, isang linggo</div></div>
+    <div class="prompt">Gumagawa ako ng content tungkol sa libreng AI para sa mga Pilipinong guro, BPO agents at may maliit na negosyo. Gawan mo ako ng plan para sa 3 posts ngayong linggo (Lunes, Miyerkules, Biyernes). Bawat post: para kanino, hook sa unang segundo, isang libreng AI tool, isang prompt na ipapakita, at call to action. Ilagay sa table. Simple at Taglish.</div>
+    <div class="tip"><b>Ang formula:</b> para kanino + ilan + anong araw + ano'ng kailangan sa bawat isa + "Ilagay sa table." Ganyan ang lahat ng prompt dito.</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><div class="num">02</div><div><h2>GAMITIN SA KAHIT ANO</h2><span class="who" style="background:var(--navy)">Para sa lahat</span></div></div>
+    <div class="prompt">Gumagawa ako ng <span class="b">[ano: posts / lessons / tasks]</span> para sa <span class="b">[sino]</span>. Gawan mo ako ng plan para sa <span class="b">[ilan]</span> ngayong linggo (<span class="b">[anong araw]</span>). Bawat isa: para kanino, ano'ng gagawin, ano'ng kailangan, at deadline. Ilagay sa table. Simple at Taglish.</div>
+    <div class="tip"><b>Tip:</b> Pagkatapos ng table, sabihin: "Gawin mo na ang una." Para may draft ka na agad.</div>
+  </div>
+  <div class="pagefoot"><span>@tito.aiph</span><span>3</span></div>
+</section>
+
+<!-- 4 · 03–04 -->
+<section class="page">
+  <div class="hdr"><div class="bebas">PARA SA GURO</div><span>Tito AI · 10 Prompts: Plano ng Linggo</span></div>
+
+  <div class="card">
+    <div class="top"><div class="num">03</div><div><h2>LESSONS NG LINGGO</h2><span class="who" style="background:var(--coral)">Guro</span></div></div>
+    <div class="prompt">Guro ako ng <span class="b">[subject]</span>, <span class="b">[grade]</span>. Gawan mo ako ng plan ng lessons para sa Lunes hanggang Biyernes tungkol sa <span class="b">[topic]</span>. Bawat araw: objective, activity na walang gastos, at maikling quiz. Ilagay sa table.</div>
+    <div class="tip"><b>Tip:</b> Kung may format ang school ninyo (hal. DLL), sabihin: "Sundin ang format na ito:" at i-paste ang headings.</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><div class="num">04</div><div><h2>PAPERWORK NG LINGGO</h2><span class="who" style="background:var(--coral)">Guro</span></div></div>
+    <div class="prompt">Guro ako at marami akong paperwork: <span class="b">[ilista, hal. grades, forms, report]</span>. Gawan mo ako ng plan para matapos ito ngayong linggo. Bawat isa: ano, gaano katagal, at anong araw. Ilagay sa table.</div>
+    <div class="tip"><b>Tip:</b> Sabihin din kung kailan ka may klase o meeting para hindi doon ilagay ang paperwork.</div>
+  </div>
+  <div class="pagefoot"><span>@tito.aiph</span><span>4</span></div>
+</section>
+
+<!-- 5 · 05–06 -->
+<section class="page">
+  <div class="hdr"><div class="bebas">PARA SA BPO</div><span>Tito AI · 10 Prompts: Plano ng Linggo</span></div>
+
+  <div class="card">
+    <div class="top"><div class="num">05</div><div><h2>LINGGO SA TRABAHO</h2><span class="who" style="background:#5B3FD9">BPO</span></div></div>
+    <div class="prompt">BPO agent ako, <span class="b">[shift]</span> ang pasok ko. Gawan mo ako ng plan para ngayong linggo: <span class="b">[mga gagawin, hal. training, report, coaching]</span>. Bawat isa: ano, kailan, at deadline. Ilagay sa table.</div>
+    <div class="tip"><b>Tip:</b> Idagdag ang rest days mo at sabihin: "Huwag maglagay ng gawain sa rest day ko."</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><div class="num">06</div><div><h2>WEEKLY REPORT SA BOSS</h2><span class="who" style="background:#5B3FD9">BPO · office staff</span></div></div>
+    <div class="prompt">Ito ang nagawa ko ngayong linggo: <span class="b">[i-paste ang notes]</span>. Gawan mo ako ng maikling weekly report: nagawa, problema, at plano sa susunod na linggo. Ilagay sa table. Gamitin lang ang binigay ko.</div>
+    <div class="tip"><b>Tip:</b> Tanggalin muna ang pangalan at account details ng customer bago i-paste. Sundin pa rin ang policy ng kumpanya ninyo.</div>
+  </div>
+  <div class="pagefoot"><span>@tito.aiph</span><span>5</span></div>
+</section>
+
+<!-- 6 · 07–08 -->
+<section class="page">
+  <div class="hdr"><div class="bebas">PARA SA NEGOSYO</div><span>Tito AI · 10 Prompts: Plano ng Linggo</span></div>
+
+  <div class="card">
+    <div class="top"><div class="num">07</div><div><h2>POSTS NG LINGGO</h2><span class="who" style="background:var(--gold);color:var(--navy)">May maliit na negosyo</span></div></div>
+    <div class="prompt">May <span class="b">[negosyo]</span> ako para sa <span class="b">[sino ang bumibili]</span>. Gawan mo ako ng plan para sa 3 Facebook posts ngayong linggo. Bawat post: hook, ano'ng ipo-promote, at "paano umorder." Ilagay sa table. Taglish.</div>
+    <div class="tip"><b>Tip:</b> Pumili ng isang row, tapos sabihin: "Isulat mo na ang buong post na ito."</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><div class="num">08</div><div><h2>PROMO NG LINGGO</h2><span class="who" style="background:var(--gold);color:var(--navy)">May maliit na negosyo</span></div></div>
+    <div class="prompt">May promo ako: <span class="b">[produkto]</span>, <span class="b">[presyo]</span>, hanggang <span class="b">[petsa]</span>. Gawan mo ako ng plan para ngayong linggo para mabenta ito. Bawat araw: gagawin, saan ipo-post, at sino ang target. Ilagay sa table.</div>
+    <div class="tip"><b>Tip:</b> Idagdag: "Huwag gumawa ng claim na wala sa binigay ko." Para walang maling presyo o pangako.</div>
+  </div>
+  <div class="pagefoot"><span>@tito.aiph</span><span>6</span></div>
+</section>
+
+<!-- 7 · 09–10 -->
+<section class="page">
+  <div class="hdr"><div class="bebas">TRABAHO AT PAMILYA</div><span>Tito AI · 10 Prompts: Plano ng Linggo</span></div>
+
+  <div class="card">
+    <div class="top"><div class="num">09</div><div><h2>APPLY NGAYONG LINGGO</h2><span class="who" style="background:var(--teal)">Naghahanap ng trabaho</span></div></div>
+    <div class="prompt">Naghahanap ako ng trabaho bilang <span class="b">[posisyon]</span>. Gawan mo ako ng plan para ngayong linggo: ayusin ang resume, mag-apply, at mag-practice ng interview. Bawat araw: gagawin at gaano katagal. Ilagay sa table.</div>
+    <div class="tip"><b>Tip:</b> Sunod na tanong: "Bigyan mo ako ng 5 interview question para sa [posisyon] at sample na sagot."</div>
+  </div>
+
+  <div class="card">
+    <div class="top"><div class="num">10</div><div><h2>BUDGET SA ULAM</h2><span class="who" style="background:var(--teal)">Para sa pamilya</span></div></div>
+    <div class="prompt">May ₱<span class="b">[halaga]</span> ako para sa ulam ng <span class="b">[ilan]</span> tao ngayong linggo. Gawan mo ako ng plan para sa Lunes hanggang Linggo. Bawat araw: ulam, mga bibilhin, at tantyang gastos. Ilagay sa table. Simple lang.</div>
+    <div class="tip"><b>Tip:</b> Tantya lang ang presyo ng AI. I-check pa rin sa palengke o grocery na malapit sa'yo.</div>
+  </div>
+  <div class="pagefoot"><span>@tito.aiph</span><span>7</span></div>
+</section>
+
+<!-- 8 · BACK -->
+<section class="page back">
+  <img class="logo" style="height:14mm" src="w45-on-dark-logo.png" alt="Tito AI">
+  <h2>TANDAAN,<br><span class="g">MGA PAMANGKIN</span></h2>
+  <ul>
+    <li>Ikaw pa rin ang huling check. Basahin bago i-send.</li>
+    <li>Walang password, account number o private info sa prompt.</li>
+    <li>Mas malinaw ang [bracket], mas maganda ang sagot.</li>
+    <li>Hindi tama sa unang try? Sabihin kung ano ang aayusin. Normal 'yan.</li>
+  </ul>
+  <div class="cta">
+    <div class="bebas">MAY TANONG? I-COMMENT LANG.</div>
+    <div>Follow <b>@tito.aiph</b> sa TikTok, Instagram at Facebook para sa bagong prompt tuwing Lunes, Miyerkules at Biyernes.</div>
+    <div class="small">Libreng gabay. Pwedeng magbago ang features at limits ng mga libreng AI tool.</div>
+  </div>
+  <img class="chibi" src="tito-ai-chibi-teach.png" alt="">
+</section>
+
+</body>
+</html>

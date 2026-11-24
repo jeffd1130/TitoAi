@@ -1,0 +1,154 @@
+{
+ "pulled": "2026-11-18",
+ "pulled_by": "Claude Code (TikTok Studio + Meta Business Suite in Jeff's Angelcare Chrome profile; public IG/TikTok profiles)",
+ "sources": [
+  "tiktok.com/tiktokstudio/analytics",
+  "business.facebook.com insights overview + home",
+  "tiktok.com/@tito.aiph",
+  "instagram.com/tito.aiph"
+ ],
+ "tiktok_account_7d": {
+  "window": "Nov 10-16, 2026",
+  "video_views": 455,
+  "video_views_change": "+4.6%",
+  "profile_views": 2,
+  "likes": 4,
+  "likes_change": "+33.3%",
+  "comments": 1,
+  "shares": 0,
+  "net_followers": 1,
+  "total_followers": 1012,
+  "total_likes": 1168,
+  "traffic": {
+   "for_you": "71.9%",
+   "search": "26.6%"
+  },
+  "audience": {
+   "male": "87%",
+   "female": "13%",
+   "age_25_34": "33.6%",
+   "age_18_24": "27.2%",
+   "philippines": "62.7%",
+   "other_countries": "37.3%"
+  },
+  "most_active": "6 AM"
+ },
+ "tiktok_posts": [
+  {
+   "post": "Origin Part 5",
+   "date": "2026-11-13",
+   "views": 95
+  },
+  {
+   "post": "Origin Part 4",
+   "date": "2026-11-11",
+   "views": 90
+  },
+  {
+   "post": "Origin Part 3",
+   "date": "2026-11-09",
+   "views": 93
+  },
+  {
+   "post": "Origin Part 1",
+   "date": "2026-11-04",
+   "views": 141,
+   "pinned": true
+  },
+  {
+   "post": "Buy 1 Take 1 (carousel)",
+   "date": "2026-11-16",
+   "views": 178
+  },
+  {
+   "post": "Resume + cover letter in 5 min",
+   "views": 1122,
+   "pinned": true
+  },
+  {
+   "post": "ChatGPT Study mode",
+   "views": 907
+  },
+  {
+   "post": "Gemini one-fact test",
+   "views": 740
+  },
+  {
+   "post": "Don't paste passwords/IDs",
+   "views": 558
+  },
+  {
+   "post": "Remove names before pasting",
+   "views": 536
+  },
+  {
+   "post": "VA/freelancer intro",
+   "views": 518
+  }
+ ],
+ "meta_facebook_28d": {
+  "window": "Oct 20 - Nov 16, 2026",
+  "views": "1.6K",
+  "views_change": "+36.4%",
+  "viewers": 1386,
+  "from_non_followers": "96.7%",
+  "three_sec_views": 277,
+  "watch_time": "1h 1m",
+  "net_follows": 2,
+  "page_visits": 23,
+  "interactions": 19,
+  "conversations": 0,
+  "leads": 0,
+  "followers": 28
+ },
+ "meta_instagram": {
+  "followers": 93,
+  "posts": 79,
+  "reach_last_week": 121
+ },
+ "meta_posts_ig_fb_crossposted": [
+  {
+   "post": "Buy 1 Take 1",
+   "date": "2026-11-16",
+   "views": 21
+  },
+  {
+   "post": "Origin Part 5",
+   "date": "2026-11-13",
+   "views": 219
+  },
+  {
+   "post": "Origin Part 4",
+   "date": "2026-11-11",
+   "views": 226
+  },
+  {
+   "post": "Origin Part 3",
+   "date": "2026-11-09",
+   "views": 226
+  },
+  {
+   "post": "Origin Part 2",
+   "date": "2026-11-06",
+   "views": 236
+  },
+  {
+   "post": "Origin Part 1",
+   "date": "2026-11-04",
+   "views": 229,
+   "interactions": 10
+  }
+ ],
+ "business": {
+  "class_seats_sold": 0,
+  "waitlist": 0,
+  "CLASS": 0,
+  "COACH": 0,
+  "messages": 0,
+  "leads": 0
+ },
+ "not_found": [
+  "IG per-post plays",
+  "TikTok avg watch time per post (needs per-post View data)"
+ ]
+}

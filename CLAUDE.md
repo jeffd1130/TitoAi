@@ -166,6 +166,12 @@ Standing insights (evidence in `reports/history-2026.md`):
 | `tito-create.py` | D-2 creation reminder | 9:00 AM Sat / Mon / Wed |
 | `tito-weekly.py` | Saturday production overview | 9:00 AM Sat |
 | `tito-remind.py` | Post-day checklist | 7:00 PM Mon / Wed / Fri |
+| `tito-background.py trends` | 🔎 Tita Saliksik daily trend scan → `content/research/trends/<date>.md` (AI news, similar-niche creators, PH trends for our targets, 3 ideas) | 6:00 AM daily |
+| `tito-background.py sales` | 💼 Tito Benta: pipeline + reply drafts → `content/business/sales/pipeline.md` | 9:00 AM Mon |
+| `tito-background.py numbers` | 📊 Tito Numero: repo-data numbers check → `reports/<date>-numbers-check.md` | 8:00 AM Tue |
+| `tito-background.py bizdev` | 🤝 Ate Kasosyo: 5 partner targets + outreach drafts → `content/business/bizdev/partners.md` | 9:00 AM Wed |
+
+**Background agents (Jeff, Nov 24):** the four `tito-background.py` jobs start Studio runs (they show under Agent activity, drafts only, Jeff sends). The business lane (Tito Benta, Ate Kasosyo, Tito Numero, "Jeff sends") was removed from the board's workflow diagram; those agents run in the background. Writers (Kuya Sulat) and Tito AI chat should use the newest trends file when planning. Needs the Mac awake and the Studio running.
 
 ---
 

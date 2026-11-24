@@ -284,7 +284,7 @@ def main() -> None:
                     continue
 
                 text = (msg.get("text") or "").strip()
-                # Strip bot username suffix (e.g. /help@titoaiph_bot)
+                # Strip bot username suffix (e.g. /help@titoai_ph_bot)
                 command = text.split("@")[0].split()[0].lower() if text else ""
 
                 log.info("Received command: %r", command)
