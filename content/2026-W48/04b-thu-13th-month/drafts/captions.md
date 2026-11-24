@@ -1,4 +1,4 @@
-**Video:** docs/media/w48-thu-13th-month/ (to render after Jeff's free-Gemini recording)
+**Video:** docs/media/w48-thu-13th-month/thirteenth-reel-v1.mp4 (46.1 s). Jeff's Gemini recording, Nov 24, work Google account: no "libre" claim about this run; captions suggest the free versions.
 **Voice:** Gemini TTS free voice Finn (AI voice). Turn on TikTok's "AI-generated content" label.
 **Post:** Thu Nov 26, 7:00 PM PHT (Thu 3:00 AM PST)
 

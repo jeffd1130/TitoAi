@@ -10,6 +10,7 @@ import { ClaudePlanReel2Composition } from "./ClaudePlanReel2";
 import { MonResumeReelComposition } from "./MonResumeReel";
 import { WedQuizReelComposition } from "./WedQuizReel";
 import { WedQuizReelV2Composition } from "./WedQuizReelV2";
+import { ThuThirteenthReelComposition } from "./ThuThirteenthReel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ export const RemotionRoot: React.FC = () => {
       <WedQuizReelComposition />
       <WedQuizReelV2Composition />
       <TitoCarousel />
+      <ThuThirteenthReelComposition />
     </>
   );
 };

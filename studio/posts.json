@@ -76,6 +76,20 @@
     }
   },
   {
+    "id": "w48-thu-13th-month",
+    "title": "W48 Thu · 13th Month Mo, Saan Mapupunta? (Gemini)",
+    "series": "W48 · Thursday 7:00 PM PHT · reel · 13th month",
+    "slot": "2026-11-26T19:00",
+    "type": "video",
+    "media": [
+      "docs/media/w48-thu-13th-month/thirteenth-reel-v1.mp4"
+    ],
+    "cover": "docs/media/w48-thu-13th-month/thirteenth-reel-v1-cover.jpg",
+    "captions": {
+      "file": "content/2026-W48/04b-thu-13th-month/drafts/captions.md"
+    }
+  },
+  {
     "id": "w48-sat-scam-slides",
     "title": "W48 Sat · Peke ba ang Video? PhilHealth Cash Payout (slides)",
     "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check + free live",

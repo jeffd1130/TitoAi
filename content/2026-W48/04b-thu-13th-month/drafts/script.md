@@ -19,3 +19,6 @@ Word check with mlx-whisper not done yet (not installed; install was blocked). L
 
 ## Edit notes
 Template WedQuizReelV2 (v2 hook rules): headline + voice on frame 0, readable zoom of the result in the first second, no greeting, moving chibi only after 0:03. "AI VOICE" badge, "Sample na numbers" label, -14 LUFS. Show Jeff before finalizing.
+
+## v1 render (Nov 24)
+Jeff's recording `/Users/jeff/Pictures/Snagit/2026-11-24_20-40-08.mp4` (work account: "Your organization's chats…" notice) → voice re-done without "libreng" and with Jeff's actual result (option 2 = ₱9,500 ipon; option 3 = ₱9,000, walang regalo; all = ₱18,000). Old voice kept as `raw/voice-finn-libre*.wav`. Caption timing from pause detection (no whisper). Source `w44-friday-motion-sample/src/ThuThirteenthReel.tsx`; render `docs/media/w48-thu-13th-month/thirteenth-reel-v1.mp4` (46.1 s, -14.3 LUFS).
