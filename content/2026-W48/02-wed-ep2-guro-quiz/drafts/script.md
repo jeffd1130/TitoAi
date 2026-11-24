@@ -28,3 +28,10 @@ Hook: `fri-chibi-surprised.mp4` (from 2 s). "Mula lang sa text": `fri-chibi-poin
 
 ## Edit notes
 Whole screen window, no crop or zoom; pick moments that aren't mid-scroll. Captions timed to the word timings. -14 LUFS. "AI VOICE" badge. Label the sample as sample.
+
+## v2 hook (Nov 24, Jeff asked for a better first 3 s; waiting on his approval)
+- Frame 0: headline "GURO? / QUIZ + ANSWER KEY / SA 1 MINUTO" and voice start together (no fade-in).
+- Hook screen is a readable zoom of the original Gemini recording (`/Users/jeff/Pictures/Snagit/2026-11-21_08-57-33.mp4`, 33.7–38.3 s, crop 740×370 at 360,140); "Correct answer" pops at 0.8 s.
+- "Kumusta, mga Pamangkin!" greeting cut (voice 4.6–6.85 s removed; the cut falls in silence between words).
+- Screen label shortened to "Gemini · sample na lesson".
+- Source: `w44-friday-motion-sample/src/WedQuizReelV2.tsx`; render `docs/media/w48-wed-ep2-guro-quiz/quiz-reel-v2.mp4` (40.8 s, -14 LUFS).

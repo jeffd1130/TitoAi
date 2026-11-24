@@ -4,7 +4,7 @@
 
 **TikTok**
 
-Paano sumagot sa galit na customer gamit ang AI, kalmado at propesyonal. Paid ChatGPT ang gamit ko dito, pero pwede mo rin itong subukan sa ChatGPT, Gemini o Claude. (Sample message lang.) Comment PROMPT 👇 Follow para sa susunod na episode. (AI voice ang gamit dito.)
+Paano sumagot sa galit na customer gamit ang AI, kalmado at propesyonal. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang.) Comment PROMPT 👇 Follow para sa susunod na episode. (AI voice ang gamit dito.)
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #CustomerService #BPOLife
 
@@ -12,7 +12,7 @@ Paano sumagot sa galit na customer gamit ang AI, kalmado at propesyonal. Paid Ch
 
 Galit si customer? Kalmado ka.
 
-I-paste ang mensahe sa ChatGPT at sabihin: mag-sorry, ipaliwanag ang susunod na hakbang, huwag mangako ng hindi kaya. Lagyan ng totoong detalye bago i-send. Paid ChatGPT ang gamit ko dito, pero pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang sa video.)
+I-paste ang mensahe sa ChatGPT at sabihin: mag-sorry, ipaliwanag ang susunod na hakbang, huwag mangako ng hindi kaya. Lagyan ng totoong detalye bago i-send. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang sa video.)
 
 Gusto mo ang buong prompt + 9 pa? Comment PROMPT 👇 Follow para sa susunod na episode. (AI voice ang gamit dito.)
 
@@ -22,7 +22,7 @@ Gusto mo ang buong prompt + 9 pa? Comment PROMPT 👇 Follow para sa susunod na 
 
 Galit si customer? Ito ang sagot na hindi ka mapapahiya.
 
-I-paste ang mensahe niya sa ChatGPT, tapos sabihin: "Gumawa ng kalmadong sagot: mag-sorry, ipaliwanag ang susunod na hakbang, huwag mangako ng hindi kaya." Lagyan mo ng totoong detalye bago i-send. Para sa BPO, online seller, o kahit sino na humaharap sa customer. Paid ChatGPT ang gamit ko dito, pero pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang sa video.)
+I-paste ang mensahe niya sa ChatGPT, tapos sabihin: "Gumawa ng kalmadong sagot: mag-sorry, ipaliwanag ang susunod na hakbang, huwag mangako ng hindi kaya." Lagyan mo ng totoong detalye bago i-send. Para sa BPO, online seller, o kahit sino na humaharap sa customer. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang sa video.)
 
 Gusto mo ang buong prompt + 9 pa? Comment PROMPT, ipapadala ko 👇 (AI voice ang gamit sa video na ito.)
 
