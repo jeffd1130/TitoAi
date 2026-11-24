@@ -57,6 +57,25 @@
     }
   },
   {
+    "id": "w48-thu-guro-slides",
+    "title": "W48 Thu · Guro: Quiz + Answer Key sa 1 Minuto (slides)",
+    "series": "W48 · Thursday 7:00 AM PHT · carousel · companion to EP2 (morning test)",
+    "slot": "2026-11-26T07:00",
+    "type": "carousel",
+    "media": [
+      "content/2026-W48/04-thu-guro-slides/drafts/slides/s1.png",
+      "content/2026-W48/04-thu-guro-slides/drafts/slides/s2.png",
+      "content/2026-W48/04-thu-guro-slides/drafts/slides/s3.png",
+      "content/2026-W48/04-thu-guro-slides/drafts/slides/s4.png",
+      "content/2026-W48/04-thu-guro-slides/drafts/slides/s5.png",
+      "content/2026-W48/04-thu-guro-slides/drafts/slides/s6.png"
+    ],
+    "cover": "content/2026-W48/04-thu-guro-slides/drafts/slides/s1.png",
+    "captions": {
+      "file": "content/2026-W48/04-thu-guro-slides/drafts/captions.md"
+    }
+  },
+  {
     "id": "2026-w46-01-mon-ai-tip",
     "title": "W49 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
     "series": "W47 · Monday 8:00 PM PHT",

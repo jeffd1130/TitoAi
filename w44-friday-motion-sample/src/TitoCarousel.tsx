@@ -1,4 +1,13 @@
-import {AbsoluteFill, Composition, Img, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Composition, Img, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
+
+// Bebas Neue for headlines (brand display font). Wait for it before the still is captured.
+const bebasHandle = typeof window !== 'undefined' ? delayRender('Bebas Neue') : null;
+if (typeof window !== 'undefined') {
+  const ff = new FontFace('Bebas Neue', `url(${staticFile('fri/BebasNeue-Regular.ttf')})`);
+  ff.load().then((f) => { document.fonts.add(f); if (bebasHandle !== null) continueRender(bebasHandle); })
+    .catch(() => { if (bebasHandle !== null) continueRender(bebasHandle); });
+}
+const display = "'Bebas Neue', Arial Black, sans-serif";
 
 // Tito AI carousel slides (1080×1350). Frame N renders slide N, so each slide is one `remotion still`.
 // Spec format: studio/carousel-schema.md. Pilot palette: cream / marigold / navy text, teal + coral accents.
@@ -14,6 +23,8 @@ type Slide = {
   cta?: string;
   chibi?: 'wave' | 'teach' | 'surprised' | 'wave-screen' | 'none';
   label?: string;
+  image?: string; // real screenshot in public/, shown in a framed card
+  imageLabel?: string; // small tag on the screenshot, e.g. "Totoong Gemini output"
 };
 export type CarouselSpec = {title?: string; slides: Slide[]};
 
@@ -31,7 +42,7 @@ const THEMES = {
 };
 
 // Shrink long headlines so they never overflow.
-const headlineSize = (s = '') => (s.length > 60 ? 64 : s.length > 40 ? 76 : s.length > 24 ? 88 : 104);
+const headlineSize = (s = '') => (s.length > 60 ? 84 : s.length > 40 ? 100 : s.length > 24 ? 116 : 136);
 
 const SlideView = ({slide, index, total}: {slide: Slide; index: number; total: number}) => {
   const t = THEMES[slide.bg || 'cream'] || THEMES.cream;
@@ -44,7 +55,7 @@ const SlideView = ({slide, index, total}: {slide: Slide; index: number; total: n
 
     <div style={{position: 'absolute', left: 80, right: textRight, top: 88, display: 'flex', flexDirection: 'column', gap: 26}}>
       {slide.kicker ? <div style={{alignSelf: 'flex-start', border: `3px solid ${t.accent}`, color: t.accent, borderRadius: 999, padding: '8px 20px', font: `900 26px ${font}`, letterSpacing: 2}}>{slide.kicker}</div> : null}
-      {slide.headline ? <div style={{font: `900 ${headlineSize(slide.headline)}px/0.98 ${font}`, letterSpacing: -1.5, textTransform: 'uppercase'}}>
+      {slide.headline ? <div style={{font: `400 ${headlineSize(slide.headline)}px/0.95 ${display}`, letterSpacing: 1, textTransform: 'uppercase'}}>
         {slide.headline}
         {slide.highlight ? <div style={{color: slide.bg === 'marigold' ? teal : slide.bg === 'navy' ? marigold : coral, marginTop: 6}}>{slide.highlight}</div> : null}
       </div> : null}
@@ -56,9 +67,13 @@ const SlideView = ({slide, index, total}: {slide: Slide; index: number; total: n
           <div style={{font: `700 38px/1.28 ${font}`, paddingTop: 6}}>{item}</div>
         </div>)}
       </div> : null}
-      {slide.prompt ? <div style={{backgroundColor: '#FFFFFF', color: navy, border: `4px solid ${teal}`, borderRadius: 28, padding: '28px 32px', whiteSpace: 'pre-wrap', font: `600 ${slide.prompt.length > 260 ? 28 : 33}px/1.4 ${font}`, boxShadow: '0 14px 40px #0A0F1E22'}}>
+      {slide.prompt ? <div style={{backgroundColor: '#FFFFFF', color: navy, border: `4px solid ${teal}`, borderRadius: 28, padding: '28px 32px', whiteSpace: 'pre-wrap', font: `600 ${slide.prompt.length > 260 ? 30 : 40}px/1.4 ${font}`, boxShadow: '0 14px 40px #0A0F1E22'}}>
         <div style={{font: `900 22px ${font}`, color: teal, letterSpacing: 2, marginBottom: 12}}>COPY THIS PROMPT</div>
         {slide.prompt}
+      </div> : null}
+      {slide.image ? <div style={{position: 'relative', borderRadius: 26, overflow: 'hidden', border: `5px solid ${slide.bg === 'navy' ? marigold : navy}`, boxShadow: '0 18px 44px #0A0F1E40'}}>
+        <Img src={staticFile(slide.image)} style={{display: "block", width: "100%", maxHeight: 520, objectFit: "cover", objectPosition: "top"}} />
+        {slide.imageLabel ? <div style={{position: 'absolute', right: 14, top: 14, backgroundColor: marigold, color: navy, borderRadius: 999, padding: '6px 16px', font: `800 22px ${font}`}}>{slide.imageLabel}</div> : null}
       </div> : null}
       {slide.cta ? <div style={{alignSelf: 'flex-start', backgroundColor: teal, color: cream, borderRadius: 999, padding: '22px 38px', font: `900 40px ${font}`, boxShadow: '0 12px 30px #0A0F1E33'}}>{slide.cta}</div> : null}
     </div>

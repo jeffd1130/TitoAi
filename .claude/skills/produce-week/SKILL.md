@@ -1,6 +1,6 @@
 # produce-week
 
-Produce ALL remaining drafts for the current ISO week. Runs all 3 slots in parallel.
+Produce ALL remaining drafts for the current ISO week: the Mon/Wed/Fri videos plus the Tue/Thu/Sat companion slides (see CLAUDE.md, "Tue/Thu/Sat companion slides").
 
 ## Trigger phrases
 "produce this week", "make all posts", "run the week", "produce W##"
@@ -12,7 +12,8 @@ Produce ALL remaining drafts for the current ISO week. Runs all 3 slots in paral
 2. **Check which slots still need drafts:**
    - A slot needs work if `content/<week>/<slot>/drafts/captions.md` or its slides/video is missing.
 
-3. **Run slots in parallel** — spawn 3 concurrent agents, one per slot, each running `produce-post` for their slot. Do NOT run sequentially.
+3. **Run the Mon/Wed/Fri slots in parallel** — one agent per slot, each running `produce-post`.
+   Then make each Tue/Thu/Sat slides slot from the finished video before it (same topic, real proof screenshots from the recording, exact prompt). A slides slot can't start until its video's script and recording exist.
 
 4. **Wait for all agents to complete.**
 

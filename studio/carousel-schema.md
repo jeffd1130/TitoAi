@@ -37,6 +37,8 @@ Save it as `content/<YYYY-W##>/<slot>/drafts/carousel.json`. Write the captions 
 - `prompt`: a prompt shown in a white "copy this" card. It must be exactly the prompt from the script.
 - `cta`: one call-to-action button (use it on the last slide only).
 - `chibi`: `wave`, `teach`, `surprised`, `wave-screen` or `none`. Vary the pose per slide.
+- `image`: a real screenshot in `w44-friday-motion-sample/public/` (e.g. `thu/proof-q2.png`), shown in a framed card. Real output only.
+- `imageLabel`: a small tag on the screenshot, e.g. "Totoong Gemini output" or "Sample na lesson".
 - `label`: a small tag such as "Fictional practice example" or "Illustration". It's required whenever a scenario is fictional.
 
 ## Rules

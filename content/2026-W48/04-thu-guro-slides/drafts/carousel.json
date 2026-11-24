@@ -1,0 +1,60 @@
+{
+  "title": "W48 Thu · Guro: Quiz + Answer Key sa 1 Minuto (slides)",
+  "series": "W48 · Thursday 7:00 AM PHT (morning test) · companion to EP2",
+  "captions": "content/2026-W48/04-thu-guro-slides/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "navy",
+      "kicker": "PARA SA MGA GURO",
+      "headline": "Quiz + answer key",
+      "highlight": "sa 1 minuto",
+      "image": "thu/proof-q2.png",
+      "imageLabel": "Totoong Gemini output",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "STEP 1",
+      "headline": "I-paste ang lesson mo",
+      "body": "Kopyahin ang lesson mula sa module o libro. Isang topic lang muna, para malinaw ang quiz.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "STEP 2",
+      "headline": "I-paste itong prompt",
+      "prompt": "Gumawa ng 10-item multiple choice quiz mula lang sa text na ito: [i-paste ang lesson]. Lagyan ng answer key. Grade 5 level.",
+      "body": "Palitan ang grade level kung kailangan.",
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "ANG SIKRETO",
+      "headline": "\"Mula lang sa text\"",
+      "body": "Para hindi mag-imbento ang AI. Ang tanong at sagot, galing lang sa lesson mo.",
+      "image": "thu/proof-q4.png",
+      "imageLabel": "Sample na lesson",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "STEP 3",
+      "headline": "Basahin bago i-print",
+      "list": [
+        "Tama ba ang answer key?",
+        "Akma ba sa grade level?",
+        "May malabong tanong? Palitan."
+      ],
+      "body": "Ikaw pa rin ang guro.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "navy",
+      "headline": "I-save mo ito",
+      "highlight": "para sa susunod na quiz",
+      "body": "Gusto mo ang prompt para sa lesson plan? I-comment ang GURO, ipapadala ko.",
+      "cta": "Comment GURO 👇",
+      "chibi": "wave"
+    }
+  ]
+}
