@@ -1043,11 +1043,12 @@
           "day": "FRI",
           "title": "Isang Prompt, Isang Linggong Plano (Claude) · comment PROMPT",
           "tag": "Story reel · Claude free · Tito AI as example",
-          "note": "Brief: content/2026-W47/03b-fri-claude-story/brief.md. CTA: comment CLASS. Anak/assignment story moved to W49 Fri. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md.",
+          "note": "Brief: content/2026-W47/03b-fri-claude-story/brief.md. CTA: comment CLASS. Anak/assignment story moved to W49 Fri. Business launch re-plan (Jeff, Nov 9): content/strategy/2026-11-09-business-launch-content-plan.md. Posted Fri Nov 20: TikTok 7:30 PM, IG/FB cross-post + story 7:34 PM PHT. Results (72 h): TikTok 166 views (+15% vs last 5, stalled since day 1), avg watch 5.0 s, 39% at 0:02, 1 PROMPT comment, 1 follow; IG+FB 69 views, 10% 3-sec, 4 comments, 0 follows. Boost gate not met. Report: reports/posts/w47-fri-claude-plan.md",
           "date": "Nov 20",
-          "status": "ready",
+          "status": "posted",
           "url": null,
-          "boost": null
+          "boost": null,
+          "posted": "TikTok 7:30 PM · IG/FB 7:34 PM"
         },
         {
           "day": "SAT",

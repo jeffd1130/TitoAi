@@ -1,0 +1,32 @@
+{
+  "post_id": "w47-fri-claude-plan",
+  "title": "Isang Prompt, Isang Linggong Plano (Claude)",
+  "posted": {"tiktok": "2026-11-20T19:30+08:00", "facebook_instagram_crosspost": "2026-11-20T19:34+08:00"},
+  "pulled": "2026-11-24T19:55+08:00",
+  "hours_live": 96,
+  "checkpoint": "72h",
+  "video": "docs/media/w47-fri-claude-plan/claude-plan-reel-v3.mp4",
+  "tiktok": {
+    "url": "https://www.tiktok.com/@tito.aiph/video/7710214660204629268",
+    "views": 166, "likes": 6, "comments": 3, "comments_note": "1 PROMPT (johndeere195), 1 Tito AI reply, 1 Tito AI seed (posted ~1 day ago)", "shares": 0, "saves": 0,
+    "total_play_time": "0h18m18s", "avg_watch_s": 5.01, "watched_full_pct": 2.3, "new_followers": 1,
+    "retention_pct": {"0:00": 100, "0:02": 39, "0:06": 16, "0:18": 6},
+    "most_viewers_left_at": "0:01",
+    "views_trend": "166 on Nov 23 and 166 on Nov 24; nearly all views Nov 20-21",
+    "traffic": {"for_you": 96.7, "personal_profile": 1.4, "search": 1.4, "direct_messages": 0.5, "following": "<0.1", "sound": "<0.1", "other": "<0.1"},
+    "search_queries": {"ai prompt for tito and pamangkin": 33.3, "prompt ai gemini": 33.3, "tito and pamangkin ai gemini": 33.3},
+    "viewers": {"total": 197, "new_pct": 54, "returning_pct": 46, "non_followers_pct": 100,
+      "age": {"18-24": 36, "25-34": 53, "35-44": 7, "45-54": 3, "55+": 1},
+      "gender": {"male": 80, "female": 19, "other": 1},
+      "location": {"Philippines": 99.0, "Finland": "<1", "Malta": "<1"}},
+    "pinned": true
+  },
+  "facebook_instagram_reel_combined": {
+    "date_range_note": "Meta insights range Oct 27 - Nov 23, 2026",
+    "views": 69, "reach": null, "viewers": 48, "interactions": 8, "likes": 2, "comments": 4, "shares": 0, "saves": 0, "link_clicks": 0, "replies": null, "follows": 0,
+    "watch_time_raw": "134,663 (ms, about 2m 15s)", "avg_play_s": 3, "three_sec_views": 7
+  },
+  "story_crossposted": {"views": 9, "interactions": 1, "likes": 0, "shares": 0, "replies": 1},
+  "business": {"prompt_comments_tiktok": 1, "prompt_comments_meta": null, "dms_sent": null, "waitlist": 0},
+  "boost_gate": {"rule": "300 TikTok views by 48 h", "views_at_48h": 166, "pass": false}
+}
