@@ -37,6 +37,8 @@ I-share mo sa kapwa guro. Gusto mo ang prompt para sa lesson plan? Comment GURO 
 
 Anong grade at subject mo, Ma'am/Sir? Sabihin mo dito, gagawan kita ng quiz prompt para doon 🙌
 
-## GURO DM reply (Claude Code tests this prompt in free Gemini before Thursday)
+## GURO DM reply
+
+Tested Nov 24 in Gemini (work Google account, not the free tier) with Science, Grade 5, food chain, 45 minutes: it returned all 6 sections (Layunin, Panimula 5 min, Gawain 15, Pagtalakay 15, Pagtataya 7, Takdang-aralin 3), with Filipino examples (palay, tilapya, lawin) and a 5-item check. Still read it before using it.
 
 Salamat, Ma'am/Sir! 🙌 Heto ang prompt para sa lesson plan: "Gumawa ng lesson plan para sa [subject], [grade], tungkol sa [topic], para sa [ilang minuto]. Gamitin ang format: Layunin, Panimula, Gawain, Pagtalakay, Pagtataya, Takdang-aralin. Simple at akma sa mga estudyanteng Pilipino." Palitan mo lang ang nasa bracket. Basahin at ayusin pa rin bago gamitin. May tanong ka? Reply ka lang dito.
