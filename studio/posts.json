@@ -76,6 +76,25 @@
     }
   },
   {
+    "id": "w48-sat-scam-slides",
+    "title": "W48 Sat · Peke ba ang Video? PhilHealth Cash Payout (slides)",
+    "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check + free live",
+    "slot": "2026-11-28T07:00",
+    "type": "carousel",
+    "media": [
+      "content/2026-W48/06-sat-scam-slides/drafts/slides/s1.png",
+      "content/2026-W48/06-sat-scam-slides/drafts/slides/s2.png",
+      "content/2026-W48/06-sat-scam-slides/drafts/slides/s3.png",
+      "content/2026-W48/06-sat-scam-slides/drafts/slides/s4.png",
+      "content/2026-W48/06-sat-scam-slides/drafts/slides/s5.png",
+      "content/2026-W48/06-sat-scam-slides/drafts/slides/s6.png"
+    ],
+    "cover": "content/2026-W48/06-sat-scam-slides/drafts/slides/s1.png",
+    "captions": {
+      "file": "content/2026-W48/06-sat-scam-slides/drafts/captions.md"
+    }
+  },
+  {
     "id": "2026-w46-01-mon-ai-tip",
     "title": "W49 Mon · Buy 1 Take 1 Mo… Lugi Pala?",
     "series": "W47 · Monday 8:00 PM PHT",

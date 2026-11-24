@@ -1,0 +1,55 @@
+{
+  "title": "W48 Sat · Peke ba ang Video? PhilHealth Cash Payout (slides)",
+  "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check + free live",
+  "captions": "content/2026-W48/06-sat-scam-slides/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "navy",
+      "kicker": "BAGO MO I-SHARE",
+      "headline": "PhilHealth cash payout?",
+      "highlight": "Peke 'yan.",
+      "image": "sat/proof-flags-1.png",
+      "imageLabel": "Totoong Gemini output",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ANG NANGYARI",
+      "headline": "May kumakalat na AI video",
+      "body": "₱5,000 cash payout daw mula PhilHealth, i-click lang ang link. Sabi mismo ng PhilHealth (Nov 9): peke ito, walang ganitong payout.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "cream",
+      "kicker": "RED FLAGS",
+      "headline": "Bago mag-click, i-check",
+      "list": ["Hindi .gov.ph ang link", "Humihingi ng PIN, OTP o bank details", "Bagong page, walang verified badge", "Minamadali ka: \"Click now!\""],
+      "body": "Dagdag pa: AI na boses o mukha ng opisyal.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "ITANONG MUNA SA AI",
+      "headline": "Copy mo ito",
+      "prompt": "May nakita akong video sa Facebook: PhilHealth daw ay nagbibigay ng cash payout, i-click lang ang link at ilagay ang detalye ko. Bago ako maniwala o mag-share, ano ang 5 red flags na dapat kong i-check? Saan ko titingnan ang opisyal na sagot? Simple lang, para sa magulang ko.",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ANG SAGOT NI GEMINI",
+      "headline": "Huling check: opisyal na source",
+      "body": "philhealth.gov.ph o ang verified PhilHealth page lang. Huwag sa link sa comments.",
+      "image": "sat/proof-flags-2.png",
+      "imageLabel": "Totoong Gemini output",
+      "chibi": "none"
+    },
+    {
+      "bg": "navy",
+      "headline": "I-share mo ito",
+      "highlight": "sa magulang mo",
+      "body": "Mamayang 8 PM: AI Tambayan LIVE, libre. Tanong mo, sasagutin ko.",
+      "cta": "Sama ka sa LIVE 👇",
+      "chibi": "wave"
+    }
+  ]
+}
