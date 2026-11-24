@@ -2,7 +2,8 @@
 
 Sample numbers (fictional, labeled on screen). Not financial advice; no investment, loan or app.
 
-## Voice (Finn, Gemini TTS) — all-caps words written lowercase
+## Voice (Finn, Gemini TTS) — done Nov 24 → `raw/voice-finn.wav` (42.6 s, -14 LUFS; original `raw/voice-finn-orig.wav`)
+Word check with mlx-whisper not done yet (not installed; install was blocked). Listen once or install it before timing captions.
 13th month mo, saan mapupunta? Huwag hulaan. Ito ang ginawa ko sa libreng Gemini. Sinabi ko ang numbers ko: labing-walong libo ang 13th month, limang libo ang utang, apat na libo ang Noche Buena, tatlong libo ang regalo, at gusto kong mag-ipon. Tapos sabi ko: numbers ko lang ang gamitin mo, huwag mag-imbento, at sabihin kung lumampas. Ayan, tatlong options agad, sakto lahat sa labing-walong libo. Sa option three, siyam na libo't limandaan ang ipon. Pero i-check mo pa rin sa calculator, at ikaw pa rin ang magdedesisyon. Sample na numbers lang ito. Gusto mo ang eksaktong prompt? I-comment ang salitang plano. Ikaw, alin ang uunahin mo: ipon o Noche Buena?
 
 (Alt if not a free-account recording: "Ito ang ginawa ko sa Gemini." — drop "libreng".)
