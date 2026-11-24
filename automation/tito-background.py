@@ -2,7 +2,7 @@
 """Start a Tito AI background agent run in the Studio (Jeff, Nov 24, 2026).
 
 Usage: tito-background.py <job>
-Jobs: trends (Tita Saliksik, daily), sales (Tito Benta, Mon), bizdev (Ate Kasosyo, Wed), numbers (Tito Numero, Tue).
+Jobs: trends (Tita Saliksik, daily), brief (Tito AI chat: Tita's findings + next steps with Jeff, daily), sales (Tito Benta, Mon), bizdev (Ate Kasosyo, Wed), numbers (Tito Numero, Tue).
 The run shows under Agent activity in the Studio. Drafts and files only: nothing is posted, sent, scheduled or boosted.
 Fired by crontab (Mac runs on PHT). Needs the Studio running (launchd com.titoai.studio).
 """
@@ -64,12 +64,23 @@ Write reports/{TODAY}-numbers-check.md: posts from the last 7 days (views, 3-sec
 }
 
 
+BRIEF = (
+    f"[Tita Saliksik update] Today's trend scan is in content/research/trends/{TODAY}.md (if it's missing, say so and stop). "
+    "Brief Jeff here: (1) Tita's top 3 findings in one line each, with the source; (2) what it means for the posts already "
+    "planned in docs/schedule.json this week and next; (3) up to 3 next steps you recommend (which idea, which slot, "
+    "what Jeff must record or decide), then ask Jeff which ones to go with. Plan together with Jeff: don't start any "
+    "agent until Jeff picks. Keep it short."
+)
+
+
 def main():
     job = sys.argv[1] if len(sys.argv) > 1 else ""
-    if job not in JOBS:
-        sys.exit(f"usage: tito-background.py {{{'|'.join(JOBS)}}}")
-    body = json.dumps(JOBS[job]).encode()
-    req = urllib.request.Request(STUDIO, data=body, headers={"Content-Type": "application/json"}, method="POST")
+    if job not in JOBS and job != "brief":
+        sys.exit(f"usage: tito-background.py {{{'|'.join(list(JOBS) + ['brief'])}}}")
+    url = STUDIO.replace("/api/runs", "/api/main") if job == "brief" else STUDIO
+    payload = {"text": BRIEF, "newChat": True} if job == "brief" else JOBS[job]
+    body = json.dumps(payload).encode()
+    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"}, method="POST")
     with urllib.request.urlopen(req, timeout=20) as r:
         run = json.load(r)
     print(f"{datetime.datetime.now():%Y-%m-%d %H:%M} started {job}: run {run.get('id')} ({run.get('agent')})")
