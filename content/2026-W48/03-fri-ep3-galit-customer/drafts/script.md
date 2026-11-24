@@ -38,3 +38,8 @@ Hook + middle: new `handoff/flow/w48-chibi-headset.mp4` (headset, calm breath, t
 
 ## Edit notes
 Whole screen window, no crop or zoom; pick moments that aren't mid-scroll. Captions timed to the word timings. -14 LUFS. "AI VOICE" badge. Label the sample as sample.
+
+## v1 render (Nov 24) — recorded in Gemini
+Jeff's recording `/Users/jeff/Pictures/Snagit/2026-11-24_21-13-36.mp4` (Gemini, work account: "Your organization's chats…" notice; asked for a second option at 0:41). Reply checked: sorry, approved Nov 20, 3–5 banking days, escalate, update tomorrow by 5:00 PM, no other promises.
+New voice (no "Kumusta" greeting, Gemini, no "libre" about this run): Galit si customer? Ito ang sagot na hindi ka mapapahiya. I-paste mo ang mensahe niya sa Gemini, at ang totoong alam mo. Sample lang ito. Tapos sabihin mo: gumawa ng kalmadong sagot. Mag-sorry, ipaliwanag ang susunod na hakbang, at huwag mangako ng hindi kaya. Ayan. May sorry, may update kung nasaan ang refund, at may malinaw na next step: update bukas ng alas-singko. Gusto mo ng ibang version? Humingi ka lang ng isa pang option. Lagyan mo lang ng totoong detalye bago i-send. Ikaw pa rin ang huling check. Pwede mo rin itong subukan sa libreng Gemini o ChatGPT. Gusto mo ang eksaktong prompt? I-comment mo lang ang salitang prompt. Ikaw, alin ang mas mahirap: chat o tawag?
+`raw/voice-finn.wav` (45.0 s, -14 LUFS; ChatGPT version kept as `raw/voice-finn-chatgpt.wav`). Caption timing from pause detection. Source `w44-friday-motion-sample/src/FriGalitReel.tsx`; render `docs/media/w48-fri-ep3-galit-customer/galit-reel-v1.mp4` (45.5 s, -14.2 LUFS).

@@ -90,6 +90,20 @@
     }
   },
   {
+    "id": "w48-fri-ep3-galit-customer",
+    "title": "W48 Fri · EP3 Galit si Customer? Kalmado Ka (Gemini)",
+    "series": "W48 · Friday 7:00 PM PHT · reel · Libre AI, Totoong Trabaho EP3",
+    "slot": "2026-11-27T19:00",
+    "type": "video",
+    "media": [
+      "docs/media/w48-fri-ep3-galit-customer/galit-reel-v1.mp4"
+    ],
+    "cover": "docs/media/w48-fri-ep3-galit-customer/galit-reel-v1-cover.jpg",
+    "captions": {
+      "file": "content/2026-W48/03-fri-ep3-galit-customer/drafts/captions.md"
+    }
+  },
+  {
     "id": "w48-sat-scam-slides",
     "title": "W48 Sat · Peke ba ang Video? PhilHealth Cash Payout (slides)",
     "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check + free live",

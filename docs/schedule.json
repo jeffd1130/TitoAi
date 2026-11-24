@@ -1111,10 +1111,10 @@
         {
           "day": "FRI",
           "title": "EP3 · Galit si Customer? Kalmado Ka",
-          "tag": "Reel 30–45 s · BPO/team leads · ChatGPT (paid recording)",
-          "note": "Voice + captions ready, no \"libre\" claim (Jeff records on his paid ChatGPT, Nov 23). Waiting on Jeff's screen recording.",
+          "tag": "Reel 45 s · BPO/team leads · Gemini (work-account recording)",
+          "note": "Recorded by Jeff in Gemini Nov 24 (work account, no libre claim about this run). Reel v1 with new hook (headline + readable reply on frame 0, no greeting) and re-made Finn voice: docs/media/w48-fri-ep3-galit-customer/galit-reel-v1.mp4 (45.5 s, -14 LUFS). Waiting on Jeff's approval. Post Fri Nov 27, 7:00 PM PHT (3:00 AM PST). CTA: Comment PROMPT.",
           "date": "Nov 27",
-          "status": "draft",
+          "status": "ready",
           "url": null,
           "boost": null
         },
