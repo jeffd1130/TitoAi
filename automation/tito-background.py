@@ -2,7 +2,7 @@
 """Start a Tito AI background agent run in the Studio (Jeff, Nov 24, 2026).
 
 Usage: tito-background.py <job>
-Jobs: trends (Tita Saliksik, daily), brief (Tito AI chat: Tita's findings + next steps with Jeff, daily), sales (Tito Benta, Mon), bizdev (Ate Kasosyo, Wed), numbers (Tito Numero, Tue).
+Jobs: trends (Tita Saliksik, daily), brief (Tito AI chat: Tita's findings + next steps with Jeff, daily), sales (Tito Benta, Tue 9:00), bizdev (Ate Kasosyo, Tue 9:30), numbers (Tito Numero, Tue).
 The run shows under Agent activity in the Studio. Drafts and files only: nothing is posted, sent, scheduled or boosted.
 Fired by crontab (Mac runs on PHT). Needs the Studio running (launchd com.titoai.studio).
 """
