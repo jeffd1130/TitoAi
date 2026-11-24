@@ -1,0 +1,31 @@
+{
+  "post_id": "w48-mon-ep1-resume",
+  "title": "EP1 · Resume sa 5 Minuto",
+  "posted": {"tiktok": "2026-11-23T20:00+08:00", "facebook": "2026-11-23T20:00+08:00", "instagram": "2026-11-23T20:01+08:00"},
+  "pulled": "2026-11-24T17:45+08:00",
+  "hours_live": 22,
+  "tiktok": {
+    "url": "https://www.tiktok.com/@tito.aiph/video/7711326085710908692",
+    "views": 240, "likes": 7, "comments": 1, "comments_note": "the 1 comment is our seed comment", "shares": 0, "saves": 1,
+    "total_play_time": "0h34m11s", "avg_watch_s": 6.41, "watched_full_pct": 1.6, "new_followers": 0,
+    "retention_pct": {"0:00": 100, "0:02": 45, "0:06": 14, "0:18": 4},
+    "most_viewers_left_at": "0:01",
+    "views_by_hour_peak": "hour 12 after posting (about 8 AM Tue), about 41 views",
+    "traffic": {"for_you": 96.9, "search": 2.2, "profile": 0.9, "following": "<0.1"},
+    "search_queries": "still processing",
+    "viewers": {"age": {"18-24": 45, "25-34": 46, "35-44": 5, "45-54": 3, "55+": 1}, "gender": {"male": 73, "female": 27}, "location": {"Philippines": 97.8, "United States": 1.0}},
+    "pinned": true
+  },
+  "facebook_reel": {
+    "url": "https://www.facebook.com/reel/1533996318874099",
+    "views": 149, "viewers": 126, "interactions": 3, "reactions": 1, "comments": 1, "comments_note": "our seed comment", "shares": 1, "saves": 0, "follows": 0,
+    "watch_time_raw": "849,434 (Meta shows ms; about 14m 9s)", "avg_play_s": 7, "three_sec_views": 48
+  },
+  "instagram_reel": {
+    "url": "https://www.instagram.com/p/DgFVNUaFXdl/",
+    "views": 20, "reach": 19, "interactions": 4, "likes": 1, "comments": 1, "comments_note": "our seed comment", "shares": 0, "saves": 0, "follows": 0,
+    "watch_time": "6m 44s", "avg_play_s": 18, "three_sec_views": null
+  },
+  "stories": "none for EP1",
+  "business": {"prompt_comments": 0, "dms_sent": 0, "waitlist": 0}
+}
