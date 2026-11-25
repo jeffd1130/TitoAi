@@ -158,7 +158,6 @@ if posts is not None:
             for k, v in parse_captions(cap_ref["file"], cap_ref.get("section")).items():
                 caps.setdefault(k, v)
         send_or_die(message(p.get("title", p.get("id")), slot_dt, caps.get("seed"), cta_word(caps)), f"{p.get('id')} {p['slot']}")
-        sent += 1
     sys.exit(0)   # nothing due → quiet exit
 
 # 2) Fallback: schedule.json (no time field, so infer it), reminder without the comment text.
