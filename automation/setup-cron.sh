@@ -44,6 +44,10 @@ NEW_BLOCK="$MARKER_START
 0 19 * * 1 $PYTHON $SCRIPT_DIR/tito-remind.py >> $LOG 2>&1
 0 18 * * 3 $PYTHON $SCRIPT_DIR/tito-remind.py >> $LOG 2>&1
 0 18 * * 5 $PYTHON $SCRIPT_DIR/tito-remind.py >> $LOG 2>&1
+# Pin-comment reminders 5 min after each post (7 AM slides, 7 PM / 8 PM videos); exits quietly if nothing is due
+5 7 * * * /opt/homebrew/bin/python3 $SCRIPT_DIR/tito-pin.py >> $LOG 2>&1
+5 19 * * * /opt/homebrew/bin/python3 $SCRIPT_DIR/tito-pin.py >> $LOG 2>&1
+5 20 * * * /opt/homebrew/bin/python3 $SCRIPT_DIR/tito-pin.py >> $LOG 2>&1
 $MARKER_END"
 
 # Remove old Tito AI block if present, then append new block
