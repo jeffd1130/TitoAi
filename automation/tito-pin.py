@@ -145,7 +145,6 @@ except Exception:
     posts = None
 
 if posts is not None:
-    sent = 0
     for p in posts:
         if not p.get("slot"):
             continue
