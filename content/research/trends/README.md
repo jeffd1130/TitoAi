@@ -3,3 +3,4 @@
 | Date | File | Top idea |
 |------|------|----------|
 | 2026-11-24 | [2026-11-24.md](2026-11-24.md) | 13th-month plan with free Gemini (DOLE Dec 24 deadline) |
+| 2026-11-26 | [2026-11-26.md](2026-11-26.md) | Deepfake "boss" payment check for small-business owners (CICC SME warning) |
