@@ -120,7 +120,7 @@ def message(title, slot_dt, seed, cta, note=""):
              f"🕖 Posted {now.strftime('%a')} {today_str} · {when} PHT", ""]
     if seed:
         lines += ["<b>Seed comment</b> (tap to copy):", f"<pre>{esc(seed)[:3000]}</pre>", ""]
-    else:
+    elif not note:
         lines += ["⚠️ No seed comment found. Check captions.md", ""]
     if cta:
         lines += [f"👀 Watch replies for <b>{esc(cta)}</b> and send the DM reply.", ""]
