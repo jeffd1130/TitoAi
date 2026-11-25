@@ -166,6 +166,7 @@ Standing insights (evidence in `reports/history-2026.md`):
 | `tito-create.py` | D-2 creation reminder | 9:00 AM Sat / Mon / Wed |
 | `tito-weekly.py` | Saturday production overview | 9:00 AM Sat |
 | `tito-remind.py` | Post-day checklist | 7:00 PM Mon / Wed / Fri |
+| `tito-pin.py` | 📌 Pin-comment reminder with the seed comment text, 5 min after each post | 7:05 AM, 7:05 PM, 8:05 PM daily (exits if nothing due) |
 | `tito-background.py trends` | 🔎 Tita Saliksik daily trend scan → `content/research/trends/<date>.md` (AI news, similar-niche creators, PH trends for our targets, 3 ideas) | 6:00 AM daily |
 | `tito-background.py brief` | 💬 Tito AI chat: new chat with Tita's findings + recommended next steps; Jeff and Tito AI decide together (no agent starts until Jeff picks) | 7:30 AM daily |
 | `tito-background.py sales` | 💼 Tito Benta: pipeline + reply drafts → `content/business/sales/pipeline.md` | 9:00 AM Tue |
