@@ -118,3 +118,109 @@ Raw numbers: `reports/data/posts/w48-mon-ep1-resume-24h.json`.
 3. **Claude Code:** add a short "follow for" end card (EP2 Wed, EP3 Fri) so follows aren't left to chance.
 4. **Jeff:** try a 6:30–8:00 AM post time for one of next week's episodes.
 5. **Claude Code:** 72-hour update on Thu Nov 26.
+
+---
+
+## 72-hour check (pulled Thu Nov 26, 7:50 PM PHT / 3:50 AM PST, about 72 hours live)
+
+Raw numbers: `reports/data/posts/w48-mon-ep1-resume-72h.json`.
+
+### 1. Summary
+- **Still our best November post on reach, but it has stalled.** TikTok went from 240 to 290 views in the last 50 hours (+50); the daily chart is nearly flat by Nov 25.
+- **The opening didn't change, as expected.** 46% were still watching at 0:02 and 15% at 0:06. Average watch time slipped from 6.4 s to 6.0 s.
+- **No follows and no PROMPT comments on any platform.** The only comment on each platform is still our own seed comment.
+
+### 2. Scorecard
+
+**TikTok**
+
+| Metric | 24 h (22 h) | 72 h | Change | Last-5 average* |
+|---|---|---|---|---|
+| Views | 240 | 290 | +21% | 126 (+130%) |
+| Likes | 7 | 10 | +3 | 2.4 |
+| Comments | 1 (our seed) | 1 (our seed) | same | 0.8 |
+| Shares | 0 | 0 | same | – |
+| Saves | 1 | 1 | same | – |
+| Total play time | 34m 11s | 39m 48s | +5m 37s | – |
+| Average watch time | 6.4 s | 6.0 s | -0.4 s | no data |
+| Watched full video | 1.6% | 1.5% | -0.1 pt | no data |
+| New followers | 0 | 0 | same | 0 |
+| Total viewers (Viewers tab) | no data | 348 | – | – |
+
+\*Same last-5 as the 24 h check (Plano ng Linggo, Takip o Ayos, Buy 1 Take 1, Origin 5, Origin 4).
+
+**Facebook reel**
+
+| Metric | 24 h | 72 h | Change |
+|---|---|---|---|
+| Views | 149 | 169 | +20 |
+| Viewers | 126 | 140 | +14 |
+| 3-second views | 48 (32%) | 53 (31%) | +5 |
+| Average play | 7 s | 7 s | same |
+| Watch time | about 14m 9s | about 15m 56s (Meta shows 955,560 ms) | +1m 47s |
+| Interactions | 3 (1 like, 1 comment, 1 share) | 3 (1 like, 1 comment, 1 share) | same |
+| Saves / follows | 0 / 0 | 0 / 0 | same |
+
+**Instagram reel**
+
+| Metric | 24 h | 72 h | Change |
+|---|---|---|---|
+| Views | 20 | 29 | +9 |
+| Reach | 19 | 26 | +7 |
+| Interactions | 4 (1 like, 1 comment) | 5 (2 likes, 1 comment) | +1 |
+| Average play | 18 s | 14 s | -4 s |
+| Watch time | 6m 44s | 7m 30s | +46 s |
+| Saves / shares / follows | 0 / 0 / 0 | 0 / 0 / 0 | same |
+| 3-second views | no data | no data | – |
+
+### 3. Funnel (72 h)
+
+| Stage | TikTok | Facebook | Instagram |
+|---|---|---|---|
+| Views | 290 | 169 | 29 |
+| Stayed past 2–3 s | 46% at 0:02 | 31% (3-sec) | no data |
+| Engaged | 12 (10 likes, 1 save, 1 seed comment) | 3 | 5 |
+| Followed | 0 | 0 | 0 |
+| PROMPT comments | 0 | 0 | 0 |
+| DMs, then waitlist | 0, then 0 | 0, then 0 | 0, then 0 |
+
+**Biggest drop:** still the first 2 seconds. Then engaged to followed: 0 follows from 488 views across platforms.
+
+### 4. Retention (TikTok)
+
+| Time | 24 h | 72 h |
+|---|---|---|
+| 0:02 | 45% | 46% |
+| 0:06 | 14% | 15% |
+| 0:18 | 4% | 4% |
+
+TikTok still says most viewers left at 0:01. The frame notes from the 24 h check still apply (no text on frame 0, resume too small to read, greeting at 0:06).
+
+### 5. Audience and traffic (TikTok)
+- **Traffic:** For You 95.1%, search 3.8% (up from 2.2%), profile 0.8%, DMs 0.3%.
+- **Search terms are now showing:** "paano gumawa ng resume sa chat gpt" 33.3%; "resume prompt male chatgpt", "Paano gumawa ang resume sa chatgpt", "best app to create your resume" and "chatgpt va resume" 11.1% each. The video is starting to work as a search answer, so it may keep getting slow, steady views.
+- **Viewers:** 65% new, 35% returning; 99% non-followers.
+- **Age:** 18–24 46%, 25–34 45%, 35–44 5%. **Gender:** 71% male, 29% female. **Location:** Philippines 97.8%.
+
+### 6. Comments
+- 1 per platform, all our seed comment ("Ano'ng trabaho ang inaapplyan mo ngayon?…" on TikTok). 0 PROMPT comments, 0 open questions, nothing to reply to.
+
+### 7. What worked and what didn't
+
+| What | Verdict | Evidence |
+|---|---|---|
+| Topic (resume) | Worked | 290 views, best since Jul; search share grew to 3.8% with resume-specific queries |
+| Long tail | Weak | Only +50 TikTok views in days 2–3 |
+| Hook (first 2 s) | Didn't work | 46% at 0:02, unchanged |
+| PROMPT CTA | Didn't work | 0 PROMPT comments from 488 views |
+| Follow CTA in caption | Didn't work | 0 follows on all platforms |
+
+### 8. Boost check
+- **Gate:** 300 TikTok views by 48 hours.
+- **Result: No.** 290 views at 72 hours, so it was below 300 at 48 hours too. **Jeff decides** whether to boost anyway; the data says no.
+
+### 9. Next actions
+1. **Claude Code:** keep the frame-0 headline + readable output fix (already in EP2 and EP3) and compare EP3's 0:02 retention to EP1's 46%.
+2. **Claude Code:** reuse the TikTok search phrase "paano gumawa ng resume sa chatgpt" in a future resume caption or on-screen text (EP6 cover letter, Dec 4).
+3. **Jeff:** pin the seed comment in the IG and FB apps if not done yet.
+4. **Claude Code:** test a stronger reason to comment (for example, "Comment PROMPT, ipapadala ko sa DM within 1 hour") since PROMPT got 0 on EP1.

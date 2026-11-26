@@ -1,0 +1,28 @@
+{
+  "post_id": "w48-mon-ep1-resume",
+  "title": "EP1 · Resume sa 5 Minuto",
+  "pulled": "2026-11-26T19:50+08:00",
+  "hours_live": 72,
+  "tiktok": {
+    "url": "https://www.tiktok.com/@tito.aiph/video/7711326085710908692",
+    "views": 290, "likes": 10, "comments": 1, "comments_note": "our seed comment", "shares": 0, "saves": 1,
+    "total_play_time": "0h39m48s", "avg_watch_s": 5.99, "watched_full_pct": 1.5, "new_followers": 0,
+    "total_viewers": 348, "viewer_types": {"new": 65, "returning": 35, "non_followers": 99, "followers": 1},
+    "retention_pct": {"0:00": 100, "0:02": 46, "0:06": 15, "0:18": 4},
+    "most_viewers_left_at": "0:01",
+    "views_by_day": "chart peaks Nov 23 and is nearly flat by Nov 25 (no exact daily numbers shown)",
+    "traffic": {"for_you": 95.1, "search": 3.8, "profile": 0.8, "direct_messages": 0.3, "following": "<0.1", "sound": "<0.1", "other": "<0.1"},
+    "search_queries": {"paano gumawa ng resume sa chat gpt": 33.3, "resume prompt male chatgpt": 11.1, "Paano gumawa ang resume sa chatgpt": 11.1, "best app to create your resume": 11.1, "chatgpt va resume": 11.1},
+    "viewers": {"age": {"18-24": 46, "25-34": 45, "35-44": 5, "45-54": 3, "55+": 1}, "gender": {"male": 71, "female": 29, "other": 0}, "location": {"Philippines": 97.8, "United States": "<1"}}
+  },
+  "facebook_reel": {
+    "views": 169, "viewers": 140, "interactions": 3, "reactions": 1, "comments": 1, "shares": 1, "saves": 0, "follows": 0,
+    "watch_time_raw_ms": 955560, "avg_play_s": 7, "three_sec_views": 53, "three_sec_pct": 31.4
+  },
+  "instagram_reel": {
+    "views": 29, "reach": 26, "interactions": 5, "likes": 2, "comments": 1, "shares": 0, "saves": 0, "follows": 0,
+    "watch_time": "7m 30s", "avg_play_s": 14, "three_sec_views": null
+  },
+  "business": {"prompt_comments": 0, "dms_sent": 0, "waitlist": 0},
+  "boost_gate": {"rule": "300 TikTok views by 48 h", "passed": false, "views_at_72h": 290}
+}

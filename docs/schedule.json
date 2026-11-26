@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-26",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -1072,7 +1072,7 @@
           "day": "MON",
           "title": "EP1 · Resume sa 5 Minuto",
           "tag": "Reel 30–45 s · job seekers · ChatGPT (paid recording)",
-          "note": "v3 (Nov 23): Jeff's paid ChatGPT recording, so every \"libre\" claim was removed (headline now GAMIT ANG AI, voice cut, captions say paid + try free tiers): docs/media/w48-mon-ep1-resume/resume-reel-v3.mp4 (37.5 s). Follow banner points to EP2 (episodes numbered by air date). Approved by Jeff Nov 23. Posted Mon Nov 23: TikTok 8:00 PM (https://www.tiktok.com/@tito.aiph/video/7711326085710908692, AI label on), FB 8:00 PM, IG 8:01 PM. Results (22 h): TikTok 240 views (+91% vs last 5), avg watch 6.4 s, 45% left by 0:02; FB 149 views, 32% 3-sec; IG 20 views; 0 follows, 0 PROMPT. Report: reports/posts/w48-mon-ep1-resume.md Post Mon Nov 23, 8:00 PM PHT (4:00 AM PST).",
+          "note": "v3 (Nov 23): Jeff's paid ChatGPT recording, so every \"libre\" claim was removed (headline now GAMIT ANG AI, voice cut, captions say paid + try free tiers): docs/media/w48-mon-ep1-resume/resume-reel-v3.mp4 (37.5 s). Follow banner points to EP2 (episodes numbered by air date). Approved by Jeff Nov 23. Posted Mon Nov 23: TikTok 8:00 PM (https://www.tiktok.com/@tito.aiph/video/7711326085710908692, AI label on), FB 8:00 PM, IG 8:01 PM. Results (22 h): TikTok 240 views (+91% vs last 5), avg watch 6.4 s, 45% left by 0:02; FB 149 views, 32% 3-sec; IG 20 views; 0 follows, 0 PROMPT. Results (72 h): TikTok 290 views, 46% at 0:02, avg watch 6.0 s, search 3.8%; FB 169 views, 31% 3-sec; IG 29 views; 0 follows, 0 PROMPT; boost gate not met. Report: reports/posts/w48-mon-ep1-resume.md Post Mon Nov 23, 8:00 PM PHT (4:00 AM PST).",
           "date": "Nov 23",
           "status": "posted",
           "url": null,
@@ -1082,10 +1082,10 @@
           "day": "WED",
           "title": "EP2 · Guro? Quiz sa 1 Minuto",
           "tag": "Reel 30–45 s · teachers · Gemini free",
-          "note": "Reel built from Jeff's Gemini screen recordings (Snagit Nov 21, work Google account, so no libre claim about this run; voice re-done without it) + Finn AI voice + moving chibi: docs/media/w48-wed-ep2-guro-quiz/quiz-reel-v2.mp4 (40.8 s; v2 Nov 24: headline + voice on frame 0, readable zoom of the answer, greeting cut). v2 approved by Jeff Nov 24 and swapped in for v1. Scheduled by Claude Code at Jeff's request: TikTok (AI label on), FB + IG reels and FB story, plus an IG story, all Wed Nov 25, 7:00 PM PHT (3:00 AM PST).",
+          "note": "Reel built from Jeff's Gemini screen recordings (Snagit Nov 21, work Google account, so no libre claim about this run; voice re-done without it) + Finn AI voice + moving chibi: docs/media/w48-wed-ep2-guro-quiz/quiz-reel-v2.mp4 (40.8 s; v2 Nov 24: headline + voice on frame 0, readable zoom of the answer, greeting cut). v2 approved by Jeff Nov 24 and swapped in for v1. Scheduled by Claude Code at Jeff's request: TikTok (AI label on), FB + IG reels and FB story, plus an IG story, all Wed Nov 25, 7:00 PM PHT (3:00 AM PST). Results (24 h): TikTok 137 views (-43% vs EP1 at 22 h), 43% at 0:02, 9% at 0:06, avg watch 3.6 s; FB 221 views, 22% 3-sec; IG 37 views; 0 follows, 0 PROMPT. Report: reports/posts/w48-wed-ep2-guro-quiz.md",
           "date": "Nov 25",
-          "status": "ready",
-          "url": null,
+          "status": "posted",
+          "url": "https://www.tiktok.com/@tito.aiph/video/7711678078178610439",
           "boost": null
         },
         {
