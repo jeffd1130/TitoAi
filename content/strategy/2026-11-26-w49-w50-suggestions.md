@@ -24,13 +24,13 @@ Not used: 2026 DTI Noche Buena price guide (not found yet); free-tier model clai
 | **Wed Dec 2 · 7 PM / 3 AM** | **EP5 · 13th Month? Huwag Muna Gastusin** (Claude free) | Keep, but W48 Thu already did a 13th-month reel. Make EP5 the "Christmas budget" angle: utang → ipon → regalo list with a hard cap. | 13th month by Dec 24 (W48 scan) |
 | **Thu Dec 3 · 7 AM / Wed 3 PM** | **Slides: "Regalo List sa ₱3,000"** | New companion to EP5: prompt that splits a fixed gift budget per person and suggests cheaper swaps. Sample numbers. CTA: Comment PLANO. | seasonal (uncited) |
 | **Fri Dec 4 · 7 PM / 3 AM** | **EP6 · Cover Letter para sa BPO** (Gemini free) | Keep. New hook from T2: "Sabi ng report, kaya ng AI ang ilang BPO tasks. Kaya mo ring gamitin ang AI." Caption cites the report. | T2 |
-| **Sat Dec 5 · 7 AM / Fri 3 PM** | **Slides: "Tumawag ang 'Bangko' Mo?"** (vishing, #2 scam) + LIVE save-the-date on the last slide | New. 5 signs it's vishing; script to say before hanging up; prompt to check a suspicious text. Last slide: "LIVE Tue Dec 8, 8 PM." | T1, T5 |
+| **Sat Dec 5 · 7 AM / Fri 3 PM** | **Slides: "Tumawag ang 'Bangko' Mo?"** (vishing, #2 scam) + LIVE save-the-date on the last slide | New. 5 signs it's vishing; script to say before hanging up; prompt to check a suspicious text. Last slide: live line only once a date is set. | T1, T5 |
 
 Recording needs from Jeff (free accounts if we want to say "libre"): EP4 ChatGPT, EP5 Claude, EP6 Gemini; plus one Gemini screenshot each for Tue, Thu, Sat slides.
 
 ## LIVE moved to W50 (2nd week of December)
 
-**Recommended: Tue Dec 8, 8:00–9:00 PM PHT (Tue 4:00–5:00 AM PST)**, TikTok + Facebook.
+**Date not set (Jeff, Nov 26): no live on the schedule until the script and run-of-show are done.** Option on the table: Tue Dec 8, 8:00–9:00 PM PHT (Tue 4:00–5:00 AM PST), TikTok + Facebook.
 - Dec 8 is a special non-working day, so people are home.
 - It comes 4 days before Class #1 (Sat Dec 12), so the live sells seats.
 - Topic: **"AI Tambayan LIVE: Ligtas at Matipid sa Pasko"**: legit-check a seller live (T1), a 13th-month plan, a BPO cover letter, then audience questions. Close with Class #1 seats.
