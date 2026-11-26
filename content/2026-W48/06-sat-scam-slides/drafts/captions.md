@@ -1,11 +1,11 @@
 **Slides:** `docs/media/w48-sat-scam-slides/s1–s6.png` (1080×1350). Proof screenshots: Claude Code's Gemini run Nov 24 (work account, so no "libre" claim about this run). Source for the fake: PhilHealth press release Nov 9, 2026, reported by Insurance Business Asia Nov 18 (https://www.insurancebusinessmag.com/asia/news/cyber/aigenerated-video-falsely-promises-philhealth-cash-payout-597891.aspx). Don't show or link the fake video itself.
-**Post:** Sat Nov 28, 7:00 AM PHT (Fri 3:00 PM PST). TikTok photo mode + IG carousel + FB photos. Slide 6 says the free live is tonight 8 PM: confirm the live time before posting.
+**Post:** Sat Nov 28, 7:00 AM PHT (Fri 3:00 PM PST). TikTok photo mode + IG carousel + FB photos. Live line removed Nov 26 (live date not set yet, Jeff); slide 6 now ends with a follow CTA.
 
 # Captions: Peke ba ang Video? PhilHealth Cash Payout
 
 ## TikTok
 
-May kumakalat na AI video: PhilHealth daw may cash payout, i-click lang ang link. Peke 'yan, sabi mismo ng PhilHealth. 5 red flags bago mag-click, at ang prompt para i-check gamit ang AI. I-share mo sa magulang mo. Mamayang 8 PM, AI Tambayan LIVE 👇
+May kumakalat na AI video: PhilHealth daw may cash payout, i-click lang ang link. Peke 'yan, sabi mismo ng PhilHealth. 5 red flags bago mag-click, at ang prompt para i-check gamit ang AI. I-share mo sa magulang mo. Follow para sa susunod na scam check 👇
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ScamAlert #PhilHealth
 
@@ -22,7 +22,7 @@ Bago mag-click o mag-share:
 4. Minamadali ka
 5. AI na boses o mukha ng opisyal
 
-I-share mo sa magulang mo. Mamayang 8 PM, sama ka sa AI Tambayan LIVE, libre 👇
+I-share mo sa magulang mo, at i-follow ang Tito AI para sa susunod na scam check 👇
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ScamAlert #PhilHealth
 
@@ -34,7 +34,7 @@ May kumakalat na AI video: ₱5,000 daw mula PhilHealth, i-click lang ang link a
 
 Bago maniwala o mag-share, tanungin muna ang AI (nasa slide 4 ang prompt), tapos i-check sa philhealth.gov.ph o sa verified PhilHealth page. Hindi kailanman hihingin ng totoong ahensya ang PIN o OTP mo sa isang link.
 
-I-share mo ito sa magulang at kamag-anak mo. Mamayang 8 PM, AI Tambayan LIVE, libre. Tanong mo, sasagutin ko 👇
+I-share mo ito sa magulang at kamag-anak mo. May tanong ka? I-comment mo, sasagutin ko 👇
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #ScamAlert #PhilHealth
 

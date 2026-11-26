@@ -1,6 +1,6 @@
 {
   "title": "W48 Sat · Peke ba ang Video? PhilHealth Cash Payout (slides)",
-  "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check + free live",
+  "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check",
   "captions": "content/2026-W48/06-sat-scam-slides/drafts/captions.md",
   "slides": [
     {
@@ -23,7 +23,12 @@
       "bg": "cream",
       "kicker": "RED FLAGS",
       "headline": "Bago mag-click, i-check",
-      "list": ["Hindi .gov.ph ang link", "Humihingi ng PIN, OTP o bank details", "Bagong page, walang verified badge", "Minamadali ka: \"Click now!\""],
+      "list": [
+        "Hindi .gov.ph ang link",
+        "Humihingi ng PIN, OTP o bank details",
+        "Bagong page, walang verified badge",
+        "Minamadali ka: \"Click now!\""
+      ],
       "body": "Dagdag pa: AI na boses o mukha ng opisyal.",
       "chibi": "teach"
     },
@@ -47,8 +52,8 @@
       "bg": "navy",
       "headline": "I-share mo ito",
       "highlight": "sa magulang mo",
-      "body": "Mamayang 8 PM: AI Tambayan LIVE, libre. Tanong mo, sasagutin ko.",
-      "cta": "Sama ka sa LIVE 👇",
+      "body": "Bago maniwala o mag-share, i-check muna. Isang share mo, isang kamag-anak na hindi mabubudol.",
+      "cta": "Follow para sa susunod na scam check 👇",
       "chibi": "wave"
     }
   ]
