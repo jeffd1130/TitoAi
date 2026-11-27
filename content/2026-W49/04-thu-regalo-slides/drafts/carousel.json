@@ -1,0 +1,60 @@
+{
+  "title": "W49 Thu · Regalo List sa ₱3,000 (slides)",
+  "series": "W49 · Thursday 7:00 AM PHT · carousel · companion to EP5",
+  "captions": "content/2026-W49/04-thu-regalo-slides/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "navy",
+      "kicker": "PARA SA PASKO",
+      "headline": "Regalo list",
+      "highlight": "sa ₱3,000 lang",
+      "chibi": "wave",
+      "label": "Sample na budget"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ANG PROBLEMA",
+      "headline": "Sobra na naman sa budget?",
+      "body": "Dami ng inaanak, pamangkin at kaopisina. Kapag walang listahan, ubos agad ang 13th month.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "COPY MO ITO",
+      "headline": "Ipa-plano sa AI",
+      "prompt": "May ₱3,000 akong budget sa regalo. Ito ang listahan ng bibigyan ko: [ilagay ang relasyon at edad, hal. inaanak 7 taon, nanay, 3 kaopisina]. Hatiin mo ang budget kada tao, magbigay ng 2 regalong idea na pasok sa presyo, at i-total sa table. Huwag lalampas sa ₱3,000.",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ANG HIHINGIN MO",
+      "headline": "Isang malinaw na table",
+      "list": [
+        "Budget kada tao",
+        "2 regalong idea bawat isa",
+        "Total na hindi lalampas"
+      ],
+      "body": "Ikaw pa rin ang mag-check ng presyo sa tindahan.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "TIPID TIP",
+      "headline": "Mas tipid pa",
+      "list": [
+        "Group gift para sa kaopisina",
+        "Pagkain o homemade para sa marami",
+        "Mamili nang maaga, iwas rush"
+      ],
+      "chibi": "teach"
+    },
+    {
+      "bg": "navy",
+      "headline": "I-save mo ito",
+      "highlight": "bago ka mamili",
+      "body": "Isang listahan, walang sobra sa budget.",
+      "cta": "I-save para sa Pasko 👇",
+      "chibi": "wave"
+    }
+  ]
+}

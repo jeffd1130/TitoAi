@@ -1,0 +1,55 @@
+{
+  "title": "W49 Sat · Tumawag ang 'Bangko' Mo? (slides)",
+  "series": "W49 · Saturday 7:00 AM PHT · carousel · scam check",
+  "captions": "content/2026-W49/06-sat-bangko-call-slides/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "navy",
+      "kicker": "SCAM ALERT",
+      "headline": "Tumawag ang 'bangko' mo?",
+      "highlight": "Ibaba mo muna.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ANG DATOS",
+      "headline": "#2 na scam sa listahan ng PNP",
+      "body": "354 vishing o scam call ang naitala ng PNP mula Enero hanggang Oktubre 2026. Tunog totoo, pero ang pakay nila: OTP at PIN mo.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "MGA SENYALES",
+      "headline": "Scam call kapag…",
+      "list": [
+        "Humihingi ng OTP, PIN o password",
+        "Minamadali ka: 'Ma-block ang account mo!'",
+        "Pinapa-click ka ng link sa text",
+        "Ayaw kang pababain ng tawag"
+      ],
+      "chibi": "none"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "SABIHIN MO ITO",
+      "headline": "Bago ibaba ang tawag",
+      "body": "\"Tatawag na lang po ako sa official hotline ng bangko.\" Tapos tawagan mo ang number na nasa likod ng card mo.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ITANONG SA AI",
+      "headline": "May kahina-hinalang text?",
+      "prompt": "May natanggap akong text: [i-paste ang text, tanggalin ang personal mong info]. Mukha ba itong scam? Ano ang red flags at ano ang dapat kong gawin? Simple lang, para sa magulang ko.",
+      "chibi": "none"
+    },
+    {
+      "bg": "navy",
+      "headline": "I-share mo ito",
+      "highlight": "sa magulang mo",
+      "body": "Ang totoong bangko, hindi hihingi ng OTP. Na-scam? Tumawag sa 1326.",
+      "cta": "Follow para sa susunod na scam check 👇",
+      "chibi": "wave"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "W49 Tue · Legit Check Bago Mag-order (slides)",
+  "series": "W49 · Tuesday 7:00 AM PHT · carousel · companion to EP4",
+  "captions": "content/2026-W49/02-tue-legit-check-slides/drafts/captions.md",
+  "slides": [
+    {
+      "bg": "navy",
+      "kicker": "BAGO MAG-ORDER",
+      "headline": "Legit ba ang seller?",
+      "highlight": "I-check muna.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "cream",
+      "kicker": "ANG DATOS",
+      "headline": "#1 na online scam ngayon",
+      "body": "743 online selling scam ang naitala ng PNP mula Enero hanggang Oktubre 2026. Nangunguna ito sa lahat ng cybercrime.",
+      "chibi": "surprised"
+    },
+    {
+      "bg": "cream",
+      "kicker": "RED FLAGS",
+      "headline": "Mag-ingat kapag…",
+      "list": [
+        "Sobrang mura, parang imposible",
+        "Bayad agad, labas sa app",
+        "Humihingi ng OTP o PIN",
+        "Bagong page, puro 5-star review"
+      ],
+      "body": "Nabibili ang followers at reviews, sabi ng PNP.",
+      "chibi": "teach"
+    },
+    {
+      "bg": "marigold",
+      "kicker": "ITANONG MUNA SA AI",
+      "headline": "Copy mo ito",
+      "prompt": "Ito ang details ng seller na nakita ko: [i-paste ang pangalan ng page, presyo, paraan ng bayad, at ilang review]. Ano ang mga red flag dito, at ano ang 5 bagay na dapat kong i-check bago magbayad? Simple lang.",
+      "chibi": "none"
+    },
+    {
+      "bg": "cream",
+      "kicker": "LEGIT CHECK, VERIFY FIRST",
+      "headline": "Bago magbayad",
+      "list": [
+        "Hanapin ang page sa ibang review o group",
+        "Mas safe ang COD o bayad sa loob ng app",
+        "Huwag ibigay ang OTP kahit kanino"
+      ],
+      "body": "Na-scam? Tumawag sa 1326 (CICC) o sa PNP-ACG.",
+      "chibi": "none"
+    },
+    {
+      "bg": "navy",
+      "headline": "I-share mo ito",
+      "highlight": "bago mag-Pasko shopping",
+      "body": "Lalo na sa mga magulang at tita na mahilig mag-online shop.",
+      "cta": "Comment LEGIT para sa checklist 👇",
+      "chibi": "wave"
+    }
+  ]
+}
