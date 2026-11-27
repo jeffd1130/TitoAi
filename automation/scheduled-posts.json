@@ -89,5 +89,21 @@
       "at": "2026-11-28T07:00+08:00"
     },
     "seed_comment": "handled by task tito-seed-comment-scam-slides"
+  },
+  "w49-sun-bts-reel": {
+    "tiktok": {
+      "status": "scheduled",
+      "at": "2026-11-29T19:00+08:00"
+    },
+    "facebook": {
+      "status": "scheduled",
+      "at": "2026-11-29T19:00+08:00"
+    },
+    "instagram": {
+      "status": "scheduled",
+      "at": "2026-11-29T19:00+08:00"
+    },
+    "version": "bts-reel-v4.mp4 (live line blurred)",
+    "seed_comment": "pending: tito-approval-scheduler posts it after 7:00 PM Sun Nov 29 (text in content/2026-W49/bts-ai-posts/drafts/captions.md)"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "handle": "@tito.aiph",
   "base": "https://jeffd1130.github.io/TitoAi/",
   "weeks": [
@@ -1140,9 +1140,9 @@
           "day": "SUN",
           "title": "Behind the Scenes: Paano Ginagawa ang Tito AI",
           "tag": "Reel 49 s · BTS · Jeff's voice",
-          "note": "Brief: content/2026-W49/bts-ai-posts/brief.md. Animated workflow + real Studio/TikTok/Meta captures. v2 Nov 27: Jeff's voice (denoised, noise floor -39 → -49 dB, pauses tightened, -14 LUFS), timed to whisper word timings: docs/media/w49-bts-reel/bts-reel-v3.mp4 (49.4 s; v3: CTA text moved off the chibi face). In Studio for Jeff's approval. Post Sun Nov 29, 7:00 PM PHT (Sun 3:00 AM PST). CTA: Comment PLANO.",
+          "note": "Brief: content/2026-W49/bts-ai-posts/brief.md. Animated workflow + real Studio/TikTok/Meta captures, Jeff's voice (denoised, -14 LUFS). v4 Nov 27: the old slide's live line is blurred and labelled 'May maling detalye' (no live mentions until the live is set): docs/media/w49-bts-reel/bts-reel-v4.mp4. Approved by Jeff Nov 27; scheduled by Claude Code for Sun Nov 29, 7:00 PM PHT (Sun 3:00 AM PST) on TikTok (AI label on), FB reel and IG reel. CTA: Comment PLANO. Seed comment after posting; Jeff pins on phone.",
           "date": "Nov 29",
-          "status": "draft",
+          "status": "scheduled",
           "url": null,
           "boost": null
         },
