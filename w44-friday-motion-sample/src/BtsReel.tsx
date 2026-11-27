@@ -253,9 +253,10 @@ export const BtsReel: React.FC = () => {
     <Top a={11.6} b={T.l4} top={170}><Line size={84}>RESEARCH · SCRIPT</Line><Line bg={teal} size={84}>SLIDES · VIDEO</Line></Top>
     <Top a={T.l4} b={T.l5} top={170}><Line size={100}>HINDI PERPEKTO</Line><Line bg={coral} size={92}>AKO ANG NAG-AYOS</Line></Top>
     <Top a={T.l5} b={T.l6} top={170}><Line size={92}>WALANG LALABAS</Line><Line bg={gold} c={navy} size={92}>NANG WALANG APPROVAL KO</Line></Top>
-    <Top a={T.l6} b={T.l7} top={150}><Line size={96}>HINDI MO KAILANGAN</Line><Line size={96}>NG BUONG TEAM</Line><Line bg={teal} size={100}>ISANG LIBRENG CHAT</Line></Top>
+    <Top a={T.l6} b={T.l7} top={120}><Line size={84}>HINDI MO KAILANGAN NG BUONG TEAM</Line><Line bg={teal} size={92}>ISANG LIBRENG CHAT</Line></Top>
     <Top a={T.l7} b={T.l8} top={170}><Line bg={gold} c={navy} size={100}>I-TYPE MO ITO</Line></Top>
-    <Top a={T.l8} b={T.end} top={170}><Line size={96}>BUONG PROMPT?</Line><Line size={96}>COMMENT:</Line><Line bg={gold} c={navy} size={170}>PLANO</Line></Top>
+    {/* below the chibi's face (never cover it) */}
+    <Top a={T.l8} b={T.end} top={1080}><div style={{display: 'flex', gap: 14}}><Line size={84}>BUONG PROMPT?</Line><Line size={84}>COMMENT:</Line></div><Line bg={gold} c={navy} size={170}>PLANO</Line></Top>
 
     <Badge />
     <Captions />
