@@ -1,0 +1,338 @@
+{
+ "pulled": "2026-11-27",
+ "pulled_by": "Claude Code (TikTok Studio + Meta Business Suite, Tito Ai PH) — daily Studio sync",
+ "sources": [
+  "tiktok.com/tiktokstudio/analytics",
+  "tiktok.com/tiktokstudio/analytics/followers",
+  "tiktok.com/tiktokstudio/content",
+  "business.facebook.com/latest/insights/content",
+  "business.facebook.com/latest/insights/overview"
+ ],
+ "tiktok_account_7d": {
+  "window": "Nov 19-25, 2026",
+  "video_views": 855,
+  "video_views_change": "+54.9%",
+  "profile_views": 6,
+  "profile_views_change": "+500%",
+  "likes": 18,
+  "likes_change": "+260%",
+  "comments": 1,
+  "shares": 2,
+  "net_followers": 0,
+  "traffic": {
+   "for_you": "90.8%",
+   "search": "6.5%",
+   "profile": "2.4%",
+   "following": "0.3%"
+  }
+ },
+ "tiktok_followers": "1K (TikTok shows rounded total)",
+ "tiktok_posts": [
+  {
+   "post": "13th Month Mo, Saan Mapupunta?",
+   "date": "2026-11-26",
+   "views": 70,
+   "likes": 1,
+   "comments": 1,
+   "url": "https://www.tiktok.com/@tito.aiph/video/7711721223050235144"
+  },
+  {
+   "post": "Guro: Quiz + Answer Key (slides)",
+   "date": "2026-11-26",
+   "views": 188,
+   "likes": 3,
+   "comments": 0
+  },
+  {
+   "post": "EP2 · Guro? Quiz sa 1 Minuto",
+   "date": "2026-11-25",
+   "views": 175,
+   "likes": 4,
+   "comments": 1,
+   "pinned": true,
+   "url": "https://www.tiktok.com/@tito.aiph/video/7711678078178610439"
+  },
+  {
+   "post": "EP1 · Resume sa 5 Minuto",
+   "date": "2026-11-23",
+   "views": 292,
+   "likes": 10,
+   "comments": 1,
+   "pinned": true,
+   "url": "https://www.tiktok.com/@tito.aiph/video/7711326085710908692"
+  },
+  {
+   "post": "Plano ng Linggo",
+   "date": "2026-11-20",
+   "views": 166,
+   "likes": 6,
+   "comments": 3
+  },
+  {
+   "post": "Takip o Ayos",
+   "date": "2026-11-18",
+   "views": 93,
+   "likes": 1,
+   "comments": 0
+  },
+  {
+   "post": "Buy 1 Take 1",
+   "date": "2026-11-16",
+   "views": 181,
+   "likes": 3,
+   "comments": 0
+  },
+  {
+   "post": "Origin Part 5",
+   "date": "2026-11-13",
+   "views": 101,
+   "likes": 1,
+   "comments": 0
+  },
+  {
+   "post": "Resume",
+   "date": "2026-07-16",
+   "views": 1123,
+   "likes": 65,
+   "comments": 1,
+   "pinned": true
+  }
+ ],
+ "tiktok_scheduled": [
+  {
+   "post": "EP3 · Galit si Customer? Kalmado Ka",
+   "slot": "2026-11-27 19:00 PHT"
+  },
+  {
+   "post": "PhilHealth AI scam check",
+   "slot": "2026-11-28 07:00 PHT"
+  }
+ ],
+ "meta_posts_ig_fb_crossposted": [
+  {
+   "post": "13th Month Mo, Saan Mapupunta?",
+   "date": "2026-11-26",
+   "platform": "facebook",
+   "views": 175,
+   "viewers": 162,
+   "interactions": 3,
+   "likes": 1,
+   "comments": 1,
+   "shares": 1,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "899,296",
+   "avg_play_s": 6,
+   "three_sec_views": 51
+  },
+  {
+   "post": "13th Month Mo, Saan Mapupunta?",
+   "date": "2026-11-26",
+   "platform": "instagram",
+   "views": 7,
+   "reach": 8,
+   "interactions": 1,
+   "likes": 0,
+   "comments": 1,
+   "shares": 0,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "24s",
+   "avg_play_s": 3
+  },
+  {
+   "post": "Guro: Quiz + Answer Key (slides)",
+   "date": "2026-11-26",
+   "platform": "facebook",
+   "views": 9,
+   "viewers": 4,
+   "interactions": 2,
+   "likes": 0,
+   "comments": 1,
+   "shares": 1,
+   "saves": 0,
+   "follows": 0,
+   "three_sec_views": 0
+  },
+  {
+   "post": "Guro: Quiz + Answer Key (carousel)",
+   "date": "2026-11-26",
+   "platform": "instagram",
+   "views": 12,
+   "reach": 5,
+   "interactions": 3,
+   "likes": 1,
+   "comments": 1,
+   "shares": 0,
+   "saves": 0,
+   "follows": 0
+  },
+  {
+   "post": "EP2 · Guro? Quiz sa 1 Minuto",
+   "date": "2026-11-25",
+   "platform": "facebook",
+   "views": 222,
+   "viewers": 206,
+   "interactions": 3,
+   "likes": 1,
+   "comments": 1,
+   "shares": 1,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "758,709",
+   "avg_play_s": 4,
+   "three_sec_views": 48
+  },
+  {
+   "post": "EP2 · Guro? Quiz sa 1 Minuto",
+   "date": "2026-11-25",
+   "platform": "instagram",
+   "views": 37,
+   "reach": 32,
+   "interactions": 2,
+   "likes": 0,
+   "comments": 1,
+   "shares": 0,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "2m 52s",
+   "avg_play_s": 5
+  },
+  {
+   "post": "EP1 · Resume sa 5 Minuto",
+   "date": "2026-11-23",
+   "platform": "facebook",
+   "views": 178,
+   "viewers": 147,
+   "interactions": 3,
+   "likes": 1,
+   "comments": 1,
+   "shares": 1,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "1,116,092",
+   "avg_play_s": 7,
+   "three_sec_views": 57
+  },
+  {
+   "post": "EP1 · Resume sa 5 Minuto",
+   "date": "2026-11-23",
+   "platform": "instagram",
+   "views": 30,
+   "reach": 27,
+   "interactions": 5,
+   "likes": 2,
+   "comments": 1,
+   "shares": 0,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "7m 34s",
+   "avg_play_s": 14
+  },
+  {
+   "post": "Plano ng Linggo",
+   "date": "2026-11-20",
+   "platform": "crossposted",
+   "views": 84,
+   "viewers": 53,
+   "interactions": 8,
+   "likes": 2,
+   "comments": 4,
+   "shares": 0,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "485,622",
+   "avg_play_s": 8,
+   "three_sec_views": 11
+  },
+  {
+   "post": "Takip o Ayos",
+   "date": "2026-11-18",
+   "platform": "crossposted",
+   "views": 299,
+   "viewers": 56,
+   "interactions": 4,
+   "likes": 2,
+   "comments": 0,
+   "shares": 0,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "168,442",
+   "avg_play_s": 3,
+   "three_sec_views": 16
+  },
+  {
+   "post": "Buy 1 Take 1",
+   "date": "2026-11-16",
+   "platform": "crossposted",
+   "views": 95,
+   "viewers": 21,
+   "interactions": 6,
+   "likes": 3,
+   "comments": 0,
+   "shares": 1,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "77,933",
+   "avg_play_s": 4,
+   "three_sec_views": 9
+  },
+  {
+   "post": "Origin Part 5",
+   "date": "2026-11-13",
+   "platform": "crossposted",
+   "views": 302,
+   "viewers": 214,
+   "interactions": 5,
+   "likes": 2,
+   "comments": 0,
+   "shares": 1,
+   "saves": 0,
+   "follows": 0,
+   "watch_time": "452,216",
+   "avg_play_s": 2,
+   "three_sec_views": 27
+  }
+ ],
+ "business": {
+  "class_seats_sold": 0,
+  "waitlist": 0,
+  "leads": 0,
+  "coaching_booked_hours": 0,
+  "source": "content/business/sales/launch-status.json (updated 2026-11-10)"
+ },
+ "not_found": [
+  "TikTok exact follower total (Studio shows only '1K')",
+  "Instagram follower total and 28-day follows (Meta shows '--')",
+  "Facebook follower total (not on Insights overview)",
+  "Instagram 28-day visits and link clicks (not on new Overview layout)",
+  "Facebook 28-day link clicks (not on Overview)",
+  "Facebook watch time in content table shown as raw number (e.g. 899,296), unit not labeled",
+  "business numbers not updated since 2026-11-10 in launch-status.json"
+ ],
+ "meta_facebook_28d": {
+  "window": "Oct 29 - Nov 25, 2026",
+  "views": "1.9K",
+  "views_change": "+127%",
+  "viewers": 1621,
+  "viewers_change": "+131.6%",
+  "interactions": 26,
+  "interactions_change": "+160%",
+  "visits": 23,
+  "visits_change": "+283.3%",
+  "follows": 2,
+  "unfollows": 0,
+  "three_sec_views": 366,
+  "watch_time": "1h 33m"
+ },
+ "meta_instagram_28d": {
+  "window": "Oct 29 - Nov 25, 2026",
+  "views": "2.5K",
+  "views_change": "+119.2%",
+  "reach": 470,
+  "reach_change": "+710.3%",
+  "interactions": 51,
+  "interactions_change": "+537.5%",
+  "views_from_followers": "35.3%"
+ }
+}
