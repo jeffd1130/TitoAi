@@ -1,8 +1,93 @@
 {
   "_about": "Tracks which approved Studio posts the tito-approval-scheduler task has scheduled/posted and seeded. Keys = Studio post id. Platforms: tiktok, facebook, instagram -> {status: scheduled|posted, at: ISO PHT, link}. seed_comment -> {tiktok|facebook|instagram: ISO PHT}.",
-  "w48-thu-guro-slides": {"tiktok": {"status": "posted", "at": "2026-11-26T12:35+08:00", "link": "https://www.tiktok.com/@tito.aiph/photo/7712332855191342343"}, "instagram": {"status": "posted", "at": "2026-11-26T12:35+08:00", "link": "https://www.instagram.com/p/DgMQU59Gs0t/"}, "facebook": {"status": "posted", "at": "2026-11-26T12:35+08:00", "link": ""}, "seed_comment": {"tiktok": "2026-11-26T12:40+08:00", "facebook": "2026-11-26T12:38+08:00", "instagram": "2026-11-26T12:42+08:00"}},
-  "w48-wed-ep2-guro-quiz": {"tiktok": {"status": "posted", "at": "2026-11-25T19:00+08:00", "link": ""}, "instagram": {"status": "posted", "at": "2026-11-25T19:00+08:00", "link": "https://www.instagram.com/tito.aiph/reel/DgKX5PzBrNG/"}, "facebook": {"status": "posted", "at": "2026-11-25T19:00+08:00", "link": ""}, "seed_comment": {"tiktok": "2026-11-25", "facebook": "2026-11-25", "instagram": "2026-11-25"}},
-  "w48-thu-13th-month": {"tiktok": {"status": "scheduled", "at": "2026-11-26T19:00+08:00"}, "facebook": {"status": "scheduled", "at": "2026-11-26T19:00+08:00"}, "instagram": {"status": "scheduled", "at": "2026-11-26T19:00+08:00"}, "seed_comment": "handled by task tito-seed-comment-13th-month"},
-  "w48-fri-ep3-galit-customer": {"tiktok": {"status": "scheduled", "at": "2026-11-27T19:00+08:00"}, "facebook": {"status": "scheduled", "at": "2026-11-27T19:00+08:00"}, "instagram": {"status": "scheduled", "at": "2026-11-27T19:00+08:00"}, "seed_comment": "handled by task tito-seed-comment-ep3-galit"},
-  "w48-sat-scam-slides": {"tiktok": {"status": "scheduled", "at": "2026-11-28T07:00+08:00"}, "facebook": {"status": "scheduled", "at": "2026-11-28T07:00+08:00"}, "instagram": {"status": "scheduled", "at": "2026-11-28T07:00+08:00"}, "seed_comment": "handled by task tito-seed-comment-scam-slides"}
+  "w48-thu-guro-slides": {
+    "tiktok": {
+      "status": "posted",
+      "at": "2026-11-26T12:35+08:00",
+      "link": "https://www.tiktok.com/@tito.aiph/photo/7712332855191342343"
+    },
+    "instagram": {
+      "status": "posted",
+      "at": "2026-11-26T12:35+08:00",
+      "link": "https://www.instagram.com/p/DgMQU59Gs0t/"
+    },
+    "facebook": {
+      "status": "posted",
+      "at": "2026-11-26T12:35+08:00",
+      "link": ""
+    },
+    "seed_comment": {
+      "tiktok": "2026-11-26T12:40+08:00",
+      "facebook": "2026-11-26T12:38+08:00",
+      "instagram": "2026-11-26T12:42+08:00"
+    }
+  },
+  "w48-wed-ep2-guro-quiz": {
+    "tiktok": {
+      "status": "posted",
+      "at": "2026-11-25T19:00+08:00",
+      "link": ""
+    },
+    "instagram": {
+      "status": "posted",
+      "at": "2026-11-25T19:00+08:00",
+      "link": "https://www.instagram.com/tito.aiph/reel/DgKX5PzBrNG/"
+    },
+    "facebook": {
+      "status": "posted",
+      "at": "2026-11-25T19:00+08:00",
+      "link": ""
+    },
+    "seed_comment": {
+      "tiktok": "2026-11-25",
+      "facebook": "2026-11-25",
+      "instagram": "2026-11-25"
+    }
+  },
+  "w48-thu-13th-month": {
+    "tiktok": {
+      "status": "scheduled",
+      "at": "2026-11-26T19:00+08:00"
+    },
+    "facebook": {
+      "status": "scheduled",
+      "at": "2026-11-26T19:00+08:00"
+    },
+    "instagram": {
+      "status": "scheduled",
+      "at": "2026-11-26T19:00+08:00"
+    },
+    "seed_comment": "handled by task tito-seed-comment-13th-month"
+  },
+  "w48-fri-ep3-galit-customer": {
+    "tiktok": {
+      "status": "scheduled",
+      "at": "2026-11-27T19:00+08:00"
+    },
+    "facebook": {
+      "status": "scheduled",
+      "at": "2026-11-27T19:00+08:00"
+    },
+    "instagram": {
+      "status": "scheduled",
+      "at": "2026-11-27T19:00+08:00"
+    },
+    "seed_comment": "handled by task tito-seed-comment-ep3-galit",
+    "version": "v2 (galit-reel-v2.mp4), swapped Nov 27 12:40 PHT; old FB/IG reels in Meta Drafts"
+  },
+  "w48-sat-scam-slides": {
+    "tiktok": {
+      "status": "scheduled",
+      "at": "2026-11-28T07:00+08:00"
+    },
+    "facebook": {
+      "status": "scheduled",
+      "at": "2026-11-28T07:00+08:00"
+    },
+    "instagram": {
+      "status": "scheduled",
+      "at": "2026-11-28T07:00+08:00"
+    },
+    "seed_comment": "handled by task tito-seed-comment-scam-slides"
+  }
 }
