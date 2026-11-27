@@ -61,15 +61,15 @@
   },
   "w48-fri-ep3-galit-customer": {
     "tiktok": {
-      "status": "scheduled",
+      "status": "posted",
       "at": "2026-11-27T19:00+08:00"
     },
     "facebook": {
-      "status": "scheduled",
+      "status": "posted",
       "at": "2026-11-27T19:00+08:00"
     },
     "instagram": {
-      "status": "scheduled",
+      "status": "posted",
       "at": "2026-11-27T19:00+08:00"
     },
     "seed_comment": "handled by task tito-seed-comment-ep3-galit",
