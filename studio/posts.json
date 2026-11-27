@@ -1,5 +1,62 @@
 [
   {
+    "id": "w49-sat-bangko-call-slides",
+    "title": "W49 Sat · Tumawag ang 'Bangko' Mo? (slides)",
+    "series": "W49 · Saturday 7:00 AM PHT · carousel · scam check",
+    "slot": "2026-12-05T07:00",
+    "type": "carousel",
+    "media": [
+      "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-1.png",
+      "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-2.png",
+      "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-3.png",
+      "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-4.png",
+      "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-5.png",
+      "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-6.png"
+    ],
+    "cover": "content/2026-W49/06-sat-bangko-call-slides/drafts/slides/slide-1.png",
+    "captions": {
+      "file": "content/2026-W49/06-sat-bangko-call-slides/drafts/captions.md"
+    }
+  },
+  {
+    "id": "w49-thu-regalo-slides",
+    "title": "W49 Thu · Regalo List sa ₱3,000 (slides)",
+    "series": "W49 · Thursday 7:00 AM PHT · carousel · companion to EP5",
+    "slot": "2026-12-03T07:00",
+    "type": "carousel",
+    "media": [
+      "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-1.png",
+      "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-2.png",
+      "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-3.png",
+      "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-4.png",
+      "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-5.png",
+      "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-6.png"
+    ],
+    "cover": "content/2026-W49/04-thu-regalo-slides/drafts/slides/slide-1.png",
+    "captions": {
+      "file": "content/2026-W49/04-thu-regalo-slides/drafts/captions.md"
+    }
+  },
+  {
+    "id": "w49-tue-legit-check-slides",
+    "title": "W49 Tue · Legit Check Bago Mag-order (slides)",
+    "series": "W49 · Tuesday 7:00 AM PHT · carousel · companion to EP4",
+    "slot": "2026-12-01T07:00",
+    "type": "carousel",
+    "media": [
+      "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-1.png",
+      "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-2.png",
+      "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-3.png",
+      "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-4.png",
+      "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-5.png",
+      "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-6.png"
+    ],
+    "cover": "content/2026-W49/02-tue-legit-check-slides/drafts/slides/slide-1.png",
+    "captions": {
+      "file": "content/2026-W49/02-tue-legit-check-slides/drafts/captions.md"
+    }
+  },
+  {
     "id": "w47-wed-takip-o-ayos",
     "title": "W47 Wed · Takip o Ayos? (ASEAN Summit satire)",
     "series": "W47 · Wednesday 7:00 PM PHT · satire reel",
@@ -106,7 +163,7 @@
   {
     "id": "w48-sat-scam-slides",
     "title": "W48 Sat · Peke ba ang Video? PhilHealth Cash Payout (slides)",
-    "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check + free live",
+    "series": "W48 · Saturday 7:00 AM PHT · carousel · scam check",
     "slot": "2026-11-28T07:00",
     "type": "carousel",
     "media": [

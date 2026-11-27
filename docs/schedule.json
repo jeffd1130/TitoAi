@@ -1147,6 +1147,16 @@
           "boost": null
         },
         {
+          "day": "TUE",
+          "title": "Legit Check Bago Mag-order (slides)",
+          "tag": "Carousel 6 slides · online shoppers · scam check",
+          "note": "Companion to EP4. PNP Nov 25: online selling scams #1 (743 cases Jan–Oct). Slides: content/2026-W49/02-tue-legit-check-slides/. Draft in Studio Approve & Post (Nov 27), waiting for Jeff. Post Tue Dec 1, 7:00 AM PHT (Mon 3:00 PM PST). CTA: Comment LEGIT.",
+          "date": "Dec 1",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
           "day": "WED",
           "title": "EP5 · 13th Month? Huwag Muna Gastusin",
           "tag": "Reel 30–45 s · employees (B) · Claude free",
@@ -1157,11 +1167,31 @@
           "boost": null
         },
         {
+          "day": "THU",
+          "title": "Regalo List sa ₱3,000 (slides)",
+          "tag": "Carousel 6 slides · employees + families · gift budget",
+          "note": "Companion to EP5. Sample budget, prompt not yet tested. Slides: content/2026-W49/04-thu-regalo-slides/. Draft in Studio Approve & Post (Nov 27), waiting for Jeff. Post Thu Dec 3, 7:00 AM PHT (Wed 3:00 PM PST). CTA: I-save.",
+          "date": "Dec 3",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
           "day": "FRI",
           "title": "EP6 · Cover Letter para sa BPO",
           "tag": "Reel 30–45 s · job seekers · Gemini free",
           "note": "Series: content/series/libre-ai-totoong-trabaho/episodes.md. CTA: comment PROMPT (free prompt pack + waitlist form). Replaces 'Ginamit ng Anak Ko ang AI sa Assignment' (draft kept in its folder). Jeff screen-records the real free-tool run + voice.",
           "date": "Dec 4",
+          "status": "draft",
+          "url": null,
+          "boost": null
+        },
+        {
+          "day": "SAT",
+          "title": "Tumawag ang 'Bangko' Mo? (slides)",
+          "tag": "Carousel 6 slides · families/OFW · scam call",
+          "note": "PNP Nov 25: vishing #2 (354 cases). No live line. Slides: content/2026-W49/06-sat-bangko-call-slides/. Draft in Studio Approve & Post (Nov 27), waiting for Jeff. Post Sat Dec 5, 7:00 AM PHT (Fri 3:00 PM PST). CTA: follow.",
+          "date": "Dec 5",
           "status": "draft",
           "url": null,
           "boost": null
