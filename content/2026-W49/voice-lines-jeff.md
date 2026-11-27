@@ -35,7 +35,12 @@
 5. Sabi ng isang report, kaya na ng AI ang ilang BPO task. Kaya gamitin mo rin ang AI para umangat.
 6. Gusto mo ang prompt? Comment PROMPT.
 
-## BTS reel (Sun Nov 29, 7 PM): intro only, optional
-1. Hi, ako ang tao sa likod ng Tito AI. Ako ang nag-a-approve ng lahat ng makikita mo dito.
-
-(Finn reads the rest of the BTS reel as Tito AI.)
+## BTS reel (Sun Nov 29, 7 PM): Jeff voices it all. Send `bts-voice.m4a` today (Nov 27)
+1. Hi, ako ang tao sa likod ng Tito AI.
+2. Wala kang oras gumawa ng content? Same. Kaya ito ang ginawa ko.
+3. Ang AI ang gumagawa ng draft: research, script, slides, pati video.
+4. Pero hindi siya perpekto. Ito ang mali niya, ako ang nag-ayos.
+5. Walang lalabas sa page hangga't hindi ko inaaprubahan. Ako pa rin ang nagdedesisyon.
+6. Hindi mo kailangan ng buong team ng AI. Isang libreng chat lang, simula ka na.
+7. I-type mo lang: "Gawan mo ako ng tatlong post idea para sa negosyo ko ngayong linggo." Tapos ikaw ang mag-check.
+8. Gusto mo ang buong prompt para sa page mo? Comment PLANO.

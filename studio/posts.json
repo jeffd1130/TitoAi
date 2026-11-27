@@ -1,5 +1,19 @@
 [
   {
+    "id": "w49-sun-bts-reel",
+    "title": "W49 Sun · Behind the Scenes: Paano Ginagawa ang Tito AI (DRAFT, voice pending)",
+    "series": "W49 · Sunday 7:00 PM PHT · reel · behind the scenes",
+    "slot": "2026-11-29T19:00",
+    "type": "video",
+    "media": [
+      "docs/media/w49-bts-reel/bts-reel-draft-v1.mp4"
+    ],
+    "cover": "docs/media/w49-bts-reel/bts-reel-cover.jpg",
+    "captions": {
+      "file": "content/2026-W49/bts-ai-posts/drafts/captions.md"
+    }
+  },
+  {
     "id": "w49-sat-bangko-call-slides",
     "title": "W49 Sat · Tumawag ang 'Bangko' Mo? (slides)",
     "series": "W49 · Saturday 7:00 AM PHT · carousel · scam check",
