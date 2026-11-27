@@ -151,7 +151,7 @@ const Workflow = () => {
   </AbsoluteFill>;
 };
 
-// The mistake: old slide (wrong line, blurred) crossed out -> fixed slide.
+// The mistake (real): v2 CTA covered the chibi's face -> fixed in v3.
 const Mistake = () => {
   const t = useT();
   const fix = interpolate(t, [3.0, 3.5], [0, 1], clamp);
@@ -163,7 +163,7 @@ const Mistake = () => {
     <div style={{position: 'absolute', left: 50, top: 560, width: 470}}>
       <Img src={staticFile('bts/mistake-before.png')} style={{width: 470, borderRadius: 16, outline: `5px solid ${coral}`, filter: `grayscale(${fix * 0.6})`}} />
       {mark(false, xo)}
-      <div style={{color: coral, font: `48px/1.1 ${bebas}`, marginTop: 14, textAlign: 'center'}}>DRAFT NG AI: MAY MALING DETALYE</div>
+      <div style={{color: coral, font: `48px/1.1 ${bebas}`, marginTop: 14, textAlign: 'center'}}>DRAFT NG AI: TAKIP ANG MUKHA</div>
     </div>
     <div style={{position: 'absolute', left: 560, top: 560, width: 470, opacity: fix, transform: `translateX(${(1 - fix) * 60}px)`}}>
       <Img src={staticFile('bts/mistake-after.png')} style={{width: 470, borderRadius: 16, outline: `5px solid ${teal}`}} />
