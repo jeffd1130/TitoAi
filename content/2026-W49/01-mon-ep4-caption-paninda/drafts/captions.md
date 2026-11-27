@@ -1,4 +1,4 @@
-**Video:** `docs/media/w49-mon-ep4-caption-paninda/ep4-reel-v1.mp4` (9:16, 47.7 s, -14 LUFS). Jeff's own voice (denoised). Real ChatGPT output captured by Claude Code Nov 27 (Temporary chat; account plan not verified, so no "libre ChatGPT" claim). Moving Flow chibi clips (approved chibi). Sample product (dried mango ₱150) is a practice example.
+**Video:** `docs/media/w49-mon-ep4-caption-paninda/ep4-reel-v2.mp4` (9:16, 47.7 s, -14 LUFS). v2 (Nov 27): Jeff's phone screen recording of ChatGPT (bigger text; first 2.6 s skipped) + Jeff's own voice (denoised) + moving Flow chibi. Account plan not verified, so no "libre ChatGPT" claim. Dried mango ₱150 is a practice example.
 **Post:** Mon Nov 30, 7:00 PM PHT (Mon 3:00 AM PST). TikTok (AI-generated label on: chibi clips) + IG reel + FB reel.
 **Series:** Libre AI, Totoong Trabaho EP4 · CTA: Comment PROMPT.
 

@@ -3,7 +3,7 @@ import {Audio, Video} from '@remotion/media';
 import {AbsoluteFill, Composition, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 // W49 Mon (Nov 30, 2026) EP4 "3 Caption para sa Paninda" — Jeff's own voice (denoised, first 0.7 s trimmed so voice starts on frame 1),
-// real ChatGPT output captured by Claude Code Nov 27 (Temporary chat in Jeff's logged-in account: plan not verified, so no 'libre' claim),
+// real ChatGPT output from Jeff's phone screen recording (Nov 27 15:00; first 2.6 s skipped: they show other-client chat suggestions; plan not verified, so no 'libre' claim),
 // moving Flow chibi clips (approved chibi). Built from FriGalitReel. CTA kept below the chibi's face.
 
 const FPS = 30;
@@ -97,6 +97,21 @@ const Shot = ({src, w, h, top = 600, label = 'ChatGPT · sample na paninda', mar
   </AbsoluteFill>;
 };
 
+// Jeff's phone screen recording, shown full width (bigger text), cropped vertically to the part that matters.
+const PhoneVid = ({start, rate, cropY, viewH, top = 420}: {start: number; rate: number; cropY: number; viewH: number; top?: number}) => {
+  const frame = useCurrentFrame();
+  const s = 1000 / 1080;
+  const pop = interpolate(frame, [0, 6], [0.95, 1], clamp);
+  return <AbsoluteFill style={bg}>
+    <div style={{position: 'absolute', left: 40, top, width: 1000, height: viewH * s, borderRadius: 24, overflow: 'hidden',
+      boxShadow: '0 20px 60px #000a', outline: `5px solid ${gold}`, transform: `scale(${pop})`, background: '#000'}}>
+      <Video src={staticFile('ep4/phone.mp4')} muted trimBefore={f(start)} playbackRate={rate}
+        style={{width: 1000, height: 2340 * s, marginTop: -cropY * s, display: 'block'}} />
+    </div>
+    <Label top={top + viewH * s + 18}>ChatGPT · sample na paninda</Label>
+  </AbsoluteFill>;
+};
+
 const ChibiClip = ({src, offset}: {src: string; offset: number}) =>
   <AbsoluteFill>
     <Video src={staticFile(src)} muted trimBefore={f(offset)} style={{width: 1080, height: 1920, objectFit: 'cover'}} />
@@ -107,7 +122,7 @@ const HookInset = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const sp = Math.max(0.85, spring({frame, fps, config: {damping: 12, stiffness: 150}}));
-  return <div style={{position: 'absolute', right: 50, top: 1250, width: 220, height: 220, borderRadius: '50%', overflow: 'hidden',
+  return <div style={{position: 'absolute', right: 50, top: 1300, width: 220, height: 220, borderRadius: '50%', overflow: 'hidden',
     border: `6px solid ${gold}`, boxShadow: '0 16px 40px #000a', transform: `scale(${sp})`}}>
     <Video src={staticFile('fri/chibi-point.mp4')} muted style={{width: 420, height: 747, objectFit: 'cover', marginLeft: -100, marginTop: -200}} />
   </div>;
@@ -126,16 +141,16 @@ export const MonEp4Reel: React.FC = () => {
   return <AbsoluteFill style={{backgroundColor: navy}}>
     <style>{`@font-face{font-family:'Bebas Neue';src:url(${staticFile('fri/BebasNeue-Regular.ttf')})}`}</style>
 
-    {/* hook: the real result on frame 0 */}
-    <Seq a={0} b={4.98}><Shot src="ep4/crop-funny.png" w={1383} h={321} top={560} quote="Yung dried mango na pang-regalo sana, pero ikaw din ang nakaubos! 😂" /></Seq>
+    {/* hook: the real result on frame 0 (Jeff's phone recording, Nov 27 15:00) */}
+    <Seq a={0} b={4.98}><Shot src="ep4/ph-funny.png" w={1080} h={1020} top={510} label="ChatGPT · totoong sagot" /></Seq>
     <Seq a={0} b={4.98}><HookInset /></Seq>
-    <Seq a={8.8} b={15.42}><Shot src="ep4/win-prompt.png" w={1418} h={691} top={620} /></Seq>
-    <Seq a={15.42} b={20.46}><Shot src="ep4/crop-prompt.png" w={968} h={269} top={720} /></Seq>
-    <Seq a={20.46} b={22.74}><Shot src="ep4/crop-funny.png" w={1383} h={321} top={560} label="ChatGPT · 1. Nakakatawa" quote="Yung dried mango na pang-regalo sana, pero ikaw din ang nakaubos! 😂" /></Seq>
-    <Seq a={22.74} b={24.46}><Shot src="ep4/crop-direct.png" w={1383} h={321} top={560} label="ChatGPT · 2. Diretso" quote="Looking for an affordable Christmas gift? Dried mango for only ₱150 per pack!" /></Seq>
-    <Seq a={24.46} b={26.92}><Shot src="ep4/crop-promo.png" w={1383} h={305} top={560} label="ChatGPT · 3. May promo" quote="Buy 3 packs of dried mango for only ₱450 at libre na ang shipping!" /></Seq>
-    <Seq a={29.54} b={31.88}><Shot src="ep4/crop-prompt.png" w={968} h={269} top={620} label="Nasa prompt mismo" quote="Huwag gumawa ng pekeng review o claim na hindi totoo." mark={{x: 375, y: 160, w: 562, h: 46}} /></Seq>
-    <Seq a={36.38} b={41.98}><Shot src="ep4/crop-promo.png" w={1383} h={305} top={560} label="I-check: 3 × ₱150 = ₱450 ✓" quote="Buy 3 packs of dried mango for only ₱450 at libre na ang shipping!" mark={{x: 25, y: 78, w: 925, h: 48}} /></Seq>
+    <Seq a={8.8} b={15.42}><PhoneVid start={3.0} rate={0.82} cropY={380} viewH={1100} /></Seq>
+    <Seq a={15.42} b={20.46}><PhoneVid start={8.4} rate={1} cropY={90} viewH={1150} /></Seq>
+    <Seq a={20.46} b={22.74}><Shot src="ep4/ph-funny.png" w={1080} h={1020} top={330} label="ChatGPT · 1. Nakakatawa" /></Seq>
+    <Seq a={22.74} b={24.46}><Shot src="ep4/ph-direct.png" w={1080} h={960} top={330} label="ChatGPT · 2. Diretso" /></Seq>
+    <Seq a={24.46} b={26.92}><Shot src="ep4/ph-promo.png" w={1080} h={1200} top={330} label="ChatGPT · 3. May promo" /></Seq>
+    <Seq a={29.54} b={31.88}><Shot src="ep4/ph-prompt.png" w={1080} h={690} top={420} label="Nasa prompt mismo" mark={{x: 20, y: 405, w: 1040, h: 235}} /></Seq>
+    <Seq a={36.38} b={41.98}><Shot src="ep4/ph-promo.png" w={1080} h={1200} top={380} label="I-check: 3 × ₱150 = ₱450 ✓" mark={{x: 20, y: 296, w: 1040, h: 142}} /></Seq>
     {CHIBI.map(([src, a, b, off]) => <Seq key={`${src}-${a}`} a={a} b={b}><ChibiClip src={src} offset={off} /></Seq>)}
 
     <Audio src={staticFile('ep4/voice.wav')} />
@@ -150,7 +165,7 @@ export const MonEp4Reel: React.FC = () => {
     <Top a={26.92} b={29.54}><Line size={110}>IMPORTANTE:</Line></Top>
     <Top a={29.54} b={31.88}><Line bg={coral} size={104}>BAWAL ANG PEKENG REVIEW</Line></Top>
     <Top a={31.88} b={36.38}><Line size={96}>BUYERS NGAYON:</Line><Line bg={gold} c={navy} size={104}>LEGIT CHECK MUNA</Line></Top>
-    <Top a={36.38} b={41.98}><Line size={96}>PILIIN ANG BAGAY SA 'YO</Line><Line bg={teal} size={96}>IKAW ANG MAG-CHECK NG PRESYO</Line></Top>
+    <Top a={36.38} b={41.98}><Line size={78}>PILIIN ANG BAGAY SA 'YO</Line><Line bg={teal} size={78}>IKAW ANG MAG-CHECK NG PRESYO</Line></Top>
     <Top a={41.98} b={43.64}><Line size={100}>BUONG PROMPT?</Line></Top>
     {/* below the chibi's face */}
     <Top a={43.64} b={45.4} top={1080}><Line size={100}>COMMENT:</Line><Line bg={gold} c={navy} size={150}>PROMPT</Line></Top>

@@ -64,3 +64,7 @@ content/business/
 # Large loose videos at repo root (Nov 27)
 /*.mp4
 /*.mov
+
+# Raw phone screen recordings can show other-client chat titles; keep them local
+content/**/raw/phone-rec*.mp4
+w44-friday-motion-sample/public/ep4/phone.mp4

@@ -302,9 +302,9 @@
     "slot": "2026-11-30T19:00",
     "type": "video",
     "media": [
-      "docs/media/w49-mon-ep4-caption-paninda/ep4-reel-v1.mp4"
+      "docs/media/w49-mon-ep4-caption-paninda/ep4-reel-v2.mp4"
     ],
-    "cover": "docs/media/w49-mon-ep4-caption-paninda/ep4-reel-cover.jpg",
+    "cover": "docs/media/w49-mon-ep4-caption-paninda/ep4-reel-v2-cover.jpg",
     "captions": {
       "file": "content/2026-W49/01-mon-ep4-caption-paninda/drafts/captions.md"
     }
