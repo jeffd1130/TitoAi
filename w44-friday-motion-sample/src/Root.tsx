@@ -13,6 +13,7 @@ import { WedQuizReelV2Composition } from "./WedQuizReelV2";
 import { ThuThirteenthReelComposition } from "./ThuThirteenthReel";
 import { FriGalitReelComposition } from "./FriGalitReel";
 import { BtsReelComposition } from "./BtsReel";
+import { MonEp4ReelComposition } from "./MonEp4Reel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ export const RemotionRoot: React.FC = () => {
       <ThuThirteenthReelComposition />
       <FriGalitReelComposition />
       <BtsReelComposition />
+      <MonEp4ReelComposition />
     </>
   );
 };

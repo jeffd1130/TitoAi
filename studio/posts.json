@@ -294,5 +294,19 @@
     "captions": {
       "file": "content/2026-W45/01-mon-ai-tip/drafts/draft.md"
     }
+  },
+  {
+    "id": "w49-mon-ep4-caption-paninda",
+    "title": "W49 Mon · EP4 3 Caption para sa Paninda (ChatGPT)",
+    "series": "W49 · Monday 7:00 PM PHT · reel · Libre AI, Totoong Trabaho EP4",
+    "slot": "2026-11-30T19:00",
+    "type": "video",
+    "media": [
+      "docs/media/w49-mon-ep4-caption-paninda/ep4-reel-v1.mp4"
+    ],
+    "cover": "docs/media/w49-mon-ep4-caption-paninda/ep4-reel-cover.jpg",
+    "captions": {
+      "file": "content/2026-W49/01-mon-ep4-caption-paninda/drafts/captions.md"
+    }
   }
 ]
