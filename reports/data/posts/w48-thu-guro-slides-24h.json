@@ -1,0 +1,25 @@
+{
+  "post_id": "w48-thu-guro-slides",
+  "title": "Guro: Quiz + Answer Key sa 1 Minuto (slides)",
+  "format": "carousel 6 slides",
+  "posted": {"tiktok": "2026-11-26T12:35+08:00", "facebook": "2026-11-26T12:34+08:00", "instagram": "2026-11-26T12:32+08:00"},
+  "pulled": "2026-11-27T19:52+08:00",
+  "hours_live": 31,
+  "tiktok": {
+    "url": "https://www.tiktok.com/@tito.aiph/photo/7712332855191342343",
+    "views": 552, "likes": 12, "comments": 0, "comments_note": "counter shows 0; our seed comment is in the comment list", "shares": 0, "saves": 4,
+    "total_play_time": "0h46m10s", "avg_watch_s": 3.66, "watched_full_pct": 3.4, "new_followers": 0,
+    "retention_pct": null, "retention_note": "still processing",
+    "hourly_peak": "about 110 views at hour 28 (read from chart); second wave from hour 27",
+    "traffic": {"for_you": 99.6, "profile": 0.4, "following": "<0.1", "direct_messages": "<0.1", "sound": "<0.1", "search": "<0.1", "other": "<0.1"},
+    "search_queries": "still processing",
+    "total_viewers": "still processing",
+    "viewers": {"age": {"18-24": 58, "25-34": 37, "35-44": 2, "45-54": 2, "55+": 1}, "gender": {"male": 64, "female": 36, "other": 0}, "location": {"Philippines": 98.8}}
+  },
+  "facebook_photos": {"views": 9, "viewers": 4, "interactions": 2, "reactions": 0, "comments": 1, "shares": 1, "saves": 0, "follows": 0, "three_sec_views": 0},
+  "instagram_carousel": {"views": 13, "reach": 6, "interactions": 3, "likes": 1, "comments": 1, "shares": 0, "saves": 0, "follows": 0},
+  "facebook_story": {"views": 0, "note": "FB story insights are off in Meta"},
+  "business": {"guro_comments": 0, "dms_sent": 0, "waitlist": 0},
+  "benchmark": {"last5_tiktok_avg": 181, "last5": {"EP2": 175, "EP1": 292, "Plano ng Linggo": 166, "Takip o Ayos": 93, "Buy 1 Take 1": 181}, "vs_last5_pct": 204},
+  "boost_gate": {"rule": "300 TikTok views by 48 h", "views_at_31h": 552, "status": "passed"}
+}
