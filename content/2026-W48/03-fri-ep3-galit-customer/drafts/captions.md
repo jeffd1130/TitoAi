@@ -1,4 +1,4 @@
-**Video:** docs/media/w48-fri-ep3-galit-customer/galit-reel-v1.mp4 (45.5 s). Jeff's Gemini recording, Nov 24, work Google account: no "libre" claim about this run.
+**Video:** docs/media/w48-fri-ep3-galit-customer/galit-reel-v2.mp4 (30.9 s; v2 Nov 27: cut to one CTA, reply shown big, CTA off the chibi's face). Jeff's Gemini recording, Nov 24, work Google account: no "libre" claim about this run.
 **Post:** Fri Nov 27, 7:00 PM PHT (Fri 3:00 AM PST)
 **Voice:** Gemini TTS free voice Finn (AI voice). Turn on TikTok's "AI-generated content" label when posting.
 
@@ -6,7 +6,7 @@
 
 **TikTok**
 
-Paano sumagot sa galit na customer gamit ang AI, kalmado at propesyonal. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang.) Comment PROMPT 👇 Follow para sa susunod na episode. (AI voice ang gamit dito.)
+Paano sumagot sa galit na customer gamit ang AI, kalmado at propesyonal. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang.) Comment PROMPT 👇 (AI voice ang gamit dito.)
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #CustomerService #BPOLife
 
@@ -14,9 +14,9 @@ Paano sumagot sa galit na customer gamit ang AI, kalmado at propesyonal. Pwede m
 
 Galit si customer? Kalmado ka.
 
-I-paste ang mensahe sa Gemini, kasama ang totoong alam mo, at sabihin: mag-sorry, ipaliwanag ang susunod na hakbang, huwag mangako ng hindi kaya. Gusto mo ng ibang version? Humingi lang ng isa pang option. Lagyan ng totoong detalye bago i-send. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang sa video.)
+I-paste ang mensahe sa Gemini, kasama ang totoong alam mo, at sabihin: mag-sorry, ipaliwanag ang susunod na hakbang, huwag mangako ng hindi kaya. Lagyan ng totoong detalye bago i-send. Pwede mo rin itong subukan sa libreng ChatGPT, Gemini o Claude. (Sample message lang sa video.)
 
-Gusto mo ang buong prompt + 9 pa? Comment PROMPT 👇 Follow para sa susunod na episode. (AI voice ang gamit dito.)
+Gusto mo ang buong prompt + 9 pa? Comment PROMPT 👇 (AI voice ang gamit dito.)
 
 #TitoAIPH #MgaPamangkin #AIParaSaAtin #CustomerService #BPOLife
 

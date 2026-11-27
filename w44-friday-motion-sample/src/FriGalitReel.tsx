@@ -148,6 +148,8 @@ export const FriGalitReel: React.FC = () => {
     <Sequence from={0} durationInFrames={f(3.8)}><HookAnswer /></Sequence>
     <Sequence from={0} durationInFrames={f(3.8)}><HookInset /></Sequence>
     <Sequence from={f(18.45)} durationInFrames={f(26.45) - f(18.45)}><HookAnswer /></Sequence>
+    {/* v2: readable reply instead of the second-option screen on 'lagyan ng totoong detalye' */}
+    <Sequence from={f(29.95)} durationInFrames={f(32.55) - f(29.95)}><HookAnswer /></Sequence>
 
     <Audio src={staticFile('fri3/voice.wav')} />
 
@@ -162,7 +164,8 @@ export const FriGalitReel: React.FC = () => {
     <Top a={34.25} b={37.2}><Line size={80}>SUBUKAN SA LIBRENG VERSION</Line>
       <div style={{display: 'flex', gap: 16, marginTop: 8}}><Pill bg={teal}>GEMINI</Pill><Pill bg={navy}>CHATGPT</Pill></div></Top>
     <Top a={37.2} b={39.4}><Line size={100}>EKSAKTONG PROMPT?</Line></Top>
-    <Top a={39.4} b={41.55}><Line size={100}>COMMENT:</Line><Line bg={gold} c={navy} size={150}>PROMPT</Line></Top>
+    {/* v2 (Nov 27): below the chibi's face */}
+    <Top a={39.4} b={41.55} top={1080}><Line size={100}>COMMENT:</Line><Line bg={gold} c={navy} size={150}>PROMPT</Line></Top>
     <Top a={41.55} b={SECONDS}><Line size={92}>MAS MAHIRAP?</Line>
       <div style={{display: 'flex', gap: 24}}><Line bg={teal} size={110}>CHAT</Line><Line bg={coral} size={110}>TAWAG</Line></div></Top>
 
