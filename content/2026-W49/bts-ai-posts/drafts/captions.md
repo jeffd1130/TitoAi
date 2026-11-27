@@ -1,4 +1,4 @@
-**Video:** `docs/media/w49-bts-reel/` (9:16, about 41 s). Jeff's own voice; real Studio, TikTok Studio and Meta Planner captures (only Tito AI posts). Draft v1 is silent with temp timing until Jeff's voice is in.
+**Video:** `docs/media/w49-bts-reel/` (9:16, about 41 s). Jeff's own voice; real Studio, TikTok Studio and Meta Planner captures (only Tito AI posts). v2: Jeff's voice, denoised; 49.4 s.
 **Post:** Sun Nov 29, 7:00 PM PHT (Sun 3:00 AM PST). TikTok (AI label on) + IG reel + FB reel.
 
 # Captions: Behind the scenes · Paano ginagawa ang Tito AI content

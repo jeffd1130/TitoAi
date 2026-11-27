@@ -1139,8 +1139,8 @@
         {
           "day": "SUN",
           "title": "Behind the Scenes: Paano Ginagawa ang Tito AI",
-          "tag": "Reel ~41 s · BTS · Jeff's voice",
-          "note": "Brief: content/2026-W49/bts-ai-posts/brief.md. Animated workflow + real Studio/TikTok/Meta captures. Draft v1 (silent, temp timing) in Studio Nov 27; waiting for Jeff's voice, then re-time + noise cleanup. Post Sun Nov 29, 7:00 PM PHT (Sun 3:00 AM PST). CTA: Comment PLANO.",
+          "tag": "Reel 49 s · BTS · Jeff's voice",
+          "note": "Brief: content/2026-W49/bts-ai-posts/brief.md. Animated workflow + real Studio/TikTok/Meta captures. v2 Nov 27: Jeff's voice (denoised, noise floor -39 → -49 dB, pauses tightened, -14 LUFS), timed to whisper word timings: docs/media/w49-bts-reel/bts-reel-v2.mp4 (49.4 s). In Studio for Jeff's approval. Post Sun Nov 29, 7:00 PM PHT (Sun 3:00 AM PST). CTA: Comment PLANO.",
           "date": "Nov 29",
           "status": "draft",
           "url": null,

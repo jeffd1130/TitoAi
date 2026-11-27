@@ -1,12 +1,12 @@
 [
   {
     "id": "w49-sun-bts-reel",
-    "title": "W49 Sun · Behind the Scenes: Paano Ginagawa ang Tito AI (DRAFT, voice pending)",
+    "title": "W49 Sun · Behind the Scenes: Paano Ginagawa ang Tito AI",
     "series": "W49 · Sunday 7:00 PM PHT · reel · behind the scenes",
     "slot": "2026-11-29T19:00",
     "type": "video",
     "media": [
-      "docs/media/w49-bts-reel/bts-reel-draft-v1.mp4"
+      "docs/media/w49-bts-reel/bts-reel-v2.mp4"
     ],
     "cover": "docs/media/w49-bts-reel/bts-reel-cover.jpg",
     "captions": {

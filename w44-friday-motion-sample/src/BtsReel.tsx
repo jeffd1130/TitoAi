@@ -5,12 +5,12 @@ import {AbsoluteFill, Composition, Img, Sequence, interpolate, spring, staticFil
 // BTS reel (Nov 27, 2026): "Paano ginagawa ang Tito AI content". Jeff's own voice (bts/voice.wav once it arrives; set VOICE).
 // Viewer-first: their problem -> how we do it -> AI's mistake fixed by Jeff -> Jeff approves -> what they can do with one free chat.
 // Real Studio / TikTok Studio / Meta Planner captures (only Tito AI posts; no other brands, paths, names or keys).
-// Timing is TEMP until Jeff's recording comes in; then re-time T from whisper word timings.
+// Timed to Jeff's recording (whisper word timings, raw/bts-voice-tight-words.json).
 
 const FPS = 30;
-const VOICE: string | null = null; // 'bts/voice.wav'
+const VOICE: string | null = 'bts/voice.wav'; // Jeff's voice, denoised + pauses tightened (raw/bts-voice-tight.wav)
 // Scene boundaries (s) — one per voice line.
-const T = {l1: 0, l2: 2.6, l3: 6.6, l4: 12.6, l5: 18.2, l6: 25.0, l7: 29.6, l8: 37.0, end: 41.0};
+const T = {l1: 0, l2: 3.6, l3: 8.7, l4: 14.55, l5: 21.5, l6: 28.2, l7: 34.4, l8: 44.6, end: 49.4};
 const SECONDS = T.end;
 const navy = '#0A0F1E';
 const navy2 = '#16203A';
@@ -25,19 +25,20 @@ const bebas = "'Bebas Neue', Impact, sans-serif";
 
 type Cue = [number, number, string];
 const CUES: Cue[] = [
-  [T.l1, T.l2, 'HI, AKO ANG TAO SA LIKOD NG TITO AI.'],
-  [T.l2, 4.6, 'WALA KANG ORAS GUMAWA NG CONTENT? SAME.'],
-  [4.6, T.l3, 'KAYA ITO ANG GINAWA KO.'],
-  [T.l3, 9.6, 'ANG AI ANG GUMAGAWA NG DRAFT:'],
-  [9.6, T.l4, 'RESEARCH, SCRIPT, SLIDES, PATI VIDEO.'],
-  [T.l4, 15.0, 'PERO HINDI SIYA PERPEKTO.'],
-  [15.0, T.l5, 'ITO ANG MALI NIYA, AKO ANG NAG-AYOS.'],
-  [T.l5, 21.8, "WALANG LALABAS SA PAGE HANGGA'T HINDI KO INAAPRUBAHAN."],
-  [21.8, T.l6, 'AKO PA RIN ANG NAGDEDESISYON.'],
-  [T.l6, 27.2, 'HINDI MO KAILANGAN NG BUONG TEAM NG AI.'],
-  [27.2, T.l7, 'ISANG LIBRENG CHAT LANG, SIMULA KA NA.'],
-  [T.l7, 34.4, 'I-TYPE MO LANG: "GAWAN MO AKO NG TATLONG POST IDEA PARA SA NEGOSYO KO NGAYONG LINGGO."'],
-  [34.4, T.l8, 'TAPOS IKAW ANG MAG-CHECK.'],
+  [T.l1, T.l2, 'HI! AKO ANG TAO SA LIKOD NG TITO AI.'],
+  [T.l2, 6.85, 'WALA KANG ORAS GUMAWA NG CONTENT?'],
+  [6.85, T.l3, 'SAME. KAYA ITO ANG GINAWA KO.'],
+  [T.l3, 11.25, 'ANG AI ANG GUMAGAWA NG DRAFT:'],
+  [11.25, T.l4, 'RESEARCH, SCRIPT, SLIDES, PATI VIDEO.'],
+  [T.l4, 17.3, 'PERO HINDI SIYA PERPEKTO.'],
+  [17.3, T.l5, 'ITO ANG MALI NIYA, AKO ANG NAG-AAYOS.'],
+  [T.l5, 25.6, "WALANG LALABAS SA PAGE HANGGA'T HINDI KO INAAPRUBAHAN."],
+  [25.6, T.l6, 'AKO PA RIN ANG NAGDEDESISYON.'],
+  [T.l6, 30.8, 'HINDI MO KAILANGAN NG BUONG TEAM NG AI.'],
+  [30.8, T.l7, 'ISANG LIBRENG CHAT LANG. SIMULA KA NA.'],
+  [T.l7, 35.85, 'I-TYPE MO LANG:'],
+  [35.85, 42.0, '"GAWAN MO AKO NG TATLONG POST IDEA PARA SA NEGOSYO KO NGAYONG LINGGO."'],
+  [42.0, T.l8, 'TAPOS, IKAW ANG MAG-CHECK.'],
   [T.l8, T.end, 'GUSTO MO ANG BUONG PROMPT PARA SA PAGE MO? COMMENT PLANO.'],
 ];
 
@@ -107,7 +108,7 @@ const HookFan = () => {
     {slides.map((s, i) => {
       const rot = [-10, -3, 4, 11][i];
       const x = [70, 270, 470, 660][i];
-      const drift = interpolate(frame, [0, f(6.6)], [0, (i - 1.5) * 14], clamp);
+      const drift = interpolate(frame, [0, f(8.7)], [0, (i - 1.5) * 22], clamp);
       return <Img key={s} src={staticFile(s)} style={{position: 'absolute', left: x + drift, top: 640 + Math.abs(i - 1.5) * 30, width: 360,
         borderRadius: 16, transform: `rotate(${rot}deg)`, boxShadow: '0 20px 50px #000b', outline: '4px solid #ffffff22'}} />;
     })}
@@ -126,7 +127,7 @@ const NODES: {label: string; sub: string; x: number; y: number; ai: boolean}[] =
 const Workflow = () => {
   const t = useT();
   const local = t; // sequence-relative
-  const step = 0.75;
+  const step = 0.5;
   return <AbsoluteFill>
     <Bg />
     <svg width={1080} height={1920} style={{position: 'absolute'}}>
@@ -153,7 +154,7 @@ const Workflow = () => {
 // The mistake: old slide (live line) crossed out -> fixed slide.
 const Mistake = () => {
   const t = useT();
-  const fix = interpolate(t, [2.4, 2.9], [0, 1], clamp);
+  const fix = interpolate(t, [3.0, 3.5], [0, 1], clamp);
   const mark = (good: boolean, show: number) => <div style={{position: 'absolute', right: 18, top: 18, width: 96, height: 96, borderRadius: '50%',
     background: good ? teal : coral, color: '#fff', font: `76px/96px ${bebas}`, textAlign: 'center', opacity: show, transform: `scale(${0.6 + 0.4 * show})`}}>{good ? '✓' : '✕'}</div>;
   const xo = interpolate(t, [0.4, 0.8], [0, 1], clamp);
@@ -205,7 +206,7 @@ const Approval = () => {
 const PROMPT = 'Gawan mo ako ng 3 post idea para sa negosyo ko ngayong linggo. Ito ang negosyo ko: [isulat dito].';
 const PromptCard = () => {
   const t = useT();
-  const n = Math.floor(interpolate(t, [0.3, 3.6], [0, PROMPT.length], clamp));
+  const n = Math.floor(interpolate(t, [1.45, 7.4], [0, PROMPT.length], clamp));
   const caret = Math.floor(t * 2) % 2 === 0 ? '|' : '';
   return <AbsoluteFill>
     <Bg />
@@ -218,7 +219,7 @@ const PromptCard = () => {
         {['ChatGPT', 'Gemini', 'Claude'].map((x) => <div key={x} style={{background: teal, color: '#fff', borderRadius: 999,
           padding: '10px 24px', font: '700 28px Arial, sans-serif'}}>{x}</div>)}
       </div>
-      <div style={{margin: '40px 40px 0', color: gold, font: `56px/1.1 ${bebas}`, opacity: interpolate(t, [4.8, 5.2], [0, 1], clamp)}}>
+      <div style={{margin: '40px 40px 0', color: gold, font: `56px/1.1 ${bebas}`, opacity: interpolate(t, [7.6, 8.0], [0, 1], clamp)}}>
         TAPOS IKAW ANG MAG-CHECK ✓</div>
     </div>
   </AbsoluteFill>;
@@ -237,8 +238,8 @@ export const BtsReel: React.FC = () => {
 
     {seq(T.l1, T.l3, <HookFan />)}
     {seq(T.l1, T.l3, <FaceCircle src="fri/chibi-cta.mp4" top={1330} mt={-90} />)}
-    {seq(T.l3, 10.4, <Workflow />)}
-    {seq(10.4, T.l4, <AbsoluteFill><Bg /><Shot src="bts/studio-agents.jpg" top={520} w={960} label="Tito AI Studio · ang AI team ko" /></AbsoluteFill>)}
+    {seq(T.l3, 11.6, <Workflow />)}
+    {seq(11.6, T.l4, <AbsoluteFill><Bg /><Shot src="bts/studio-agents.jpg" top={520} w={960} label="Tito AI Studio · ang AI team ko" /></AbsoluteFill>)}
     {seq(T.l4, T.l5, <Mistake />)}
     {seq(T.l5, T.l6, <Approval />)}
     {seq(T.l6, T.l7, <ChibiClip src="fri/chibi-point.mp4" />)}
@@ -248,8 +249,8 @@ export const BtsReel: React.FC = () => {
     {VOICE && <Audio src={staticFile(VOICE)} />}
 
     <Top a={T.l1} b={T.l3} top={140}><Line size={118}>WALANG ORAS</Line><Line bg={gold} c={navy} size={118}>SA CONTENT?</Line><Line bg={teal} size={80}>GANITO KO GINAGAWA</Line></Top>
-    <Top a={T.l3} b={10.4} top={170}><Line size={96}>AI ANG GUMAGAWA</Line><Line bg={teal} size={96}>NG DRAFT</Line></Top>
-    <Top a={10.4} b={T.l4} top={170}><Line size={84}>RESEARCH · SCRIPT</Line><Line bg={teal} size={84}>SLIDES · VIDEO</Line></Top>
+    <Top a={T.l3} b={11.6} top={170}><Line size={96}>AI ANG GUMAGAWA</Line><Line bg={teal} size={96}>NG DRAFT</Line></Top>
+    <Top a={11.6} b={T.l4} top={170}><Line size={84}>RESEARCH · SCRIPT</Line><Line bg={teal} size={84}>SLIDES · VIDEO</Line></Top>
     <Top a={T.l4} b={T.l5} top={170}><Line size={100}>HINDI PERPEKTO</Line><Line bg={coral} size={92}>AKO ANG NAG-AYOS</Line></Top>
     <Top a={T.l5} b={T.l6} top={170}><Line size={92}>WALANG LALABAS</Line><Line bg={gold} c={navy} size={92}>NANG WALANG APPROVAL KO</Line></Top>
     <Top a={T.l6} b={T.l7} top={150}><Line size={96}>HINDI MO KAILANGAN</Line><Line size={96}>NG BUONG TEAM</Line><Line bg={teal} size={100}>ISANG LIBRENG CHAT</Line></Top>
