@@ -121,5 +121,20 @@
     },
     "version": "ep4-reel-v2.mp4 (Jeff's phone recording)",
     "seed_comment": "pending: tito-approval-scheduler posts it after 7:00 PM Mon Nov 30 (text in content/2026-W49/01-mon-ep4-caption-paninda/drafts/captions.md)"
+  },
+  "w47-fri-claude-plan": {
+    "tiktok": {
+      "status": "posted",
+      "at": "2026-11-20T19:30+08:00"
+    },
+    "instagram": {
+      "status": "posted",
+      "at": "2026-11-20T19:34+08:00"
+    },
+    "facebook": {
+      "status": "posted",
+      "at": "2026-11-20T19:34+08:00"
+    },
+    "seed_comment": "handled by task: posted manually Nov 20 (per docs/schedule.json); Studio not marked for IG/FB"
   }
 }
