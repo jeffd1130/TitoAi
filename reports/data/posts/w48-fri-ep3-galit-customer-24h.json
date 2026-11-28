@@ -1,0 +1,100 @@
+{
+  "post_id": "w48-fri-ep3-galit-customer",
+  "title": "EP3 · Galit si Customer? Kalmado Ka",
+  "posted": {
+    "tiktok": "2026-11-27T19:00+08:00",
+    "facebook": "2026-11-27T19:00+08:00",
+    "instagram": "2026-11-27T19:01+08:00"
+  },
+  "pulled": "2026-11-28T19:52+08:00",
+  "hours_live": 25,
+  "tiktok": {
+    "url": "https://www.tiktok.com/@tito.aiph/video/7712688364750654727",
+    "views": 155,
+    "likes": 2,
+    "comments": 1,
+    "comments_note": "our seed comment",
+    "shares": 0,
+    "saves": 1,
+    "total_play_time": "0h12m30s",
+    "avg_watch_s": 3.4,
+    "watched_full_pct": 0.5,
+    "new_followers": 0,
+    "retention_pct": {
+      "0:00": 100,
+      "0:02": 43,
+      "0:06": 13,
+      "0:18": 3
+    },
+    "most_viewers_left_at": "0:01",
+    "hourly_peak": "about 20 views at hour 4; second wave about 10-14/hour from hour 14 to 22 (read from chart)",
+    "traffic": {
+      "for_you": 98.5,
+      "direct_messages": 0.5,
+      "profile": 0.5,
+      "other": 0.5,
+      "following": "<0.1",
+      "sound": "<0.1",
+      "search": "<0.1"
+    },
+    "search_queries": "still processing",
+    "total_viewers": "still processing",
+    "viewer_types": "still processing",
+    "viewers": {
+      "age": {
+        "18-24": 47,
+        "25-34": 45,
+        "35-44": 6,
+        "45-54": 2,
+        "55+": 0
+      },
+      "gender": {
+        "male": 76,
+        "female": 24,
+        "other": 0
+      },
+      "location": {
+        "Philippines": 99.2,
+        "Hong Kong": "<1",
+        "Ukraine": "<1"
+      }
+    }
+  },
+  "facebook_reel": {
+    "views": 80,
+    "viewers": 69,
+    "interactions": 5,
+    "reactions": 2,
+    "comments": 1,
+    "shares": 1,
+    "saves": 1,
+    "follows": 0,
+    "watch_time_raw_ms": 431625,
+    "avg_play_s": 6,
+    "three_sec_views": 30,
+    "three_sec_pct": 37.5
+  },
+  "instagram_reel": {
+    "views": 18,
+    "reach": 10,
+    "interactions": 1,
+    "likes": 0,
+    "comments": 1,
+    "shares": 0,
+    "saves": 0,
+    "follows": 0,
+    "watch_time": "1m 1s",
+    "avg_play_s": 5,
+    "three_sec_views": null
+  },
+  "business": {
+    "prompt_comments": 0,
+    "dms_sent": 0,
+    "waitlist": 0
+  },
+  "boost_gate": {
+    "rule": "300 TikTok views by 48 h",
+    "views_at_25h": 155,
+    "status": "unlikely; re-check at 72 h (Mon Nov 30 ~7 PM PHT)"
+  }
+}

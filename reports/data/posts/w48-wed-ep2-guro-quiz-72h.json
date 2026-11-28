@@ -1,0 +1,117 @@
+{
+  "post_id": "w48-wed-ep2-guro-quiz",
+  "title": "EP2 · Guro? Quiz sa 1 Minuto",
+  "posted": {
+    "tiktok": "2026-11-25T19:00+08:00",
+    "facebook": "2026-11-25T19:00+08:00",
+    "instagram": "2026-11-25T19:00+08:00"
+  },
+  "pulled": "2026-11-28T19:52+08:00",
+  "hours_live": 73,
+  "tiktok": {
+    "url": "https://www.tiktok.com/@tito.aiph/video/7711678078178610439",
+    "views": 177,
+    "likes": 4,
+    "comments": 1,
+    "comments_note": "our seed comment",
+    "shares": 0,
+    "saves": 0,
+    "total_play_time": "0h14m48s",
+    "avg_watch_s": 3.55,
+    "watched_full_pct": 1.6,
+    "new_followers": 0,
+    "retention_pct": {
+      "0:00": 100,
+      "0:02": 40,
+      "0:06": 9,
+      "0:18": 3
+    },
+    "most_viewers_left_at": "0:02",
+    "traffic": {
+      "for_you": 97.2,
+      "profile": 1.2,
+      "direct_messages": 0.8,
+      "search": 0.8,
+      "following": "<0.1",
+      "sound": "<0.1",
+      "other": "<0.1"
+    },
+    "search_queries": {
+      "secondary consumer": 100.0
+    },
+    "total_viewers": 241,
+    "total_viewers_change_1d": 141,
+    "viewer_types": {
+      "new": 58,
+      "returning": 42,
+      "non_followers": 99,
+      "followers": 1
+    },
+    "viewers": {
+      "age": {
+        "18-24": 47,
+        "25-34": 37,
+        "35-44": 10,
+        "45-54": 5,
+        "55+": 1
+      },
+      "gender": {
+        "male": 65,
+        "female": 35,
+        "other": 0
+      },
+      "location": {
+        "Philippines": 97.3,
+        "United States": 1.1
+      }
+    }
+  },
+  "facebook_reel": {
+    "views": 225,
+    "viewers": 209,
+    "interactions": 3,
+    "reactions": 1,
+    "comments": 1,
+    "shares": 1,
+    "saves": 0,
+    "follows": 0,
+    "watch_time_raw_ms": 761780,
+    "avg_play_s": 4,
+    "three_sec_views": 48,
+    "three_sec_pct": 21.3
+  },
+  "instagram_reel": {
+    "views": 42,
+    "reach": 33,
+    "interactions": 2,
+    "likes": 0,
+    "comments": 1,
+    "shares": 0,
+    "saves": 0,
+    "follows": 0,
+    "watch_time": "3m 46s",
+    "avg_play_s": 6,
+    "three_sec_views": null
+  },
+  "instagram_story": {
+    "views": 9,
+    "interactions": 1,
+    "likes": 1,
+    "shares": 0,
+    "replies": 0
+  },
+  "facebook_story": {
+    "views": 0,
+    "note": "FB story insights are off in Meta"
+  },
+  "business": {
+    "prompt_comments": 0,
+    "dms_sent": 0,
+    "waitlist": 0
+  },
+  "boost_gate": {
+    "rule": "300 TikTok views by 48 h",
+    "views_at_73h": 177,
+    "status": "not met"
+  }
+}
