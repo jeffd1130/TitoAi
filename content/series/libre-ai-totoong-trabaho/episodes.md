@@ -73,33 +73,40 @@ Hashtags always include #TitoAIPH #MgaPamangkin #AIParaSaAtin. First caption lin
 
 ## EP 5 — 13th month budget · Claude free · Wed (B segment)
 **Search line:** paano i-budget ang 13th month pay
-**On-screen:** 13TH MONTH? HUWAG MUNA GASTUSIN.
+**On-screen:** 13TH MONTH MO, UBOS NA SA ENERO?
+**Hook test (Nov 28):** opening uses the 4-step story hook (moment → cost → what changed → one action). EP4 is the control. Compare 3-sec retention, avg watch time and saves vs EP3/EP4.
 
 | Time | Visual | Voice |
 |---|---|---|
-| 0–3 | Simple budget table | "Bago mo gastusin ang 13th month mo, panoorin mo 'to." |
+| 0–4 | Chibi + headline, voice from frame 0 (moment) | "Dumating ang 13th month mo. Pagdating ng Enero, wala na. Pero 'yung utang sa card, nandiyan pa rin." |
+| 4–8 | Budget table, credit card line highlighted (cost) | "At habang hindi mo nababayaran, may patong na interest buwan-buwan." |
+| 8–12 | Chibi pointing at laptop (what changed) | "Akala natin kulang ang pera. Ang totoo, walang plano bago pa dumating ang pera." |
 | 3–12 | Type amounts (sample numbers) | "Ilagay ang halaga, utang, at mga bibilhin. Sample numbers lang 'to." |
 | 12–25 | Prompt + output | "'Gawan mo ako ng simpleng plano: utang muna, ipon, tapos pang-Pasko. Ipakita sa table.'" |
 | 25–35 | Point to totals | "Ikaw pa rin ang mag-check ng numbers. Calculator pa rin ang final." |
 | 35–42 | Chibi | "Gusto mo ang prompt? Comment PROMPT." |
 
-**Caption:** Paano i-budget ang 13th month pay gamit ang libreng AI: utang, ipon, tapos pang-Pasko. (Sample numbers lang.) Comment PROMPT 👇 #TitoAIPH #MgaPamangkin #AIParaSaAtin #13thMonthPay #IponTips
+**Caption:** 13th month mo, ubos na pagdating ng Enero? Hindi kulang ang pera, walang plano. I-budget ang 13th month pay gamit ang libreng AI: utang, ipon, tapos pang-Pasko. (Sample numbers lang.) Comment PROMPT 👇 #TitoAIPH #MgaPamangkin #AIParaSaAtin #13thMonthPay #IponTips
 
 ---
 
 ## EP 6 — Cover letter para sa BPO · Gemini free · Fri
 **Search line:** cover letter para sa call center gamit AI
-**On-screen:** COVER LETTER SA BPO? 1 MINUTO.
+**On-screen:** 10 APPLY, WALANG TUMAWAG?
+**Hook test (Nov 28):** same 4-step story hook as EP5; EP4 is the control.
 
 | Time | Visual | Voice |
 |---|---|---|
-| 0–3 | Finished cover letter | "Cover letter para sa call center. Isang minuto. Libre." |
+| 0–4 | Chibi + headline, voice from frame 0 (moment) | "Sampung call center na ang inapplyan mo, pero wala pa ring tumatawag?" |
+| 4–8 | Empty inbox / phone (cost) | "Bawat linggong walang sagot, isang linggo ulit na walang sahod." |
+| 8–12 | Chibi pointing at laptop (what changed) | "Minsan, hindi experience mo ang problema. 'Yung cover letter mo, pare-pareho para sa lahat ng apply." |
+| 12–15 | Finished cover letter | "Cover letter para sa call center. Isang minuto. Libre." |
 | 3–12 | Paste job post into Gemini | "Kopyahin mo ang job post. I-paste sa Gemini." |
 | 12–25 | Prompt + output | "Sabihin mo: 'Gumawa ng maikling cover letter para dito. Ito ang experience ko: [isulat]. Simple English, hindi OA.'" |
 | 25–35 | Highlight the line matching the job post | "Tingnan mo, tinugma niya sa hinahanap ng employer. Ayusin mo ang pangalan at detalye." |
 | 35–42 | Chibi | "Gusto mo ang prompt? Comment PROMPT, ipapadala ko." |
 
-**Caption:** Cover letter para sa call center gamit ang libreng AI. I-paste ang job post, ibigay ang totoong experience mo, at tapos na. Comment PROMPT para sa buong prompt + 9 pa 👇 #TitoAIPH #MgaPamangkin #AIParaSaAtin #BPOLife #TrabahoPH
+**Caption:** Sampung apply, walang tumawag? Baka pare-pareho lang ang cover letter mo. Gumawa ng cover letter para sa call center gamit ang libreng AI. I-paste ang job post, ibigay ang totoong experience mo, at tapos na. Comment PROMPT para sa buong prompt + 9 pa 👇 #TitoAIPH #MgaPamangkin #AIParaSaAtin #BPOLife #TrabahoPH
 
 ---
 

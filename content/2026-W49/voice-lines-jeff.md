@@ -11,6 +11,20 @@
 
 **Due (Manila):** EP4 Sat Nov 28, 6 PM · EP5 Mon Nov 30, 6 PM · EP6 Wed Dec 2, 6 PM · BTS intro Sat Nov 28, 6 PM
 
+## NEW (Nov 28): hook lines for EP5 and EP6. Please record these 6 short lines
+Your EP5 and EP6 recordings are fine and stay. These go **in front** of them (story-hook test from the @hil.zuck video). For EP5, I'll cut your first sentence ("Bago mo gastusin… panoorin mo muna 'to") and start your take at "Simple lang 'to. 18,000…". EP6 keeps your full take.
+Send as `ep5-hook.m4a` and `ep6-hook.m4a`. Same due times: EP5 Mon Nov 30, 6 PM · EP6 Wed Dec 2, 6 PM (Manila). Say line 1 a bit punchier; it's the first second of the video.
+
+**EP5 hook**
+1. Dumating ang 13th month mo. Pagdating ng Enero, wala na. Pero 'yung utang sa card, nandiyan pa rin.
+2. At habang hindi mo nababayaran, may patong na interest buwan-buwan.
+3. Akala natin kulang ang pera. Ang totoo, walang plano bago pa dumating ang pera.
+
+**EP6 hook**
+1. Sampung call center na ang inapplyan mo, pero wala pa ring tumatawag?
+2. Bawat linggong walang sagot, isang linggo ulit na walang sahod.
+3. Minsan, hindi experience mo ang problema. 'Yung cover letter mo, pare-pareho para sa lahat ng apply.
+
 ## EP4 · 3 Caption para sa Paninda (airs Mon Nov 30, 7 PM)
 1. Tatlong caption para sa paninda mo. Isang minuto lang.
 2. Ilagay mo ang produkto, presyo, at para kanino. Sample lang 'to: dried mango, isandaan at limampung piso.
