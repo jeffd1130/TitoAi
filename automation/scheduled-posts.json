@@ -136,5 +136,20 @@
       "at": "2026-11-20T19:34+08:00"
     },
     "seed_comment": "handled by task: posted manually Nov 20 (per docs/schedule.json); Studio not marked for IG/FB"
+  },
+  "w49-tue-legit-check-slides": {
+    "tiktok": {
+      "status": "scheduled",
+      "at": "2026-12-01T07:00+08:00"
+    },
+    "facebook": {
+      "status": "scheduled",
+      "at": "2026-12-01T07:00+08:00"
+    },
+    "instagram": {
+      "status": "scheduled",
+      "at": "2026-12-01T07:00+08:00"
+    },
+    "seed_comment": "pending: tito-approval-scheduler posts it after 7:10 AM Tue Dec 1 (text in content/2026-W49/02-tue-legit-check-slides/drafts/captions.md)"
   }
 }
